@@ -1,0 +1,26 @@
+[
+  {
+    "authority": "OTE",
+    "title": "Changes to DUFVO and DUFMO Effective January 1, 2027",
+    "publication_date": "2026-11-11",
+    "source_url": "https://www.ote-cr.cz/en/about-ote/news",
+    "summary": "Market-related updates affecting balance and operational rules in the Czech power market.",
+    "tags": ["market-rule", "balancing", "czech-market"]
+  },
+  {
+    "authority": "OTE",
+    "title": "FLEXENERGY a.s. resumes role as balance responsible party",
+    "publication_date": "2026-11-03",
+    "source_url": "https://www.ote-cr.cz/en/about-ote/news",
+    "summary": "Operational update relevant to market participation and balancing responsibilities.",
+    "tags": ["balancing", "market-participation"]
+  },
+  {
+    "authority": "Council of the EU",
+    "title": "Methane regulation monitoring rules postponed by one year",
+    "publication_date": "2026-11-06",
+    "source_url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/06/methane-regulation-council-agrees-to-postpone-monitoring-rules-for-one-year/",
+    "summary": "EU-level regulatory update affecting energy supply chain and emissions reporting rules.",
+    "tags": ["eu-regulation", "methane", "energy-transition"]
+  }
+]

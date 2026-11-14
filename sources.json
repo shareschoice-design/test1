@@ -1,0 +1,72 @@
+[
+  {
+    "company": "ČEZ Group",
+    "type": "news",
+    "url": "https://www.cez.cz/en/media/press-releases"
+  },
+  {
+    "company": "ČEZ Group",
+    "type": "careers",
+    "url": "https://www.cez.cz/en/careers"
+  },
+  {
+    "company": "Pražská energetika (PRE)",
+    "type": "news",
+    "url": "https://www.pre.cz/o-pre/tiskove-zpravy/"
+  },
+  {
+    "company": "Pražská energetika (PRE)",
+    "type": "careers",
+    "url": "https://www.pre.cz/kariera/"
+  },
+  {
+    "company": "Pražská plynárenská",
+    "type": "news",
+    "url": "https://www.ppas.cz/o-spolecnosti/aktuality"
+  },
+  {
+    "company": "Pražská plynárenská",
+    "type": "careers",
+    "url": "https://www.ppas.cz/kariera"
+  },
+  {
+    "company": "MND",
+    "type": "news",
+    "url": "https://www.mnd.cz/aktuality/"
+  },
+  {
+    "company": "MND",
+    "type": "careers",
+    "url": "https://www.mnd.cz/kariera/"
+  },
+  {
+    "company": "Centropol",
+    "type": "news",
+    "url": "https://www.centropol.cz/aktualne/"
+  },
+  {
+    "company": "Centropol",
+    "type": "careers",
+    "url": "https://www.centropol.cz/kariera/"
+  },
+  {
+    "company": "OTE",
+    "type": "regulatory",
+    "url": "https://www.ote-cr.cz/en/about-ote/news"
+  },
+  {
+    "company": "ERÚ",
+    "type": "regulatory",
+    "url": "https://www.eru.cz/"
+  },
+  {
+    "company": "European Commission",
+    "type": "regulatory",
+    "url": "https://energy.ec.europa.eu/news"
+  },
+  {
+    "company": "Council of the EU",
+    "type": "regulatory",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/"
+  }
+]

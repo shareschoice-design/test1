@@ -1,0 +1,29 @@
+[
+  {
+    "company": "PRE",
+    "title": "No current job postings identified in initial dataset",
+    "published_at": "2026-11-14",
+    "source_url": "https://www.pre.cz/kariera/",
+    "location": "Czech Republic",
+    "department": "General",
+    "summary": "Starter record indicating that no official job posting was found in the initial monitoring pass."
+  },
+  {
+    "company": "MND",
+    "title": "No current job postings identified in initial dataset",
+    "published_at": "2026-11-14",
+    "source_url": "https://www.mnd.cz/kariera/",
+    "location": "Czech Republic",
+    "department": "General",
+    "summary": "Starter record indicating that no official job posting was found in the initial monitoring pass."
+  },
+  {
+    "company": "Centropol",
+    "title": "No current job postings identified in initial dataset",
+    "published_at": "2026-11-14",
+    "source_url": "https://www.centropol.cz/kariera/",
+    "location": "Czech Republic",
+    "department": "General",
+    "summary": "Starter record indicating that no official job posting was found in the initial monitoring pass."
+  }
+]

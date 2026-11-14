@@ -1,0 +1,26 @@
+[
+  {
+    "company": "ČEZ Group",
+    "title": "CEZ Group Earned CZK 26.6 Billion for Q1-Q3 2026",
+    "publication_date": "2026-11-11",
+    "source_url": "https://www.cez.cz/en/media/press-releases",
+    "summary": "Financial update and outlook from ČEZ Group, relevant for market position and strategic direction.",
+    "tags": ["financials", "strategy", "market-position"]
+  },
+  {
+    "company": "ČEZ Group",
+    "title": "Photovoltaic Academy Returns for Its Second Year",
+    "publication_date": "2026-11-02",
+    "source_url": "https://www.cez.cz/en/media/press-releases",
+    "summary": "Education and sustainability initiative related to renewable energy and customer engagement.",
+    "tags": ["renewables", "sustainability", "customer-engagement"]
+  },
+  {
+    "company": "PRE",
+    "title": "PRE market update placeholder",
+    "publication_date": "2026-11-01",
+    "source_url": "https://www.pre.cz/o-pre/tiskove-zpravy/",
+    "summary": "Placeholder entry — replace with verified item once scraped or manually confirmed.",
+    "tags": ["placeholder"]
+  }
+]
