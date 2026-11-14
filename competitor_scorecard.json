@@ -1,0 +1,112 @@
+{
+  "title": "Preliminary competitor scorecard for E.ON Czech retail energy",
+  "market": "Czech retail electricity and gas supply",
+  "benchmark_company": "E.ON",
+  "created_on": "2026-11-14",
+  "status": "Directional hypotheses only; not a verified, evidence-based ranking",
+  "scale": {
+    "1": "Limited / weaker relative position",
+    "2": "Below average / limited evidence of strength",
+    "3": "Competitive / broadly comparable",
+    "4": "Strong relative position",
+    "5": "Leading relative position",
+    "NA": "Not enough reliable evidence to score"
+  },
+  "methodology": "Scores are preliminary analyst hypotheses based on general public positioning and the starter competitor matrix, not measured market data. They are relative to the listed Czech retail competitors, not absolute performance scores. No weighted total is calculated. Validate each score against current official sources and comparable metrics before using it for decisions.",
+  "companies": [
+    {
+      "company": "ČEZ Group",
+      "scores": {
+        "market_footprint": {"score": 5, "confidence": "medium", "rationale": "Broad national presence and incumbent scale; verify retail customer and delivered-volume data."},
+        "tariff_competitiveness_transparency": {"score": 3, "confidence": "low", "rationale": "Large portfolio suggests broad choice, but no like-for-like current tariff comparison was performed."},
+        "customer_segment_coverage": {"score": 5, "confidence": "medium", "rationale": "Appears to serve household, SME, business and public-sector segments; validate by product availability."},
+        "brand_trust_service_quality": {"score": 4, "confidence": "low", "rationale": "High brand visibility is not the same as measured trust or service quality; verify with surveys and complaint data."},
+        "digital_experience": {"score": 4, "confidence": "low", "rationale": "Large-scale customer operations likely support digital self-service; benchmark task completion and customer feedback."},
+        "green_energy_offering": {"score": 4, "confidence": "low", "rationale": "Renewable generation and green products are part of the group profile; compare retail product claims and guarantees."},
+        "regulatory_adaptation": {"score": 4, "confidence": "low", "rationale": "Large integrated incumbent likely has substantial compliance capability; no implementation audit conducted."},
+        "vertical_integration": {"score": 5, "confidence": "medium", "rationale": "Group spans generation, distribution-related activities and retail; check current legal-entity boundaries and market roles."},
+        "partnerships_ma_activity": {"score": 4, "confidence": "low", "rationale": "Scale and infrastructure activity suggest meaningful partnership and investment capacity; assess current deals individually."},
+        "public_signals_hiring": {"score": "NA", "confidence": "low", "rationale": "A systematic, dated news and vacancies sample has not been collected; do not infer hiring momentum."}
+      }
+    },
+    {
+      "company": "Pražská energetika (PRE)",
+      "scores": {
+        "market_footprint": {"score": 3, "confidence": "low", "rationale": "Strong Prague-area identity, but the national retail footprint has not been quantified."},
+        "tariff_competitiveness_transparency": {"score": "NA", "confidence": "low", "rationale": "No like-for-like current tariff and contract-terms comparison has been completed."},
+        "customer_segment_coverage": {"score": 3, "confidence": "low", "rationale": "Appears active in household and business markets; validate segment coverage and scale."},
+        "brand_trust_service_quality": {"score": 4, "confidence": "low", "rationale": "Local recognition may be a strength, but trust and service performance need independent evidence."},
+        "digital_experience": {"score": "NA", "confidence": "low", "rationale": "No comparable usability or customer-service evidence gathered."},
+        "green_energy_offering": {"score": 3, "confidence": "low", "rationale": "Energy-transition activity is plausible, but retail product scope and evidence need review."},
+        "regulatory_adaptation": {"score": 3, "confidence": "low", "rationale": "No company-specific regulatory implementation evidence assessed."},
+        "vertical_integration": {"score": 4, "confidence": "low", "rationale": "Regional utility and energy activities indicate integration, but current group structure should be verified."},
+        "partnerships_ma_activity": {"score": "NA", "confidence": "low", "rationale": "No systematic partnership or transaction review performed."},
+        "public_signals_hiring": {"score": "NA", "confidence": "low", "rationale": "A systematic, dated news and vacancies sample has not been collected."}
+      }
+    },
+    {
+      "company": "Pražská plynárenská",
+      "scores": {
+        "market_footprint": {"score": 3, "confidence": "low", "rationale": "Strong Prague association; retail reach and customer volumes outside the core area are not quantified."},
+        "tariff_competitiveness_transparency": {"score": "NA", "confidence": "low", "rationale": "No current, normalized tariff comparison has been completed."},
+        "customer_segment_coverage": {"score": 3, "confidence": "low", "rationale": "Appears to cover household and business demand; confirm with current offer and customer data."},
+        "brand_trust_service_quality": {"score": 3, "confidence": "low", "rationale": "Local familiarity may help, but no independent trust, complaint or satisfaction metrics were reviewed."},
+        "digital_experience": {"score": "NA", "confidence": "low", "rationale": "No comparable digital journey or service evidence gathered."},
+        "green_energy_offering": {"score": 2, "confidence": "low", "rationale": "Retail renewable positioning has not been verified against current products and guarantees."},
+        "regulatory_adaptation": {"score": 3, "confidence": "low", "rationale": "No company-specific implementation evidence assessed."},
+        "vertical_integration": {"score": 4, "confidence": "low", "rationale": "Gas-related infrastructure heritage suggests integration; verify current ownership and regulated roles."},
+        "partnerships_ma_activity": {"score": "NA", "confidence": "low", "rationale": "No systematic partnership or transaction review performed."},
+        "public_signals_hiring": {"score": "NA", "confidence": "low", "rationale": "A systematic, dated news and vacancies sample has not been collected."}
+      }
+    },
+    {
+      "company": "MND a.s.",
+      "scores": {
+        "market_footprint": {"score": 3, "confidence": "low", "rationale": "National retail presence is plausible, but customer counts and delivered volumes were not checked."},
+        "tariff_competitiveness_transparency": {"score": 4, "confidence": "low", "rationale": "Market positioning is often price-focused; verify with a dated, like-for-like tariff basket."},
+        "customer_segment_coverage": {"score": 3, "confidence": "low", "rationale": "Household and business retail appear relevant; confirm current products and segment scale."},
+        "brand_trust_service_quality": {"score": 3, "confidence": "low", "rationale": "No independent trust, satisfaction or complaint data reviewed."},
+        "digital_experience": {"score": "NA", "confidence": "low", "rationale": "No comparable digital usability evidence gathered."},
+        "green_energy_offering": {"score": 3, "confidence": "low", "rationale": "Some green positioning may be present; verify retail product claims, sourcing and guarantees."},
+        "regulatory_adaptation": {"score": 3, "confidence": "low", "rationale": "No company-specific regulatory implementation evidence assessed."},
+        "vertical_integration": {"score": 4, "confidence": "low", "rationale": "Upstream gas experience can support integration; verify how it connects to Czech retail supply."},
+        "partnerships_ma_activity": {"score": 3, "confidence": "low", "rationale": "No systematic partnership or transaction review performed."},
+        "public_signals_hiring": {"score": "NA", "confidence": "low", "rationale": "A systematic, dated news and vacancies sample has not been collected."}
+      }
+    },
+    {
+      "company": "Centropol Energy",
+      "scores": {
+        "market_footprint": {"score": 3, "confidence": "low", "rationale": "Independent retail presence is established, but current customer numbers and volumes were not checked."},
+        "tariff_competitiveness_transparency": {"score": 4, "confidence": "low", "rationale": "Competitive-price positioning is a working hypothesis; verify with comparable current tariffs and contract terms."},
+        "customer_segment_coverage": {"score": 3, "confidence": "low", "rationale": "Household and SME focus appears relevant; verify segment coverage and scale."},
+        "brand_trust_service_quality": {"score": 3, "confidence": "low", "rationale": "No independent trust, complaint or customer satisfaction data reviewed."},
+        "digital_experience": {"score": "NA", "confidence": "low", "rationale": "No comparable digital journey or service evidence gathered."},
+        "green_energy_offering": {"score": 2, "confidence": "low", "rationale": "Retail green offer scope has not been verified against current product documentation."},
+        "regulatory_adaptation": {"score": 3, "confidence": "low", "rationale": "No company-specific implementation evidence assessed."},
+        "vertical_integration": {"score": 2, "confidence": "low", "rationale": "Appears more retail-focused than vertically integrated incumbents; confirm current corporate structure and assets."},
+        "partnerships_ma_activity": {"score": "NA", "confidence": "low", "rationale": "No systematic partnership or transaction review performed."},
+        "public_signals_hiring": {"score": "NA", "confidence": "low", "rationale": "A systematic, dated news and vacancies sample has not been collected."}
+      }
+    }
+  ],
+  "dimensions": [
+    {"id": "market_footprint", "label": "Market footprint and geographic reach", "recommended_evidence": ["ERÚ supplier/customer statistics", "OTE market data", "company annual reports"]},
+    {"id": "tariff_competitiveness_transparency", "label": "Tariff competitiveness and transparency", "recommended_evidence": ["Dated tariffs for matching consumption profiles", "contract duration and exit terms", "fixed fees and bonuses"]},
+    {"id": "customer_segment_coverage", "label": "Customer segment coverage", "recommended_evidence": ["Official product pages", "segment-specific offers", "annual reports"]},
+    {"id": "brand_trust_service_quality", "label": "Brand trust and service quality", "recommended_evidence": ["Independent surveys", "ERÚ complaint data", "verified customer-service measures"]},
+    {"id": "digital_experience", "label": "Digital experience and self-service", "recommended_evidence": ["Comparable customer tasks", "app/store ratings with sample date", "accessibility and service availability"]},
+    {"id": "green_energy_offering", "label": "Green energy and renewable offering", "recommended_evidence": ["Product terms", "energy-origin guarantees", "published generation and procurement data"]},
+    {"id": "regulatory_adaptation", "label": "Regulatory adaptation", "recommended_evidence": ["Official regulatory filings", "market-rule implementation notices", "documented customer changes"]},
+    {"id": "vertical_integration", "label": "Vertical integration", "recommended_evidence": ["Current corporate group structure", "generation, trading, distribution and retail roles"]},
+    {"id": "partnerships_ma_activity", "label": "Partnerships and M&A activity", "recommended_evidence": ["Company announcements", "official transaction records", "partnership scope and date"]},
+    {"id": "public_signals_hiring", "label": "Public signals and hiring", "recommended_evidence": ["Dated newsroom items", "dated vacancies", "role and team trend over time"]}
+  ],
+  "limitations": [
+    "These are directional starting scores, not verified market facts or an investment recommendation.",
+    "Most company-level scores have low confidence because no comparable primary-source evidence set was collected.",
+    "NA means do not score until evidence is collected; it must not be interpreted as poor performance.",
+    "No overall winner or aggregate score is provided because dimensions are not yet weighted and evidence quality varies.",
+    "Use the same reference date, customer profile and evidence standard across all suppliers before publishing a final benchmark."
+  ]
+}
