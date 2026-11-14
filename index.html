@@ -2,305 +2,254 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="E.ON competitor benchmark for Czech retail electricity and gas." />
   <title>E.ON Competitor Dashboard</title>
   <style>
     :root {
-      --bg: #f6f4f1;
-      --panel: #ffffff;
-      --panel-2: #f2f7f5;
-      --line: #dfe5e1;
-      --text: #1d1d1d;
-      --muted: #555;
-      --brand: #1b5b4a;
-      --brand-2: #79a696;
-      --warning: #9a6a2e;
-      --danger: #9b4a4a;
-      --success: #2d6a4b;
-      --shadow: 0 8px 24px rgba(13, 28, 23, 0.06);
+      --bg: #f6f4f1; --panel: #fff; --line: #dfe5e1; --text: #1d1d1d;
+      --muted: #555; --brand: #1b5b4a; --shadow: 0 8px 24px rgba(13,28,23,.06);
     }
-
     * { box-sizing: border-box; }
-    html, body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
-    body { padding: 24px; }
-    .wrap { max-width: 1400px; margin: 0 auto; }
-    h1 { margin: 0 0 8px; font-size: clamp(2rem, 4vw, 3rem); }
-    .sub { margin: 0 0 20px; color: var(--muted); }
-
-    .topbar {
-      display: flex; justify-content: space-between; align-items: center; gap: 12px;
-      margin-bottom: 14px; flex-wrap: wrap;
-    }
-
-    .tabs {
-      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px;
-    }
-    .tab {
-      background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
-      padding: 10px 14px; cursor: pointer; font-weight: 600; color: var(--text);
-      box-shadow: var(--shadow);
-    }
-    .tab.active {
-      background: var(--brand); color: white; border-color: var(--brand);
-    }
-
-    .cards {
-      display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      margin-bottom: 18px;
-    }
-    .card {
-      background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
-      padding: 16px; box-shadow: var(--shadow);
-    }
-    .card h3 { margin: 0 0 8px; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-    .card .big {
-      font-size: clamp(1.6rem, 2vw, 2.2rem); font-weight: 800; margin: 0;
-    }
-    .chip {
-      display: inline-flex; align-items: center; gap: 8px; border-radius: 999px;
-      padding: 6px 10px; font-size: 0.72rem; font-weight: 700; background: var(--panel-2); color: var(--brand);
-      border: 1px solid var(--line);
-    }
-
-    .panel {
-      background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
-      box-shadow: var(--shadow); padding: 18px; margin-bottom: 18px;
-    }
-    .panel h2 { margin: 0 0 14px; font-size: 1.2rem; }
-
-    .grid-2 { display: grid; grid-template-columns: 1.6fr 1fr; gap: 18px; }
-    @media (max-width: 980px) { .grid-2 { grid-template-columns: 1fr; } }
-
-    .company-list { display: grid; gap: 14px; }
-    .company-item {
-      border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: linear-gradient(180deg, #ffffff 0%, #f7faf9 100%);
-    }
-    .company-title { font-size: 1.1rem; font-weight: 700; margin: 0 0 8px; }
-    .mini-grid { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
-    .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; border: 1px solid var(--line); background: #eef5f3; color: var(--brand); font-size: 0.7rem; font-weight: 700; }
-    .muted { color: var(--muted); }
-
-    table {
-      width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden;
-      border: 1px solid var(--line);
-    }
-    th, td {
-      border-bottom: 1px solid var(--line); padding: 12px 10px; text-align: left; vertical-align: top; font-size: 0.92rem;
-    }
-    th {
-      background: #f1f6f4; position: sticky; top: 0; z-index: 1;
-    }
-    tr:last-child td { border-bottom: none; }
-    .score {
-      display: inline-flex; align-items: center; justify-content: center; min-width: 34px; height: 30px; border-radius: 8px;
-      font-weight: 800; color: #fff;
-      background: var(--brand);
-    }
-    .score.s-1 { background: #8c8c8c; }
-    .score.s-2 { background: #b07a45; }
-    .score.s-3 { background: #5f7f70; }
-    .score.s-4 { background: #2b7a5d; }
-    .score.s-5 { background: #1c5d3d; }
-    .score.na { background: #8b8b8b; }
-
-    .section { display: none; }
-    .section.active { display: block; }
-
-    .watchlist ul { margin: 8px 0 0; padding-left: 18px; }
-    .watchlist li { margin-bottom: 8px; }
-
-    .legend { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
-    .legend-item { display:inline-flex; align-items:center; gap:8px; font-size:0.8rem; color: var(--muted); }
-    .swatch { width: 12px; height: 12px; border-radius: 4px; display:inline-block; }
-
-    .meta { color: var(--muted); font-size: 0.8rem; }
-    .alert { background: #fff8ec; border: 1px solid #f0d7a8; color: #7b4d15; border-radius: 10px; padding: 12px; }
+    body { margin: 0; padding: 24px; font-family: system-ui,-apple-system,"Segoe UI",sans-serif; background: var(--bg); color: var(--text); }
+    .wrap { max-width: 1440px; margin: auto; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+    h1 { margin:0 0 6px; font-size:clamp(2rem,4vw,3rem); }
+    h2 { margin:0 0 14px; font-size:1.15rem; }
+    .sub,.muted,.meta { color:var(--muted); }
+    .sub { margin:0; }
+    .meta { font-size:.82rem; }
+    .chip,.tab,select { border:1px solid var(--line); border-radius:10px; padding:9px 13px; background:var(--panel); }
+    .chip { border-radius:999px; font-size:.8rem; font-weight:700; }
+    .tabs { display:flex; gap:9px; flex-wrap:wrap; margin-bottom:18px; }
+    .tab { cursor:pointer; font-weight:650; box-shadow:var(--shadow); color:var(--text); }
+    .tab.active { background:var(--brand); color:white; border-color:var(--brand); }
+    .section { display:none; } .section.active { display:block; }
+    .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); margin-bottom:18px; }
+    .card,.panel,.company-item { background:var(--panel); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); }
+    .card { padding:16px; } .card h3 { margin:0 0 7px; color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; }
+    .big { margin:0; font-size:1.8rem; font-weight:800; }
+    .panel { padding:18px; margin-bottom:18px; }
+    .grid-2 { display:grid; grid-template-columns:1.4fr 1fr; gap:16px; }
+    .company-list { display:grid; gap:12px; }
+    .company-item { padding:14px; box-shadow:none; background:linear-gradient(180deg,#fff,#f8faf9); }
+    .company-title { font-weight:750; margin-bottom:6px; }
+    .pill { display:inline-block; margin:5px 4px 0 0; padding:4px 8px; border-radius:999px; background:#eef5f3; color:var(--brand); font-size:.72rem; font-weight:700; }
+    .chart-wrap { position:relative; width:100%; min-height:300px; }
+    canvas { display:block; width:100%; height:320px; }
+    .chart-controls { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
+    select { font:inherit; }
+    .table-wrap { overflow:auto; }
+    table { width:100%; min-width:850px; border-collapse:separate; border-spacing:3px; }
+    th,td { padding:9px; text-align:center; font-size:.83rem; }
+    th { background:#f1f6f4; position:sticky; top:0; z-index:1; }
+    th:first-child,td:first-child { text-align:left; min-width:190px; position:sticky; left:0; z-index:2; background:#fff; }
+    th:first-child { background:#f1f6f4; z-index:3; }
+    td.heat { border-radius:7px; font-weight:800; min-width:56px; }
+    .legend { display:flex; gap:9px; flex-wrap:wrap; margin-top:12px; font-size:.8rem; color:var(--muted); }
+    .legend span { padding:4px 7px; border-radius:5px; }
+    .watchlist li { margin:0 0 8px; }
+    .alert { padding:12px; border-radius:10px; background:#fff8ec; border:1px solid #f0d7a8; color:#7b4d15; }
+    .note { padding:10px 12px; background:#f2f7f5; border-radius:9px; font-size:.86rem; color:#43534c; }
+    @media(max-width:900px) { .grid-2 { grid-template-columns:1fr; } body { padding:14px; } }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div>
-        <h1>E.ON Competitor Dashboard</h1>
-        <p class="sub">Czech retail electricity and gas market — constant watchlist and benchmark</p>
-      </div>
-      <div class="chip">Updated: <span id="updatedDate">—</span></div>
-    </div>
+  <main class="wrap">
+    <header class="topbar">
+      <div><h1>E.ON Competitor Dashboard</h1><p class="sub">Český maloobchodní trh elektřiny a plynu</p></div>
+      <div class="chip">Aktualizováno: <span id="updatedDate">—</span></div>
+    </header>
 
-    <div class="tabs">
-      <button class="tab active" data-target="overview">Overview</button>
-      <button class="tab" data-target="scorecard">Scorecard</button>
-      <button class="tab" data-target="matrix">Matrix</button>
+    <nav class="tabs" aria-label="Sekce dashboardu">
+      <button class="tab active" data-target="overview">Přehled</button>
+      <button class="tab" data-target="charts">Grafy a vývoj</button>
+      <button class="tab" data-target="scorecard">Scorecard / heatmapa</button>
+      <button class="tab" data-target="matrix">Konkurenti</button>
       <button class="tab" data-target="watchlist">Watchlist</button>
-    </div>
+    </nav>
 
     <section id="overview" class="section active">
       <div id="summaryCards" class="cards"></div>
       <div class="grid-2">
-        <div class="panel">
-          <h2>Competitor overview</h2>
-          <div id="companyOverview" class="company-list"></div>
-        </div>
-        <div class="panel">
-          <h2>Key messages</h2>
-          <div id="keyMessages" class="company-list"></div>
-        </div>
+        <div class="panel"><h2>Přehled konkurentů</h2><div id="companyOverview" class="company-list"></div></div>
+        <div class="panel"><h2>Veřejné signály</h2><div id="keyMessages" class="company-list"></div></div>
+      </div>
+    </section>
+
+    <section id="charts" class="section">
+      <div class="panel">
+        <h2>Průměrné hodnocení podle konkurenta</h2>
+        <p class="meta">Průměr z dostupných dimenzí scorecardu; hodnoty NA se nezapočítávají.</p>
+        <div class="chart-wrap"><canvas id="barChart" aria-label="Sloupcový graf průměrného skóre konkurentů"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="chart-controls"><h2 style="margin:0">Vývoj hodnocení v čase</h2><label for="dimensionSelect">Dimenze:</label><select id="dimensionSelect"></select></div>
+        <div id="historyNotice" class="note"></div>
+        <div class="chart-wrap"><canvas id="timelineChart" aria-label="Časový graf vývoje skóre"></canvas></div>
       </div>
     </section>
 
     <section id="scorecard" class="section">
       <div class="panel">
-        <h2>Relative scorecard</h2>
-        <div id="scoreTableWrap" style="overflow:auto;"></div>
-        <div class="legend">
-          <span class="legend-item"><span class="swatch" style="background:#8c8c8c"></span>1</span>
-          <span class="legend-item"><span class="swatch" style="background:#b07a45"></span>2</span>
-          <span class="legend-item"><span class="swatch" style="background:#5f7f70"></span>3</span>
-          <span class="legend-item"><span class="swatch" style="background:#2b7a5d"></span>4</span>
-          <span class="legend-item"><span class="swatch" style="background:#1c5d3d"></span>5</span>
-          <span class="legend-item"><span class="swatch" style="background:#8b8b8b"></span>NA</span>
-        </div>
+        <h2>Scorecard — heatmapa</h2>
+        <p class="meta">Barva ukazuje skóre 1–5. Šedá buňka NA znamená, že pro tento parametr nejsou dostatečná data.</p>
+        <div id="scoreTableWrap" class="table-wrap"></div>
+        <div class="legend"><span style="background:#e2e8e5">NA</span><span style="background:#d9a09a">1</span><span style="background:#f1c89d">2</span><span style="background:#f3e7a5">3</span><span style="background:#b8d7bd">4</span><span style="background:#75b899">5</span></div>
       </div>
     </section>
 
-    <section id="matrix" class="section">
-      <div class="panel">
-        <h2>Competitor matrix</h2>
-        <div id="matrixPanel" class="company-list"></div>
-      </div>
-    </section>
-
-    <section id="watchlist" class="section">
-      <div class="panel watchlist">
-        <h2>Watchlist for E.ON</h2>
-        <ul id="watchlistList"></ul>
-      </div>
-    </section>
-  </div>
+    <section id="matrix" class="section"><div class="panel"><h2>Competitor matrix</h2><div id="matrixPanel" class="company-list"></div></div></section>
+    <section id="watchlist" class="section"><div class="panel"><h2>Watchlist pro E.ON</h2><ul id="watchlistList"></ul></div></section>
+  </main>
 
   <script>
-    const scoreKeyMap = {
-      1: 's-1',
-      2: 's-2',
-      3: 's-3',
-      4: 's-4',
-      5: 's-5',
-      'NA': 'na'
-    };
+    let matrixData, scorecardData, historyData;
+    const colors = ['#9b514d','#bd7a42','#a38b35','#458366','#1b5b4a'];
+    const scoreColor = value => value == null || value === 'NA' ? '#e2e8e5' : ['#d9a09a','#f1c89d','#f3e7a5','#b8d7bd','#75b899'][Number(value)-1] || '#e2e8e5';
 
     async function loadData() {
-      const [matrix, scorecard] = await Promise.all([
-        fetch('competitor_matrix.json').then(r => r.json()),
-        fetch('competitor_scorecard.json').then(r => r.json())
+      const files = await Promise.all([
+        fetch('competitor_matrix.json'), fetch('competitor_scorecard.json'), fetch('scorecard_history.json')
       ]);
-
-      renderSummaryCards(matrix);
-      renderOverview(matrix);
-      renderKeyMessages(matrix);
-      renderScorecard(scorecard);
-      renderMatrix(matrix);
-      renderWatchlist(matrix);
-      document.getElementById('updatedDate').textContent = matrix.updated_on || 'n/a';
+      if (files.some(response => !response.ok)) throw new Error('Nepodařilo se načíst jeden nebo více JSON souborů.');
+      [matrixData, scorecardData, historyData] = await Promise.all(files.map(response => response.json()));
+      renderAll();
     }
 
-    function renderSummaryCards(matrix) {
+    function renderAll() {
+      document.getElementById('updatedDate').textContent = matrixData.updated_on || scorecardData.created_on || '—';
+      renderSummary(); renderOverview(); renderMessages(); renderScorecard(); renderMatrix(); renderWatchlist();
+      renderCharts();
+    }
+
+    function renderSummary() {
       const cards = [
-        { title: 'Competitors tracked', value: matrix.companies.length, note: 'Direct market benchmark set' },
-        { title: 'Analysis dimensions', value: matrix.analysis_dimensions.length, note: 'Market + strategic lenses' },
-        { title: 'Watchlist items', value: matrix.watchlist_for_eon.length, note: 'Main E.ON risk and opportunity signals' },
-        { title: 'Benchmark market', value: 'Czech retail', note: 'Electricity + gas' }
+        ['Sledovaní konkurenti', matrixData.companies.length],
+        ['Hodnocené dimenze', scorecardData.dimensions.length],
+        ['Watchlist položky', matrixData.watchlist_for_eon.length],
+        ['Historické snapshoty', (historyData.snapshots || []).length]
       ];
-
-      document.getElementById('summaryCards').innerHTML = cards.map(card => `
-        <div class="card">
-          <h3>${card.title}</h3>
-          <p class="big">${card.value}</p>
-          <div class="meta">${card.note}</div>
-        </div>
-      `).join('');
+      document.getElementById('summaryCards').innerHTML = cards.map(([label,value]) => `<div class="card"><h3>${label}</h3><p class="big">${value}</p></div>`).join('');
     }
 
-    function renderOverview(matrix) {
-      const root = document.getElementById('companyOverview');
-      root.innerHTML = matrix.companies.map(c => `
-        <div class="company-item">
-          <div class="company-title">${c.company}</div>
-          <div class="muted">${c.retail_position}</div>
-          <div class="mini-grid">
-            ${(c.market_focus || []).map(v => `<span class="pill">${v}</span>`).join('')}
-          </div>
-          <div class="meta">Strongest: ${(c.strengths || []).slice(0, 2).join(' · ')}</div>
-        </div>
-      `).join('');
+    function renderOverview() {
+      document.getElementById('companyOverview').innerHTML = matrixData.companies.map(company => `
+        <article class="company-item"><div class="company-title">${escapeHtml(company.company)}</div>
+        <div class="muted">${escapeHtml(company.retail_position || '')}</div>
+        <div>${(company.market_focus || []).map(item => `<span class="pill">${escapeHtml(item)}</span>`).join('')}</div>
+        <p class="meta">Silné stránky: ${escapeHtml((company.strengths || []).slice(0,2).join(' · '))}</p></article>`).join('');
     }
 
-    function renderKeyMessages(matrix) {
-      const root = document.getElementById('keyMessages');
-      const list = matrix.companies.map(c => `
-        <div class="company-item">
-          <div class="company-title">${c.company}</div>
-          <div class="muted">${(c.recent_signals || []).join(' • ') || 'No recent public signal confirmed.'}</div>
-        </div>
-      `).join('');
-      root.innerHTML = list;
+    function renderMessages() {
+      document.getElementById('keyMessages').innerHTML = matrixData.companies.map(company => `
+        <article class="company-item"><div class="company-title">${escapeHtml(company.company)}</div>
+        <div class="muted">${escapeHtml((company.recent_signals || []).join(' • ') || 'Bez ověřeného signálu.')}</div></article>`).join('');
     }
 
-    function renderScorecard(scorecard) {
-      const dims = scorecard.dimensions.map(d => d.label);
-      const companies = scorecard.companies;
-      const rows = companies.map(c => {
-        const row = [`<td><strong>${c.company}</strong></td>`];
-        scorecard.dimensions.forEach(dim => {
-          const entry = c.scores[dim.id];
-          const val = entry && entry.score !== undefined ? entry.score : 'NA';
-          const klass = scoreKeyMap[val] || 'na';
-          row.push(`<td><span class="score ${klass}">${val === 'NA' ? 'NA' : val}</span></td>`);
-        });
-        return `<tr>${row.join('')}</tr>`;
+    function renderScorecard() {
+      const head = scorecardData.dimensions.map(dimension => `<th title="${escapeHtml(dimension.label)}">${escapeHtml(shortLabel(dimension.label))}</th>`).join('');
+      const rows = scorecardData.companies.map(company => {
+        const cells = scorecardData.dimensions.map(dimension => {
+          const item = company.scores[dimension.id]; const value = item?.score ?? null;
+          const display = value === null || value === 'NA' ? 'NA' : value;
+          const confidence = item?.confidence ? ` · confidence: ${item.confidence}` : '';
+          const rationale = item?.rationale || 'Bez poznámky';
+          return `<td class="heat" style="background:${scoreColor(value)}" title="${escapeHtml(rationale + confidence)}">${display}</td>`;
+        }).join('');
+        return `<tr><td><strong>${escapeHtml(company.company)}</strong></td>${cells}</tr>`;
       }).join('');
-
-      const headers = ['<th>Company</th>'].concat(scorecard.dimensions.map(d => `<th>${d.label}</th>`)).join('');
-      const table = `
-        <table>
-          <thead><tr>${headers}</tr></thead>
-          <tbody>${rows}</tbody>
-        </table>
-      `;
-      document.getElementById('scoreTableWrap').innerHTML = table;
+      document.getElementById('scoreTableWrap').innerHTML = `<table><thead><tr><th>Konkurent</th>${head}</tr></thead><tbody>${rows}</tbody></table>`;
     }
 
-    function renderMatrix(matrix) {
-      const root = document.getElementById('matrixPanel');
-      root.innerHTML = matrix.companies.map(c => `
-        <div class="company-item">
-          <div class="company-title">${c.company}</div>
-          <div class="muted">${c.market_focus.join(' · ')}</div>
-          <div class="mini-grid">
-            ${(c.strengths || []).map(v => `<span class="pill">${v}</span>`).join('')}
-          </div>
-          <div class="meta">Risks: ${(c.risks || []).join(' · ')}</div>
-        </div>
-      `).join('');
+    function renderMatrix() {
+      document.getElementById('matrixPanel').innerHTML = matrixData.companies.map(company => `
+        <article class="company-item"><div class="company-title">${escapeHtml(company.company)}</div>
+        <div class="muted">${escapeHtml((company.market_focus || []).join(' · '))}</div>
+        <p><strong>Silné stránky</strong><br>${escapeHtml((company.strengths || []).join(' · '))}</p>
+        <p class="meta"><strong>Rizika:</strong> ${escapeHtml((company.risks || []).join(' · '))}</p></article>`).join('');
     }
 
-    function renderWatchlist(matrix) {
-      const list = document.getElementById('watchlistList');
-      list.innerHTML = matrix.watchlist_for_eon.map(item => `<li>${item}</li>`).join('');
+    function renderWatchlist() {
+      document.getElementById('watchlistList').innerHTML = matrixData.watchlist_for_eon.map(item => `<li>${escapeHtml(item)}</li>`).join('');
     }
 
-    document.querySelectorAll('.tab').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-        document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.target).classList.add('active');
+    function renderCharts() {
+      const select = document.getElementById('dimensionSelect');
+      select.innerHTML = scorecardData.dimensions.map(d => `<option value="${escapeHtml(d.id)}">${escapeHtml(d.label)}</option>`).join('');
+      select.addEventListener('change', () => drawTimeline(select.value));
+      drawBars(); drawTimeline(select.value);
+    }
+
+    function averageScore(scores) {
+      const values = Object.values(scores || {}).map(v => typeof v === 'object' && v !== null ? v.score : v).filter(v => typeof v === 'number' && Number.isFinite(v));
+      return values.length ? values.reduce((a,b) => a+b,0)/values.length : null;
+    }
+
+    function drawBars() {
+      const canvas = document.getElementById('barChart');
+      const ctx = setupCanvas(canvas); const data = scorecardData.companies.map(c => ({name:c.company,value:averageScore(c.scores)}));
+      drawAxes(ctx, canvas, 5);
+      const {left,right,top,bottom,width,height} = chartBox(canvas);
+      const slot = width / Math.max(data.length,1); const barWidth = Math.min(62,slot*.58);
+      data.forEach((item,index) => {
+        if (item.value == null) return;
+        const barHeight = item.value/5*height; const x = left + index*slot + (slot-barWidth)/2; const y = bottom-barHeight;
+        ctx.fillStyle = colors[index % colors.length]; ctx.fillRect(x,y,barWidth,barHeight);
+        ctx.fillStyle = '#26332d'; ctx.font = '12px system-ui'; ctx.textAlign = 'center'; ctx.fillText(item.value.toFixed(2),x+barWidth/2,y-7);
+        ctx.save(); ctx.translate(x+barWidth/2,bottom+17); ctx.rotate(-.25); ctx.textAlign='right'; ctx.fillText(item.name,0,0); ctx.restore();
       });
-    });
+    }
 
-    loadData().catch(err => {
-      console.error(err);
-      document.getElementById('summaryCards').innerHTML = '<div class="alert">Data failed to load. Check that competitor_matrix.json and competitor_scorecard.json exist in the repository root.</div>';
-    });
+    function drawTimeline(dimensionId) {
+      const canvas = document.getElementById('timelineChart'); const ctx = setupCanvas(canvas);
+      const snapshots = [...(historyData.snapshots || [])].sort((a,b) => a.date.localeCompare(b.date));
+      const notice = document.getElementById('historyNotice');
+      notice.textContent = snapshots.length < 2
+        ? `Zatím je uložen ${snapshots.length} historický snapshot. Časový vývoj se zobrazí po uložení alespoň dvou datovaných verzí scorecardu; předchozí hodnoty nebyly domýšleny.`
+        : `Graf zobrazuje ${snapshots.length} uložených snapshotů scorecardu. NA hodnoty jsou vynechány.`;
+      drawAxes(ctx,canvas,5);
+      const {left,right,top,bottom,width,height} = chartBox(canvas);
+      const companies = scorecardData.companies.map(c => c.company);
+      const plotCount = Math.max(snapshots.length,2);
+      companies.forEach((company,index) => {
+        const points = snapshots.map((snapshot,snapshotIndex) => {
+          const value = snapshot.scores?.[company]?.[dimensionId];
+          if (typeof value !== 'number') return null;
+          return {x:left+(snapshotIndex/(plotCount-1))*width,y:bottom-(value/5)*height,date:snapshot.date,value};
+        }).filter(Boolean);
+        if (!points.length) return;
+        ctx.strokeStyle = colors[index % colors.length]; ctx.fillStyle = colors[index % colors.length]; ctx.lineWidth = 2;
+        ctx.beginPath(); points.forEach((p,i) => i ? ctx.lineTo(p.x,p.y) : ctx.moveTo(p.x,p.y)); ctx.stroke();
+        points.forEach(p => { ctx.beginPath(); ctx.arc(p.x,p.y,4,0,Math.PI*2); ctx.fill(); });
+      });
+      snapshots.forEach((snapshot,index) => {
+        const x = left+(index/(plotCount-1))*width; ctx.fillStyle='#4b554f'; ctx.font='11px system-ui'; ctx.textAlign=index===0?'left':(index===snapshots.length-1?'right':'center'); ctx.fillText(snapshot.date,x,bottom+20);
+      });
+      // Compact legend for competitor series.
+      companies.forEach((company,index) => { const x=left+(index%3)*(width/3); const y=top+12+Math.floor(index/3)*16; ctx.fillStyle=colors[index%colors.length]; ctx.fillRect(x,y-8,9,9); ctx.fillStyle='#26332d'; ctx.textAlign='left'; ctx.font='10px system-ui'; ctx.fillText(company,x+13,y); });
+    }
+
+    function setupCanvas(canvas) {
+      const ratio = window.devicePixelRatio || 1; const width = Math.max(canvas.clientWidth,300); const height = 320;
+      canvas.width = width*ratio; canvas.height = height*ratio; const ctx=canvas.getContext('2d'); ctx.setTransform(ratio,0,0,ratio,0,0); ctx.clearRect(0,0,width,height); return ctx;
+    }
+
+    function chartBox(canvas) { const width=canvas.clientWidth; return {left:54,right:width-18,top:26,bottom:258,width:width-72,height:232}; }
+    function drawAxes(ctx,canvas,max) {
+      const box=chartBox(canvas); ctx.strokeStyle='#d9e0dc'; ctx.fillStyle='#66716b'; ctx.font='11px system-ui'; ctx.lineWidth=1;
+      for(let value=0;value<=max;value++) { const y=box.bottom-(value/max)*box.height; ctx.beginPath(); ctx.moveTo(box.left,y); ctx.lineTo(box.right,y); ctx.stroke(); ctx.textAlign='right'; ctx.fillText(String(value),box.left-9,y+4); }
+    }
+    function shortLabel(label) { return label.replace(' and ',' & ').replace(' and ',' & '); }
+    function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g,char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
+
+    document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.toggle('active',tab===button));
+      document.querySelectorAll('.section').forEach(section => section.classList.toggle('active',section.id===button.dataset.target));
+      requestAnimationFrame(() => { if (button.dataset.target==='charts') { drawBars(); drawTimeline(document.getElementById('dimensionSelect').value); } });
+    }));
+    window.addEventListener('resize', () => { if (!scorecardData) return; drawBars(); drawTimeline(document.getElementById('dimensionSelect').value); });
+    loadData().catch(error => { console.error(error); document.querySelector('main').insertAdjacentHTML('beforeend',`<div class="alert">${escapeHtml(error.message)} Zkontroluj JSON soubory v kořeni repozitáře.</div>`); });
   </script>
 </body>
 </html>

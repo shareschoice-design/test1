@@ -1,0 +1,71 @@
+{
+  "description": "Append one snapshot whenever the scorecard is reviewed. Do not invent historical values; snapshots are the source for the trend chart.",
+  "snapshots": [
+    {
+      "date": "2026-11-14",
+      "label": "Initial baseline",
+      "scores": {
+        "ČEZ Group": {
+          "market_footprint": 5,
+          "tariff_competitiveness_transparency": 3,
+          "customer_segment_coverage": 5,
+          "brand_trust_service_quality": 4,
+          "digital_experience": 4,
+          "green_energy_offering": 4,
+          "regulatory_adaptation": 4,
+          "vertical_integration": 5,
+          "partnerships_ma_activity": 4,
+          "public_signals_hiring": null
+        },
+        "Pražská energetika (PRE)": {
+          "market_footprint": 3,
+          "tariff_competitiveness_transparency": null,
+          "customer_segment_coverage": 3,
+          "brand_trust_service_quality": 4,
+          "digital_experience": null,
+          "green_energy_offering": 3,
+          "regulatory_adaptation": 3,
+          "vertical_integration": 4,
+          "partnerships_ma_activity": null,
+          "public_signals_hiring": null
+        },
+        "Pražská plynárenská": {
+          "market_footprint": 3,
+          "tariff_competitiveness_transparency": null,
+          "customer_segment_coverage": 3,
+          "brand_trust_service_quality": 3,
+          "digital_experience": null,
+          "green_energy_offering": 2,
+          "regulatory_adaptation": 3,
+          "vertical_integration": 4,
+          "partnerships_ma_activity": null,
+          "public_signals_hiring": null
+        },
+        "MND a.s.": {
+          "market_footprint": 3,
+          "tariff_competitiveness_transparency": 4,
+          "customer_segment_coverage": 3,
+          "brand_trust_service_quality": 3,
+          "digital_experience": null,
+          "green_energy_offering": 3,
+          "regulatory_adaptation": 3,
+          "vertical_integration": 4,
+          "partnerships_ma_activity": 3,
+          "public_signals_hiring": null
+        },
+        "Centropol Energy": {
+          "market_footprint": 3,
+          "tariff_competitiveness_transparency": 4,
+          "customer_segment_coverage": 3,
+          "brand_trust_service_quality": 3,
+          "digital_experience": null,
+          "green_energy_offering": 2,
+          "regulatory_adaptation": 3,
+          "vertical_integration": 2,
+          "partnerships_ma_activity": null,
+          "public_signals_hiring": null
+        }
+      }
+    }
+  ]
+}
