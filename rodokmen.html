@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rodokmen</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;padding:16px;background:#f6f4ef;color:#222}
+h1{margin:0 0 12px}
+form{display:flex;flex-wrap:wrap;gap:8px;background:#fff;padding:12px;border-radius:8px;margin-bottom:16px}
+input,select,button{padding:8px;font-size:14px;border:1px solid #ccc;border-radius:6px}
+button{background:#3a6b4f;color:#fff;border:0;cursor:pointer}
+button.sec{background:#888}
+#tree{overflow:auto;background:#fff;border-radius:8px;padding:16px}
+.gen{display:flex;gap:12px;justify-content:center;margin:0 0 28px;flex-wrap:wrap}
+.p{background:#eaf2ec;border:1px solid #3a6b4f;border-radius:8px;padding:8px 12px;text-align:center;min-width:120px;position:relative}
+.p.me{background:#3a6b4f;color:#fff}
+.p small{display:block;opacity:.75}
+.p .x{position:absolute;top:2px;right:6px;cursor:pointer;opacity:.5}
+.lbl{text-align:center;font-size:12px;color:#888;margin-bottom:6px}
+</style>
+</head>
+<body>
+<h1>🌳 Rodokmen</h1>
+<form id="f">
+  <input id="name" placeholder="Jméno a příjmení" required>
+  <input id="born" placeholder="Rok narození" size="8">
+  <select id="rel"></select>
+  <button>Přidat</button>
+  <button type="button" class="sec" onclick="exp()">Export</button>
+  <button type="button" class="sec" onclick="imp.click()">Import</button>
+  <button type="button" class="sec" onclick="if(confirm('Smazat vše?')){P=[];save()}">Vymazat</button>
+  <input type="file" id="imp" hidden accept=".json">
+</form>
+<div id="tree"></div>
+<script>
+let P=[];try{P=JSON.parse(localStorage.rod||'[]')}catch(e){}
+const $=id=>document.getElementById(id);
+function save(){try{localStorage.rod=JSON.stringify(P)}catch(e){}draw()}
+function draw(){
+  const rel=$('rel');
+  if(!P.length){rel.innerHTML='<option value="me">To jsem já</option>'}
+  else rel.innerHTML=P.map(p=>`<option value="parent:${p.id}">rodič osoby ${p.n}</option><option value="child:${p.id}">dítě osoby ${p.n}</option><option value="sib:${p.id}">sourozenec/partner osoby ${p.n}</option>`).join('');
+  const gs=[...new Set(P.map(p=>p.g))].sort((a,b)=>b-a);
+  const names={0:'Já',1:'Rodiče',2:'Prarodiče',3:'Praprarodiče','-1':'Děti','-2':'Vnoučata'};
+  $('tree').innerHTML=P.length?gs.map(g=>`<div class="lbl">${names[g]||('Generace '+g)}</div><div class="gen">`+
+    P.filter(p=>p.g===g).map(p=>`<div class="p ${p.g===0&&p.id===P[0].id?'me':''}"><span class="x" onclick="del(${p.id})">×</span>${esc(p.n)}<small>${esc(p.b||'')}</small></div>`).join('')+'</div>').join('')
+    :'<p>Začněte zadáním svého jména.</p>';
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function del(id){P=P.filter(p=>p.id!==id);save()}
+$('f').onsubmit=e=>{
+  e.preventDefault();
+  const [t,rid]=$('rel').value.split(':');const r=P.find(p=>p.id==rid);
+  const g=t==='me'?0:t==='parent'?r.g+1:t==='child'?r.g-1:r.g;
+  P.push({id:Date.now(),n:$('name').value.trim(),b:$('born').value.trim(),g});
+  $('name').value=$('born').value='';save();
+};
+function exp(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(P,null,1)],{type:'application/json'}));a.download='rodokmen.json';a.click()}
+$('imp').onchange=e=>{const r=new FileReader();r.onload=()=>{try{P=JSON.parse(r.result);save()}catch(x){alert('Neplatný soubor')}};r.readAsText(e.target.files[0])};
+draw();
+</script>
+</body>
+</html>
