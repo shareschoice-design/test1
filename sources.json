@@ -30,12 +30,12 @@
     "url": "https://www.ppas.cz/kariera"
   },
   {
-    "company": "MND",
+    "company": "MND a.s.",
     "type": "news",
     "url": "https://www.mnd.cz/aktuality/"
   },
   {
-    "company": "MND",
+    "company": "MND a.s.",
     "type": "careers",
     "url": "https://www.mnd.cz/kariera/"
   },
@@ -68,5 +68,10 @@
     "company": "Council of the EU",
     "type": "regulatory",
     "url": "https://www.consilium.europa.eu/en/press/press-releases/"
+  },
+  {
+    "company": "ACER",
+    "type": "regulatory",
+    "url": "https://www.acer.europa.eu/monitoring"
   }
 ]

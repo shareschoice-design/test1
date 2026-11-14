@@ -1,29 +1,47 @@
 [
   {
     "company": "PRE",
-    "title": "No current job postings identified in initial dataset",
+    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
     "published_at": "2026-11-14",
     "source_url": "https://www.pre.cz/kariera/",
     "location": "Czech Republic",
     "department": "General",
-    "summary": "Starter record indicating that no official job posting was found in the initial monitoring pass."
+    "summary": "No official job posting was identified in the selected monitoring window from the public careers page or available search results."
   },
   {
-    "company": "MND",
-    "title": "No current job postings identified in initial dataset",
+    "company": "Pražská plynárenská",
+    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
+    "published_at": "2026-11-14",
+    "source_url": "https://www.ppas.cz/kariera",
+    "location": "Czech Republic",
+    "department": "General",
+    "summary": "No official job posting was identified in the selected monitoring window from the public careers page or available search results."
+  },
+  {
+    "company": "MND a.s.",
+    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
     "published_at": "2026-11-14",
     "source_url": "https://www.mnd.cz/kariera/",
     "location": "Czech Republic",
     "department": "General",
-    "summary": "Starter record indicating that no official job posting was found in the initial monitoring pass."
+    "summary": "No official job posting was identified in the selected monitoring window from the public careers page or available search results."
   },
   {
     "company": "Centropol",
-    "title": "No current job postings identified in initial dataset",
+    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
     "published_at": "2026-11-14",
     "source_url": "https://www.centropol.cz/kariera/",
     "location": "Czech Republic",
     "department": "General",
-    "summary": "Starter record indicating that no official job posting was found in the initial monitoring pass."
+    "summary": "No official job posting was identified in the selected monitoring window from the public careers page or available search results."
+  },
+  {
+    "company": "ČEZ Group",
+    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
+    "published_at": "2026-11-14",
+    "source_url": "https://www.cez.cz/en/careers",
+    "location": "Czech Republic",
+    "department": "General",
+    "summary": "Official career page was checked, but no specific posting was found in the selected monitoring period in the available results."
   }
 ]

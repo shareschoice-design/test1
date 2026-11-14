@@ -22,5 +22,21 @@
     "source_url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/06/methane-regulation-council-agrees-to-postpone-monitoring-rules-for-one-year/",
     "summary": "EU-level regulatory update affecting energy supply chain and emissions reporting rules.",
     "tags": ["eu-regulation", "methane", "energy-transition"]
+  },
+  {
+    "authority": "European Commission",
+    "title": "CESEC Ministerial: Czechia welcomes broader regional infrastructure coordination",
+    "publication_date": "2026-11-06",
+    "source_url": "https://energy.ec.europa.eu/news/cesec-ministerial-takes-stock-cross-border-energy-infrastructure-and-prices-and-welcomes-czechia-and-poland-group-2026-11-06_en",
+    "summary": "Regional infrastructure and energy coordination update with relevance for market integration and cross-border transmission.",
+    "tags": ["infrastructure", "regional-energy", "eu-policy"]
+  },
+  {
+    "authority": "ACER",
+    "title": "2026 market monitoring reports published",
+    "publication_date": "2026-11-01",
+    "source_url": "https://www.acer.europa.eu/monitoring/MMR",
+    "summary": "Monitoring reports covering electricity and gas market developments relevant to Czech retail energy market conditions.",
+    "tags": ["market-monitoring", "electricity", "gas"]
   }
 ]

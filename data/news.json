@@ -4,7 +4,7 @@
     "title": "CEZ Group Earned CZK 26.6 Billion for Q1-Q3 2026",
     "publication_date": "2026-11-11",
     "source_url": "https://www.cez.cz/en/media/press-releases",
-    "summary": "Financial update and outlook from ČEZ Group, relevant for market position and strategic direction.",
+    "summary": "Financial update and outlook from ČEZ Group, relevant for market position and strategy in Czech energy retail.",
     "tags": ["financials", "strategy", "market-position"]
   },
   {
@@ -12,15 +12,39 @@
     "title": "Photovoltaic Academy Returns for Its Second Year",
     "publication_date": "2026-11-02",
     "source_url": "https://www.cez.cz/en/media/press-releases",
-    "summary": "Education and sustainability initiative related to renewable energy and customer engagement.",
+    "summary": "Education and sustainability initiative focused on renewable energy and customer engagement.",
     "tags": ["renewables", "sustainability", "customer-engagement"]
   },
   {
-    "company": "PRE",
-    "title": "PRE market update placeholder",
-    "publication_date": "2026-11-01",
+    "company": "Pražská energetika (PRE)",
+    "title": "No verified item found in the 2026-10-31 to 2026-11-14 monitoring window",
+    "publication_date": "2026-11-14",
     "source_url": "https://www.pre.cz/o-pre/tiskove-zpravy/",
-    "summary": "Placeholder entry — replace with verified item once scraped or manually confirmed.",
-    "tags": ["placeholder"]
+    "summary": "No official newsroom item met the search criteria in the selected 14-day period. This is an explicit monitoring result, not a claim of inactivity.",
+    "tags": ["monitoring-status"]
+  },
+  {
+    "company": "Pražská plynárenská",
+    "title": "No verified item found in the 2026-10-31 to 2026-11-14 monitoring window",
+    "publication_date": "2026-11-14",
+    "source_url": "https://www.ppas.cz/o-spolecnosti/aktuality",
+    "summary": "No official newsroom item met the search criteria in the selected 14-day period. This is an explicit monitoring result, not a claim of inactivity.",
+    "tags": ["monitoring-status"]
+  },
+  {
+    "company": "MND a.s.",
+    "title": "No verified item found in the 2026-10-31 to 2026-11-14 monitoring window",
+    "publication_date": "2026-11-14",
+    "source_url": "https://www.mnd.cz/aktuality/",
+    "summary": "No official newsroom item met the search criteria in the selected 14-day period. This is an explicit monitoring result, not a claim of inactivity.",
+    "tags": ["monitoring-status"]
+  },
+  {
+    "company": "Centropol",
+    "title": "No verified item found in the 2026-10-31 to 2026-11-14 monitoring window",
+    "publication_date": "2026-11-14",
+    "source_url": "https://www.centropol.cz/aktualne/",
+    "summary": "No official newsroom item met the search criteria in the selected 14-day period. This is an explicit monitoring result, not a claim of inactivity.",
+    "tags": ["monitoring-status"]
   }
 ]
