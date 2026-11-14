@@ -2,262 +2,304 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Competitor Monitoring Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>E.ON Competitor Dashboard</title>
   <style>
     :root {
-      --bg: #f5f3ef;
+      --bg: #f6f4f1;
       --panel: #ffffff;
+      --panel-2: #f2f7f5;
+      --line: #dfe5e1;
       --text: #1d1d1d;
-      --muted: #666;
-      --line: #ddd;
-      --brand: #1e5f4d;
-      --brand-2: #7f9f8d;
-      --warn: #a25d2e;
+      --muted: #555;
+      --brand: #1b5b4a;
+      --brand-2: #79a696;
+      --warning: #9a6a2e;
+      --danger: #9b4a4a;
+      --success: #2d6a4b;
+      --shadow: 0 8px 24px rgba(13, 28, 23, 0.06);
     }
 
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
+    html, body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+    body { padding: 24px; }
+    .wrap { max-width: 1400px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: clamp(2rem, 4vw, 3rem); }
+    .sub { margin: 0 0 20px; color: var(--muted); }
 
-    .wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 32px 20px 48px;
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: 2rem;
-    }
-
-    .sub {
-      color: var(--muted);
-      margin: 0 0 24px;
+    .topbar {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      margin-bottom: 14px; flex-wrap: wrap;
     }
 
     .tabs {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px;
     }
-
     .tab {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 10px 18px;
-      cursor: pointer;
-      font-weight: 600;
+      background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+      padding: 10px 14px; cursor: pointer; font-weight: 600; color: var(--text);
+      box-shadow: var(--shadow);
     }
-
     .tab.active {
-      background: var(--brand);
-      color: #fff;
-      border-color: var(--brand);
+      background: var(--brand); color: white; border-color: var(--brand);
     }
 
-    .section {
-      display: none;
+    .cards {
+      display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-bottom: 18px;
     }
-
-    .section.active {
-      display: block;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 18px;
-    }
-
     .card {
-      background: var(--panel);
+      background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+      padding: 16px; box-shadow: var(--shadow);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .card .big {
+      font-size: clamp(1.6rem, 2vw, 2.2rem); font-weight: 800; margin: 0;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px; border-radius: 999px;
+      padding: 6px 10px; font-size: 0.72rem; font-weight: 700; background: var(--panel-2); color: var(--brand);
       border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 18px;
     }
 
-    .meta {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
-      color: var(--muted);
-      font-size: 0.8rem;
+    .panel {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 16px;
+      box-shadow: var(--shadow); padding: 18px; margin-bottom: 18px;
     }
+    .panel h2 { margin: 0 0 14px; font-size: 1.2rem; }
 
-    .tag {
-      background: #eef3f1;
-      color: var(--brand);
-      border-radius: 999px;
-      padding: 4px 8px;
-      font-size: 0.7rem;
-      font-weight: 700;
+    .grid-2 { display: grid; grid-template-columns: 1.6fr 1fr; gap: 18px; }
+    @media (max-width: 980px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    .company-list { display: grid; gap: 14px; }
+    .company-item {
+      border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: linear-gradient(180deg, #ffffff 0%, #f7faf9 100%);
     }
+    .company-title { font-size: 1.1rem; font-weight: 700; margin: 0 0 8px; }
+    .mini-grid { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+    .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; border: 1px solid var(--line); background: #eef5f3; color: var(--brand); font-size: 0.7rem; font-weight: 700; }
+    .muted { color: var(--muted); }
 
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.15rem;
-    }
-
-    .summary {
-      color: var(--text);
-      line-height: 1.5;
-      margin: 0 0 12px;
-    }
-
-    a {
-      color: var(--brand);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .empty {
-      background: var(--panel);
-      border: 1px dashed var(--line);
-      border-radius: 12px;
-      padding: 24px;
-      color: var(--muted);
-    }
-
-    .source-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 12px;
-    }
-
-    .source-list li {
-      background: var(--panel);
+    table {
+      width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden;
       border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 12px 14px;
     }
+    th, td {
+      border-bottom: 1px solid var(--line); padding: 12px 10px; text-align: left; vertical-align: top; font-size: 0.92rem;
+    }
+    th {
+      background: #f1f6f4; position: sticky; top: 0; z-index: 1;
+    }
+    tr:last-child td { border-bottom: none; }
+    .score {
+      display: inline-flex; align-items: center; justify-content: center; min-width: 34px; height: 30px; border-radius: 8px;
+      font-weight: 800; color: #fff;
+      background: var(--brand);
+    }
+    .score.s-1 { background: #8c8c8c; }
+    .score.s-2 { background: #b07a45; }
+    .score.s-3 { background: #5f7f70; }
+    .score.s-4 { background: #2b7a5d; }
+    .score.s-5 { background: #1c5d3d; }
+    .score.na { background: #8b8b8b; }
+
+    .section { display: none; }
+    .section.active { display: block; }
+
+    .watchlist ul { margin: 8px 0 0; padding-left: 18px; }
+    .watchlist li { margin-bottom: 8px; }
+
+    .legend { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .legend-item { display:inline-flex; align-items:center; gap:8px; font-size:0.8rem; color: var(--muted); }
+    .swatch { width: 12px; height: 12px; border-radius: 4px; display:inline-block; }
+
+    .meta { color: var(--muted); font-size: 0.8rem; }
+    .alert { background: #fff8ec; border: 1px solid #f0d7a8; color: #7b4d15; border-radius: 10px; padding: 12px; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>Competitor Monitoring Dashboard</h1>
-    <p class="sub">Monitoring for E.ON competitor news, jobs, and regulatory updates in the Czech energy market.</p>
-
-    <div class="tabs">
-      <button class="tab active" data-tab="news">News</button>
-      <button class="tab" data-tab="jobs">Jobs</button>
-      <button class="tab" data-tab="regulatory">Regulatory</button>
-      <button class="tab" data-tab="sources">Sources</button>
+    <div class="topbar">
+      <div>
+        <h1>E.ON Competitor Dashboard</h1>
+        <p class="sub">Czech retail electricity and gas market — constant watchlist and benchmark</p>
+      </div>
+      <div class="chip">Updated: <span id="updatedDate">—</span></div>
     </div>
 
-    <section id="news" class="section active">
-      <div id="newsList" class="grid"></div>
+    <div class="tabs">
+      <button class="tab active" data-target="overview">Overview</button>
+      <button class="tab" data-target="scorecard">Scorecard</button>
+      <button class="tab" data-target="matrix">Matrix</button>
+      <button class="tab" data-target="watchlist">Watchlist</button>
+    </div>
+
+    <section id="overview" class="section active">
+      <div id="summaryCards" class="cards"></div>
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Competitor overview</h2>
+          <div id="companyOverview" class="company-list"></div>
+        </div>
+        <div class="panel">
+          <h2>Key messages</h2>
+          <div id="keyMessages" class="company-list"></div>
+        </div>
+      </div>
     </section>
 
-    <section id="jobs" class="section">
-      <div id="jobsList" class="grid"></div>
+    <section id="scorecard" class="section">
+      <div class="panel">
+        <h2>Relative scorecard</h2>
+        <div id="scoreTableWrap" style="overflow:auto;"></div>
+        <div class="legend">
+          <span class="legend-item"><span class="swatch" style="background:#8c8c8c"></span>1</span>
+          <span class="legend-item"><span class="swatch" style="background:#b07a45"></span>2</span>
+          <span class="legend-item"><span class="swatch" style="background:#5f7f70"></span>3</span>
+          <span class="legend-item"><span class="swatch" style="background:#2b7a5d"></span>4</span>
+          <span class="legend-item"><span class="swatch" style="background:#1c5d3d"></span>5</span>
+          <span class="legend-item"><span class="swatch" style="background:#8b8b8b"></span>NA</span>
+        </div>
+      </div>
     </section>
 
-    <section id="regulatory" class="section">
-      <div id="regulatoryList" class="grid"></div>
+    <section id="matrix" class="section">
+      <div class="panel">
+        <h2>Competitor matrix</h2>
+        <div id="matrixPanel" class="company-list"></div>
+      </div>
     </section>
 
-    <section id="sources" class="section">
-      <ul id="sourcesList" class="source-list"></ul>
+    <section id="watchlist" class="section">
+      <div class="panel watchlist">
+        <h2>Watchlist for E.ON</h2>
+        <ul id="watchlistList"></ul>
+      </div>
     </section>
   </div>
 
   <script>
-    const state = {
-      news: [],
-      jobs: [],
-      regulatory: [],
-      sources: []
+    const scoreKeyMap = {
+      1: 's-1',
+      2: 's-2',
+      3: 's-3',
+      4: 's-4',
+      5: 's-5',
+      'NA': 'na'
     };
 
     async function loadData() {
-      const [sources, news, jobs, regulatory] = await Promise.all([
-        fetch('sources.json').then(r => r.json()),
-        fetch('data/news.json').then(r => r.json()),
-        fetch('data/jobs.json').then(r => r.json()),
-        fetch('data/regulatory.json').then(r => r.json())
+      const [matrix, scorecard] = await Promise.all([
+        fetch('competitor_matrix.json').then(r => r.json()),
+        fetch('competitor_scorecard.json').then(r => r.json())
       ]);
 
-      state.sources = sources;
-      state.news = news;
-      state.jobs = jobs;
-      state.regulatory = regulatory;
-
-      renderCards('newsList', news, 'news');
-      renderCards('jobsList', jobs, 'jobs');
-      renderCards('regulatoryList', regulatory, 'regulatory');
-      renderSources();
+      renderSummaryCards(matrix);
+      renderOverview(matrix);
+      renderKeyMessages(matrix);
+      renderScorecard(scorecard);
+      renderMatrix(matrix);
+      renderWatchlist(matrix);
+      document.getElementById('updatedDate').textContent = matrix.updated_on || 'n/a';
     }
 
-    function renderCards(containerId, items, type) {
-      const container = document.getElementById(containerId);
+    function renderSummaryCards(matrix) {
+      const cards = [
+        { title: 'Competitors tracked', value: matrix.companies.length, note: 'Direct market benchmark set' },
+        { title: 'Analysis dimensions', value: matrix.analysis_dimensions.length, note: 'Market + strategic lenses' },
+        { title: 'Watchlist items', value: matrix.watchlist_for_eon.length, note: 'Main E.ON risk and opportunity signals' },
+        { title: 'Benchmark market', value: 'Czech retail', note: 'Electricity + gas' }
+      ];
 
-      if (!items || items.length === 0) {
-        container.innerHTML = '<div class="empty">No items in this dataset yet.</div>';
-        return;
-      }
+      document.getElementById('summaryCards').innerHTML = cards.map(card => `
+        <div class="card">
+          <h3>${card.title}</h3>
+          <p class="big">${card.value}</p>
+          <div class="meta">${card.note}</div>
+        </div>
+      `).join('');
+    }
 
-      const html = items.map(item => {
-        const company = item.company || item.authority || 'Unknown';
-        const date = item.publication_date || item.published_at || item.date || '—';
-        const url = item.source_url || item.url || '#';
-        const tags = (item.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('');
-        const summary = item.summary || '';
-        const location = item.location ? `<div>Location: ${item.location}</div>` : '';
-        const department = item.department ? `<div>Department: ${item.department}</div>` : '';
+    function renderOverview(matrix) {
+      const root = document.getElementById('companyOverview');
+      root.innerHTML = matrix.companies.map(c => `
+        <div class="company-item">
+          <div class="company-title">${c.company}</div>
+          <div class="muted">${c.retail_position}</div>
+          <div class="mini-grid">
+            ${(c.market_focus || []).map(v => `<span class="pill">${v}</span>`).join('')}
+          </div>
+          <div class="meta">Strongest: ${(c.strengths || []).slice(0, 2).join(' · ')}</div>
+        </div>
+      `).join('');
+    }
 
-        return `
-          <article class="card">
-            <div class="meta">
-              <span>${company}</span>
-              <span>•</span>
-              <span>${date}</span>
-            </div>
-            <h2>${item.title}</h2>
-            <div class="meta">${tags}</div>
-            <p class="summary">${summary}</p>
-            ${location}
-            ${department}
-            <p><a href="${url}" target="_blank" rel="noreferrer">Open source</a></p>
-          </article>
-        `;
+    function renderKeyMessages(matrix) {
+      const root = document.getElementById('keyMessages');
+      const list = matrix.companies.map(c => `
+        <div class="company-item">
+          <div class="company-title">${c.company}</div>
+          <div class="muted">${(c.recent_signals || []).join(' • ') || 'No recent public signal confirmed.'}</div>
+        </div>
+      `).join('');
+      root.innerHTML = list;
+    }
+
+    function renderScorecard(scorecard) {
+      const dims = scorecard.dimensions.map(d => d.label);
+      const companies = scorecard.companies;
+      const rows = companies.map(c => {
+        const row = [`<td><strong>${c.company}</strong></td>`];
+        scorecard.dimensions.forEach(dim => {
+          const entry = c.scores[dim.id];
+          const val = entry && entry.score !== undefined ? entry.score : 'NA';
+          const klass = scoreKeyMap[val] || 'na';
+          row.push(`<td><span class="score ${klass}">${val === 'NA' ? 'NA' : val}</span></td>`);
+        });
+        return `<tr>${row.join('')}</tr>`;
       }).join('');
 
-      container.innerHTML = html;
+      const headers = ['<th>Company</th>'].concat(scorecard.dimensions.map(d => `<th>${d.label}</th>`)).join('');
+      const table = `
+        <table>
+          <thead><tr>${headers}</tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      `;
+      document.getElementById('scoreTableWrap').innerHTML = table;
     }
 
-    function renderSources() {
-      const list = document.getElementById('sourcesList');
-      list.innerHTML = state.sources.map(source => `
-        <li>
-          <strong>${source.company}</strong><br>
-          <span>${source.type}</span><br>
-          <a href="${source.url}" target="_blank" rel="noreferrer">${source.url}</a>
-        </li>
+    function renderMatrix(matrix) {
+      const root = document.getElementById('matrixPanel');
+      root.innerHTML = matrix.companies.map(c => `
+        <div class="company-item">
+          <div class="company-title">${c.company}</div>
+          <div class="muted">${c.market_focus.join(' · ')}</div>
+          <div class="mini-grid">
+            ${(c.strengths || []).map(v => `<span class="pill">${v}</span>`).join('')}
+          </div>
+          <div class="meta">Risks: ${(c.risks || []).join(' · ')}</div>
+        </div>
       `).join('');
+    }
+
+    function renderWatchlist(matrix) {
+      const list = document.getElementById('watchlistList');
+      list.innerHTML = matrix.watchlist_for_eon.map(item => `<li>${item}</li>`).join('');
     }
 
     document.querySelectorAll('.tab').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
         btn.classList.add('active');
-        document.getElementById(btn.dataset.tab).classList.add('active');
+        document.getElementById(btn.dataset.target).classList.add('active');
       });
     });
 
     loadData().catch(err => {
-      console.error('Failed to load data:', err);
-      document.getElementById('newsList').innerHTML = '<div class="empty">Data failed to load.</div>';
+      console.error(err);
+      document.getElementById('summaryCards').innerHTML = '<div class="alert">Data failed to load. Check that competitor_matrix.json and competitor_scorecard.json exist in the repository root.</div>';
     });
   </script>
 </body>
