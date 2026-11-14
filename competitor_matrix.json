@@ -1,0 +1,137 @@
+{
+  "market": "Czech retail electricity and gas supply",
+  "benchmark_company": "E.ON",
+  "updated_on": "2026-11-14",
+  "companies": [
+    {
+      "company": "ČEZ Group",
+      "market_focus": ["electricity", "gas", "retail", "B2B", "residential"],
+      "retail_position": "Strongest incumbent; largest national footprint and strongest brand recognition.",
+      "customer_segments": ["households", "SME", "large business", "municipal customers"],
+      "strengths": [
+        "Scale and national distribution footprint",
+        "Strong brand and customer trust",
+        "Integrated generation, distribution and retail model",
+        "Large product portfolio and fixed/green tariff options"
+      ],
+      "risks": [
+        "Perception of high price sensitivity among households",
+        "Complexity of managing integrated operations",
+        "Regulatory pressure and cost discipline"
+      ],
+      "recent_signals": [
+        "Financial update published for Q1-Q3 2026",
+        "Renewable education/sustainability initiative",
+        "Gas distribution scale-up via infrastructure and M&A activity"
+      ],
+      "website": "https://www.cez.cz/en/home",
+      "careers": "https://www.cez.cz/en/careers",
+      "news": "https://www.cez.cz/en/media/press-releases"
+    },
+    {
+      "company": "Pražská energetika (PRE)",
+      "market_focus": ["electricity", "district heating", "local retail"],
+      "retail_position": "Strong regional player with a local market advantage in Prague and surrounding areas.",
+      "customer_segments": ["households", "municipal customers", "SME"],
+      "strengths": [
+        "Strong local brand and customer familiarity",
+        "Regional coverage in Prague metropolitan area",
+        "Reputation for service and local presence"
+      ],
+      "risks": [
+        "More limited national scale than ČEZ",
+        "Potentially narrower portfolio outside its core geography"
+      ],
+      "recent_signals": [
+        "No verified, dated press release found in selected 14-day monitoring window",
+        "Maintains customer-facing retail and service presence in Prague"
+      ],
+      "website": "https://www.pre.cz/",
+      "careers": "https://www.pre.cz/kariera/",
+      "news": "https://www.pre.cz/o-pre/tiskove-zpravy/"
+    },
+    {
+      "company": "Pražská plynárenská",
+      "market_focus": ["gas", "electricity", "retail", "city network"],
+      "retail_position": "Important local supplier and infrastructure-linked player with strong city positioning.",
+      "customer_segments": ["residential", "SME", "municipal customers"],
+      "strengths": [
+        "Strong local urban network",
+        "Relevant in dual-fuel household market",
+        "Brand recognition in Prague"
+      ],
+      "risks": [
+        "Regional concentration in Prague",
+        "Dependency on city-focused demand and local energy mix"
+      ],
+      "recent_signals": [
+        "No verified, dated press release found in selected 14-day monitoring window"
+      ],
+      "website": "https://www.ppas.cz/",
+      "careers": "https://www.ppas.cz/kariera",
+      "news": "https://www.ppas.cz/o-spolecnosti/aktuality"
+    },
+    {
+      "company": "MND a.s.",
+      "market_focus": ["electricity", "gas", "retail"],
+      "retail_position": "Independent supplier focused on competitive tariffs and flexible customer offers.",
+      "customer_segments": ["households", "SME", "price-sensitive customers"],
+      "strengths": [
+        "Price-focused offering",
+        "Focus on competitive retail pricing",
+        "Renewable/green positioning in some offers"
+      ],
+      "risks": [
+        "Less scale than the large incumbents",
+        "Customer acquisition tied to price-sensitive demand"
+      ],
+      "recent_signals": [
+        "No verified, dated press release found in selected 14-day monitoring window",
+        "Public-facing retail offer remains active in the Czech market"
+      ],
+      "website": "https://www.mnd.cz/",
+      "careers": "https://www.mnd.cz/kariera/",
+      "news": "https://www.mnd.cz/aktuality/"
+    },
+    {
+      "company": "Centropol Energy",
+      "market_focus": ["electricity", "gas", "retail"],
+      "retail_position": "Independent supplier focused on package offers and competitive pricing.",
+      "customer_segments": ["households", "SME", "value-oriented households"],
+      "strengths": [
+        "Straightforward tariff-based positioning",
+        "Competitive pricing model",
+        "Independent retail strategy"
+      ],
+      "risks": [
+        "Limited scale compared with national incumbents",
+        "Dependence on acquisition and switching dynamics"
+      ],
+      "recent_signals": [
+        "No verified, dated press release found in selected 14-day monitoring window"
+      ],
+      "website": "https://www.centropol.cz/",
+      "careers": "https://www.centropol.cz/kariera/",
+      "news": "https://www.centropol.cz/aktualne/"
+    }
+  ],
+  "analysis_dimensions": [
+    "Market share and geographic footprint",
+    "Tariff competitiveness and pricing transparency",
+    "Customer segments served",
+    "Brand trust and service quality",
+    "Digital experience and self-service capability",
+    "Green energy / renewable offering",
+    "Regulatory compliance and market adaptation",
+    "Infrastructure and vertical integration",
+    "Strategic partnerships and M&A activity",
+    "Recent public signals and hiring patterns"
+  ],
+  "watchlist_for_eon": [
+    "ČEZ Group: benchmark for scale and brand risk",
+    "PRE: local/agglomeration strength in Prague",
+    "Pražská plynárenská: dual-fuel, local city advantage",
+    "MND: price-led competitive pressure",
+    "Centropol: independent, price-sensitive challenger"
+  ]
+}
