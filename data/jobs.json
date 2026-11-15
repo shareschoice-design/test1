@@ -1,47 +1,28 @@
 [
   {
-    "company": "PRE",
-    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
-    "published_at": "2026-11-14",
-    "source_url": "https://www.pre.cz/kariera/",
-    "location": "Czech Republic",
-    "department": "General",
-    "summary": "No official job posting was identified in the selected monitoring window from the public careers page or available search results."
-  },
-  {
-    "company": "Pražská plynárenská",
-    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
-    "published_at": "2026-11-14",
-    "source_url": "https://www.ppas.cz/kariera",
-    "location": "Czech Republic",
-    "department": "General",
-    "summary": "No official job posting was identified in the selected monitoring window from the public careers page or available search results."
+    "company": "MND a.s.",
+    "title": "Projektant/ka elektro",
+    "published_at": null,
+    "observed_at": "2026-11-15",
+    "source_url": "https://www.mnd.cz/kariera/",
+    "location": "Hodonín, Czech Republic",
+    "department": "Engineering / electrical design",
+    "summary": "Vacancy surfaced in the search as active during the requested period. The stated 1 December 2026 date appears to be a start/effective date, not a confirmed posting date.",
+    "collection_window": "2026-10-16/2026-11-15",
+    "date_status": "Posting date not confirmed; listing reported active during window",
+    "verification_note": "The careers page is the official source, but a direct vacancy URL and its original posting date were not available in the search result. Confirm the vacancy is still open before relying on it."
   },
   {
     "company": "MND a.s.",
-    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
-    "published_at": "2026-11-14",
+    "title": "Inženýr/ka MaR",
+    "published_at": null,
+    "observed_at": "2026-11-15",
     "source_url": "https://www.mnd.cz/kariera/",
-    "location": "Czech Republic",
-    "department": "General",
-    "summary": "No official job posting was identified in the selected monitoring window from the public careers page or available search results."
-  },
-  {
-    "company": "Centropol",
-    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
-    "published_at": "2026-11-14",
-    "source_url": "https://www.centropol.cz/kariera/",
-    "location": "Czech Republic",
-    "department": "General",
-    "summary": "No official job posting was identified in the selected monitoring window from the public careers page or available search results."
-  },
-  {
-    "company": "ČEZ Group",
-    "title": "No current job postings identified in the 2026-10-31 to 2026-11-14 monitoring window",
-    "published_at": "2026-11-14",
-    "source_url": "https://www.cez.cz/en/careers",
-    "location": "Czech Republic",
-    "department": "General",
-    "summary": "Official career page was checked, but no specific posting was found in the selected monitoring period in the available results."
+    "location": "Hodonín, Czech Republic",
+    "department": "Measurement and regulation engineering",
+    "summary": "Vacancy surfaced in the search as active during the requested period. The stated 1 December 2026 date appears to be a start/effective date, not a confirmed posting date.",
+    "collection_window": "2026-10-16/2026-11-15",
+    "date_status": "Posting date not confirmed; listing reported active during window",
+    "verification_note": "The careers page is the official source, but a direct vacancy URL and its original posting date were not available in the search result. Confirm the vacancy is still open before relying on it."
   }
 ]

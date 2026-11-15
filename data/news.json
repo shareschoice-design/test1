@@ -3,48 +3,44 @@
     "company": "ČEZ Group",
     "title": "CEZ Group Earned CZK 26.6 Billion for Q1-Q3 2026",
     "publication_date": "2026-11-11",
-    "source_url": "https://www.cez.cz/en/media/press-releases",
-    "summary": "Financial update and outlook from ČEZ Group, relevant for market position and strategy in Czech energy retail.",
-    "tags": ["financials", "strategy", "market-position"]
+    "source_url": "https://www.cez.cz/en/press-releases",
+    "summary": "ČEZ reported Q1–Q3 2026 financial results and updated its outlook. The source found in this pass is the official press-release listing, not a confirmed individual article URL.",
+    "tags": ["financials", "strategy"],
+    "collection_window": "2026-10-16/2026-11-15",
+    "verified_at": "2026-11-15",
+    "verification_note": "Title and date surfaced in search; individual release URL should be checked on the official newsroom before citing externally."
   },
   {
     "company": "ČEZ Group",
     "title": "Photovoltaic Academy Returns for Its Second Year",
     "publication_date": "2026-11-02",
-    "source_url": "https://www.cez.cz/en/media/press-releases",
-    "summary": "Education and sustainability initiative focused on renewable energy and customer engagement.",
-    "tags": ["renewables", "sustainability", "customer-engagement"]
+    "source_url": "https://www.cez.cz/en/press-releases",
+    "summary": "Education and sustainability initiative focused on renewable energy. The source found in this pass is the official press-release listing, not a confirmed individual article URL.",
+    "tags": ["renewables", "sustainability"],
+    "collection_window": "2026-10-16/2026-11-15",
+    "verified_at": "2026-11-15",
+    "verification_note": "Title and date surfaced in search; individual release URL should be checked on the official newsroom before citing externally."
   },
   {
-    "company": "Pražská energetika (PRE)",
-    "title": "No verified item found in the 2026-10-31 to 2026-11-14 monitoring window",
-    "publication_date": "2026-11-14",
-    "source_url": "https://www.pre.cz/o-pre/tiskove-zpravy/",
-    "summary": "No official newsroom item met the search criteria in the selected 14-day period. This is an explicit monitoring result, not a claim of inactivity.",
-    "tags": ["monitoring-status"]
-  },
-  {
-    "company": "Pražská plynárenská",
-    "title": "No verified item found in the 2026-10-31 to 2026-11-14 monitoring window",
-    "publication_date": "2026-11-14",
-    "source_url": "https://www.ppas.cz/o-spolecnosti/aktuality",
-    "summary": "No official newsroom item met the search criteria in the selected 14-day period. This is an explicit monitoring result, not a claim of inactivity.",
-    "tags": ["monitoring-status"]
-  },
-  {
-    "company": "MND a.s.",
-    "title": "No verified item found in the 2026-10-31 to 2026-11-14 monitoring window",
-    "publication_date": "2026-11-14",
-    "source_url": "https://www.mnd.cz/aktuality/",
-    "summary": "No official newsroom item met the search criteria in the selected 14-day period. This is an explicit monitoring result, not a claim of inactivity.",
-    "tags": ["monitoring-status"]
+    "company": "ČEZ Group",
+    "title": "Temelín Unit 1 scheduled outage and investment projects",
+    "publication_date": "2026-10-16",
+    "source_url": "https://www.cez.cz/en/press-releases",
+    "summary": "News item about a planned outage at Temelín and planned investment projects. Included at the start of the requested 30-day window; not a retail-specific announcement.",
+    "tags": ["generation", "investment"],
+    "collection_window": "2026-10-16/2026-11-15",
+    "verified_at": "2026-11-15",
+    "verification_note": "Search result gave the title/date and official listing page; individual release URL should be confirmed."
   },
   {
     "company": "Centropol",
-    "title": "No verified item found in the 2026-10-31 to 2026-11-14 monitoring window",
-    "publication_date": "2026-11-14",
-    "source_url": "https://www.centropol.cz/aktualne/",
-    "summary": "No official newsroom item met the search criteria in the selected 14-day period. This is an explicit monitoring result, not a claim of inactivity.",
-    "tags": ["monitoring-status"]
+    "title": "Ceníky našich produktů — price lists for electricity and gas",
+    "publication_date": "2026-11-04",
+    "source_url": "https://www.centropol.cz/ceniky/",
+    "summary": "Centropol's official price-list page was surfaced as having new household electricity and gas price lists for November 2026. A specific publication date was not independently confirmed; treat 4 November as a search result date, not a verified page timestamp.",
+    "tags": ["tariffs", "electricity", "gas"],
+    "collection_window": "2026-10-16/2026-11-15",
+    "verified_at": "2026-11-15",
+    "verification_note": "Official price-list page, but the page itself should be checked for the exact document/version date."
   }
 ]
