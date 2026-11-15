@@ -6,18 +6,18 @@
     {
       "company": "ČEZ Group",
       "market_focus": ["electricity", "gas", "retail", "B2B", "residential"],
-      "retail_position": "Strongest incumbent; largest national footprint and strongest brand recognition.",
+      "retail_position": "Nejsilnější zavedený dodavatel s největším celostátním dosahem a vysokou známostí značky.",
       "customer_segments": ["households", "SME", "large business", "municipal customers"],
       "strengths": [
-        "Scale and national distribution footprint",
-        "Strong brand and customer trust",
-        "Integrated generation, distribution and retail model",
-        "Large product portfolio and fixed/green tariff options"
+        "Velký rozsah a celostátní působnost",
+        "Silná značka a důvěra zákazníků",
+        "Propojená výroba, distribuce a maloobchod",
+        "Široké portfolio včetně fixovaných a zelených tarifů"
       ],
       "risks": [
-        "Perception of high price sensitivity among households",
-        "Complexity of managing integrated operations",
-        "Regulatory pressure and cost discipline"
+        "Citlivost domácností na vnímanou výši cen",
+        "Složitost řízení propojených činností",
+        "Regulatorní tlak a požadavky na nákladovou disciplínu"
       ],
       "recent_signals": [
         "Financial update published for Q1-Q3 2026",
@@ -31,16 +31,16 @@
     {
       "company": "Pražská energetika (PRE)",
       "market_focus": ["electricity", "district heating", "local retail"],
-      "retail_position": "Strong regional player with a local market advantage in Prague and surrounding areas.",
+      "retail_position": "Silný regionální hráč s místní výhodou v Praze a okolí.",
       "customer_segments": ["households", "municipal customers", "SME"],
       "strengths": [
-        "Strong local brand and customer familiarity",
-        "Regional coverage in Prague metropolitan area",
-        "Reputation for service and local presence"
+        "Silná místní značka a známost u zákazníků",
+        "Regionální pokrytí pražské aglomerace",
+        "Pověst založená na službách a místní přítomnosti"
       ],
       "risks": [
-        "More limited national scale than ČEZ",
-        "Potentially narrower portfolio outside its core geography"
+        "Menší celostátní rozsah než ČEZ",
+        "Potenciálně užší nabídka mimo hlavní region"
       ],
       "recent_signals": [
         "No verified, dated press release found in selected 14-day monitoring window",
@@ -53,16 +53,16 @@
     {
       "company": "Pražská plynárenská",
       "market_focus": ["gas", "electricity", "retail", "city network"],
-      "retail_position": "Important local supplier and infrastructure-linked player with strong city positioning.",
+      "retail_position": "Významný místní dodavatel propojený s infrastrukturou a silně zaměřený na Prahu.",
       "customer_segments": ["residential", "SME", "municipal customers"],
       "strengths": [
-        "Strong local urban network",
-        "Relevant in dual-fuel household market",
-        "Brand recognition in Prague"
+        "Silná místní městská síť",
+        "Významná pozice v nabídce elektřiny i plynu pro domácnosti",
+        "Známost značky v Praze"
       ],
       "risks": [
-        "Regional concentration in Prague",
-        "Dependency on city-focused demand and local energy mix"
+        "Regionální koncentrace v Praze",
+        "Závislost na místní poptávce a energetickém mixu"
       ],
       "recent_signals": [
         "No verified, dated press release found in selected 14-day monitoring window"
@@ -74,16 +74,16 @@
     {
       "company": "MND a.s.",
       "market_focus": ["electricity", "gas", "retail"],
-      "retail_position": "Independent supplier focused on competitive tariffs and flexible customer offers.",
+      "retail_position": "Nezávislý dodavatel zaměřený na konkurenceschopné tarify a flexibilní nabídky.",
       "customer_segments": ["households", "SME", "price-sensitive customers"],
       "strengths": [
-        "Price-focused offering",
-        "Focus on competitive retail pricing",
-        "Renewable/green positioning in some offers"
+        "Nabídka zaměřená na cenu",
+        "Důraz na konkurenceschopné maloobchodní ceny",
+        "Zelené zaměření u části nabídky"
       ],
       "risks": [
-        "Less scale than the large incumbents",
-        "Customer acquisition tied to price-sensitive demand"
+        "Menší rozsah než u největších zavedených dodavatelů",
+        "Získávání zákazníků závislé na cenově citlivé poptávce"
       ],
       "recent_signals": [
         "No verified, dated press release found in selected 14-day monitoring window",
@@ -96,16 +96,16 @@
     {
       "company": "Centropol Energy",
       "market_focus": ["electricity", "gas", "retail"],
-      "retail_position": "Independent supplier focused on package offers and competitive pricing.",
+      "retail_position": "Nezávislý dodavatel zaměřený na balíčkové nabídky a konkurenceschopné ceny.",
       "customer_segments": ["households", "SME", "value-oriented households"],
       "strengths": [
-        "Straightforward tariff-based positioning",
-        "Competitive pricing model",
-        "Independent retail strategy"
+        "Přehledná nabídka založená na tarifech",
+        "Model zaměřený na konkurenceschopné ceny",
+        "Nezávislá maloobchodní strategie"
       ],
       "risks": [
-        "Limited scale compared with national incumbents",
-        "Dependence on acquisition and switching dynamics"
+        "Menší rozsah ve srovnání s celostátními zavedenými dodavateli",
+        "Závislost na získávání zákazníků a jejich přechodech"
       ],
       "recent_signals": [
         "No verified, dated press release found in selected 14-day monitoring window"

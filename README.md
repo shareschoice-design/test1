@@ -4,9 +4,9 @@ This repository contains a lightweight static dashboard for competitor monitorin
 
 ## Dashboard
 
-Open `index.html` through GitHub Pages or a local web server (for example `python -m http.server`) so the browser can fetch the JSON files. The dashboard reads `competitor_matrix.json`, `competitor_scorecard.json`, and `scorecard_history.json`.
+Open `index.html` through GitHub Pages or a local web server (for example `python -m http.server`) so the browser can fetch the JSON files. The dashboard reads the competitor matrix, scorecard, actions, news, jobs, regulatory signals, knowledge graph, sources, and scorecard history.
 
-It includes an average-score bar chart, a score heatmap, and a selectable-dimension timeline. The history file currently contains one initial baseline snapshot only, so the timeline will show meaningful change after subsequent dated snapshots are added. No earlier values have been fabricated.
+The action overview presents the recommended work as a step-by-step workflow with owner, due date, evidence links, and a defined deliverable. Checklist progress is stored in the browser's local storage on the current device; it is not synchronized or written back to the repository. Competitor cards separate directional assessments from collected signals. The scorecard includes a heatmap and average-score chart; scores remain unverified hypotheses, and no weighted winner is calculated.
 
 The news and job feeds show a rolling two-calendar-month window ending on the dashboard's `as_of` date. Job posting dates come from Jobs.cz search results; `observed_at` records when the listing was checked, and the listing's current availability should be verified before use. A company with no matching job result is not necessarily inactive.
 
