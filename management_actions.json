@@ -1,57 +1,97 @@
 {
   "as_of": "2026-11-15",
   "audience": "E.ON Retail leadership",
-  "disclaimer": "Decision-support hypotheses from a limited initial public-source scan, not verified market conclusions. Validate source facts and ownership before acting.",
+  "disclaimer": "Závěry jsou pracovní hypotézy z omezeného monitoringu veřejných zdrojů, nikoli ověřená tržní fakta. Před rozhodnutím ověř zdroje i vlastnické vztahy.",
   "actions": [
     {
+      "id": "centropol-tariff-check",
       "priority": "P1",
-      "title": "Run a like-for-like tariff check against Centropol",
-      "what_to_do": "Compare electricity and gas offers for the same household consumption profiles: commodity price, standing charge, fixed-term length, exit terms, bonuses and green claims.",
-      "why_now": "A Centropol November price-list page surfaced, but exact price changes and dates are not confirmed. This is a fast way to test price-position and switching risk.",
-      "owner": "Retail pricing / proposition",
-      "due": "Within 5 business days",
+      "title": "Porovnat nabídky Centropolu a E.ON na stejném profilu",
+      "what_to_do": "Porovnej elektřinu a plyn pro stejné domácí profily spotřeby: cenu za MWh, stálý plat, délku fixace, podmínky ukončení, bonusy a zelená tvrzení.",
+      "why_now": "Objevily se ceníky Centropolu pro listopad, ale přesné změny cen a jejich platnost nejsou ověřené. Srovnání rychle ukáže cenovou pozici a riziko odchodů.",
+      "owner": "Cenotvorba / produktová nabídka",
+      "due": "Do 5 pracovních dnů",
+      "workflow": [
+        "Otevři aktuální ceníky elektřiny a plynu Centropolu a E.ON; zaznamenej verzi dokumentu a datum platnosti.",
+        "Porovnej stejné profily spotřeby domácností: cenu za MWh, stálý plat, délku smlouvy, ukončení, bonusy a zelená tvrzení.",
+        "Ověř každou hodnotu ve zdrojovém dokumentu a označ chybějící či nesrovnatelné podmínky.",
+        "Připrav jednostránkové srovnání a doporuč, zda reagovat cenou nebo nabídkou."
+      ],
+      "deliverable": "Datované srovnání tarifů na stejném profilu, odkazy na zdroje a doporučená reakce.",
       "evidence": ["data/news.json: Centropol price-list signal", "data/regulatory.json: Centropol price-list signal"],
-      "confidence": "Low until tariffs are captured and compared"
+      "confidence": "Nízká do ověření a srovnání ceníků"
     },
     {
+      "id": "ote-impact-check",
       "priority": "P1",
-      "title": "Confirm OTE January 2027 change impact with Operations and IT",
-      "what_to_do": "Obtain the official DUFVO/DUFMO notice and 2027 gas load-profile documents; map affected interfaces, settlement, forecasting and billing processes; assign an implementation owner if required.",
-      "why_now": "OTE-related changes were surfaced for January 2027 and 2027 gas profiles. Scope and deadlines need primary-source confirmation.",
-      "owner": "Market Operations + IT / Billing",
-      "due": "Confirm scope this week",
+      "title": "Prověřit změny OTE pro leden 2027 s provozem a IT",
+      "what_to_do": "Získej oficiální oznámení DUFVO/DUFMO a dokumentaci profilů spotřeby plynu pro rok 2027; zmapuj dotčená rozhraní, zúčtování, prognózy a fakturaci a případně určete vlastníka implementace.",
+      "why_now": "Objevily se změny OTE plánované na leden 2027 a nové profily plynu. Rozsah a termíny je nutné potvrdit z primárních zdrojů.",
+      "owner": "Provoz trhu + IT / fakturace",
+      "due": "Potvrdit rozsah tento týden",
+      "workflow": [
+        "Otevři oficiální oznámení OTE k DUFVO/DUFMO a profilům plynu 2027; ověř verze a data účinnosti.",
+        "Požádej provoz trhu, IT, prognózy a fakturaci o zmapování dotčených rozhraní a procesů.",
+        "Zapiš dopad, odpovědného vlastníka, nutné změny a termín; nedotčené oblasti dolož.",
+        "Zaznamenej rozhodnutí a datum kontroly v procesu řízení změn."
+      ],
+      "deliverable": "Schválené posouzení dopadů s vlastníkem, rozsahem a rozhodnutím o implementaci.",
       "evidence": ["data/regulatory.json: OTE DUFVO/DUFMO", "data/regulatory.json: OTE gas load profiles"],
-      "confidence": "Medium; verify official technical notices"
+      "confidence": "Střední; ověřit oficiální technická oznámení"
     },
     {
+      "id": "cez-results-watch",
       "priority": "P2",
-      "title": "Translate ČEZ's results into a competitor watch, not a price assumption",
-      "what_to_do": "Review the actual ČEZ Q1–Q3 release, then watch for follow-on retail changes in acquisition, retention, fixed tariffs, digital service and investment. Do not infer retail pricing from group profit alone.",
-      "why_now": "Search surfaced a Q1–Q3 results announcement, but only a newsroom listing was located in this scan.",
-      "owner": "Strategy / Competitive Intelligence",
-      "due": "Next weekly competitor review",
+      "title": "Převést výsledky ČEZ na seznam témat ke sledování",
+      "what_to_do": "Ověř skutečnou zprávu ČEZ za 1.–3. čtvrtletí a sleduj následné změny v akvizici, retenci, fixovaných tarifech, digitálních službách a investicích. Zisk skupiny sám o sobě nedokazuje změnu cen pro domácnosti.",
+      "why_now": "Vyhledávání ukázalo oznámení výsledků za 1.–3. čtvrtletí, ale zatím jen odkaz na seznam tiskových zpráv.",
+      "owner": "Strategie / konkurenční zpravodajství",
+      "due": "Při příští týdenní revizi konkurence",
+      "workflow": [
+        "Najdi a ověř přímý odkaz na výsledky ČEZ za 1.–3. čtvrtletí 2026; současný odkaz vede jen na seznam zpráv.",
+        "Odděl zveřejněná fakta od interpretace a vytáhni případná sdělení relevantní pro maloobchod.",
+        "Zařaď akvizici, retenci, fixované tarify, digitální služby a investice do příští týdenní kontroly; neodvozuj ceny jen ze zisku skupiny.",
+        "Seznam aktualizuj pouze při doloženém, datovaném signálu."
+      ],
+      "deliverable": "Ověřený záznam signálu a datovaný seznam témat ke sledování.",
       "evidence": ["data/news.json: ČEZ Q1-Q3 results"],
-      "confidence": "Medium for signal; low for retail implications"
+      "confidence": "Střední pro signál; nízká pro dopad na maloobchod"
     },
     {
+      "id": "hiring-signal-check",
       "priority": "P2",
-      "title": "Validate whether competitor hiring signals reveal capability investment",
-      "what_to_do": "Check that the ČEZ and MND vacancies remain open, capture direct role pages and posting dates, then group confirmed roles by capability (operations, digital/security, engineering). Avoid treating one job advert as proof of a strategic pivot.",
-      "why_now": "Several ČEZ listings and two MND technical roles surfaced, but original posting dates/live status were not confirmed.",
-      "owner": "Competitive Intelligence / HR Insights",
-      "due": "Before the next monthly review",
+      "title": "Ověřit, zda nábor konkurentů ukazuje investice do schopností",
+      "what_to_do": "Zkontroluj, zda jsou nabídky ČEZ a MND stále otevřené, ulož přímé odkazy a data zveřejnění a potvrzené role rozděl podle schopností (provoz, digitál/bezpečnost, technika). Jediný inzerát není důkaz strategického obratu.",
+      "why_now": "Objevilo se několik nabídek ČEZ a dvě technické role MND, ale původní data zveřejnění a aktuální stav nebyly potvrzeny.",
+      "owner": "Konkurenční zpravodajství / HR",
+      "due": "Před příští měsíční revizí",
+      "workflow": [
+        "Otevři každý inzerát ČEZ a MND na Jobs.cz a ověř, zda je stále aktivní; zaznamenej datum kontroly a přímý odkaz.",
+        "Potvrď datum zveřejnění a zaměstnavatele na detailu nabídky.",
+        "Ověřené role rozděl podle schopností (provoz, digitál/bezpečnost, technika, obchod); z jedné nabídky strategii nevyvozuj.",
+        "Shrň jen opakující se nebo potvrzené vzorce a uveď omezení důkazů."
+      ],
+      "deliverable": "Datovaná tabulka nabídek a opatrné shrnutí vzorců schopností.",
       "evidence": ["data/jobs.json: candidate listings; dates/status unverified"],
-      "confidence": "Low until direct listings are verified"
+      "confidence": "Nízká do ověření přímých inzerátů"
     },
     {
+      "id": "coverage-gaps",
       "priority": "P3",
-      "title": "Close the evidence gaps before presenting a competitor ranking",
-      "what_to_do": "For PRE, Pražská plynárenská, MND and Centropol, capture direct dated news and career URLs; log search date, original publication date, company, link and confidence. Keep 'no result found' separate from 'no activity'.",
-      "why_now": "The initial 30-day scan has few direct, dated company announcements and incomplete recruitment coverage.",
-      "owner": "Competitive Intelligence",
-      "due": "Next 2 weeks",
+      "title": "Doplnit důkazy před zveřejněním srovnání konkurentů",
+      "what_to_do": "U PRE, Pražské plynárenské, MND a Centropolu ulož přímé odkazy na datované zprávy a kariérní stránky; zaznamenej datum hledání, zveřejnění, firmu, zdroj a jistotu. Rozlišuj „nenalezen výsledek“ od „žádná aktivita“.",
+      "why_now": "Dosavadní monitoring má málo přímo ověřených firemních zpráv s datem a neúplné pokrytí pracovních nabídek.",
+      "owner": "Konkurenční zpravodajství",
+      "due": "Do 2 týdnů",
+      "workflow": [
+        "Otevři oficiální zpravodajství a kariérní stránky PRE, Pražské plynárenské, MND a Centropolu.",
+        "U každé relevantní položky zaznamenej přímou URL, typ zdroje, datum zveřejnění, datum kontroly a firmu.",
+        "Označ míru jistoty, rozliš „nenalezen výsledek“ od „žádná aktivita“ a nepodložená fakta nech prázdná.",
+        "Zkontroluj pokrytí jednotlivých firem a před srovnáním zveřejni datovaný evidenční přehled."
+      ],
+      "deliverable": "Datovaný přehled důkazů s odkazy a výslovně označenými mezerami v pokrytí.",
       "evidence": ["data/news.json", "data/jobs.json", "sources.json"],
-      "confidence": "High that the dataset has coverage gaps"
+      "confidence": "Vysoká jistota, že pokrytí má mezery"
     }
   ]
 }
