@@ -1,0 +1,57 @@
+{
+  "as_of": "2026-11-15",
+  "audience": "E.ON Retail leadership",
+  "disclaimer": "Decision-support hypotheses from a limited initial public-source scan, not verified market conclusions. Validate source facts and ownership before acting.",
+  "actions": [
+    {
+      "priority": "P1",
+      "title": "Run a like-for-like tariff check against Centropol",
+      "what_to_do": "Compare electricity and gas offers for the same household consumption profiles: commodity price, standing charge, fixed-term length, exit terms, bonuses and green claims.",
+      "why_now": "A Centropol November price-list page surfaced, but exact price changes and dates are not confirmed. This is a fast way to test price-position and switching risk.",
+      "owner": "Retail pricing / proposition",
+      "due": "Within 5 business days",
+      "evidence": ["data/news.json: Centropol price-list signal", "data/regulatory.json: Centropol price-list signal"],
+      "confidence": "Low until tariffs are captured and compared"
+    },
+    {
+      "priority": "P1",
+      "title": "Confirm OTE January 2027 change impact with Operations and IT",
+      "what_to_do": "Obtain the official DUFVO/DUFMO notice and 2027 gas load-profile documents; map affected interfaces, settlement, forecasting and billing processes; assign an implementation owner if required.",
+      "why_now": "OTE-related changes were surfaced for January 2027 and 2027 gas profiles. Scope and deadlines need primary-source confirmation.",
+      "owner": "Market Operations + IT / Billing",
+      "due": "Confirm scope this week",
+      "evidence": ["data/regulatory.json: OTE DUFVO/DUFMO", "data/regulatory.json: OTE gas load profiles"],
+      "confidence": "Medium; verify official technical notices"
+    },
+    {
+      "priority": "P2",
+      "title": "Translate ČEZ's results into a competitor watch, not a price assumption",
+      "what_to_do": "Review the actual ČEZ Q1–Q3 release, then watch for follow-on retail changes in acquisition, retention, fixed tariffs, digital service and investment. Do not infer retail pricing from group profit alone.",
+      "why_now": "Search surfaced a Q1–Q3 results announcement, but only a newsroom listing was located in this scan.",
+      "owner": "Strategy / Competitive Intelligence",
+      "due": "Next weekly competitor review",
+      "evidence": ["data/news.json: ČEZ Q1-Q3 results"],
+      "confidence": "Medium for signal; low for retail implications"
+    },
+    {
+      "priority": "P2",
+      "title": "Validate whether competitor hiring signals reveal capability investment",
+      "what_to_do": "Check that the ČEZ and MND vacancies remain open, capture direct role pages and posting dates, then group confirmed roles by capability (operations, digital/security, engineering). Avoid treating one job advert as proof of a strategic pivot.",
+      "why_now": "Several ČEZ listings and two MND technical roles surfaced, but original posting dates/live status were not confirmed.",
+      "owner": "Competitive Intelligence / HR Insights",
+      "due": "Before the next monthly review",
+      "evidence": ["data/jobs.json: candidate listings; dates/status unverified"],
+      "confidence": "Low until direct listings are verified"
+    },
+    {
+      "priority": "P3",
+      "title": "Close the evidence gaps before presenting a competitor ranking",
+      "what_to_do": "For PRE, Pražská plynárenská, MND and Centropol, capture direct dated news and career URLs; log search date, original publication date, company, link and confidence. Keep 'no result found' separate from 'no activity'.",
+      "why_now": "The initial 30-day scan has few direct, dated company announcements and incomplete recruitment coverage.",
+      "owner": "Competitive Intelligence",
+      "due": "Next 2 weeks",
+      "evidence": ["data/news.json", "data/jobs.json", "sources.json"],
+      "confidence": "High that the dataset has coverage gaps"
+    }
+  ]
+}

@@ -1,42 +1,57 @@
 [
   {
     "authority": "OTE",
-    "title": "Changes to DUFVO and DUFMO Effective January 1, 2027",
-    "publication_date": "2026-11-11",
-    "source_url": "https://www.ote-cr.cz/en/about-ote/news",
-    "summary": "Market-related updates affecting balance and operational rules in the Czech power market.",
-    "tags": ["market-rule", "balancing", "czech-market"]
+    "title": "Gas Load Profiles for 2027 published (version 3.17)",
+    "publication_date": "2026-11-12",
+    "source_url": "https://www.ote-cr.cz/en/documentation/gas-documentation/tdd-documentation?set_language=en",
+    "summary": "OTE published 2027 gas load-profile documentation. The relevant retail implication to assess is whether forecasting, settlement, data and billing processes need updates.",
+    "tags": ["gas", "load-profiles", "operations"],
+    "relevance": "Assess with forecasting, billing and market-operations teams; confirm the applicable technical version and implementation date.",
+    "confidence": "medium",
+    "source_status": "Official OTE documentation page surfaced; exact notice metadata should be confirmed"
   },
   {
     "authority": "OTE",
-    "title": "FLEXENERGY a.s. resumes role as balance responsible party",
+    "title": "DUFVO/DUFMO market-message changes for January 2027",
+    "publication_date": "2026-11-11",
+    "source_url": "https://www.ote-cr.cz/cs/dokumentace/dokumentace-elektrina/uzitecne-informace-pro-pds-plds",
+    "summary": "Search surfaced an OTE update on DUFVO/DUFMO message changes effective January 2027. Verify the official technical notice and scope before scheduling implementation.",
+    "tags": ["market-rules", "data", "billing", "electricity"],
+    "relevance": "Have market operations and IT confirm whether E.ON Retail's interfaces, settlement and customer billing flows are affected.",
+    "confidence": "medium",
+    "source_status": "Official OTE documentation page surfaced; direct notice details require confirmation"
+  },
+  {
+    "authority": "OTE",
+    "title": "FLEXENERGY a.s. listed again as a balance-responsible party",
     "publication_date": "2026-11-03",
-    "source_url": "https://www.ote-cr.cz/en/about-ote/news",
-    "summary": "Operational update relevant to market participation and balancing responsibilities.",
-    "tags": ["balancing", "market-participation"]
+    "source_url": "https://www.ote-cr.cz/en/about-ote/ote-news",
+    "summary": "Market-participant update surfaced in OTE news. This is a market-operations signal, not a direct competitor retail announcement.",
+    "tags": ["market-participant", "balancing"],
+    "relevance": "Low direct retail impact; keep in market-participant monitoring.",
+    "confidence": "low",
+    "source_status": "OTE news listing surfaced; individual item URL not verified"
   },
   {
-    "authority": "Council of the EU",
-    "title": "Methane regulation monitoring rules postponed by one year",
-    "publication_date": "2026-11-06",
-    "source_url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/06/methane-regulation-council-agrees-to-postpone-monitoring-rules-for-one-year/",
-    "summary": "EU-level regulatory update affecting energy supply chain and emissions reporting rules.",
-    "tags": ["eu-regulation", "methane", "energy-transition"]
-  },
-  {
-    "authority": "European Commission",
-    "title": "CESEC Ministerial: Czechia welcomes broader regional infrastructure coordination",
-    "publication_date": "2026-11-06",
-    "source_url": "https://energy.ec.europa.eu/news/cesec-ministerial-takes-stock-cross-border-energy-infrastructure-and-prices-and-welcomes-czechia-and-poland-group-2026-11-06_en",
-    "summary": "Regional infrastructure and energy coordination update with relevance for market integration and cross-border transmission.",
-    "tags": ["infrastructure", "regional-energy", "eu-policy"]
+    "authority": "Centropol",
+    "title": "November 2026 electricity and gas price-list documents surfaced",
+    "publication_date": null,
+    "source_url": "https://www.centropol.cz/ceniky/",
+    "summary": "Official product/pricing page surfaced in search. Exact document revision, effective dates and price differences still need manual verification.",
+    "tags": ["tariffs", "retail-prices", "electricity", "gas"],
+    "relevance": "Compare price components, fixed fees, contract length and termination terms with E.ON's equivalent customer profiles.",
+    "confidence": "low",
+    "source_status": "Official price page; exact publication date and tariff changes not verified"
   },
   {
     "authority": "ACER",
-    "title": "2026 market monitoring reports published",
-    "publication_date": "2026-11-01",
-    "source_url": "https://www.acer.europa.eu/monitoring/MMR",
-    "summary": "Monitoring reports covering electricity and gas market developments relevant to Czech retail energy market conditions.",
-    "tags": ["market-monitoring", "electricity", "gas"]
+    "title": "2026 European retail electricity and gas monitoring report",
+    "publication_date": null,
+    "source_url": "https://www.acer.europa.eu/monitoring/energy-retail-2026",
+    "summary": "ACER retail-market monitoring page surfaced as a source for EU-level market context, including Czechia. Exact release date and report details should be checked on the source page.",
+    "tags": ["retail-market", "electricity", "gas", "EU"],
+    "relevance": "Use as context for affordability and contract trends, not as a substitute for Czech supplier-level data.",
+    "confidence": "low",
+    "source_status": "ACER monitoring page surfaced; release details require verification"
   }
 ]
