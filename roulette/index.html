@@ -150,7 +150,7 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
   <section class="panel">
     <header>
       <h2>Vsaď na další spin</h2>
-      <span class="eyebrow" id="betsSummary"></span>
+      <span class="ctl"><span class="eyebrow" id="betsSummary"></span><button class="btn primary" id="test50b">🎲 +50 náhodných</button></span>
     </header>
     <div class="bets" id="bets"></div>
   </section>
@@ -165,6 +165,7 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
           <button class="btn" id="bulkAdd">Přidat</button>
         </div>
         <div class="padtools">
+          <button class="btn primary" id="test50">🎲 Test: +50 náhodných</button>
           <button class="btn" id="undo">↶ Zpět</button>
           <span id="resetWrap"><button class="btn danger" id="reset">Nová session</button></span>
           <button class="btn" id="exportBtn">Kopírovat historii</button>
@@ -236,8 +237,7 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
           </label>
           <label>Progrese sázky
             <select id="f_prog">
-              <option value="flat">Flat – stále base bet</option>
-              <option value="recovery">Recovery – zásah pokryje ztrátu + 1 base</option>
+              <option value="recovery">Recovery – zásah vždy v plusu (+1 base)</option>
             </select>
           </label>
           <label>Filtr clusterů
@@ -248,8 +248,9 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
               <option value="hot">Jen hot (z ≥ 1)</option>
             </select>
           </label>
-          <label>Max. souběžných sázek
+          <label>Max. souběžných clusterů
             <input id="f_maxact" type="number" min="1" max="10">
+            <span class="hint">1 = sázíš vždy jen jeden cluster (4 čísla)</span>
           </label>
           <label>Po prohraném okně
             <select id="f_reentry">
@@ -263,6 +264,17 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
       </section>
     </div>
   </div>
+
+  <section class="panel">
+    <header><h2>Úspěch / neúspěch</h2><span class="eyebrow">uzavřená sázková okna této session</span></header>
+    <div class="simres" id="succ"></div>
+    <div class="tablewrap" style="margin-top:12px">
+      <table>
+        <thead><tr><th>Délka okna</th><th>Oken</th><th>Úspěch</th><th>Neúspěch</th><th>Úspěšnost</th><th>Teorie</th><th>P/L</th></tr></thead>
+        <tbody id="succTable"></tbody>
+      </table>
+    </div>
+  </section>
 
   <section class="panel">
     <header><h2>Historie sázkových oken</h2><span class="eyebrow" id="logSummary"></span></header>
@@ -308,14 +320,14 @@ const colorOf=n=>n===0?'green':RED.has(n)?'red':'black';
 const chipHTML=(n,cls='')=>`<span class="chip c-${colorOf(n)} ${cls}">${n}</span>`;
 const $=id=>document.getElementById(id);
 
-const DEFAULTS={type:'corner',chip:0.2,cur:'€',bank:100,trig:5,floor:0.3,minw:1,maxw:20,prog:'recovery',filter:'any',maxact:3,reentry:'deeper'};
+const DEFAULTS={type:'corner',chip:0.2,cur:'€',bank:100,trig:5,floor:0.3,minw:1,maxw:20,prog:'recovery',filter:'any',maxact:1,reentry:'deeper',ver:2};
 const KEY='cluster-roulette-v1';
 let state={spins:[],cfg:{...DEFAULTS},demo:false};
 
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
 function load(){
   try{const s=JSON.parse(localStorage.getItem(KEY)||'null');
-    if(s&&Array.isArray(s.spins)){state={spins:s.spins.filter(n=>Number.isInteger(n)&&n>=0&&n<=36),cfg:{...DEFAULTS,...s.cfg},demo:!!s.demo};return true}
+    if(s&&Array.isArray(s.spins)){state={spins:s.spins.filter(n=>Number.isInteger(n)&&n>=0&&n<=36),cfg:{...DEFAULTS,...s.cfg},demo:!!s.demo}; if((s.cfg||{}).ver!==2){state.cfg.maxact=1;state.cfg.prog='recovery';state.cfg.ver=2;} return true}
   }catch(e){}
   return false;
 }
@@ -504,7 +516,34 @@ function render(){
     <td class="num ${b.pl>=0?'pos':'neg'}">${b.result==='win'?'zásah ':'minul '}${sfmt(b.pl,cur)}</td></tr>`).join('')
     :`<tr><td colspan="7" class="empty" style="text-align:left">Zatím žádné uzavřené sázkové okno.</td></tr>`;
 
+  renderSuccess(R);
   renderPlan();
+}
+
+function renderSuccess(R){
+  const cur=state.cfg.cur, L=R.log, n=L.length;
+  const W=L.filter(b=>b.result==='win'), Lo=L.filter(b=>b.result==='loss');
+  const theo=n?L.reduce((a,b)=>a+1-Math.pow(Q,b.window),0)/n:0;
+  const avgHit=W.length?W.reduce((a,b)=>a+b.step,0)/W.length:0;
+  const winPL=W.reduce((a,b)=>a+b.pl,0), lossPL=Lo.reduce((a,b)=>a+b.pl,0);
+  let streak=0,maxStreak=0; for(const b of L){ if(b.result==='loss'){streak++;maxStreak=Math.max(maxStreak,streak)} else streak=0; }
+  const curStreak=streak;
+  $('succ').innerHTML=[
+    ['Úspěch',`<span class="pos">${W.length}</span>`],
+    ['Neúspěch',`<span class="neg">${Lo.length}</span>`],
+    ['Úspěšnost',n?pct(W.length/n):'–'],
+    ['Teorie pro tato okna',n?pct(theo):'–'],
+    ['Zásah průměrně v kole',W.length?avgHit.toFixed(1).replace('.',','):'–'],
+    ['Zisk z úspěchů',`<span class="pos">${sfmt(winPL,cur)}</span>`],
+    ['Ztráta z neúspěchů',`<span class="neg">${sfmt(lossPL,cur)}</span>`],
+    ['Nejdelší série neúspěchů',maxStreak],
+    ['Aktuální série neúspěchů',curStreak],
+  ].map(([k,v])=>`<div><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
+  const groups={};
+  for(const b of L){const g=groups[b.window]||(groups[b.window]={n:0,w:0,pl:0});g.n++;if(b.result==='win')g.w++;g.pl+=b.pl;}
+  const keys=Object.keys(groups).map(Number).sort((a,b)=>a-b);
+  $('succTable').innerHTML=keys.length?keys.map(k=>{const g=groups[k];return `<tr><td>${k} ${k===1?'spin':k<5?'spiny':'spinů'}</td><td class="num">${g.n}</td><td class="num pos">${g.w}</td><td class="num neg">${g.n-g.w}</td><td class="num">${pct(g.w/g.n)}</td><td class="num">${pct(1-Math.pow(Q,k))}</td><td class="num ${g.pl>=0?'pos':'neg'}">${sfmt(g.pl,cur)}</td></tr>`}).join('')
+    :`<tr><td colspan="7" class="empty" style="text-align:left">Zatím žádné uzavřené okno. Klikni na „+50 náhodných“ a uvidíš.</td></tr>`;
 }
 
 function renderPlan(){
@@ -517,8 +556,13 @@ function renderPlan(){
   const examples=[1,5,10,15,20].filter(w=>w<=W).map(w=>{
     const tot=planUnits(w,cfg.prog).reduce((a,x)=>a+x,0)*unit;
     return `${w} sp.: šance ${pct(1-Math.pow(Q,w))}, riziko ${fmt(tot,cur)}`;}).join(' · ');
-  $('plan').innerHTML=`Sázky v plném okně ${W} spinů: <span class="mono">${u.map(x=>(x*unit).toFixed(2)).join(' → ')}</span><br>
-    Max. ztráta jednoho okna: <span class="mono">${fmt(total,cur)}</span> · Očekávaná hodnota: <span class="mono">−2,70 %</span> z vsazeného<br>${examples}`;
+  let cum=0;
+  const rows=u.map((x,i)=>{const st=x*unit;cum+=st;const prof=PAYOUT*st-(cum-st);
+    return `<tr><td class="num">${i+1}</td><td class="num">${fmt(st,cur)}</td><td class="num">${fmt(cum,cur)}</td><td class="num pos">${sfmt(prof,cur)}</td><td class="num">${pct(1-Math.pow(Q,i+1))}</td></tr>`}).join('');
+  $('plan').innerHTML=`Max. ztráta celého okna ${W} spinů: <span class="mono">${fmt(total,cur)}</span> · Očekávaná hodnota: <span class="mono">−2,70 %</span> z vsazeného<br>${examples}
+    <div class="tablewrap" style="margin-top:8px;max-height:300px;overflow-y:auto"><table>
+    <thead><tr><th>Kolo</th><th>Sázka</th><th>Vsazeno celkem</th><th>Čistě při zásahu</th><th>Šance do tohoto kola</th></tr></thead>
+    <tbody>${rows}</tbody></table></div>`;
 }
 
 function drawWheel(hits,N,betNums){
@@ -549,6 +593,8 @@ function drawWheel(hits,N,betNums){
 /* ---------- actions ---------- */
 function addSpins(arr){ if(!arr.length)return; state.spins.push(...arr); save(); render(); }
 $('pad').addEventListener('click',e=>{const b=e.target.closest('button[data-n]'); if(b)addSpins([+b.dataset.n]);});
+function rnd50(){const a=new Uint32Array(50);crypto.getRandomValues(a);if(state.demo){state.demo=false;}addSpins(Array.from(a,x=>x%37));}
+$('test50').addEventListener('click',rnd50);$('test50b').addEventListener('click',rnd50);
 $('undo').addEventListener('click',()=>{state.spins.pop();save();render();});
 function parseBulk(){const v=$('bulkIn').value.split(/[^0-9]+/).filter(Boolean).map(Number).filter(n=>n>=0&&n<=36);$('bulkIn').value='';addSpins(v);}
 $('bulkAdd').addEventListener('click',parseBulk);
