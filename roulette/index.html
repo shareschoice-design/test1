@@ -131,56 +131,64 @@ details>summary{cursor:pointer;font-family:var(--display);font-weight:700;font-s
 canvas{width:100%;height:160px;display:block;margin-top:10px}
 .confirm{display:inline-flex;gap:6px;align-items:center}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.status{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.status span{border:1px solid var(--line);border-radius:14px;padding:2px 10px;font-size:12px;color:var(--muted)}
+.status span b{color:var(--fg);font-family:var(--mono);font-weight:600}
+.status span.on{border-color:var(--warn);color:var(--warn)}
+.tag{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:1px 6px;border-radius:4px;background:var(--brass-soft);color:var(--brass)}
+.form fieldset{border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:grid;gap:10px;grid-column:1/-1;grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.form legend{font-family:var(--display);font-weight:700;color:var(--fg);padding:0 4px}
 </style>
 
 <div class="wrap">
   <div class="top">
     <div>
-      <div class="eyebrow">Evropská ruleta · 37 čísel · clustery po 4</div>
+      <div class="eyebrow">European roulette · 37 pockets · 4-number clusters</div>
       <h1>Cluster Roulette Tracker</h1>
     </div>
     <div class="kpis" id="kpis"></div>
   </div>
 
   <div class="banner" id="demoBanner" hidden>
-    <span><b>Ukázková data.</b> Načteno 150 náhodných spinů, aby bylo vidět, jak tracker funguje. Nejsou to tvoje čísla.</span>
-    <button class="btn primary" id="clearDemo">Smazat ukázku a začít</button>
+    <span><b>Sample data.</b> 150 random spins are loaded to show how the tracker works. These are not your numbers.</span>
+    <button class="btn primary" id="clearDemo">Clear sample and start</button>
   </div>
 
   <section class="panel">
     <header>
-      <h2>Vsaď na další spin</h2>
-      <span class="ctl"><span class="eyebrow" id="betsSummary"></span><button class="btn primary" id="test50b">🎲 +50 náhodných</button></span>
+      <h2>Bet on the next spin</h2>
+      <span class="ctl"><span class="eyebrow" id="betsSummary"></span><button class="btn primary" id="test50b">🎲 +50 random</button></span>
     </header>
+    <div class="status" id="status"></div>
     <div class="bets" id="bets"></div>
   </section>
 
   <div class="main">
     <div class="col">
       <section class="panel">
-        <header><h2>Zadej padlé číslo</h2><span class="eyebrow">klik / klávesnice</span></header>
+        <header><h2>Enter the winning number</h2><span class="eyebrow">tap / keyboard</span></header>
         <div class="pad" id="pad"></div>
         <div class="bulk">
-          <input id="bulkIn" inputmode="numeric" placeholder="Více čísel: 17 4 32 0 …" aria-label="Zadat více čísel najednou">
-          <button class="btn" id="bulkAdd">Přidat</button>
+          <input id="bulkIn" inputmode="numeric" placeholder="Several numbers: 17 4 32 0 …" aria-label="Add several numbers at once">
+          <button class="btn" id="bulkAdd">Add</button>
         </div>
         <div class="padtools">
-          <button class="btn primary" id="test50">🎲 Test: +50 náhodných</button>
-          <button class="btn" id="undo">↶ Zpět</button>
-          <span id="resetWrap"><button class="btn danger" id="reset">Nová session</button></span>
-          <button class="btn" id="exportBtn">Kopírovat historii</button>
+          <button class="btn primary" id="test50">🎲 Test: +50 random</button>
+          <button class="btn" id="undo">↶ Undo</button>
+          <span id="resetWrap"><button class="btn danger" id="reset">New session</button></span>
+          <button class="btn" id="exportBtn">Copy history</button>
         </div>
-        <div class="strip" id="strip" aria-label="Posledních 40 spinů"></div>
+        <div class="strip" id="strip" aria-label="Last 40 spins"></div>
       </section>
 
       <section class="panel">
-        <header><h2>Kolo – teplotní mapa</h2><span class="eyebrow">zásahy vs. očekávání</span></header>
-        <div class="wheelbox"><svg id="wheel" viewBox="0 0 320 320" role="img" aria-label="Ruletové kolo s četností čísel"></svg></div>
+        <header><h2>Wheel heat map</h2><span class="eyebrow">hits vs. expected</span></header>
+        <div class="wheelbox"><svg id="wheel" viewBox="0 0 320 320" role="img" aria-label="Roulette wheel with hit counts per number"></svg></div>
         <div class="legend">
-          <span><i class="sw" style="background:var(--cold)"></i>padá méně</span>
-          <span><i class="sw" style="background:var(--line)"></i>dle očekávání</span>
-          <span><i class="sw" style="background:var(--hot)"></i>padá více</span>
-          <span><i class="sw" style="background:var(--brass)"></i>sázený cluster</span>
+          <span><i class="sw" style="background:var(--cold)"></i>hits less</span>
+          <span><i class="sw" style="background:var(--line)"></i>as expected</span>
+          <span><i class="sw" style="background:var(--hot)"></i>hits more</span>
+          <span><i class="sw" style="background:var(--brass)"></i>cluster in play</span>
         </div>
       </section>
     </div>
@@ -188,77 +196,112 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
     <div class="col">
       <section class="panel">
         <header>
-          <h2>Clustery</h2>
+          <h2>Clusters</h2>
           <div class="ctl">
-            <select id="sortSel" aria-label="Řazení">
-              <option value="p">Řadit: nejdéle nepadlé</option>
-              <option value="zdesc">Řadit: nejvíc padá (hot)</option>
-              <option value="zasc">Řadit: nejméně padá (cold)</option>
-              <option value="hits">Řadit: počet zásahů</option>
+            <select id="sortSel" aria-label="Sort">
+              <option value="p">Sort: longest gap</option>
+              <option value="zdesc">Sort: hottest</option>
+              <option value="zasc">Sort: coldest</option>
+              <option value="hits">Sort: most hits</option>
             </select>
           </div>
         </header>
         <div class="tablewrap" style="max-height:560px;overflow-y:auto">
           <table>
-            <thead><tr><th>Cluster</th><th>Zásahy</th><th>Očekáv.</th><th title="Odchylka od očekávání ve směrodatných odchylkách">z-skóre</th><th>Mezera</th><th>Max</th><th title="Pravděpodobnost, že cluster nepadne tolik spinů za sebou">P(mezera)</th><th>Stav</th></tr></thead>
+            <thead><tr><th>Cluster</th><th>Hits</th><th>Expect.</th><th title="Deviation from expectation in standard deviations">z-score</th><th>Gap</th><th>Max</th><th title="Probability of missing this many spins in a row">P(gap)</th><th>Status</th></tr></thead>
             <tbody id="ctable"></tbody>
           </table>
         </div>
       </section>
 
       <section class="panel">
-        <header><h2>Strategie a sázky</h2><span class="eyebrow">přepočítá celou session</span></header>
+        <header><h2>Strategy &amp; bets</h2><span class="eyebrow">recalculates the whole session</span></header>
         <div class="form" id="form">
-          <label>Typ clusteru
+          <label>Cluster type
             <select id="f_type">
-              <option value="corner">Corner na stole (4 čísla, 1 žeton)</option>
-              <option value="wheel">Sektor na kole (4 sousední, 4 žetony)</option>
+              <option value="corner">Table corner (4 numbers, 1 chip)</option>
+              <option value="wheel">Wheel sector (4 neighbours, 4 chips)</option>
             </select>
           </label>
-          <label>Base bet (za žeton)
+          <label>Base bet (per chip)
             <input id="f_chip" type="number" step="0.05" min="0.05">
           </label>
-          <label>Měna
+          <label>Currency
             <input id="f_cur" maxlength="4">
           </label>
-          <label>Startovní bankroll
+          <label>Starting bankroll
             <input id="f_bank" type="number" step="1" min="0">
           </label>
-          <label>Spouštěč: P(mezera) ≤ %
+          <label>Trigger: P(gap) ≤ %
             <input id="f_trig" type="number" step="0.5" min="0.1" max="50">
             <span class="hint" id="h_trig"></span>
           </label>
-          <label>Maximum (20 spinů) při P ≤ %
+          <label>Full 20-spin window at P ≤ %
             <input id="f_floor" type="number" step="0.05" min="0.01" max="20">
             <span class="hint" id="h_floor"></span>
           </label>
-          <label>Délka okna min–max spinů
-            <span style="display:flex;gap:6px"><input id="f_minw" type="number" min="1" max="20" style="width:50%"><input id="f_maxw" type="number" min="1" max="50" style="width:50%"></span>
+          <label>Window length min–max spins
+            <span style="display:flex;gap:6px"><input id="f_minw" type="number" min="1" max="20" style="width:50%" aria-label="Minimum window"><input id="f_maxw" type="number" min="1" max="50" style="width:50%" aria-label="Maximum window"></span>
           </label>
-          <label>Progrese sázky
+          <label>Progression
             <select id="f_prog">
-              <option value="recovery">Recovery – zásah vždy v plusu (+1 base)</option>
+              <option value="recovery">Recovery: every hit ends in profit (+1 base)</option>
             </select>
           </label>
-          <label>Filtr clusterů
+          <label>Hot / cold filter
             <select id="f_filter">
-              <option value="any">Všechny clustery</option>
-              <option value="cold">Jen cold (z ≤ −1)</option>
-              <option value="nothot">Ne hot (z &lt; 1)</option>
-              <option value="hot">Jen hot (z ≥ 1)</option>
+              <option value="any">All clusters</option>
+              <option value="cold">Cold only (z ≤ −1)</option>
+              <option value="nothot">Not hot (z &lt; 1)</option>
+              <option value="hot">Hot only (z ≥ 1)</option>
             </select>
           </label>
-          <label>Max. souběžných clusterů
+          <label>Clusters at once
             <input id="f_maxact" type="number" min="1" max="10">
-            <span class="hint">1 = sázíš vždy jen jeden cluster (4 čísla)</span>
+            <span class="hint">1 = always a single cluster (4 numbers)</span>
           </label>
-          <label>Po prohraném okně
+          <label>After a lost window
             <select id="f_reentry">
-              <option value="deeper">Znovu, až vyjde delší okno</option>
-              <option value="hit">Čekat, až cluster padne</option>
-              <option value="again">Hned znovu, pokud splní spouštěč</option>
+              <option value="deeper">Re-enter once a longer window is due</option>
+              <option value="hit">Wait until the cluster hits</option>
+              <option value="again">Re-enter right away if triggered</option>
             </select>
           </label>
+
+          <fieldset>
+            <legend>Filter 1 · Neighbour signal</legend>
+            <label>Start only after a nearby number lands
+              <select id="f_neigh">
+                <option value="off">Off</option>
+                <option value="wheel">Wheel neighbour (±2 pockets)</option>
+                <option value="table">Table neighbour (touching on layout)</option>
+              </select>
+              <span class="hint">The cluster must qualify, and the last spin must land next to it.</span>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Filter 2 · Loss-streak brake</legend>
+            <label>Lost windows in a row
+              <input id="f_brakeN" type="number" min="0" max="20">
+              <span class="hint">0 = off</span>
+            </label>
+            <label>Then pause for spins
+              <input id="f_brakeS" type="number" min="1" max="100">
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Keep it moving · Max wait</legend>
+            <label>Bet at least every N spins
+              <input id="f_wait" type="number" min="0" max="100">
+              <span class="hint">0 = off. If nothing qualifies, play the longest-gap cluster.</span>
+            </label>
+            <label>Max-wait window (spins)
+              <input id="f_forcew" type="number" min="1" max="20">
+              <span class="hint">Shorter when the chosen cluster's gap is small.</span>
+            </label>
+          </fieldset>
         </div>
         <div class="plan" id="plan"></div>
       </section>
@@ -266,35 +309,35 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
   </div>
 
   <section class="panel">
-    <header><h2>Úspěch / neúspěch</h2><span class="eyebrow">uzavřená sázková okna této session</span></header>
+    <header><h2>Wins / losses</h2><span class="eyebrow">closed betting windows this session</span></header>
     <div class="simres" id="succ"></div>
     <div class="tablewrap" style="margin-top:12px">
       <table>
-        <thead><tr><th>Délka okna</th><th>Oken</th><th>Úspěch</th><th>Neúspěch</th><th>Úspěšnost</th><th>Teorie</th><th>P/L</th></tr></thead>
+        <thead><tr><th>Window</th><th>Windows</th><th>Won</th><th>Lost</th><th>Win rate</th><th>Theory</th><th>P/L</th></tr></thead>
         <tbody id="succTable"></tbody>
       </table>
     </div>
   </section>
 
   <section class="panel">
-    <header><h2>Historie sázkových oken</h2><span class="eyebrow" id="logSummary"></span></header>
+    <header><h2>Betting window history</h2><span class="eyebrow" id="logSummary"></span></header>
     <div class="tablewrap" style="max-height:340px;overflow-y:auto">
       <table>
-        <thead><tr><th>Cluster</th><th>Start (spin)</th><th>Mezera při startu</th><th>Okno</th><th>Odehráno</th><th>Vsazeno</th><th>Výsledek</th></tr></thead>
+        <thead><tr><th>Cluster</th><th>Start (spin)</th><th>Gap at start</th><th>Source</th><th>Window</th><th>Played</th><th>Staked</th><th>Result</th></tr></thead>
         <tbody id="ltable"></tbody>
       </table>
     </div>
   </section>
 
   <section class="panel">
-    <header><h2>Stress test strategie</h2><span class="eyebrow">simulace na náhodném kole se stejným nastavením</span></header>
+    <header><h2>Strategy stress test</h2><span class="eyebrow">simulation on a random wheel with the same settings</span></header>
     <div class="ctl">
-      <select id="simN" aria-label="Počet spinů simulace">
-        <option value="10000">10 000 spinů</option>
-        <option value="50000" selected>50 000 spinů</option>
-        <option value="200000">200 000 spinů</option>
+      <select id="simN" aria-label="Simulation length">
+        <option value="10000">10,000 spins</option>
+        <option value="50000" selected>50,000 spins</option>
+        <option value="200000">200,000 spins</option>
       </select>
-      <button class="btn primary" id="simBtn">Spustit simulaci</button>
+      <button class="btn primary" id="simBtn">Run simulation</button>
     </div>
     <div id="simOut"></div>
     <canvas id="simChart" hidden></canvas>
@@ -302,11 +345,12 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
 
   <section class="panel note">
     <details>
-      <summary>Jak tracker počítá (a co matematika říká)</summary>
-      <p><b>Cluster</b> = 4 čísla. Šance, že padne v jednom spinu, je vždy <b>4/37 = 10,81 %</b>. Corner vyplácí 8:1, sektor ze 4 čísel (4× straight 35:1) také čistě 8× vsazená částka.</p>
-      <p><b>Mezera</b> = kolik spinů cluster nepadl. <b>P(mezera)</b> = (33/37)<sup>mezera</sup> je šance, že by tak dlouhou mezeru měl náhodně. Když klesne pod spouštěč, tracker začne cluster sázet. Čím menší P, tím delší okno (1 až 20 spinů, logaritmicky mezi spouštěčem a maximem).</p>
-      <p><b>z-skóre</b> říká, jak moc cluster padá víc (hot) nebo míň (cold), než by měl. Hodnoty do ±2 jsou na krátkém vzorku běžný šum.</p>
-      <p><b>Důležité:</b> kolo nemá paměť. Cluster, který 40 spinů nepadl, má v dalším spinu pořád přesně 10,81 %. „Šance v okně“ na kartě sázky je proto počítaná poctivě z 10,81 % na spin, ne z mezery. Každá sázka má očekávanou hodnotu −2,70 % z vsazené částky a žádná progrese ani výběr clusteru to nezmění. Tracker ti dá disciplínu, limity a přehled; stress test výše ukazuje, jak se strategie chová dlouhodobě. Hraj jen s penězi, které si můžeš dovolit prohrát.</p>
+      <summary>How the tracker calculates (and what the maths says)</summary>
+      <p><b>Cluster</b> = 4 numbers. The chance it hits on any spin is always <b>4/37 = 10.81%</b>. A corner pays 8:1; a 4-number wheel sector (4 straight-ups at 35:1) also nets 8× the total stake.</p>
+      <p><b>Gap</b> = spins since the cluster last hit. <b>P(gap)</b> = (33/37)<sup>gap</sup> is the chance of a gap that long by luck alone. Once it drops below the trigger, the cluster gets a betting window of 1 to 20 spins: the less likely the gap, the longer the window (log scale between trigger and the full-window level).</p>
+      <p><b>Neighbour signal</b> delays the start until the ball lands next to the cluster. <b>Loss-streak brake</b> pauses after a run of lost windows. <b>Max wait</b> makes sure you play at least every N spins: if nothing qualified, it plays the longest-gap cluster in a short window, marked “max wait”.</p>
+      <p><b>z-score</b> shows how much a cluster hits more (hot) or less (cold) than expected. Values within ±2 are normal noise on a short sample.</p>
+      <p><b>Important:</b> the wheel has no memory. A cluster that missed 40 spins still has exactly 10.81% on the next one. That is why the “chance left” on a bet card comes from 10.81% per spin, not from the gap. Every bet has an expected value of −2.70% of the stake, and no filter, cluster choice or progression changes that. The tracker gives you discipline, limits and an overview; the stress test shows the long-run result. Only play with money you can afford to lose.</p>
     </details>
   </section>
 </div>
@@ -314,20 +358,27 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
 <script>
 (() => {
 const WHEEL=[0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26];
+const WPOS=new Array(37); WHEEL.forEach((n,i)=>WPOS[n]=i);
 const RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
 const P_HIT=4/37, Q=33/37, PAYOUT=8;
 const colorOf=n=>n===0?'green':RED.has(n)?'red':'black';
 const chipHTML=(n,cls='')=>`<span class="chip c-${colorOf(n)} ${cls}">${n}</span>`;
 const $=id=>document.getElementById(id);
 
-const DEFAULTS={type:'corner',chip:0.2,cur:'€',bank:100,trig:5,floor:0.3,minw:1,maxw:20,prog:'recovery',filter:'any',maxact:1,reentry:'deeper',ver:2};
+const DEFAULTS={type:'corner',chip:0.2,cur:'€',bank:100,trig:5,floor:0.3,minw:1,maxw:20,prog:'recovery',filter:'any',maxact:1,reentry:'deeper',
+  neigh:'wheel',brakeN:3,brakeS:10,wait:10,forcew:5,ver:3};
 const KEY='cluster-roulette-v1';
 let state={spins:[],cfg:{...DEFAULTS},demo:false};
 
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
 function load(){
   try{const s=JSON.parse(localStorage.getItem(KEY)||'null');
-    if(s&&Array.isArray(s.spins)){state={spins:s.spins.filter(n=>Number.isInteger(n)&&n>=0&&n<=36),cfg:{...DEFAULTS,...s.cfg},demo:!!s.demo}; if((s.cfg||{}).ver!==2){state.cfg.maxact=1;state.cfg.prog='recovery';state.cfg.ver=2;} return true}
+    if(s&&Array.isArray(s.spins)){
+      state={spins:s.spins.filter(n=>Number.isInteger(n)&&n>=0&&n<=36),cfg:{...DEFAULTS,...s.cfg},demo:!!s.demo};
+      const v=(s.cfg||{}).ver||1;
+      if(v<2){state.cfg.maxact=1;state.cfg.prog='recovery';}
+      state.cfg.prog='recovery'; state.cfg.ver=3;
+      return true}
   }catch(e){}
   return false;
 }
@@ -337,6 +388,16 @@ function demoSpins(){ // deterministic sample
 }
 
 /* ---------- clusters ---------- */
+function tableNeighbours(n){
+  if(n===0)return [1,2,3];
+  const col=Math.ceil(n/3)-1,row=(n-1)%3,out=[];
+  for(let dc=-1;dc<=1;dc++)for(let dr=-1;dr<=1;dr++){
+    if(!dc&&!dr)continue; const c=col+dc,r=row+dr;
+    if(c<0||c>11||r<0||r>2)continue; out.push(c*3+r+1);
+  }
+  if(n<=3)out.push(0);
+  return out;
+}
 const clusterCache={};
 function buildClusters(type){
   if(clusterCache[type])return clusterCache[type];
@@ -347,7 +408,16 @@ function buildClusters(type){
   }else{
     for(let i=0;i<37;i++){ const nums=[0,1,2,3].map(k=>WHEEL[(i+k)%37]); out.push({id:'w'+i,nums,label:nums.join('·'),chips:4}); }
   }
-  out.forEach(c=>c.set=new Set(c.nums));
+  out.forEach(c=>{
+    c.set=new Set(c.nums);
+    const w=new Set(),t=new Set();
+    c.nums.forEach(n=>{
+      for(const d of [-2,-1,1,2])w.add(WHEEL[(WPOS[n]+d+37)%37]);
+      tableNeighbours(n).forEach(x=>t.add(x));
+    });
+    c.nums.forEach(n=>{w.delete(n);t.delete(n)});
+    c.nbWheel=w;c.nbTable=t;
+  });
   return clusterCache[type]=out;
 }
 const gapP=g=>Math.pow(Q,g);
@@ -360,31 +430,42 @@ function windowFor(p,cfg){
   const lo=Math.max(1,Math.min(cfg.minw,cfg.maxw)), hi=Math.max(lo,cfg.maxw);
   return lo+Math.round((hi-lo)*ratio);
 }
+function forcedWindow(p,cfg){ // max-wait pick: up to forcew spins, shorter when the gap is still small
+  const t=cfg.trig/100, r=Math.max(0,Math.min(1,Math.log(p)/Math.log(t)));
+  return Math.max(1,Math.round(cfg.forcew*r));
+}
 const planCache=new Map();
-function planUnits(W,prog){
-  const k=prog+W; if(planCache.has(k))return planCache.get(k);
+function planUnits(W){
+  if(planCache.has(W))return planCache.get(W);
   const u=[];let loss=0;
-  for(let i=0;i<W;i++){ const x=prog==='recovery'?Math.max(1,Math.ceil((loss+1)/PAYOUT)):1; u.push(x); loss+=x; }
-  planCache.set(k,u); return u;
+  for(let i=0;i<W;i++){ const x=Math.max(1,Math.ceil((loss+1)/PAYOUT)); u.push(x); loss+=x; }
+  planCache.set(W,u); return u;
 }
 function zScore(hits,N){ if(N<1)return 0; const e=N*P_HIT; return (hits-e)/Math.sqrt(N*P_HIT*(1-P_HIT)); }
 function passesFilter(c,N,cfg){
-  if(cfg.filter==='any'||N<37)return cfg.filter==='any'||cfg.filter==='nothot';
+  if(cfg.filter==='any')return true;
+  if(N<37)return cfg.filter==='nothot';
   const z=zScore(c.hits,N);
   if(cfg.filter==='cold')return z<=-1;
   if(cfg.filter==='hot')return z>=1;
   if(cfg.filter==='nothot')return z<1;
   return true;
 }
+function neighbourOK(c,n,cfg){
+  if(cfg.neigh==='wheel')return c.nbWheel.has(n);
+  if(cfg.neigh==='table')return c.nbTable.has(n);
+  return true;
+}
 
 /* ---------- engine: replays the whole session deterministically ---------- */
 function replay(spins,cfg,opts={}){
   const base=buildClusters(cfg.type);
-  const st=base.map(c=>({id:c.id,nums:c.nums,label:c.label,chips:c.chips,set:c.set,hits:0,gap:0,maxGap:0,blocked:false,lastW:0}));
+  const st=base.map(c=>({id:c.id,nums:c.nums,label:c.label,chips:c.chips,set:c.set,nbWheel:c.nbWheel,nbTable:c.nbTable,hits:0,gap:0,maxGap:0,blocked:false,lastW:0}));
   const byId=Object.fromEntries(st.map(c=>[c.id,c]));
   const numHits=new Array(37).fill(0);
-  const t=cfg.trig/100;
+  const t=cfg.trig/100, minGap=gapFor(t);
   let active=[],log=[],pl=0,staked=0,peak=0,maxDD=0,curve=opts.curve?[]:null,wins=0,losses=0;
+  let idle=0,lossStreak=0,brakeUntil=-1,brakes=0,forced=0,waitingSignal=0;
   for(let i=0;i<spins.length;i++){
     const n=spins[i];
     // 1) settle open bets on this spin
@@ -392,9 +473,13 @@ function replay(spins,cfg,opts={}){
       const still=[];
       for(const b of active){
         const stake=b.units[b.step]*b.unitVal; staked+=stake; b.staked+=stake; b.step++;
-        if(b.set.has(n)){ const w=PAYOUT*stake; pl+=w; b.pl+=w; b.result='win'; b.end=i; wins++; if(!opts.noLog)log.push(b); }
+        if(b.set.has(n)){ const w=PAYOUT*stake; pl+=w; b.pl+=w; b.result='win'; b.end=i; wins++; lossStreak=0; if(!opts.noLog)log.push(b); }
         else{ pl-=stake; b.pl-=stake;
-          if(b.step>=b.window){ b.result='loss'; b.end=i; losses++; if(cfg.reentry==='hit')byId[b.cid].blocked=true; if(cfg.reentry==='deeper')byId[b.cid].lastW=b.window; if(!opts.noLog)log.push(b); }
+          if(b.step>=b.window){ b.result='loss'; b.end=i; losses++; lossStreak++;
+            if(cfg.reentry==='hit')byId[b.cid].blocked=true;
+            if(cfg.reentry==='deeper')byId[b.cid].lastW=b.window;
+            if(cfg.brakeN>0&&lossStreak>=cfg.brakeN){brakeUntil=i+cfg.brakeS;lossStreak=0;brakes++;}
+            if(!opts.noLog)log.push(b); }
           else still.push(b);
         }
       }
@@ -404,48 +489,71 @@ function replay(spins,cfg,opts={}){
     // 2) stats
     numHits[n]++;
     for(const c of st){ if(c.set.has(n)){c.hits++;c.gap=0;c.blocked=false;c.lastW=0} else {c.gap++; if(c.gap>c.maxGap)c.maxGap=c.gap} }
-    // 3) new triggers for the next spin
-    if(active.length<cfg.maxact){
-      const N=i+1, minGap=gapFor(t);
-      const cands=[];
+    // 3) open new bets for the next spin
+    waitingSignal=0;
+    if(i<brakeUntil){ idle=0; }
+    else if(active.length<cfg.maxact){
+      const N=i+1, cands=[];
       for(const c of st){
         if(c.gap<minGap||c.blocked)continue;
         if(active.some(b=>b.cid===c.id))continue;
         if(!passesFilter(c,N,cfg))continue;
+        const W=windowFor(gapP(c.gap),cfg); if(!W||W<=c.lastW)continue;
+        if(!neighbourOK(c,n,cfg)){waitingSignal++;continue;}
         cands.push(c);
       }
       cands.sort((a,b)=>b.gap-a.gap);
       for(const c of cands){
         if(active.length>=cfg.maxact)break;
-        const p=gapP(c.gap), W=windowFor(p,cfg); if(!W||W<=c.lastW)continue;
-        active.push({cid:c.id,label:c.label,nums:c.nums,set:c.set,start:i+1,gapAtStart:c.gap,pAtStart:p,window:W,
-          units:planUnits(W,cfg.prog),unitVal:c.chips*cfg.chip,step:0,staked:0,pl:0,result:null});
+        const p=gapP(c.gap);
+        active.push(newBet(c,i,p,windowFor(p,cfg),'trigger',cfg));
       }
+      // max-wait: nothing in play for too long -> play the longest-gap cluster
+      if(!active.length){
+        idle++;
+        if(cfg.wait>0&&idle>=cfg.wait){
+          let best=null;
+          for(const c of st){ if(c.blocked||!passesFilter(c,N,cfg))continue; if(!best||c.gap>best.gap)best=c; }
+          if(best){ const p=gapP(best.gap); active.push(newBet(best,i,p,forcedWindow(p,cfg),'wait',cfg)); forced++; }
+        }
+      }
+      if(active.length)idle=0;
     }
     if(curve&&(i%Math.max(1,Math.floor(spins.length/600))===0))curve.push(pl);
   }
   if(curve)curve.push(pl);
-  return {st,numHits,active,log,pl,staked,maxDD,wins,losses,curve,N:spins.length};
+  return {st,numHits,active,log,pl,staked,maxDD,wins,losses,curve,N:spins.length,idle,lossStreak,brakeLeft:Math.max(0,brakeUntil-(spins.length-1)),brakes,forced,waitingSignal};
+}
+function newBet(c,i,p,W,src,cfg){
+  return {cid:c.id,label:c.label,nums:c.nums,set:c.set,start:i+1,gapAtStart:c.gap,pAtStart:p,window:W,src,
+    units:planUnits(W),unitVal:c.chips*cfg.chip,step:0,staked:0,pl:0,result:null};
 }
 
 /* ---------- rendering ---------- */
-const fmt=(v,cur)=>(v<0?'−':'')+Math.abs(v).toFixed(2)+' '+cur;
+const fmt=(v,cur)=>(v<0?'−':'')+cur+Math.abs(v).toFixed(2);
 const sfmt=(v,cur)=>(v>0?'+':'')+fmt(v,cur);
-const pct=(v,d=1)=>(v*100).toFixed(d).replace('.',',')+' %';
+const pct=(v,d=1)=>(v*100).toFixed(d)+'%';
 let sortMode='p';
 
 function render(){
   const cfg=state.cfg, R=replay(state.spins,cfg), cur=cfg.cur;
   $('demoBanner').hidden=!state.demo;
-  // KPIs
-  const roi=R.staked?R.pl/R.staked:0;
   $('kpis').innerHTML=[
-    ['Spinů',R.N],
+    ['Spins',R.N],
     ['Bankroll',fmt(cfg.bank+R.pl,cur)],
     ['Session P/L',`<span class="${R.pl>=0?'pos':'neg'}">${sfmt(R.pl,cur)}</span>`],
-    ['Vsazeno',fmt(R.staked,cur)],
-    ['Okna V/P',`${R.wins}/${R.losses}`],
+    ['Staked',fmt(R.staked,cur)],
+    ['Windows W/L',`${R.wins}/${R.losses}`],
   ].map(([k,v])=>`<div class="kpi"><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
+
+  // status chips
+  const st=[];
+  if(R.brakeLeft>0)st.push(`<span class="on">Brake on: <b>${R.brakeLeft}</b> spins left</span>`);
+  else if(!R.active.length&&cfg.wait>0)st.push(`<span>Idle <b>${R.idle}/${cfg.wait}</b> spins · max-wait pick at ${cfg.wait}</span>`);
+  if(cfg.neigh!=='off'&&R.waitingSignal)st.push(`<span class="on"><b>${R.waitingSignal}</b> cluster${R.waitingSignal>1?'s':''} qualified, waiting for neighbour signal</span>`);
+  if(cfg.brakeN>0)st.push(`<span>Lost windows in a row <b>${R.lossStreak}/${cfg.brakeN}</b></span>`);
+  st.push(`<span>Brakes used <b>${R.brakes}</b> · max-wait picks <b>${R.forced}</b></span>`);
+  $('status').innerHTML=st.join('');
 
   // bets now
   const betNums=new Set();
@@ -457,18 +565,19 @@ function render(){
     const chance=1-Math.pow(Q,left);
     const remainRisk=b.units.slice(b.step).reduce((a,x)=>a+x,0)*b.unitVal;
     const winNet=PAYOUT*stake+b.pl;
-    const how=cfg.type==='corner'?'1 žeton na corner':`4 žetony po ${fmt(stake/4,cur)}`;
+    const how=cfg.type==='corner'?'1 chip on the corner':`4 chips of ${fmt(stake/4,cur)}`;
     return `<article class="bet">
-      <div class="row"><span class="eyebrow">Spin ${b.step+1} z ${b.window}</span><span>mezera při startu <b>${b.gapAtStart}</b> · P ${pct(b.pAtStart,2)}</span></div>
+      <div class="row"><span class="eyebrow">Spin ${b.step+1} of ${b.window}</span>${b.src==='wait'?'<span class="tag">max wait</span>':'<span class="tag">trigger</span>'}</div>
       <div class="chips">${b.nums.map(n=>chipHTML(n)).join('')}</div>
       <div class="stake">${fmt(stake,cur)}</div>
-      <div class="row"><span>${how}</span><span>při zásahu <b class="${winNet>=0?'pos':'neg'}">${sfmt(winNet,cur)}</b></span></div>
+      <div class="row"><span>${how}</span><span>if it hits <b class="${winNet>=0?'pos':'neg'}">${sfmt(winNet,cur)}</b></span></div>
       <div class="steps">${Array.from({length:b.window},(_,k)=>`<i class="${k<b.step?'done':k===b.step?'now':''}"></i>`).join('')}</div>
-      <div class="row"><span>zatím ${sfmt(b.pl,cur)}</span><span>šance zbývá ${left} sp.: <b>${pct(chance)}</b></span></div>
-      <div class="row"><span>max. zbývající riziko</span><b>${fmt(remainRisk,cur)}</b></div>
+      <div class="row"><span>so far ${sfmt(b.pl,cur)}</span><span>chance in ${left} spin${left>1?'s':''}: <b>${pct(chance)}</b></span></div>
+      <div class="row"><span>gap at start ${b.gapAtStart} · P ${pct(b.pAtStart,2)}</span><span>max risk left <b>${fmt(remainRisk,cur)}</b></span></div>
     </article>`;}).join('')
-    :`<div class="empty">Žádný cluster teď nesplňuje spouštěč (P(mezera) ≤ ${String(cfg.trig).replace('.',',')} %, tj. mezera ≥ ${gapFor(cfg.trig/100)} spinů). Zadávej další čísla – nejbližší kandidáti jsou nahoře v tabulce clusterů.</div>`;
-  $('betsSummary').textContent=R.active.length?`${R.active.length} sázk${R.active.length===1?'a':'y'} · celkem ${fmt(totalNow,cur)}`:'nic nesázet';
+    :`<div class="empty">${R.brakeLeft>0?`Paused by the loss-streak brake for ${R.brakeLeft} more spin${R.brakeLeft>1?'s':''}.`:
+      `No bet. A cluster qualifies at P(gap) ≤ ${cfg.trig}% (gap ≥ ${gapFor(cfg.trig/100)} spins)${cfg.neigh!=='off'?' plus a neighbour signal':''}.${cfg.wait>0?` If nothing qualifies, the longest-gap cluster is played after ${cfg.wait-R.idle} more spin${cfg.wait-R.idle===1?'':'s'}.`:''}`}</div>`;
+  $('betsSummary').textContent=R.active.length?`${R.active.length} bet${R.active.length>1?'s':''} · total ${fmt(totalNow,cur)}`:'no bet';
 
   // pad
   const order=[];
@@ -476,7 +585,7 @@ function render(){
   $('pad').innerHTML=`<button class="z ${betNums.has(0)?'betting':''}" data-n="0">0<span class="cnt">${R.numHits[0]||''}</span></button>`+
     order.map(n=>`<button class="${RED.has(n)?'r':'k'} ${betNums.has(n)?'betting':''}" data-n="${n}">${n}<span class="cnt">${R.numHits[n]||''}</span></button>`).join('');
   const last=state.spins.slice(-40).reverse();
-  $('strip').innerHTML=last.length?last.map((n,i)=>chipHTML(n,i===0?'last':'')).join(''):'<span class="empty">Zatím žádné spiny.</span>';
+  $('strip').innerHTML=last.length?last.map((n,i)=>chipHTML(n,i===0?'last':'')).join(''):'<span class="empty">No spins yet.</span>';
 
   // cluster table
   const N=R.N, exp=N*P_HIT, trigP=cfg.trig/100, minGap=gapFor(trigP);
@@ -486,9 +595,10 @@ function render(){
   rows.sort(sorters[sortMode]);
   $('ctable').innerHTML=rows.map(c=>{
     let pill='<span class="pill p-norm">—</span>';
-    if(activeIds.has(c.id))pill='<span class="pill p-bet">SÁZÍ SE</span>';
-    else if(c.blocked||(c.lastW&&windowFor(c.p,cfg)<=c.lastW))pill='<span class="pill p-norm">pauza</span>';
-    else if(c.p<=trigP*2.5)pill='<span class="pill p-ripe">ZRAJE</span>';
+    if(activeIds.has(c.id))pill='<span class="pill p-bet">IN PLAY</span>';
+    else if(c.blocked||(c.lastW&&windowFor(c.p,cfg)<=c.lastW))pill='<span class="pill p-norm">paused</span>';
+    else if(c.p<=trigP)pill='<span class="pill p-ripe">READY</span>';
+    else if(c.p<=trigP*2.5)pill='<span class="pill p-ripe">CLOSE</span>';
     else if(N>=37&&c.z>=1.5)pill='<span class="pill p-hot">HOT</span>';
     else if(N>=37&&c.z<=-1.5)pill='<span class="pill p-cold">COLD</span>';
     const fill=Math.min(100,c.gap/minGap*100);
@@ -502,19 +612,19 @@ function render(){
       <td class="num">${pct(c.p,c.p<0.1?2:1)}</td>
       <td>${pill}</td></tr>`;}).join('');
 
-  // wheel
   drawWheel(R.numHits,N,betNums);
 
   // log
   const L=R.log.slice().reverse();
-  const wonPL=R.log.reduce((a,b)=>a+b.pl,0);
-  $('logSummary').textContent=R.log.length?`${R.log.length} uzavřených oken · ${sfmt(wonPL,cur)}`:'';
+  const totPL=R.log.reduce((a,b)=>a+b.pl,0);
+  $('logSummary').textContent=R.log.length?`${R.log.length} closed windows · ${sfmt(totPL,cur)}`:'';
   $('ltable').innerHTML=L.length?L.slice(0,200).map(b=>`<tr>
     <td><div class="chips">${b.nums.map(n=>chipHTML(n)).join('')}</div></td>
     <td class="num">#${b.start+1}</td><td class="num">${b.gapAtStart} (${pct(b.pAtStart,2)})</td>
+    <td>${b.src==='wait'?'<span class="tag">max wait</span>':'<span class="tag">trigger</span>'}</td>
     <td class="num">${b.window}</td><td class="num">${b.step}</td><td class="num">${fmt(b.staked,cur)}</td>
-    <td class="num ${b.pl>=0?'pos':'neg'}">${b.result==='win'?'zásah ':'minul '}${sfmt(b.pl,cur)}</td></tr>`).join('')
-    :`<tr><td colspan="7" class="empty" style="text-align:left">Zatím žádné uzavřené sázkové okno.</td></tr>`;
+    <td class="num ${b.pl>=0?'pos':'neg'}">${b.result==='win'?'hit ':'miss '}${sfmt(b.pl,cur)}</td></tr>`).join('')
+    :`<tr><td colspan="8" class="empty" style="text-align:left">No closed betting window yet.</td></tr>`;
 
   renderSuccess(R);
   renderPlan();
@@ -527,41 +637,44 @@ function renderSuccess(R){
   const avgHit=W.length?W.reduce((a,b)=>a+b.step,0)/W.length:0;
   const winPL=W.reduce((a,b)=>a+b.pl,0), lossPL=Lo.reduce((a,b)=>a+b.pl,0);
   let streak=0,maxStreak=0; for(const b of L){ if(b.result==='loss'){streak++;maxStreak=Math.max(maxStreak,streak)} else streak=0; }
-  const curStreak=streak;
+  const byTrig=L.filter(b=>b.src==='trigger'), byWait=L.filter(b=>b.src==='wait');
+  const rate=a=>a.length?pct(a.filter(b=>b.result==='win').length/a.length)+` of ${a.length}`:'–';
   $('succ').innerHTML=[
-    ['Úspěch',`<span class="pos">${W.length}</span>`],
-    ['Neúspěch',`<span class="neg">${Lo.length}</span>`],
-    ['Úspěšnost',n?pct(W.length/n):'–'],
-    ['Teorie pro tato okna',n?pct(theo):'–'],
-    ['Zásah průměrně v kole',W.length?avgHit.toFixed(1).replace('.',','):'–'],
-    ['Zisk z úspěchů',`<span class="pos">${sfmt(winPL,cur)}</span>`],
-    ['Ztráta z neúspěchů',`<span class="neg">${sfmt(lossPL,cur)}</span>`],
-    ['Nejdelší série neúspěchů',maxStreak],
-    ['Aktuální série neúspěchů',curStreak],
+    ['Won',`<span class="pos">${W.length}</span>`],
+    ['Lost',`<span class="neg">${Lo.length}</span>`],
+    ['Win rate',n?pct(W.length/n):'–'],
+    ['Theory for these windows',n?pct(theo):'–'],
+    ['Trigger bets',rate(byTrig)],
+    ['Max-wait bets',rate(byWait)],
+    ['Avg. hit on spin',W.length?avgHit.toFixed(1):'–'],
+    ['Profit from wins',`<span class="pos">${sfmt(winPL,cur)}</span>`],
+    ['Cost of losses',`<span class="neg">${sfmt(lossPL,cur)}</span>`],
+    ['Longest losing run',maxStreak],
+    ['Current losing run',streak],
   ].map(([k,v])=>`<div><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
   const groups={};
   for(const b of L){const g=groups[b.window]||(groups[b.window]={n:0,w:0,pl:0});g.n++;if(b.result==='win')g.w++;g.pl+=b.pl;}
   const keys=Object.keys(groups).map(Number).sort((a,b)=>a-b);
-  $('succTable').innerHTML=keys.length?keys.map(k=>{const g=groups[k];return `<tr><td>${k} ${k===1?'spin':k<5?'spiny':'spinů'}</td><td class="num">${g.n}</td><td class="num pos">${g.w}</td><td class="num neg">${g.n-g.w}</td><td class="num">${pct(g.w/g.n)}</td><td class="num">${pct(1-Math.pow(Q,k))}</td><td class="num ${g.pl>=0?'pos':'neg'}">${sfmt(g.pl,cur)}</td></tr>`}).join('')
-    :`<tr><td colspan="7" class="empty" style="text-align:left">Zatím žádné uzavřené okno. Klikni na „+50 náhodných“ a uvidíš.</td></tr>`;
+  $('succTable').innerHTML=keys.length?keys.map(k=>{const g=groups[k];return `<tr><td>${k} spin${k>1?'s':''}</td><td class="num">${g.n}</td><td class="num pos">${g.w}</td><td class="num neg">${g.n-g.w}</td><td class="num">${pct(g.w/g.n)}</td><td class="num">${pct(1-Math.pow(Q,k))}</td><td class="num ${g.pl>=0?'pos':'neg'}">${sfmt(g.pl,cur)}</td></tr>`}).join('')
+    :`<tr><td colspan="7" class="empty" style="text-align:left">No closed window yet. Tap “+50 random” to see it in action.</td></tr>`;
 }
 
 function renderPlan(){
   const cfg=state.cfg, cur=cfg.cur, unit=(cfg.type==='corner'?1:4)*cfg.chip;
   const t=cfg.trig/100, f=cfg.floor/100;
-  $('h_trig').textContent=`= mezera ≥ ${gapFor(t)} spinů`;
-  $('h_floor').textContent=`= mezera ≥ ${gapFor(Math.min(f,t))} spinů`;
-  const W=Math.max(cfg.maxw,1), u=planUnits(W,cfg.prog);
+  $('h_trig').textContent=`= gap ≥ ${gapFor(t)} spins`;
+  $('h_floor').textContent=`= gap ≥ ${gapFor(Math.min(f,t))} spins`;
+  const W=Math.max(cfg.maxw,1), u=planUnits(W);
   const total=u.reduce((a,x)=>a+x,0)*unit;
   const examples=[1,5,10,15,20].filter(w=>w<=W).map(w=>{
-    const tot=planUnits(w,cfg.prog).reduce((a,x)=>a+x,0)*unit;
-    return `${w} sp.: šance ${pct(1-Math.pow(Q,w))}, riziko ${fmt(tot,cur)}`;}).join(' · ');
+    const tot=planUnits(w).reduce((a,x)=>a+x,0)*unit;
+    return `${w} sp.: chance ${pct(1-Math.pow(Q,w))}, risk ${fmt(tot,cur)}`;}).join(' · ');
   let cum=0;
-  const rows=u.map((x,i)=>{const st=x*unit;cum+=st;const prof=PAYOUT*st-(cum-st);
-    return `<tr><td class="num">${i+1}</td><td class="num">${fmt(st,cur)}</td><td class="num">${fmt(cum,cur)}</td><td class="num pos">${sfmt(prof,cur)}</td><td class="num">${pct(1-Math.pow(Q,i+1))}</td></tr>`}).join('');
-  $('plan').innerHTML=`Max. ztráta celého okna ${W} spinů: <span class="mono">${fmt(total,cur)}</span> · Očekávaná hodnota: <span class="mono">−2,70 %</span> z vsazeného<br>${examples}
+  const rows=u.map((x,i)=>{const s=x*unit;cum+=s;const prof=PAYOUT*s-(cum-s);
+    return `<tr><td class="num">${i+1}</td><td class="num">${fmt(s,cur)}</td><td class="num">${fmt(cum,cur)}</td><td class="num pos">${sfmt(prof,cur)}</td><td class="num">${pct(1-Math.pow(Q,i+1))}</td></tr>`}).join('');
+  $('plan').innerHTML=`Max loss of a full ${W}-spin window: <span class="mono">${fmt(total,cur)}</span> · Expected value: <span class="mono">−2.70%</span> of stake<br>${examples}
     <div class="tablewrap" style="margin-top:8px;max-height:300px;overflow-y:auto"><table>
-    <thead><tr><th>Kolo</th><th>Sázka</th><th>Vsazeno celkem</th><th>Čistě při zásahu</th><th>Šance do tohoto kola</th></tr></thead>
+    <thead><tr><th>Spin</th><th>Bet</th><th>Total staked</th><th>Net if it hits</th><th>Chance by this spin</th></tr></thead>
     <tbody>${rows}</tbody></table></div>`;
 }
 
@@ -586,14 +699,14 @@ function drawWheel(hits,N,betNums){
   });
   s+=`<circle cx="${cx}" cy="${cy}" r="${R3-4}" fill="var(--felt)"/>`;
   s+=`<text x="${cx}" y="${cy-8}" fill="#fff" font-size="26" font-family="Bricolage Grotesque,sans-serif" font-weight="800" text-anchor="middle">${state.spins.length?state.spins[state.spins.length-1]:'–'}</text>`;
-  s+=`<text x="${cx}" y="${cy+18}" fill="#fff" fill-opacity=".75" font-size="10" font-family="IBM Plex Sans,sans-serif" text-anchor="middle">poslední · očekáv. ${exp.toFixed(1)}/číslo</text>`;
+  s+=`<text x="${cx}" y="${cy+18}" fill="#fff" fill-opacity=".75" font-size="10" font-family="IBM Plex Sans,sans-serif" text-anchor="middle">last · expected ${exp.toFixed(1)}/number</text>`;
   $('wheel').innerHTML=s;
 }
 
 /* ---------- actions ---------- */
 function addSpins(arr){ if(!arr.length)return; state.spins.push(...arr); save(); render(); }
 $('pad').addEventListener('click',e=>{const b=e.target.closest('button[data-n]'); if(b)addSpins([+b.dataset.n]);});
-function rnd50(){const a=new Uint32Array(50);crypto.getRandomValues(a);if(state.demo){state.demo=false;}addSpins(Array.from(a,x=>x%37));}
+function rnd50(){const a=new Uint32Array(50);crypto.getRandomValues(a);state.demo=false;addSpins(Array.from(a,x=>x%37));}
 $('test50').addEventListener('click',rnd50);$('test50b').addEventListener('click',rnd50);
 $('undo').addEventListener('click',()=>{state.spins.pop();save();render();});
 function parseBulk(){const v=$('bulkIn').value.split(/[^0-9]+/).filter(Boolean).map(Number).filter(n=>n>=0&&n<=36);$('bulkIn').value='';addSpins(v);}
@@ -602,20 +715,19 @@ $('bulkIn').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault(
 $('clearDemo').addEventListener('click',()=>{state.spins=[];state.demo=false;save();render();});
 function wireReset(){
   $('reset').addEventListener('click',()=>{
-    $('resetWrap').innerHTML=`<span class="confirm">Smazat ${state.spins.length} spinů? <button class="btn danger" id="resetYes">Ano, smazat</button><button class="btn" id="resetNo">Ne</button></span>`;
+    $('resetWrap').innerHTML=`<span class="confirm">Delete ${state.spins.length} spins? <button class="btn danger" id="resetYes">Yes, delete</button><button class="btn" id="resetNo">No</button></span>`;
     $('resetYes').onclick=()=>{state.spins=[];state.demo=false;save();restoreReset();render();};
     $('resetNo').onclick=restoreReset;
   });
 }
-function restoreReset(){$('resetWrap').innerHTML='<button class="btn danger" id="reset">Nová session</button>';wireReset();}
+function restoreReset(){$('resetWrap').innerHTML='<button class="btn danger" id="reset">New session</button>';wireReset();}
 wireReset();
 $('exportBtn').addEventListener('click',async()=>{
   const txt=state.spins.join(' ');
-  try{await navigator.clipboard.writeText(txt);$('exportBtn').textContent='Zkopírováno';}
-  catch(e){$('bulkIn').value=txt;$('bulkIn').select();$('exportBtn').textContent='Označeno v poli';}
-  setTimeout(()=>$('exportBtn').textContent='Kopírovat historii',1600);
+  try{await navigator.clipboard.writeText(txt);$('exportBtn').textContent='Copied';}
+  catch(e){$('bulkIn').value=txt;$('bulkIn').select();$('exportBtn').textContent='Selected in field';}
+  setTimeout(()=>$('exportBtn').textContent='Copy history',1600);
 });
-// keyboard: type digits then Enter anywhere outside inputs
 let kbuf='',ktimer=null;
 document.addEventListener('keydown',e=>{
   if(e.target.closest('input,select,textarea'))return;
@@ -627,15 +739,19 @@ document.addEventListener('keydown',e=>{
 $('sortSel').addEventListener('change',e=>{sortMode=e.target.value;render();});
 
 // settings form
-const F={type:'f_type',chip:'f_chip',cur:'f_cur',bank:'f_bank',trig:'f_trig',floor:'f_floor',minw:'f_minw',maxw:'f_maxw',prog:'f_prog',filter:'f_filter',maxact:'f_maxact',reentry:'f_reentry'};
-const NUMS=new Set(['chip','bank','trig','floor','minw','maxw','maxact']);
+const F={type:'f_type',chip:'f_chip',cur:'f_cur',bank:'f_bank',trig:'f_trig',floor:'f_floor',minw:'f_minw',maxw:'f_maxw',prog:'f_prog',filter:'f_filter',maxact:'f_maxact',reentry:'f_reentry',
+  neigh:'f_neigh',brakeN:'f_brakeN',brakeS:'f_brakeS',wait:'f_wait',forcew:'f_forcew'};
+const NUMS=new Set(['chip','bank','trig','floor','minw','maxw','maxact','brakeN','brakeS','wait','forcew']);
+const ZERO_OK=new Set(['bank','brakeN','wait']);
 function fillForm(){for(const[k,id]of Object.entries(F))$(id).value=state.cfg[k];}
 $('form').addEventListener('change',()=>{
   const c={...state.cfg};
-  for(const[k,id]of Object.entries(F)){let v=$(id).value; if(NUMS.has(k)){v=parseFloat(String(v).replace(',','.')); if(!isFinite(v)||v<=0)v=DEFAULTS[k];} c[k]=v;}
+  for(const[k,id]of Object.entries(F)){let v=$(id).value; if(NUMS.has(k)){v=parseFloat(String(v).replace(',','.')); if(!isFinite(v)||v<0||(v===0&&!ZERO_OK.has(k)))v=DEFAULTS[k];} c[k]=v;}
   c.minw=Math.round(Math.min(Math.max(c.minw,1),20)); c.maxw=Math.round(Math.min(Math.max(c.maxw,c.minw),50));
   c.maxact=Math.round(Math.min(Math.max(c.maxact,1),10)); c.trig=Math.min(c.trig,50);
-  if(!c.cur.trim())c.cur=DEFAULTS.cur;
+  for(const k of ['brakeN','brakeS','wait','forcew'])c[k]=Math.round(c[k]);
+  c.forcew=Math.min(Math.max(c.forcew,1),20);
+  if(!String(c.cur).trim())c.cur=DEFAULTS.cur;
   state.cfg=c; fillForm(); save(); render();
 });
 
@@ -643,22 +759,25 @@ $('form').addEventListener('change',()=>{
 $('simBtn').addEventListener('click',()=>{
   const n=+$('simN').value, buf=new Uint32Array(n);
   for(let i=0;i<n;i+=16384)crypto.getRandomValues(buf.subarray(i,Math.min(n,i+16384)));
-  const spins=Array.from(buf,x=>x%37); // modulo bias ~1e-8, negligible
-  $('simBtn').disabled=true;$('simBtn').textContent='Počítám…';
+  const spins=Array.from(buf,x=>x%37);
+  $('simBtn').disabled=true;$('simBtn').textContent='Running…';
   setTimeout(()=>{
     const cfg=state.cfg,cur=cfg.cur,R=replay(spins,cfg,{curve:true,noLog:true});
-    const roi=R.staked?R.pl/R.staked:0, perh=R.pl/n*40;
+    const roi=R.staked?R.pl/R.staked:0, perh=R.pl/n*40, wr=(R.wins+R.losses)?R.wins/(R.wins+R.losses):0;
     $('simOut').innerHTML=`<div class="simres">
-      <div><span class="eyebrow">Výsledek</span><b class="${R.pl>=0?'pos':'neg'}">${sfmt(R.pl,cur)}</b></div>
-      <div><span class="eyebrow">Vsazeno</span><b>${fmt(R.staked,cur)}</b></div>
+      <div><span class="eyebrow">Result</span><b class="${R.pl>=0?'pos':'neg'}">${sfmt(R.pl,cur)}</b></div>
+      <div><span class="eyebrow">Staked</span><b>${fmt(R.staked,cur)}</b></div>
       <div><span class="eyebrow">ROI</span><b class="${roi>=0?'pos':'neg'}">${pct(roi,2)}</b></div>
-      <div><span class="eyebrow">Teorie</span><b>−2,70 %</b></div>
-      <div><span class="eyebrow">Okna výhra/prohra</span><b>${R.wins} / ${R.losses}</b></div>
-      <div><span class="eyebrow">Max. propad</span><b class="neg">${fmt(R.maxDD,cur)}</b></div>
-      <div><span class="eyebrow">Na hodinu (~40 spinů)</span><b class="${perh>=0?'pos':'neg'}">${sfmt(perh,cur)}</b></div>
+      <div><span class="eyebrow">Theory</span><b>−2.70%</b></div>
+      <div><span class="eyebrow">Windows won/lost</span><b>${R.wins} / ${R.losses}</b></div>
+      <div><span class="eyebrow">Win rate</span><b>${pct(wr)}</b></div>
+      <div><span class="eyebrow">Max-wait picks</span><b>${R.forced}</b></div>
+      <div><span class="eyebrow">Brakes</span><b>${R.brakes}</b></div>
+      <div><span class="eyebrow">Max drawdown</span><b class="neg">${fmt(R.maxDD,cur)}</b></div>
+      <div><span class="eyebrow">Per hour (~40 spins)</span><b class="${perh>=0?'pos':'neg'}">${sfmt(perh,cur)}</b></div>
     </div>`;
     drawCurve(R.curve);
-    $('simBtn').disabled=false;$('simBtn').textContent='Spustit znovu';
+    $('simBtn').disabled=false;$('simBtn').textContent='Run again';
   },30);
 });
 function drawCurve(pts){
