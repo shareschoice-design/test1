@@ -229,7 +229,7 @@ tr.istop td{background:color-mix(in srgb,var(--warn) 8%,transparent)}
       </section>
 
       <section class="panel">
-        <header><h2>Strategy &amp; money management</h2><span class="eyebrow">recalculates the whole session</span></header>
+        <header><h2>Strategy &amp; bets</h2><span class="eyebrow">recalculates the whole session</span></header>
         <div class="form" id="form">
           <fieldset>
             <legend>Number picker · 4 characteristics</legend>
@@ -267,81 +267,16 @@ tr.istop td{background:color-mix(in srgb,var(--warn) 8%,transparent)}
             </label>
             <label>Lowest level that triggers
               <select id="f_fibMin">
-                <option value="0">1.000 → 5-spin window</option>
-                <option value="1">1.618 → 8-spin window</option>
-                <option value="2">2.618 → 13-spin window</option>
-                <option value="3">4.236 → 21-spin window</option>
+                <option value="0">1.000</option>
+                <option value="1">1.618</option>
+                <option value="2">2.618</option>
+                <option value="3">4.236</option>
               </select>
             </label>
             <label>Bet at the latest after N idle spins
               <input id="f_wait" type="number" min="1" max="50">
               <span class="hint" id="h_wait"></span>
             </label>
-            <label>Wait-limit window (spins)
-              <input id="f_limitw" type="number" min="1" max="20">
-            </label>
-            <label>Window min–max spins
-              <span style="display:flex;gap:6px"><input id="f_minw" type="number" min="1" max="21" style="width:50%" aria-label="Minimum window"><input id="f_maxw" type="number" min="1" max="21" style="width:50%" aria-label="Maximum window"></span>
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Stakes · Fibonacci</legend>
-            <label>Base bet (per number)
-              <input id="f_chip" type="number" step="0.05" min="0.05">
-            </label>
-            <label>Progression in a window
-              <select id="f_prog">
-                <option value="fib">Fibonacci (1,1,2,3,5…), hit always in profit</option>
-                <option value="recovery">Recovery (smallest stake that still profits)</option>
-              </select>
-            </label>
-            <label>Next Fibonacci step every N spins
-              <input id="f_fibEvery" type="number" min="1" max="10">
-            </label>
-            <label class="check"><input type="checkbox" id="f_ladder"><span>Fibonacci ladder between windows<small>lost window: one step up · won window: two steps down</small></span></label>
-            <label>Ladder top step
-              <select id="f_ladderMax">
-                <option value="1">×2</option><option value="2">×3</option><option value="3">×5</option><option value="4">×8</option><option value="5">×13</option>
-              </select>
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Money management · like trading</legend>
-            <label>Starting bankroll
-              <input id="f_bank" type="number" step="1" min="1">
-            </label>
-            <label>Currency
-              <input id="f_cur" maxlength="4">
-            </label>
-            <label>Max risk per window, % of bankroll
-              <input id="f_riskPct" type="number" step="0.5" min="0" max="100">
-              <span class="hint">Window is shortened to fit. 0 = no cap.</span>
-            </label>
-            <label>Session stop-loss, % of start
-              <input id="f_slPct" type="number" step="1" min="0" max="100">
-              <span class="hint">0 = off</span>
-            </label>
-            <label>Session take-profit, % of start
-              <input id="f_tpPct" type="number" step="1" min="0" max="500">
-              <span class="hint">0 = off</span>
-            </label>
-            <label>Trailing stop starts at profit %
-              <input id="f_trailStart" type="number" step="1" min="0" max="500">
-              <span class="hint">0 = off</span>
-            </label>
-            <label>…and stops after giving back % of peak
-              <input id="f_trailGive" type="number" step="5" min="5" max="100">
-            </label>
-            <label class="check"><input type="checkbox" id="f_eqFilter"><span>Equity-curve filter<small>bet real money only while the strategy's equity is above its moving average; otherwise paper-trade</small></span></label>
-            <label>Moving average length (windows)
-              <input id="f_eqLen" type="number" min="2" max="50">
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Filters</legend>
             <label>Neighbour signal
               <select id="f_neigh">
                 <option value="off">Off</option>
@@ -350,12 +285,30 @@ tr.istop td{background:color-mix(in srgb,var(--warn) 8%,transparent)}
               </select>
               <span class="hint">Ignored at the wait limit.</span>
             </label>
-            <label>Brake: lost windows in a row
-              <input id="f_brakeN" type="number" min="0" max="20">
-              <span class="hint">0 = off</span>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your bet settings</legend>
+            <label>Spins to play per window
+              <input id="f_spins" type="number" min="0" max="50">
+              <span class="hint">0 = automatic (Fibonacci 5 / 8 / 13 / 21 by level)</span>
             </label>
-            <label>Brake: pause for spins
-              <input id="f_brakeS" type="number" min="1" max="100">
+            <label>Base bet per number
+              <input id="f_chip" type="number" step="0.05" min="0.05">
+            </label>
+            <label>Progression aggressiveness, % per spin
+              <input id="f_aggr" type="number" step="5" min="0" max="200">
+              <span class="hint">0 = flat · 20 = +20% each spin · 50 = fast</span>
+            </label>
+            <label>Max bet per number during progression
+              <input id="f_maxBet" type="number" step="0.1" min="0.05">
+            </label>
+            <label class="check"><input type="checkbox" id="f_floor"><span>Every hit in profit<small>raise the stake when needed so a hit always covers the window's losses (still capped by the max bet)</small></span></label>
+            <label>Starting bankroll
+              <input id="f_bank" type="number" step="1" min="1">
+            </label>
+            <label>Currency
+              <input id="f_cur" maxlength="4">
             </label>
           </fieldset>
         </div>
@@ -379,7 +332,7 @@ tr.istop td{background:color-mix(in srgb,var(--warn) 8%,transparent)}
     <header><h2>Betting window history</h2><span class="eyebrow" id="logSummary"></span></header>
     <div class="tablewrap" style="max-height:340px;overflow-y:auto">
       <table>
-        <thead><tr><th>Numbers</th><th>Start (spin)</th><th>Avg gap</th><th>Entry</th><th>Ladder</th><th>Window</th><th>Played</th><th>Staked</th><th>Result</th></tr></thead>
+        <thead><tr><th>Numbers</th><th>Start (spin)</th><th>Avg gap</th><th>Entry</th><th>Top bet</th><th>Window</th><th>Played</th><th>Staked</th><th>Result</th></tr></thead>
         <tbody id="ltable"></tbody>
       </table>
     </div>
@@ -387,8 +340,7 @@ tr.istop td{background:color-mix(in srgb,var(--warn) 8%,transparent)}
 
   <section class="panel">
     <header><h2>Strategy lab</h2><span class="eyebrow">random spins · does it help?</span></header>
-    <h3 style="font-size:15px;margin-bottom:6px">A · Picker and MM comparison <span class="eyebrow">long run · stops off · sized from the starting bankroll</span></h3>
-    <div class="ctl">
+        <div class="ctl">
       <select id="labN" aria-label="Lab length">
         <option value="20000">20,000 spins</option>
         <option value="100000" selected>100,000 spins</option>
@@ -402,20 +354,6 @@ tr.istop td{background:color-mix(in srgb,var(--warn) 8%,transparent)}
       </table>
     </div>
     <canvas id="simChart" hidden></canvas>
-    <h3 style="font-size:15px;margin:16px 0 6px">B · Session test <span class="eyebrow">your full MM with stop-loss, take-profit and trailing stop</span></h3>
-    <div class="ctl">
-      <select id="sesLen" aria-label="Session length">
-        <option value="150">150 spins (~1 h live)</option>
-        <option value="300" selected>300 spins</option>
-        <option value="600">600 spins</option>
-      </select>
-      <select id="sesN" aria-label="Number of sessions">
-        <option value="300">300 sessions</option>
-        <option value="1000" selected>1,000 sessions</option>
-      </select>
-      <button class="btn primary" id="sesBtn">Play sessions</button>
-    </div>
-    <div class="simres" id="sesOut"></div>
     <p class="note" id="labNote"></p>
   </section>
 
@@ -429,9 +367,9 @@ tr.istop td{background:color-mix(in srgb,var(--warn) 8%,transparent)}
       <b>3 · g (wheel gravity).</b> Every landing adds “gravity” to its wheel neighbours, fading by 20% per spin.<br>
       <b>4 · b (group pressure).</b> How far behind expectation the number's colour, dozen, column and odd/even are.</p>
       <p><b>Score E = γ · m · (1+g) · (1+b)</b> (switched-off factors count as 1). The 4 numbers with the highest E are the picks.</p>
-      <p><b>Entries on Fibonacci levels.</b> The level base is 37 spins, the average return time of one number. Levels sit at 1.000, 1.618, 2.618 and 4.236 × base (gaps 37 / 60 / 97 / 157). When a number's gap breaks through a level, it becomes the lead pick, the three best other numbers by score E join it, and the window is Fibonacci-sized: 5, 8, 13 or 21 spins. If no breakout comes, the wait limit bets the top 4 in a short window.</p>
-      <p><b>Fibonacci stakes.</b> Inside a window the stake climbs 1, 1, 2, 3, 5, 8… units (one step every N spins), never below the amount that makes a hit profitable. Between windows a Fibonacci ladder multiplies the base: ×1, 2, 3, 5, 8, 13, one step up after a lost window and two steps down after a win.</p>
-      <p><b>Money management like trading.</b> Each window is a trade. Its total possible loss is capped at a % of the current bankroll (the window is shortened to fit). The session ends at the stop-loss, the take-profit, or the trailing stop once a profit starts slipping away. The optional equity-curve filter keeps tracking the strategy but only risks real money while its equity is above its moving average.</p>
+      <p><b>Entries on Fibonacci levels.</b> The level base is 37 spins, the average return time of one number. Levels sit at 1.000, 1.618, 2.618 and 4.236 × base (gaps 37 / 60 / 97 / 157). When a number's gap breaks through a level, it becomes the lead pick and the three best other numbers by score E join it. If no breakout comes within the wait limit, the top 4 are bet anyway. Window length is your “spins to play”, or with 0 it follows the level: 5, 8, 13 or 21 spins.</p>
+      <p><b>Stakes.</b> Each window starts at the base bet per number. The stake grows by the aggressiveness % every spin and never goes above the max bet. With “every hit in profit” on, the stake is raised when needed so a hit covers all losses of the window plus one base unit, as long as the max bet allows it. The table under the settings shows every spin of a window before you play it.</p>
+      <p><b>Always playing.</b> There is no stop-loss, take-profit or pause: the tracker keeps betting until you stop entering numbers.</p>
       <p><b>Important:</b> the wheel has no memory. A number that has missed 150 spins still has exactly 1/37 on the next one. That is why “chance” on the bet card comes from 10.81% per spin, not from the scores. Every bet has an expected value of −2.70%. The Strategy lab compares the picker with random numbers on the same spins so you can check this yourself. Only play with money you can afford to lose.</p>
     </details>
   </section>
@@ -444,16 +382,14 @@ const WPOS=new Array(37); WHEEL.forEach((n,i)=>WPOS[n]=i);
 const RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
 const P1=1/37, Q1=36/37, Q_SET=33/37, PAYOUT=8;
 const FIB=[1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597];
-const FIBLV=[1,1.618,2.618,4.236], FIBW=[5,8,13,21], LADDER=[1,2,3,5,8,13];
+const FIBLV=[1,1.618,2.618,4.236], FIBW=[5,8,13,21];
 const colorOf=n=>n===0?'green':RED.has(n)?'red':'black';
 const chipHTML=(n,cls='')=>`<span class="chip c-${colorOf(n)} ${cls}">${n}</span>`;
 const $=id=>document.getElementById(id);
 
 const DEFAULTS={engine:'score',fGap:true,fCold:true,fGrav:true,fGroup:true,filter:'any',
-  timing:'fib',fibBase:37,fibMin:1,wait:10,limitw:5,minw:1,maxw:21,
-  chip:0.2,prog:'fib',fibEvery:3,ladder:true,ladderMax:3,
-  bank:100,cur:'€',riskPct:10,slPct:30,tpPct:25,trailStart:10,trailGive:50,eqFilter:false,eqLen:10,
-  neigh:'off',brakeN:3,brakeS:10,randw:8,ver:5};
+  timing:'fib',fibBase:37,fibMin:1,wait:10,neigh:'off',
+  spins:10,chip:0.2,aggr:20,maxBet:2,floor:true,bank:100,cur:'€',ver:6};
 const KEY='four-number-roulette-v1', OLDKEY='cluster-roulette-v1';
 let state={spins:[],cfg:{...DEFAULTS},demo:false};
 
@@ -465,9 +401,7 @@ function load(){
     if(s&&Array.isArray(s.spins)){
       const old=s.cfg||{};
       state={spins:cleanSpins(s.spins),cfg:{...DEFAULTS,...old},demo:!!s.demo};
-      if((old.ver||0)<5){ // new MM defaults for the Fibonacci version
-        Object.assign(state.cfg,{timing:'fib',prog:'fib',maxw:21,neigh:'off',ver:5});
-      }
+      if((old.ver||0)<6)Object.assign(state.cfg,{timing:'fib',neigh:'off',spins:10,aggr:20,maxBet:2,floor:true,ver:6});
       return true}
     const o=JSON.parse(localStorage.getItem(OLDKEY)||'null');
     if(o&&Array.isArray(o.spins)){const c=o.cfg||{};state={spins:cleanSpins(o.spins),cfg:{...DEFAULTS,chip:c.chip||DEFAULTS.chip,cur:c.cur||DEFAULTS.cur,bank:c.bank||DEFAULTS.bank},demo:!!o.demo};return true}
@@ -501,19 +435,22 @@ function passesFilter(z,N,cfg){
 const fibLevelGaps=cfg=>FIBLV.map(l=>Math.ceil(cfg.fibBase*l));
 function fibLevelOf(gap,cfg){const g=fibLevelGaps(cfg);let k=-1;for(let i=0;i<g.length;i++)if(gap>=g[i])k=i;return k;}
 
-/* stake units per spin of a window: Fibonacci or recovery, never below the "hit = profit" minimum */
+/* per-number stake for each spin of a window: grows by aggr %, floored so a hit profits, capped by maxBet */
+const up5=x=>Math.ceil(x*20-1e-9)/20;
 const planCache=new Map();
-function stepUnits(W,cfg){
-  const key=cfg.prog+'|'+cfg.fibEvery+'|'+W;
+function stakePlan(W,cfg){
+  const key=[W,cfg.chip,cfg.aggr,cfg.maxBet,cfg.floor].join('|');
   if(planCache.has(key))return planCache.get(key);
-  const u=[];let loss=0;
-  for(let s=0;s<W;s++){
-    const f=cfg.prog==='fib'?FIB[Math.min(FIB.length-1,Math.floor(s/Math.max(1,cfg.fibEvery)))]:1;
-    const x=Math.max(f,Math.ceil((loss+1)/PAYOUT)); u.push(x); loss+=x;
+  const cap=Math.max(cfg.chip,cfg.maxBet), out=[]; let loss=0;
+  for(let k=0;k<W;k++){
+    let p=up5(cfg.chip*Math.pow(1+cfg.aggr/100,k));
+    if(cfg.floor)p=Math.max(p,up5((loss+4*cfg.chip)/(4*PAYOUT)));
+    p=Math.min(cap,Math.max(cfg.chip,p));
+    out.push(p); loss+=4*p;
   }
-  planCache.set(key,u); return u;
+  planCache.set(key,out); return out;
 }
-const sumU=u=>u.reduce((a,x)=>a+x,0);
+const sum=a=>a.reduce((x,y)=>x+y,0);
 
 /* ---------- scoring: 4 characteristics per number ---------- */
 function scoreAll(S,N,cfg){
@@ -539,101 +476,67 @@ function pickTop(sc,k=4,exclude=null){
 }
 function windowFor(top,cfg){
   const gAvg=top.reduce((a,x)=>a+x.gamma,0)/top.length;
-  return Math.round(1+20*(1-1/gAvg));
+  return Math.max(1,Math.round(1+20*(1-1/gAvg)));
 }
 
 /* ---------- engine: replays the whole session deterministically ---------- */
 function replay(spins,cfg,opts={}){
   const S={hits:new Array(37).fill(0),gap:new Array(37).fill(0),maxGap:new Array(37).fill(0),field:new Array(37).fill(0),
     grp:{col:[0,0],doz:[0,0,0],clm:[0,0,0],par:[0,0]}};
-  const lvGaps=fibLevelGaps(cfg), noStops=!!opts.noStops;
+  const lvGaps=fibLevelGaps(cfg);
   let active=null,log=[],curve=opts.curve?[]:null;
-  let pl=0,staked=0,peak=0,maxDD=0,grossW=0,grossL=0;   // real money
-  let vpl=0,ema=null,closed=0;                           // strategy equity incl. paper trades
-  let wins=0,losses=0,idle=0,lossStreak=0,brakeUntil=-1,brakes=0,limitPicks=0,bestSeen=0,signalWait=false,riskSkips=0,lad=0,stopped=null,paper=0;
+  let pl=0,staked=0,peak=0,maxDD=0,grossW=0,grossL=0,wins=0,losses=0,idle=0,lossStreak=0,limitPicks=0,bestSeen=0,signalWait=false;
   const waitR=Math.max(1,Math.round(cfg.wait||10)), obs=Math.max(1,Math.round(waitR*0.37));
   let seed=987654321; const rnd=()=>{seed=(seed*1103515245+12345)%2147483648;return seed/2147483648;};
   const NB=cfg.neigh==='table'?NB_T:NB_W;
-  const lo=Math.max(1,Math.min(cfg.minw,cfg.maxw)), hi=Math.max(lo,cfg.maxw);
-
-  function open(nums,i,top,W,src,extra){
-    const bankroll=opts.fixedSizing?cfg.bank:cfg.bank+pl;
-    const budget=cfg.riskPct>0?cfg.riskPct/100*bankroll:Infinity;
-    W=Math.max(lo,Math.min(hi,W));
-    // position sizing: highest ladder step that still fits the risk budget (at least a 1-spin window)
-    let step=cfg.ladder?Math.min(lad,cfg.ladderMax):0, mult, unitVal, w;
-    for(;step>=0;step--){ mult=LADDER[step]; unitVal=4*cfg.chip*mult; w=W;
-      while(w>0&&sumU(stepUnits(w,cfg))*unitVal>budget+1e-9)w--;
-      if(w>=Math.min(W,3)||(step===0&&w>=1))break; }
-    if(step<0||w<1){riskSkips++;return null;}
-    W=w; if(cfg.ladder)lad=step;
-    const real=!cfg.eqFilter||closed<cfg.eqLen||vpl>=ema;
-    if(!real)paper++;
+  function open(nums,i,top,autoW,src,extra){
+    const W=Math.max(1,Math.min(50,cfg.spins>0?cfg.spins:autoW));
     nums=nums.slice().sort((a,b)=>a-b);
-    return {nums,set:new Set(nums),start:i+1,avgGap:nums.reduce((a,x)=>a+S.gap[x],0)/4,src,window:W,units:stepUnits(W,cfg),unitVal,mult,lad,real,budget,
+    return {nums,set:new Set(nums),start:i+1,avgGap:nums.reduce((a,x)=>a+S.gap[x],0)/4,src,window:W,per:stakePlan(W,cfg),
       step:0,staked:0,pl:0,result:null,E:top?top.reduce((a,x)=>a+x.E,0):0,...(extra||{})};
   }
-
   for(let i=0;i<spins.length;i++){
     const n=spins[i];
-    // 1) settle
     if(active){
-      const b=active, stake=b.units[b.step]*b.unitVal; b.step++; b.staked+=stake;
-      if(b.real)staked+=stake;
-      const hit=b.set.has(n), d=hit?PAYOUT*stake:-stake;
-      b.pl+=d; vpl+=d; if(b.real)pl+=d;
+      const b=active, stake=4*b.per[b.step]; b.step++; b.staked+=stake; staked+=stake;
+      const hit=b.set.has(n), d=hit?PAYOUT*stake:-stake; b.pl+=d; pl+=d;
       if(hit||b.step>=b.window){
-        b.result=hit?'win':'loss'; if(hit){b.hitNum=n;wins++;lossStreak=0;lad=Math.max(0,lad-2);}
-        else{losses++;lossStreak++;lad=Math.min(cfg.ladderMax,lad+1);
-          if(cfg.brakeN>0&&lossStreak>=cfg.brakeN){brakeUntil=i+cfg.brakeS;lossStreak=0;brakes++;}}
-        if(b.real){if(b.pl>0)grossW+=b.pl;else grossL-=b.pl;}
-        closed++; ema=ema===null?vpl:ema+(2/(cfg.eqLen+1))*(vpl-ema);
+        b.result=hit?'win':'loss';
+        if(hit){b.hitNum=n;wins++;lossStreak=0;}else{losses++;lossStreak++;}
+        if(b.pl>0)grossW+=b.pl;else grossL-=b.pl;
         if(!opts.noLog)log.push(b); active=null;
       }
       if(pl>peak)peak=pl; if(peak-pl>maxDD)maxDD=peak-pl;
-      // session stops (checked once no window is open)
-      if(!noStops&&!active&&!stopped){
-        const B=cfg.bank;
-        if(cfg.slPct>0&&pl<=-cfg.slPct/100*B)stopped='stop-loss';
-        else if(cfg.tpPct>0&&pl>=cfg.tpPct/100*B)stopped='take-profit';
-        else if(cfg.trailStart>0&&peak>=cfg.trailStart/100*B&&pl<=peak*(1-cfg.trailGive/100))stopped='trailing stop';
-        if(stopped&&opts.stopAt)return {pl,stopped,staked,spinsPlayed:i+1};
-      }
     }
-    // 2) stats
     S.hits[n]++;
     for(let k=0;k<37;k++){ if(k===n)S.gap[k]=0; else {S.gap[k]++; if(S.gap[k]>S.maxGap[k])S.maxGap[k]=S.gap[k];} }
     const kr=KERN[n]; for(let k=0;k<37;k++)S.field[k]=S.field[k]*DECAY+kr[k];
     const G=GRP[n]; if(G){S.grp.col[G[0]]++;S.grp.doz[G[1]]++;S.grp.clm[G[2]]++;S.grp.par[G[3]]++;}
-    // 3) decide the next bet
     signalWait=false;
-    if(stopped){idle=0;}
-    else if(i<brakeUntil){idle=0;bestSeen=0;}
-    else if(!active){
+    if(!active){
       idle++;
       const N=i+1;
       if(cfg.engine==='random'){
-        if(idle>=waitR){const set=new Set();while(set.size<4)set.add(Math.floor(rnd()*37));active=open([...set],i,null,cfg.randw,'random');}
+        if(idle>=waitR){const set=new Set();while(set.size<4)set.add(Math.floor(rnd()*37));active=open([...set],i,null,8,'random');}
       }else{
         const sc=scoreAll(S,N,cfg);
         if(cfg.timing==='fib'){
-          // breakout: a number's gap has just reached a Fibonacci level
           let sig=null;
-          for(const x of sc){ if(!x.ok)continue; const g=S.gap[x.n]; const k=lvGaps.indexOf(g);
+          for(const x of sc){ if(!x.ok)continue; const k=lvGaps.indexOf(S.gap[x.n]);
             if(k>=cfg.fibMin&&(!sig||k>sig.k||(k===sig.k&&x.E>sig.x.E)))sig={x,k}; }
           if(sig){
-            const rest=pickTop(sc,3,new Set([sig.x.n])), set=[sig.x,...rest];
+            const set=[sig.x,...pickTop(sc,3,new Set([sig.x.n]))];
             if(cfg.neigh==='off'||set.some(x=>NB[x.n].has(n)))active=open(set.map(x=>x.n),i,set,FIBW[sig.k],'fib',{lv:sig.k,lead:sig.x.n});
             else signalWait=true;
           }
-          if(!active&&idle>=waitR){const top=pickTop(sc);active=open(top.map(x=>x.n),i,top,cfg.limitw,'limit');if(active)limitPicks++;}
+          if(!active&&idle>=waitR){const top=pickTop(sc);active=open(top.map(x=>x.n),i,top,5,'limit');limitPicks++;}
         }else{
           const top=pickTop(sc), E=top.reduce((a,x)=>a+x.E,0);
           let src=null;
           if(idle>=waitR)src='limit';
           else if(idle<=obs)bestSeen=Math.max(bestSeen,E);
           else if(E>=bestSeen){ if(cfg.neigh==='off'||top.some(x=>NB[x.n].has(n)))src='best'; else signalWait=true; }
-          if(src){active=open(top.map(x=>x.n),i,top,src==='limit'?cfg.limitw:windowFor(top,cfg),src);if(active&&src==='limit')limitPicks++;}
+          if(src){active=open(top.map(x=>x.n),i,top,windowFor(top,cfg),src);if(src==='limit')limitPicks++;}
         }
       }
       if(active){idle=0;bestSeen=0;}
@@ -642,9 +545,8 @@ function replay(spins,cfg,opts={}){
   }
   if(curve)curve.push(pl);
   const N=spins.length;
-  if(opts.stopAt)return {pl,stopped,staked,spinsPlayed:N};
-  return {S,N,active,log,pl,staked,maxDD,peak,grossW,grossL,wins,losses,curve,idle,lossStreak,brakes,limitPicks,bestSeen,signalWait,waitR,obs,
-    riskSkips,lad,stopped,paper,vpl,ema,closed,brakeLeft:Math.max(0,brakeUntil-(N-1)),scores:opts.noScores?null:scoreAll(S,N,cfg)};
+  return {S,N,active,log,pl,staked,maxDD,peak,grossW,grossL,wins,losses,curve,idle,lossStreak,limitPicks,bestSeen,signalWait,waitR,obs,
+    scores:opts.noScores?null:scoreAll(S,N,cfg)};
 }
 
 /* ---------- rendering ---------- */
@@ -666,50 +568,36 @@ function render(){
   ].map(([k,v])=>`<div class="kpi"><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
 
   const top=R.scores?pickTop(R.scores):[], topSet=new Set(top.map(x=>x.n));
-  const bankroll=cfg.bank+R.pl, mult=cfg.ladder?LADDER[Math.min(R.lad,cfg.ladderMax)]:1;
-  // status chips
   const st=[];
-  if(R.stopped)st.push(`<span class="on">Session stopped: <b>${R.stopped}</b> · start a new session</span>`);
-  else if(R.brakeLeft>0)st.push(`<span class="on">Brake on: <b>${R.brakeLeft}</b> spins left</span>`);
-  else if(!R.active){
+  if(!R.active){
     if(cfg.engine==='random')st.push(`<span>Idle <b>${R.idle}/${R.waitR}</b> · random 4 at ${R.waitR}</span>`);
     else if(cfg.timing==='fib')st.push(`<span class="on">Waiting for a Fibonacci breakout · wait limit <b>${R.idle}/${R.waitR}</b></span>`);
     else if(R.idle<R.obs)st.push(`<span class="on">Observing <b>${R.idle}/${R.obs}</b> · best E so far <b>${R.bestSeen.toFixed(2)}</b></span>`);
     else st.push(`<span class="on">Hunting: bet when top-4 E ≥ <b>${R.bestSeen.toFixed(2)}</b> · forced at <b>${R.waitR}</b> (now ${R.idle})</span>`);
     if(R.signalWait)st.push(`<span class="on">Signal found, waiting for a <b>neighbour</b></span>`);
   }
-  st.push(`<span>Ladder <b>×${mult}</b></span>`);
-  if(cfg.riskPct>0)st.push(`<span>Risk budget <b>${fmt(cfg.riskPct/100*bankroll,cur)}</b> per window</span>`);
-  if(cfg.eqFilter)st.push(`<span class="${R.closed>=cfg.eqLen&&R.vpl<R.ema?'on':''}">Equity filter: <b>${R.closed<cfg.eqLen?'warming up':R.vpl>=R.ema?'real money':'paper only'}</b></span>`);
-  const stops=[];
-  if(cfg.slPct>0)stops.push(`SL ${fmt(-cfg.slPct/100*cfg.bank,cur)}`);
-  if(cfg.tpPct>0)stops.push(`TP ${sfmt(cfg.tpPct/100*cfg.bank,cur)}`);
-  if(cfg.trailStart>0)stops.push(R.peak>=cfg.trailStart/100*cfg.bank?`trail stop ${sfmt(R.peak*(1-cfg.trailGive/100),cur)}`:`trail from ${sfmt(cfg.trailStart/100*cfg.bank,cur)}`);
-  if(stops.length)st.push(`<span>${stops.join(' · ')}</span>`);
-  if(cfg.brakeN>0)st.push(`<span>Lost in a row <b>${R.lossStreak}/${cfg.brakeN}</b></span>`);
-  if(R.riskSkips)st.push(`<span>Skipped for risk <b>${R.riskSkips}</b></span>`);
+  st.push(`<span>Window <b>${cfg.spins>0?cfg.spins+' spins':'auto'}</b> · aggressiveness <b>${cfg.aggr}%</b> · max bet <b>${fmt(cfg.maxBet,cur)}</b></span>`);
+  st.push(`<span>Lost in a row <b>${R.lossStreak}</b> · wait-limit bets <b>${R.limitPicks}</b></span>`);
   $('status').innerHTML=st.join('');
 
   // bet card
   const betNums=R.active?R.active.set:new Set();
   if(R.active){
-    const b=R.active, stake=b.units[b.step]*b.unitVal, per=stake/4, left=b.window-b.step;
-    const remainRisk=sumU(b.units.slice(b.step))*b.unitVal, winNet=PAYOUT*stake+b.pl;
-    $('bets').innerHTML=`<article class="bet" style="${b.real?'':'border-style:dashed;opacity:.85'}">
-      <div class="row"><span class="eyebrow">Spin ${b.step+1} of ${b.window}${b.lv!=null?` · level ${LVNAME[b.lv]}`:''}</span><span><span class="tag">${SRC[b.src]}</span> ${b.real?'':'<span class="tag">paper · don\'t bet</span>'}</span></div>
+    const b=R.active, per=b.per[b.step], stake=4*per, left=b.window-b.step;
+    const remainRisk=4*sum(b.per.slice(b.step)), winNet=PAYOUT*stake+b.pl;
+    $('bets').innerHTML=`<article class="bet">
+      <div class="row"><span class="eyebrow">Spin ${b.step+1} of ${b.window}${b.lv!=null?` · level ${LVNAME[b.lv]}`:''}</span><span class="tag">${SRC[b.src]}</span></div>
       <div class="chips bigchips">${b.nums.map(n=>chipHTML(n,n===b.lead?'last':'')).join('')}</div>
       <div class="stake">${fmt(per,cur)} <span style="font-size:14px;color:var(--muted)">on each number · total ${fmt(stake,cur)}</span></div>
       <div class="row"><span>if one hits</span><b class="${winNet>=0?'pos':'neg'}">${sfmt(winNet,cur)}</b></div>
       <div class="steps">${Array.from({length:b.window},(_,k)=>`<i class="${k<b.step?'done':k===b.step?'now':''}"></i>`).join('')}</div>
       <div class="row"><span>so far ${sfmt(b.pl,cur)}</span><span>chance in ${left} spin${left>1?'s':''}: <b>${pct(1-Math.pow(Q_SET,left))}</b></span></div>
-      <div class="row"><span>ladder ×${b.mult} · Fib stakes ${b.units.slice(b.step,b.step+5).map(x=>x*b.mult).join(', ')}${b.window-b.step>5?'…':''}</span><span>max risk left <b>${fmt(remainRisk,cur)}</b></span></div>
+      <div class="row"><span>next per number: ${b.per.slice(b.step+1,b.step+6).map(x=>x.toFixed(2)).join(', ')||'–'}${b.window-b.step>6?'…':''}</span><span>max risk left <b>${fmt(remainRisk,cur)}</b></span></div>
     </article>`;
     $('betsSummary').textContent=`4 numbers · total ${fmt(stake,cur)}`;
   }else{
     let msg;
-    if(R.stopped)msg=`Session ended by the ${R.stopped} at ${sfmt(R.pl,cur)}. That is the plan working: close the table, or tap “New session” to start again.`;
-    else if(R.brakeLeft>0)msg=`Paused by the loss-streak brake for ${R.brakeLeft} more spin${R.brakeLeft>1?'s':''}.`;
-    else if(cfg.engine==='random')msg=`Random control group: 4 random numbers after ${R.waitR-R.idle} more spin${R.waitR-R.idle===1?'':'s'}.`;
+    if(cfg.engine==='random')msg=`Random control group: 4 random numbers after ${R.waitR-R.idle} more spin${R.waitR-R.idle===1?'':'s'}.`;
     else if(cfg.timing==='fib'){
       const lg=fibLevelGaps(cfg), next=[];
       for(const x of R.scores){ if(!x.ok)continue; const g=R.S.gap[x.n]; for(let k=cfg.fibMin;k<4;k++){ if(lg[k]>g){next.push({n:x.n,k,d:lg[k]-g});break;} } }
@@ -717,11 +605,11 @@ function render(){
       msg=`No bet. Next Fibonacci breakouts: ${next.slice(0,4).map(x=>`${chipHTML(x.n)} level ${LVNAME[x.k]} in ${x.d} spin${x.d>1?'s':''}`).join(' · ')||'none soon'}. Wait limit bets the top 4 ${top.map(x=>chipHTML(x.n)).join(' ')} in ${R.waitR-R.idle} spin${R.waitR-R.idle===1?'':'s'}.`;
     }else msg=`No bet yet. Top 4: ${top.map(x=>chipHTML(x.n)).join(' ')}. The bet comes when they beat the best E seen, at the latest in ${R.waitR-R.idle} spin${R.waitR-R.idle===1?'':'s'}.`;
     $('bets').innerHTML=`<div class="empty">${msg}</div>`;
-    $('betsSummary').textContent=R.stopped?'session stopped':'no bet';
+    $('betsSummary').textContent='no bet';
   }
 
   // pad + strip
-  const hl=R.active?betNums:(cfg.engine==='score'&&!R.stopped?topSet:new Set());
+  const hl=R.active?betNums:(cfg.engine==='score'?topSet:new Set());
   const order=[];for(let row=0;row<3;row++)for(let col=0;col<12;col++)order.push(col*3+(3-row));
   $('pad').innerHTML=`<button class="z ${hl.has(0)?'betting':''}" data-n="0">0<span class="cnt">${R.S.hits[0]||''}</span></button>`+
     order.map(n=>`<button class="${RED.has(n)?'r':'k'} ${hl.has(n)?'betting':''}" data-n="${n}">${n}<span class="cnt">${R.S.hits[n]||''}</span></button>`).join('');
@@ -751,13 +639,13 @@ function render(){
   drawWheel(R.S.hits,N,hl);
 
   // log
-  const L=R.log.slice().reverse(), totPL=R.log.filter(b=>b.real).reduce((a,b)=>a+b.pl,0);
-  $('logSummary').textContent=R.log.length?`${R.log.length} closed windows · real ${sfmt(totPL,cur)}`:'';
-  $('ltable').innerHTML=L.length?L.slice(0,200).map(b=>`<tr style="${b.real?'':'opacity:.6'}">
+  const L=R.log.slice().reverse(), totPL=R.log.reduce((a,b)=>a+b.pl,0);
+  $('logSummary').textContent=R.log.length?`${R.log.length} closed windows · ${sfmt(totPL,cur)}`:'';
+  $('ltable').innerHTML=L.length?L.slice(0,200).map(b=>`<tr>
     <td><div class="chips">${b.nums.map(n=>chipHTML(n,b.hitNum===n?'last':'')).join('')}</div></td>
     <td class="num">#${b.start+1}</td><td class="num">${b.avgGap.toFixed(0)}</td>
-    <td><span class="tag">${SRC[b.src]}${b.lv!=null?' '+LVNAME[b.lv]:''}</span>${b.real?'':' <span class="tag">paper</span>'}</td>
-    <td class="num">×${b.mult}</td><td class="num">${b.window}</td><td class="num">${b.step}</td><td class="num">${fmt(b.staked,cur)}</td>
+    <td><span class="tag">${SRC[b.src]}${b.lv!=null?' '+LVNAME[b.lv]:''}</span></td>
+    <td class="num">${fmt(b.per[b.step-1],cur)}</td><td class="num">${b.window}</td><td class="num">${b.step}</td><td class="num">${fmt(b.staked,cur)}</td>
     <td class="num ${b.pl>=0?'pos':'neg'}">${b.result==='win'?'hit ':'miss '}${sfmt(b.pl,cur)}</td></tr>`).join('')
     :`<tr><td colspan="9" class="empty" style="text-align:left">No closed betting window yet.</td></tr>`;
 
@@ -766,7 +654,7 @@ function render(){
 }
 
 function renderSuccess(R){
-  const cur=state.cfg.cur, L=R.log.filter(b=>b.real), n=L.length;
+  const cur=state.cfg.cur, L=R.log, n=L.length;
   const W=L.filter(b=>b.result==='win'), Lo=L.filter(b=>b.result==='loss');
   const theo=n?L.reduce((a,b)=>a+1-Math.pow(Q_SET,b.window),0)/n:0;
   let streak=0,maxStreak=0; for(const b of L){if(b.result==='loss'){streak++;maxStreak=Math.max(maxStreak,streak)}else streak=0;}
@@ -780,7 +668,7 @@ function renderSuccess(R){
     ['Profit factor',R.grossL>0?pf.toFixed(2):'–'],['Expectancy / window',`<span class="${exp>=0?'pos':'neg'}">${sfmt(exp,cur)}</span>`],
     ['Max drawdown',`<span class="neg">${fmt(R.maxDD,cur)}</span>`],
     ['Fib breakout bets',rate(L.filter(b=>b.src==='fib'))],['Wait-limit bets',rate(L.filter(b=>b.src==='limit'))],
-    ['Longest losing run',maxStreak],['Paper windows',R.log.length-n],
+    ['Longest losing run',maxStreak],
   ].map(([k,v])=>`<div><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
   const groups={};
   for(const b of L){const g=groups[b.window]||(groups[b.window]={n:0,w:0,pl:0});g.n++;if(b.result==='win')g.w++;g.pl+=b.pl;}
@@ -793,15 +681,13 @@ function renderPlan(R){
   const cfg=state.cfg, cur=cfg.cur, lg=fibLevelGaps(cfg);
   $('h_wait').textContent=cfg.timing==='best'?`Watches ${R.obs} spin${R.obs>1?'s':''}, then bets at the best moment; never idles more than ${R.waitR}.`:`If no breakout comes, the top 4 are bet after ${R.waitR} idle spins.`;
   $('h_fibBase').textContent=`Levels at gap ${lg.join(' / ')} spins`;
-  const bankroll=cfg.bank+R.pl, mult=cfg.ladder?LADDER[Math.min(R.lad,cfg.ladderMax)]:1, unit=4*cfg.chip*mult;
-  const budget=cfg.riskPct>0?cfg.riskPct/100*bankroll:Infinity;
-  const W=Math.max(cfg.maxw,1), u=stepUnits(W,cfg);
-  let cum=0, fitW=0;
-  const rows=u.map((x,i)=>{const s=x*unit;cum+=s;const prof=PAYOUT*s-(cum-s);const ok=cum<=budget+1e-9;if(ok)fitW=i+1;
-    return `<tr style="${ok?'':'opacity:.45'}"><td class="num">${i+1}</td><td class="num">${x*mult}</td><td class="num">${fmt(x*cfg.chip*mult,cur)}</td><td class="num">${fmt(s,cur)}</td><td class="num">${fmt(cum,cur)}</td><td class="num pos">${sfmt(prof,cur)}</td><td class="num">${pct(1-Math.pow(Q_SET,i+1))}</td></tr>`}).join('');
-  $('plan').innerHTML=`Ladder ×${mult} · risk budget ${isFinite(budget)?fmt(budget,cur):'no cap'} → windows up to <span class="mono">${fitW}</span> spins fit right now (greyed rows are over budget). Expected value: <span class="mono">−2.70%</span> of stake.
+  const W=cfg.spins>0?cfg.spins:21, per=stakePlan(W,cfg);
+  let cum=0, worst=0;
+  const rows=per.map((p,i)=>{const s=4*p;cum+=s;const net=PAYOUT*s-(cum-s);worst=cum;
+    return `<tr><td class="num">${i+1}</td><td class="num">${fmt(p,cur)}</td><td class="num">${fmt(s,cur)}</td><td class="num">${fmt(cum,cur)}</td><td class="num ${net>=0?'pos':'neg'}">${sfmt(net,cur)}</td><td class="num">${pct(1-Math.pow(Q_SET,i+1))}</td></tr>`}).join('');
+  $('plan').innerHTML=`${cfg.spins>0?`Window of ${W} spins`:'Longest automatic window (21 spins)'} · max loss of a full window <span class="mono">${fmt(worst,cur)}</span> · expected value <span class="mono">−2.70%</span> of stake. Red “net if one hits” means the max bet stops the stake from covering the losses.
     <div class="tablewrap" style="margin-top:8px;max-height:300px;overflow-y:auto"><table>
-    <thead><tr><th>Spin</th><th>Units</th><th>Per number</th><th>Total bet</th><th>Total staked</th><th>Net if one hits</th><th>Chance by this spin</th></tr></thead>
+    <thead><tr><th>Spin</th><th>Per number</th><th>Total bet</th><th>Total staked</th><th>Net if one hits</th><th>Chance by this spin</th></tr></thead>
     <tbody>${rows}</tbody></table></div>`;
 }
 
@@ -864,21 +750,19 @@ document.addEventListener('keydown',e=>{
 $('sortSel').addEventListener('change',e=>{sortMode=e.target.value;render();});
 
 // settings
-const F={engine:'f_engine',filter:'f_filter',timing:'f_timing',fibBase:'f_fibBase',fibMin:'f_fibMin',wait:'f_wait',limitw:'f_limitw',minw:'f_minw',maxw:'f_maxw',
-  chip:'f_chip',prog:'f_prog',fibEvery:'f_fibEvery',ladderMax:'f_ladderMax',bank:'f_bank',cur:'f_cur',riskPct:'f_riskPct',slPct:'f_slPct',tpPct:'f_tpPct',
-  trailStart:'f_trailStart',trailGive:'f_trailGive',eqLen:'f_eqLen',neigh:'f_neigh',brakeN:'f_brakeN',brakeS:'f_brakeS'};
-const CHK={fGap:'f_fGap',fCold:'f_fCold',fGrav:'f_fGrav',fGroup:'f_fGroup',ladder:'f_ladder',eqFilter:'f_eqFilter'};
-const NUMS=new Set(['fibBase','fibMin','wait','limitw','minw','maxw','chip','fibEvery','ladderMax','bank','riskPct','slPct','tpPct','trailStart','trailGive','eqLen','brakeN','brakeS']);
-const ZERO_OK=new Set(['fibMin','riskPct','slPct','tpPct','trailStart','brakeN']);
-const INTS=['fibBase','fibMin','wait','limitw','minw','maxw','fibEvery','ladderMax','eqLen','brakeN','brakeS'];
+const F={engine:'f_engine',filter:'f_filter',timing:'f_timing',fibBase:'f_fibBase',fibMin:'f_fibMin',wait:'f_wait',neigh:'f_neigh',
+  spins:'f_spins',chip:'f_chip',aggr:'f_aggr',maxBet:'f_maxBet',bank:'f_bank',cur:'f_cur'};
+const CHK={fGap:'f_fGap',fCold:'f_fCold',fGrav:'f_fGrav',fGroup:'f_fGroup',floor:'f_floor'};
+const NUMS=new Set(['fibBase','fibMin','wait','spins','chip','aggr','maxBet','bank']);
+const ZERO_OK=new Set(['fibMin','spins','aggr']);
+const INTS=['fibBase','fibMin','wait','spins'];
 function fillForm(){for(const[k,id]of Object.entries(F))$(id).value=state.cfg[k];for(const[k,id]of Object.entries(CHK))$(id).checked=!!state.cfg[k];}
 $('form').addEventListener('change',()=>{
   const c={...state.cfg};
   for(const[k,id]of Object.entries(F)){let v=$(id).value;if(NUMS.has(k)){v=parseFloat(String(v).replace(',','.'));if(!isFinite(v)||v<0||(v===0&&!ZERO_OK.has(k)))v=DEFAULTS[k];}c[k]=v;}
   for(const[k,id]of Object.entries(CHK))c[k]=$(id).checked;
   for(const k of INTS)c[k]=Math.round(c[k]);
-  c.minw=Math.min(Math.max(c.minw,1),21);c.maxw=Math.min(Math.max(c.maxw,c.minw),21);
-  c.fibMin=Math.min(Math.max(c.fibMin,0),3);c.ladderMax=Math.min(Math.max(c.ladderMax,1),5);c.trailGive=Math.min(Math.max(c.trailGive,5),100);
+  c.fibMin=Math.min(Math.max(c.fibMin,0),3);c.spins=Math.min(c.spins,50);c.aggr=Math.min(c.aggr,200);if(c.maxBet<c.chip)c.maxBet=c.chip;
   if(!String(c.cur).trim())c.cur=DEFAULTS.cur;
   state.cfg=c;fillForm();save();render();
 });
@@ -892,15 +776,15 @@ $('labBtn').addEventListener('click',()=>{
     const base=state.cfg,cur=base.cur;
     const runs=[
       ['Your settings',{...base}],
-      ['Your MM + random numbers',{...base,engine:'random'}],
-      ['Fib breakout, flat recovery, no MM',{...base,engine:'score',timing:'fib',prog:'recovery',ladder:false,riskPct:0,eqFilter:false}],
-      ['Best moment, Fib stakes + ladder',{...base,engine:'score',timing:'best',prog:'fib',ladder:true}],
+      ['Same stakes, random 4 numbers',{...base,engine:'random'}],
+      ['Same picks, flat bet (0%)',{...base,aggr:0,floor:false}],
+      ['Same picks, aggressive (50%)',{...base,aggr:50}],
     ];
     let curve=null;
     const res=runs.map(([name,cfg],k)=>{
-      const R=replay(spins,cfg,{noScores:true,noStops:true,fixedSizing:true,curve:k===0});
+      const R=replay(spins,cfg,{noScores:true,curve:k===0});
       if(k===0)curve=R.curve;
-      const L=R.log.filter(b=>b.real),w=L.filter(b=>b.result==='win').length;
+      const L=R.log,w=L.filter(b=>b.result==='win').length;
       const theo=L.length?L.reduce((a,b)=>a+1-Math.pow(Q_SET,b.window),0)/L.length:0, wr=L.length?w/L.length:0;
       return {name,n:L.length,wr,theo,edge:wr-theo,pf:R.grossL>0?R.grossW/R.grossL:0,staked:R.staked,roi:R.staked?R.pl/R.staked:0,dd:R.maxDD};
     });
@@ -910,27 +794,6 @@ $('labBtn').addEventListener('click',()=>{
     $('labNote').innerHTML=`<b>How to read it:</b> “Edge” is win rate minus the theoretical chance for the same window lengths; a setup that could predict the wheel would stay clearly above zero on every run. A profit factor below 1.000 means losses outweigh wins. The line shows your settings' P/L.`;
     drawCurve(curve);
     $('labBtn').disabled=false;$('labBtn').textContent='Run again';
-  },30);
-});
-$('sesBtn').addEventListener('click',()=>{
-  const len=+$('sesLen').value, cnt=+$('sesN').value;
-  $('sesBtn').disabled=true;$('sesBtn').textContent='Playing…';
-  setTimeout(()=>{
-    const cfg=state.cfg,cur=cfg.cur,all=randSpins(len*cnt),res=[];
-    for(let s=0;s<cnt;s++)res.push(replay(all.slice(s*len,(s+1)*len),cfg,{stopAt:true,noLog:true}));
-    const pls=res.map(r=>r.pl).sort((a,b)=>a-b), wins=pls.filter(x=>x>0).length, total=pls.reduce((a,x)=>a+x,0);
-    const cntBy=k=>res.filter(r=>r.stopped===k).length, staked=res.reduce((a,r)=>a+r.staked,0);
-    $('sesOut').innerHTML=[
-      ['Sessions in profit',`${pct(wins/cnt)} (${wins}/${cnt})`],
-      ['Average session',`<span class="${total>=0?'pos':'neg'}">${sfmt(total/cnt,cur)}</span>`],
-      ['Median session',sfmt(pls[Math.floor(cnt/2)],cur)],
-      ['Best / worst',`${sfmt(pls[cnt-1],cur)} / ${sfmt(pls[0],cur)}`],
-      ['Take-profit hits',cntBy('take-profit')],['Trailing-stop exits',cntBy('trailing stop')],['Stop-loss hits',cntBy('stop-loss')],
-      ['All sessions together',`<span class="${total>=0?'pos':'neg'}">${sfmt(total,cur)}</span>`],
-      ['ROI on stakes',pct(staked?total/staked:0,2)],
-    ].map(([k,v])=>`<div><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
-    $('labNote').innerHTML=`<b>Session test:</b> each session starts at ${fmt(cfg.bank,cur)} and ends at the stop-loss, take-profit, trailing stop or after ${len} spins. Stops change the shape of the results (many small wins, fewer bigger losses), not the total: added up, the sessions lose about 2.7% of everything staked.`;
-    $('sesBtn').disabled=false;$('sesBtn').textContent='Play again';
   },30);
 });
 function drawCurve(pts){
