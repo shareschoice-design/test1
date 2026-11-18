@@ -1,4 +1,4 @@
-<title>Cluster Roulette Tracker</title>
+<title>Four Number Roulette</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -138,13 +138,18 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
 .tag{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:1px 6px;border-radius:4px;background:var(--brass-soft);color:var(--brass)}
 .form fieldset{border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:grid;gap:10px;grid-column:1/-1;grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
 .form legend{font-family:var(--display);font-weight:700;color:var(--fg);padding:0 4px}
+.form label.check{display:flex;gap:8px;align-items:flex-start;color:var(--fg)}
+.form label.check input{margin-top:3px}
+.form label.check small{display:block;color:var(--muted);font-size:11.5px}
+tr.istop td{background:color-mix(in srgb,var(--warn) 8%,transparent)}
+.bigchips .chip{min-width:38px;height:38px;border-radius:19px;font-size:15px}
 </style>
 
 <div class="wrap">
   <div class="top">
     <div>
-      <div class="eyebrow">European roulette · 37 pockets · 4-number clusters</div>
-      <h1>Cluster Roulette Tracker</h1>
+      <div class="eyebrow">European roulette · 37 pockets · 4 straight-up numbers</div>
+      <h1>Four Number Roulette</h1>
     </div>
     <div class="kpis" id="kpis"></div>
   </div>
@@ -188,7 +193,7 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
           <span><i class="sw" style="background:var(--cold)"></i>hits less</span>
           <span><i class="sw" style="background:var(--line)"></i>as expected</span>
           <span><i class="sw" style="background:var(--hot)"></i>hits more</span>
-          <span><i class="sw" style="background:var(--brass)"></i>cluster in play</span>
+          <span><i class="sw" style="background:var(--brass)"></i>number in play / top 4</span>
         </div>
       </section>
     </div>
@@ -196,21 +201,21 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
     <div class="col">
       <section class="panel">
         <header>
-          <h2>Clusters</h2>
+          <h2>Numbers</h2>
           <div class="ctl">
             <select id="sortSel" aria-label="Sort">
-              <option value="p">Sort: longest gap</option>
-              <option value="zdesc">Sort: hottest</option>
+              <option value="E">Sort: score E (best first)</option>
+              <option value="gap">Sort: longest gap</option>
               <option value="zasc">Sort: coldest</option>
-              <option value="hits">Sort: most hits</option>
-              <option value="E">Sort: relativity energy E</option>
+              <option value="zdesc">Sort: hottest</option>
+              <option value="n">Sort: number</option>
             </select>
           </div>
         </header>
-        <div class="tablewrap" style="max-height:560px;overflow-y:auto">
+        <div class="tablewrap" style="max-height:600px;overflow-y:auto">
           <table>
-            <thead><tr><th>Cluster</th><th>Hits</th><th>Expect.</th><th title="Deviation from expectation in standard deviations">z-score</th><th>Gap</th><th>Max</th><th title="Probability of missing this many spins in a row">P(gap)</th><th title="Relativity energy E = γ·m·(1+g/4)">E</th><th>Status</th></tr></thead>
-            <tbody id="ctable"></tbody>
+            <thead><tr><th>No.</th><th>Hits</th><th>z</th><th>Gap</th><th title="Probability of missing this many spins in a row: (36/37)^gap">P(gap)</th><th title="1 · Gap speed (Lorentz factor)">γ</th><th title="2 · Coldness mass">m</th><th title="3 · Wheel gravity from nearby landings">g</th><th title="4 · Group pressure: colour, dozen, column, odd/even behind expectation">b</th><th>Score E</th><th>Status</th></tr></thead>
+            <tbody id="ntable"></tbody>
           </table>
         </div>
       </section>
@@ -219,23 +224,20 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
         <header><h2>Strategy &amp; bets</h2><span class="eyebrow">recalculates the whole session</span></header>
         <div class="form" id="form">
           <fieldset>
-            <legend>Signal engine</legend>
-            <label>How to pick the cluster and the moment
+            <legend>Number picker</legend>
+            <label>Engine
               <select id="f_engine">
-                <option value="classic">Classic: gap trigger + filters</option>
-                <option value="relativity">Relativity: E = γ·m·(1+g), best-moment stopping</option>
-                <option value="random">Random baseline (control group)</option>
+                <option value="score">Best 4 by score E (4 characteristics)</option>
+                <option value="random">Random 4 numbers (control group)</option>
               </select>
-              <span class="hint" id="h_engine"></span>
             </label>
+            <label class="check"><input type="checkbox" id="f_fGap"><span>1 · Gap speed γ<small>longer gap = higher score</small></span></label>
+            <label class="check"><input type="checkbox" id="f_fCold"><span>2 · Coldness m<small>hits less than expected</small></span></label>
+            <label class="check"><input type="checkbox" id="f_fGrav"><span>3 · Wheel gravity g<small>recent landings next to it on the wheel</small></span></label>
+            <label class="check"><input type="checkbox" id="f_fGroup"><span>4 · Group pressure b<small>its colour, dozen, column, odd/even are behind</small></span></label>
           </fieldset>
-          <label>Cluster type
-            <select id="f_type">
-              <option value="corner">Table corner (4 numbers, 1 chip)</option>
-              <option value="wheel">Wheel sector (4 neighbours, 4 chips)</option>
-            </select>
-          </label>
-          <label>Base bet (per chip)
+
+          <label>Base bet (per number)
             <input id="f_chip" type="number" step="0.05" min="0.05">
           </label>
           <label>Currency
@@ -244,40 +246,21 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
           <label>Starting bankroll
             <input id="f_bank" type="number" step="1" min="0">
           </label>
-          <label>Trigger: P(gap) ≤ %
-            <input id="f_trig" type="number" step="0.5" min="0.1" max="50">
-            <span class="hint" id="h_trig"></span>
-          </label>
-          <label>Full 20-spin window at P ≤ %
-            <input id="f_floor" type="number" step="0.05" min="0.01" max="20">
-            <span class="hint" id="h_floor"></span>
-          </label>
           <label>Window length min–max spins
-            <span style="display:flex;gap:6px"><input id="f_minw" type="number" min="1" max="20" style="width:50%" aria-label="Minimum window"><input id="f_maxw" type="number" min="1" max="50" style="width:50%" aria-label="Maximum window"></span>
-          </label>
-          <label>Progression
-            <select id="f_prog">
-              <option value="recovery">Recovery: every hit ends in profit (+1 base)</option>
-            </select>
+            <span style="display:flex;gap:6px"><input id="f_minw" type="number" min="1" max="20" style="width:50%" aria-label="Minimum window"><input id="f_maxw" type="number" min="1" max="20" style="width:50%" aria-label="Maximum window"></span>
+            <span class="hint">Set by the chosen numbers' γ: longer gaps, longer window.</span>
           </label>
           <label>Hot / cold filter
             <select id="f_filter">
-              <option value="any">All clusters</option>
+              <option value="any">All numbers</option>
               <option value="cold">Cold only (z ≤ −1)</option>
               <option value="nothot">Not hot (z &lt; 1)</option>
               <option value="hot">Hot only (z ≥ 1)</option>
             </select>
           </label>
-          <label>Clusters at once
-            <input id="f_maxact" type="number" min="1" max="10">
-            <span class="hint">1 = always a single cluster (4 numbers)</span>
-          </label>
-          <label>After a lost window
-            <select id="f_reentry">
-              <option value="deeper">Re-enter once a longer window is due</option>
-              <option value="hit">Wait until the cluster hits</option>
-              <option value="again">Re-enter right away if triggered</option>
-            </select>
+          <label>Bet at the latest after N idle spins
+            <input id="f_wait" type="number" min="1" max="50">
+            <span class="hint" id="h_wait"></span>
           </label>
 
           <fieldset>
@@ -285,10 +268,10 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
             <label>Start only after a nearby number lands
               <select id="f_neigh">
                 <option value="off">Off</option>
-                <option value="wheel">Wheel neighbour (±2 pockets)</option>
-                <option value="table">Table neighbour (touching on layout)</option>
+                <option value="wheel">Wheel neighbour of a pick (±2 pockets)</option>
+                <option value="table">Table neighbour of a pick (touching)</option>
               </select>
-              <span class="hint">The cluster must qualify, and the last spin must land next to it.</span>
+              <span class="hint">Ignored when the wait limit is reached.</span>
             </label>
           </fieldset>
 
@@ -300,18 +283,6 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
             </label>
             <label>Then pause for spins
               <input id="f_brakeS" type="number" min="1" max="100">
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Keep it moving · Max wait</legend>
-            <label>Bet at least every N spins
-              <input id="f_wait" type="number" min="0" max="100">
-              <span class="hint">0 = off. If nothing qualifies, play the longest-gap cluster.</span>
-            </label>
-            <label>Max-wait window (spins)
-              <input id="f_forcew" type="number" min="1" max="20">
-              <span class="hint">Shorter when the chosen cluster's gap is small.</span>
             </label>
           </fieldset>
         </div>
@@ -335,54 +306,44 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
     <header><h2>Betting window history</h2><span class="eyebrow" id="logSummary"></span></header>
     <div class="tablewrap" style="max-height:340px;overflow-y:auto">
       <table>
-        <thead><tr><th>Cluster</th><th>Start (spin)</th><th>Gap at start</th><th>Source</th><th>Window</th><th>Played</th><th>Staked</th><th>Result</th></tr></thead>
+        <thead><tr><th>Numbers</th><th>Start (spin)</th><th>Avg gap</th><th>Score E</th><th>Moment</th><th>Window</th><th>Played</th><th>Staked</th><th>Result</th></tr></thead>
         <tbody id="ltable"></tbody>
       </table>
     </div>
   </section>
 
   <section class="panel">
-    <header><h2>Strategy stress test</h2><span class="eyebrow">simulation on a random wheel with the same settings</span></header>
-    <div class="ctl">
-      <select id="simN" aria-label="Simulation length">
-        <option value="10000">10,000 spins</option>
-        <option value="50000" selected>50,000 spins</option>
-        <option value="200000">200,000 spins</option>
-      </select>
-      <button class="btn primary" id="simBtn">Run simulation</button>
-    </div>
-    <div id="simOut"></div>
-    <canvas id="simChart" hidden></canvas>
-  </section>
-
-  <section class="panel">
-    <header><h2>Strategy lab</h2><span class="eyebrow">same random spins · three engines · does it help?</span></header>
+    <header><h2>Strategy lab</h2><span class="eyebrow">same random spins · does the picker help?</span></header>
     <div class="ctl">
       <select id="labN" aria-label="Lab length">
         <option value="20000">20,000 spins</option>
         <option value="100000" selected>100,000 spins</option>
         <option value="300000">300,000 spins</option>
       </select>
-      <button class="btn primary" id="labBtn">Compare engines</button>
+      <button class="btn primary" id="labBtn">Compare pickers</button>
     </div>
     <div class="tablewrap" style="margin-top:10px">
       <table>
-        <thead><tr><th>Engine</th><th>Windows</th><th>Win rate</th><th>Theory</th><th>Edge</th><th>Staked</th><th>ROI</th><th>Max drawdown</th></tr></thead>
-        <tbody id="labTable"><tr><td colspan="8" class="empty" style="text-align:left">Run the comparison to see whether any engine beats chance.</td></tr></tbody>
+        <thead><tr><th>Picker</th><th>Windows</th><th>Win rate</th><th>Theory</th><th>Edge</th><th>Staked</th><th>ROI</th><th>Max drawdown</th></tr></thead>
+        <tbody id="labTable"><tr><td colspan="8" class="empty" style="text-align:left">Run the comparison to see whether any picker beats chance.</td></tr></tbody>
       </table>
     </div>
+    <canvas id="simChart" hidden></canvas>
     <p class="note" id="labNote"></p>
   </section>
 
   <section class="panel note">
     <details>
-      <summary>How the tracker calculates (and what the maths says)</summary>
-      <p><b>Cluster</b> = 4 numbers. The chance it hits on any spin is always <b>4/37 = 10.81%</b>. A corner pays 8:1; a 4-number wheel sector (4 straight-ups at 35:1) also nets 8× the total stake.</p>
-      <p><b>Gap</b> = spins since the cluster last hit. <b>P(gap)</b> = (33/37)<sup>gap</sup> is the chance of a gap that long by luck alone. Once it drops below the trigger, the cluster gets a betting window of 1 to 20 spins: the less likely the gap, the longer the window (log scale between trigger and the full-window level).</p>
-      <p><b>Neighbour signal</b> delays the start until the ball lands next to the cluster. <b>Loss-streak brake</b> pauses after a run of lost windows. <b>Max wait</b> makes sure you play at least every N spins: if nothing qualified, it plays the longest-gap cluster in a short window, marked “max wait”.</p>
-      <p><b>Relativity engine</b> treats the gap as speed: v = 1 − P(gap), Lorentz factor γ = 1/√(1−v²). Cold clusters get extra mass m, and recent landings near the cluster on the wheel add “gravity” g. Energy E = γ·m·(1+g/4). It waits for the best moment with the secretary rule (observe 37% of the wait limit, then take the first E that beats the best seen) and never waits longer than the max-wait setting. The Strategy lab compares it with the classic engine and a random control group on the same spins.</p>
-      <p><b>z-score</b> shows how much a cluster hits more (hot) or less (cold) than expected. Values within ±2 are normal noise on a short sample.</p>
-      <p><b>Important:</b> the wheel has no memory. A cluster that missed 40 spins still has exactly 10.81% on the next one. That is why the “chance left” on a bet card comes from 10.81% per spin, not from the gap. Every bet has an expected value of −2.70% of the stake, and no filter, cluster choice or progression changes that. The tracker gives you discipline, limits and an overview; the stress test shows the long-run result. Only play with money you can afford to lose.</p>
+      <summary>How the picker works (and what the maths says)</summary>
+      <p>You bet <b>4 straight-up numbers from anywhere</b>, one chip each. A hit pays 35:1 on that number, so the net win is 8× the total stake. The chance that one of 4 numbers lands is always <b>4/37 = 10.81%</b>.</p>
+      <p>Each number gets four characteristics:</p>
+      <p><b>1 · γ (gap speed).</b> v = 1 − P(gap), where P(gap) = (36/37)<sup>gap</sup>; γ = 1/√(1−v²). The longer the number has not landed, the faster γ grows.<br>
+      <b>2 · m (coldness).</b> m = 1 + 0.25·max(0, −z). Numbers hitting less than expected get heavier.<br>
+      <b>3 · g (wheel gravity).</b> Every landing adds “gravity” to its wheel neighbours, fading by 20% per spin.<br>
+      <b>4 · b (group pressure).</b> How far behind expectation the number's colour, dozen, column and odd/even are.</p>
+      <p><b>Score E = γ · m · (1+g) · (1+b)</b> (switched-off factors count as 1). The 4 numbers with the highest E are the picks.</p>
+      <p><b>Timing:</b> the secretary rule. For the first 37% of the wait limit it only watches and remembers the best total E of the top 4. After that it bets the first time the top 4 beat that best (and, with filter 1 on, a neighbour just landed). When the wait limit is reached it bets the current top 4 anyway. The window is 1–20 spins, longer when the picks' gaps are longer, and the recovery progression makes every hit end in profit.</p>
+      <p><b>Important:</b> the wheel has no memory. A number that has missed 150 spins still has exactly 1/37 on the next one. That is why “chance” on the bet card comes from 10.81% per spin, not from the scores. Every bet has an expected value of −2.70%. The Strategy lab compares the picker with random numbers on the same spins so you can check this yourself. Only play with money you can afford to lose.</p>
     </details>
   </section>
 </div>
@@ -392,399 +353,290 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
 const WHEEL=[0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26];
 const WPOS=new Array(37); WHEEL.forEach((n,i)=>WPOS[n]=i);
 const RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
-const P_HIT=4/37, Q=33/37, PAYOUT=8;
+const P1=1/37, Q1=36/37, P_SET=4/37, Q_SET=33/37, PAYOUT=8;
 const colorOf=n=>n===0?'green':RED.has(n)?'red':'black';
 const chipHTML=(n,cls='')=>`<span class="chip c-${colorOf(n)} ${cls}">${n}</span>`;
 const $=id=>document.getElementById(id);
 
-const DEFAULTS={type:'corner',chip:0.2,cur:'€',bank:100,trig:5,floor:0.3,minw:1,maxw:20,prog:'recovery',filter:'any',maxact:1,reentry:'deeper',
-  neigh:'wheel',brakeN:3,brakeS:10,wait:10,forcew:5,engine:'relativity',ver:4};
-const KEY='cluster-roulette-v1';
+const DEFAULTS={engine:'score',fGap:true,fCold:true,fGrav:true,fGroup:true,chip:0.2,cur:'€',bank:100,minw:1,maxw:20,filter:'any',wait:10,neigh:'wheel',brakeN:3,brakeS:10,randw:8};
+const KEY='four-number-roulette-v1', OLDKEY='cluster-roulette-v1';
 let state={spins:[],cfg:{...DEFAULTS},demo:false};
 
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+const cleanSpins=a=>Array.isArray(a)?a.filter(n=>Number.isInteger(n)&&n>=0&&n<=36):[];
 function load(){
-  try{const s=JSON.parse(localStorage.getItem(KEY)||'null');
-    if(s&&Array.isArray(s.spins)){
-      state={spins:s.spins.filter(n=>Number.isInteger(n)&&n>=0&&n<=36),cfg:{...DEFAULTS,...s.cfg},demo:!!s.demo};
-      const v=(s.cfg||{}).ver||1;
-      if(v<2){state.cfg.maxact=1;state.cfg.prog='recovery';}
-      state.cfg.prog='recovery'; if(v<4)state.cfg.engine='relativity'; state.cfg.ver=4;
-      return true}
+  try{
+    const s=JSON.parse(localStorage.getItem(KEY)||'null');
+    if(s&&Array.isArray(s.spins)){state={spins:cleanSpins(s.spins),cfg:{...DEFAULTS,...s.cfg},demo:!!s.demo};return true}
+    const o=JSON.parse(localStorage.getItem(OLDKEY)||'null'); // carry spins over from the cluster version
+    if(o&&Array.isArray(o.spins)){const c=o.cfg||{};state={spins:cleanSpins(o.spins),cfg:{...DEFAULTS,chip:c.chip||DEFAULTS.chip,cur:c.cur||DEFAULTS.cur,bank:c.bank??DEFAULTS.bank},demo:!!o.demo};return true}
   }catch(e){}
   return false;
 }
-function demoSpins(){ // deterministic sample
-  let x=20261118;const r=()=>{x=(x*1103515245+12345)%2147483648;return x/2147483648};
-  return Array.from({length:150},()=>Math.floor(r()*37));
-}
+function demoSpins(){let x=20261118;const r=()=>{x=(x*1103515245+12345)%2147483648;return x/2147483648};return Array.from({length:150},()=>Math.floor(r()*37));}
 
-/* ---------- clusters ---------- */
+/* ---------- number geometry ---------- */
 function tableNeighbours(n){
   if(n===0)return [1,2,3];
   const col=Math.ceil(n/3)-1,row=(n-1)%3,out=[];
-  for(let dc=-1;dc<=1;dc++)for(let dr=-1;dr<=1;dr++){
-    if(!dc&&!dr)continue; const c=col+dc,r=row+dr;
-    if(c<0||c>11||r<0||r>2)continue; out.push(c*3+r+1);
-  }
-  if(n<=3)out.push(0);
-  return out;
+  for(let dc=-1;dc<=1;dc++)for(let dr=-1;dr<=1;dr++){ if(!dc&&!dr)continue; const c=col+dc,r=row+dr; if(c<0||c>11||r<0||r>2)continue; out.push(c*3+r+1); }
+  if(n<=3)out.push(0); return out;
 }
-const clusterCache={};
-function buildClusters(type){
-  if(clusterCache[type])return clusterCache[type];
-  const out=[];
-  if(type==='corner'){
-    out.push({id:'c0',nums:[0,1,2,3],label:'0/1/2/3',chips:1});
-    for(let n=1;n<=32;n++){ if(n%3===0)continue; const nums=[n,n+1,n+3,n+4]; out.push({id:'c'+n,nums,label:nums.join('/'),chips:1}); }
-  }else{
-    for(let i=0;i<37;i++){ const nums=[0,1,2,3].map(k=>WHEEL[(i+k)%37]); out.push({id:'w'+i,nums,label:nums.join('·'),chips:4}); }
-  }
-  out.forEach(c=>{
-    c.set=new Set(c.nums);
-    const w=new Set(),t=new Set();
-    c.nums.forEach(n=>{
-      for(const d of [-2,-1,1,2])w.add(WHEEL[(WPOS[n]+d+37)%37]);
-      tableNeighbours(n).forEach(x=>t.add(x));
-    });
-    c.nums.forEach(n=>{w.delete(n);t.delete(n)});
-    c.nbWheel=w;c.nbTable=t;
-  });
-  return clusterCache[type]=out;
-}
-const gapP=g=>Math.pow(Q,g);
-const gapFor=p=>Math.ceil(Math.log(p)/Math.log(Q));
+const NB_W=Array.from({length:37},(_,n)=>new Set([-2,-1,1,2].map(d=>WHEEL[(WPOS[n]+d+37)%37])));
+const NB_T=Array.from({length:37},(_,n)=>new Set(tableNeighbours(n)));
+const DECAY=0.8;
+const KERN=Array.from({length:37},(_,n)=>Array.from({length:37},(_,k)=>{let d=Math.abs(WPOS[n]-WPOS[k]);d=Math.min(d,37-d);return d===0?0:Math.exp(-d/1.5);}));
+// group membership: [colour 0/1, dozen 0-2, column 0-2, parity 0/1]
+const GRP=Array.from({length:37},(_,n)=>n===0?null:[RED.has(n)?0:1,Math.floor((n-1)/12),(n-1)%3,n%2]);
 
-function windowFor(p,cfg){
-  const t=cfg.trig/100, f=Math.min(cfg.floor/100,t*0.999);
-  if(p>t)return 0;
-  const ratio=Math.max(0,Math.min(1,Math.log(p/t)/Math.log(f/t)));
-  const lo=Math.max(1,Math.min(cfg.minw,cfg.maxw)), hi=Math.max(lo,cfg.maxw);
-  return lo+Math.round((hi-lo)*ratio);
-}
-function forcedWindow(p,cfg){ // max-wait pick: up to forcew spins, shorter when the gap is still small
-  const t=cfg.trig/100, r=Math.max(0,Math.min(1,Math.log(p)/Math.log(t)));
-  return Math.max(1,Math.round(cfg.forcew*r));
-}
-const planCache=new Map();
-function planUnits(W){
-  if(planCache.has(W))return planCache.get(W);
-  const u=[];let loss=0;
-  for(let i=0;i<W;i++){ const x=Math.max(1,Math.ceil((loss+1)/PAYOUT)); u.push(x); loss+=x; }
-  planCache.set(W,u); return u;
-}
-function zScore(hits,N){ if(N<1)return 0; const e=N*P_HIT; return (hits-e)/Math.sqrt(N*P_HIT*(1-P_HIT)); }
-function passesFilter(c,N,cfg){
+const zOf=(h,N,p)=>N<1?0:(h-N*p)/Math.sqrt(N*p*(1-p));
+function passesFilter(z,N,cfg){
   if(cfg.filter==='any')return true;
   if(N<37)return cfg.filter==='nothot';
-  const z=zScore(c.hits,N);
   if(cfg.filter==='cold')return z<=-1;
   if(cfg.filter==='hot')return z>=1;
   if(cfg.filter==='nothot')return z<1;
   return true;
 }
-function neighbourOK(c,n,cfg){
-  if(cfg.neigh==='wheel')return c.nbWheel.has(n);
-  if(cfg.neigh==='table')return c.nbTable.has(n);
-  return true;
+const planCache=new Map();
+function planUnits(W){
+  if(planCache.has(W))return planCache.get(W);
+  const u=[];let loss=0; for(let i=0;i<W;i++){const x=Math.max(1,Math.ceil((loss+1)/PAYOUT));u.push(x);loss+=x;}
+  planCache.set(W,u);return u;
+}
+
+/* ---------- scoring: 4 characteristics per number ---------- */
+function scoreAll(S,N,cfg){
+  const gc=S.grp, out=new Array(37);
+  const gz=[ [0,1].map(k=>Math.max(0,-zOf(gc.col[k],N,18/37))), [0,1,2].map(k=>Math.max(0,-zOf(gc.doz[k],N,12/37))),
+             [0,1,2].map(k=>Math.max(0,-zOf(gc.clm[k],N,12/37))), [0,1].map(k=>Math.max(0,-zOf(gc.par[k],N,18/37))) ];
+  for(let n=0;n<37;n++){
+    const p=Math.pow(Q1,S.gap[n]);
+    const gamma=Math.min(50,1/Math.sqrt(Math.max(1e-6,2*p-p*p)));
+    const z=zOf(S.hits[n],N,P1);
+    const m=N>=37?1+0.25*Math.max(0,-z):1;
+    const g=S.field[n];
+    const G=GRP[n]; const b=G?0.1*(gz[0][G[0]]+gz[1][G[1]]+gz[2][G[2]]+gz[3][G[3]]):0;
+    const E=(cfg.fGap?gamma:1)*(cfg.fCold?m:1)*(cfg.fGrav?1+g:1)*(cfg.fGroup?1+b:1);
+    out[n]={n,p,gamma,z,m,g,b,E,ok:passesFilter(z,N,cfg)};
+  }
+  return out;
+}
+function pickTop4(sc){
+  const ok=sc.filter(x=>x.ok).sort((a,b)=>b.E-a.E||a.n-b.n);
+  if(ok.length<4){const rest=sc.filter(x=>!x.ok).sort((a,b)=>b.E-a.E);ok.push(...rest.slice(0,4-ok.length));}
+  return ok.slice(0,4);
+}
+function windowFor(top,cfg){
+  const gAvg=top.reduce((a,x)=>a+x.gamma,0)/top.length;
+  const lo=Math.max(1,Math.min(cfg.minw,cfg.maxw)),hi=Math.max(lo,cfg.maxw);
+  return Math.max(lo,Math.min(hi,Math.round(1+(hi-1)*(1-1/gAvg))));
 }
 
 /* ---------- engine: replays the whole session deterministically ---------- */
 function replay(spins,cfg,opts={}){
-  const base=buildClusters(cfg.type);
-  const st=base.map(c=>({id:c.id,nums:c.nums,label:c.label,chips:c.chips,set:c.set,nbWheel:c.nbWheel,nbTable:c.nbTable,hits:0,gap:0,maxGap:0,blocked:false,lastW:0}));
-  const byId=Object.fromEntries(st.map(c=>[c.id,c]));
-  const numHits=new Array(37).fill(0);
-  const t=cfg.trig/100, minGap=gapFor(t);
-  let active=[],log=[],pl=0,staked=0,peak=0,maxDD=0,curve=opts.curve?[]:null,wins=0,losses=0;
-  let idle=0,lossStreak=0,brakeUntil=-1,brakes=0,forced=0,waitingSignal=0,bestSeen=0;
-  const field=new Array(37).fill(0), waitR=Math.max(3,cfg.wait||10), obs=Math.max(1,Math.round(waitR*0.37));
+  const S={hits:new Array(37).fill(0),gap:new Array(37).fill(0),maxGap:new Array(37).fill(0),field:new Array(37).fill(0),
+    grp:{col:[0,0],doz:[0,0,0],clm:[0,0,0],par:[0,0]}};
+  let active=null,log=[],pl=0,staked=0,peak=0,maxDD=0,wins=0,losses=0,curve=opts.curve?[]:null;
+  let idle=0,lossStreak=0,brakeUntil=-1,brakes=0,limitPicks=0,bestSeen=0,signalWait=false;
+  const waitR=Math.max(1,Math.round(cfg.wait||10)), obs=Math.max(1,Math.round(waitR*0.37));
+  let seed=987654321; const rnd=()=>{seed=(seed*1103515245+12345)%2147483648;return seed/2147483648;};
+  const NB=cfg.neigh==='table'?NB_T:NB_W;
   for(let i=0;i<spins.length;i++){
     const n=spins[i];
-    // 1) settle open bets on this spin
-    if(active.length){
-      const still=[];
-      for(const b of active){
-        const stake=b.units[b.step]*b.unitVal; staked+=stake; b.staked+=stake; b.step++;
-        if(b.set.has(n)){ const w=PAYOUT*stake; pl+=w; b.pl+=w; b.result='win'; b.end=i; wins++; lossStreak=0; if(!opts.noLog)log.push(b); }
-        else{ pl-=stake; b.pl-=stake;
-          if(b.step>=b.window){ b.result='loss'; b.end=i; losses++; lossStreak++;
-            if(cfg.reentry==='hit')byId[b.cid].blocked=true;
-            if(cfg.reentry==='deeper')byId[b.cid].lastW=b.window;
-            if(cfg.brakeN>0&&lossStreak>=cfg.brakeN){brakeUntil=i+cfg.brakeS;lossStreak=0;brakes++;}
-            if(!opts.noLog)log.push(b); }
-          else still.push(b);
-        }
+    // 1) settle
+    if(active){
+      const b=active, stake=b.units[b.step]*b.unitVal; staked+=stake; b.staked+=stake; b.step++;
+      if(b.set.has(n)){const w=PAYOUT*stake;pl+=w;b.pl+=w;b.result='win';b.hitNum=n;wins++;lossStreak=0;if(!opts.noLog)log.push(b);active=null;}
+      else{pl-=stake;b.pl-=stake;
+        if(b.step>=b.window){b.result='loss';losses++;lossStreak++;
+          if(cfg.brakeN>0&&lossStreak>=cfg.brakeN){brakeUntil=i+cfg.brakeS;lossStreak=0;brakes++;}
+          if(!opts.noLog)log.push(b);active=null;}
       }
-      active=still;
       if(pl>peak)peak=pl; if(peak-pl>maxDD)maxDD=peak-pl;
     }
     // 2) stats
-    numHits[n]++;
-    const kr=KERN[n]; for(let k=0;k<37;k++)field[k]=field[k]*DECAY+kr[k];
-    for(const c of st){ if(c.set.has(n)){c.hits++;c.gap=0;c.blocked=false;c.lastW=0} else {c.gap++; if(c.gap>c.maxGap)c.maxGap=c.gap} }
-    // 3) open new bets for the next spin
-    waitingSignal=0;
-    if(i<brakeUntil){ idle=0; bestSeen=0; }
-    else if(cfg.engine==='relativity'){
-      if(!active.length){
-        idle++;
-        const N=i+1; let top=null;
-        for(const c of st){ if(c.blocked||!passesFilter(c,N,cfg))continue; const e=energy(c,N,field,cfg); if(!top||e.E>top.E)top={c,...e}; }
-        if(top){
-          let go=false;
-          if(idle<=obs) bestSeen=Math.max(bestSeen,top.E);
-          else if(top.E>=bestSeen||idle>=waitR) go=true;
-          if(go){ const b=newBet(top.c,i,gapP(top.c.gap),top.W,'relativity',cfg); b.E=top.E;b.gamma=top.gamma;b.m=top.m;b.g=top.g;
-            active.push(b); if(idle>=waitR&&top.E<bestSeen)forced++; idle=0; bestSeen=0; }
-        }
+    S.hits[n]++;
+    for(let k=0;k<37;k++){ if(k===n)S.gap[k]=0; else {S.gap[k]++; if(S.gap[k]>S.maxGap[k])S.maxGap[k]=S.gap[k];} }
+    const kr=KERN[n]; for(let k=0;k<37;k++)S.field[k]=S.field[k]*DECAY+kr[k];
+    const G=GRP[n]; if(G){S.grp.col[G[0]]++;S.grp.doz[G[1]]++;S.grp.clm[G[2]]++;S.grp.par[G[3]]++;}
+    // 3) decide next bet
+    signalWait=false;
+    if(i<brakeUntil){idle=0;bestSeen=0;}
+    else if(!active){
+      idle++;
+      const N=i+1;
+      if(cfg.engine==='random'){
+        if(idle>=waitR){const set=new Set();while(set.size<4)set.add(Math.floor(rnd()*37));
+          active=newBet([...set],i,null,cfg.randw,'random',cfg,S);idle=0;}
+      }else{
+        const sc=scoreAll(S,N,cfg), top=pickTop4(sc), E=top.reduce((a,x)=>a+x.E,0);
+        let src=null;
+        if(idle>=waitR)src='limit';
+        else if(idle<=obs)bestSeen=Math.max(bestSeen,E);
+        else if(E>=bestSeen){ if(cfg.neigh==='off'||top.some(x=>NB[x.n].has(n)))src='best'; else signalWait=true; }
+        if(src){active=newBet(top.map(x=>x.n),i,top,windowFor(top,cfg),src,cfg,S);active.E=E;if(src==='limit')limitPicks++;idle=0;bestSeen=0;}
       }
-    }
-    else if(cfg.engine==='random'){
-      if(!active.length){ idle++;
-        if(idle>=Math.max(1,cfg.wait||10)){ const c=st[(n*13+i*7)%st.length]; active.push(newBet(c,i,gapP(c.gap),cfg.forcew,'random',cfg)); idle=0; } }
-    }
-    else if(active.length<cfg.maxact){
-      const N=i+1, cands=[];
-      for(const c of st){
-        if(c.gap<minGap||c.blocked)continue;
-        if(active.some(b=>b.cid===c.id))continue;
-        if(!passesFilter(c,N,cfg))continue;
-        const W=windowFor(gapP(c.gap),cfg); if(!W||W<=c.lastW)continue;
-        if(!neighbourOK(c,n,cfg)){waitingSignal++;continue;}
-        cands.push(c);
-      }
-      cands.sort((a,b)=>b.gap-a.gap);
-      for(const c of cands){
-        if(active.length>=cfg.maxact)break;
-        const p=gapP(c.gap);
-        active.push(newBet(c,i,p,windowFor(p,cfg),'trigger',cfg));
-      }
-      // max-wait: nothing in play for too long -> play the longest-gap cluster
-      if(!active.length){
-        idle++;
-        if(cfg.wait>0&&idle>=cfg.wait){
-          let best=null;
-          for(const c of st){ if(c.blocked||!passesFilter(c,N,cfg))continue; if(!best||c.gap>best.gap)best=c; }
-          if(best){ const p=gapP(best.gap); active.push(newBet(best,i,p,forcedWindow(p,cfg),'wait',cfg)); forced++; }
-        }
-      }
-      if(active.length)idle=0;
     }
     if(curve&&(i%Math.max(1,Math.floor(spins.length/600))===0))curve.push(pl);
   }
   if(curve)curve.push(pl);
-  return {st,numHits,active,log,pl,staked,maxDD,wins,losses,curve,N:spins.length,idle,lossStreak,brakeLeft:Math.max(0,brakeUntil-(spins.length-1)),brakes,forced,waitingSignal,bestSeen,field};
+  const N=spins.length;
+  return {S,N,active,log,pl,staked,maxDD,wins,losses,curve,idle,lossStreak,brakes,limitPicks,bestSeen,signalWait,waitR,obs,
+    brakeLeft:Math.max(0,brakeUntil-(N-1)),scores:opts.noScores?null:scoreAll(S,N,cfg)};
 }
-/* Relativity engine (for fun, tested in the Strategy lab):
-   v = 1 − P(gap)            "velocity" of a cluster toward c as its gap grows
-   γ = 1/√(1 − v²)           Lorentz factor, explodes as the gap gets improbable
-   m = 1 + 0.25·max(0,−z)    cold clusters are "heavier"
-   g = Σ field over 4 numbers recent landings bend "spacetime" around wheel neighbours (decaying)
-   E = γ · m · (1 + g/4)
-   Timing: secretary rule. Observe the first 37% of the wait limit, remember the best E,
-   then bet the first time the leader beats it; at the limit bet the leader anyway. */
-const DECAY=0.8;
-const KERN=Array.from({length:37},(_,n)=>Array.from({length:37},(_,k)=>{
-  let d=Math.abs(WPOS[n]-WPOS[k]); d=Math.min(d,37-d); return d===0?0:Math.exp(-d/1.5);}));
-function energy(c,N,field,cfg){
-  const p=gapP(c.gap), oneMinusV2=Math.max(1e-6,2*p-p*p);
-  const gamma=Math.min(50,1/Math.sqrt(oneMinusV2));
-  const m=N>=37?1+0.25*Math.max(0,-zScore(c.hits,N)):1;
-  let g=0; for(const x of c.nums)g+=field[x];
-  const E=gamma*m*(1+g/4);
-  const lo=Math.max(1,Math.min(cfg.minw,cfg.maxw)),hi=Math.max(lo,cfg.maxw);
-  const W=Math.max(lo,Math.min(hi,Math.round(1+(hi-1)*(1-1/gamma))));
-  return {E,gamma,m,g,W};
-}
-function newBet(c,i,p,W,src,cfg){
-  return {cid:c.id,label:c.label,nums:c.nums,set:c.set,start:i+1,gapAtStart:c.gap,pAtStart:p,window:W,src,
-    units:planUnits(W),unitVal:c.chips*cfg.chip,step:0,staked:0,pl:0,result:null};
+function newBet(nums,i,top,W,src,cfg,S){
+  nums=nums.slice().sort((a,b)=>a-b);
+  const avgGap=nums.reduce((a,x)=>a+S.gap[x],0)/4;
+  return {nums,set:new Set(nums),start:i+1,avgGap,src,window:W,units:planUnits(W),unitVal:4*cfg.chip,step:0,staked:0,pl:0,result:null,E:0,
+    detail:top?top.map(x=>({n:x.n,gamma:x.gamma,m:x.m,g:x.g,b:x.b,E:x.E})):null};
 }
 
 /* ---------- rendering ---------- */
 const fmt=(v,cur)=>(v<0?'−':'')+cur+Math.abs(v).toFixed(2);
 const sfmt=(v,cur)=>(v>0?'+':'')+fmt(v,cur);
 const pct=(v,d=1)=>(v*100).toFixed(d)+'%';
-const SRC={trigger:'trigger',wait:'max wait',relativity:'relativity',random:'random'};
-let sortMode='p';
+const SRC={best:'best moment',limit:'wait limit',random:'random'};
+let sortMode='E';
 
 function render(){
-  const cfg=state.cfg, R=replay(state.spins,cfg), cur=cfg.cur;
+  const cfg=state.cfg, R=replay(state.spins,cfg), cur=cfg.cur, N=R.N;
   $('demoBanner').hidden=!state.demo;
   $('kpis').innerHTML=[
-    ['Spins',R.N],
-    ['Bankroll',fmt(cfg.bank+R.pl,cur)],
+    ['Spins',N],['Bankroll',fmt(cfg.bank+R.pl,cur)],
     ['Session P/L',`<span class="${R.pl>=0?'pos':'neg'}">${sfmt(R.pl,cur)}</span>`],
-    ['Staked',fmt(R.staked,cur)],
-    ['Windows W/L',`${R.wins}/${R.losses}`],
+    ['Staked',fmt(R.staked,cur)],['Windows W/L',`${R.wins}/${R.losses}`],
   ].map(([k,v])=>`<div class="kpi"><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
 
-  // status chips
+  const top=pickTop4(R.scores), topSet=new Set(top.map(x=>x.n)), topE=top.reduce((a,x)=>a+x.E,0);
+  // status
   const st=[];
-  const waitR=Math.max(3,cfg.wait||10), obs=Math.max(1,Math.round(waitR*0.37));
-  if(cfg.engine==='relativity'&&!R.active.length&&R.brakeLeft<=0){
-    st.push(R.idle<obs?`<span class="on">Observing <b>${R.idle}/${obs}</b> · best E so far <b>${R.bestSeen.toFixed(2)}</b></span>`
-      :`<span class="on">Hunting: bet when E ≥ <b>${R.bestSeen.toFixed(2)}</b> · forced at spin <b>${waitR}</b> (now ${R.idle})</span>`);
+  if(R.brakeLeft>0)st.push(`<span class="on">Brake on: <b>${R.brakeLeft}</b> spins left</span>`);
+  else if(!R.active){
+    if(cfg.engine==='random')st.push(`<span>Idle <b>${R.idle}/${R.waitR}</b> · random 4 at ${R.waitR}</span>`);
+    else if(R.idle<R.obs)st.push(`<span class="on">Observing <b>${R.idle}/${R.obs}</b> · best E so far <b>${R.bestSeen.toFixed(2)}</b></span>`);
+    else st.push(`<span class="on">Hunting: bet when top-4 E ≥ <b>${R.bestSeen.toFixed(2)}</b> (now ${topE.toFixed(2)}) · forced at spin <b>${R.waitR}</b> (now ${R.idle})</span>`);
+    if(R.signalWait)st.push(`<span class="on">Score is good, waiting for a <b>neighbour signal</b></span>`);
   }
-  if(cfg.engine!=='classic'){}
-  else if(R.brakeLeft>0)st.push(`<span class="on">Brake on: <b>${R.brakeLeft}</b> spins left</span>`);
-  else if(!R.active.length&&cfg.wait>0)st.push(`<span>Idle <b>${R.idle}/${cfg.wait}</b> spins · max-wait pick at ${cfg.wait}</span>`);
-  if(cfg.engine!=='classic'&&R.brakeLeft>0)st.push(`<span class="on">Brake on: <b>${R.brakeLeft}</b> spins left</span>`);
-  if(cfg.engine==='classic'&&cfg.neigh!=='off'&&R.waitingSignal)st.push(`<span class="on"><b>${R.waitingSignal}</b> cluster${R.waitingSignal>1?'s':''} qualified, waiting for neighbour signal</span>`);
   if(cfg.brakeN>0)st.push(`<span>Lost windows in a row <b>${R.lossStreak}/${cfg.brakeN}</b></span>`);
-  st.push(`<span>Brakes used <b>${R.brakes}</b> · max-wait picks <b>${R.forced}</b></span>`);
+  st.push(`<span>Brakes <b>${R.brakes}</b> · wait-limit bets <b>${R.limitPicks}</b></span>`);
   $('status').innerHTML=st.join('');
 
-  // bets now
-  const betNums=new Set();
-  let totalNow=0;
-  $('bets').innerHTML=R.active.length?R.active.map(b=>{
-    b.nums.forEach(n=>betNums.add(n));
-    const stake=b.units[b.step]*b.unitVal; totalNow+=stake;
-    const left=b.window-b.step;
-    const chance=1-Math.pow(Q,left);
-    const remainRisk=b.units.slice(b.step).reduce((a,x)=>a+x,0)*b.unitVal;
-    const winNet=PAYOUT*stake+b.pl;
-    const how=cfg.type==='corner'?'1 chip on the corner':`4 chips of ${fmt(stake/4,cur)}`;
-    return `<article class="bet">
+  // bet card
+  const betNums=R.active?R.active.set:new Set();
+  if(R.active){
+    const b=R.active, stake=b.units[b.step]*b.unitVal, per=stake/4, left=b.window-b.step;
+    const remainRisk=b.units.slice(b.step).reduce((a,x)=>a+x,0)*b.unitVal, winNet=PAYOUT*stake+b.pl;
+    $('bets').innerHTML=`<article class="bet">
       <div class="row"><span class="eyebrow">Spin ${b.step+1} of ${b.window}</span><span class="tag">${SRC[b.src]}</span></div>
-      <div class="chips">${b.nums.map(n=>chipHTML(n)).join('')}</div>
-      <div class="stake">${fmt(stake,cur)}</div>
-      <div class="row"><span>${how}</span><span>if it hits <b class="${winNet>=0?'pos':'neg'}">${sfmt(winNet,cur)}</b></span></div>
+      <div class="chips bigchips">${b.nums.map(n=>chipHTML(n)).join('')}</div>
+      <div class="stake">${fmt(per,cur)} <span style="font-size:14px;color:var(--muted)">on each number · total ${fmt(stake,cur)}</span></div>
+      <div class="row"><span>if one hits</span><b class="${winNet>=0?'pos':'neg'}">${sfmt(winNet,cur)}</b></div>
       <div class="steps">${Array.from({length:b.window},(_,k)=>`<i class="${k<b.step?'done':k===b.step?'now':''}"></i>`).join('')}</div>
-      <div class="row"><span>so far ${sfmt(b.pl,cur)}</span><span>chance in ${left} spin${left>1?'s':''}: <b>${pct(chance)}</b></span></div>
-      <div class="row"><span>gap at start ${b.gapAtStart} · P ${pct(b.pAtStart,2)}</span><span>max risk left <b>${fmt(remainRisk,cur)}</b></span></div>
-      ${b.E?`<div class="row"><span>γ <b>${b.gamma.toFixed(2)}</b> · m <b>${b.m.toFixed(2)}</b> · g <b>${b.g.toFixed(2)}</b></span><span>E <b>${b.E.toFixed(2)}</b></span></div>`:''}
-    </article>`;}).join('')
-    :`<div class="empty">${R.brakeLeft>0?`Paused by the loss-streak brake for ${R.brakeLeft} more spin${R.brakeLeft>1?'s':''}.`:
-      cfg.engine==='relativity'?`No bet yet. The relativity engine watches E for every cluster and bets the moment the leader beats the best E seen while observing, at the latest after ${Math.max(3,cfg.wait||10)} spins.`:
-      cfg.engine==='random'?`Random baseline: a random cluster is bet every ${Math.max(1,cfg.wait||10)} idle spins.`:
-      `No bet. A cluster qualifies at P(gap) ≤ ${cfg.trig}% (gap ≥ ${gapFor(cfg.trig/100)} spins)${cfg.neigh!=='off'?' plus a neighbour signal':''}.${cfg.wait>0?` If nothing qualifies, the longest-gap cluster is played after ${cfg.wait-R.idle} more spin${cfg.wait-R.idle===1?'':'s'}.`:''}`}</div>`;
-  $('betsSummary').textContent=R.active.length?`${R.active.length} bet${R.active.length>1?'s':''} · total ${fmt(totalNow,cur)}`:'no bet';
+      <div class="row"><span>so far ${sfmt(b.pl,cur)}</span><span>chance in ${left} spin${left>1?'s':''}: <b>${pct(1-Math.pow(Q_SET,left))}</b></span></div>
+      <div class="row"><span>avg gap at start ${b.avgGap.toFixed(0)}${b.E?` · E ${b.E.toFixed(2)}`:''}</span><span>max risk left <b>${fmt(remainRisk,cur)}</b></span></div>
+    </article>`;
+    $('betsSummary').textContent=`4 numbers · total ${fmt(stake,cur)}`;
+  }else{
+    $('bets').innerHTML=`<div class="empty">${R.brakeLeft>0?`Paused by the loss-streak brake for ${R.brakeLeft} more spin${R.brakeLeft>1?'s':''}.`:
+      cfg.engine==='random'?`Random control group: 4 random numbers after ${R.waitR-R.idle} more spin${R.waitR-R.idle===1?'':'s'}.`:
+      `No bet yet. Current top 4: ${top.map(x=>chipHTML(x.n)).join(' ')} (E ${topE.toFixed(2)}). The bet comes when they beat the best E seen, at the latest in ${R.waitR-R.idle} spin${R.waitR-R.idle===1?'':'s'}.`}</div>`;
+    $('betsSummary').textContent='no bet';
+  }
 
   // pad
-  const order=[];
-  for(let row=0;row<3;row++)for(let col=0;col<12;col++)order.push(col*3+(3-row));
-  $('pad').innerHTML=`<button class="z ${betNums.has(0)?'betting':''}" data-n="0">0<span class="cnt">${R.numHits[0]||''}</span></button>`+
-    order.map(n=>`<button class="${RED.has(n)?'r':'k'} ${betNums.has(n)?'betting':''}" data-n="${n}">${n}<span class="cnt">${R.numHits[n]||''}</span></button>`).join('');
+  const hl=R.active?betNums:(cfg.engine==='score'?topSet:new Set());
+  const order=[];for(let row=0;row<3;row++)for(let col=0;col<12;col++)order.push(col*3+(3-row));
+  $('pad').innerHTML=`<button class="z ${hl.has(0)?'betting':''}" data-n="0">0<span class="cnt">${R.S.hits[0]||''}</span></button>`+
+    order.map(n=>`<button class="${RED.has(n)?'r':'k'} ${hl.has(n)?'betting':''}" data-n="${n}">${n}<span class="cnt">${R.S.hits[n]||''}</span></button>`).join('');
   const last=state.spins.slice(-40).reverse();
   $('strip').innerHTML=last.length?last.map((n,i)=>chipHTML(n,i===0?'last':'')).join(''):'<span class="empty">No spins yet.</span>';
 
-  // cluster table
-  const N=R.N, exp=N*P_HIT, trigP=cfg.trig/100, minGap=gapFor(trigP);
-  const activeIds=new Set(R.active.map(b=>b.cid));
-  const rows=R.st.map(c=>({...c,z:zScore(c.hits,N),p:gapP(c.gap),E:energy(c,N,R.field,cfg).E}));
-  const topId=rows.reduce((a,c)=>!a||c.E>a.E?c:a,null)?.id;
-  const sorters={p:(a,b)=>a.p-b.p,zdesc:(a,b)=>b.z-a.z,zasc:(a,b)=>a.z-b.z,hits:(a,b)=>b.hits-a.hits,E:(a,b)=>b.E-a.E};
+  // numbers table
+  const rows=R.scores.map(x=>({...x,hits:R.S.hits[x.n],gap:R.S.gap[x.n]}));
+  const sorters={E:(a,b)=>b.E-a.E,gap:(a,b)=>b.gap-a.gap,zasc:(a,b)=>a.z-b.z,zdesc:(a,b)=>b.z-a.z,n:(a,b)=>a.n-b.n};
   rows.sort(sorters[sortMode]);
-  $('ctable').innerHTML=rows.map(c=>{
+  $('ntable').innerHTML=rows.map(x=>{
     let pill='<span class="pill p-norm">—</span>';
-    if(activeIds.has(c.id))pill='<span class="pill p-bet">IN PLAY</span>';
-    else if(c.blocked||(c.lastW&&windowFor(c.p,cfg)<=c.lastW))pill='<span class="pill p-norm">paused</span>';
-    else if(c.p<=trigP)pill='<span class="pill p-ripe">READY</span>';
-    else if(c.p<=trigP*2.5)pill='<span class="pill p-ripe">CLOSE</span>';
-    else if(N>=37&&c.z>=1.5)pill='<span class="pill p-hot">HOT</span>';
-    else if(N>=37&&c.z<=-1.5)pill='<span class="pill p-cold">COLD</span>';
-    const fill=Math.min(100,c.gap/minGap*100);
-    const zc=c.z>=1.5?'style="color:var(--hot)"':c.z<=-1.5?'style="color:var(--cold)"':'';
-    return `<tr class="${activeIds.has(c.id)?'isbet':''}">
-      <td><div class="chips">${c.nums.map(n=>chipHTML(n)).join('')}</div></td>
-      <td class="num">${c.hits}</td><td class="num">${exp.toFixed(1)}</td>
-      <td class="num" ${zc}>${(c.z>=0?'+':'')+c.z.toFixed(2)}</td>
-      <td class="num">${c.gap} <span class="gapbar"><i style="width:${fill}%"></i></span></td>
-      <td class="num">${c.maxGap}</td>
-      <td class="num">${pct(c.p,c.p<0.1?2:1)}</td>
-      <td class="num" ${c.id===topId?'style="color:var(--brass);font-weight:600"':''}>${c.E.toFixed(2)}</td>
-      <td>${pill}</td></tr>`;}).join('');
+    if(betNums.has(x.n))pill='<span class="pill p-bet">IN PLAY</span>';
+    else if(!R.active&&cfg.engine==='score'&&topSet.has(x.n))pill='<span class="pill p-ripe">TOP 4</span>';
+    else if(!x.ok)pill='<span class="pill p-norm">filtered</span>';
+    else if(N>=37&&x.z>=1.5)pill='<span class="pill p-hot">HOT</span>';
+    else if(N>=37&&x.z<=-1.5)pill='<span class="pill p-cold">COLD</span>';
+    const zc=x.z>=1.5?'style="color:var(--hot)"':x.z<=-1.5?'style="color:var(--cold)"':'';
+    return `<tr class="${betNums.has(x.n)?'isbet':(!R.active&&topSet.has(x.n)?'istop':'')}">
+      <td>${chipHTML(x.n)}</td><td class="num">${x.hits}</td><td class="num" ${zc}>${(x.z>=0?'+':'')+x.z.toFixed(2)}</td>
+      <td class="num">${x.gap}</td><td class="num">${pct(x.p,x.p<0.1?2:1)}</td>
+      <td class="num">${x.gamma.toFixed(2)}</td><td class="num">${x.m.toFixed(2)}</td><td class="num">${x.g.toFixed(2)}</td><td class="num">${x.b.toFixed(2)}</td>
+      <td class="num" style="font-weight:600">${x.E.toFixed(2)}</td><td>${pill}</td></tr>`;}).join('');
 
-  drawWheel(R.numHits,N,betNums);
+  drawWheel(R.S.hits,N,hl);
 
   // log
-  const L=R.log.slice().reverse();
-  const totPL=R.log.reduce((a,b)=>a+b.pl,0);
+  const L=R.log.slice().reverse(), totPL=R.log.reduce((a,b)=>a+b.pl,0);
   $('logSummary').textContent=R.log.length?`${R.log.length} closed windows · ${sfmt(totPL,cur)}`:'';
   $('ltable').innerHTML=L.length?L.slice(0,200).map(b=>`<tr>
-    <td><div class="chips">${b.nums.map(n=>chipHTML(n)).join('')}</div></td>
-    <td class="num">#${b.start+1}</td><td class="num">${b.gapAtStart} (${pct(b.pAtStart,2)})</td>
+    <td><div class="chips">${b.nums.map(n=>chipHTML(n,b.hitNum===n?'last':'')).join('')}</div></td>
+    <td class="num">#${b.start+1}</td><td class="num">${b.avgGap.toFixed(0)}</td><td class="num">${b.E?b.E.toFixed(2):'–'}</td>
     <td><span class="tag">${SRC[b.src]}</span></td>
     <td class="num">${b.window}</td><td class="num">${b.step}</td><td class="num">${fmt(b.staked,cur)}</td>
     <td class="num ${b.pl>=0?'pos':'neg'}">${b.result==='win'?'hit ':'miss '}${sfmt(b.pl,cur)}</td></tr>`).join('')
-    :`<tr><td colspan="8" class="empty" style="text-align:left">No closed betting window yet.</td></tr>`;
+    :`<tr><td colspan="9" class="empty" style="text-align:left">No closed betting window yet.</td></tr>`;
 
   renderSuccess(R);
-  renderPlan();
+  renderPlan(R);
 }
 
 function renderSuccess(R){
   const cur=state.cfg.cur, L=R.log, n=L.length;
   const W=L.filter(b=>b.result==='win'), Lo=L.filter(b=>b.result==='loss');
-  const theo=n?L.reduce((a,b)=>a+1-Math.pow(Q,b.window),0)/n:0;
+  const theo=n?L.reduce((a,b)=>a+1-Math.pow(Q_SET,b.window),0)/n:0;
   const avgHit=W.length?W.reduce((a,b)=>a+b.step,0)/W.length:0;
-  const winPL=W.reduce((a,b)=>a+b.pl,0), lossPL=Lo.reduce((a,b)=>a+b.pl,0);
-  let streak=0,maxStreak=0; for(const b of L){ if(b.result==='loss'){streak++;maxStreak=Math.max(maxStreak,streak)} else streak=0; }
-  const byTrig=L.filter(b=>b.src==='trigger'), byWait=L.filter(b=>b.src==='wait');
+  let streak=0,maxStreak=0; for(const b of L){if(b.result==='loss'){streak++;maxStreak=Math.max(maxStreak,streak)}else streak=0;}
   const rate=a=>a.length?pct(a.filter(b=>b.result==='win').length/a.length)+` of ${a.length}`:'–';
   $('succ').innerHTML=[
-    ['Won',`<span class="pos">${W.length}</span>`],
-    ['Lost',`<span class="neg">${Lo.length}</span>`],
-    ['Win rate',n?pct(W.length/n):'–'],
-    ['Theory for these windows',n?pct(theo):'–'],
-    ['Trigger bets',rate(byTrig)],
-    ['Max-wait bets',rate(byWait)],
-    ['Relativity bets',rate(L.filter(b=>b.src==='relativity'))],
+    ['Won',`<span class="pos">${W.length}</span>`],['Lost',`<span class="neg">${Lo.length}</span>`],
+    ['Win rate',n?pct(W.length/n):'–'],['Theory for these windows',n?pct(theo):'–'],
+    ['Best-moment bets',rate(L.filter(b=>b.src==='best'))],['Wait-limit bets',rate(L.filter(b=>b.src==='limit'))],
     ['Avg. hit on spin',W.length?avgHit.toFixed(1):'–'],
-    ['Profit from wins',`<span class="pos">${sfmt(winPL,cur)}</span>`],
-    ['Cost of losses',`<span class="neg">${sfmt(lossPL,cur)}</span>`],
-    ['Longest losing run',maxStreak],
-    ['Current losing run',streak],
+    ['Profit from wins',`<span class="pos">${sfmt(W.reduce((a,b)=>a+b.pl,0),cur)}</span>`],
+    ['Cost of losses',`<span class="neg">${sfmt(Lo.reduce((a,b)=>a+b.pl,0),cur)}</span>`],
+    ['Longest losing run',maxStreak],['Current losing run',streak],
   ].map(([k,v])=>`<div><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
   const groups={};
   for(const b of L){const g=groups[b.window]||(groups[b.window]={n:0,w:0,pl:0});g.n++;if(b.result==='win')g.w++;g.pl+=b.pl;}
   const keys=Object.keys(groups).map(Number).sort((a,b)=>a-b);
-  $('succTable').innerHTML=keys.length?keys.map(k=>{const g=groups[k];return `<tr><td>${k} spin${k>1?'s':''}</td><td class="num">${g.n}</td><td class="num pos">${g.w}</td><td class="num neg">${g.n-g.w}</td><td class="num">${pct(g.w/g.n)}</td><td class="num">${pct(1-Math.pow(Q,k))}</td><td class="num ${g.pl>=0?'pos':'neg'}">${sfmt(g.pl,cur)}</td></tr>`}).join('')
+  $('succTable').innerHTML=keys.length?keys.map(k=>{const g=groups[k];return `<tr><td>${k} spin${k>1?'s':''}</td><td class="num">${g.n}</td><td class="num pos">${g.w}</td><td class="num neg">${g.n-g.w}</td><td class="num">${pct(g.w/g.n)}</td><td class="num">${pct(1-Math.pow(Q_SET,k))}</td><td class="num ${g.pl>=0?'pos':'neg'}">${sfmt(g.pl,cur)}</td></tr>`}).join('')
     :`<tr><td colspan="7" class="empty" style="text-align:left">No closed window yet. Tap “+50 random” to see it in action.</td></tr>`;
 }
 
-function renderPlan(){
-  const cfg=state.cfg, cur=cfg.cur, unit=(cfg.type==='corner'?1:4)*cfg.chip;
-  const wr=Math.max(3,cfg.wait||10);
-  $('h_engine').textContent=cfg.engine==='relativity'?`Observes ${Math.max(1,Math.round(wr*0.37))} spins, then bets when E beats the best seen; never waits more than ${wr} spins. Window 1–${cfg.maxw} spins grows with γ. Uses: max wait, brake, hot/cold filter.`
-    :cfg.engine==='random'?`Bets a random cluster for ${cfg.forcew} spins every ${Math.max(1,cfg.wait||10)} idle spins. The control group for the lab.`
-    :'Uses: trigger, window length, neighbour signal, brake, max wait, hot/cold filter.';
-  const t=cfg.trig/100, f=cfg.floor/100;
-  $('h_trig').textContent=`= gap ≥ ${gapFor(t)} spins`;
-  $('h_floor').textContent=`= gap ≥ ${gapFor(Math.min(f,t))} spins`;
-  const W=Math.max(cfg.maxw,1), u=planUnits(W);
-  const total=u.reduce((a,x)=>a+x,0)*unit;
-  const examples=[1,5,10,15,20].filter(w=>w<=W).map(w=>{
-    const tot=planUnits(w).reduce((a,x)=>a+x,0)*unit;
-    return `${w} sp.: chance ${pct(1-Math.pow(Q,w))}, risk ${fmt(tot,cur)}`;}).join(' · ');
+function renderPlan(R){
+  const cfg=state.cfg, cur=cfg.cur, unit=4*cfg.chip;
+  $('h_wait').textContent=`Watches ${R.obs} spin${R.obs>1?'s':''}, then bets at the best moment; never idles more than ${R.waitR}.`;
+  const W=Math.max(cfg.maxw,1), u=planUnits(W), total=u.reduce((a,x)=>a+x,0)*unit;
   let cum=0;
   const rows=u.map((x,i)=>{const s=x*unit;cum+=s;const prof=PAYOUT*s-(cum-s);
-    return `<tr><td class="num">${i+1}</td><td class="num">${fmt(s,cur)}</td><td class="num">${fmt(cum,cur)}</td><td class="num pos">${sfmt(prof,cur)}</td><td class="num">${pct(1-Math.pow(Q,i+1))}</td></tr>`}).join('');
-  $('plan').innerHTML=`Max loss of a full ${W}-spin window: <span class="mono">${fmt(total,cur)}</span> · Expected value: <span class="mono">−2.70%</span> of stake<br>${examples}
+    return `<tr><td class="num">${i+1}</td><td class="num">${fmt(x*cfg.chip,cur)}</td><td class="num">${fmt(s,cur)}</td><td class="num">${fmt(cum,cur)}</td><td class="num pos">${sfmt(prof,cur)}</td><td class="num">${pct(1-Math.pow(Q_SET,i+1))}</td></tr>`}).join('');
+  $('plan').innerHTML=`Max loss of a full ${W}-spin window: <span class="mono">${fmt(total,cur)}</span> · Expected value: <span class="mono">−2.70%</span> of stake
     <div class="tablewrap" style="margin-top:8px;max-height:300px;overflow-y:auto"><table>
-    <thead><tr><th>Spin</th><th>Bet</th><th>Total staked</th><th>Net if it hits</th><th>Chance by this spin</th></tr></thead>
+    <thead><tr><th>Spin</th><th>Per number</th><th>Total bet</th><th>Total staked</th><th>Net if one hits</th><th>Chance by this spin</th></tr></thead>
     <tbody>${rows}</tbody></table></div>`;
 }
 
-function drawWheel(hits,N,betNums){
+function drawWheel(hits,N,hl){
   const cx=160,cy=160,R1=150,R2=118,R3=84,seg=2*Math.PI/37,exp=N/37||1;
   const pt=(r,a)=>[cx+r*Math.sin(a),cy-r*Math.cos(a)];
   const arc=(ro,ri,a0,a1)=>{const[a,b]=pt(ro,a0),[c,d]=pt(ro,a1),[e,f]=pt(ri,a1),[g,h]=pt(ri,a0);
     return `M${a.toFixed(2)},${b.toFixed(2)}A${ro},${ro} 0 0 1 ${c.toFixed(2)},${d.toFixed(2)}L${e.toFixed(2)},${f.toFixed(2)}A${ri},${ri} 0 0 0 ${g.toFixed(2)},${h.toFixed(2)}Z`;};
   let s='';
   WHEEL.forEach((n,i)=>{
-    const a0=i*seg-seg/2,a1=a0+seg;
-    const col=n===0?'var(--zero)':RED.has(n)?'var(--red)':'var(--black)';
-    s+=`<path d="${arc(R1,R2,a0,a1)}" fill="${col}" stroke="var(--panel)" stroke-width="1"/>`;
+    const a0=i*seg-seg/2,a1=a0+seg, col=n===0?'var(--zero)':RED.has(n)?'var(--red)':'var(--black)';
+    s+=`<path d="${arc(R1,R2,a0,a1)}" fill="${col}" stroke="${hl.has(n)?'var(--brass)':'var(--panel)'}" stroke-width="${hl.has(n)?3:1}"/>`;
     const [tx,ty]=pt((R1+R2)/2,i*seg);
     s+=`<text x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" fill="#fff" font-size="11" font-family="IBM Plex Mono,monospace" font-weight="600" text-anchor="middle" dominant-baseline="central" transform="rotate(${(i*360/37).toFixed(2)} ${tx.toFixed(1)} ${ty.toFixed(1)})">${n}</text>`;
     const dev=N?Math.max(-1,Math.min(1,(hits[n]-exp)/Math.max(1.5,Math.sqrt(exp)*2))):0;
-    const heat=dev>=0?'var(--hot)':'var(--cold)';
-    const op=(0.12+Math.abs(dev)*0.88).toFixed(2);
-    s+=`<path d="${arc(R2-2,R3,a0,a1)}" fill="${Math.abs(dev)<0.05?'var(--line)':heat}" fill-opacity="${Math.abs(dev)<0.05?1:op}" stroke="${betNums.has(n)?'var(--brass)':'var(--panel)'}" stroke-width="${betNums.has(n)?2.5:1}"/>`;
+    const op=(0.12+Math.abs(dev)*0.88).toFixed(2), flat=Math.abs(dev)<0.05;
+    s+=`<path d="${arc(R2-2,R3,a0,a1)}" fill="${flat?'var(--line)':dev>=0?'var(--hot)':'var(--cold)'}" fill-opacity="${flat?1:op}" stroke="${hl.has(n)?'var(--brass)':'var(--panel)'}" stroke-width="${hl.has(n)?2.5:1}"/>`;
     const [hx,hy]=pt((R2+R3)/2,i*seg);
     s+=`<text x="${hx.toFixed(1)}" y="${hy.toFixed(1)}" fill="var(--fg)" font-size="9" font-family="IBM Plex Mono,monospace" text-anchor="middle" dominant-baseline="central">${hits[n]}</text>`;
   });
@@ -795,8 +647,8 @@ function drawWheel(hits,N,betNums){
 }
 
 /* ---------- actions ---------- */
-function addSpins(arr){ if(!arr.length)return; state.spins.push(...arr); save(); render(); }
-$('pad').addEventListener('click',e=>{const b=e.target.closest('button[data-n]'); if(b)addSpins([+b.dataset.n]);});
+function addSpins(arr){if(!arr.length)return;state.spins.push(...arr);save();render();}
+$('pad').addEventListener('click',e=>{const b=e.target.closest('button[data-n]');if(b)addSpins([+b.dataset.n]);});
 function rnd50(){const a=new Uint32Array(50);crypto.getRandomValues(a);state.demo=false;addSpins(Array.from(a,x=>x%37));}
 $('test50').addEventListener('click',rnd50);$('test50b').addEventListener('click',rnd50);
 $('undo').addEventListener('click',()=>{state.spins.pop();save();render();});
@@ -829,46 +681,49 @@ document.addEventListener('keydown',e=>{
 });
 $('sortSel').addEventListener('change',e=>{sortMode=e.target.value;render();});
 
-// settings form
-const F={engine:'f_engine',type:'f_type',chip:'f_chip',cur:'f_cur',bank:'f_bank',trig:'f_trig',floor:'f_floor',minw:'f_minw',maxw:'f_maxw',prog:'f_prog',filter:'f_filter',maxact:'f_maxact',reentry:'f_reentry',
-  neigh:'f_neigh',brakeN:'f_brakeN',brakeS:'f_brakeS',wait:'f_wait',forcew:'f_forcew'};
-const NUMS=new Set(['chip','bank','trig','floor','minw','maxw','maxact','brakeN','brakeS','wait','forcew']);
-const ZERO_OK=new Set(['bank','brakeN','wait']);
-function fillForm(){for(const[k,id]of Object.entries(F))$(id).value=state.cfg[k];}
+// settings
+const F={engine:'f_engine',chip:'f_chip',cur:'f_cur',bank:'f_bank',minw:'f_minw',maxw:'f_maxw',filter:'f_filter',wait:'f_wait',neigh:'f_neigh',brakeN:'f_brakeN',brakeS:'f_brakeS'};
+const CHK={fGap:'f_fGap',fCold:'f_fCold',fGrav:'f_fGrav',fGroup:'f_fGroup'};
+const NUMS=new Set(['chip','bank','minw','maxw','wait','brakeN','brakeS']), ZERO_OK=new Set(['bank','brakeN']);
+function fillForm(){for(const[k,id]of Object.entries(F))$(id).value=state.cfg[k];for(const[k,id]of Object.entries(CHK))$(id).checked=!!state.cfg[k];}
 $('form').addEventListener('change',()=>{
   const c={...state.cfg};
-  for(const[k,id]of Object.entries(F)){let v=$(id).value; if(NUMS.has(k)){v=parseFloat(String(v).replace(',','.')); if(!isFinite(v)||v<0||(v===0&&!ZERO_OK.has(k)))v=DEFAULTS[k];} c[k]=v;}
-  c.minw=Math.round(Math.min(Math.max(c.minw,1),20)); c.maxw=Math.round(Math.min(Math.max(c.maxw,c.minw),50));
-  c.maxact=Math.round(Math.min(Math.max(c.maxact,1),10)); c.trig=Math.min(c.trig,50);
-  for(const k of ['brakeN','brakeS','wait','forcew'])c[k]=Math.round(c[k]);
-  c.forcew=Math.min(Math.max(c.forcew,1),20);
+  for(const[k,id]of Object.entries(F)){let v=$(id).value;if(NUMS.has(k)){v=parseFloat(String(v).replace(',','.'));if(!isFinite(v)||v<0||(v===0&&!ZERO_OK.has(k)))v=DEFAULTS[k];}c[k]=v;}
+  for(const[k,id]of Object.entries(CHK))c[k]=$(id).checked;
+  c.minw=Math.round(Math.min(Math.max(c.minw,1),20));c.maxw=Math.round(Math.min(Math.max(c.maxw,c.minw),20));
+  for(const k of ['wait','brakeN','brakeS'])c[k]=Math.round(c[k]);
   if(!String(c.cur).trim())c.cur=DEFAULTS.cur;
-  state.cfg=c; fillForm(); save(); render();
+  state.cfg=c;fillForm();save();render();
 });
 
-// simulation
-$('simBtn').addEventListener('click',()=>{
-  const n=+$('simN').value, buf=new Uint32Array(n);
+// lab
+$('labBtn').addEventListener('click',()=>{
+  const n=+$('labN').value,buf=new Uint32Array(n);
   for(let i=0;i<n;i+=16384)crypto.getRandomValues(buf.subarray(i,Math.min(n,i+16384)));
   const spins=Array.from(buf,x=>x%37);
-  $('simBtn').disabled=true;$('simBtn').textContent='Running…';
+  $('labBtn').disabled=true;$('labBtn').textContent='Running…';
   setTimeout(()=>{
-    const cfg=state.cfg,cur=cfg.cur,R=replay(spins,cfg,{curve:true,noLog:true});
-    const roi=R.staked?R.pl/R.staked:0, perh=R.pl/n*40, wr=(R.wins+R.losses)?R.wins/(R.wins+R.losses):0;
-    $('simOut').innerHTML=`<div class="simres">
-      <div><span class="eyebrow">Result</span><b class="${R.pl>=0?'pos':'neg'}">${sfmt(R.pl,cur)}</b></div>
-      <div><span class="eyebrow">Staked</span><b>${fmt(R.staked,cur)}</b></div>
-      <div><span class="eyebrow">ROI</span><b class="${roi>=0?'pos':'neg'}">${pct(roi,2)}</b></div>
-      <div><span class="eyebrow">Theory</span><b>−2.70%</b></div>
-      <div><span class="eyebrow">Windows won/lost</span><b>${R.wins} / ${R.losses}</b></div>
-      <div><span class="eyebrow">Win rate</span><b>${pct(wr)}</b></div>
-      <div><span class="eyebrow">Max-wait picks</span><b>${R.forced}</b></div>
-      <div><span class="eyebrow">Brakes</span><b>${R.brakes}</b></div>
-      <div><span class="eyebrow">Max drawdown</span><b class="neg">${fmt(R.maxDD,cur)}</b></div>
-      <div><span class="eyebrow">Per hour (~40 spins)</span><b class="${perh>=0?'pos':'neg'}">${sfmt(perh,cur)}</b></div>
-    </div>`;
-    drawCurve(R.curve);
-    $('simBtn').disabled=false;$('simBtn').textContent='Run again';
+    const base=state.cfg,cur=base.cur;
+    const runs=[
+      ['Your settings',{...base}],
+      ['Score, all 4 factors',{...base,engine:'score',fGap:true,fCold:true,fGrav:true,fGroup:true}],
+      ['Gap only (γ)',{...base,engine:'score',fGap:true,fCold:false,fGrav:false,fGroup:false}],
+      ['Random 4 numbers',{...base,engine:'random'}],
+    ];
+    let curve=null;
+    const res=runs.map(([name,cfg],k)=>{
+      const R=replay(spins,cfg,{noScores:true,curve:k===0});
+      if(k===0)curve=R.curve;
+      const L=R.log,w=L.filter(b=>b.result==='win').length;
+      const theo=L.length?L.reduce((a,b)=>a+1-Math.pow(Q_SET,b.window),0)/L.length:0, wr=L.length?w/L.length:0;
+      return {name,n:L.length,wr,theo,edge:wr-theo,staked:R.staked,roi:R.staked?R.pl/R.staked:0,dd:R.maxDD};
+    });
+    $('labTable').innerHTML=res.map(r=>`<tr><td>${r.name}</td><td class="num">${r.n}</td><td class="num">${pct(r.wr)}</td><td class="num">${pct(r.theo)}</td>
+      <td class="num ${r.edge>=0?'pos':'neg'}">${(r.edge>=0?'+':'')+(r.edge*100).toFixed(2)} pp</td><td class="num">${fmt(r.staked,cur)}</td>
+      <td class="num ${r.roi>=0?'pos':'neg'}">${pct(r.roi,2)}</td><td class="num neg">${fmt(r.dd,cur)}</td></tr>`).join('');
+    $('labNote').innerHTML=`<b>How to read it:</b> “Edge” is win rate minus the theoretical chance for the same window lengths. A picker that could predict the wheel would stay clearly above zero on every run. The line shows your settings' P/L over the run.`;
+    drawCurve(curve);
+    $('labBtn').disabled=false;$('labBtn').textContent='Run again';
   },30);
 });
 function drawCurve(pts){
@@ -885,28 +740,6 @@ function drawCurve(pts){
   g.fillStyle=cs.getPropertyValue('--muted');g.font='11px IBM Plex Mono, monospace';
   g.fillText('0',2,Y(0)-3);g.fillText(max.toFixed(0),2,pad+9);g.fillText(min.toFixed(0),2,h-3);
 }
-
-$('labBtn').addEventListener('click',()=>{
-  const n=+$('labN').value, buf=new Uint32Array(n);
-  for(let i=0;i<n;i+=16384)crypto.getRandomValues(buf.subarray(i,Math.min(n,i+16384)));
-  const spins=Array.from(buf,x=>x%37);
-  $('labBtn').disabled=true;$('labBtn').textContent='Running…';
-  setTimeout(()=>{
-    const cur=state.cfg.cur, names={classic:'Classic',relativity:'Relativity',random:'Random baseline'};
-    const res=['relativity','classic','random'].map(e=>{
-      const R=replay(spins,{...state.cfg,engine:e},{});
-      const L=R.log, w=L.filter(b=>b.result==='win').length;
-      const theo=L.length?L.reduce((a,b)=>a+1-Math.pow(Q,b.window),0)/L.length:0;
-      const wr=L.length?w/L.length:0;
-      return {e,n:L.length,wr,theo,edge:wr-theo,staked:R.staked,roi:R.staked?R.pl/R.staked:0,dd:R.maxDD};
-    });
-    $('labTable').innerHTML=res.map(r=>`<tr><td>${names[r.e]}</td><td class="num">${r.n}</td><td class="num">${pct(r.wr)}</td><td class="num">${pct(r.theo)}</td>
-      <td class="num ${r.edge>=0?'pos':'neg'}">${(r.edge>=0?'+':'')+(r.edge*100).toFixed(2)} pp</td><td class="num">${fmt(r.staked,cur)}</td>
-      <td class="num ${r.roi>=0?'pos':'neg'}">${pct(r.roi,2)}</td><td class="num neg">${fmt(r.dd,cur)}</td></tr>`).join('');
-    $('labNote').innerHTML=`<b>How to read it:</b> “Edge” is win rate minus the theoretical chance for the same window lengths. If an engine could predict the wheel, its edge would stay clearly above zero on every run. On a fair wheel all three land within about ±1 pp of zero and ROI near −2.70%, run after run.`;
-    $('labBtn').disabled=false;$('labBtn').textContent='Run again';
-  },30);
-});
 
 /* ---------- boot ---------- */
 if(!load()){state.spins=demoSpins();state.demo=true;}
