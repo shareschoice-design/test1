@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}</style>
+<title>Four Number Roulette</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: casino-felt workbench. Top = bets to place now, left = number entry, right = cluster board. */
+:root{
+  --bg:#e9efe9; --panel:#f7faf6; --line:#cfdad1; --fg:#11221b; --muted:#56695f;
+  --felt:#1d5a45; --brass:#a5711a; --brass-soft:#f1e3c4;
+  --red:#b8202f; --black:#1b1f1e; --zero:#17824f;
+  --good:#16794a; --bad:#b8202f; --warn:#a86a00; --hot:#c4401c; --cold:#2a67a8;
+  --chipfg:#fff;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c1714; --panel:#12211c; --line:#24392f; --fg:#e7efe9; --muted:#93a89c;
+  --felt:#1f6a50; --brass:#e0b45a; --brass-soft:#3a2f17;
+  --red:#d33a48; --black:#2b302e; --zero:#21a065;
+  --good:#3fbf7f; --bad:#ef5a66; --warn:#e6a93a; --hot:#f07a4a; --cold:#6aa6e8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1714; --panel:#12211c; --line:#24392f; --fg:#e7efe9; --muted:#93a89c;
+  --felt:#1f6a50; --brass:#e0b45a; --brass-soft:#3a2f17;
+  --red:#d33a48; --black:#2b302e; --zero:#21a065;
+  --good:#3fbf7f; --bad:#ef5a66; --warn:#e6a93a; --hot:#f07a4a; --cold:#6aa6e8; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.45;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:16px 48px}
+.wrap{max-width:1280px;margin:0 auto;display:grid;gap:16px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-size:clamp(22px,3.2vw,32px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:17px;font-weight:700}
+.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.num,.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}
+.panel>header{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+
+/* top bar */
+.top{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px}
+.kpis{display:flex;flex-wrap:wrap;gap:8px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 12px;min-width:92px}
+.kpi b{display:block;font-family:var(--mono);font-size:17px;font-variant-numeric:tabular-nums}
+.pos{color:var(--good)} .neg{color:var(--bad)}
+
+.banner{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--brass-soft);border:1px solid var(--brass);border-radius:8px;padding:8px 12px}
+
+/* bets now */
+.bets{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.bet{border:1px solid var(--brass);border-left:5px solid var(--brass);border-radius:8px;padding:10px 12px;background:var(--bg);display:grid;gap:6px}
+.bet .stake{font-family:var(--mono);font-size:22px;font-weight:600;color:var(--brass)}
+.bet .row{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--muted)}
+.bet .row b{color:var(--fg);font-family:var(--mono);font-weight:500}
+.steps{display:flex;gap:2px}
+.steps i{flex:1;height:5px;border-radius:2px;background:var(--line)}
+.steps i.done{background:var(--bad)} .steps i.now{background:var(--brass)}
+.empty{color:var(--muted);padding:6px 0}
+
+.chips{display:flex;gap:4px;flex-wrap:wrap}
+.chip{display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 4px;border-radius:13px;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--chipfg)}
+.c-red{background:var(--red)} .c-black{background:var(--black)} .c-green{background:var(--zero)}
+
+/* main grid */
+.main{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:900px){.main{grid-template-columns:1fr}}
+.col{display:grid;gap:16px;min-width:0}
+
+/* table pad */
+.pad{display:grid;grid-template-columns:1.1fr repeat(12,1fr);grid-template-rows:repeat(3,38px);gap:3px;background:var(--felt);padding:6px;border-radius:8px}
+.pad button{border:0;border-radius:4px;color:#fff;font-family:var(--mono);font-weight:600;font-size:13px;padding:0;position:relative;transition:transform .06s}
+.pad button:active{transform:scale(.93)}
+.pad .z{grid-row:1/4;background:var(--zero)}
+.pad .r{background:var(--red)} .pad .k{background:var(--black)}
+.pad button.betting{box-shadow:inset 0 0 0 2px var(--brass)}
+.pad button .cnt{position:absolute;right:2px;bottom:0;font-size:9px;opacity:.75;font-weight:400}
+.padtools{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:6px 12px;font-weight:500}
+.btn:hover{border-color:var(--brass)}
+.btn.primary{background:var(--felt);border-color:var(--felt);color:#fff}
+.btn.danger{color:var(--bad)}
+.bulk{display:flex;gap:6px;margin-top:8px}
+.bulk input{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:6px 8px;font-family:var(--mono)}
+.strip{display:flex;gap:4px;overflow-x:auto;padding-bottom:4px;margin-top:10px}
+.strip .chip{flex:none}
+.strip .chip.last{outline:2px solid var(--brass);outline-offset:1px}
+
+/* wheel */
+.wheelbox{display:grid;place-items:center}
+.wheelbox svg{width:100%;max-width:340px;height:auto}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);justify-content:center}
+.legend span{display:inline-flex;gap:5px;align-items:center}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+/* cluster table */
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:6px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--panel)}
+th:first-child,td:first-child{text-align:left}
+td.num{font-family:var(--mono)}
+tr.isbet td{background:color-mix(in srgb,var(--brass) 12%,transparent)}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600;letter-spacing:.04em}
+.p-hot{background:color-mix(in srgb,var(--hot) 18%,transparent);color:var(--hot)}
+.p-cold{background:color-mix(in srgb,var(--cold) 18%,transparent);color:var(--cold)}
+.p-ripe{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.p-bet{background:var(--brass);color:var(--panel)}
+.p-norm{color:var(--muted)}
+.gapbar{width:70px;height:6px;background:var(--line);border-radius:3px;display:inline-block;vertical-align:middle;overflow:hidden}
+.gapbar i{display:block;height:100%;background:var(--warn)}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ctl select{border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:4px 6px}
+
+/* settings */
+.form{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.form label{display:grid;gap:4px;font-size:12.5px;color:var(--muted)}
+.form input,.form select{border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:6px 8px;color:var(--fg)}
+.form .hint{font-size:11.5px;color:var(--muted)}
+.plan{margin-top:12px;font-size:12.5px;color:var(--muted)}
+.plan .mono{color:var(--fg)}
+
+.note{font-size:13px;color:var(--muted);max-width:75ch}
+.note b{color:var(--fg)}
+.note p{margin:.4em 0}
+details>summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:16px}
+.simres{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin-top:10px}
+.simres div{border:1px solid var(--line);border-radius:6px;padding:6px 10px}
+.simres b{display:block;font-family:var(--mono)}
+canvas{width:100%;height:160px;display:block;margin-top:10px}
+.confirm{display:inline-flex;gap:6px;align-items:center}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.status{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.status span{border:1px solid var(--line);border-radius:14px;padding:2px 10px;font-size:12px;color:var(--muted)}
+.status span b{color:var(--fg);font-family:var(--mono);font-weight:600}
+.status span.on{border-color:var(--warn);color:var(--warn)}
+.tag{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:1px 6px;border-radius:4px;background:var(--brass-soft);color:var(--brass)}
+.form fieldset{border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:grid;gap:10px;grid-column:1/-1;grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.form legend{font-family:var(--display);font-weight:700;color:var(--fg);padding:0 4px}
+.form label.check{display:flex;gap:8px;align-items:flex-start;color:var(--fg)}
+.form label.check input{margin-top:3px}
+.form label.check small{display:block;color:var(--muted);font-size:11.5px}
+tr.istop td{background:color-mix(in srgb,var(--warn) 8%,transparent)}
+.bigchips .chip{min-width:38px;height:38px;border-radius:19px;font-size:15px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="eyebrow">European roulette · 37 pockets · 4 straight-up numbers</div>
+      <h1>Four Number Roulette</h1>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </div>
+
+  <div class="banner" id="demoBanner" hidden>
+    <span><b>Sample data.</b> 150 random spins are loaded to show how the tracker works. These are not your numbers.</span>
+    <button class="btn primary" id="clearDemo">Clear sample and start</button>
+  </div>
+
+  <section class="panel">
+    <header>
+      <h2>Bet on the next spin</h2>
+      <span class="ctl"><span class="eyebrow" id="betsSummary"></span><button class="btn primary" id="test50b">🎲 +50 random</button></span>
+    </header>
+    <div class="status" id="status"></div>
+    <div class="bets" id="bets"></div>
+  </section>
+
+  <div class="main">
+    <div class="col">
+      <section class="panel">
+        <header><h2>Enter the winning number</h2><span class="eyebrow">tap / keyboard</span></header>
+        <div class="pad" id="pad"></div>
+        <div class="bulk">
+          <input id="bulkIn" inputmode="numeric" placeholder="Several numbers: 17 4 32 0 …" aria-label="Add several numbers at once">
+          <button class="btn" id="bulkAdd">Add</button>
+        </div>
+        <div class="padtools">
+          <button class="btn primary" id="test50">🎲 Test: +50 random</button>
+          <button class="btn" id="undo">↶ Undo</button>
+          <span id="resetWrap"><button class="btn danger" id="reset">New session</button></span>
+          <button class="btn" id="exportBtn">Copy history</button>
+        </div>
+        <div class="strip" id="strip" aria-label="Last 40 spins"></div>
+      </section>
+
+      <section class="panel">
+        <header><h2>Wheel heat map</h2><span class="eyebrow">hits vs. expected</span></header>
+        <div class="wheelbox"><svg id="wheel" viewBox="0 0 320 320" role="img" aria-label="Roulette wheel with hit counts per number"></svg></div>
+        <div class="legend">
+          <span><i class="sw" style="background:var(--cold)"></i>hits less</span>
+          <span><i class="sw" style="background:var(--line)"></i>as expected</span>
+          <span><i class="sw" style="background:var(--hot)"></i>hits more</span>
+          <span><i class="sw" style="background:var(--brass)"></i>number in play / top 4</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="col">
+      <section class="panel">
+        <header>
+          <h2>Numbers</h2>
+          <div class="ctl">
+            <select id="sortSel" aria-label="Sort">
+              <option value="E">Sort: score E (best first)</option>
+              <option value="gap">Sort: longest gap</option>
+              <option value="zasc">Sort: coldest</option>
+              <option value="zdesc">Sort: hottest</option>
+              <option value="n">Sort: number</option>
+            </select>
+          </div>
+        </header>
+        <div class="tablewrap" style="max-height:600px;overflow-y:auto">
+          <table>
+            <thead><tr><th>No.</th><th>Hits</th><th>z</th><th>Gap</th><th title="Probability of missing this many spins in a row: (36/37)^gap">P(gap)</th><th title="1 · Gap speed (Lorentz factor)">γ</th><th title="2 · Coldness mass">m</th><th title="3 · Wheel gravity from nearby landings">g</th><th title="4 · Group pressure: colour, dozen, column, odd/even behind expectation">b</th><th>Score E</th><th>Status</th></tr></thead>
+            <tbody id="ntable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <header><h2>Strategy &amp; bets</h2><span class="eyebrow">recalculates the whole session</span></header>
+        <div class="form" id="form">
+          <fieldset>
+            <legend>Number picker</legend>
+            <label>Engine
+              <select id="f_engine">
+                <option value="score">Best 4 by score E (4 characteristics)</option>
+                <option value="random">Random 4 numbers (control group)</option>
+              </select>
+            </label>
+            <label class="check"><input type="checkbox" id="f_fGap"><span>1 · Gap speed γ<small>longer gap = higher score</small></span></label>
+            <label class="check"><input type="checkbox" id="f_fCold"><span>2 · Coldness m<small>hits less than expected</small></span></label>
+            <label class="check"><input type="checkbox" id="f_fGrav"><span>3 · Wheel gravity g<small>recent landings next to it on the wheel</small></span></label>
+            <label class="check"><input type="checkbox" id="f_fGroup"><span>4 · Group pressure b<small>its colour, dozen, column, odd/even are behind</small></span></label>
+          </fieldset>
+
+          <label>Base bet (per number)
+            <input id="f_chip" type="number" step="0.05" min="0.05">
+          </label>
+          <label>Currency
+            <input id="f_cur" maxlength="4">
+          </label>
+          <label>Starting bankroll
+            <input id="f_bank" type="number" step="1" min="0">
+          </label>
+          <label>Window length min–max spins
+            <span style="display:flex;gap:6px"><input id="f_minw" type="number" min="1" max="20" style="width:50%" aria-label="Minimum window"><input id="f_maxw" type="number" min="1" max="20" style="width:50%" aria-label="Maximum window"></span>
+            <span class="hint">Set by the chosen numbers' γ: longer gaps, longer window.</span>
+          </label>
+          <label>Hot / cold filter
+            <select id="f_filter">
+              <option value="any">All numbers</option>
+              <option value="cold">Cold only (z ≤ −1)</option>
+              <option value="nothot">Not hot (z &lt; 1)</option>
+              <option value="hot">Hot only (z ≥ 1)</option>
+            </select>
+          </label>
+          <label>Bet at the latest after N idle spins
+            <input id="f_wait" type="number" min="1" max="50">
+            <span class="hint" id="h_wait"></span>
+          </label>
+
+          <fieldset>
+            <legend>Filter 1 · Neighbour signal</legend>
+            <label>Start only after a nearby number lands
+              <select id="f_neigh">
+                <option value="off">Off</option>
+                <option value="wheel">Wheel neighbour of a pick (±2 pockets)</option>
+                <option value="table">Table neighbour of a pick (touching)</option>
+              </select>
+              <span class="hint">Ignored when the wait limit is reached.</span>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Filter 2 · Loss-streak brake</legend>
+            <label>Lost windows in a row
+              <input id="f_brakeN" type="number" min="0" max="20">
+              <span class="hint">0 = off</span>
+            </label>
+            <label>Then pause for spins
+              <input id="f_brakeS" type="number" min="1" max="100">
+            </label>
+          </fieldset>
+        </div>
+        <div class="plan" id="plan"></div>
+      </section>
+    </div>
+  </div>
+
+  <section class="panel">
+    <header><h2>Wins / losses</h2><span class="eyebrow">closed betting windows this session</span></header>
+    <div class="simres" id="succ"></div>
+    <div class="tablewrap" style="margin-top:12px">
+      <table>
+        <thead><tr><th>Window</th><th>Windows</th><th>Won</th><th>Lost</th><th>Win rate</th><th>Theory</th><th>P/L</th></tr></thead>
+        <tbody id="succTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <header><h2>Betting window history</h2><span class="eyebrow" id="logSummary"></span></header>
+    <div class="tablewrap" style="max-height:340px;overflow-y:auto">
+      <table>
+        <thead><tr><th>Numbers</th><th>Start (spin)</th><th>Avg gap</th><th>Score E</th><th>Moment</th><th>Window</th><th>Played</th><th>Staked</th><th>Result</th></tr></thead>
+        <tbody id="ltable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <header><h2>Strategy lab</h2><span class="eyebrow">same random spins · does the picker help?</span></header>
+    <div class="ctl">
+      <select id="labN" aria-label="Lab length">
+        <option value="20000">20,000 spins</option>
+        <option value="100000" selected>100,000 spins</option>
+        <option value="300000">300,000 spins</option>
+      </select>
+      <button class="btn primary" id="labBtn">Compare pickers</button>
+    </div>
+    <div class="tablewrap" style="margin-top:10px">
+      <table>
+        <thead><tr><th>Picker</th><th>Windows</th><th>Win rate</th><th>Theory</th><th>Edge</th><th>Staked</th><th>ROI</th><th>Max drawdown</th></tr></thead>
+        <tbody id="labTable"><tr><td colspan="8" class="empty" style="text-align:left">Run the comparison to see whether any picker beats chance.</td></tr></tbody>
+      </table>
+    </div>
+    <canvas id="simChart" hidden></canvas>
+    <p class="note" id="labNote"></p>
+  </section>
+
+  <section class="panel note">
+    <details>
+      <summary>How the picker works (and what the maths says)</summary>
+      <p>You bet <b>4 straight-up numbers from anywhere</b>, one chip each. A hit pays 35:1 on that number, so the net win is 8× the total stake. The chance that one of 4 numbers lands is always <b>4/37 = 10.81%</b>.</p>
+      <p>Each number gets four characteristics:</p>
+      <p><b>1 · γ (gap speed).</b> v = 1 − P(gap), where P(gap) = (36/37)<sup>gap</sup>; γ = 1/√(1−v²). The longer the number has not landed, the faster γ grows.<br>
+      <b>2 · m (coldness).</b> m = 1 + 0.25·max(0, −z). Numbers hitting less than expected get heavier.<br>
+      <b>3 · g (wheel gravity).</b> Every landing adds “gravity” to its wheel neighbours, fading by 20% per spin.<br>
+      <b>4 · b (group pressure).</b> How far behind expectation the number's colour, dozen, column and odd/even are.</p>
+      <p><b>Score E = γ · m · (1+g) · (1+b)</b> (switched-off factors count as 1). The 4 numbers with the highest E are the picks.</p>
+      <p><b>Timing:</b> the secretary rule. For the first 37% of the wait limit it only watches and remembers the best total E of the top 4. After that it bets the first time the top 4 beat that best (and, with filter 1 on, a neighbour just landed). When the wait limit is reached it bets the current top 4 anyway. The window is 1–20 spins, longer when the picks' gaps are longer, and the recovery progression makes every hit end in profit.</p>
+      <p><b>Important:</b> the wheel has no memory. A number that has missed 150 spins still has exactly 1/37 on the next one. That is why “chance” on the bet card comes from 10.81% per spin, not from the scores. Every bet has an expected value of −2.70%. The Strategy lab compares the picker with random numbers on the same spins so you can check this yourself. Only play with money you can afford to lose.</p>
+    </details>
+  </section>
+</div>
+
+<script>
+(() => {
+const WHEEL=[0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26];
+const WPOS=new Array(37); WHEEL.forEach((n,i)=>WPOS[n]=i);
+const RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
+const P1=1/37, Q1=36/37, P_SET=4/37, Q_SET=33/37, PAYOUT=8;
+const colorOf=n=>n===0?'green':RED.has(n)?'red':'black';
+const chipHTML=(n,cls='')=>`<span class="chip c-${colorOf(n)} ${cls}">${n}</span>`;
+const $=id=>document.getElementById(id);
+
+const DEFAULTS={engine:'score',fGap:true,fCold:true,fGrav:true,fGroup:true,chip:0.2,cur:'€',bank:100,minw:1,maxw:20,filter:'any',wait:10,neigh:'wheel',brakeN:3,brakeS:10,randw:8};
+const KEY='four-number-roulette-v1', OLDKEY='cluster-roulette-v1';
+let state={spins:[],cfg:{...DEFAULTS},demo:false};
+
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+const cleanSpins=a=>Array.isArray(a)?a.filter(n=>Number.isInteger(n)&&n>=0&&n<=36):[];
+function load(){
+  try{
+    const s=JSON.parse(localStorage.getItem(KEY)||'null');
+    if(s&&Array.isArray(s.spins)){state={spins:cleanSpins(s.spins),cfg:{...DEFAULTS,...s.cfg},demo:!!s.demo};return true}
+    const o=JSON.parse(localStorage.getItem(OLDKEY)||'null'); // carry spins over from the cluster version
+    if(o&&Array.isArray(o.spins)){const c=o.cfg||{};state={spins:cleanSpins(o.spins),cfg:{...DEFAULTS,chip:c.chip||DEFAULTS.chip,cur:c.cur||DEFAULTS.cur,bank:c.bank??DEFAULTS.bank},demo:!!o.demo};return true}
+  }catch(e){}
+  return false;
+}
+function demoSpins(){let x=20261118;const r=()=>{x=(x*1103515245+12345)%2147483648;return x/2147483648};return Array.from({length:150},()=>Math.floor(r()*37));}
+
+/* ---------- number geometry ---------- */
+function tableNeighbours(n){
+  if(n===0)return [1,2,3];
+  const col=Math.ceil(n/3)-1,row=(n-1)%3,out=[];
+  for(let dc=-1;dc<=1;dc++)for(let dr=-1;dr<=1;dr++){ if(!dc&&!dr)continue; const c=col+dc,r=row+dr; if(c<0||c>11||r<0||r>2)continue; out.push(c*3+r+1); }
+  if(n<=3)out.push(0); return out;
+}
+const NB_W=Array.from({length:37},(_,n)=>new Set([-2,-1,1,2].map(d=>WHEEL[(WPOS[n]+d+37)%37])));
+const NB_T=Array.from({length:37},(_,n)=>new Set(tableNeighbours(n)));
+const DECAY=0.8;
+const KERN=Array.from({length:37},(_,n)=>Array.from({length:37},(_,k)=>{let d=Math.abs(WPOS[n]-WPOS[k]);d=Math.min(d,37-d);return d===0?0:Math.exp(-d/1.5);}));
+// group membership: [colour 0/1, dozen 0-2, column 0-2, parity 0/1]
+const GRP=Array.from({length:37},(_,n)=>n===0?null:[RED.has(n)?0:1,Math.floor((n-1)/12),(n-1)%3,n%2]);
+
+const zOf=(h,N,p)=>N<1?0:(h-N*p)/Math.sqrt(N*p*(1-p));
+function passesFilter(z,N,cfg){
+  if(cfg.filter==='any')return true;
+  if(N<37)return cfg.filter==='nothot';
+  if(cfg.filter==='cold')return z<=-1;
+  if(cfg.filter==='hot')return z>=1;
+  if(cfg.filter==='nothot')return z<1;
+  return true;
+}
+const planCache=new Map();
+function planUnits(W){
+  if(planCache.has(W))return planCache.get(W);
+  const u=[];let loss=0; for(let i=0;i<W;i++){const x=Math.max(1,Math.ceil((loss+1)/PAYOUT));u.push(x);loss+=x;}
+  planCache.set(W,u);return u;
+}
+
+/* ---------- scoring: 4 characteristics per number ---------- */
+function scoreAll(S,N,cfg){
+  const gc=S.grp, out=new Array(37);
+  const gz=[ [0,1].map(k=>Math.max(0,-zOf(gc.col[k],N,18/37))), [0,1,2].map(k=>Math.max(0,-zOf(gc.doz[k],N,12/37))),
+             [0,1,2].map(k=>Math.max(0,-zOf(gc.clm[k],N,12/37))), [0,1].map(k=>Math.max(0,-zOf(gc.par[k],N,18/37))) ];
+  for(let n=0;n<37;n++){
+    const p=Math.pow(Q1,S.gap[n]);
+    const gamma=Math.min(50,1/Math.sqrt(Math.max(1e-6,2*p-p*p)));
+    const z=zOf(S.hits[n],N,P1);
+    const m=N>=37?1+0.25*Math.max(0,-z):1;
+    const g=S.field[n];
+    const G=GRP[n]; const b=G?0.1*(gz[0][G[0]]+gz[1][G[1]]+gz[2][G[2]]+gz[3][G[3]]):0;
+    const E=(cfg.fGap?gamma:1)*(cfg.fCold?m:1)*(cfg.fGrav?1+g:1)*(cfg.fGroup?1+b:1);
+    out[n]={n,p,gamma,z,m,g,b,E,ok:passesFilter(z,N,cfg)};
+  }
+  return out;
+}
+function pickTop4(sc){
+  const ok=sc.filter(x=>x.ok).sort((a,b)=>b.E-a.E||a.n-b.n);
+  if(ok.length<4){const rest=sc.filter(x=>!x.ok).sort((a,b)=>b.E-a.E);ok.push(...rest.slice(0,4-ok.length));}
+  return ok.slice(0,4);
+}
+function windowFor(top,cfg){
+  const gAvg=top.reduce((a,x)=>a+x.gamma,0)/top.length;
+  const lo=Math.max(1,Math.min(cfg.minw,cfg.maxw)),hi=Math.max(lo,cfg.maxw);
+  return Math.max(lo,Math.min(hi,Math.round(1+(hi-1)*(1-1/gAvg))));
+}
+
+/* ---------- engine: replays the whole session deterministically ---------- */
+function replay(spins,cfg,opts={}){
+  const S={hits:new Array(37).fill(0),gap:new Array(37).fill(0),maxGap:new Array(37).fill(0),field:new Array(37).fill(0),
+    grp:{col:[0,0],doz:[0,0,0],clm:[0,0,0],par:[0,0]}};
+  let active=null,log=[],pl=0,staked=0,peak=0,maxDD=0,wins=0,losses=0,curve=opts.curve?[]:null;
+  let idle=0,lossStreak=0,brakeUntil=-1,brakes=0,limitPicks=0,bestSeen=0,signalWait=false;
+  const waitR=Math.max(1,Math.round(cfg.wait||10)), obs=Math.max(1,Math.round(waitR*0.37));
+  let seed=987654321; const rnd=()=>{seed=(seed*1103515245+12345)%2147483648;return seed/2147483648;};
+  const NB=cfg.neigh==='table'?NB_T:NB_W;
+  for(let i=0;i<spins.length;i++){
+    const n=spins[i];
+    // 1) settle
+    if(active){
+      const b=active, stake=b.units[b.step]*b.unitVal; staked+=stake; b.staked+=stake; b.step++;
+      if(b.set.has(n)){const w=PAYOUT*stake;pl+=w;b.pl+=w;b.result='win';b.hitNum=n;wins++;lossStreak=0;if(!opts.noLog)log.push(b);active=null;}
+      else{pl-=stake;b.pl-=stake;
+        if(b.step>=b.window){b.result='loss';losses++;lossStreak++;
+          if(cfg.brakeN>0&&lossStreak>=cfg.brakeN){brakeUntil=i+cfg.brakeS;lossStreak=0;brakes++;}
+          if(!opts.noLog)log.push(b);active=null;}
+      }
+      if(pl>peak)peak=pl; if(peak-pl>maxDD)maxDD=peak-pl;
+    }
+    // 2) stats
+    S.hits[n]++;
+    for(let k=0;k<37;k++){ if(k===n)S.gap[k]=0; else {S.gap[k]++; if(S.gap[k]>S.maxGap[k])S.maxGap[k]=S.gap[k];} }
+    const kr=KERN[n]; for(let k=0;k<37;k++)S.field[k]=S.field[k]*DECAY+kr[k];
+    const G=GRP[n]; if(G){S.grp.col[G[0]]++;S.grp.doz[G[1]]++;S.grp.clm[G[2]]++;S.grp.par[G[3]]++;}
+    // 3) decide next bet
+    signalWait=false;
+    if(i<brakeUntil){idle=0;bestSeen=0;}
+    else if(!active){
+      idle++;
+      const N=i+1;
+      if(cfg.engine==='random'){
+        if(idle>=waitR){const set=new Set();while(set.size<4)set.add(Math.floor(rnd()*37));
+          active=newBet([...set],i,null,cfg.randw,'random',cfg,S);idle=0;}
+      }else{
+        const sc=scoreAll(S,N,cfg), top=pickTop4(sc), E=top.reduce((a,x)=>a+x.E,0);
+        let src=null;
+        if(idle>=waitR)src='limit';
+        else if(idle<=obs)bestSeen=Math.max(bestSeen,E);
+        else if(E>=bestSeen){ if(cfg.neigh==='off'||top.some(x=>NB[x.n].has(n)))src='best'; else signalWait=true; }
+        if(src){active=newBet(top.map(x=>x.n),i,top,windowFor(top,cfg),src,cfg,S);active.E=E;if(src==='limit')limitPicks++;idle=0;bestSeen=0;}
+      }
+    }
+    if(curve&&(i%Math.max(1,Math.floor(spins.length/600))===0))curve.push(pl);
+  }
+  if(curve)curve.push(pl);
+  const N=spins.length;
+  return {S,N,active,log,pl,staked,maxDD,wins,losses,curve,idle,lossStreak,brakes,limitPicks,bestSeen,signalWait,waitR,obs,
+    brakeLeft:Math.max(0,brakeUntil-(N-1)),scores:opts.noScores?null:scoreAll(S,N,cfg)};
+}
+function newBet(nums,i,top,W,src,cfg,S){
+  nums=nums.slice().sort((a,b)=>a-b);
+  const avgGap=nums.reduce((a,x)=>a+S.gap[x],0)/4;
+  return {nums,set:new Set(nums),start:i+1,avgGap,src,window:W,units:planUnits(W),unitVal:4*cfg.chip,step:0,staked:0,pl:0,result:null,E:0,
+    detail:top?top.map(x=>({n:x.n,gamma:x.gamma,m:x.m,g:x.g,b:x.b,E:x.E})):null};
+}
+
+/* ---------- rendering ---------- */
+const fmt=(v,cur)=>(v<0?'−':'')+cur+Math.abs(v).toFixed(2);
+const sfmt=(v,cur)=>(v>0?'+':'')+fmt(v,cur);
+const pct=(v,d=1)=>(v*100).toFixed(d)+'%';
+const SRC={best:'best moment',limit:'wait limit',random:'random'};
+let sortMode='E';
+
+function render(){
+  const cfg=state.cfg, R=replay(state.spins,cfg), cur=cfg.cur, N=R.N;
+  $('demoBanner').hidden=!state.demo;
+  $('kpis').innerHTML=[
+    ['Spins',N],['Bankroll',fmt(cfg.bank+R.pl,cur)],
+    ['Session P/L',`<span class="${R.pl>=0?'pos':'neg'}">${sfmt(R.pl,cur)}</span>`],
+    ['Staked',fmt(R.staked,cur)],['Windows W/L',`${R.wins}/${R.losses}`],
+  ].map(([k,v])=>`<div class="kpi"><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
+
+  const top=pickTop4(R.scores), topSet=new Set(top.map(x=>x.n)), topE=top.reduce((a,x)=>a+x.E,0);
+  // status
+  const st=[];
+  if(R.brakeLeft>0)st.push(`<span class="on">Brake on: <b>${R.brakeLeft}</b> spins left</span>`);
+  else if(!R.active){
+    if(cfg.engine==='random')st.push(`<span>Idle <b>${R.idle}/${R.waitR}</b> · random 4 at ${R.waitR}</span>`);
+    else if(R.idle<R.obs)st.push(`<span class="on">Observing <b>${R.idle}/${R.obs}</b> · best E so far <b>${R.bestSeen.toFixed(2)}</b></span>`);
+    else st.push(`<span class="on">Hunting: bet when top-4 E ≥ <b>${R.bestSeen.toFixed(2)}</b> (now ${topE.toFixed(2)}) · forced at spin <b>${R.waitR}</b> (now ${R.idle})</span>`);
+    if(R.signalWait)st.push(`<span class="on">Score is good, waiting for a <b>neighbour signal</b></span>`);
+  }
+  if(cfg.brakeN>0)st.push(`<span>Lost windows in a row <b>${R.lossStreak}/${cfg.brakeN}</b></span>`);
+  st.push(`<span>Brakes <b>${R.brakes}</b> · wait-limit bets <b>${R.limitPicks}</b></span>`);
+  $('status').innerHTML=st.join('');
+
+  // bet card
+  const betNums=R.active?R.active.set:new Set();
+  if(R.active){
+    const b=R.active, stake=b.units[b.step]*b.unitVal, per=stake/4, left=b.window-b.step;
+    const remainRisk=b.units.slice(b.step).reduce((a,x)=>a+x,0)*b.unitVal, winNet=PAYOUT*stake+b.pl;
+    $('bets').innerHTML=`<article class="bet">
+      <div class="row"><span class="eyebrow">Spin ${b.step+1} of ${b.window}</span><span class="tag">${SRC[b.src]}</span></div>
+      <div class="chips bigchips">${b.nums.map(n=>chipHTML(n)).join('')}</div>
+      <div class="stake">${fmt(per,cur)} <span style="font-size:14px;color:var(--muted)">on each number · total ${fmt(stake,cur)}</span></div>
+      <div class="row"><span>if one hits</span><b class="${winNet>=0?'pos':'neg'}">${sfmt(winNet,cur)}</b></div>
+      <div class="steps">${Array.from({length:b.window},(_,k)=>`<i class="${k<b.step?'done':k===b.step?'now':''}"></i>`).join('')}</div>
+      <div class="row"><span>so far ${sfmt(b.pl,cur)}</span><span>chance in ${left} spin${left>1?'s':''}: <b>${pct(1-Math.pow(Q_SET,left))}</b></span></div>
+      <div class="row"><span>avg gap at start ${b.avgGap.toFixed(0)}${b.E?` · E ${b.E.toFixed(2)}`:''}</span><span>max risk left <b>${fmt(remainRisk,cur)}</b></span></div>
+    </article>`;
+    $('betsSummary').textContent=`4 numbers · total ${fmt(stake,cur)}`;
+  }else{
+    $('bets').innerHTML=`<div class="empty">${R.brakeLeft>0?`Paused by the loss-streak brake for ${R.brakeLeft} more spin${R.brakeLeft>1?'s':''}.`:
+      cfg.engine==='random'?`Random control group: 4 random numbers after ${R.waitR-R.idle} more spin${R.waitR-R.idle===1?'':'s'}.`:
+      `No bet yet. Current top 4: ${top.map(x=>chipHTML(x.n)).join(' ')} (E ${topE.toFixed(2)}). The bet comes when they beat the best E seen, at the latest in ${R.waitR-R.idle} spin${R.waitR-R.idle===1?'':'s'}.`}</div>`;
+    $('betsSummary').textContent='no bet';
+  }
+
+  // pad
+  const hl=R.active?betNums:(cfg.engine==='score'?topSet:new Set());
+  const order=[];for(let row=0;row<3;row++)for(let col=0;col<12;col++)order.push(col*3+(3-row));
+  $('pad').innerHTML=`<button class="z ${hl.has(0)?'betting':''}" data-n="0">0<span class="cnt">${R.S.hits[0]||''}</span></button>`+
+    order.map(n=>`<button class="${RED.has(n)?'r':'k'} ${hl.has(n)?'betting':''}" data-n="${n}">${n}<span class="cnt">${R.S.hits[n]||''}</span></button>`).join('');
+  const last=state.spins.slice(-40).reverse();
+  $('strip').innerHTML=last.length?last.map((n,i)=>chipHTML(n,i===0?'last':'')).join(''):'<span class="empty">No spins yet.</span>';
+
+  // numbers table
+  const rows=R.scores.map(x=>({...x,hits:R.S.hits[x.n],gap:R.S.gap[x.n]}));
+  const sorters={E:(a,b)=>b.E-a.E,gap:(a,b)=>b.gap-a.gap,zasc:(a,b)=>a.z-b.z,zdesc:(a,b)=>b.z-a.z,n:(a,b)=>a.n-b.n};
+  rows.sort(sorters[sortMode]);
+  $('ntable').innerHTML=rows.map(x=>{
+    let pill='<span class="pill p-norm">—</span>';
+    if(betNums.has(x.n))pill='<span class="pill p-bet">IN PLAY</span>';
+    else if(!R.active&&cfg.engine==='score'&&topSet.has(x.n))pill='<span class="pill p-ripe">TOP 4</span>';
+    else if(!x.ok)pill='<span class="pill p-norm">filtered</span>';
+    else if(N>=37&&x.z>=1.5)pill='<span class="pill p-hot">HOT</span>';
+    else if(N>=37&&x.z<=-1.5)pill='<span class="pill p-cold">COLD</span>';
+    const zc=x.z>=1.5?'style="color:var(--hot)"':x.z<=-1.5?'style="color:var(--cold)"':'';
+    return `<tr class="${betNums.has(x.n)?'isbet':(!R.active&&topSet.has(x.n)?'istop':'')}">
+      <td>${chipHTML(x.n)}</td><td class="num">${x.hits}</td><td class="num" ${zc}>${(x.z>=0?'+':'')+x.z.toFixed(2)}</td>
+      <td class="num">${x.gap}</td><td class="num">${pct(x.p,x.p<0.1?2:1)}</td>
+      <td class="num">${x.gamma.toFixed(2)}</td><td class="num">${x.m.toFixed(2)}</td><td class="num">${x.g.toFixed(2)}</td><td class="num">${x.b.toFixed(2)}</td>
+      <td class="num" style="font-weight:600">${x.E.toFixed(2)}</td><td>${pill}</td></tr>`;}).join('');
+
+  drawWheel(R.S.hits,N,hl);
+
+  // log
+  const L=R.log.slice().reverse(), totPL=R.log.reduce((a,b)=>a+b.pl,0);
+  $('logSummary').textContent=R.log.length?`${R.log.length} closed windows · ${sfmt(totPL,cur)}`:'';
+  $('ltable').innerHTML=L.length?L.slice(0,200).map(b=>`<tr>
+    <td><div class="chips">${b.nums.map(n=>chipHTML(n,b.hitNum===n?'last':'')).join('')}</div></td>
+    <td class="num">#${b.start+1}</td><td class="num">${b.avgGap.toFixed(0)}</td><td class="num">${b.E?b.E.toFixed(2):'–'}</td>
+    <td><span class="tag">${SRC[b.src]}</span></td>
+    <td class="num">${b.window}</td><td class="num">${b.step}</td><td class="num">${fmt(b.staked,cur)}</td>
+    <td class="num ${b.pl>=0?'pos':'neg'}">${b.result==='win'?'hit ':'miss '}${sfmt(b.pl,cur)}</td></tr>`).join('')
+    :`<tr><td colspan="9" class="empty" style="text-align:left">No closed betting window yet.</td></tr>`;
+
+  renderSuccess(R);
+  renderPlan(R);
+}
+
+function renderSuccess(R){
+  const cur=state.cfg.cur, L=R.log, n=L.length;
+  const W=L.filter(b=>b.result==='win'), Lo=L.filter(b=>b.result==='loss');
+  const theo=n?L.reduce((a,b)=>a+1-Math.pow(Q_SET,b.window),0)/n:0;
+  const avgHit=W.length?W.reduce((a,b)=>a+b.step,0)/W.length:0;
+  let streak=0,maxStreak=0; for(const b of L){if(b.result==='loss'){streak++;maxStreak=Math.max(maxStreak,streak)}else streak=0;}
+  const rate=a=>a.length?pct(a.filter(b=>b.result==='win').length/a.length)+` of ${a.length}`:'–';
+  $('succ').innerHTML=[
+    ['Won',`<span class="pos">${W.length}</span>`],['Lost',`<span class="neg">${Lo.length}</span>`],
+    ['Win rate',n?pct(W.length/n):'–'],['Theory for these windows',n?pct(theo):'–'],
+    ['Best-moment bets',rate(L.filter(b=>b.src==='best'))],['Wait-limit bets',rate(L.filter(b=>b.src==='limit'))],
+    ['Avg. hit on spin',W.length?avgHit.toFixed(1):'–'],
+    ['Profit from wins',`<span class="pos">${sfmt(W.reduce((a,b)=>a+b.pl,0),cur)}</span>`],
+    ['Cost of losses',`<span class="neg">${sfmt(Lo.reduce((a,b)=>a+b.pl,0),cur)}</span>`],
+    ['Longest losing run',maxStreak],['Current losing run',streak],
+  ].map(([k,v])=>`<div><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
+  const groups={};
+  for(const b of L){const g=groups[b.window]||(groups[b.window]={n:0,w:0,pl:0});g.n++;if(b.result==='win')g.w++;g.pl+=b.pl;}
+  const keys=Object.keys(groups).map(Number).sort((a,b)=>a-b);
+  $('succTable').innerHTML=keys.length?keys.map(k=>{const g=groups[k];return `<tr><td>${k} spin${k>1?'s':''}</td><td class="num">${g.n}</td><td class="num pos">${g.w}</td><td class="num neg">${g.n-g.w}</td><td class="num">${pct(g.w/g.n)}</td><td class="num">${pct(1-Math.pow(Q_SET,k))}</td><td class="num ${g.pl>=0?'pos':'neg'}">${sfmt(g.pl,cur)}</td></tr>`}).join('')
+    :`<tr><td colspan="7" class="empty" style="text-align:left">No closed window yet. Tap “+50 random” to see it in action.</td></tr>`;
+}
+
+function renderPlan(R){
+  const cfg=state.cfg, cur=cfg.cur, unit=4*cfg.chip;
+  $('h_wait').textContent=`Watches ${R.obs} spin${R.obs>1?'s':''}, then bets at the best moment; never idles more than ${R.waitR}.`;
+  const W=Math.max(cfg.maxw,1), u=planUnits(W), total=u.reduce((a,x)=>a+x,0)*unit;
+  let cum=0;
+  const rows=u.map((x,i)=>{const s=x*unit;cum+=s;const prof=PAYOUT*s-(cum-s);
+    return `<tr><td class="num">${i+1}</td><td class="num">${fmt(x*cfg.chip,cur)}</td><td class="num">${fmt(s,cur)}</td><td class="num">${fmt(cum,cur)}</td><td class="num pos">${sfmt(prof,cur)}</td><td class="num">${pct(1-Math.pow(Q_SET,i+1))}</td></tr>`}).join('');
+  $('plan').innerHTML=`Max loss of a full ${W}-spin window: <span class="mono">${fmt(total,cur)}</span> · Expected value: <span class="mono">−2.70%</span> of stake
+    <div class="tablewrap" style="margin-top:8px;max-height:300px;overflow-y:auto"><table>
+    <thead><tr><th>Spin</th><th>Per number</th><th>Total bet</th><th>Total staked</th><th>Net if one hits</th><th>Chance by this spin</th></tr></thead>
+    <tbody>${rows}</tbody></table></div>`;
+}
+
+function drawWheel(hits,N,hl){
+  const cx=160,cy=160,R1=150,R2=118,R3=84,seg=2*Math.PI/37,exp=N/37||1;
+  const pt=(r,a)=>[cx+r*Math.sin(a),cy-r*Math.cos(a)];
+  const arc=(ro,ri,a0,a1)=>{const[a,b]=pt(ro,a0),[c,d]=pt(ro,a1),[e,f]=pt(ri,a1),[g,h]=pt(ri,a0);
+    return `M${a.toFixed(2)},${b.toFixed(2)}A${ro},${ro} 0 0 1 ${c.toFixed(2)},${d.toFixed(2)}L${e.toFixed(2)},${f.toFixed(2)}A${ri},${ri} 0 0 0 ${g.toFixed(2)},${h.toFixed(2)}Z`;};
+  let s='';
+  WHEEL.forEach((n,i)=>{
+    const a0=i*seg-seg/2,a1=a0+seg, col=n===0?'var(--zero)':RED.has(n)?'var(--red)':'var(--black)';
+    s+=`<path d="${arc(R1,R2,a0,a1)}" fill="${col}" stroke="${hl.has(n)?'var(--brass)':'var(--panel)'}" stroke-width="${hl.has(n)?3:1}"/>`;
+    const [tx,ty]=pt((R1+R2)/2,i*seg);
+    s+=`<text x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" fill="#fff" font-size="11" font-family="IBM Plex Mono,monospace" font-weight="600" text-anchor="middle" dominant-baseline="central" transform="rotate(${(i*360/37).toFixed(2)} ${tx.toFixed(1)} ${ty.toFixed(1)})">${n}</text>`;
+    const dev=N?Math.max(-1,Math.min(1,(hits[n]-exp)/Math.max(1.5,Math.sqrt(exp)*2))):0;
+    const op=(0.12+Math.abs(dev)*0.88).toFixed(2), flat=Math.abs(dev)<0.05;
+    s+=`<path d="${arc(R2-2,R3,a0,a1)}" fill="${flat?'var(--line)':dev>=0?'var(--hot)':'var(--cold)'}" fill-opacity="${flat?1:op}" stroke="${hl.has(n)?'var(--brass)':'var(--panel)'}" stroke-width="${hl.has(n)?2.5:1}"/>`;
+    const [hx,hy]=pt((R2+R3)/2,i*seg);
+    s+=`<text x="${hx.toFixed(1)}" y="${hy.toFixed(1)}" fill="var(--fg)" font-size="9" font-family="IBM Plex Mono,monospace" text-anchor="middle" dominant-baseline="central">${hits[n]}</text>`;
+  });
+  s+=`<circle cx="${cx}" cy="${cy}" r="${R3-4}" fill="var(--felt)"/>`;
+  s+=`<text x="${cx}" y="${cy-8}" fill="#fff" font-size="26" font-family="Bricolage Grotesque,sans-serif" font-weight="800" text-anchor="middle">${state.spins.length?state.spins[state.spins.length-1]:'–'}</text>`;
+  s+=`<text x="${cx}" y="${cy+18}" fill="#fff" fill-opacity=".75" font-size="10" font-family="IBM Plex Sans,sans-serif" text-anchor="middle">last · expected ${exp.toFixed(1)}/number</text>`;
+  $('wheel').innerHTML=s;
+}
+
+/* ---------- actions ---------- */
+function addSpins(arr){if(!arr.length)return;state.spins.push(...arr);save();render();}
+$('pad').addEventListener('click',e=>{const b=e.target.closest('button[data-n]');if(b)addSpins([+b.dataset.n]);});
+function rnd50(){const a=new Uint32Array(50);crypto.getRandomValues(a);state.demo=false;addSpins(Array.from(a,x=>x%37));}
+$('test50').addEventListener('click',rnd50);$('test50b').addEventListener('click',rnd50);
+$('undo').addEventListener('click',()=>{state.spins.pop();save();render();});
+function parseBulk(){const v=$('bulkIn').value.split(/[^0-9]+/).filter(Boolean).map(Number).filter(n=>n>=0&&n<=36);$('bulkIn').value='';addSpins(v);}
+$('bulkAdd').addEventListener('click',parseBulk);
+$('bulkIn').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();parseBulk();}});
+$('clearDemo').addEventListener('click',()=>{state.spins=[];state.demo=false;save();render();});
+function wireReset(){
+  $('reset').addEventListener('click',()=>{
+    $('resetWrap').innerHTML=`<span class="confirm">Delete ${state.spins.length} spins? <button class="btn danger" id="resetYes">Yes, delete</button><button class="btn" id="resetNo">No</button></span>`;
+    $('resetYes').onclick=()=>{state.spins=[];state.demo=false;save();restoreReset();render();};
+    $('resetNo').onclick=restoreReset;
+  });
+}
+function restoreReset(){$('resetWrap').innerHTML='<button class="btn danger" id="reset">New session</button>';wireReset();}
+wireReset();
+$('exportBtn').addEventListener('click',async()=>{
+  const txt=state.spins.join(' ');
+  try{await navigator.clipboard.writeText(txt);$('exportBtn').textContent='Copied';}
+  catch(e){$('bulkIn').value=txt;$('bulkIn').select();$('exportBtn').textContent='Selected in field';}
+  setTimeout(()=>$('exportBtn').textContent='Copy history',1600);
+});
+let kbuf='',ktimer=null;
+document.addEventListener('keydown',e=>{
+  if(e.target.closest('input,select,textarea'))return;
+  if(/^[0-9]$/.test(e.key)){kbuf+=e.key;clearTimeout(ktimer);
+    if(kbuf.length===2||(kbuf.length===1&&+kbuf>3)){const n=+kbuf;kbuf='';if(n<=36)addSpins([n]);}
+    else ktimer=setTimeout(()=>{const n=+kbuf;kbuf='';if(n<=36)addSpins([n]);},700);}
+  else if(e.key==='Backspace'||(e.key==='z'&&(e.ctrlKey||e.metaKey))){e.preventDefault();state.spins.pop();save();render();}
+});
+$('sortSel').addEventListener('change',e=>{sortMode=e.target.value;render();});
+
+// settings
+const F={engine:'f_engine',chip:'f_chip',cur:'f_cur',bank:'f_bank',minw:'f_minw',maxw:'f_maxw',filter:'f_filter',wait:'f_wait',neigh:'f_neigh',brakeN:'f_brakeN',brakeS:'f_brakeS'};
+const CHK={fGap:'f_fGap',fCold:'f_fCold',fGrav:'f_fGrav',fGroup:'f_fGroup'};
+const NUMS=new Set(['chip','bank','minw','maxw','wait','brakeN','brakeS']), ZERO_OK=new Set(['bank','brakeN']);
+function fillForm(){for(const[k,id]of Object.entries(F))$(id).value=state.cfg[k];for(const[k,id]of Object.entries(CHK))$(id).checked=!!state.cfg[k];}
+$('form').addEventListener('change',()=>{
+  const c={...state.cfg};
+  for(const[k,id]of Object.entries(F)){let v=$(id).value;if(NUMS.has(k)){v=parseFloat(String(v).replace(',','.'));if(!isFinite(v)||v<0||(v===0&&!ZERO_OK.has(k)))v=DEFAULTS[k];}c[k]=v;}
+  for(const[k,id]of Object.entries(CHK))c[k]=$(id).checked;
+  c.minw=Math.round(Math.min(Math.max(c.minw,1),20));c.maxw=Math.round(Math.min(Math.max(c.maxw,c.minw),20));
+  for(const k of ['wait','brakeN','brakeS'])c[k]=Math.round(c[k]);
+  if(!String(c.cur).trim())c.cur=DEFAULTS.cur;
+  state.cfg=c;fillForm();save();render();
+});
+
+// lab
+$('labBtn').addEventListener('click',()=>{
+  const n=+$('labN').value,buf=new Uint32Array(n);
+  for(let i=0;i<n;i+=16384)crypto.getRandomValues(buf.subarray(i,Math.min(n,i+16384)));
+  const spins=Array.from(buf,x=>x%37);
+  $('labBtn').disabled=true;$('labBtn').textContent='Running…';
+  setTimeout(()=>{
+    const base=state.cfg,cur=base.cur;
+    const runs=[
+      ['Your settings',{...base}],
+      ['Score, all 4 factors',{...base,engine:'score',fGap:true,fCold:true,fGrav:true,fGroup:true}],
+      ['Gap only (γ)',{...base,engine:'score',fGap:true,fCold:false,fGrav:false,fGroup:false}],
+      ['Random 4 numbers',{...base,engine:'random'}],
+    ];
+    let curve=null;
+    const res=runs.map(([name,cfg],k)=>{
+      const R=replay(spins,cfg,{noScores:true,curve:k===0});
+      if(k===0)curve=R.curve;
+      const L=R.log,w=L.filter(b=>b.result==='win').length;
+      const theo=L.length?L.reduce((a,b)=>a+1-Math.pow(Q_SET,b.window),0)/L.length:0, wr=L.length?w/L.length:0;
+      return {name,n:L.length,wr,theo,edge:wr-theo,staked:R.staked,roi:R.staked?R.pl/R.staked:0,dd:R.maxDD};
+    });
+    $('labTable').innerHTML=res.map(r=>`<tr><td>${r.name}</td><td class="num">${r.n}</td><td class="num">${pct(r.wr)}</td><td class="num">${pct(r.theo)}</td>
+      <td class="num ${r.edge>=0?'pos':'neg'}">${(r.edge>=0?'+':'')+(r.edge*100).toFixed(2)} pp</td><td class="num">${fmt(r.staked,cur)}</td>
+      <td class="num ${r.roi>=0?'pos':'neg'}">${pct(r.roi,2)}</td><td class="num neg">${fmt(r.dd,cur)}</td></tr>`).join('');
+    $('labNote').innerHTML=`<b>How to read it:</b> “Edge” is win rate minus the theoretical chance for the same window lengths. A picker that could predict the wheel would stay clearly above zero on every run. The line shows your settings' P/L over the run.`;
+    drawCurve(curve);
+    $('labBtn').disabled=false;$('labBtn').textContent='Run again';
+  },30);
+});
+function drawCurve(pts){
+  const cv=$('simChart');cv.hidden=false;
+  const dpr=window.devicePixelRatio||1,w=cv.clientWidth,h=160;cv.width=w*dpr;cv.height=h*dpr;
+  const g=cv.getContext('2d');g.scale(dpr,dpr);
+  const cs=getComputedStyle(document.documentElement);
+  const min=Math.min(0,...pts),max=Math.max(0,...pts),pad=8;
+  const X=i=>pad+(w-2*pad)*i/(pts.length-1||1),Y=v=>pad+(h-2*pad)*(1-(v-min)/((max-min)||1));
+  g.strokeStyle=cs.getPropertyValue('--line');g.lineWidth=1;g.beginPath();g.moveTo(pad,Y(0));g.lineTo(w-pad,Y(0));g.stroke();
+  const end=pts[pts.length-1];
+  g.strokeStyle=cs.getPropertyValue(end>=0?'--good':'--bad');g.lineWidth=1.8;g.beginPath();
+  pts.forEach((v,i)=>i?g.lineTo(X(i),Y(v)):g.moveTo(X(i),Y(v)));g.stroke();
+  g.fillStyle=cs.getPropertyValue('--muted');g.font='11px IBM Plex Mono, monospace';
+  g.fillText('0',2,Y(0)-3);g.fillText(max.toFixed(0),2,pad+9);g.fillText(min.toFixed(0),2,h-3);
+}
+
+/* ---------- boot ---------- */
+if(!load()){state.spins=demoSpins();state.demo=true;}
+fillForm();render();
+})();
+</script>
+
+</body>
+</html>
