@@ -237,14 +237,19 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
       </section>
 
       <section class="panel">
-        <header><h2>Test</h2><span class="eyebrow">1,000,000 random spins · same settings</span></header>
-        <button class="btn primary" id="labBtn">Run test</button>
-        <div class="tablewrap" style="margin-top:10px">
-          <table>
-            <thead><tr><th>Picks</th><th>Windows</th><th>Win rate</th><th>Theory</th><th>P/L</th><th>ROI</th></tr></thead>
-            <tbody id="labTable"><tr><td colspan="6" class="empty" style="text-align:left">Compares your top-4 coefficient picks with 4 random numbers.</td></tr></tbody>
-          </table>
+        <header><h2>Test: play a session</h2><span class="eyebrow">your settings on random spins</span></header>
+        <div class="ctl">
+          <label class="eyebrow" for="t_spins">Spins played</label>
+          <input id="t_spins" type="number" min="10" max="5000" value="300" style="width:90px;border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:6px 8px">
+          <select id="t_n" aria-label="How many sessions">
+            <option value="1">1 session</option>
+            <option value="100">100 sessions</option>
+            <option value="1000" selected>1,000 sessions</option>
+            <option value="10000">10,000 sessions</option>
+          </select>
+          <button class="btn primary" id="labBtn">Play</button>
         </div>
+        <div id="labOut"><p class="note" style="margin-top:10px">Each session: you watch the observation spins first (not counted), then play the spins above with your settings. The same sessions are also played with 4 random numbers and no waiting, to see if the analysis makes a difference.</p></div>
       </section>
     </div>
   </div>
@@ -420,15 +425,37 @@ $('form').onchange=()=>{
 };
 
 $('labBtn').onclick=()=>{
-  $('labBtn').disabled=true;$('labBtn').textContent='Running…';
+  $('labBtn').disabled=true;$('labBtn').textContent='Playing…';
   setTimeout(()=>{
-    const n=1000000,b=new Uint32Array(n);for(let i=0;i<n;i+=16384)crypto.getRandomValues(b.subarray(i,Math.min(n,i+16384)));
-    const s=Array.from(b,x=>x%37),cfg=state.cfg,c=cfg.cur,theo=1-Math.pow(Q4,cfg.spins);
-    $('labTable').innerHTML=[['Top 4 by coefficient',{}],['4 random numbers',{random:true}]].map(([name,o])=>{
-      const R=run(s,cfg,{...o,noLog:true}),w=R.wins+R.losses;
-      return `<tr><td>${name}</td><td class="num">${w}</td><td class="num">${pct(w?R.wins/w:0)}</td><td class="num">${pct(theo)}</td>
-        <td class="num ${R.pl>=0?'pos':'neg'}">${sf(R.pl,c)}</td><td class="num ${R.pl>=0?'pos':'neg'}">${pct(R.staked?R.pl/R.staked:0,2)}</td></tr>`;}).join('');
-    $('labBtn').disabled=false;$('labBtn').textContent='Run again';
+    const cfg=state.cfg,c=cfg.cur,play=Math.round(Math.min(5000,Math.max(10,+$('t_spins').value||300))),n=+$('t_n').value,len=cfg.look+play;
+    const buf=new Uint32Array(16384);let bi=buf.length;const r=()=>{if(bi>=buf.length){crypto.getRandomValues(buf);bi=0;}return buf[bi++]%37;};
+    const A=[],B=[];let stA=0,stB=0;
+    for(let k=0;k<n;k++){
+      const s=new Array(len);for(let i=0;i<len;i++)s[i]=r();
+      const a=run(s,cfg,{noLog:true}),b=run(s,{...cfg,minK:0},{noLog:true,random:true});
+      // a window still open at the end counts with what it has lost so far
+      A.push(a.pl);B.push(b.pl);stA+=a.staked;stB+=b.staked;
+    }
+    const stats=(v,st)=>{const x=v.slice().sort((p,q)=>p-q),q=f=>x[Math.min(x.length-1,Math.floor(f*x.length))];
+      return {up:x.filter(y=>y>0).length/x.length,avg:x.reduce((p,y)=>p+y,0)/x.length,med:q(.5),lo:q(.1),hi:q(.9),min:x[0],max:x[x.length-1],st:st/x.length};};
+    const a=stats(A,stA),b=stats(B,stB);
+    if(n===1){
+      $('labOut').innerHTML=`<div class="simres" style="margin-top:10px">
+        <div><span class="eyebrow">Your strategy</span><b class="${A[0]>=0?'pos':'neg'}">${sf(A[0],c)}</b></div>
+        <div><span class="eyebrow">Random 4 numbers</span><b class="${B[0]>=0?'pos':'neg'}">${sf(B[0],c)}</b></div>
+        <div><span class="eyebrow">You staked</span><b>${fmt(a.st,c)}</b></div></div>
+        <p class="note">One evening of ${play} spins. Tap Play again for another one, or pick 1,000 sessions to see what usually happens.</p>`;
+    }else{
+      const row=(name,s)=>`<tr><td>${name}</td><td class="num">${pct(s.up,0)}</td><td class="num ${s.avg>=0?'pos':'neg'}">${sf(s.avg,c)}</td><td class="num">${sf(s.med,c)}</td>
+        <td class="num">${sf(s.lo,c)} … ${sf(s.hi,c)}</td><td class="num">${sf(s.min,c)} / ${sf(s.max,c)}</td><td class="num">${fmt(s.st,c)}</td></tr>`;
+      const ten=Math.round(a.up*10);
+      $('labOut').innerHTML=`<p style="margin:12px 0 4px;font-size:16px">Out of 10 evenings of ${play} spins, about <b class="pos">${ten} end in profit</b> and <b class="neg">${10-ten} in a loss</b>. On average you end <b class="${a.avg>=0?'pos':'neg'}">${sf(a.avg,c)}</b>.</p>
+        <div class="tablewrap" style="margin-top:10px"><table>
+        <thead><tr><th>Strategy</th><th>In profit</th><th>Average</th><th>Typical</th><th>8 of 10 end between</th><th>Worst / best</th><th>Staked</th></tr></thead>
+        <tbody>${row('Your strategy',a)}${row('Random 4, no waiting',b)}</tbody></table></div>
+        <p class="note">If waiting for the coefficient helped, the first row would be clearly better than the second. Run it a few times: the two rows trade places by chance, and both average a loss of about 2.7% of what you staked.</p>`;
+    }
+    $('labBtn').disabled=false;$('labBtn').textContent='Play again';
   },30);
 };
 
