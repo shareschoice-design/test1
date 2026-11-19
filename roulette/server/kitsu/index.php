@@ -19,7 +19,7 @@ page_head('Kitsu Oracle – anime roulette companion');
     <li><b>Session score:</b> hits, combos, profit and loss</li>
     <li>Works on your phone, right in the browser</li>
   </ul>
-  <div id="pp-buttons" style="min-height:50px;max-width:420px;width:100%;justify-self:center"></div>
+  <div id="pp-buttons" style="color-scheme:light;min-height:50px;max-width:420px;width:100%;justify-self:center"></div>
   <div id="payMsg"></div>
   <p class="fine">Pay with PayPal or card. Access opens right after payment on this device; on other devices log in with your PayPal e-mail.</p>
 </section>
