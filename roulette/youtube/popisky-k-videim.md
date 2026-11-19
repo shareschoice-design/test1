@@ -10,6 +10,28 @@ Which method should Kitsu try next? 👇
 
 ---
 
+## KANÁL (YouTube Studio → Přizpůsobení → Základní informace)
+
+**Popis kanálu:**
+```
+Can an anime fox spirit predict roulette? 🦊
+
+Meet Kitsu, a fox oracle who tries a new "prediction method" every episode: Pythagoras, sleeping numbers, high-roller runs and 100-spin marathons. Every spin in the videos is genuinely random and unedited, so you'll see her wins and her fails.
+
+📺 New Shorts every day · new episode every week
+🦊 Play with Kitsu yourself: https://ggfrog.com/kitsu/index.php
+💬 Tell Kitsu which method to try next in the comments!
+
+Entertainment only. Simulated money, random numbers. Roulette cannot be predicted. Never bet money you can't afford to lose. 18+
+```
+
+**Odkazy (sekce „Odkazy“):**
+- Název: `Play with Kitsu 🦊` · URL: `https://ggfrog.com/kitsu/index.php`
+
+**Kontaktní e-mail:** `frog@ggfrog.com`
+
+---
+
 ## SHORTS
 
 ### s1.mp4
