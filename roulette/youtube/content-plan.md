@@ -3,7 +3,7 @@
 Format of the channel: **"Can a fox spirit predict roulette?"** Kitsu, an anime fox oracle, gives 4 numbers to bet after every spin, using a new "method" each episode. The videos show the Kitsu Oracle app being used: a number is tapped in, Kitsu reacts and gives the next 4 picks with the bet size. Every number in the videos is genuinely random and unedited.
 
 Put the app link first in every description and pin it as a comment:
-> 🦊 Play with Kitsu: https://ggfrog.com/kitsu
+> 🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
 
 Put this line at the end of every description:
 > Entertainment only. Kitsu's numbers are random picks and the money shown is simulated. Roulette cannot be predicted; never bet money you can't afford to lose. 18+
@@ -25,7 +25,7 @@ Pinned comment idea for every video: **"Which method should Kitsu try next? 👇
 **Short description template**
 ```
 Kitsu the fox oracle tries [METHOD] on 10 random roulette numbers. Did the fox spirit see it coming? 🦊
-Play with Kitsu: https://ggfrog.com/kitsu 🦊
+Play with Kitsu: https://ggfrog.com/kitsu/index.php 🦊
 Full episodes on the channel ▶️
 #anime #roulette #shorts #kitsune #math
 Entertainment only. Simulated money, random numbers. Roulette cannot be predicted. 18+

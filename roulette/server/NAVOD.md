@@ -14,7 +14,7 @@ Otevři `kitsu/config.php` a vyplň:
 - `paypal_client`, `paypal_secret`: klíče z kroku 1
 - `paypal_mode`: nech `'sandbox'`, dokud netestuješ
 - `price`: cena, třeba `'9.99'`; `access_days`: `0` = navždy, `30` = měsíc
-- `mail_from`: adresa na tvé doméně, třeba `kitsu@ggfrog.com` (ať e-maily nepadají do spamu)
+- `mail_from`: adresa na tvé doméně, třeba `frog@ggfrog.com` (ať e-maily nepadají do spamu)
 - `secret`: libovolný dlouhý náhodný text (vyplň jednou a už neměň)
 
 ## 3. Nahrání

@@ -16,7 +16,7 @@ return [
   'access_days'   => 0,                    // 0 = lifetime access, 30 = one month, …
 
   // E-mails (login links). The address should be on your domain.
-  'mail_from'     => 'kitsu@ggfrog.com',
+  'mail_from'     => 'frog@ggfrog.com',
   'mail_name'     => 'Kitsu Oracle',
   'mail_log_only' => false,                // true = write e-mails to data/mail.log instead of sending (testing)
 
