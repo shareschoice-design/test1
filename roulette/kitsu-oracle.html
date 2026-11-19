@@ -153,7 +153,7 @@ button{font:inherit;cursor:pointer}
   </div>
 
   <button class="btn ghost" id="bReset">Reset show</button>
-  <p class="foot">For fun. Every spin is random and nobody can predict it, not even a fox spirit. The scoreboard keeps Kitsu honest: watch her hit rate settle near 10.8%, the same as picking any 4 numbers. Coins are play money: you bet on 4 numbers and a hit pays 36 for 1. Pythagoras mode: c = √(a² + b²) from the last two numbers, then c and its wheel neighbours are bet. It looks clever and is exactly as random as any other pick.</p>
+  <p class="foot">Entertainment only. Roulette spins are random; coins are play money. Never bet money you can't afford to lose.</p>
 </div>
 <div class="burst" id="burst"></div>
 
@@ -221,7 +221,6 @@ function settle(n){
     if(hit){S.hits++;S.combo++;S.best=Math.max(S.best,S.combo);S.coins+=36*st;mood('happy');say(pick(LINES.hit));burst(S.combo>1?`COMBO ×${S.combo}!`:'SUGOI!');}
     else{S.combo=0;mood('sad');say(pick(LINES.miss));}
     if(hit)[...$('picks').children].forEach(el=>{if(+el.textContent===n)el.classList.add('hit');});
-    if(S.rounds%20===0)setTimeout(()=>{mood('idle');say(`Psst… after ${S.rounds} rounds my hit rate is ${(S.hits/S.rounds*100).toFixed(1)}%. Pure luck is 10.8%. Maybe I can't see the future~`);},1400);
     cur=null;
   }
   save();board();
