@@ -49,6 +49,11 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 .formula small{display:block;font-family:var(--body);font-size:12px;color:var(--dim);text-shadow:none;margin-top:2px}
 .stake{font-family:var(--display);font-size:30px;line-height:1}
 .stake small{display:block;font-family:var(--body);font-size:13px;color:var(--dim);font-weight:800;margin-top:6px}
+.series{display:grid;gap:6px;justify-items:center;font-weight:800;color:var(--dim);font-size:13px}
+.dots{display:flex;gap:4px;flex-wrap:wrap;justify-content:center}
+.dots i{width:12px;height:12px;border-radius:50%;background:#2b1a4d;border:2px solid var(--line)}
+.dots i.miss{background:var(--pink);border-color:var(--pink)}
+.dots i.now{background:var(--gold);border-color:var(--gold);box-shadow:0 0 10px var(--gold)}
 .wait{color:var(--dim);font-weight:800;padding:8px 0}
 .padlabel{font-family:var(--display);font-size:16px;color:var(--cyan);letter-spacing:.06em}
 .table{display:grid;grid-template-columns:1.2fr repeat(12,minmax(0,1fr));grid-template-rows:repeat(3,44px);gap:3px;width:100%;padding:6px;border-radius:14px;background:#0f4a37;box-shadow:0 0 0 3px var(--gold),0 0 22px rgba(255,210,61,.25)}
@@ -114,6 +119,7 @@ button{font:inherit;cursor:pointer}
 
   <section class="card" aria-live="polite">
     <div class="head">NEXT SPIN · BET THESE 4</div>
+    <div class="series" id="series"></div>
     <div class="picks" id="picks"></div>
     <div class="formula" id="formula"></div>
     <div class="stake" id="stake"></div>
@@ -136,6 +142,7 @@ button{font:inherit;cursor:pointer}
 
   <section class="mm">
     <h2>MONEY MANAGEMENT</h2>
+    <div class="seg" id="hold"><span class="lbl">Keep the same 4 numbers for</span><button data-v="1">1 spin</button><button data-v="5">5</button><button data-v="10">10</button><button data-v="15">15</button><button data-v="20">20 spins</button></div>
     <div class="seg" id="base"><span class="lbl">Base bet per number</span><button data-v="0.1">€0.10</button><button data-v="0.2">€0.20</button><button data-v="0.5">€0.50</button><button data-v="1">€1</button><button data-v="2">€2</button></div>
     <div class="seg" id="prog"><span class="lbl">After a miss, raise the bet by</span><button data-v="0">0%</button><button data-v="10">10%</button><button data-v="20">20%</button><button data-v="35">35%</button><button data-v="50">50%</button></div>
     <div class="seg" id="cap"><span class="lbl">Max bet per number</span><button data-v="1">€1</button><button data-v="2">€2</button><button data-v="5">€5</button><button data-v="10">€10</button></div>
@@ -159,11 +166,12 @@ const LINES={
   miss:["Ehh?! The wheel cheated!","Mou~ next one for sure!","Hmph. Lucky wheel.","That… was a test. Yes."],
 };
 const KEY='kitsu-player-v2';
-const FRESH={hist:[],won:[],rounds:0,hits:0,combo:0,best:0,pl:0,step:0};
-let S={...FRESH,method:'pyth',base:0.2,prog:20,cap:2}, cur=null; const undo=[];
+const FRESH={hist:[],won:[],rounds:0,hits:0,combo:0,best:0,pl:0,step:0,cur:null,f:'',inS:0};
+let S={...FRESH,method:'pyth',base:0.2,prog:20,cap:2,hold:10}, cur=null; const undo=[];
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s)S={...S,...s};}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
 const eur=v=>(v<0?'−':v>0?'+':'')+'€'+Math.abs(v).toFixed(2);
+const stakeAt=k=>Math.min(S.cap,Math.max(S.base,Math.ceil(S.base*Math.pow(1+S.prog/100,k)*20-1e-9)/20));
 const stakeNow=()=>Math.min(S.cap,Math.max(S.base,Math.ceil(S.base*Math.pow(1+S.prog/100,S.step)*20-1e-9)/20));
 
 // number table: 0 + three rows of 12
@@ -183,29 +191,32 @@ function burst(t){const b=$('burst');b.textContent=t;b.classList.remove('go');vo
 function predict(talk=true){
   const h=S.hist;
   if(S.method==='pyth'){
-    if(h.length<2){cur=null;$('formula').innerHTML='';if(talk)say(h.length?`Got ${h[0]}! One more number and I can calculate~`:"Tap the last two numbers from your table and I'll calculate~");return;}
+    if(h.length<2){cur=S.cur=null;$('formula').innerHTML='';if(talk)say(h.length?`Got ${h[0]}! One more number and I can calculate~`:"Tap the last two numbers from your table and I'll calculate~");return;}
     const a=h[h.length-2],b=h[h.length-1],c=Math.sqrt(a*a+b*b),r=Math.round(c)%37,i=WHEEL.indexOf(r);
     cur=[WHEEL[(i+36)%37],r,WHEEL[(i+1)%37],WHEEL[(i+2)%37]];
     $('formula').innerHTML=`√(${a}² + ${b}²) = ${c.toFixed(2)} → ${r}<small>${Math.round(c)>36?`${Math.round(c)} wraps around to ${r} · `:''}${r} and its neighbours on the wheel</small>`;
   }else{
-    if(h.length<1){cur=null;$('formula').innerHTML='';if(talk)say("Tap a few numbers from your table so I can sense the sleeping ones~");return;}
+    if(h.length<1){cur=S.cur=null;$('formula').innerHTML='';if(talk)say("Tap a few numbers from your table so I can sense the sleeping ones~");return;}
     const last=new Map();h.forEach((n,i)=>last.set(n,i));
     const cand=Array.from({length:37},(_,n)=>({n,g:last.has(n)?h.length-last.get(n):1000+((n*13+5)%37)}));
     cand.sort((x,y)=>y.g-x.g||x.n-y.n);cur=cand.slice(0,4).map(x=>x.n).sort((x,y)=>x-y);
     $('formula').innerHTML=`Sleeping the longest<small>these 4 numbers haven't landed for the longest time</small>`;
   }
+  S.cur=cur;S.f=$('formula').innerHTML;S.inS=0;S.step=0;S.sStart=S.pl;
   if(talk){mood('idle');say(pick(LINES[S.method]));}
 }
+function restore(){cur=S.cur||null;$('formula').innerHTML=cur?S.f:'';}
 function render(hitNum){
   $('picks').innerHTML=cur?cur.map(n=>`<span class="chip c-${col(n)} ${n===hitNum?'hit':''}">${n}</span>`).join(''):'';
-  const st=stakeNow();
-  $('stake').innerHTML=cur?`€${st.toFixed(2)} on each<small>total €${(4*st).toFixed(2)} · a hit pays +€${(32*st).toFixed(2)}${S.step?` · ${S.step} miss${S.step>1?'es':''} in a row`:''}</small>`
+  const st=stakeNow();let risk=0;for(let k=S.step;k<S.step+Math.max(1,S.hold-S.inS);k++)risk+=4*stakeAt(k);
+  $('series').innerHTML=cur&&S.hold>1?`Spin ${S.inS+1} of ${S.hold} with these numbers<div class="dots">${Array.from({length:S.hold},(_,k)=>`<i class="${k<S.inS?'miss':k===S.inS?'now':''}"></i>`).join('')}</div>`:'';
+  $('stake').innerHTML=cur?`€${st.toFixed(2)} on each<small>total €${(4*st).toFixed(2)} · hit now: series ${eur(Math.round((S.pl-(S.sStart??S.pl)+32*st)*100)/100)}${S.hold>1?`<br>rest of this series can cost up to €${risk.toFixed(2)}`:''}</small>`
     :`<div class="wait">Waiting for your numbers…</div>`;
   const ps=new Set(cur||[]);[...$('table').children].forEach(b=>b.classList.toggle('pick',ps.has(+b.dataset.n)));
   $('strip').innerHTML=S.hist.slice(-14).map((n,i,a)=>`<span class="c-${col(n)} ${i===a.length-1?'last':''} ${S.won.includes(S.hist.length-a.length+i)?'won':''}">${n}</span>`).join('');
   $('sRounds').textContent=S.rounds;$('sHits').textContent=S.hits;$('sCombo').textContent=`${S.combo} / ${S.best}`;
   $('sPL').textContent=eur(S.pl);$('sPL').style.color=S.pl>0?'var(--cyan)':S.pl<0?'var(--pink)':'';
-  for(const [id,k] of [['method','method'],['base','base'],['prog','prog'],['cap','cap']])
+  for(const [id,k] of [['method','method'],['hold','hold'],['base','base'],['prog','prog'],['cap','cap']])
     [...$(id).querySelectorAll('button')].forEach(b=>b.classList.toggle('on',String(b.dataset.m??b.dataset.v)===String(S[k])));
 }
 let lock=false;
@@ -217,18 +228,20 @@ function enter(n){
     if(hit){S.hits++;S.combo++;S.best=Math.max(S.best,S.combo);S.pl=Math.round((S.pl+32*st)*100)/100;S.step=0;S.won.push(S.hist.length);hitNum=n;
       mood('happy');say(pick(LINES.hit));burst(S.combo>1?`COMBO ×${S.combo}!`:'SUGOI!');}
     else{S.combo=0;S.pl=Math.round((S.pl-4*st)*100)/100;S.step++;mood('sad');say(pick(LINES.miss));}
+    S.inS++;
   }
   S.hist.push(n);if(S.hist.length>400){S.hist.shift();S.won=S.won.map(i=>i-1).filter(i=>i>=0);}
   save();
-  if(hitNum!==null){render(hitNum);lock=true;setTimeout(()=>{lock=false;predict();render();},1100);}
-  else{const had=!!cur;predict(!had);render();if(had)setTimeout(()=>{if(cur)say(pick(LINES[S.method]));mood('idle');},900);}
+  if(hitNum!==null){render(hitNum);lock=true;setTimeout(()=>{lock=false;predict();save();render();},1100);}
+  else if(!cur||S.inS>=S.hold){const had=!!cur;predict(!had);save();render();if(had)setTimeout(()=>{if(cur)say(S.hold>1?'Series over! New numbers~ '+pick(LINES[S.method]):pick(LINES[S.method]));mood('idle');},900);}
+  else{render();setTimeout(()=>{say(pick(["Same four, stay strong!","Keep going~ they're coming!","Don't give up on them!","Trust the fox. Again!"]));mood('idle');},900);}
 }
 $('table').onclick=e=>{const b=e.target.closest('button[data-n]');if(b)enter(+b.dataset.n);};
 $('bDemo').onclick=()=>{const a=new Uint32Array(1);crypto.getRandomValues(a);enter(a[0]%37);};
-$('bUndo').onclick=()=>{if(lock||!undo.length)return;S=JSON.parse(undo.pop());save();predict(false);render();mood('idle');say('Undone! Tap the right number~');};
-for(const id of ['method','base','prog','cap'])$(id).onclick=e=>{const b=e.target.closest('button');if(!b||lock)return;
-  if(id==='method'){S.method=b.dataset.m;predict();}else S[id]=+b.dataset.v;save();render();};
+$('bUndo').onclick=()=>{if(lock||!undo.length)return;S=JSON.parse(undo.pop());save();restore();render();mood('idle');say('Undone! Tap the right number~');};
+for(const id of ['method','hold','base','prog','cap'])$(id).onclick=e=>{const b=e.target.closest('button');if(!b||lock)return;
+  if(id==='method'){S.method=b.dataset.m;predict();}else{S[id]=+b.dataset.v;if(id==='hold'&&S.inS>=S.hold&&cur)predict();}save();render();};
 $('bReset').onclick=()=>{S={...S,...FRESH,hist:[],won:[]};undo.length=0;save();predict();render();mood('idle');};
-predict(false);render();
+if(S.cur)restore();else predict(false);save();render();
 })();
 </script>
