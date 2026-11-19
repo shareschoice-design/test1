@@ -262,13 +262,26 @@ const DEF={look:150,minK:0,wait:10,spins:10,chip:0.2,aggr:20,maxBet:2,floor:true
 const KEY='roulette-lean-v1', OLD=['four-number-roulette-v1','cluster-roulette-v1'];
 let state={spins:[],cfg:{...DEF}};
 
+function norm(c){ // every setting becomes a valid number, whatever was stored
+  const o={...DEF};
+  for(const k of Object.keys(DEF)){
+    if(k==='cur'){o.cur=String(c.cur??'').trim().slice(0,4)||DEF.cur;continue;}
+    if(k==='floor'){o.floor=c.floor===undefined?DEF.floor:!!c.floor;continue;}
+    const v=parseFloat(String(c[k]??'').replace(',','.'));
+    o[k]=isFinite(v)&&v>=0?v:DEF[k];
+  }
+  o.look=Math.round(Math.min(500,Math.max(37,o.look)));o.wait=Math.max(1,Math.round(o.wait));
+  o.spins=Math.round(Math.min(50,Math.max(1,o.spins||DEF.spins)));o.aggr=Math.min(200,o.aggr);o.minK=Math.min(30,o.minK);
+  if(o.chip<=0)o.chip=DEF.chip;if(o.maxBet<o.chip)o.maxBet=o.chip;if(o.bank<=0)o.bank=DEF.bank;
+  return o;
+}
 const clean=a=>Array.isArray(a)?a.filter(n=>Number.isInteger(n)&&n>=0&&n<=36):[];
 function load(){
   try{
     const s=JSON.parse(localStorage.getItem(KEY)||'null');
-    if(s&&Array.isArray(s.spins)){state={spins:clean(s.spins),cfg:{...DEF,...s.cfg}};return;}
+    if(s&&Array.isArray(s.spins)){state={spins:clean(s.spins),cfg:norm(s.cfg||{})};return;}
     for(const k of OLD){const o=JSON.parse(localStorage.getItem(k)||'null');
-      if(o&&Array.isArray(o.spins)&&!o.demo){const c=o.cfg||{};state={spins:clean(o.spins),cfg:{...DEF,...['chip','aggr','maxBet','floor','bank','cur','spins'].reduce((a,x)=>(c[x]!==undefined&&(a[x]=c[x]),a),{})}};return;}}
+      if(o&&Array.isArray(o.spins)&&!o.demo){const c=o.cfg||{};state={spins:clean(o.spins),cfg:norm({chip:c.chip,aggr:c.aggr,maxBet:c.maxBet,floor:c.floor,bank:c.bank,cur:c.cur})};return;}}
   }catch(e){}
 }
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
@@ -402,11 +415,8 @@ document.addEventListener('keydown',e=>{
 const F=['look','minK','wait','spins','chip','aggr','maxBet','bank','cur'];
 function fill(){F.forEach(k=>$('f_'+k).value=state.cfg[k]);$('f_floor').checked=!!state.cfg.floor;}
 $('form').onchange=()=>{
-  const c={...state.cfg};
-  F.forEach(k=>{let v=$('f_'+k).value;if(k!=='cur'){v=parseFloat(String(v).replace(',','.'));if(!isFinite(v)||v<0)v=DEF[k];}c[k]=v;});
-  c.look=Math.round(Math.min(500,Math.max(37,c.look)));c.wait=Math.max(1,Math.round(c.wait));c.spins=Math.round(Math.min(50,Math.max(1,c.spins)));
-  if(c.chip<=0)c.chip=DEF.chip;if(c.maxBet<c.chip)c.maxBet=c.chip;if(c.bank<=0)c.bank=DEF.bank;if(!String(c.cur).trim())c.cur=DEF.cur;
-  c.floor=$('f_floor').checked;state.cfg=c;fill();save();render();
+  const c={};F.forEach(k=>c[k]=$('f_'+k).value);c.floor=$('f_floor').checked;
+  state.cfg=norm(c);fill();save();render();
 };
 
 $('labBtn').onclick=()=>{
@@ -422,6 +432,6 @@ $('labBtn').onclick=()=>{
   },30);
 };
 
-load();fill();render();
+load();state.cfg=norm(state.cfg);fill();render();
 })();
 </script>
