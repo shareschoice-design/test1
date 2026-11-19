@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}</style>
+<title>Roulette Goal Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: one goal form on top, the big answer next to it, play mode below, comparison last. */
+:root{
+  --bg:#e9efe9; --panel:#f7faf6; --line:#cfdad1; --fg:#11221b; --muted:#56695f;
+  --felt:#1d5a45; --brass:#a5711a; --brass-soft:#f1e3c4; --red:#b8202f;
+  --good:#16794a; --bad:#b8202f;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c1714; --panel:#12211c; --line:#24392f; --fg:#e7efe9; --muted:#93a89c;
+  --felt:#1f6a50; --brass:#e0b45a; --brass-soft:#3a2f17; --red:#d33a48; --good:#3fbf7f; --bad:#ef5a66; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1714; --panel:#12211c; --line:#24392f; --fg:#e7efe9; --muted:#93a89c;
+  --felt:#1f6a50; --brass:#e0b45a; --brass-soft:#3a2f17; --red:#d33a48; --good:#3fbf7f; --bad:#ef5a66; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.45;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:16px 48px}
+.wrap{max-width:1040px;margin:0 auto;display:grid;gap:16px}
+h1,h2{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:800}
+h2{font-size:17px;font-weight:700}
+.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.mono,.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}
+.panel>header{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+.form{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.form label{display:grid;gap:4px;font-size:12.5px;color:var(--muted)}
+.form input,.form select{border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:7px 9px;color:var(--fg);min-width:0}
+.form .wide{grid-column:1/-1}
+.big{font-family:var(--display);font-weight:800;font-size:clamp(44px,8vw,68px);line-height:1;color:var(--felt)}
+.answer{display:grid;gap:10px;align-content:start}
+.answer p{margin:0;color:var(--muted)}
+.answer b{color:var(--fg)}
+.btn{border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:8px 14px;font-weight:500;cursor:pointer}
+.btn:hover{border-color:var(--brass)}
+.btn.win{background:var(--good);border-color:var(--good);color:#fff}
+.btn.lose{background:var(--red);border-color:var(--red);color:#fff}
+.btn:disabled{opacity:.4;cursor:default}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.stake{font-family:var(--mono);font-size:30px;font-weight:600;color:var(--brass)}
+.callout{border:1px solid var(--brass);background:var(--brass-soft);border-radius:8px;padding:12px 14px}
+.done{border-color:var(--good)}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;position:relative}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--felt)}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:7px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+th:first-child,td:first-child{text-align:left}
+tr.best td{background:color-mix(in srgb,var(--good) 12%,transparent)}
+.pbar{display:inline-block;width:80px;height:6px;background:var(--line);border-radius:3px;vertical-align:middle;margin-left:8px;overflow:hidden}
+.pbar i{display:block;height:100%;background:var(--felt)}
+.note{color:var(--muted);font-size:13px;max-width:75ch}
+.pos{color:var(--good)} .neg{color:var(--bad)}
+.log{display:flex;gap:4px;flex-wrap:wrap}
+.log span{font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:10px;color:#fff}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div>
+    <div class="eyebrow">European roulette · the most likely way to reach a goal</div>
+    <h1>Roulette Goal Plan</h1>
+  </div>
+
+  <div class="grid">
+    <section class="panel">
+      <header><h2>Your goal</h2></header>
+      <div class="form" id="form">
+        <label>Bankroll
+          <input id="f_bank" type="number" min="1" step="1">
+        </label>
+        <label>Target
+          <input id="f_target" type="number" min="2" step="1">
+        </label>
+        <label>Currency
+          <input id="f_cur" maxlength="4">
+        </label>
+        <label class="wide">Bet
+          <select id="f_bet"></select>
+        </label>
+        <label class="wide">Table rules
+          <select id="f_rule">
+            <option value="eu">European (single zero)</option>
+            <option value="fr">French with La Partage (half back on zero, even-money bets)</option>
+          </select>
+        </label>
+        <label>Min. bet
+          <input id="f_min" type="number" min="0.1" step="0.1">
+        </label>
+        <label>Table max
+          <input id="f_max" type="number" min="1" step="1">
+        </label>
+      </div>
+    </section>
+
+    <section class="panel answer" id="answer"></section>
+  </div>
+
+  <section class="panel">
+    <header><h2>Play the plan</h2><span class="eyebrow" id="playInfo"></span></header>
+    <div id="play"></div>
+  </section>
+
+  <section class="panel">
+    <header><h2>Every way to play it</h2><span class="eyebrow">same bankroll and target</span></header>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Bet</th><th>Pays</th><th>Bold play: chance</th><th>Avg. bets</th><th>Min. bets every spin: chance</th></tr></thead>
+        <tbody id="cmp"></tbody>
+      </table>
+    </div>
+    <p class="note">Bold play: each bet is the smallest stake that reaches the target if it wins, or everything you have left if that is less. Small bets give the casino's edge many chances to work: on red or a dozen they rarely reach the target. Long-shot bets lose less this way, but bold play still comes out ahead.</p>
+  </section>
+
+  <p class="note">The chances are computed exactly for the bankroll in steps of half the minimum bet, not simulated. Roulette has a negative expected value whatever you do; this plan does not change that, it only gives the highest chance of reaching the target before losing the bankroll. Set the target before you sit down, and leave when you reach it.</p>
+</div>
+
+<script>
+(() => {
+const $=id=>document.getElementById(id);
+const BETS=[
+  {id:'even',name:'Red / black (or odd / even, 1–18 / 19–36)',short:'red',k:1,n:18,even:true},
+  {id:'dozen',name:'Dozen or column (12 numbers)',short:'a dozen',k:2,n:12},
+  {id:'line',name:'Six line (6 numbers)',short:'a six line',k:5,n:6},
+  {id:'corner',name:'Corner (4 numbers)',short:'a corner',k:8,n:4},
+  {id:'street',name:'Street (3 numbers)',short:'a street',k:11,n:3},
+  {id:'split',name:'Split (2 numbers)',short:'a split',k:17,n:2},
+  {id:'single',name:'Single number',short:'one number',k:35,n:1},
+];
+const DEF={bank:100,target:200,cur:'€',bet:'even',rule:'eu',min:1,max:1000};
+const KEY='roulette-goal-v1';
+let cfg={...DEF}, play=null;
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s){cfg={...DEF,...(s.cfg||{})};play=s.play||null;}}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({cfg,play}))}catch(e){}};
+$('f_bet').innerHTML=BETS.map(b=>`<option value="${b.id}">${b.name} · pays ${b.k}:1</option>`).join('');
+
+const fmt=v=>(v<0?'−':'')+cfg.cur+Math.abs(v).toFixed(2).replace(/\.00$/,'');
+const pct=v=>(v*100).toFixed(v>0.995||v<0.005?2:1)+'%';
+
+/* Exact solver on a grid of half-min-bet units.
+   State x = bankroll in units. Policy gives the stake s(x). Outcomes: win -> x + k*s, lose -> x - s,
+   zero under La Partage on even money -> x - s/2. Value iteration until it settles. */
+function solve(bet,c,policy){
+  const u=c.min/2, X=Math.round(c.bank/u), T=Math.round(c.target/u), maxS=Math.max(2,Math.floor(c.max/u/2)*2);
+  if(T<=X)return {p:1,steps:0,stake:()=>0,u};
+  if(T>40000)return null;
+  const pw=bet.n/37, pz=(c.rule==='fr'&&bet.even)?1/37:0, pl=1-pw-pz;
+  const stakeOf=x=>{ // stakes in whole min bets (2 units)
+    let s;
+    if(policy==='bold'){ s=Math.ceil((T-x)/bet.k/2)*2; if(s>x)s=Math.floor(x/2)*2; }
+    else s=2;
+    s=Math.min(s,maxS); return s>=2&&s<=x?s:0;
+  };
+  const S=new Int32Array(T); for(let x=0;x<T;x++)S[x]=stakeOf(x);
+  const V=new Float64Array(T+1), E=new Float64Array(T+1); V[T]=1;
+  const val=y=>y>=T?1:y<0?0:V[y], ev=y=>y>=T||y<0?0:E[y];
+  for(let it=0;it<200000;it++){
+    let d=0;
+    for(let x=T-1;x>=1;x--){
+      const s=S[x]; if(!s){continue;}
+      const nv=pw*val(x+bet.k*s)+pl*val(x-s)+(pz?pz*val(x-s/2):0);
+      const ne=1+pw*ev(x+bet.k*s)+pl*ev(x-s)+(pz?pz*ev(x-s/2):0);
+      d=Math.max(d,Math.abs(nv-V[x]),Math.abs(ne-E[x])/(1+ne)); V[x]=nv; E[x]=ne;
+    }
+    if(d<1e-11)break;
+    if(policy==='flat'&&it>3000)break; // flat play with tiny stakes: chance is ~0 anyway
+  }
+  return {p:val(X),steps:ev(X),stake:b=>{const x=Math.round(b/u);return x>=T?0:S[x]*u;},u};
+}
+
+function readForm(){
+  const n=k=>{const v=parseFloat(String($('f_'+k).value).replace(',','.'));return isFinite(v)&&v>0?v:DEF[k];};
+  cfg={bank:n('bank'),target:n('target'),cur:String($('f_cur').value).trim().slice(0,4)||DEF.cur,bet:$('f_bet').value,rule:$('f_rule').value,min:n('min'),max:n('max')};
+  if(cfg.max<cfg.min)cfg.max=cfg.min;
+}
+function fill(){for(const k of ['bank','target','cur','bet','rule','min','max'])$('f_'+k).value=cfg[k];}
+
+function render(){
+  const bet=BETS.find(b=>b.id===cfg.bet)||BETS[0];
+  const r=solve(bet,cfg,'bold');
+  if(cfg.target<=cfg.bank){$('answer').innerHTML=`<p>Your target is not above your bankroll. Set a target higher than ${fmt(cfg.bank)}.</p>`;}
+  else if(!r){$('answer').innerHTML=`<p>The target is too large for the minimum bet. Raise the minimum bet or lower the target.</p>`;}
+  else{
+    const first=r.stake(cfg.bank), edge=(cfg.rule==='fr'&&bet.even)?1.35:2.70;
+    $('answer').innerHTML=`<span class="eyebrow">Chance to reach ${fmt(cfg.target)}</span>
+      <div class="big">${pct(r.p)}</div>
+      <div class="bar"><i style="width:${r.p*100}%"></i></div>
+      <p>Otherwise you lose the ${fmt(cfg.bank)}. On average it takes <b>${r.steps.toFixed(1)}</b> bet${r.steps>=1.05?'s':''}.</p>
+      <div class="callout">First bet: <b class="mono">${fmt(first)}</b> on ${bet.short}.</div>
+      <p>House edge on this bet: <b>${edge.toFixed(2)}%</b>${cfg.rule==='eu'&&bet.even?' · switch to French La Partage to halve it':''}.</p>`;
+  }
+  // comparison
+  const rows=BETS.map(b=>{const bo=solve(b,cfg,'bold'),fl=solve(b,cfg,'flat');return {b,bo,fl};}).filter(x=>x.bo);
+  const best=Math.max(...rows.map(x=>x.bo.p));
+  $('cmp').innerHTML=rows.map(({b,bo,fl})=>`<tr class="${bo.p===best?'best':''}"><td>${b.name}</td><td class="num">${b.k}:1</td>
+    <td class="num"><b>${pct(bo.p)}</b><span class="pbar"><i style="width:${bo.p*100}%"></i></span></td><td class="num">${bo.steps.toFixed(1)}</td>
+    <td class="num">${fl?pct(fl.p):'–'}</td></tr>`).join('');
+  renderPlay(bet,r);
+}
+
+function renderPlay(bet,r){
+  if(!r||cfg.target<=cfg.bank){$('play').innerHTML='';$('playInfo').textContent='';return;}
+  const sameGoal=play&&play.bank===cfg.bank&&play.target===cfg.target&&play.bet===cfg.bet&&play.rule===cfg.rule&&play.min===cfg.min&&play.max===cfg.max;
+  if(!sameGoal)play={bank:cfg.bank,target:cfg.target,bet:cfg.bet,rule:cfg.rule,min:cfg.min,max:cfg.max,now:cfg.bank,log:[]};
+  const now=play.now, s=r.stake(now), canZero=cfg.rule==='fr'&&bet.even;
+  $('playInfo').textContent=`bankroll ${fmt(now)} · ${play.log.length} bet${play.log.length===1?'':'s'}`;
+  const log=`<div class="log">${play.log.map(x=>`<span style="background:${x.r==='w'?'var(--good)':x.r==='z'?'var(--brass)':'var(--red)'}">${x.r==='w'?'+':'−'}${fmt(Math.abs(x.d)).replace('−','')}</span>`).join('')}</div>`;
+  let html;
+  if(now>=cfg.target-1e-9)html=`<div class="callout done"><b>Target reached: ${fmt(now)}.</b> Cash out and leave the table. Every further bet lowers what you keep.</div>`;
+  else if(s<=0)html=`<div class="callout"><b>Bankroll ${fmt(now)} is below the minimum bet.</b> The plan is over. Do not add more money to chase it.</div>`;
+  else{
+    const rr=solve(bet,{...cfg,bank:now},'bold');
+    html=`<div class="row" style="justify-content:space-between">
+      <div><span class="eyebrow">Bet now on ${bet.short}</span><div class="stake">${fmt(s)}</div></div>
+      <div><span class="eyebrow">Chance from here</span><div class="stake" style="color:var(--felt)">${rr?pct(rr.p):'–'}</div></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn win" id="bWin">Won (+${fmt(s*bet.k)})</button>
+      <button class="btn lose" id="bLose">Lost (−${fmt(s)})</button>
+      ${canZero?`<button class="btn" id="bZero">Zero, half back (−${fmt(s/2)})</button>`:''}
+    </div>`;
+  }
+  $('play').innerHTML=html+`<div class="row" style="margin-top:12px;justify-content:space-between">${log}<button class="btn" id="bReset">Start over</button></div>`;
+  const step=(res,d)=>{play.now=Math.round((play.now+d)*100)/100;play.log.push({r:res,d});save();render();};
+  if($('bWin'))$('bWin').onclick=()=>step('w',s*bet.k);
+  if($('bLose'))$('bLose').onclick=()=>step('l',-s);
+  if($('bZero'))$('bZero').onclick=()=>step('z',-s/2);
+  $('bReset').onclick=()=>{play=null;save();render();};
+}
+
+$('form').addEventListener('change',()=>{readForm();fill();save();render();});
+fill();render();
+})();
+</script>
+
+</body>
+</html>
