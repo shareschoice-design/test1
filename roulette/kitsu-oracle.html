@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@500;800&display=swap">
 <style>
-/* Layout: one neon stage. Fox oracle + speech bubble on top, wheel in the middle, scoreboard below. Single dark look on purpose. */
+/* Layout: one neon column. Fox + bubble, today's 4 picks with the bet, the number table to tap, score, money settings. Single dark look on purpose. */
 :root{
-  --night:#120a24; --deep:#1d1038; --pink:#ff3d9a; --cyan:#3df0ff; --gold:#ffd23d; --fox:#ff8a3d; --ink:#fff6fb; --dim:#b9a8d9;
+  --night:#120a24; --deep:#1d1038; --line:#3b2470; --pink:#ff3d9a; --cyan:#3df0ff; --gold:#ffd23d; --fox:#ff8a3d; --ink:#fff6fb; --dim:#b9a8d9;
   --red:#e8264a; --blk:#1a1426; --grn:#19b36b;
   --display:"Dela Gothic One","Arial Black",system-ui,sans-serif;
   --body:"M PLUS Rounded 1c",ui-rounded,system-ui,sans-serif;
@@ -19,68 +19,70 @@
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{background:var(--night)}
-body{margin:0;min-height:100%;color:var(--ink);font-family:var(--body);font-weight:500;
-  background:radial-gradient(ellipse at 50% 30%,#3a1670 0%,var(--night) 60%),var(--night);
+body{margin:0;color:var(--ink);font-family:var(--body);font-weight:500;
+  background:radial-gradient(ellipse at 50% 18%,#3a1670 0%,var(--night) 62%),var(--night);
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:14px 40px;overflow-x:hidden}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.18;
-  background:repeating-conic-gradient(from 0deg at 50% 38%,transparent 0 3deg,rgba(255,255,255,.35) 3deg 3.6deg,transparent 3.6deg 9deg)}
-.stage{position:relative;z-index:1;max-width:560px;margin:0 auto;display:grid;gap:14px;justify-items:center;text-align:center}
-.title{font-family:var(--display);font-size:clamp(26px,7vw,40px);line-height:1;margin:6px 0 0;letter-spacing:.02em;
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.16;
+  background:repeating-conic-gradient(from 0deg at 50% 22%,transparent 0 3deg,rgba(255,255,255,.35) 3deg 3.6deg,transparent 3.6deg 9deg)}
+.stage{position:relative;z-index:1;max-width:520px;margin:0 auto;display:grid;gap:14px;justify-items:center;text-align:center}
+.jp{font-family:var(--display);color:var(--cyan);font-size:13px;letter-spacing:.3em;opacity:.85}
+.title{font-family:var(--display);font-size:clamp(28px,8vw,42px);line-height:1;margin:4px 0 0;
   background:linear-gradient(90deg,var(--pink),var(--gold),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 0 12px rgba(255,61,154,.55))}
-.jp{font-family:var(--display);color:var(--cyan);font-size:13px;letter-spacing:.3em;opacity:.85}
 .oracle{display:flex;align-items:flex-end;gap:10px;width:100%;justify-content:center}
-.fox{width:120px;flex:none;filter:drop-shadow(0 0 14px rgba(255,138,61,.6));transition:transform .25s}
-.fox.bounce{animation:bounce .5s}
-.fox.shake{animation:shake .45s}
+.fox{width:112px;flex:none;filter:drop-shadow(0 0 14px rgba(255,138,61,.6))}
+.fox.bounce{animation:bounce .5s}.fox.shake{animation:shake .45s}
 @keyframes bounce{0%,100%{transform:translateY(0)}35%{transform:translateY(-16px) rotate(-4deg)}70%{transform:translateY(-4px)}}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px) rotate(-3deg)}75%{transform:translateX(7px) rotate(3deg)}}
 .bubble{position:relative;background:var(--ink);color:#2a1440;border-radius:18px;padding:12px 14px;font-weight:800;font-size:15px;line-height:1.35;
   max-width:300px;min-height:64px;display:grid;place-items:center;box-shadow:0 0 0 3px var(--pink),0 0 22px rgba(255,61,154,.55)}
 .bubble::before{content:"";position:absolute;left:-12px;bottom:18px;border:8px solid transparent;border-right:12px solid var(--ink)}
-.picks{display:flex;gap:10px;justify-content:center;min-height:56px}
-.chip{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:50%;font-family:var(--display);font-size:20px;color:#fff;
+.seg{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;align-items:center}
+.seg button{border:2px solid var(--line);background:rgba(29,16,56,.85);color:var(--dim);border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px}
+.seg button.on{border-color:var(--gold);color:var(--gold);box-shadow:0 0 12px rgba(255,210,61,.45)}
+.seg .lbl{color:var(--dim);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;width:100%}
+.card{width:100%;border:3px solid var(--gold);border-radius:20px;padding:14px 12px;background:rgba(255,210,61,.07);box-shadow:0 0 22px rgba(255,210,61,.28);display:grid;gap:10px;justify-items:center}
+.card .head{font-family:var(--display);color:var(--gold);letter-spacing:.14em;font-size:15px}
+.picks{display:flex;gap:10px;justify-content:center;min-height:58px}
+.chip{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:50%;font-family:var(--display);font-size:22px;color:#fff;
   border:3px solid var(--gold);box-shadow:0 0 14px rgba(255,210,61,.7),inset 0 0 10px rgba(0,0,0,.35);animation:pop .4s backwards}
-.chip:nth-child(2){animation-delay:.12s}.chip:nth-child(3){animation-delay:.24s}.chip:nth-child(4){animation-delay:.36s}
+.chip:nth-child(2){animation-delay:.1s}.chip:nth-child(3){animation-delay:.2s}.chip:nth-child(4){animation-delay:.3s}
 .chip.hit{border-color:var(--cyan);box-shadow:0 0 26px var(--cyan),0 0 6px #fff;transform:scale(1.15)}
 .c-r{background:var(--red)} .c-b{background:var(--blk)} .c-g{background:var(--grn)}
 @keyframes pop{from{transform:scale(0) rotate(-90deg);opacity:0}to{transform:scale(1);opacity:1}}
-.wheelwrap{position:relative;width:min(340px,86vw);aspect-ratio:1;max-width:100%}
-.wheelwrap svg{width:100%;height:100%;display:block}
-#rotor{transform-origin:50% 50%;transition:transform 3.2s cubic-bezier(.12,.75,.12,1)}
-.pointer{position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:0;height:0;border:13px solid transparent;border-top:24px solid var(--gold);filter:drop-shadow(0 0 8px var(--gold));z-index:2}
-.result{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
-.result span{font-family:var(--display);font-size:46px;text-shadow:0 0 18px var(--pink)}
-.burst{position:fixed;left:50%;top:42%;transform:translate(-50%,-50%) scale(0);font-family:var(--display);font-size:clamp(44px,14vw,84px);z-index:5;pointer-events:none;
-  color:var(--gold);-webkit-text-stroke:3px #2a1440;text-shadow:0 0 30px var(--pink);white-space:nowrap}
-.burst.go{animation:burst 1.1s ease-out}
-@keyframes burst{0%{transform:translate(-50%,-50%) scale(0) rotate(-12deg);opacity:1}30%{transform:translate(-50%,-50%) scale(1.15) rotate(4deg)}80%{opacity:1}100%{transform:translate(-50%,-50%) scale(1) rotate(0);opacity:0}}
-.controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.formula{font-family:var(--display);font-size:clamp(16px,4.6vw,21px);color:var(--gold);text-shadow:0 0 12px rgba(255,210,61,.6)}
+.formula small{display:block;font-family:var(--body);font-size:12px;color:var(--dim);text-shadow:none;margin-top:2px}
+.stake{font-family:var(--display);font-size:30px;line-height:1}
+.stake small{display:block;font-family:var(--body);font-size:13px;color:var(--dim);font-weight:800;margin-top:6px}
+.wait{color:var(--dim);font-weight:800;padding:8px 0}
+.padlabel{font-family:var(--display);font-size:16px;color:var(--cyan);letter-spacing:.06em}
+.table{display:grid;grid-template-columns:1.2fr repeat(12,minmax(0,1fr));grid-template-rows:repeat(3,44px);gap:3px;width:100%;padding:6px;border-radius:14px;background:#0f4a37;box-shadow:0 0 0 3px var(--gold),0 0 22px rgba(255,210,61,.25)}
+.table button{border:0;border-radius:6px;color:#fff;font-family:var(--display);font-size:clamp(11px,3.2vw,15px);padding:0;transition:transform .06s}
+.table button:active{transform:scale(.9)}
+.table .z{grid-row:1/4;background:var(--grn)}
+.table button.pick{box-shadow:inset 0 0 0 3px var(--gold),0 0 10px var(--gold)}
+.strip{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;min-height:30px}
+.strip span{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;font-family:var(--display);font-size:12px;color:#fff}
+.strip span.last{outline:2px solid var(--gold);outline-offset:2px}
+.strip span.won{box-shadow:0 0 12px var(--cyan),0 0 0 2px var(--cyan)}
+.row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 button{font:inherit;cursor:pointer}
-.btn{font-family:var(--display);font-size:18px;letter-spacing:.04em;border:0;border-radius:14px;padding:12px 22px;color:#2a1440;background:var(--cyan);
-  box-shadow:0 5px 0 #1a8a96,0 0 18px rgba(61,240,255,.5);transition:transform .08s}
-.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #1a8a96}
-.btn.pink{background:var(--pink);color:#fff;box-shadow:0 5px 0 #a3195f,0 0 18px rgba(255,61,154,.5)}
-.btn.ghost{background:transparent;color:var(--dim);box-shadow:inset 0 0 0 2px var(--dim);font-size:14px;padding:9px 14px}
-.btn:disabled{opacity:.45;cursor:default}
+.btn{font-family:var(--display);font-size:15px;border:2px solid var(--dim);border-radius:12px;padding:8px 14px;color:var(--dim);background:transparent}
+.btn:disabled{opacity:.4;cursor:default}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .board{width:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.board div{background:rgba(29,16,56,.85);border:2px solid #3b2470;border-radius:12px;padding:8px 4px}
-.board b{display:block;font-family:var(--display);font-size:22px;font-variant-numeric:tabular-nums}
+.board div{background:rgba(29,16,56,.85);border:2px solid var(--line);border-radius:12px;padding:8px 4px}
+.board b{display:block;font-family:var(--display);font-size:clamp(14px,4.6vw,20px);font-variant-numeric:tabular-nums;white-space:nowrap}
 .board small{font-size:11px;color:var(--dim);letter-spacing:.06em;text-transform:uppercase}
-.vs{width:100%;background:rgba(29,16,56,.85);border:2px solid #3b2470;border-radius:12px;padding:10px 12px;display:grid;gap:6px;text-align:left;font-size:13px}
-.bar{height:12px;border-radius:6px;background:#2b1a4d;position:relative;overflow:hidden}
-.bar i{position:absolute;inset:0 auto 0 0;border-radius:6px}
-.pad{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px;width:100%}
-.pad button{border:0;border-radius:6px;height:34px;color:#fff;font-family:var(--display);font-size:13px}
-.seg{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
-.seg button{border:2px solid #3b2470;background:rgba(29,16,56,.85);color:var(--dim);border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px}
-.seg button.on{border-color:var(--gold);color:var(--gold);box-shadow:0 0 12px rgba(255,210,61,.45)}
-.formula{font-family:var(--display);font-size:clamp(16px,4.6vw,22px);color:var(--gold);text-shadow:0 0 12px rgba(255,210,61,.6);min-height:28px;letter-spacing:.02em}
-.formula small{display:block;font-family:var(--body);font-size:12px;color:var(--dim);text-shadow:none;letter-spacing:0;margin-top:2px}
-.foot{font-size:12px;color:var(--dim);max-width:46ch;line-height:1.5}
-@media (max-width:420px){.board b{font-size:18px}.fox{width:96px}.bubble{font-size:14px}}
-@media (prefers-reduced-motion:reduce){#rotor{transition-duration:.01s}.chip,.burst.go,.fox.bounce,.fox.shake{animation:none}}
+.mm{width:100%;background:rgba(29,16,56,.85);border:2px solid var(--line);border-radius:16px;padding:12px;display:grid;gap:12px}
+.mm h2{font-family:var(--display);font-size:16px;margin:0;color:var(--pink);letter-spacing:.08em}
+.burst{position:fixed;left:50%;top:38%;transform:translate(-50%,-50%) scale(0);font-family:var(--display);font-size:clamp(44px,14vw,84px);z-index:5;pointer-events:none;
+  color:var(--gold);-webkit-text-stroke:3px #2a1440;text-shadow:0 0 30px var(--pink);white-space:nowrap}
+.burst.go{animation:burst 1.1s ease-out}
+@keyframes burst{0%{transform:translate(-50%,-50%) scale(0) rotate(-12deg);opacity:1}30%{transform:translate(-50%,-50%) scale(1.15) rotate(4deg)}80%{opacity:1}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
+.foot{font-size:12px;color:var(--dim);max-width:46ch;line-height:1.5;margin:0}
+@media (max-width:420px){.fox{width:92px}.bubble{font-size:14px}.chip{width:50px;height:50px;font-size:19px}}
+@media (prefers-reduced-motion:reduce){.chip,.burst.go,.fox.bounce,.fox.shake{animation:none}}
 </style>
 </head>
 <body>
@@ -89,7 +91,6 @@ button{font:inherit;cursor:pointer}
   <div>
     <div class="jp">ルーレット予言</div>
     <h1 class="title">KITSU ORACLE</h1>
-    <div style="color:var(--dim);font-weight:800;margin-top:6px">Can a fox spirit predict roulette?</div>
   </div>
 
   <div class="oracle">
@@ -111,49 +112,44 @@ button{font:inherit;cursor:pointer}
       <circle cx="60" cy="84" r="3" fill="#2a1440"/>
       <path id="mouth" d="M53 90 Q60 96 67 90" stroke="#2a1440" stroke-width="3" fill="none" stroke-linecap="round"/>
     </svg>
-    <div class="bubble" id="say">Konnichiwa! I'm Kitsu. Press PREDICT and I'll read the wheel~</div>
+    <div class="bubble" id="say">Konnichiwa! Tap the last two numbers from your table and I'll read the wheel~</div>
   </div>
 
   <div class="seg" id="method" aria-label="Prediction method">
     <button data-m="pyth">📐 Pythagoras</button><button data-m="fox">🦊 Fox instinct</button>
   </div>
-  <div class="picks" id="picks" aria-live="polite"></div>
-  <div class="formula" id="formula"></div>
 
-  <div class="wheelwrap">
-    <div class="pointer"></div>
-    <svg viewBox="0 0 300 300" role="img" aria-label="Roulette wheel"><g id="rotor"></g><circle cx="150" cy="150" r="58" fill="var(--deep)" stroke="var(--pink)" stroke-width="3"/></svg>
-    <div class="result"><span id="res">?</span></div>
-  </div>
+  <section class="card" aria-live="polite">
+    <div class="head">NEXT SPIN · BET THESE 4</div>
+    <div class="picks" id="picks"></div>
+    <div class="formula" id="formula"></div>
+    <div class="stake" id="stake"></div>
+  </section>
 
-  <div class="controls">
-    <button class="btn pink" id="bPredict">PREDICT</button>
-    <button class="btn" id="bSpin">SPIN</button>
-    <button class="btn ghost" id="bAuto">Auto ×10</button>
-    <button class="btn ghost" id="bPad">Real table</button>
-  </div>
-  <div class="pad" id="pad" hidden></div>
-  <div class="seg" id="stakes" aria-label="Coins per number">
-    <span style="align-self:center;color:var(--dim);font-size:13px;font-weight:800">Bet per number:</span>
-    <button data-s="1">1</button><button data-s="5">5</button><button data-s="10">10</button><button data-s="25">25</button>
+  <div class="padlabel">Tap the number that landed</div>
+  <div class="table" id="table"></div>
+  <div class="strip" id="strip" aria-label="Last numbers"></div>
+  <div class="row">
+    <button class="btn" id="bUndo">↶ Undo</button>
+    <button class="btn" id="bDemo">🎲 Demo number</button>
   </div>
 
   <div class="board">
-    <div><small>Rounds</small><b id="sRounds">0</b></div>
+    <div><small>Spins</small><b id="sRounds">0</b></div>
     <div><small>Hits</small><b id="sHits">0</b></div>
     <div><small>Combo</small><b id="sCombo">0</b></div>
-    <div><small>Coins</small><b id="sCoins">100</b></div>
+    <div><small>Session</small><b id="sPL">€0.00</b></div>
   </div>
 
-  <div class="vs">
-    <div style="display:flex;justify-content:space-between"><span>Kitsu's hit rate</span><b id="vKitsu">–</b></div>
-    <div class="bar"><i id="barK" style="width:0;background:linear-gradient(90deg,var(--pink),var(--gold))"></i></div>
-    <div style="display:flex;justify-content:space-between"><span>Pure luck (4 of 37)</span><b>10.8%</b></div>
-    <div class="bar"><i style="width:43.2%;background:var(--cyan)"></i></div>
-  </div>
+  <section class="mm">
+    <h2>MONEY MANAGEMENT</h2>
+    <div class="seg" id="base"><span class="lbl">Base bet per number</span><button data-v="0.1">€0.10</button><button data-v="0.2">€0.20</button><button data-v="0.5">€0.50</button><button data-v="1">€1</button><button data-v="2">€2</button></div>
+    <div class="seg" id="prog"><span class="lbl">After a miss, raise the bet by</span><button data-v="0">0%</button><button data-v="10">10%</button><button data-v="20">20%</button><button data-v="35">35%</button><button data-v="50">50%</button></div>
+    <div class="seg" id="cap"><span class="lbl">Max bet per number</span><button data-v="1">€1</button><button data-v="2">€2</button><button data-v="5">€5</button><button data-v="10">€10</button></div>
+    <button class="btn" id="bReset">New session</button>
+  </section>
 
-  <button class="btn ghost" id="bReset">Reset show</button>
-  <p class="foot">Entertainment only. Roulette spins are random; coins are play money. Never bet money you can't afford to lose.</p>
+  <p class="foot">Entertainment only. Roulette spins are random and no method can predict them. Never bet money you can't afford to lose. 18+</p>
 </div>
 <div class="burst" id="burst"></div>
 
@@ -161,27 +157,26 @@ button{font:inherit;cursor:pointer}
 (() => {
 const WHEEL=[0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26];
 const RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
-const $=id=>document.getElementById(id), SEG=360/37;
-const col=n=>n===0?'g':RED.has(n)?'r':'b';
+const $=id=>document.getElementById(id), col=n=>n===0?'g':RED.has(n)?'r':'b';
+const pick=a=>a[Math.floor(Math.random()*a.length)];
 const LINES={
-  predict:["The fox spirit whispers… these four!","My tails are tingling~ this one's sure!","I saw it in a dream. Trust me!","Kitsu senses a pattern…!","These numbers are shining. Can't you see?"],
+  pyth:["Pythagoras has spoken! a² + b² = c²!","The sacred triangle points here~","Math magic! Bet these four!","Geometry of fate… ✨"],
+  fox:["The fox spirit whispers… these four!","My tails are tingling~","These numbers are sleeping… time to wake up!","I saw it in a dream!"],
   hit:["SUGOI!! I called it!","Yatta~! Fox powers!","Did you SEE that?!","Hehe, told you so ✨"],
   miss:["Ehh?! The wheel cheated!","Mou~ next one for sure!","Hmph. Lucky wheel.","That… was a test. Yes."],
 };
-const pick=a=>a[Math.floor(Math.random()*a.length)];
-const KEY='kitsu-oracle-v1';
-let S={hist:[],rounds:0,hits:0,combo:0,best:0,coins:100,method:'pyth',stake:1}, cur=null, rot=0, busy=false;
+const KEY='kitsu-player-v2';
+const FRESH={hist:[],won:[],rounds:0,hits:0,combo:0,best:0,pl:0,step:0};
+let S={...FRESH,method:'pyth',base:0.2,prog:20,cap:2}, cur=null; const undo=[];
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s)S={...S,...s};}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const eur=v=>(v<0?'−':v>0?'+':'')+'€'+Math.abs(v).toFixed(2);
+const stakeNow=()=>Math.min(S.cap,Math.max(S.base,Math.ceil(S.base*Math.pow(1+S.prog/100,S.step)*20-1e-9)/20));
 
-// wheel
-(function draw(){
-  const cx=150,cy=150,R1=146,R2=96,p=(r,a)=>[cx+r*Math.sin(a*Math.PI/180),cy-r*Math.cos(a*Math.PI/180)];let g='';
-  WHEEL.forEach((n,i)=>{const a0=i*SEG-SEG/2,a1=a0+SEG,[x1,y1]=p(R1,a0),[x2,y2]=p(R1,a1),[x3,y3]=p(R2,a1),[x4,y4]=p(R2,a0);
-    g+=`<path d="M${x1} ${y1}A${R1} ${R1} 0 0 1 ${x2} ${y2}L${x3} ${y3}A${R2} ${R2} 0 0 0 ${x4} ${y4}Z" fill="var(--${n===0?'grn':RED.has(n)?'red':'blk'})" stroke="var(--gold)" stroke-width=".8" data-n="${n}"/>`;
-    const [tx,ty]=p(122,i*SEG);g+=`<text x="${tx}" y="${ty}" fill="#fff" font-size="12" font-family="Dela Gothic One,sans-serif" text-anchor="middle" dominant-baseline="central" transform="rotate(${i*SEG} ${tx} ${ty})">${n}</text>`;});
-  $('rotor').innerHTML=g;
-})();
+// number table: 0 + three rows of 12
+const order=[];for(let r=0;r<3;r++)for(let c=0;c<12;c++)order.push(c*3+3-r);
+$('table').innerHTML=`<button class="z" data-n="0">0</button>`+order.map(n=>`<button style="background:var(--${RED.has(n)?'red':'blk'})" data-n="${n}">${n}</button>`).join('');
+
 function mood(m){
   $('eyes').hidden=m!=='idle';$('eyesHappy').hidden=m!=='happy';$('eyesSad').hidden=m!=='sad';
   $('mouth').setAttribute('d',m==='happy'?'M50 88 Q60 102 70 88 Z':m==='sad'?'M53 94 Q60 88 67 94':'M53 90 Q60 96 67 90');
@@ -190,69 +185,58 @@ function mood(m){
 }
 const say=t=>$('say').textContent=t;
 function burst(t){const b=$('burst');b.textContent=t;b.classList.remove('go');void b.offsetWidth;b.classList.add('go');}
-const chips=(nums,hit)=>nums.map(n=>`<span class="chip c-${col(n)} ${n===hit?'hit':''}">${n}</span>`).join('');
 
-// Kitsu's "method": the 4 numbers missing the longest. It sounds clever and does nothing.
-function predict(){
+// the two "methods"
+function predict(talk=true){
+  const h=S.hist;
   if(S.method==='pyth'){
-    if(S.hist.length<2){
-      const a=randomNum(),b=randomNum();S.hist.push(a,b);
-      say(`I need two numbers… the spirits give me ${a} and ${b}!`);
-    }
-    const a=S.hist[S.hist.length-2],b=S.hist[S.hist.length-1],c=Math.sqrt(a*a+b*b),r=Math.round(c)%37,i=WHEEL.indexOf(r);
+    if(h.length<2){cur=null;$('formula').innerHTML='';if(talk)say(h.length?`Got ${h[0]}! One more number and I can calculate~`:"Tap the last two numbers from your table and I'll calculate~");return;}
+    const a=h[h.length-2],b=h[h.length-1],c=Math.sqrt(a*a+b*b),r=Math.round(c)%37,i=WHEEL.indexOf(r);
     cur=[WHEEL[(i+36)%37],r,WHEEL[(i+1)%37],WHEEL[(i+2)%37]];
-    $('picks').innerHTML=chips(cur);mood('idle');
-    $('formula').innerHTML=`√(${a}² + ${b}²) = ${c.toFixed(2)} → ${r}<small>${Math.round(c)>36?`${Math.round(c)} is past 36, so it wraps to ${r} · `:''}${r} and its neighbours on the wheel</small>`;
-    if(S.hist.length>2||!$('say').textContent.startsWith('I need'))say(pick(["Pythagoras never lies! a² + b² = c²!","The sacred triangle has spoken~","Math magic! These four, for sure!","Geometry of fate… ✨"]));
-    return;
+    $('formula').innerHTML=`√(${a}² + ${b}²) = ${c.toFixed(2)} → ${r}<small>${Math.round(c)>36?`${Math.round(c)} wraps around to ${r} · `:''}${r} and its neighbours on the wheel</small>`;
+  }else{
+    if(h.length<1){cur=null;$('formula').innerHTML='';if(talk)say("Tap a few numbers from your table so I can sense the sleeping ones~");return;}
+    const last=new Map();h.forEach((n,i)=>last.set(n,i));
+    const cand=Array.from({length:37},(_,n)=>({n,g:last.has(n)?h.length-last.get(n):1000+((n*13+5)%37)}));
+    cand.sort((x,y)=>y.g-x.g||x.n-y.n);cur=cand.slice(0,4).map(x=>x.n).sort((x,y)=>x-y);
+    $('formula').innerHTML=`Sleeping the longest<small>these 4 numbers haven't landed for the longest time</small>`;
   }
-  $('formula').innerHTML='';
-  const last=new Map();S.hist.forEach((n,i)=>last.set(n,i));
-  const cand=Array.from({length:37},(_,n)=>({n,g:last.has(n)?S.hist.length-last.get(n):999+Math.random()}));
-  cand.sort((a,b)=>b.g-a.g||Math.random()-.5);
-  cur=cand.slice(0,4).map(x=>x.n).sort((a,b)=>a-b);
-  $('picks').innerHTML=chips(cur);mood('idle');say(pick(LINES.predict));
+  if(talk){mood('idle');say(pick(LINES[S.method]));}
 }
-function settle(n){
-  S.hist.push(n);if(S.hist.length>500)S.hist.shift();
-  $('res').textContent=n;
+function render(hitNum){
+  $('picks').innerHTML=cur?cur.map(n=>`<span class="chip c-${col(n)} ${n===hitNum?'hit':''}">${n}</span>`).join(''):'';
+  const st=stakeNow();
+  $('stake').innerHTML=cur?`€${st.toFixed(2)} on each<small>total €${(4*st).toFixed(2)} · a hit pays +€${(32*st).toFixed(2)}${S.step?` · ${S.step} miss${S.step>1?'es':''} in a row`:''}</small>`
+    :`<div class="wait">Waiting for your numbers…</div>`;
+  const ps=new Set(cur||[]);[...$('table').children].forEach(b=>b.classList.toggle('pick',ps.has(+b.dataset.n)));
+  $('strip').innerHTML=S.hist.slice(-14).map((n,i,a)=>`<span class="c-${col(n)} ${i===a.length-1?'last':''} ${S.won.includes(S.hist.length-a.length+i)?'won':''}">${n}</span>`).join('');
+  $('sRounds').textContent=S.rounds;$('sHits').textContent=S.hits;$('sCombo').textContent=`${S.combo} / ${S.best}`;
+  $('sPL').textContent=eur(S.pl);$('sPL').style.color=S.pl>0?'var(--cyan)':S.pl<0?'var(--pink)':'';
+  for(const [id,k] of [['method','method'],['base','base'],['prog','prog'],['cap','cap']])
+    [...$(id).querySelectorAll('button')].forEach(b=>b.classList.toggle('on',String(b.dataset.m??b.dataset.v)===String(S[k])));
+}
+let lock=false;
+function enter(n){
+  if(lock)return;undo.push(JSON.stringify(S));if(undo.length>60)undo.shift();
+  let hitNum=null;
   if(cur){
-    const st=S.stake;S.rounds++;S.coins-=4*st;const hit=cur.includes(n);
-    if(hit){S.hits++;S.combo++;S.best=Math.max(S.best,S.combo);S.coins+=36*st;mood('happy');say(pick(LINES.hit));burst(S.combo>1?`COMBO ×${S.combo}!`:'SUGOI!');}
-    else{S.combo=0;mood('sad');say(pick(LINES.miss));}
-    if(hit)[...$('picks').children].forEach(el=>{if(+el.textContent===n)el.classList.add('hit');});
-    cur=null;
+    const st=stakeNow(),hit=cur.includes(n);S.rounds++;
+    if(hit){S.hits++;S.combo++;S.best=Math.max(S.best,S.combo);S.pl=Math.round((S.pl+32*st)*100)/100;S.step=0;S.won.push(S.hist.length);hitNum=n;
+      mood('happy');say(pick(LINES.hit));burst(S.combo>1?`COMBO ×${S.combo}!`:'SUGOI!');}
+    else{S.combo=0;S.pl=Math.round((S.pl-4*st)*100)/100;S.step++;mood('sad');say(pick(LINES.miss));}
   }
-  save();board();
+  S.hist.push(n);if(S.hist.length>400){S.hist.shift();S.won=S.won.map(i=>i-1).filter(i=>i>=0);}
+  save();
+  if(hitNum!==null){render(hitNum);lock=true;setTimeout(()=>{lock=false;predict();render();},1100);}
+  else{const had=!!cur;predict(!had);render();if(had)setTimeout(()=>{if(cur)say(pick(LINES[S.method]));mood('idle');},900);}
 }
-function spinTo(n,done){
-  const i=WHEEL.indexOf(n),target=-i*SEG,base=rot-((rot%360)+360)%360;
-  rot=base+360*5+((target%360)+360)%360; if(rot<=base+360*4)rot+=360;
-  $('rotor').style.transform=`rotate(${rot}deg)`;$('res').textContent='…';
-  setTimeout(done,matchMedia('(prefers-reduced-motion: reduce)').matches?50:3300);
-}
-function randomNum(){const a=new Uint32Array(1);crypto.getRandomValues(a);return a[0]%37;}
-function board(){
-  $('sRounds').textContent=S.rounds;$('sHits').textContent=S.hits;$('sCombo').textContent=`${S.combo} / ${S.best}`;$('sCoins').textContent=S.coins;
-  const r=S.rounds?S.hits/S.rounds:0;$('vKitsu').textContent=S.rounds?(r*100).toFixed(1)+'%':'–';$('barK').style.width=Math.min(100,r*400)+'%';
-}
-function seg(){
-  [...$('method').children].forEach(b=>b.classList.toggle('on',b.dataset.m===S.method));
-  [...$('stakes').querySelectorAll('button')].forEach(b=>b.classList.toggle('on',+b.dataset.s===S.stake));
-}
-$('method').onclick=e=>{const b=e.target.closest('button[data-m]');if(!b||busy)return;S.method=b.dataset.m;cur=null;$('picks').innerHTML='';$('formula').innerHTML='';save();seg();
-  say(S.method==='pyth'?'Pythagoras mode! Two numbers make a triangle… and the triangle shows the future~':'Fox instinct! I just feel which numbers are sleeping…');};
-$('stakes').onclick=e=>{const b=e.target.closest('button[data-s]');if(!b||busy)return;S.stake=+b.dataset.s;save();seg();board();};
-function lock(v){busy=v;['bPredict','bSpin','bAuto'].forEach(id=>$(id).disabled=v);}
-$('bPredict').onclick=()=>{if(!busy)predict();};
-$('bSpin').onclick=()=>{if(busy)return;if(!cur)predict();lock(true);const n=randomNum();setTimeout(()=>spinTo(n,()=>{settle(n);lock(false);}),cur?350:0);};
-$('bAuto').onclick=()=>{if(busy)return;let k=0;lock(true);
-  const step=()=>{if(k++>=10){lock(false);return;}predict();const n=randomNum();setTimeout(()=>spinTo(n,()=>{settle(n);setTimeout(step,900);}),500);};step();};
-$('bPad').onclick=()=>{$('pad').hidden=!$('pad').hidden;$('bPad').textContent=$('pad').hidden?'Real table':'Hide table';};
-$('pad').innerHTML=Array.from({length:37},(_,n)=>`<button style="background:var(--${n===0?'grn':RED.has(n)?'red':'blk'})" data-n="${n}">${n}</button>`).join('');
-$('pad').onclick=e=>{const b=e.target.closest('button[data-n]');if(!b||busy)return;const n=+b.dataset.n;lock(true);spinTo(n,()=>{settle(n);lock(false);});};
-$('bReset').onclick=()=>{S={hist:[],rounds:0,hits:0,combo:0,best:0,coins:100,method:S.method,stake:S.stake};$('formula').innerHTML='';cur=null;save();board();$('picks').innerHTML='';$('res').textContent='?';mood('idle');say("Fresh start! Press PREDICT~");};
-seg();board();
+$('table').onclick=e=>{const b=e.target.closest('button[data-n]');if(b)enter(+b.dataset.n);};
+$('bDemo').onclick=()=>{const a=new Uint32Array(1);crypto.getRandomValues(a);enter(a[0]%37);};
+$('bUndo').onclick=()=>{if(lock||!undo.length)return;S=JSON.parse(undo.pop());save();predict(false);render();mood('idle');say('Undone! Tap the right number~');};
+for(const id of ['method','base','prog','cap'])$(id).onclick=e=>{const b=e.target.closest('button');if(!b||lock)return;
+  if(id==='method'){S.method=b.dataset.m;predict();}else S[id]=+b.dataset.v;save();render();};
+$('bReset').onclick=()=>{S={...S,...FRESH,hist:[],won:[]};undo.length=0;save();predict();render();mood('idle');};
+predict(false);render();
 })();
 </script>
 
