@@ -43,6 +43,7 @@ if(window.paypal){paypal.Buttons({
   onApprove:d=>fetch('api.php?a=capture',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:d.orderID})})
     .then(r=>r.json()).then(res=>{if(res.ok){msg('Payment complete! Opening Kitsu… 🦊',true);location.href='app.php';}else msg(res.error||'The payment did not go through.',false);}),
   onError:()=>msg('PayPal reported an error. No money was taken; please try again.',false)
-}).render('#paypal');}else msg('PayPal could not load. Check your connection and reload the page.',false);
+}).render('#paypal').catch(()=>msg('The PayPal button could not be shown. (Site owner: check paypal_client and paypal_mode in config.php.)',false));}
+else msg('PayPal could not load. Check your connection and reload the page. (Site owner: check paypal_client in config.php.)',false);
 </script>
 <?php page_foot();
