@@ -19,7 +19,7 @@ page_head('Kitsu Oracle – anime roulette companion');
     <li><b>Session score:</b> hits, combos, profit and loss</li>
     <li>Works on your phone, right in the browser</li>
   </ul>
-  <div id="paypal" style="min-height:50px;max-width:420px;width:100%;justify-self:center"></div>
+  <div id="pp-buttons" style="min-height:50px;max-width:420px;width:100%;justify-self:center"></div>
   <div id="payMsg"></div>
   <p class="fine">Pay with PayPal or card. Access opens right after payment on this device; on other devices log in with your PayPal e-mail.</p>
 </section>
@@ -44,11 +44,11 @@ function startButtons(){
     onApprove:d=>fetch('api.php?a=capture',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:d.orderID})})
       .then(r=>r.json()).then(res=>{if(res.ok){msg('Payment complete! Opening Kitsu… 🦊',true);location.href='app.php';}else msg(res.error||'The payment did not go through.',false);}),
     onError:e=>{console.error(e);msg('PayPal reported an error. No money was taken; please try again.',false);}
-  }).render('#paypal').catch(e=>{console.error(e);msg('The PayPal button could not be shown: '+(e&&e.message||e),false);});
+  }).render("#pp-buttons").catch(e=>{console.error(e);msg('The PayPal button could not be shown: '+(e&&e.message||e),false);});
 }
 const sdk=document.createElement('script');sdk.src=SDK;sdk.onload=startButtons;
 sdk.onerror=()=>msg('PayPal could not load. If you use an ad or privacy blocker, allow paypal.com for this site, or try another browser.',false);
 document.head.appendChild(sdk);
-setTimeout(()=>{if(!document.querySelector('#paypal iframe')&&!document.querySelector('#payMsg .msg'))msg('The PayPal button is taking long to appear. Reload the page, or try another browser.',false);},10000);
+setTimeout(()=>{if(!document.querySelector('#pp-buttons iframe')&&!document.querySelector('#payMsg .msg'))msg('The PayPal button is taking long to appear. Reload the page, or try another browser.',false);},10000);
 </script>
 <?php page_foot();
