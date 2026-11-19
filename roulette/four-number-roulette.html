@@ -194,7 +194,20 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
             <select id="f_mode">
               <option value="rule">My rule (pair / group of numbers)</option>
               <option value="coef">Top 4 by coefficient</option>
+              <option value="bias">Bias hunter (Bayes + Kelly)</option>
             </select>
+          </label>
+          <label class="m-bias">Certainty needed, %
+            <input id="f_conf" type="number" step="0.5" min="50" max="99.99">
+            <span class="hint">That a wheel sector beats the payout, after correcting for 37 sectors</span>
+          </label>
+          <label class="m-bias">Skepticism (prior, spins)
+            <input id="f_prior" type="number" min="0" max="5000">
+            <span class="hint">Higher = needs more proof before betting</span>
+          </label>
+          <label class="m-bias">Kelly fraction, %
+            <input id="f_kelly" type="number" step="5" min="1" max="100">
+            <span class="hint">Share of the optimal bet size; 25 is a safe choice</span>
           </label>
           <label class="m-rule">My numbers (2–4)
             <input id="f_nums" placeholder="14 16">
@@ -217,13 +230,13 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
           <label class="m-coef">Bet at the latest after N idle spins
             <input id="f_wait" type="number" min="1" max="100">
           </label>
-          <label>Spins per window
+          <label class="m-win">Spins per window
             <input id="f_spins" type="number" min="1" max="50">
           </label>
           <label>Base bet per number
             <input id="f_chip" type="number" step="0.05" min="0.05">
           </label>
-          <label>Aggressiveness, % per spin
+          <label class="m-win">Aggressiveness, % per spin
             <input id="f_aggr" type="number" step="5" min="0" max="200">
           </label>
           <label>Max bet per number
@@ -232,7 +245,7 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
           <label>Bankroll · currency
             <span style="display:flex;gap:6px"><input id="f_bank" type="number" min="1" style="width:65%" aria-label="Bankroll"><input id="f_cur" maxlength="4" style="width:35%" aria-label="Currency"></span>
           </label>
-          <label class="check"><input type="checkbox" id="f_floor">Every hit in profit</label>
+          <label class="check m-win"><input type="checkbox" id="f_floor">Every hit in profit</label>
         </div>
         <div class="plan" id="plan"></div>
       </section>
@@ -240,10 +253,10 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
 
     <div class="col">
       <section class="panel" id="coefPanel">
-        <header><h2>Coefficient per number</h2><span class="eyebrow" id="kSummary"></span></header>
+        <header><h2 id="coefTitle">Coefficient per number</h2><span class="eyebrow" id="kSummary"></span></header>
         <div class="tablewrap" style="max-height:640px;overflow-y:auto">
           <table>
-            <thead><tr><th>No.</th><th title="Hits in the observed window">Hits</th><th>Expected</th><th>Gap</th><th title="Rarity of so few hits and this gap: −log10 of their probabilities">Coefficient</th><th></th></tr></thead>
+            <thead id="kHead"><tr><th>No.</th><th title="Hits in the observed window">Hits</th><th>Expected</th><th>Gap</th><th title="Rarity of so few hits and this gap: −log10 of their probabilities">Coefficient</th><th></th></tr></thead>
             <tbody id="ktable"></tbody>
           </table>
         </div>
@@ -271,6 +284,11 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
             <option value="1000">1,000 sessions</option>
             <option value="10000" selected>10,000 sessions</option>
           </select>
+          <select id="t_wheel" aria-label="Wheel">
+            <option value="0">Fair wheel</option>
+            <option value="0.25">Defective wheel (+25% on one sector)</option>
+            <option value="0.5">Badly defective wheel (+50%)</option>
+          </select>
           <button class="btn primary" id="labBtn">Play</button>
         </div>
         <div id="labOut"><p class="note" style="margin-top:10px">Plays evenings of the spins above with your settings, and the same evenings without any waiting, to see if waiting makes a difference.</p></div>
@@ -278,7 +296,7 @@ canvas{width:100%;height:160px;display:block;margin-top:10px}
     </div>
   </div>
 
-  <p class="note">My rule: when one of your numbers lands, the tracker watches the next N spins for another of them. Each time none comes, that is one miss. After the set number of misses, the next time one of your numbers lands, all of them are bet for one window. Coefficient = −log10 P(this few hits in the last N spins) − log10 P(this long a gap). Higher means the number has been unusually absent. Each spin is still independent: m numbers hit with m/37 (4 numbers 10.8%, 2 numbers 5.4%), and every bet keeps a −2.7% expected value.</p>
+  <p class="note">Bias hunter: real roulette wheels can be slightly defective, making one area of the wheel land more often. The hunter counts hits for all 37 sectors of 4 neighbouring pockets, estimates each sector's true hit rate with a skeptical Bayesian prior, and bets only when it is at least the set certainty that a sector beats the 11.1% needed to profit (corrected for testing 37 sectors at once). The bet size follows the Kelly criterion. On a fair wheel it should almost never bet. My rule: when one of your numbers lands, the tracker watches the next N spins for another of them. Each time none comes, that is one miss. After the set number of misses, the next time one of your numbers lands, all of them are bet for one window. Coefficient = −log10 P(this few hits in the last N spins) − log10 P(this long a gap). Higher means the number has been unusually absent. Each spin is still independent: m numbers hit with m/37 (4 numbers 10.8%, 2 numbers 5.4%), and every bet keeps a −2.7% expected value.</p>
 </div>
 
 <script>
@@ -287,7 +305,7 @@ const RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
 const P1=1/37, Q1=36/37, Q4=33/37, PAY=8, LG_Q1=-Math.log10(Q1);
 const $=id=>document.getElementById(id);
 const chip=(n,c='')=>`<span class="chip c-${n===0?'green':RED.has(n)?'red':'black'} ${c}">${n}</span>`;
-const DEF={mode:'rule',nums:'14 16',watchN:10,missN:3,look:150,minK:0,wait:10,spins:10,chip:0.2,aggr:20,maxBet:2,floor:true,bank:100,cur:'€'};
+const DEF={conf:99,prior:300,kelly:25,mode:'rule',nums:'14 16',watchN:10,missN:3,look:150,minK:0,wait:10,spins:10,chip:0.2,aggr:20,maxBet:2,floor:true,bank:100,cur:'€'};
 const parseNums=t=>[...new Set(String(t??'').split(/[^0-9]+/).filter(Boolean).map(Number).filter(n=>n<=36))].slice(0,4);
 const KEY='roulette-lean-v1', OLD=['four-number-roulette-v1','cluster-roulette-v1'];
 let state={spins:[],cfg:{...DEF}};
@@ -297,13 +315,14 @@ function norm(c){ // every setting becomes a valid number, whatever was stored
   for(const k of Object.keys(DEF)){
     if(k==='cur'){o.cur=String(c.cur??'').trim().slice(0,4)||DEF.cur;continue;}
     if(k==='floor'){o.floor=c.floor===undefined?DEF.floor:!!c.floor;continue;}
-    if(k==='mode'){o.mode=c.mode==='coef'?'coef':'rule';continue;}
+    if(k==='mode'){o.mode=['coef','bias'].includes(c.mode)?c.mode:'rule';continue;}
     if(k==='nums'){const a=parseNums(c.nums);o.nums=(a.length>=2?a:parseNums(DEF.nums)).join(' ');continue;}
     const v=parseFloat(String(c[k]??'').replace(',','.'));
     o[k]=isFinite(v)&&v>=0?v:DEF[k];
   }
   o.look=Math.round(Math.min(500,Math.max(37,o.look)));o.wait=Math.max(1,Math.round(o.wait));
   o.spins=Math.round(Math.min(50,Math.max(1,o.spins||DEF.spins)));o.aggr=Math.min(200,o.aggr);o.minK=Math.min(30,o.minK);
+  o.conf=Math.min(99.99,Math.max(50,o.conf||DEF.conf));o.prior=Math.min(5000,o.prior);o.kelly=Math.min(100,Math.max(1,o.kelly||DEF.kelly));
   o.watchN=Math.round(Math.min(100,Math.max(1,o.watchN||DEF.watchN)));o.missN=Math.round(Math.min(20,Math.max(1,o.missN||DEF.missN)));
   if(o.chip<=0)o.chip=DEF.chip;if(o.maxBet<o.chip)o.maxBet=o.chip;if(o.bank<=0)o.bank=DEF.bank;
   return o;
@@ -378,12 +397,89 @@ function run(spins,cfg,o={}){
   return {bet,log,pl,staked,wins,losses,idle,dd,K,N:spins.length,per,m,rule,NUMS,watch,from,miss};
 }
 
+/* ---------- bias hunter ---------- */
+const WHEEL=[0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26];
+const SECT=Array.from({length:37},(_,i)=>[0,1,2,3].map(k=>WHEEL[(i+k)%37]));
+const Phi=z=>0.5*(1+Math.tanh(0.7978845608*(z+0.044715*z*z*z)));
+const BE=4/36; // hit rate a 4-number bet needs to break even
+function sectors(cnt,N,cfg){
+  const need=1-(1-cfg.conf/100)/37;
+  return SECT.map((S,i)=>{const k=S.reduce((a,x)=>a+cnt[x],0),a=k+cfg.prior*4/37,b=N-k+cfg.prior*33/37,m=a/(a+b),sd=Math.sqrt(m*(1-m)/(a+b+1)),P=Phi((m-BE)/sd);
+    return {i,S,k,m,P,ok:N>0&&P>=need};});
+}
+function runBias(spins,cfg,o={}){
+  const cnt=new Array(37).fill(0);let pl=0,staked=0,peak=0,dd=0,cur=null,log=[],run=null,betSpins=0,hitsN=0;
+  let seed=12345;const rnd=()=>(seed=(seed*1103515245+12345)%2147483648)/2147483648;
+  for(let i=0;i<spins.length;i++){
+    const n=spins[i];
+    if(cur){const s=4*cur.p,hit=cur.set.has(n),d=hit?cur.p*36-s:-s;staked+=s;pl+=d;betSpins++;if(hit)hitsN++;
+      if(!o.noLog){ if(!run||run.key!==cur.key){if(run)log.push(run);run={key:cur.key,nums:cur.nums,start:i-1,step:0,staked:0,pl:0,K:cur.m,hitNum:null};}
+        run.step++;run.staked+=s;run.pl+=d;if(hit)run.hitNum=n; }
+      if(pl>peak)peak=pl;if(peak-pl>dd)dd=peak-pl;}
+    else if(run){log.push(run);run=null;}
+    cnt[n]++;cur=null;
+    if(o.random){const st=new Set();while(st.size<4)st.add(Math.floor(rnd()*37));const nums=[...st];cur={nums,set:new Set(nums),p:cfg.chip,key:'r',m:0};continue;}
+    let best=null;for(const x of sectors(cnt,i+1,cfg))if(x.ok&&(!best||x.m>best.m))best=x;
+    if(best){const f=Math.max(0,(best.m*9-1)/8)*cfg.kelly/100;let p=Math.floor(f*(cfg.bank+pl)/4/cfg.chip+1e-9)*cfg.chip;p=Math.round(Math.min(cfg.maxBet,p)*100)/100;
+      if(p>=cfg.chip-1e-9)cur={nums:best.S.slice().sort((a,b)=>a-b),set:new Set(best.S),p,key:'s'+best.i,m:best.m,P:best.P};}
+  }
+  if(run)log.push(run);
+  const done=cur?log.slice(0,-1):log;
+  return {bias:true,log:done,openRun:cur?log[log.length-1]:null,pl,staked,dd,cur,betSpins,hitsN,cnt,N:spins.length,
+    wins:done.filter(r=>r.pl>0).length,losses:done.filter(r=>r.pl<=0).length,stats:o.noLog?null:sectors(cnt,spins.length,cfg)};
+}
+
+function renderBias(cfg,c){
+  const R=runBias(state.spins,cfg),N=R.N,need=1-(1-cfg.conf/100)/37;
+  $('kpis').innerHTML=[['Spins',N],['Bankroll',fmt(cfg.bank+R.pl,c)],['P/L',`<span class="${R.pl>=0?'pos':'neg'}">${sf(R.pl,c)}</span>`],['Spins bet',R.betSpins]]
+    .map(([k,v])=>`<div class="kpi"><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
+  const ranked=R.stats.slice().sort((a,b)=>b.P-a.P), top=ranked[0];
+  $('status').innerHTML=[`<span class="${R.cur?'':'on'}">Best sector ${top.S.join('·')}: hit rate <b>${pct(N?top.k/N:0)}</b> (fair 10.8%, profit needs 11.1%) · certainty <b>${pct(top.P)}</b> of ${pct(need,2)} needed</span>`,
+    `<span>Kelly <b>${cfg.kelly}%</b> · max <b>${fmt(cfg.maxBet,c)}</b> per number</span>`].join('');
+  if(R.cur){const p=R.cur.p,edge=R.cur.m*9-1;
+    $('bet').innerHTML=`<article class="bet">
+      <div class="row"><span class="eyebrow">Bias found · sector on the wheel</span><span>estimated hit rate <b>${pct(R.cur.m)}</b></span></div>
+      <div class="chips bigchips">${R.cur.nums.map(n=>chip(n)).join('')}</div>
+      <div class="stake">${fmt(p,c)} <span style="font-size:14px;color:var(--muted)">on each · total ${fmt(4*p,c)}</span></div>
+      <div class="row"><span>if one hits</span><b class="pos">${sf(p*32,c)}</b></div>
+      <div class="row"><span>estimated edge per bet <b class="${edge>=0?'pos':'neg'}">${sf(100*edge,'')}%</b></span><span>certainty <b>${pct(R.cur.P,2)}</b></span></div>
+    </article>`;
+    $('betsSummary').textContent=`total ${fmt(4*p,c)}`;
+  }else{
+    $('bet').innerHTML=`<div class="empty">No bet. No sector has proven an edge yet. On a fair wheel this is normal and saves your money; a real wheel defect usually needs a few thousand spins to show.</div><div class="progress"><i style="width:${Math.min(100,top.P/need*100)}%"></i></div>`;
+    $('betsSummary').textContent='watching';
+  }
+  const hl=R.cur?R.cur.set:new Set(top.S);
+  const order=[];for(let r=0;r<3;r++)for(let col=0;col<12;col++)order.push(col*3+3-r);
+  $('pad').innerHTML=`<button class="z ${hl.has(0)?'betting':''}" data-n="0">0</button>`+order.map(n=>`<button class="${RED.has(n)?'r':'k'} ${hl.has(n)?'betting':''}" data-n="${n}">${n}</button>`).join('');
+  $('strip').innerHTML=state.spins.slice(-40).reverse().map((n,i)=>chip(n,i?'':'last')).join('')||'<span class="empty">No spins yet.</span>';
+  $('coefTitle').textContent='Wheel sectors';$('kSummary').textContent=`${N} spins · expected ${(N*4/37).toFixed(1)} hits per sector`;
+  $('kHead').innerHTML='<tr><th>Sector</th><th>Hits</th><th>Expected</th><th>Hit rate</th><th title="Probability that this sector beats the 11.1% break-even">Certainty</th><th></th></tr>';
+  $('ktable').innerHTML=ranked.map(x=>`<tr class="${R.cur&&('s'+x.i)===R.cur.key?'isbet':''}"><td><div class="chips">${x.S.map(n=>chip(n)).join('')}</div></td>
+    <td class="num">${x.k}</td><td class="num">${(N*4/37).toFixed(1)}</td><td class="num">${pct(N?x.k/N:0)}</td>
+    <td class="num"><b>${pct(x.P)}</b><span class="kbar"><i style="width:${x.P*100}%"></i></span></td><td>${x.ok?'<span class="pill p-bet">EDGE</span>':''}</td></tr>`).join('');
+  $('succ').innerHTML=[['Spins bet',R.betSpins],['Hits',R.hitsN],['Hit rate',R.betSpins?pct(R.hitsN/R.betSpins):'–'],['Break-even','11.1%'],['Staked',fmt(R.staked,c)],['Max drawdown',`<span class="neg">${fmt(R.dd,c)}</span>`]]
+    .map(([k,v])=>`<div><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
+  $('logSummary').textContent=R.log.length?`${R.log.length} betting runs`:'';
+  $('thK').textContent='Est. rate';
+  $('ltable').innerHTML=R.log.slice().reverse().slice(0,100).map(b=>`<tr><td><div class="chips">${b.nums.map(x=>chip(x,x===b.hitNum?'last':'')).join('')}</div></td>
+    <td class="num">#${b.start+2}</td><td class="num">${pct(b.K)}</td><td class="num">${b.step}</td><td class="num">${fmt(b.staked,c)}</td>
+    <td class="num ${b.pl>=0?'pos':'neg'}">${sf(b.pl,c)}</td></tr>`).join('')||'<tr><td colspan="6" class="empty" style="text-align:left">No bets yet.</td></tr>';
+  $('plan').innerHTML=`Bets only on a proven edge, sized by Kelly: ${cfg.kelly}% of the optimal share of your bankroll, between ${fmt(cfg.chip,c)} and ${fmt(cfg.maxBet,c)} per number.`;
+}
+
 const fmt=(v,c)=>(v<0?'−':'')+c+Math.abs(v).toFixed(2), sf=(v,c)=>(v>0?'+':'')+fmt(v,c), pct=(v,d=1)=>(v*100).toFixed(d)+'%';
 
 function render(){
+  const mode=state.cfg.mode;
+  document.querySelectorAll('.m-rule').forEach(e=>e.hidden=mode!=='rule');document.querySelectorAll('.m-coef').forEach(e=>e.hidden=mode!=='coef');
+  document.querySelectorAll('.m-bias').forEach(e=>e.hidden=mode!=='bias');document.querySelectorAll('.m-win').forEach(e=>e.hidden=mode==='bias');
+  $('coefPanel').hidden=mode==='rule';
+  if(mode==='bias')return renderBias(state.cfg,state.cfg.cur);
+  $('coefTitle').textContent='Coefficient per number';
+  $('kHead').innerHTML='<tr><th>No.</th><th title="Hits in the observed window">Hits</th><th>Expected</th><th>Gap</th><th title="Rarity of so few hits and this gap: −log10 of their probabilities">Coefficient</th><th></th></tr>';
   const cfg=state.cfg,c=cfg.cur,R=run(state.spins,cfg),m=R.m,Qm=(37-m)/37,W=R.rule?0:cfg.look,N=R.N,ready=N>=W;
-  document.querySelectorAll('.m-rule').forEach(e=>e.hidden=!R.rule);document.querySelectorAll('.m-coef').forEach(e=>e.hidden=R.rule);
-  $('coefPanel').hidden=R.rule; $('thK').textContent=R.rule?'':'Coef.';
+  $('thK').textContent=R.rule?'':'Coef.';
   $('kpis').innerHTML=[['Spins',N],['Bankroll',fmt(cfg.bank+R.pl,c)],['P/L',`<span class="${R.pl>=0?'pos':'neg'}">${sf(R.pl,c)}</span>`],['Windows W/L',`${R.wins}/${R.losses}`]]
     .map(([k,v])=>`<div class="kpi"><span class="eyebrow">${k}</span><b>${v}</b></div>`).join('');
   const ranked=R.K.slice().sort((a,b)=>b.K-a.K||a.n-b.n), top=ranked.slice(0,4), topAvg=top.reduce((a,x)=>a+x.K,0)/4;
@@ -460,7 +556,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='Backspace'){e.preventDefault();state.spins.pop();save();render();}
 });
 
-const F=['mode','nums','watchN','missN','look','minK','wait','spins','chip','aggr','maxBet','bank','cur'];
+const F=['conf','prior','kelly','mode','nums','watchN','missN','look','minK','wait','spins','chip','aggr','maxBet','bank','cur'];
 function fill(){F.forEach(k=>$('f_'+k).value=state.cfg[k]);$('f_floor').checked=!!state.cfg.floor;}
 $('form').onchange=()=>{
   const c={};F.forEach(k=>c[k]=$('f_'+k).value);c.floor=$('f_floor').checked;
@@ -471,18 +567,22 @@ $('labBtn').onclick=()=>{
   $('labBtn').disabled=true;$('labBtn').textContent='Playing…';
   setTimeout(()=>{
     const cfg=state.cfg,c=cfg.cur,rule=cfg.mode==='rule',play=Math.round(Math.min(5000,Math.max(10,+$('t_spins').value||300))),n=+$('t_n').value,len=(rule?0:cfg.look)+play;
-    const other=rule?'Same numbers, no waiting':'Random 4, no waiting';
-    const buf=new Uint32Array(16384);let bi=buf.length;const r=()=>{if(bi>=buf.length){crypto.getRandomValues(buf);bi=0;}return buf[bi++]%37;};
+    const bias=cfg.mode==='bias';
+    const other=bias?'Random 4, every spin':rule?'Same numbers, no waiting':'Random 4, no waiting';
+    const buf=new Uint32Array(16384);let bi=buf.length;const u=()=>{if(bi>=buf.length){crypto.getRandomValues(buf);bi=0;}return buf[bi++]/4294967296;};
+    const boost=+$('t_wheel').value, w=new Array(37).fill(1); if(boost>0)for(const x of SECT[10])w[x]*=1+boost;
+    const tot=w.reduce((a,b)=>a+b,0), cum=[];w.reduce((a,x,i)=>(cum[i]=(a+x)/tot,a+x),0);
+    const r=()=>{const v=u();let i=0;while(i<36&&v>=cum[i])i++;return i;};
     const A=[],B=[];let stA=0,stB=0;
     for(let k=0;k<n;k++){
       const s=new Array(len);for(let i=0;i<len;i++)s[i]=r();
-      const a=run(s,cfg,{noLog:true}),b=rule?run(s,cfg,{noLog:true,always:true}):run(s,{...cfg,minK:0},{noLog:true,random:true});
+      const a=bias?runBias(s,cfg,{noLog:true}):run(s,cfg,{noLog:true}),b=bias?runBias(s,cfg,{noLog:true,random:true}):rule?run(s,cfg,{noLog:true,always:true}):run(s,{...cfg,minK:0},{noLog:true,random:true});
       // a window still open at the end counts with what it has lost so far
       A.push(a.pl);B.push(b.pl);stA+=a.staked;stB+=b.staked;
     }
     const stats=(v,st)=>{const x=v.slice().sort((p,q)=>p-q),q=f=>x[Math.min(x.length-1,Math.floor(f*x.length))];
       const tot=x.reduce((p,y)=>p+y,0);
-      return {up:x.filter(y=>y>0).length/x.length,avg:tot/x.length,roi:st?tot/st:0,med:q(.5),lo:q(.1),hi:q(.9),min:x[0],max:x[x.length-1],st:st/x.length};};
+      return {down:x.filter(y=>y<0).length/x.length,up:x.filter(y=>y>0).length/x.length,avg:tot/x.length,roi:st?tot/st:0,med:q(.5),lo:q(.1),hi:q(.9),min:x[0],max:x[x.length-1],st:st/x.length};};
     const a=stats(A,stA),b=stats(B,stB);
     if(n===1){
       $('labOut').innerHTML=`<div class="simres" style="margin-top:10px">
@@ -493,13 +593,15 @@ $('labBtn').onclick=()=>{
     }else{
       const row=(name,s)=>`<tr><td>${name}</td><td class="num">${pct(s.up,0)}</td><td class="num ${s.avg>=0?'pos':'neg'}">${sf(s.avg,c)}</td><td class="num">${sf(s.med,c)}</td>
         <td class="num">${sf(s.lo,c)} … ${sf(s.hi,c)}</td><td class="num">${sf(s.min,c)} / ${sf(s.max,c)}</td><td class="num">${fmt(s.st,c)}</td><td class="num ${s.roi>=0?'pos':'neg'}"><b>${sf(100*s.roi,c)}</b></td></tr>`;
-      const ten=Math.round(a.up*10);
-      $('labOut').innerHTML=`<p style="margin:12px 0 4px;font-size:16px">Out of 10 evenings of ${play} spins, about <b class="pos">${ten} end in profit</b> and <b class="neg">${10-ten} in a loss</b>. On average you end <b class="${a.avg>=0?'pos':'neg'}">${sf(a.avg,c)}</b>, which is <b>${sf(100*a.roi,c)}</b> per ${c}100 you put on the table.</p>
-        ${a.st<b.st*0.5?`<p class="note">Your strategy bets only ${fmt(a.st,c)} per evening against ${fmt(b.st,c)} without waiting, so it also loses less in total. That is the only difference: compare the last column, the result per ${c}100 staked. Expected for every strategy: ${sf(-2.7,c)}.</p>`:''}
+      const up=Math.round(a.up*10),down=Math.round(a.down*10),none=Math.max(0,10-up-down);
+      $('labOut').innerHTML=`<p style="margin:12px 0 4px;font-size:16px">Out of 10 evenings of ${play} spins, about <b class="pos">${up} end in profit</b>, <b class="neg">${down} in a loss</b>${none?` and <b>${none} without a single bet</b>`:''}. ${a.st>=1?`On average you end <b class="${a.avg>=0?'pos':'neg'}">${sf(a.avg,c)}</b>, which is <b>${sf(100*a.roi,c)}</b> per ${c}100 you put on the table.`:'Your strategy (almost) never bet, so it (almost) neither won nor lost.'}</p>
+        ${boost>0?`<p class="note">Test wheel: pockets ${SECT[10].join(', ')} land ${Math.round(boost*100)}% more often than the others (sector ${SECT[10].join('·')}). Real defects are usually smaller and need thousands of spins to find: try 3,000+ spins.</p>`:''}
+        ${!bias&&boost===0&&a.st>0&&a.st<b.st*0.5?`<p class="note">Your strategy bets only ${fmt(a.st,c)} per evening against ${fmt(b.st,c)} without waiting, so it also loses less in total. That is the only difference: compare the last column, the result per ${c}100 staked. Expected for every strategy on a fair wheel: ${sf(-2.7,c)}.</p>`:''}
+        ${bias&&boost===0?`<p class="note">On a fair wheel the hunter should almost never find an edge, so it keeps your money instead of losing ${fmt(-b.avg,c)} per evening like the comparison.</p>`:''}
         <div class="tablewrap" style="margin-top:10px"><table>
         <thead><tr><th>Strategy</th><th>In profit</th><th>Average</th><th>Typical</th><th>8 of 10 end between</th><th>Worst / best</th><th>Staked</th><th>Per ${c}100 staked</th></tr></thead>
         <tbody>${row('Your strategy',a)}${row(other,b)}</tbody></table></div>
-        <p class="note">If waiting helped, the first row would be clearly better in the last column. Run it a few times: it moves around ${sf(-2.7,c)} for both, by chance. Run it a few times: the two rows trade places by chance, and both average a loss of about 2.7% of what you staked.</p>`;
+        <p class="note">${boost>0?'On a defective wheel a strategy that finds the defect wins; one that bets cold numbers or random ones does not.':'On a fair wheel no strategy is better in the last column: it moves around '+sf(-2.7,c)+' by chance.'}${boost>0?'':' Run it a few times to see the rows trade places.'}</p>`;
     }
     $('labBtn').disabled=false;$('labBtn').textContent='Play again';
   },30);
