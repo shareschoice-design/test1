@@ -68,6 +68,11 @@ button{font:inherit;cursor:pointer}
 .bar i{position:absolute;inset:0 auto 0 0;border-radius:6px}
 .pad{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px;width:100%}
 .pad button{border:0;border-radius:6px;height:34px;color:#fff;font-family:var(--display);font-size:13px}
+.seg{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.seg button{border:2px solid #3b2470;background:rgba(29,16,56,.85);color:var(--dim);border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px}
+.seg button.on{border-color:var(--gold);color:var(--gold);box-shadow:0 0 12px rgba(255,210,61,.45)}
+.formula{font-family:var(--display);font-size:clamp(16px,4.6vw,22px);color:var(--gold);text-shadow:0 0 12px rgba(255,210,61,.6);min-height:28px;letter-spacing:.02em}
+.formula small{display:block;font-family:var(--body);font-size:12px;color:var(--dim);text-shadow:none;letter-spacing:0;margin-top:2px}
 .foot{font-size:12px;color:var(--dim);max-width:46ch;line-height:1.5}
 @media (max-width:420px){.board b{font-size:18px}.fox{width:96px}.bubble{font-size:14px}}
 @media (prefers-reduced-motion:reduce){#rotor{transition-duration:.01s}.chip,.burst.go,.fox.bounce,.fox.shake{animation:none}}
@@ -102,7 +107,11 @@ button{font:inherit;cursor:pointer}
     <div class="bubble" id="say">Konnichiwa! I'm Kitsu. Press PREDICT and I'll read the wheel~</div>
   </div>
 
+  <div class="seg" id="method" aria-label="Prediction method">
+    <button data-m="pyth">📐 Pythagoras</button><button data-m="fox">🦊 Fox instinct</button>
+  </div>
   <div class="picks" id="picks" aria-live="polite"></div>
+  <div class="formula" id="formula"></div>
 
   <div class="wheelwrap">
     <div class="pointer"></div>
@@ -117,6 +126,10 @@ button{font:inherit;cursor:pointer}
     <button class="btn ghost" id="bPad">Real table</button>
   </div>
   <div class="pad" id="pad" hidden></div>
+  <div class="seg" id="stakes" aria-label="Coins per number">
+    <span style="align-self:center;color:var(--dim);font-size:13px;font-weight:800">Bet per number:</span>
+    <button data-s="1">1</button><button data-s="5">5</button><button data-s="10">10</button><button data-s="25">25</button>
+  </div>
 
   <div class="board">
     <div><small>Rounds</small><b id="sRounds">0</b></div>
@@ -133,7 +146,7 @@ button{font:inherit;cursor:pointer}
   </div>
 
   <button class="btn ghost" id="bReset">Reset show</button>
-  <p class="foot">For fun. Every spin is random and nobody can predict it, not even a fox spirit. The scoreboard keeps Kitsu honest: watch her hit rate settle near 10.8%, the same as picking any 4 numbers. Coins are play money: each round costs 4 and a hit pays 36.</p>
+  <p class="foot">For fun. Every spin is random and nobody can predict it, not even a fox spirit. The scoreboard keeps Kitsu honest: watch her hit rate settle near 10.8%, the same as picking any 4 numbers. Coins are play money: you bet on 4 numbers and a hit pays 36 for 1. Pythagoras mode: c = √(a² + b²) from the last two numbers, then c and its wheel neighbours are bet. It looks clever and is exactly as random as any other pick.</p>
 </div>
 <div class="burst" id="burst"></div>
 
@@ -150,7 +163,7 @@ const LINES={
 };
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 const KEY='kitsu-oracle-v1';
-let S={hist:[],rounds:0,hits:0,combo:0,best:0,coins:100}, cur=null, rot=0, busy=false;
+let S={hist:[],rounds:0,hits:0,combo:0,best:0,coins:100,method:'pyth',stake:1}, cur=null, rot=0, busy=false;
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s)S={...S,...s};}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
 
@@ -174,6 +187,19 @@ const chips=(nums,hit)=>nums.map(n=>`<span class="chip c-${col(n)} ${n===hit?'hi
 
 // Kitsu's "method": the 4 numbers missing the longest. It sounds clever and does nothing.
 function predict(){
+  if(S.method==='pyth'){
+    if(S.hist.length<2){
+      const a=randomNum(),b=randomNum();S.hist.push(a,b);
+      say(`I need two numbers… the spirits give me ${a} and ${b}!`);
+    }
+    const a=S.hist[S.hist.length-2],b=S.hist[S.hist.length-1],c=Math.sqrt(a*a+b*b),r=Math.round(c)%37,i=WHEEL.indexOf(r);
+    cur=[WHEEL[(i+36)%37],r,WHEEL[(i+1)%37],WHEEL[(i+2)%37]];
+    $('picks').innerHTML=chips(cur);mood('idle');
+    $('formula').innerHTML=`√(${a}² + ${b}²) = ${c.toFixed(2)} → ${r}<small>${Math.round(c)>36?`${Math.round(c)} is past 36, so it wraps to ${r} · `:''}${r} and its neighbours on the wheel</small>`;
+    if(S.hist.length>2||!$('say').textContent.startsWith('I need'))say(pick(["Pythagoras never lies! a² + b² = c²!","The sacred triangle has spoken~","Math magic! These four, for sure!","Geometry of fate… ✨"]));
+    return;
+  }
+  $('formula').innerHTML='';
   const last=new Map();S.hist.forEach((n,i)=>last.set(n,i));
   const cand=Array.from({length:37},(_,n)=>({n,g:last.has(n)?S.hist.length-last.get(n):999+Math.random()}));
   cand.sort((a,b)=>b.g-a.g||Math.random()-.5);
@@ -184,8 +210,8 @@ function settle(n){
   S.hist.push(n);if(S.hist.length>500)S.hist.shift();
   $('res').textContent=n;
   if(cur){
-    S.rounds++;S.coins-=4;const hit=cur.includes(n);
-    if(hit){S.hits++;S.combo++;S.best=Math.max(S.best,S.combo);S.coins+=36;mood('happy');say(pick(LINES.hit));burst(S.combo>1?`COMBO ×${S.combo}!`:'SUGOI!');}
+    const st=S.stake;S.rounds++;S.coins-=4*st;const hit=cur.includes(n);
+    if(hit){S.hits++;S.combo++;S.best=Math.max(S.best,S.combo);S.coins+=36*st;mood('happy');say(pick(LINES.hit));burst(S.combo>1?`COMBO ×${S.combo}!`:'SUGOI!');}
     else{S.combo=0;mood('sad');say(pick(LINES.miss));}
     if(hit)[...$('picks').children].forEach(el=>{if(+el.textContent===n)el.classList.add('hit');});
     if(S.rounds%20===0)setTimeout(()=>{mood('idle');say(`Psst… after ${S.rounds} rounds my hit rate is ${(S.hits/S.rounds*100).toFixed(1)}%. Pure luck is 10.8%. Maybe I can't see the future~`);},1400);
@@ -204,6 +230,13 @@ function board(){
   $('sRounds').textContent=S.rounds;$('sHits').textContent=S.hits;$('sCombo').textContent=`${S.combo} / ${S.best}`;$('sCoins').textContent=S.coins;
   const r=S.rounds?S.hits/S.rounds:0;$('vKitsu').textContent=S.rounds?(r*100).toFixed(1)+'%':'–';$('barK').style.width=Math.min(100,r*400)+'%';
 }
+function seg(){
+  [...$('method').children].forEach(b=>b.classList.toggle('on',b.dataset.m===S.method));
+  [...$('stakes').querySelectorAll('button')].forEach(b=>b.classList.toggle('on',+b.dataset.s===S.stake));
+}
+$('method').onclick=e=>{const b=e.target.closest('button[data-m]');if(!b||busy)return;S.method=b.dataset.m;cur=null;$('picks').innerHTML='';$('formula').innerHTML='';save();seg();
+  say(S.method==='pyth'?'Pythagoras mode! Two numbers make a triangle… and the triangle shows the future~':'Fox instinct! I just feel which numbers are sleeping…');};
+$('stakes').onclick=e=>{const b=e.target.closest('button[data-s]');if(!b||busy)return;S.stake=+b.dataset.s;save();seg();board();};
 function lock(v){busy=v;['bPredict','bSpin','bAuto'].forEach(id=>$(id).disabled=v);}
 $('bPredict').onclick=()=>{if(!busy)predict();};
 $('bSpin').onclick=()=>{if(busy)return;if(!cur)predict();lock(true);const n=randomNum();setTimeout(()=>spinTo(n,()=>{settle(n);lock(false);}),cur?350:0);};
@@ -212,7 +245,7 @@ $('bAuto').onclick=()=>{if(busy)return;let k=0;lock(true);
 $('bPad').onclick=()=>{$('pad').hidden=!$('pad').hidden;$('bPad').textContent=$('pad').hidden?'Real table':'Hide table';};
 $('pad').innerHTML=Array.from({length:37},(_,n)=>`<button style="background:var(--${n===0?'grn':RED.has(n)?'red':'blk'})" data-n="${n}">${n}</button>`).join('');
 $('pad').onclick=e=>{const b=e.target.closest('button[data-n]');if(!b||busy)return;const n=+b.dataset.n;lock(true);spinTo(n,()=>{settle(n);lock(false);});};
-$('bReset').onclick=()=>{S={hist:[],rounds:0,hits:0,combo:0,best:0,coins:100};cur=null;save();board();$('picks').innerHTML='';$('res').textContent='?';mood('idle');say("Fresh start! Press PREDICT~");};
-board();
+$('bReset').onclick=()=>{S={hist:[],rounds:0,hits:0,combo:0,best:0,coins:100,method:S.method,stake:S.stake};$('formula').innerHTML='';cur=null;save();board();$('picks').innerHTML='';$('res').textContent='?';mood('idle');say("Fresh start! Press PREDICT~");};
+seg();board();
 })();
 </script>
