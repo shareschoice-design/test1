@@ -63,6 +63,17 @@ tr.best td{background:color-mix(in srgb,var(--good) 12%,transparent)}
 .note{color:var(--muted);font-size:13px;max-width:75ch}
 .pos{color:var(--good)} .neg{color:var(--bad)}
 .log{display:flex;gap:4px;flex-wrap:wrap}
+.sim{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:12px}
+.sim div{border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.sim b{display:block;font-family:var(--mono);font-size:16px}
+.sess{display:grid;gap:6px;margin-top:12px}
+.sess>div{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12.5px}
+.sess .res{min-width:96px;font-family:var(--mono)}
+.chip{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 3px;border-radius:11px;font-family:var(--mono);font-size:11px;font-weight:600;color:#fff}
+.c-r{background:var(--red)} .c-k{background:#1b1f1e} .c-g{background:#17824f}
+.chip.hit{outline:2px solid var(--good);outline-offset:1px}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ctl select{border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:7px 9px}
 .log span{font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:10px;color:#fff}
 </style>
 
@@ -109,6 +120,23 @@ tr.best td{background:color-mix(in srgb,var(--good) 12%,transparent)}
   <section class="panel">
     <header><h2>Play the plan</h2><span class="eyebrow" id="playInfo"></span></header>
     <div id="play"></div>
+  </section>
+
+  <section class="panel">
+    <header><h2>Simulation</h2><span class="eyebrow">random spins · your bankroll, target and bet</span></header>
+    <div class="ctl">
+      <select id="simN" aria-label="Number of sessions">
+        <option value="1000">1,000 sessions</option>
+        <option value="10000" selected>10,000 sessions</option>
+        <option value="100000">100,000 sessions</option>
+      </select>
+      <select id="simPol" aria-label="Strategy">
+        <option value="bold">The plan (bold play)</option>
+        <option value="flat">Min. bet every spin</option>
+      </select>
+      <button class="btn win" id="simBtn">Run simulation</button>
+    </div>
+    <div id="simOut"><p class="note" style="margin-top:12px">Plays the sessions on a random wheel and checks the result against the exact chance above.</p></div>
   </section>
 
   <section class="panel">
@@ -164,16 +192,15 @@ function solve(bet,c,policy){
   const S=new Int32Array(T); for(let x=0;x<T;x++)S[x]=stakeOf(x);
   const V=new Float64Array(T+1), E=new Float64Array(T+1); V[T]=1;
   const val=y=>y>=T?1:y<0?0:V[y], ev=y=>y>=T||y<0?0:E[y];
-  for(let it=0;it<200000;it++){
+  const upd=x=>{const s=S[x]; if(!s)return 0;
+    const nv=pw*val(x+bet.k*s)+pl*val(x-s)+(pz?pz*val(x-s/2):0);
+    const ne=1+pw*ev(x+bet.k*s)+pl*ev(x-s)+(pz?pz*ev(x-s/2):0);
+    const d=Math.max(Math.abs(nv-V[x]),Math.abs(ne-E[x])/(1+ne)); V[x]=nv; E[x]=ne; return d;};
+  const t0=performance.now();
+  for(let it=0;it<1000000;it++){ // Gauss-Seidel, sweeping down and up in turn
     let d=0;
-    for(let x=T-1;x>=1;x--){
-      const s=S[x]; if(!s){continue;}
-      const nv=pw*val(x+bet.k*s)+pl*val(x-s)+(pz?pz*val(x-s/2):0);
-      const ne=1+pw*ev(x+bet.k*s)+pl*ev(x-s)+(pz?pz*ev(x-s/2):0);
-      d=Math.max(d,Math.abs(nv-V[x]),Math.abs(ne-E[x])/(1+ne)); V[x]=nv; E[x]=ne;
-    }
-    if(d<1e-11)break;
-    if(policy==='flat'&&it>3000)break; // flat play with tiny stakes: chance is ~0 anyway
+    if(it%2===0)for(let x=T-1;x>=1;x--)d=Math.max(d,upd(x)); else for(let x=1;x<T;x++)d=Math.max(d,upd(x));
+    if(d<1e-12||performance.now()-t0>400)break;
   }
   return {p:val(X),steps:ev(X),stake:b=>{const x=Math.round(b/u);return x>=T?0:S[x]*u;},u};
 }
@@ -237,6 +264,50 @@ function renderPlay(bet,r){
   if($('bZero'))$('bZero').onclick=()=>step('z',-s/2);
   $('bReset').onclick=()=>{play=null;save();render();};
 }
+
+/* ---------- simulation ---------- */
+const RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
+const WINSET={even:RED,dozen:new Set([1,2,3,4,5,6,7,8,9,10,11,12]),line:new Set([1,2,3,4,5,6]),corner:new Set([1,2,4,5]),street:new Set([1,2,3]),split:new Set([1,2]),single:new Set([17])};
+const chipOf=n=>`<span class="chip ${n===0?'c-g':RED.has(n)?'c-r':'c-k'}">${n}</span>`;
+function rng(){const buf=new Uint32Array(16384);let i=buf.length;return ()=>{if(i>=buf.length){crypto.getRandomValues(buf);i=0;}return buf[i++]%37;};}
+$('simBtn').onclick=()=>{
+  const bet=BETS.find(b=>b.id===cfg.bet)||BETS[0], pol=$('simPol').value, n=+$('simN').value;
+  if(cfg.target<=cfg.bank)return;
+  const plan=solve(bet,cfg,pol); if(!plan)return;
+  $('simBtn').disabled=true;$('simBtn').textContent='Running…';
+  setTimeout(()=>{
+    const spin=rng(), win=WINSET[bet.id], partage=cfg.rule==='fr'&&bet.even;
+    let reached=0,bets=0,staked=0,net=0,maxBets=0;const samples=[];
+    for(let k=0;k<n;k++){
+      let x=cfg.bank,cnt=0;const seq=[];
+      while(x<cfg.target-1e-9&&cnt<200000){
+        const s=plan.stake(x); if(s<=0)break;
+        const r=spin(); cnt++; staked+=s;
+        let d; if(win.has(r))d=s*bet.k; else if(r===0&&partage)d=-s/2; else d=-s;
+        x=Math.round((x+d)*100)/100; if(k<12&&seq.length<40)seq.push({r,d,s});
+      }
+      if(x>=cfg.target-1e-9)reached++;
+      bets+=cnt; maxBets=Math.max(maxBets,cnt); net+=x-cfg.bank;
+      if(k<12)samples.push({seq,end:x,cnt});
+    }
+    const pHat=reached/n, se=Math.sqrt(pHat*(1-pHat)/n), ok=Math.abs(pHat-plan.p)<=2.6*se+1e-9;
+    $('simOut').innerHTML=`<div class="sim">
+      <div><span class="eyebrow">Reached the target</span><b class="pos">${pct(pHat)}</b></div>
+      <div><span class="eyebrow">Exact chance</span><b>${pct(plan.p)}</b></div>
+      <div><span class="eyebrow">Sessions won / lost</span><b>${reached.toLocaleString('en')} / ${(n-reached).toLocaleString('en')}</b></div>
+      <div><span class="eyebrow">Avg. bets per session</span><b>${(bets/n).toFixed(1)}</b></div>
+      <div><span class="eyebrow">Longest session</span><b>${maxBets.toLocaleString('en')} bets</b></div>
+      <div><span class="eyebrow">Avg. result per session</span><b class="${net>=0?'pos':'neg'}">${net>=0?'+':''}${fmt(net/n)}</b></div>
+      <div><span class="eyebrow">Total staked</span><b>${fmt(staked)}</b></div>
+      <div><span class="eyebrow">All sessions together</span><b class="${net>=0?'pos':'neg'}">${net>=0?'+':''}${fmt(net)}</b></div>
+    </div>
+    <p class="note" style="margin-top:10px">${ok?'The simulated rate matches the exact chance within normal random variation.':'The simulated rate is a little off the exact chance; with more sessions it moves closer.'} Over all sessions the casino keeps about ${(staked?(-net/staked*100):0).toFixed(2)}% of everything staked.</p>
+    <h2 style="margin-top:14px;font-size:15px">First sessions</h2>
+    <div class="sess">${samples.map(sm=>`<div><span class="res ${sm.end>=cfg.target-1e-9?'pos':'neg'}">${sm.end>=cfg.target-1e-9?'✓ ':'✗ '}${fmt(sm.end)}</span>
+      ${sm.seq.map(q=>q.d>0?chipOf(q.r).replace('class="chip','class="chip hit'):chipOf(q.r)).join('')}${sm.cnt>sm.seq.length?` <span class="note">+${sm.cnt-sm.seq.length} more</span>`:''}</div>`).join('')}</div>`;
+    $('simBtn').disabled=false;$('simBtn').textContent='Run again';
+  },30);
+};
 
 $('form').addEventListener('change',()=>{readForm();fill();save();render();});
 fill();render();
