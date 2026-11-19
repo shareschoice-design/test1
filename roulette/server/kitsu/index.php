@@ -19,7 +19,7 @@ page_head('Kitsu Oracle – anime roulette companion');
     <li><b>Session score:</b> hits, combos, profit and loss</li>
     <li>Works on your phone, right in the browser</li>
   </ul>
-  <div id="paypal"></div>
+  <div id="paypal" style="min-height:50px;max-width:420px;width:100%;justify-self:center"></div>
   <div id="payMsg"></div>
   <p class="fine">Pay with PayPal or card. Access opens right after payment on this device; on other devices log in with your PayPal e-mail.</p>
 </section>
@@ -34,16 +34,21 @@ page_head('Kitsu Oracle – anime roulette companion');
   </form>
 </section>
 
-<script src="https://www.paypal.com/sdk/js?client-id=<?= h(urlencode((string)cfg('paypal_client'))) ?>&currency=<?= h(cfg('currency')) ?>&intent=capture"></script>
 <script>
 const msg=(t,ok)=>{document.getElementById('payMsg').innerHTML=`<div class="msg ${ok?'ok':'err'}">${t}</div>`;};
-if(window.paypal){paypal.Buttons({
-  style:{shape:'pill',color:'gold',label:'pay'},
-  createOrder:()=>fetch('api.php?a=create',{method:'POST',credentials:'same-origin'}).then(r=>r.json()).then(d=>{if(!d.ok)throw new Error(d.error||'Could not start the payment.');return d.id;}),
-  onApprove:d=>fetch('api.php?a=capture',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:d.orderID})})
-    .then(r=>r.json()).then(res=>{if(res.ok){msg('Payment complete! Opening Kitsu… 🦊',true);location.href='app.php';}else msg(res.error||'The payment did not go through.',false);}),
-  onError:()=>msg('PayPal reported an error. No money was taken; please try again.',false)
-}).render('#paypal').catch(()=>msg('The PayPal button could not be shown. (Site owner: check paypal_client and paypal_mode in config.php.)',false));}
-else msg('PayPal could not load. Check your connection and reload the page. (Site owner: check paypal_client in config.php.)',false);
+const SDK='https://www.paypal.com/sdk/js?client-id=<?= rawurlencode((string)cfg('paypal_client')) ?>&currency=<?= rawurlencode((string)cfg('currency')) ?>&intent=capture';
+function startButtons(){
+  if(!window.paypal||!paypal.Buttons){msg('PayPal could not start. Reload the page, or try another browser.',false);return;}
+  paypal.Buttons({
+    createOrder:()=>fetch('api.php?a=create',{method:'POST',credentials:'same-origin'}).then(r=>r.json()).then(d=>{if(!d.ok)throw new Error(d.error||'Could not start the payment.');return d.id;}),
+    onApprove:d=>fetch('api.php?a=capture',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:d.orderID})})
+      .then(r=>r.json()).then(res=>{if(res.ok){msg('Payment complete! Opening Kitsu… 🦊',true);location.href='app.php';}else msg(res.error||'The payment did not go through.',false);}),
+    onError:e=>{console.error(e);msg('PayPal reported an error. No money was taken; please try again.',false);}
+  }).render('#paypal').catch(e=>{console.error(e);msg('The PayPal button could not be shown: '+(e&&e.message||e),false);});
+}
+const sdk=document.createElement('script');sdk.src=SDK;sdk.onload=startButtons;
+sdk.onerror=()=>msg('PayPal could not load. If you use an ad or privacy blocker, allow paypal.com for this site, or try another browser.',false);
+document.head.appendChild(sdk);
+setTimeout(()=>{if(!document.querySelector('#paypal iframe')&&!document.querySelector('#payMsg .msg'))msg('The PayPal button is taking long to appear. Reload the page, or try another browser.',false);},10000);
 </script>
 <?php page_foot();
