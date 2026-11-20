@@ -1,0 +1,8 @@
+DirectoryIndex index.html index.php
+Options -Indexes
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType video/mp4 "access plus 30 days"
+ExpiresByType image/webp "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+</IfModule>
