@@ -20,6 +20,7 @@ $mode = $cfgOk ? (string)($cfg['paypal_mode'] ?? '') : '';
 $add('paypal_client filled', strlen($client) > 40 && $client !== 'PASTE_CLIENT_ID', 'length ' . strlen($client) . ', starts with "' . htmlspecialchars(substr($client, 0, 6)) . '…"');
 $add('paypal_secret filled', strlen($secret) > 40 && $secret !== 'PASTE_SECRET', 'length ' . strlen($secret));
 $add('paypal_mode = sandbox or live', in_array($mode, ['sandbox', 'live'], true), 'now: "' . htmlspecialchars($mode) . '"');
+$add('Subscription plan set (plan_id)', !$cfgOk || ($cfg['sale_type'] ?? 'one_time') !== 'subscription' || preg_match('/^P-[A-Z0-9]+$/', (string)($cfg['plan_id'] ?? '')), 'open setup-plan.php?key=YOUR_SECRET and put the plan_id it shows into config.php');
 $add('secret changed', $cfgOk && ($cfg['secret'] ?? '') !== 'CHANGE-THIS-TO-A-LONG-RANDOM-TEXT', 'change "secret" in config.php to any long random text');
 $add('Spaces around the keys', $cfgOk && $client === (string)($cfg['paypal_client'] ?? '') && $secret === (string)($cfg['paypal_secret'] ?? ''), 'remove spaces/new lines inside the quotes');
 
