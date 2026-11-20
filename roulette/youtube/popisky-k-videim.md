@@ -1,3 +1,5 @@
+> ⚠️ STARÁ SADA: tyhle popisky i videa (s1–s5, l1–l5, f1–f3) prozrazují vzorec. Nepoužívej je, aktuální jsou v popisky-sada2.md.
+
 # Popisky k videím – zkopíruj do YouTube Studia
 
 U každého videa: **Publikum → Ne, není určeno pro děti** · **Omezení věku → 18+** · **Kategorie → Gaming** · Tagy viz konec souboru.
@@ -16,7 +18,7 @@ Which method should Kitsu try next? 👇
 ```
 Can an anime fox spirit predict roulette? 🦊
 
-Meet Kitsu, a fox oracle who tries a new "prediction method" every episode: Pythagoras, sleeping numbers, high-roller runs and 100-spin marathons. Every spin in the videos is genuinely random and unedited, so you'll see her wins and her fails.
+Meet Kitsu, a fox oracle who tries a new oracle mode every episode: Spirit Geometry, Fox Instinct, high-roller runs and 100-spin marathons. Every spin in the videos is genuinely random and unedited, so you'll see her wins and her fails.
 
 📺 New Shorts every day · new episode every week
 🦊 Play with Kitsu yourself: https://ggfrog.com/kitsu/index.php
@@ -237,3 +239,6 @@ Fox instinct mode: Kitsu bets the 4 numbers that haven't landed for the longest 
 #anime #roulette #kitsune #shorts
 Entertainment only. Random numbers, roulette cannot be predicted. 18+
 ```
+
+---
+
