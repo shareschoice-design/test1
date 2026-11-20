@@ -36,6 +36,24 @@ try {
       "Thank you for your purchase!\n\nOpen Kitsu Oracle any time here:\n" . rtrim((string)cfg('site_url'), '/') . "/\n\nOn a new phone or computer, enter this e-mail ($email) and you'll get a login link.\n\nKitsu 🦊");
     echo json_encode(['ok' => true, 'email' => $email]); exit;
   }
+  if ($a === 'subscribe' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $in = json_decode((string)file_get_contents('php://input'), true);
+    $id = is_array($in) ? (string)($in['id'] ?? '') : '';
+    if (!preg_match('/^I-[A-Z0-9]+$/', $id)) { http_response_code(400); echo json_encode(['ok' => false, 'error' => 'Unknown subscription.']); exit; }
+    $r = paypal_call('GET', '/v1/billing/subscriptions/' . $id);
+    $d = $r['data']; $status = (string)($d['status'] ?? '');
+    $email = strtolower(trim((string)($d['subscriber']['email_address'] ?? '')));
+    $ok = $r['code'] === 200 && in_array($status, ['ACTIVE', 'APPROVED'], true) && ($d['plan_id'] ?? '') === cfg('plan_id') && filter_var($email, FILTER_VALIDATE_EMAIL);
+    if (!$ok) { http_response_code(402); echo json_encode(['ok' => false, 'error' => 'The subscription is not active.']); exit; }
+    $taken = db()->prepare('SELECT email FROM users WHERE sub_id=? AND email<>?'); $taken->execute([$id, $email]);
+    if ($taken->fetchColumn()) { http_response_code(409); echo json_encode(['ok' => false, 'error' => 'This subscription belongs to another account.']); exit; }
+    $next = strtotime((string)($d['billing_info']['next_billing_time'] ?? '')) ?: (time() + 31 * 86400);
+    start_sub($email, $id, $next + 2 * 86400, $status);
+    log_in($email);
+    send_mail($email, 'Welcome to Kitsu Oracle 🦊',
+      "Thank you for subscribing!\n\nOpen Kitsu Oracle any time here:\n" . rtrim((string)cfg('site_url'), '/') . "/index.php\n\nOn a new phone or computer, enter this e-mail ($email) and you'll get a login link.\n\nYour subscription renews every month. Cancel any time in PayPal: Settings → Payments → Manage automatic payments.\n\nKitsu 🦊");
+    echo json_encode(['ok' => true, 'email' => $email]); exit;
+  }
   http_response_code(404); echo json_encode(['ok' => false]);
 } catch (Throwable $e) {
   error_log('kitsu api: ' . $e->getMessage());

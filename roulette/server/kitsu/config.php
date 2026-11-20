@@ -9,11 +9,13 @@ return [
   'paypal_client' => 'PASTE_CLIENT_ID',
   'paypal_secret' => 'PASTE_SECRET',
 
-  // Price
-  'price'         => '9.99',               // with a dot, two decimals
+  // Price and how people pay
+  'sale_type'     => 'subscription',       // 'subscription' = PayPal charges every month automatically, 'one_time' = single payment
+  'price'         => '9.99',               // with a dot, two decimals (per month for a subscription)
   'currency'      => 'EUR',
-  'product_name'  => 'Kitsu Oracle – full access',
-  'access_days'   => 0,                    // 0 = lifetime access, 30 = one month, …
+  'product_name'  => 'Kitsu Oracle – monthly access',
+  'plan_id'       => '',                   // subscription plan from setup-plan.php (starts with P-)
+  'access_days'   => 0,                    // only for 'one_time': 0 = lifetime, 30 = one month, …
 
   // E-mails (login links). The address should be on your domain.
   'mail_from'     => 'frog@ggfrog.com',

@@ -19,6 +19,10 @@ function db(): PDO {
   $pdo->exec('CREATE TABLE IF NOT EXISTS payments(capture_id TEXT PRIMARY KEY, order_id TEXT, email TEXT, amount TEXT, currency TEXT, created INTEGER)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS sessions(hash TEXT PRIMARY KEY, email TEXT, expires INTEGER)');
   $pdo->exec('CREATE TABLE IF NOT EXISTS login_tokens(hash TEXT PRIMARY KEY, email TEXT, expires INTEGER, used INTEGER DEFAULT 0, created INTEGER)');
+  $cols = array_column($pdo->query('PRAGMA table_info(users)')->fetchAll(PDO::FETCH_ASSOC), 'name');
+  if (!in_array('sub_id', $cols, true)) $pdo->exec('ALTER TABLE users ADD COLUMN sub_id TEXT');
+  if (!in_array('sub_status', $cols, true)) $pdo->exec('ALTER TABLE users ADD COLUMN sub_status TEXT');
+  if (!in_array('checked', $cols, true)) $pdo->exec('ALTER TABLE users ADD COLUMN checked INTEGER DEFAULT 0');
   return $pdo;
 }
 
@@ -33,7 +37,33 @@ function csrf(): string { start_session(); if (empty($_SESSION['csrf'])) $_SESSI
 function csrf_ok(?string $t): bool { start_session(); return is_string($t) && !empty($_SESSION['csrf']) && hash_equals($_SESSION['csrf'], $t); }
 
 // ---------- access ----------
+function is_sub(): bool { return cfg('sale_type') === 'subscription'; }
+
+// Ask PayPal how a subscription stands and move paid_until to the end of the paid period (+2 days grace).
+function refresh_sub(string $email, bool $force = false): void {
+  $st = db()->prepare('SELECT sub_id, checked FROM users WHERE email=?'); $st->execute([$email]);
+  $r = $st->fetch(PDO::FETCH_ASSOC);
+  if (!$r || empty($r['sub_id'])) return;
+  if (!$force && (int)$r['checked'] > time() - 6 * 3600) return; // at most every 6 hours per user
+  try { $res = paypal_call('GET', '/v1/billing/subscriptions/' . rawurlencode($r['sub_id'])); } catch (Throwable $e) { return; }
+  if ($res['code'] !== 200) return;
+  $d = $res['data']; $status = (string)($d['status'] ?? '');
+  $set = 'checked=?, sub_status=?'; $args = [time(), $status];
+  if ($status === 'ACTIVE') {
+    $next = strtotime((string)($d['billing_info']['next_billing_time'] ?? '')) ?: (time() + 31 * 86400);
+    $set .= ', paid_until=MAX(COALESCE(paid_until,0), ?)'; $args[] = $next + 2 * 86400;
+  }
+  $args[] = $email;
+  db()->prepare("UPDATE users SET $set WHERE email=?")->execute($args);
+}
+function start_sub(string $email, string $subId, int $paidUntil, string $status): void {
+  db()->prepare('INSERT INTO users(email,paid_until,created,sub_id,sub_status,checked) VALUES(?,?,?,?,?,?)
+    ON CONFLICT(email) DO UPDATE SET paid_until=MAX(COALESCE(paid_until,0),excluded.paid_until), sub_id=excluded.sub_id, sub_status=excluded.sub_status, checked=excluded.checked')
+    ->execute([$email, $paidUntil, time(), $subId, $status, time()]);
+}
+
 function has_access(string $email): bool {
+  if (is_sub()) refresh_sub($email);
   $st = db()->prepare('SELECT paid_until FROM users WHERE email=?'); $st->execute([$email]);
   $r = $st->fetch(PDO::FETCH_ASSOC);
   if (!$r) return false;
