@@ -51,6 +51,8 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 .c-r{background:var(--red)} .c-b{background:var(--blk)} .c-g{background:var(--grn)}
 @keyframes pop{from{transform:scale(0) rotate(-90deg);opacity:0}to{transform:scale(1);opacity:1}}
 .formula{font-family:var(--display);font-size:clamp(16px,4.6vw,21px);color:var(--gold);text-shadow:0 0 12px rgba(255,210,61,.6)}
+.rune{display:inline-block;animation:rune 2.4s linear infinite;color:var(--cyan)}
+@keyframes rune{to{transform:rotate(360deg)}}
 .formula small{display:block;font-family:var(--body);font-size:12px;color:var(--dim);text-shadow:none;margin-top:2px}
 .stake{font-family:var(--display);font-size:30px;line-height:1}
 .stake small{display:block;font-family:var(--body);font-size:13px;color:var(--dim);font-weight:800;margin-top:6px}
@@ -87,7 +89,7 @@ button{font:inherit;cursor:pointer}
 @keyframes burst{0%{transform:translate(-50%,-50%) scale(0) rotate(-12deg);opacity:1}30%{transform:translate(-50%,-50%) scale(1.15) rotate(4deg)}80%{opacity:1}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
 .foot{font-size:12px;color:var(--dim);max-width:46ch;line-height:1.5;margin:0}
 @media (max-width:420px){.fox{width:92px}.bubble{font-size:14px}.chip{width:50px;height:50px;font-size:19px}}
-@media (prefers-reduced-motion:reduce){.chip,.burst.go,.fox.bounce,.fox.shake{animation:none}}
+@media (prefers-reduced-motion:reduce){.chip,.burst.go,.fox.bounce,.fox.shake,.rune{animation:none}}
 </style>
 </head>
 <body>
@@ -121,7 +123,7 @@ button{font:inherit;cursor:pointer}
   </div>
 
   <div class="seg" id="method" aria-label="Prediction method">
-    <button data-m="pyth">📐 Pythagoras</button><button data-m="fox">🦊 Fox instinct</button>
+    <button data-m="pyth">🔮 Spirit Geometry</button><button data-m="fox">🦊 Fox Instinct</button>
   </div>
 
   <section class="card" aria-live="polite">
@@ -167,7 +169,7 @@ const RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
 const $=id=>document.getElementById(id), col=n=>n===0?'g':RED.has(n)?'r':'b';
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 const LINES={
-  pyth:["Pythagoras has spoken! a² + b² = c²!","The sacred triangle points here~","Math magic! Bet these four!","Geometry of fate… ✨"],
+  pyth:["The spirits have spoken! ✨","The sacred geometry points here~","Spirit magic! Bet these four!","Geometry of fate… ✨"],
   fox:["The fox spirit whispers… these four!","My tails are tingling~","These numbers are sleeping… time to wake up!","I saw it in a dream!"],
   hit:["SUGOI!! I called it!","Yatta~! Fox powers!","Did you SEE that?!","Hehe, told you so ✨"],
   miss:["Ehh?! The wheel cheated!","Mou~ next one for sure!","Hmph. Lucky wheel.","That… was a test. Yes."],
@@ -201,13 +203,13 @@ function predict(talk=true){
     if(h.length<2){cur=S.cur=null;$('formula').innerHTML='';if(talk)say(h.length?`Got ${h[0]}! One more number and I can calculate~`:"Tap the last two numbers from your table and I'll calculate~");return;}
     const a=h[h.length-2],b=h[h.length-1],c=Math.sqrt(a*a+b*b),r=Math.round(c)%37,i=WHEEL.indexOf(r);
     cur=[WHEEL[(i+36)%37],r,WHEEL[(i+1)%37],WHEEL[(i+2)%37]];
-    $('formula').innerHTML=`√(${a}² + ${b}²) = ${c.toFixed(2)} → ${r}<small>${Math.round(c)>36?`${Math.round(c)} wraps around to ${r} · `:''}${r} and its neighbours on the wheel</small>`;
+    $('formula').innerHTML=`<span class="rune">✦</span> Spirit Geometry reading <span class="rune">✦</span><small>Kitsu read your last spins and drew these four</small>`;
   }else{
     if(h.length<1){cur=S.cur=null;$('formula').innerHTML='';if(talk)say("Tap a few numbers from your table so I can sense the sleeping ones~");return;}
     const last=new Map();h.forEach((n,i)=>last.set(n,i));
     const cand=Array.from({length:37},(_,n)=>({n,g:last.has(n)?h.length-last.get(n):1000+((n*13+5)%37)}));
     cand.sort((x,y)=>y.g-x.g||x.n-y.n);cur=cand.slice(0,4).map(x=>x.n).sort((x,y)=>x-y);
-    $('formula').innerHTML=`Sleeping the longest<small>these 4 numbers haven't landed for the longest time</small>`;
+    $('formula').innerHTML=`<span class="rune">✦</span> Fox Instinct reading <span class="rune">✦</span><small>Kitsu sniffed out these four</small>`;
   }
   S.cur=cur;S.f=$('formula').innerHTML;S.inS=0;S.step=0;S.sStart=S.pl;
   if(talk){mood('idle');say(pick(LINES[S.method]));}

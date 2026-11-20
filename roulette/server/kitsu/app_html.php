@@ -52,6 +52,8 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 .c-r{background:var(--red)} .c-b{background:var(--blk)} .c-g{background:var(--grn)}
 @keyframes pop{from{transform:scale(0) rotate(-90deg);opacity:0}to{transform:scale(1);opacity:1}}
 .formula{font-family:var(--display);font-size:clamp(16px,4.6vw,21px);color:var(--gold);text-shadow:0 0 12px rgba(255,210,61,.6)}
+.rune{display:inline-block;animation:rune 2.4s linear infinite;color:var(--cyan)}
+@keyframes rune{to{transform:rotate(360deg)}}
 .formula small{display:block;font-family:var(--body);font-size:12px;color:var(--dim);text-shadow:none;margin-top:2px}
 .stake{font-family:var(--display);font-size:30px;line-height:1}
 .stake small{display:block;font-family:var(--body);font-size:13px;color:var(--dim);font-weight:800;margin-top:6px}
@@ -88,7 +90,7 @@ button{font:inherit;cursor:pointer}
 @keyframes burst{0%{transform:translate(-50%,-50%) scale(0) rotate(-12deg);opacity:1}30%{transform:translate(-50%,-50%) scale(1.15) rotate(4deg)}80%{opacity:1}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
 .foot{font-size:12px;color:var(--dim);max-width:46ch;line-height:1.5;margin:0}
 @media (max-width:420px){.fox{width:92px}.bubble{font-size:14px}.chip{width:50px;height:50px;font-size:19px}}
-@media (prefers-reduced-motion:reduce){.chip,.burst.go,.fox.bounce,.fox.shake{animation:none}}
+@media (prefers-reduced-motion:reduce){.chip,.burst.go,.fox.bounce,.fox.shake,.rune{animation:none}}
 </style>
 </head>
 <body><a href="logout.php" style="position:fixed;top:max(10px,env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));z-index:9;color:#b9a8d9;font:800 12px 'M PLUS Rounded 1c',sans-serif;text-decoration:none;border:2px solid #3b2470;border-radius:999px;padding:4px 10px;background:rgba(18,10,36,.85)">Log out</a>
@@ -122,7 +124,7 @@ button{font:inherit;cursor:pointer}
   </div>
 
   <div class="seg" id="method" aria-label="Prediction method">
-    <button data-m="pyth">📐 Pythagoras</button><button data-m="fox">🦊 Fox instinct</button>
+    <button data-m="pyth">🔮 Spirit Geometry</button><button data-m="fox">🦊 Fox Instinct</button>
   </div>
 
   <section class="card" aria-live="polite">
@@ -161,97 +163,7 @@ button{font:inherit;cursor:pointer}
 </div>
 <div class="burst" id="burst"></div>
 
-<script>
-(() => {
-const WHEEL=[0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26];
-const RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
-const $=id=>document.getElementById(id), col=n=>n===0?'g':RED.has(n)?'r':'b';
-const pick=a=>a[Math.floor(Math.random()*a.length)];
-const LINES={
-  pyth:["Pythagoras has spoken! a² + b² = c²!","The sacred triangle points here~","Math magic! Bet these four!","Geometry of fate… ✨"],
-  fox:["The fox spirit whispers… these four!","My tails are tingling~","These numbers are sleeping… time to wake up!","I saw it in a dream!"],
-  hit:["SUGOI!! I called it!","Yatta~! Fox powers!","Did you SEE that?!","Hehe, told you so ✨"],
-  miss:["Ehh?! The wheel cheated!","Mou~ next one for sure!","Hmph. Lucky wheel.","That… was a test. Yes."],
-};
-const KEY='kitsu-player-v2';
-const FRESH={hist:[],won:[],rounds:0,hits:0,combo:0,best:0,pl:0,step:0,cur:null,f:'',inS:0};
-let S={...FRESH,method:'pyth',base:0.2,prog:20,cap:2,hold:10}, cur=null; const undo=[];
-try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s)S={...S,...s};}catch(e){}
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
-const eur=v=>(v<0?'−':v>0?'+':'')+'€'+Math.abs(v).toFixed(2);
-const stakeAt=k=>Math.min(S.cap,Math.max(S.base,Math.ceil(Math.round(S.base*Math.pow(1+S.prog/100,k)*1e6)/1e5-1e-9)/10)); // whole 10-cent steps only
-const stakeNow=()=>stakeAt(S.step);
-
-// number table: 0 + three rows of 12
-const order=[];for(let r=0;r<3;r++)for(let c=0;c<12;c++)order.push(c*3+3-r);
-$('table').innerHTML=`<button class="z" data-n="0">0</button>`+order.map(n=>`<button style="background:var(--${RED.has(n)?'red':'blk'})" data-n="${n}">${n}</button>`).join('');
-
-function mood(m){
-  $('eyes').hidden=m!=='idle';$('eyesHappy').hidden=m!=='happy';$('eyesSad').hidden=m!=='sad';
-  $('mouth').setAttribute('d',m==='happy'?'M50 88 Q60 102 70 88 Z':m==='sad'?'M53 94 Q60 88 67 94':'M53 90 Q60 96 67 90');
-  $('mouth').setAttribute('fill',m==='happy'?'#ff6fb0':'none');
-  const f=$('fox');f.classList.remove('bounce','shake');void f.offsetWidth;if(m==='happy')f.classList.add('bounce');if(m==='sad')f.classList.add('shake');
-}
-const say=t=>$('say').textContent=t;
-function burst(t){const b=$('burst');b.textContent=t;b.classList.remove('go');void b.offsetWidth;b.classList.add('go');}
-
-// the two "methods"
-function predict(talk=true){
-  const h=S.hist;
-  if(S.method==='pyth'){
-    if(h.length<2){cur=S.cur=null;$('formula').innerHTML='';if(talk)say(h.length?`Got ${h[0]}! One more number and I can calculate~`:"Tap the last two numbers from your table and I'll calculate~");return;}
-    const a=h[h.length-2],b=h[h.length-1],c=Math.sqrt(a*a+b*b),r=Math.round(c)%37,i=WHEEL.indexOf(r);
-    cur=[WHEEL[(i+36)%37],r,WHEEL[(i+1)%37],WHEEL[(i+2)%37]];
-    $('formula').innerHTML=`√(${a}² + ${b}²) = ${c.toFixed(2)} → ${r}<small>${Math.round(c)>36?`${Math.round(c)} wraps around to ${r} · `:''}${r} and its neighbours on the wheel</small>`;
-  }else{
-    if(h.length<1){cur=S.cur=null;$('formula').innerHTML='';if(talk)say("Tap a few numbers from your table so I can sense the sleeping ones~");return;}
-    const last=new Map();h.forEach((n,i)=>last.set(n,i));
-    const cand=Array.from({length:37},(_,n)=>({n,g:last.has(n)?h.length-last.get(n):1000+((n*13+5)%37)}));
-    cand.sort((x,y)=>y.g-x.g||x.n-y.n);cur=cand.slice(0,4).map(x=>x.n).sort((x,y)=>x-y);
-    $('formula').innerHTML=`Sleeping the longest<small>these 4 numbers haven't landed for the longest time</small>`;
-  }
-  S.cur=cur;S.f=$('formula').innerHTML;S.inS=0;S.step=0;S.sStart=S.pl;
-  if(talk){mood('idle');say(pick(LINES[S.method]));}
-}
-function restore(){cur=S.cur||null;$('formula').innerHTML=cur?S.f:'';}
-function render(hitNum){
-  $('picks').innerHTML=cur?cur.map(n=>`<span class="chip c-${col(n)} ${n===hitNum?'hit':''}">${n}</span>`).join(''):'';
-  const st=stakeNow();let risk=0;for(let k=S.step;k<S.step+Math.max(1,S.hold-S.inS);k++)risk+=4*stakeAt(k);
-  $('series').innerHTML=cur&&S.hold>1?`Spin ${S.inS+1} of ${S.hold} with these numbers<div class="dots">${Array.from({length:S.hold},(_,k)=>`<i class="${k<S.inS?'miss':k===S.inS?'now':''}"></i>`).join('')}</div>`:'';
-  $('stake').innerHTML=cur?`€${st.toFixed(2)} on each<small>total €${(4*st).toFixed(2)} · hit now: series ${eur(Math.round((S.pl-(S.sStart??S.pl)+32*st)*100)/100)}${S.hold>1?`<br>rest of this series can cost up to €${risk.toFixed(2)}`:''}</small>`
-    :`<div class="wait">Waiting for your numbers…</div>`;
-  const ps=new Set(cur||[]);[...$('table').children].forEach(b=>b.classList.toggle('pick',ps.has(+b.dataset.n)));
-  $('strip').innerHTML=S.hist.slice(-14).map((n,i,a)=>`<span class="c-${col(n)} ${i===a.length-1?'last':''} ${S.won.includes(S.hist.length-a.length+i)?'won':''}">${n}</span>`).join('');
-  $('sRounds').textContent=S.rounds;$('sHits').textContent=S.hits;$('sCombo').textContent=`${S.combo} / ${S.best}`;
-  $('sPL').textContent=eur(S.pl);$('sPL').style.color=S.pl>0?'var(--cyan)':S.pl<0?'var(--pink)':'';
-  for(const [id,k] of [['method','method'],['hold','hold'],['base','base'],['prog','prog'],['cap','cap']])
-    [...$(id).querySelectorAll('button')].forEach(b=>b.classList.toggle('on',String(b.dataset.m??b.dataset.v)===String(S[k])));
-}
-let lock=false;
-function enter(n){
-  if(lock)return;undo.push(JSON.stringify(S));if(undo.length>60)undo.shift();
-  let hitNum=null;
-  if(cur){
-    const st=stakeNow(),hit=cur.includes(n);S.rounds++;
-    if(hit){S.hits++;S.combo++;S.best=Math.max(S.best,S.combo);S.pl=Math.round((S.pl+32*st)*100)/100;S.step=0;S.won.push(S.hist.length);hitNum=n;
-      mood('happy');say(pick(LINES.hit));burst(S.combo>1?`COMBO ×${S.combo}!`:'SUGOI!');}
-    else{S.combo=0;S.pl=Math.round((S.pl-4*st)*100)/100;S.step++;mood('sad');say(pick(LINES.miss));}
-    S.inS++;
-  }
-  S.hist.push(n);if(S.hist.length>400){S.hist.shift();S.won=S.won.map(i=>i-1).filter(i=>i>=0);}
-  save();
-  if(hitNum!==null){render(hitNum);lock=true;setTimeout(()=>{lock=false;predict();save();render();},2000);}
-  else if(!cur||S.inS>=S.hold){const had=!!cur;predict(!had);save();render();if(had)setTimeout(()=>{if(cur)say(S.hold>1?'Series over! New numbers~ '+pick(LINES[S.method]):pick(LINES[S.method]));mood('idle');},900);}
-  else{render();setTimeout(()=>{say(pick(["Same four, stay strong!","Keep going~ they're coming!","Don't give up on them!","Trust the fox. Again!"]));mood('idle');},900);}
-}
-$('table').onclick=e=>{const b=e.target.closest('button[data-n]');if(b)enter(+b.dataset.n);};
-$('bDemo').onclick=()=>{const a=new Uint32Array(1);crypto.getRandomValues(a);enter(a[0]%37);};
-$('bUndo').onclick=()=>{if(lock||!undo.length)return;S=JSON.parse(undo.pop());save();restore();render();mood('idle');say('Undone! Tap the right number~');};
-for(const id of ['method','hold','base','prog','cap'])$(id).onclick=e=>{const b=e.target.closest('button');if(!b||lock)return;
-  if(id==='method'){S.method=b.dataset.m;predict();}else{S[id]=+b.dataset.v;if(id==='hold'&&S.inS>=S.hold&&cur)predict();}save();render();};
-$('bReset').onclick=()=>{S={...S,...FRESH,hist:[],won:[]};undo.length=0;save();predict();render();mood('idle');};
-if(S.cur)restore();else predict(false);save();render();
-})();
+<script>(()=>{const t=[0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26],e=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]),s=t=>document.getElementById(t),n=t=>0===t?"g":e.has(t)?"r":"b",o=t=>t[Math.floor(Math.random()*t.length)],a={pyth:["The spirits have spoken! ✨","The sacred geometry points here~","Spirit magic! Bet these four!","Geometry of fate… ✨"],fox:["The fox spirit whispers… these four!","My tails are tingling~","These numbers are sleeping… time to wake up!","I saw it in a dream!"],hit:["SUGOI!! I called it!","Yatta~! Fox powers!","Did you SEE that?!","Hehe, told you so ✨"],miss:["Ehh?! The wheel cheated!","Mou~ next one for sure!","Hmph. Lucky wheel.","That… was a test. Yes."]},i="kitsu-player-v2",l={hist:[],won:[],rounds:0,hits:0,combo:0,best:0,pl:0,step:0,cur:null,f:"",inS:0};let r={...l,method:"pyth",base:.2,prog:20,cap:2,hold:10},h=null;const c=[];try{const t=JSON.parse(localStorage.getItem(i)||"null");t&&(r={...r,...t})}catch(t){}const d=()=>{try{localStorage.setItem(i,JSON.stringify(r))}catch(t){}},u=t=>(t<0?"−":t>0?"+":"")+"€"+Math.abs(t).toFixed(2),p=t=>Math.min(r.cap,Math.max(r.base,Math.ceil(Math.round(r.base*Math.pow(1+r.prog/100,t)*1e6)/1e5-1e-9)/10)),m=()=>p(r.step),f=[];for(let t=0;t<3;t++)for(let e=0;e<12;e++)f.push(3*e+3-t);function g(t){s("eyes").hidden="idle"!==t,s("eyesHappy").hidden="happy"!==t,s("eyesSad").hidden="sad"!==t,s("mouth").setAttribute("d","happy"===t?"M50 88 Q60 102 70 88 Z":"sad"===t?"M53 94 Q60 88 67 94":"M53 90 Q60 96 67 90"),s("mouth").setAttribute("fill","happy"===t?"#ff6fb0":"none");const e=s("fox");e.classList.remove("bounce","shake"),e.offsetWidth,"happy"===t&&e.classList.add("bounce"),"sad"===t&&e.classList.add("shake")}s("table").innerHTML='<button class="z" data-n="0">0</button>'+f.map((t=>`<button style="background:var(--${e.has(t)?"red":"blk"})" data-n="${t}">${t}</button>`)).join("");const b=t=>s("say").textContent=t;function y(e=!0){const n=r.hist;if("pyth"===r.method){if(n.length<2)return h=r.cur=null,s("formula").innerHTML="",void(e&&b(n.length?`Got ${n[0]}! One more number and I can calculate~`:"Tap the last two numbers from your table and I'll calculate~"));const o=n[n.length-2],a=n[n.length-1],i=Math.sqrt(o*o+a*a),l=Math.round(i)%37,c=t.indexOf(l);h=[t[(c+36)%37],l,t[(c+1)%37],t[(c+2)%37]],s("formula").innerHTML='<span class="rune">✦</span> Spirit Geometry reading <span class="rune">✦</span><small>Kitsu read your last spins and drew these four</small>'}else{if(n.length<1)return h=r.cur=null,s("formula").innerHTML="",void(e&&b("Tap a few numbers from your table so I can sense the sleeping ones~"));const t=new Map;n.forEach(((e,s)=>t.set(e,s)));const o=Array.from({length:37},((e,s)=>({n:s,g:t.has(s)?n.length-t.get(s):1e3+(13*s+5)%37})));o.sort(((t,e)=>e.g-t.g||t.n-e.n)),h=o.slice(0,4).map((t=>t.n)).sort(((t,e)=>t-e)),s("formula").innerHTML='<span class="rune">✦</span> Fox Instinct reading <span class="rune">✦</span><small>Kitsu sniffed out these four</small>'}r.cur=h,r.f=s("formula").innerHTML,r.inS=0,r.step=0,r.sStart=r.pl,e&&(g("idle"),b(o(a[r.method])))}function M(){h=r.cur||null,s("formula").innerHTML=h?r.f:""}function S(t){s("picks").innerHTML=h?h.map((e=>`<span class="chip c-${n(e)} ${e===t?"hit":""}">${e}</span>`)).join(""):"";const e=m();let o=0;for(let t=r.step;t<r.step+Math.max(1,r.hold-r.inS);t++)o+=4*p(t);s("series").innerHTML=h&&r.hold>1?`Spin ${r.inS+1} of ${r.hold} with these numbers<div class="dots">${Array.from({length:r.hold},((t,e)=>`<i class="${e<r.inS?"miss":e===r.inS?"now":""}"></i>`)).join("")}</div>`:"",s("stake").innerHTML=h?`€${e.toFixed(2)} on each<small>total €${(4*e).toFixed(2)} · hit now: series ${u(Math.round(100*(r.pl-(r.sStart??r.pl)+32*e))/100)}${r.hold>1?`<br>rest of this series can cost up to €${o.toFixed(2)}`:""}</small>`:'<div class="wait">Waiting for your numbers…</div>';const a=new Set(h||[]);[...s("table").children].forEach((t=>t.classList.toggle("pick",a.has(+t.dataset.n)))),s("strip").innerHTML=r.hist.slice(-14).map(((t,e,s)=>`<span class="c-${n(t)} ${e===s.length-1?"last":""} ${r.won.includes(r.hist.length-s.length+e)?"won":""}">${t}</span>`)).join(""),s("sRounds").textContent=r.rounds,s("sHits").textContent=r.hits,s("sCombo").textContent=`${r.combo} / ${r.best}`,s("sPL").textContent=u(r.pl),s("sPL").style.color=r.pl>0?"var(--cyan)":r.pl<0?"var(--pink)":"";for(const[t,e]of[["method","method"],["hold","hold"],["base","base"],["prog","prog"],["cap","cap"]])[...s(t).querySelectorAll("button")].forEach((t=>t.classList.toggle("on",String(t.dataset.m??t.dataset.v)===String(r[e]))))}let w=!1;function T(t){if(w)return;c.push(JSON.stringify(r)),c.length>60&&c.shift();let e=null;if(h){const n=m(),i=h.includes(t);r.rounds++,i?(r.hits++,r.combo++,r.best=Math.max(r.best,r.combo),r.pl=Math.round(100*(r.pl+32*n))/100,r.step=0,r.won.push(r.hist.length),e=t,g("happy"),b(o(a.hit)),function(t){const e=s("burst");e.textContent=t,e.classList.remove("go"),e.offsetWidth,e.classList.add("go")}(r.combo>1?`COMBO ×${r.combo}!`:"SUGOI!")):(r.combo=0,r.pl=Math.round(100*(r.pl-4*n))/100,r.step++,g("sad"),b(o(a.miss))),r.inS++}if(r.hist.push(t),r.hist.length>400&&(r.hist.shift(),r.won=r.won.map((t=>t-1)).filter((t=>t>=0))),d(),null!==e)S(e),w=!0,setTimeout((()=>{w=!1,y(),d(),S()}),2e3);else if(!h||r.inS>=r.hold){const t=!!h;y(!t),d(),S(),t&&setTimeout((()=>{h&&b(r.hold>1?"Series over! New numbers~ "+o(a[r.method]):o(a[r.method])),g("idle")}),900)}else S(),setTimeout((()=>{b(o(["Same four, stay strong!","Keep going~ they're coming!","Don't give up on them!","Trust the fox. Again!"])),g("idle")}),900)}s("table").onclick=t=>{const e=t.target.closest("button[data-n]");e&&T(+e.dataset.n)},s("bDemo").onclick=()=>{const t=new Uint32Array(1);crypto.getRandomValues(t),T(t[0]%37)},s("bUndo").onclick=()=>{!w&&c.length&&(r=JSON.parse(c.pop()),d(),M(),S(),g("idle"),b("Undone! Tap the right number~"))};for(const t of["method","hold","base","prog","cap"])s(t).onclick=e=>{const s=e.target.closest("button");s&&!w&&("method"===t?(r.method=s.dataset.m,y()):(r[t]=+s.dataset.v,"hold"===t&&r.inS>=r.hold&&h&&y()),d(),S())};s("bReset").onclick=()=>{r={...r,...l,hist:[],won:[]},c.length=0,d(),y(),S(),g("idle")},r.cur?M():y(!1),d(),S()})();
 </script>
 
 </body>

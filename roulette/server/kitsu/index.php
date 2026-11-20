@@ -14,7 +14,7 @@ page_head('Kitsu Oracle – anime roulette companion');
 <section class="box gold">
   <div class="price">€<?= h(cfg('price')) ?><?= is_sub() ? '<span style="font-size:22px"> / month</span>' : '' ?><small><?= is_sub() ? 'monthly subscription · cancel any time in PayPal' : ((int)cfg('access_days') > 0 ? (int)cfg('access_days') . ' days of access' : 'one payment · lifetime access') ?></small></div>
   <ul>
-    <li><b>2 methods:</b> 📐 Pythagoras (c = √(a² + b²) and its wheel neighbours) and 🦊 Fox instinct (sleeping numbers)</li>
+    <li><b>2 oracle modes:</b> 🔮 Spirit Geometry and 🦊 Fox Instinct, each reads your last spins and picks 4 numbers</li>
     <li><b>Series play:</b> keep the same 4 numbers for 1–20 spins</li>
     <li><b>Money management:</b> base bet, raise after a miss, max bet, all in whole 10-cent steps</li>
     <li><b>Session score:</b> hits, combos, profit and loss</li>
