@@ -232,7 +232,7 @@ function enter(n){
   }
   S.hist.push(n);if(S.hist.length>400){S.hist.shift();S.won=S.won.map(i=>i-1).filter(i=>i>=0);}
   save();
-  if(hitNum!==null){render(hitNum);lock=true;setTimeout(()=>{lock=false;predict();save();render();},1100);}
+  if(hitNum!==null){render(hitNum);lock=true;setTimeout(()=>{lock=false;predict();save();render();},2000);}
   else if(!cur||S.inS>=S.hold){const had=!!cur;predict(!had);save();render();if(had)setTimeout(()=>{if(cur)say(S.hold>1?'Series over! New numbers~ '+pick(LINES[S.method]):pick(LINES[S.method]));mood('idle');},900);}
   else{render();setTimeout(()=>{say(pick(["Same four, stay strong!","Keep going~ they're coming!","Don't give up on them!","Trust the fox. Again!"]));mood('idle');},900);}
 }

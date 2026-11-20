@@ -194,3 +194,46 @@ Entertainment only. Simulated money, random numbers. Roulette cannot be predicte
 ```
 anime, kitsune, fox, roulette, roulette challenge, pythagoras, math, anime girl, casino game, challenge, satisfying, kitsu oracle
 ```
+
+---
+
+## NOVÉ SHORTS (ukázka aplikace)
+
+### f1.mp4
+**Název:**
+```
+I let an anime fox pick my roulette numbers 🦊 #shorts
+```
+**Popis:**
+```
+Kitsu uses Pythagoras: √(a² + b²) from the last two numbers, then bets that number and its neighbours, same 4 numbers for up to 10 spins. Every spin is random and shown in full.
+🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
+#anime #roulette #pythagoras #shorts
+Entertainment only. Random numbers, roulette cannot be predicted. 18+
+```
+
+### f2.mp4
+**Název:**
+```
+This roulette app has a fox AND a money manager 💰🦊 #shorts
+```
+**Popis:**
+```
+Base bet, +% after a miss, max bet, same numbers for a whole series. Kitsu shows the bet for every spin. Every spin is random and shown in full.
+🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
+#anime #roulette #moneymanagement #shorts
+Entertainment only. Random numbers, roulette cannot be predicted. Never bet money you can't afford to lose. 18+
+```
+
+### f3.mp4
+**Název:**
+```
+Which roulette numbers are "sleeping"? 💤🦊 #shorts
+```
+**Popis:**
+```
+Fox instinct mode: Kitsu bets the 4 numbers that haven't landed for the longest time. Plus: last numbers strip and Undo for typos. Every spin is random and shown in full.
+🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
+#anime #roulette #kitsune #shorts
+Entertainment only. Random numbers, roulette cannot be predicted. 18+
+```
