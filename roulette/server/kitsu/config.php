@@ -15,6 +15,7 @@ return [
   'currency'      => 'EUR',
   'product_name'  => 'Kitsu Oracle – monthly access',
   'plan_id'       => '',                   // subscription plan from setup-plan.php (starts with P-)
+  'free_emails'   => ['frog@ggfrog.com'],  // these e-mails get free access (log in with "Send me a login link")
   'access_days'   => 0,                    // only for 'one_time': 0 = lifetime, 30 = one month, …
 
   // E-mails (login links). The address should be on your domain.

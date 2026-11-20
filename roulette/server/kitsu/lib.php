@@ -63,6 +63,8 @@ function start_sub(string $email, string $subId, int $paidUntil, string $status)
 }
 
 function has_access(string $email): bool {
+  $free = array_map('strtolower', array_map('trim', (array)(cfg('free_emails') ?? [])));
+  if (in_array(strtolower(trim($email)), $free, true)) return true; // owner / testers: free access
   if (is_sub()) refresh_sub($email);
   $st = db()->prepare('SELECT paid_until FROM users WHERE email=?'); $st->execute([$email]);
   $r = $st->fetch(PDO::FETCH_ASSOC);
