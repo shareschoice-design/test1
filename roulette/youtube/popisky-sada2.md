@@ -189,3 +189,34 @@ Kitsu draws 4 numbers in Spirit Geometry mode. How many spins until she hits? Ra
 #anime #roulette #rate #kitsune #shorts
 Entertainment only. Random numbers, roulette cannot be predicted. Never bet money you can't afford to lose. 18+
 ```
+
+---
+
+## PŘÍBĚHOVÉ SHORTS (Kitsu u ruletového stolu)
+
+### t1.mp4
+**Název:** `Kitsu goes to the casino 🦊🎰 #shorts`
+```
+Kitsu walks up to the roulette table, opens Kitsu Oracle on her phone and bets the 4 numbers it shows. Every spin is random and shown in full.
+🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
+#anime #roulette #kitsune #casino #shorts
+Entertainment only. Animated story, random numbers, simulated money. Roulette cannot be predicted. 18+
+```
+
+### t2.mp4
+**Název:** `Kitsu's first night at the roulette table 🌙🦊 #shorts`
+```
+First night in the casino: Kitsu trusts her Fox Instinct and taps every number into the app. Will her nose find a hit? Every spin is random and shown in full.
+🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
+#anime #roulette #kitsune #story #shorts
+Entertainment only. Animated story, random numbers, simulated money. Roulette cannot be predicted. 18+
+```
+
+### t3.mp4
+**Název:** `Kitsu vs the roulette wheel ⚔️🦊 #shorts`
+```
+Fox mode ON: Kitsu takes on the wheel with €0.50 a number and the app on her phone. Every spin is random and shown in full.
+🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
+#anime #roulette #kitsune #shorts
+Entertainment only. Animated story, random numbers, simulated money. Roulette cannot be predicted. 18+
+```
