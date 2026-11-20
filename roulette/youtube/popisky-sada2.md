@@ -158,3 +158,34 @@ What should the next marathon be? 👇
 #anime #roulette #marathon #kitsune
 Entertainment only. Random numbers, roulette cannot be predicted. Never bet money you can't afford to lose. 18+
 ```
+
+---
+
+## SHORTS NAVÍC (jiná hudba a styl)
+
+### p1.mp4 (lo-fi)
+**Název:** `POV: your roulette buddy is an anime fox 🦊 #shorts`
+```
+Kitsu reacts to every spin, picks 4 numbers in Fox Instinct mode and keeps them for a whole series. Every spin is random and shown in full.
+🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
+#anime #roulette #pov #kitsune #shorts
+Entertainment only. Random numbers, roulette cannot be predicted. Never bet money you can't afford to lose. 18+
+```
+
+### p2.mp4 (synthwave)
+**Název:** `3 settings that change how Kitsu bets ⚙️ #shorts`
+```
+Series length, raise after a miss, max bet: set them once and Kitsu shows the bet for every spin. Every spin is random and shown in full.
+🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
+#anime #roulette #settings #shorts
+Entertainment only. Random numbers, roulette cannot be predicted. Never bet money you can't afford to lose. 18+
+```
+
+### p3.mp4 (8-bit)
+**Název:** `Rate Kitsu's luck from 1 to 10 👇 #shorts`
+```
+Kitsu draws 4 numbers in Spirit Geometry mode. How many spins until she hits? Rate her luck in the comments 👇 Every spin is random and shown in full.
+🦊 Play with Kitsu: https://ggfrog.com/kitsu/index.php
+#anime #roulette #rate #kitsune #shorts
+Entertainment only. Random numbers, roulette cannot be predicted. Never bet money you can't afford to lose. 18+
+```
