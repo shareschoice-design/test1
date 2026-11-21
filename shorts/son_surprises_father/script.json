@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Dad was at work",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "Dad was just at work.",
+   "hl": [
+    "work"
+   ],
+   "shots": [
+    {
+     "file": "son_surprises_father",
+     "pos": 0.179
+    },
+    {
+     "file": "son_surprises_father",
+     "pos": 0.219
+    }
+   ]
+  },
+  {
+   "vo": "Chief John Hamilton runs the dining facility at Coast Guard Air Station Clearwater.",
+   "hl": [
+    "coast"
+   ],
+   "shots": [
+    {
+     "file": "son_surprises_father",
+     "pos": 0.19
+    },
+    {
+     "file": "son_surprises_father",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "His son Julian serves in the Air Force.",
+   "hl": [
+    "air"
+   ],
+   "shots": [
+    {
+     "file": "son_surprises_father",
+     "pos": 0.32
+    },
+    {
+     "file": "son_surprises_father",
+     "pos": 0.385
+    }
+   ]
+  },
+  {
+   "vo": "Six months deployed in South Korea.",
+   "hl": [
+    "korea"
+   ],
+   "shots": [
+    {
+     "file": "son_surprises_father",
+     "pos": 0.45
+    },
+    {
+     "file": "son_surprises_father",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "Nobody told dad he was back.",
+   "hl": [
+    "nobody"
+   ],
+   "shots": [
+    {
+     "file": "son_surprises_father",
+     "pos": 0.58
+    },
+    {
+     "file": "son_surprises_father",
+     "pos": 0.645
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Coast Guard father. Air Force son.",
+   "hl": [
+    "son"
+   ],
+   "shots": [
+    {
+     "file": "son_surprises_father",
+     "pos": 0.71
+    },
+    {
+     "file": "son_surprises_father",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Some reunions cross every branch.",
+   "hl": [
+    "every"
+   ],
+   "shots": [
+    {
+     "file": "son_surprises_father",
+     "pos": 0.84
+    },
+    {
+     "file": "son_surprises_father",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

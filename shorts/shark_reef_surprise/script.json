@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "A secret homecoming",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "A secret homecoming. At a shark aquarium.",
+   "hl": [
+    "secret"
+   ],
+   "shots": [
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.726
+    },
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.766
+    }
+   ]
+  },
+  {
+   "vo": "Staff Sergeant Mauldin was coming home from deployment.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.19
+    },
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "Her family had no idea.",
+   "hl": [
+    "idea"
+   ],
+   "shots": [
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.32
+    },
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.385
+    }
+   ]
+  },
+  {
+   "vo": "They were visiting Shark Reef in Las Vegas.",
+   "hl": [
+    "shark"
+   ],
+   "shots": [
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.45
+    },
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "Surrounded by sharks and stingrays.",
+   "hl": [
+    "sharks"
+   ],
+   "shots": [
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.58
+    },
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.645
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "She walked up behind them.",
+   "hl": [
+    "behind"
+   ],
+   "shots": [
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.71
+    },
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "The best thing in that aquarium wasn't the sharks.",
+   "hl": [
+    "best"
+   ],
+   "shots": [
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.84
+    },
+    {
+     "file": "shark_reef_surprise",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

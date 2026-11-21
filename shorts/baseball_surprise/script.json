@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Not a normal game",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "It was supposed to be a normal high school baseball game.",
+   "hl": [
+    "normal"
+   ],
+   "shots": [
+    {
+     "file": "baseball_surprise",
+     "pos": 0.509
+    },
+    {
+     "file": "baseball_surprise",
+     "pos": 0.549
+    }
+   ]
+  },
+  {
+   "vo": "But one player's family member had just come home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "baseball_surprise",
+     "pos": 0.212
+    },
+    {
+     "file": "baseball_surprise",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Airmen from the 180th Fighter Wing planned a surprise.",
+   "hl": [
+    "surprise"
+   ],
+   "shots": [
+    {
+     "file": "baseball_surprise",
+     "pos": 0.363
+    },
+    {
+     "file": "baseball_surprise",
+     "pos": 0.439
+    }
+   ]
+  },
+  {
+   "vo": "Right there on the field.",
+   "hl": [
+    "field"
+   ],
+   "shots": [
+    {
+     "file": "baseball_surprise",
+     "pos": 0.515
+    },
+    {
+     "file": "baseball_surprise",
+     "pos": 0.591
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "He had no idea who was walking toward him.",
+   "hl": [
+    "idea"
+   ],
+   "shots": [
+    {
+     "file": "baseball_surprise",
+     "pos": 0.667
+    },
+    {
+     "file": "baseball_surprise",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Game paused. Family first.",
+   "hl": [
+    "family"
+   ],
+   "shots": [
+    {
+     "file": "baseball_surprise",
+     "pos": 0.818
+    },
+    {
+     "file": "baseball_surprise",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Mom had no idea",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "Mom had no idea who just walked in.",
+   "hl": [
+    "idea"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.175
+    },
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.215
+    }
+   ]
+  },
+  {
+   "vo": "Petty Officer Bruce Rathsack spent nearly two years in the Persian Gulf.",
+   "hl": [
+    "two"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.19
+    },
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "Christmas was coming. And he had a plan.",
+   "hl": [
+    "plan"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.32
+    },
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.385
+    }
+   ]
+  },
+  {
+   "vo": "His mom was at Frank's Pizza Palace in Appleton, Wisconsin.",
+   "hl": [
+    "pizza"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.45
+    },
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "She thought it was a normal night out.",
+   "hl": [
+    "normal"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.58
+    },
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.645
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Then her son walked through the door.",
+   "hl": [
+    "son"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.71
+    },
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Two years apart. Home for Christmas.",
+   "hl": [
+    "christmas"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.84
+    },
+    {
+     "file": "sailor_surprises_mom",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

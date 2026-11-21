@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Daddy came home",
+  "red": 1
+ },
+ "lines": [
+  {
+   "vo": "She thought it was just a ceremony.",
+   "hl": [
+    "ceremony"
+   ],
+   "shots": [
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.787
+    },
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.827
+    }
+   ]
+  },
+  {
+   "vo": "Her dad had been deployed for six months.",
+   "hl": [
+    "six"
+   ],
+   "shots": [
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.19
+    },
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "Staff Sergeant Jonathan Rhodes, Moody Air Force Base.",
+   "hl": [
+    "rhodes"
+   ],
+   "shots": [
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.32
+    },
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.385
+    }
+   ]
+  },
+  {
+   "vo": "She was on stage getting her Moody Hero certificate.",
+   "hl": [
+    "hero"
+   ],
+   "shots": [
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.45
+    },
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "Then someone else walked on stage.",
+   "hl": [
+    "stage"
+   ],
+   "shots": [
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.58
+    },
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.645
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Her hero.",
+   "hl": [
+    "hero"
+   ],
+   "shots": [
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.71
+    },
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Six months. One hug.",
+   "hl": [
+    "hug"
+   ],
+   "shots": [
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.84
+    },
+    {
+     "file": "dad_surprises_daughter",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

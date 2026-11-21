@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Two years in Japan",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "Dad had been gone for two years.",
+   "hl": [
+    "two"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.896
+    },
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.936
+    }
+   ]
+  },
+  {
+   "vo": "Chief Warrant Officer Kevin Newton was stationed in Japan.",
+   "hl": [
+    "japan"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.212
+    },
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "His sons were back home in Norfolk, Virginia.",
+   "hl": [
+    "sons"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.363
+    },
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.439
+    }
+   ]
+  },
+  {
+   "vo": "The holidays were coming.",
+   "hl": [
+    "holidays"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.515
+    },
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.591
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "So he came home. And didn't tell them.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.667
+    },
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Two years. Gone in a second.",
+   "hl": [
+    "second"
+   ],
+   "shots": [
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.818
+    },
+    {
+     "file": "sailor_surprises_sons",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "They thought he was in Afghanistan",
+  "red": 1
+ },
+ "lines": [
+  {
+   "vo": "His family thought he was still in Afghanistan.",
+   "hl": [
+    "afghanistan"
+   ],
+   "shots": [
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.872
+    },
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.912
+    }
+   ]
+  },
+  {
+   "vo": "Colonel Brandt Deck had other plans.",
+   "hl": [
+    "plans"
+   ],
+   "shots": [
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.19
+    },
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "His wife and two kids were at an NFL game in St. Louis.",
+   "hl": [
+    "nfl"
+   ],
+   "shots": [
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.32
+    },
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.385
+    }
+   ]
+  },
+  {
+   "vo": "Giants versus Rams.",
+   "hl": [
+    "rams"
+   ],
+   "shots": [
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.45
+    },
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "Then the stadium had a surprise for them.",
+   "hl": [
+    "surprise"
+   ],
+   "shots": [
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.58
+    },
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.645
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Dad was home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.71
+    },
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "The best play of the whole game.",
+   "hl": [
+    "best"
+   ],
+   "shots": [
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.84
+    },
+    {
+     "file": "colonel_giants_game",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

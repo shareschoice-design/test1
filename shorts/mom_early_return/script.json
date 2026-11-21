@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Mom came home early",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "It was just spaghetti date night.",
+   "hl": [
+    "spaghetti"
+   ],
+   "shots": [
+    {
+     "file": "mom_early_return",
+     "pos": 0.857
+    },
+    {
+     "file": "mom_early_return",
+     "pos": 0.897
+    }
+   ]
+  },
+  {
+   "vo": "Elijah and Londyn thought mom was still in Qatar.",
+   "hl": [
+    "qatar"
+   ],
+   "shots": [
+    {
+     "file": "mom_early_return",
+     "pos": 0.212
+    },
+    {
+     "file": "mom_early_return",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Tech Sergeant LaDonna Gardner had been deployed for seven months.",
+   "hl": [
+    "seven"
+   ],
+   "shots": [
+    {
+     "file": "mom_early_return",
+     "pos": 0.363
+    },
+    {
+     "file": "mom_early_return",
+     "pos": 0.439
+    }
+   ]
+  },
+  {
+   "vo": "They expected her on February 14th.",
+   "hl": [
+    "14th"
+   ],
+   "shots": [
+    {
+     "file": "mom_early_return",
+     "pos": 0.515
+    },
+    {
+     "file": "mom_early_return",
+     "pos": 0.591
+    }
+   ],
+   "label": "But..."
+  },
+  {
+   "vo": "She came home three days early.",
+   "hl": [
+    "early"
+   ],
+   "shots": [
+    {
+     "file": "mom_early_return",
+     "pos": 0.667
+    },
+    {
+     "file": "mom_early_return",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Best date night ever.",
+   "hl": [
+    "ever"
+   ],
+   "shots": [
+    {
+     "file": "mom_early_return",
+     "pos": 0.818
+    },
+    {
+     "file": "mom_early_return",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}
