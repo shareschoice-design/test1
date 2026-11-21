@@ -34,3 +34,10 @@ Checked and rejected: Snowy owl & peregrine falcon – shot through a spotting s
 | Humpback lobtailing 4K slow-mo | https://commons.wikimedia.org/wiki/File:032_Humpback_whale_lobtailing_in_slow_motion_Video_by_Giles_Laurent.webm | CC BY-SA 4.0 | Giles Laurent |
 
 Tiger bathing/drinking: nothing suitable on Commons (mostly zoo clips) → use Pexels/Pixabay manually.
+
+## Pexels (free licence, commercial use OK, credit optional)
+| File | Pexels ID | Notes |
+|---|---|---|
+| `pexels_18976941_chameleon.mp4` | 18976941 | panther chameleon walking, 720p |
+| `pexels_16603836_tiger_grass.mp4` | 16603836 | tiger walking in grass, 2880x2160 |
+| `pexels_5692956_tiger_yawn.mp4` | 5692956 | tiger lying, yawns ~9-12 s, 720p |

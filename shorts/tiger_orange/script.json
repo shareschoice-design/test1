@@ -1,0 +1,10 @@
+[
+ {"id":"s01","src":"clip","file":"b.mp4","start":3.0,"len":3.0,"cx":0.8,"vo":"This tiger is bright orange. So why can't a deer see it?","cap":"Why can't deer see it?","hl":[3,4]},
+ {"id":"s02","src":"img1","vo":"We see orange. But deer only have two types of colour cones. To them, orange and green look almost the same.","cap":"Orange looks green","hl":[0,2]},
+ {"id":"s03","src":"clip","file":"b.mp4","start":6.5,"len":3.0,"cx":0.85,"vo":"So in tall grass, this tiger doesn't stand out. To its prey, it almost disappears.","cap":"It almost disappears","hl":[2]},
+ {"id":"s04","src":"img2","vo":"Then the stripes finish the job. They break up its outline, like shadows between the grass.","cap":"Stripes break the outline","hl":[0]},
+ {"id":"s05","src":"img3","label":"Strange but true","vo":"And here's the strange part. Shave a tiger, and its skin is striped too.","cap":"Even the skin is striped","hl":[2,4]},
+ {"id":"s06","src":"img4","vo":"No two tigers have the same pattern. Their stripes are as unique as your fingerprints.","cap":"No two are the same","hl":[0,1]},
+ {"id":"s07","src":"clip","file":"c.mp4","start":9.3,"len":3.0,"cx":0.6,"vo":"So that bright orange coat isn't a mistake.","cap":"Not a mistake","hl":[1]},
+ {"id":"s08","src":"clip","file":"b.mp4","start":0.5,"len":3.0,"cx":0.75,"vo":"It's one of the best disguises in nature. Only we see it as orange.","cap":"Only we see orange","hl":[3]}
+]

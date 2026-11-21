@@ -1,0 +1,9 @@
+[
+ {"id":"s01","src":"clip","file":"a.mp4","start":1.0,"len":3.0,"cx":0.65,"label":"Myth","vo":"You've been told chameleons change colour to hide. That's mostly a myth.","cap":"It's mostly a myth","hl":[3]},
+ {"id":"s02","src":"img1","label":"Fact","vo":"Under the skin are layers of tiny crystals. By changing the space between them, a chameleon changes which colours of light bounce back.","cap":"Crystals, not paint","hl":[0]},
+ {"id":"s03","src":"img2","vo":"And it mostly uses this to talk. Bright colours can mean back off. Dark, dull colours can mean it just lost a fight.","cap":"Colour is a language","hl":[3]},
+ {"id":"s04","src":"clip","file":"a.mp4","start":5.5,"len":3.0,"cx":0.65,"vo":"So these blues and reds are a signal. Not camouflage.","cap":"A signal, not camouflage","hl":[1]},
+ {"id":"s05","src":"img3","vo":"It can also turn darker to soak up heat from the morning sun.","cap":"Dark to warm up","hl":[0]},
+ {"id":"s06","src":"img4","vo":"Meanwhile, each eye moves on its own, scanning in two directions at once.","cap":"Two eyes, two directions","hl":[3]},
+ {"id":"s07","src":"clip","file":"a.mp4","start":10.5,"len":3.0,"cx":0.65,"vo":"So that colour isn't hiding it. It's announcing it.","cap":"It's announcing itself","hl":[1]}
+]
