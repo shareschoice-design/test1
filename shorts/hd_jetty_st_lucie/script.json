@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Stuck on the rocks",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "December 2024. St. Lucie Inlet, Florida.",
+   "hl": [
+    "florida"
+   ],
+   "shots": [
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.149
+    },
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.189
+    }
+   ]
+  },
+  {
+   "vo": "A man is stranded on a jetty.",
+   "hl": [
+    "jetty"
+   ],
+   "shots": [
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.212
+    },
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Stranded. Waiting for help.",
+   "hl": [
+    "waiting"
+   ],
+   "shots": [
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.363
+    },
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Miami arrives.",
+   "hl": [
+    "miami"
+   ],
+   "shots": [
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.515
+    },
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "They hoist him off the rocks.",
+   "hl": [
+    "hoist"
+   ],
+   "shots": [
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.667
+    },
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "And fly him to Stuart Airport. No injuries.",
+   "hl": [
+    "no"
+   ],
+   "shots": [
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.818
+    },
+    {
+     "file": "jetty_st_lucie",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Their boat flipped",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "January 2025. Near Kodiak, Alaska.",
+   "hl": [
+    "alaska"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.348
+    },
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.388
+    }
+   ]
+  },
+  {
+   "vo": "An emergency beacon goes off. The fishing boat Tanusha.",
+   "hl": [
+    "beacon"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.212
+    },
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Another fishing boat, the Victory, races to the spot.",
+   "hl": [
+    "victory"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.363
+    },
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They find the Tanusha capsized. Two fishermen in a life raft.",
+   "hl": [
+    "raft"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.515
+    },
+    {
+     "card": {
+      "file": "kodiak_two_fishermen",
+      "pos": 0.591,
+      "big": "2 FISHERMEN",
+      "small": "IN A LIFE RAFT"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard Jayhawk crew takes it from there.",
+   "hl": [
+    "jayhawk"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.667
+    },
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Fishermen saving fishermen.",
+   "hl": [
+    "fishermen"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.818
+    },
+    {
+     "file": "kodiak_two_fishermen",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

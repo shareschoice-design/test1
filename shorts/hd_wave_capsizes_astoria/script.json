@@ -1,0 +1,96 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "One wave flipped it",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "February 2023. Near Astoria, Oregon.",
+   "hl": [
+    "astoria"
+   ],
+   "shots": [
+    {
+     "file": "wave_capsizes_astoria",
+     "pos": 0.147
+    },
+    {
+     "file": "wave_capsizes_astoria",
+     "pos": 0.187
+    }
+   ]
+  },
+  {
+   "vo": "A 32-foot boat called Sand Piper is already disabled.",
+   "hl": [
+    "disabled"
+   ],
+   "shots": [
+    {
+     "file": "wave_capsizes_astoria",
+     "pos": 0.242
+    },
+    {
+     "file": "wave_capsizes_astoria",
+     "pos": 0.333
+    }
+   ]
+  },
+  {
+   "vo": "Then a wave flips it over.",
+   "hl": [
+    "wave"
+   ],
+   "shots": [
+    {
+     "file": "wave_capsizes_astoria",
+     "pos": 0.424
+    },
+    {
+     "file": "wave_capsizes_astoria",
+     "pos": 0.515
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Jayhawk helicopter and several 47-foot motor lifeboats race in.",
+   "hl": [
+    "lifeboats"
+   ],
+   "shots": [
+    {
+     "file": "wave_capsizes_astoria",
+     "pos": 0.606
+    },
+    {
+     "card": {
+      "file": "wave_capsizes_astoria",
+      "pos": 0.697,
+      "big": "32 FT",
+      "small": "BOAT CAPSIZED"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Together they pull the mariner out of the water.",
+   "hl": [
+    "mariner"
+   ],
+   "shots": [
+    {
+     "file": "wave_capsizes_astoria",
+     "pos": 0.788
+    },
+    {
+     "file": "wave_capsizes_astoria",
+     "pos": 0.879
+    }
+   ]
+  }
+ ]
+}

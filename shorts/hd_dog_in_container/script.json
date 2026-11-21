@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Something was scratching",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "January 2024. A container terminal in Seabrook, Texas.",
+   "hl": [
+    "texas"
+   ],
+   "shots": [
+    {
+     "file": "dog_in_container",
+     "pos": 0.764
+    },
+    {
+     "file": "dog_in_container",
+     "pos": 0.804
+    }
+   ]
+  },
+  {
+   "vo": "Coast Guard inspectors are doing a routine check.",
+   "hl": [
+    "routine"
+   ],
+   "shots": [
+    {
+     "file": "dog_in_container",
+     "pos": 0.212
+    },
+    {
+     "file": "dog_in_container",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Then they hear barking. And scratching. From inside a container.",
+   "hl": [
+    "barking"
+   ],
+   "shots": [
+    {
+     "file": "dog_in_container",
+     "pos": 0.363
+    },
+    {
+     "file": "dog_in_container",
+     "pos": 0.439
+    }
+   ],
+   "label": "Wait..."
+  },
+  {
+   "vo": "A dog had been trapped inside for at least eight days.",
+   "hl": [
+    "eight"
+   ],
+   "shots": [
+    {
+     "file": "dog_in_container",
+     "pos": 0.515
+    },
+    {
+     "card": {
+      "file": "dog_in_container",
+      "pos": 0.591,
+      "big": "8 DAYS",
+      "small": "TRAPPED IN A CONTAINER"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "They got it out.",
+   "hl": [
+    "out"
+   ],
+   "shots": [
+    {
+     "file": "dog_in_container",
+     "pos": 0.667
+    },
+    {
+     "file": "dog_in_container",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "One routine inspection. One life saved.",
+   "hl": [
+    "saved"
+   ],
+   "shots": [
+    {
+     "file": "dog_in_container",
+     "pos": 0.818
+    },
+    {
+     "file": "dog_in_container",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{"file":"kodiak_two_fishermen","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Their boat flipped",3],"lines":[
+["January 2025. Near Kodiak, Alaska.",["alaska"],null],
+["An emergency beacon goes off. The fishing boat Tanusha.",["beacon"],null],
+["Another fishing boat, the Victory, races to the spot.",["victory"],"Then..."],
+["They find the Tanusha capsized. Two fishermen in a life raft.",["raft"],null,["2 FISHERMEN","IN A LIFE RAFT"]],
+["A Coast Guard Jayhawk crew takes it from there.",["jayhawk"],null],
+["Fishermen saving fishermen.",["fishermen"],null]]}

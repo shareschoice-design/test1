@@ -1,0 +1,92 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "He went in after him",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "February 2023. Near Astoria, Oregon.",
+   "hl": [
+    "oregon"
+   ],
+   "shots": [
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.799
+    },
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.839
+    }
+   ]
+  },
+  {
+   "vo": "A boat capsizes near the mouth of the Columbia River.",
+   "hl": [
+    "capsizes"
+   ],
+   "shots": [
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.242
+    },
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.333
+    }
+   ]
+  },
+  {
+   "vo": "Coast Guard rescue swimmer Branch Walton goes in.",
+   "hl": [
+    "walton"
+   ],
+   "shots": [
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.424
+    },
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.515
+    }
+   ],
+   "label": "Hero"
+  },
+  {
+   "vo": "He swims to the mariner and gets him out.",
+   "hl": [
+    "swims"
+   ],
+   "shots": [
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.606
+    },
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.697
+    }
+   ]
+  },
+  {
+   "vo": "Helicopters and lifeboats from three units joined the rescue.",
+   "hl": [
+    "three"
+   ],
+   "shots": [
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.788
+    },
+    {
+     "file": "swimmer_columbia_bar",
+     "pos": 0.879
+    }
+   ]
+  }
+ ]
+}

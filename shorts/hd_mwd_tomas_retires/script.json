@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "His partner is retiring",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "This is Tomas. A U.S. Army military working dog.",
+   "hl": [
+    "tomas"
+   ],
+   "shots": [
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.632
+    },
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.672
+    }
+   ]
+  },
+  {
+   "vo": "For two and a half years, his partner was Specialist Bryant Olartes.",
+   "hl": [
+    "olartes"
+   ],
+   "shots": [
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.212
+    },
+    {
+     "card": {
+      "file": "mwd_tomas_retires",
+      "pos": 0.287,
+      "big": "2.5 YEARS",
+      "small": "PARTNERS"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "They built a special bond.",
+   "hl": [
+    "bond"
+   ],
+   "shots": [
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.363
+    },
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.439
+    }
+   ]
+  },
+  {
+   "vo": "Now Tomas is retiring.",
+   "hl": [
+    "retiring"
+   ],
+   "shots": [
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.515
+    },
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.591
+    }
+   ],
+   "label": "But..."
+  },
+  {
+   "vo": "Which means they have to split up.",
+   "hl": [
+    "split"
+   ],
+   "shots": [
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.667
+    },
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "So Tomas can finally relax with a happy family.",
+   "hl": [
+    "family"
+   ],
+   "shots": [
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.818
+    },
+    {
+     "file": "mwd_tomas_retires",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

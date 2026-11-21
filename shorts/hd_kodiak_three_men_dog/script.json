@@ -1,0 +1,128 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Slammed against the rocks",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "December 2022. Esther Island, Alaska.",
+   "hl": [
+    "alaska"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.477
+    },
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.517
+    }
+   ]
+  },
+  {
+   "vo": "A 45-foot fishing boat runs aground.",
+   "hl": [
+    "aground"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.19
+    },
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "The crew radios: they're putting on survival suits. Their boat is being slammed against rocks.",
+   "hl": [
+    "rocks"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.32
+    },
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.385
+    }
+   ],
+   "label": "Mayday"
+  },
+  {
+   "vo": "Three men and a dog are stranded on the rocks. In high winds.",
+   "hl": [
+    "winds"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.45
+    },
+    {
+     "card": {
+      "file": "kodiak_three_men_dog",
+      "pos": 0.515,
+      "big": "3 MEN + 1 DOG",
+      "small": "STRANDED IN HIGH WINDS"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard Jayhawk from Kodiak finds them.",
+   "hl": [
+    "kodiak"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.58
+    },
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "All four are hoisted up. The dog too.",
+   "hl": [
+    "dog"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.71
+    },
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Everyone made it to Anchorage safe.",
+   "hl": [
+    "safe"
+   ],
+   "shots": [
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.84
+    },
+    {
+     "file": "kodiak_three_men_dog",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}
