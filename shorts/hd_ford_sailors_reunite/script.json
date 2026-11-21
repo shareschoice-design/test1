@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "8 months at sea",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "January 2024. Naval Station Norfolk, Virginia.",
+   "hl": [
+    "norfolk"
+   ],
+   "shots": [
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.558
+    },
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.598
+    }
+   ]
+  },
+  {
+   "vo": "The aircraft carrier USS Gerald R. Ford comes home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.212
+    },
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "After an eight-month deployment.",
+   "hl": [
+    "eight"
+   ],
+   "shots": [
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.363
+    },
+    {
+     "card": {
+      "file": "ford_sailors_reunite",
+      "pos": 0.439,
+      "big": "8 MONTHS",
+      "small": "AWAY FROM HOME"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "And on the pier, families are waiting.",
+   "hl": [
+    "families"
+   ],
+   "shots": [
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.515
+    },
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.591
+    }
+   ],
+   "label": "Look"
+  },
+  {
+   "vo": "Eight months of goodbyes. Ending right here.",
+   "hl": [
+    "here"
+   ],
+   "shots": [
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.667
+    },
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Welcome home, sailors.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.818
+    },
+    {
+     "file": "ford_sailors_reunite",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

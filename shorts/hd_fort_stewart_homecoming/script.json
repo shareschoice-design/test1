@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "They're finally home",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "May 2024. Fort Stewart, Georgia.",
+   "hl": [
+    "georgia"
+   ],
+   "shots": [
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.244
+    },
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.284
+    }
+   ]
+  },
+  {
+   "vo": "Soldiers of the 3rd Infantry Division come home from Europe.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.212
+    },
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Their families have been waiting for this day.",
+   "hl": [
+    "waiting"
+   ],
+   "shots": [
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.363
+    },
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.439
+    }
+   ],
+   "label": "Look"
+  },
+  {
+   "vo": "Finally together.",
+   "hl": [
+    "together"
+   ],
+   "shots": [
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.515
+    },
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "This is the moment they waited for.",
+   "hl": [
+    "moment"
+   ],
+   "shots": [
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.667
+    },
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Welcome home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.818
+    },
+    {
+     "file": "fort_stewart_homecoming",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

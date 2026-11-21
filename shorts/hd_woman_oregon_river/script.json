@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Her car went into the river",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "March 2025. The McKenzie River, Oregon.",
+   "hl": [
+    "oregon"
+   ],
+   "shots": [
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.883
+    },
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.923
+    }
+   ]
+  },
+  {
+   "vo": "A car goes into the river. A 71-year-old woman is inside.",
+   "hl": [
+    "71"
+   ],
+   "shots": [
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.212
+    },
+    {
+     "card": {
+      "file": "woman_oregon_river",
+      "pos": 0.287,
+      "big": "71",
+      "small": "YEARS OLD"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "The water is too fast. Police and firefighters can't reach her.",
+   "hl": [
+    "fast"
+   ],
+   "shots": [
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.363
+    },
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.439
+    }
+   ],
+   "label": "Problem"
+  },
+  {
+   "vo": "A Coast Guard helicopter from North Bend arrives.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.515
+    },
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "They pull her out of the swift water.",
+   "hl": [
+    "out"
+   ],
+   "shots": [
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.667
+    },
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Saved from the river.",
+   "hl": [
+    "saved"
+   ],
+   "shots": [
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.818
+    },
+    {
+     "file": "woman_oregon_river",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

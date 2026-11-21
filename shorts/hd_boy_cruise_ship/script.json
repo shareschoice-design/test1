@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "An 11-year-old in trouble",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "July 2026. The Gulf of Alaska.",
+   "hl": [
+    "alaska"
+   ],
+   "shots": [
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.917
+    },
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.95
+    }
+   ]
+  },
+  {
+   "vo": "On the cruise ship Norwegian Joy, an 11-year-old boy needs urgent medical help.",
+   "hl": [
+    "11-year-old"
+   ],
+   "shots": [
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.212
+    },
+    {
+     "card": {
+      "file": "boy_cruise_ship",
+      "pos": 0.287,
+      "big": "11",
+      "small": "YEARS OLD"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "They're far out at sea.",
+   "hl": [
+    "sea"
+   ],
+   "shots": [
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.363
+    },
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk from Sitka flies out to the ship.",
+   "hl": [
+    "sitka"
+   ],
+   "shots": [
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.515
+    },
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "They lift the boy off the cruise ship.",
+   "hl": [
+    "lift"
+   ],
+   "shots": [
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.667
+    },
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Medics meet him in Juneau as soon as the helicopter lands.",
+   "hl": [
+    "juneau"
+   ],
+   "shots": [
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.818
+    },
+    {
+     "file": "boy_cruise_ship",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

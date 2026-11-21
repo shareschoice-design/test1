@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Left behind in the flood",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "July 2026. Floods hit Crystal City, Texas.",
+   "hl": [
+    "texas"
+   ],
+   "shots": [
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.898
+    },
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.938
+    }
+   ]
+  },
+  {
+   "vo": "Two dogs are stuck in the floodwater.",
+   "hl": [
+    "dogs"
+   ],
+   "shots": [
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.212
+    },
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Soldiers from the Texas National Guard and Task Force 1 go in.",
+   "hl": [
+    "soldiers"
+   ],
+   "shots": [
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.363
+    },
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They carry both dogs out.",
+   "hl": [
+    "both"
+   ],
+   "shots": [
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.515
+    },
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "The dogs get checked at an animal hospital.",
+   "hl": [
+    "hospital"
+   ],
+   "shots": [
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.667
+    },
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "And they're back home with their family.",
+   "hl": [
+    "family"
+   ],
+   "shots": [
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.818
+    },
+    {
+     "file": "flood_two_dogs_texas",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

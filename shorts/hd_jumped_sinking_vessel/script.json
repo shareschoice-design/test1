@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "They had to jump",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "November 2022. 2 a.m. Pamlico Sound, North Carolina.",
+   "hl": [
+    "2"
+   ],
+   "shots": [
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.755
+    },
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.795
+    }
+   ]
+  },
+  {
+   "vo": "The fishing boat Heathers Breeze is taking on water.",
+   "hl": [
+    "water"
+   ],
+   "shots": [
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.212
+    },
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "The crew has no choice. They jump.",
+   "hl": [
+    "jump"
+   ],
+   "shots": [
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.363
+    },
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Into the dark water, five miles from Engelhard.",
+   "hl": [
+    "dark"
+   ],
+   "shots": [
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.515
+    },
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "The Coast Guard finds them.",
+   "hl": [
+    "finds"
+   ],
+   "shots": [
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.667
+    },
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Both are pulled from the sea alive.",
+   "hl": [
+    "alive"
+   ],
+   "shots": [
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.818
+    },
+    {
+     "file": "jumped_sinking_vessel",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

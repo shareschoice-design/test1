@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "300 feet down",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "May 2024. Lake Michigan, 25 miles off Grand Haven.",
+   "hl": [
+    "michigan"
+   ],
+   "shots": [
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.248
+    },
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.288
+    }
+   ]
+  },
+  {
+   "vo": "A man's sailboat is sinking.",
+   "hl": [
+    "sinking"
+   ],
+   "shots": [
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.212
+    },
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Coast Guard crews from the station and the air race to him.",
+   "hl": [
+    "race"
+   ],
+   "shots": [
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.363
+    },
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They pull him out in time.",
+   "hl": [
+    "time"
+   ],
+   "shots": [
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.515
+    },
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "Then the sailboat goes down.",
+   "hl": [
+    "down"
+   ],
+   "shots": [
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.667
+    },
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Into 300 feet of water.",
+   "hl": [
+    "300"
+   ],
+   "shots": [
+    {
+     "file": "sinking_sailboat_michigan",
+     "pos": 0.818
+    },
+    {
+     "card": {
+      "file": "sinking_sailboat_michigan",
+      "pos": 0.894,
+      "big": "300 FT",
+      "small": "DEEP. GONE."
+     }
+    }
+   ]
+  }
+ ]
+}
