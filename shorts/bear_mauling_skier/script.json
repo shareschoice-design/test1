@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Mauled by a bear",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "February 2021. Backcountry skiing near Haines, Alaska.",
+   "hl": [
+    "alaska"
+   ],
+   "shots": [
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.05
+    },
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.111
+    }
+   ]
+  },
+  {
+   "vo": "A skier is attacked by a bear.",
+   "hl": [
+    "bear"
+   ],
+   "shots": [
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.171
+    },
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.232
+    }
+   ]
+  },
+  {
+   "vo": "He's badly hurt, deep in the wilderness.",
+   "hl": [
+    "wilderness"
+   ],
+   "shots": [
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.293
+    },
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.354
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk helicopter flies in from Sitka.",
+   "hl": [
+    "jayhawk"
+   ],
+   "shots": [
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.414
+    },
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.475
+    }
+   ]
+  },
+  {
+   "vo": "The crew hoists him up through the trees.",
+   "hl": [
+    "hoists"
+   ],
+   "shots": [
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.536
+    },
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.596
+    }
+   ]
+  },
+  {
+   "vo": "He's flown to Juneau, where medics are waiting.",
+   "hl": [
+    "juneau"
+   ],
+   "shots": [
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.657
+    },
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.718
+    }
+   ]
+  },
+  {
+   "vo": "Attacked by a bear. Saved from the sky.",
+   "hl": [
+    "sky"
+   ],
+   "shots": [
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.779
+    },
+    {
+     "file": "bear_mauling_skier",
+     "pos": 0.839
+    }
+   ]
+  }
+ ]
+}

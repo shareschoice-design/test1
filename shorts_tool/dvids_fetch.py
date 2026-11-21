@@ -7,7 +7,7 @@ import html, json, re, subprocess, sys
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 url, out = sys.argv[1], sys.argv[2]
-page = subprocess.run(["curl", "-s", "-m", "30", "-A", UA, url], capture_output=True, text=True).stdout
+page = subprocess.run(["curl", "-sL", "-m", "30", "-A", UA, url], capture_output=True, text=True).stdout
 if "PUBLIC DOMAIN" not in page.upper():
     sys.exit(f"not marked public domain: {url}")
 mp4s = sorted(set(re.findall(r"https://[a-z0-9]+\.cloudfront\.net/video/[^\"' ]+?\.mp4", page)))

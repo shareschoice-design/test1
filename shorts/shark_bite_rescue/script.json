@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Shark attack at sea",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "December 2019. Off California's Santa Rosa Island.",
+   "hl": [
+    "island"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.03
+    },
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "A 37-year-old surfer is reportedly attacked by a shark.",
+   "hl": [
+    "shark"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.164
+    },
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "He's injured. And he's far from shore.",
+   "hl": [
+    "far"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.299
+    },
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.366
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter arrives overhead.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.433
+    },
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.5
+    }
+   ]
+  },
+  {
+   "vo": "A rescue swimmer goes down to the boat.",
+   "hl": [
+    "swimmer"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.567
+    },
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "The hoist pulls him up into the helicopter.",
+   "hl": [
+    "hoist"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.701
+    },
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "Lifted straight out of the ocean. Alive.",
+   "hl": [
+    "alive"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.836
+    },
+    {
+     "file": "shark_bite_rescue",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

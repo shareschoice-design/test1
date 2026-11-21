@@ -1,0 +1,125 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Trapped in a net",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "May 2018. The eastern Pacific Ocean.",
+   "hl": [
+    "pacific"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles",
+     "pos": 0.03
+    },
+    {
+     "file": "sea_turtles",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard ship is on a drug patrol.",
+   "hl": [
+    "drug"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles",
+     "pos": 0.164
+    },
+    {
+     "file": "sea_turtles",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "Then a lookout spots something in the water.",
+   "hl": [
+    "something"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles",
+     "pos": 0.299
+    },
+    {
+     "file": "sea_turtles",
+     "pos": 0.366
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Two sea turtles, tangled in abandoned fishing gear.",
+   "hl": [
+    "tangled"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles",
+     "pos": 0.433
+    },
+    {
+     "file": "sea_turtles",
+     "pos": 0.5
+    }
+   ]
+  },
+  {
+   "vo": "The crew races out in a small boat.",
+   "hl": [
+    "boat"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles",
+     "pos": 0.567
+    },
+    {
+     "file": "sea_turtles",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "They cut the turtles free.",
+   "hl": [
+    "free"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles",
+     "pos": 0.701
+    },
+    {
+     "file": "sea_turtles",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "The turtles swim away. And the net is pulled out of the ocean for good.",
+   "hl": [
+    "swim",
+    "good"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles",
+     "pos": 0.836
+    },
+    {
+     "file": "sea_turtles",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

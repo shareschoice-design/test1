@@ -1,0 +1,8 @@
+{"file":"shark_bite_rescue","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Shark attack at sea",2],"range":[0.03,0.97],"lines":[
+["December 2019. Off California's Santa Rosa Island.",["island"],null],
+["A 37-year-old surfer is reportedly attacked by a shark.",["shark"],null],
+["He's injured. And he's far from shore.",["far"],"Then..."],
+["A Coast Guard helicopter arrives overhead.",["helicopter"],null],
+["A rescue swimmer goes down to the boat.",["swimmer"],null],
+["The hoist pulls him up into the helicopter.",["hoist"],null],
+["Lifted straight out of the ocean. Alive.",["alive"],null]]}

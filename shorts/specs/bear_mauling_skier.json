@@ -1,0 +1,8 @@
+{"file":"bear_mauling_skier","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Mauled by a bear",2],"range":[0.05,0.9],"lines":[
+["February 2021. Backcountry skiing near Haines, Alaska.",["alaska"],null],
+["A skier is attacked by a bear.",["bear"],null],
+["He's badly hurt, deep in the wilderness.",["wilderness"],"Then..."],
+["A Coast Guard Jayhawk helicopter flies in from Sitka.",["jayhawk"],null],
+["The crew hoists him up through the trees.",["hoists"],null],
+["He's flown to Juneau, where medics are waiting.",["juneau"],null],
+["Attacked by a bear. Saved from the sky.",["sky"],null]]}

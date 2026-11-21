@@ -1,0 +1,8 @@
+{"file":"cliff_rescue","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["No one could reach her",2],"range":[0.03,0.95],"lines":[
+["February 2020. Cape Falcon, Oregon.",["oregon"],null],
+["A woman is injured on a cliff above the ocean.",["cliff"],null],
+["It's so steep that rescuers on foot can't reach her.",["steep"],"Problem"],
+["So a Coast Guard helicopter comes in.",["helicopter"],null],
+["The crew works right next to the rock face.",["rock"],null],
+["Waves crash below.",["waves"],null],
+["And she's hoisted up to safety.",["safety"],null]]}

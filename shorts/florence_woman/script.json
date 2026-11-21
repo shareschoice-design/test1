@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Trapped by the flood",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "September 2018. Hurricane Florence floods North Carolina.",
+   "hl": [
+    "florence"
+   ],
+   "shots": [
+    {
+     "file": "florence_woman",
+     "pos": 0.03
+    },
+    {
+     "file": "florence_woman",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "An elderly woman is stuck in her flooded home.",
+   "hl": [
+    "flooded"
+   ],
+   "shots": [
+    {
+     "file": "florence_woman",
+     "pos": 0.164
+    },
+    {
+     "file": "florence_woman",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "She has run out of medication and can't feed herself properly.",
+   "hl": [
+    "medication"
+   ],
+   "shots": [
+    {
+     "file": "florence_woman",
+     "pos": 0.299
+    },
+    {
+     "file": "florence_woman",
+     "pos": 0.366
+    }
+   ],
+   "label": "Worse"
+  },
+  {
+   "vo": "Rescue swimmer Steve Maccaferri is lowered from a Coast Guard helicopter.",
+   "hl": [
+    "swimmer"
+   ],
+   "shots": [
+    {
+     "file": "florence_woman",
+     "pos": 0.433
+    },
+    {
+     "file": "florence_woman",
+     "pos": 0.5
+    }
+   ]
+  },
+  {
+   "vo": "He gets her into the rescue basket.",
+   "hl": [
+    "basket"
+   ],
+   "shots": [
+    {
+     "file": "florence_woman",
+     "pos": 0.567
+    },
+    {
+     "file": "florence_woman",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "Then they're lifted over the floodwater.",
+   "hl": [
+    "lifted"
+   ],
+   "shots": [
+    {
+     "file": "florence_woman",
+     "pos": 0.701
+    },
+    {
+     "file": "florence_woman",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "Stranded at home. Then safe in the sky.",
+   "hl": [
+    "safe"
+   ],
+   "shots": [
+    {
+     "file": "florence_woman",
+     "pos": 0.836
+    },
+    {
+     "file": "florence_woman",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "No one could reach her",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "February 2020. Cape Falcon, Oregon.",
+   "hl": [
+    "oregon"
+   ],
+   "shots": [
+    {
+     "file": "cliff_rescue",
+     "pos": 0.03
+    },
+    {
+     "file": "cliff_rescue",
+     "pos": 0.096
+    }
+   ]
+  },
+  {
+   "vo": "A woman is injured on a cliff above the ocean.",
+   "hl": [
+    "cliff"
+   ],
+   "shots": [
+    {
+     "file": "cliff_rescue",
+     "pos": 0.161
+    },
+    {
+     "file": "cliff_rescue",
+     "pos": 0.227
+    }
+   ]
+  },
+  {
+   "vo": "It's so steep that rescuers on foot can't reach her.",
+   "hl": [
+    "steep"
+   ],
+   "shots": [
+    {
+     "file": "cliff_rescue",
+     "pos": 0.293
+    },
+    {
+     "file": "cliff_rescue",
+     "pos": 0.359
+    }
+   ],
+   "label": "Problem"
+  },
+  {
+   "vo": "So a Coast Guard helicopter comes in.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "cliff_rescue",
+     "pos": 0.424
+    },
+    {
+     "file": "cliff_rescue",
+     "pos": 0.49
+    }
+   ]
+  },
+  {
+   "vo": "The crew works right next to the rock face.",
+   "hl": [
+    "rock"
+   ],
+   "shots": [
+    {
+     "file": "cliff_rescue",
+     "pos": 0.556
+    },
+    {
+     "file": "cliff_rescue",
+     "pos": 0.621
+    }
+   ]
+  },
+  {
+   "vo": "Waves crash below.",
+   "hl": [
+    "waves"
+   ],
+   "shots": [
+    {
+     "file": "cliff_rescue",
+     "pos": 0.687
+    },
+    {
+     "file": "cliff_rescue",
+     "pos": 0.753
+    }
+   ]
+  },
+  {
+   "vo": "And she's hoisted up to safety.",
+   "hl": [
+    "safety"
+   ],
+   "shots": [
+    {
+     "file": "cliff_rescue",
+     "pos": 0.819
+    },
+    {
+     "file": "cliff_rescue",
+     "pos": 0.884
+    }
+   ]
+  }
+ ]
+}

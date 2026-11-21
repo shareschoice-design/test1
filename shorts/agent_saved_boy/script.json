@@ -1,0 +1,141 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "He wasn't breathing",
+  "red": 1
+ },
+ "lines": [
+  {
+   "vo": "January 2018. A Border Patrol agent is driving home from work.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.08
+    },
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.136
+    }
+   ]
+  },
+  {
+   "vo": "A family is pulled over on the side of the road.",
+   "hl": [
+    "road"
+   ],
+   "shots": [
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.191
+    },
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.247
+    }
+   ]
+  },
+  {
+   "vo": "Their two-year-old boy isn't breathing.",
+   "hl": [
+    "breathing"
+   ],
+   "shots": [
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.302
+    },
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.358
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Agent Jed Eckler starts CPR.",
+   "hl": [
+    "cpr"
+   ],
+   "shots": [
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.414
+    },
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.469
+    }
+   ]
+  },
+  {
+   "vo": "He keeps going until the boy breathes again.",
+   "hl": [
+    "breathes"
+   ],
+   "shots": [
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.525
+    },
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.581
+    }
+   ]
+  },
+  {
+   "vo": "Weeks later, the family came to find him.",
+   "hl": [
+    "find"
+   ],
+   "shots": [
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.636
+    },
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.692
+    }
+   ],
+   "label": "Later"
+  },
+  {
+   "vo": "It was the first time they could thank him.",
+   "hl": [
+    "thank"
+   ],
+   "shots": [
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.747
+    },
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.803
+    }
+   ]
+  },
+  {
+   "vo": "A stranger on his way home. A life saved.",
+   "hl": [
+    "saved"
+   ],
+   "shots": [
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.859
+    },
+    {
+     "file": "agent_saved_boy",
+     "pos": 0.914
+    }
+   ]
+  }
+ ]
+}

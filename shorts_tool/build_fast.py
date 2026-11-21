@@ -41,7 +41,7 @@ def dur(p):
 
 # ---------- 1. voiceover per line ----------
 VOICE_FX = "aresample=44100,acompressor=threshold=-18dB:ratio=3:attack=5:release=80"
-if os.environ.get("DARK") == "1":
+if os.environ.get("DARK") == "1" or script.get("dark"):
     VOICE_FX = ("asetrate=22050*0.95,aresample=44100,atempo=1/0.95,bass=g=3:f=120,"
                 "acompressor=threshold=-18dB:ratio=3:attack=5:release=80")
 for i, ln in enumerate(lines):
@@ -133,7 +133,7 @@ for i, ln in enumerate(lines):
             fn = shot["file"] if os.path.splitext(shot["file"])[1] else shot["file"] + ".mp4"
             src = os.path.join(FOOT, fn)
             srcd = dur(src)
-            st = shot.get("start", round(srcd * 0.25, 2)) + rep * pd
+            st = (shot["start"] if "start" in shot else round(srcd * shot["pos"], 2) if "pos" in shot else round(srcd * 0.25, 2)) + rep * pd
             if st + pd > srcd: st = max(0.0, srcd - pd - 0.05)
             cx = shot.get("cx", 0.5)
             zf = 1.0 + (0.12 * (0 if zin else 1))

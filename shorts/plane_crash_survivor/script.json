@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "His engine failed",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "July 2018. Glacier Bay National Park, Alaska.",
+   "hl": [
+    "alaska"
+   ],
+   "shots": [
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.03
+    },
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "A small plane's engine fails in flight.",
+   "hl": [
+    "fails"
+   ],
+   "shots": [
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.164
+    },
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "He's forced down into Crillon Lake.",
+   "hl": [
+    "lake"
+   ],
+   "shots": [
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.299
+    },
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.366
+    }
+   ]
+  },
+  {
+   "vo": "Then he swims to shore.",
+   "hl": [
+    "swims"
+   ],
+   "shots": [
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.433
+    },
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.5
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Stranded in the Alaskan wilderness.",
+   "hl": [
+    "stranded"
+   ],
+   "shots": [
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.567
+    },
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard Jayhawk from Sitka finds him.",
+   "hl": [
+    "finds"
+   ],
+   "shots": [
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.701
+    },
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "And hoists him to safety.",
+   "hl": [
+    "safety"
+   ],
+   "shots": [
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.836
+    },
+    {
+     "file": "plane_crash_survivor",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

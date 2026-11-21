@@ -1,0 +1,8 @@
+{"file":"plane_crash_survivor","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["His engine failed",2],"range":[0.03,0.97],"lines":[
+["July 2018. Glacier Bay National Park, Alaska.",["alaska"],null],
+["A small plane's engine fails in flight.",["fails"],null],
+["He's forced down into Crillon Lake.",["lake"],null],
+["Then he swims to shore.",["swims"],"Then..."],
+["Stranded in the Alaskan wilderness.",["stranded"],null],
+["A Coast Guard Jayhawk from Sitka finds him.",["finds"],null],
+["And hoists him to safety.",["safety"],null]]}

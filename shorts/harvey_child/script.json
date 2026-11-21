@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Saved from the flood",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "August 2017. Hurricane Harvey floods Port Arthur, Texas.",
+   "hl": [
+    "harvey"
+   ],
+   "shots": [
+    {
+     "file": "harvey_child",
+     "pos": 0.02
+    },
+    {
+     "file": "harvey_child",
+     "pos": 0.088
+    }
+   ]
+  },
+  {
+   "vo": "Families are trapped as the water rises.",
+   "hl": [
+    "trapped"
+   ],
+   "shots": [
+    {
+     "file": "harvey_child",
+     "pos": 0.156
+    },
+    {
+     "file": "harvey_child",
+     "pos": 0.224
+    }
+   ]
+  },
+  {
+   "vo": "Air Force pararescuemen arrive by helicopter.",
+   "hl": [
+    "pararescuemen"
+   ],
+   "shots": [
+    {
+     "file": "harvey_child",
+     "pos": 0.291
+    },
+    {
+     "file": "harvey_child",
+     "pos": 0.359
+    }
+   ]
+  },
+  {
+   "vo": "This camera is on a rescuer's helmet.",
+   "hl": [
+    "helmet"
+   ],
+   "shots": [
+    {
+     "file": "harvey_child",
+     "pos": 0.427
+    },
+    {
+     "file": "harvey_child",
+     "pos": 0.495
+    }
+   ],
+   "label": "Look"
+  },
+  {
+   "vo": "Master Sergeant William Posch carries a child to the helicopter.",
+   "hl": [
+    "child"
+   ],
+   "shots": [
+    {
+     "file": "harvey_child",
+     "pos": 0.563
+    },
+    {
+     "file": "harvey_child",
+     "pos": 0.631
+    }
+   ]
+  },
+  {
+   "vo": "Up the hoist, into the Pave Hawk.",
+   "hl": [
+    "hoist"
+   ],
+   "shots": [
+    {
+     "file": "harvey_child",
+     "pos": 0.699
+    },
+    {
+     "file": "harvey_child",
+     "pos": 0.766
+    }
+   ]
+  },
+  {
+   "vo": "One more child out of the flood.",
+   "hl": [
+    "child"
+   ],
+   "shots": [
+    {
+     "file": "harvey_child",
+     "pos": 0.834
+    },
+    {
+     "file": "harvey_child",
+     "pos": 0.902
+    }
+   ]
+  }
+ ]
+}
