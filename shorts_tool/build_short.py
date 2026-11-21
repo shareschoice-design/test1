@@ -70,8 +70,16 @@ for i, s in enumerate(segs):
         speed = min(d / L, 1.6)
         span = d / speed
         inputs = ["-ss", str(s["start"]), "-t", str(span + 0.1), "-i", src]
-        base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,{CROP},setsar=1,fps={FPS},{blur}"
-                f"setpts={speed}*PTS,{GRADE},trim=duration={d},setpts=PTS-STARTPTS[b]")
+        if s.get("fit"):
+            # whole landscape frame on top of a blurred fill; placed in the upper part so captions sit below it
+            fy = s.get("fit_y", 330)
+            base = (f"[0:v]fps={FPS},setpts={speed}*PTS,split[fa][fb];"
+                    f"[fa]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=40:4,eq=brightness=-0.18[bg];"
+                    f"[fb]scale={W}:-2,setsar=1[fg];[bg][fg]overlay=0:{fy},setsar=1,{GRADE},"
+                    f"trim=duration={d},setpts=PTS-STARTPTS[b]")
+        else:
+            base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,{CROP},setsar=1,fps={FPS},{blur}"
+                    f"setpts={speed}*PTS,{GRADE},trim=duration={d},setpts=PTS-STARTPTS[b]")
     elif s["src"] == "rewind":
         rs = s.get("start", 0.0)
         inputs = ["-ss", str(rs), "-t", "3.3", "-i", src]

@@ -1,0 +1,12 @@
+[
+ {"id":"s01","src":"clip","file":"launch.webm","start":6.0,"len":3.0,"fit":true,"vo":"Right now, a message from Earth takes a full day to reach this spacecraft.","cap":"A full day away","hl":[1,2]},
+ {"id":"s02","src":"rewind","file":"launch1977.webm","start":9.0,"dur":1.0,"cx":0.6,"vo":"","cap":"Rewind","hl":[0]},
+ {"id":"s03","src":"clip","file":"launch1977.webm","start":8.5,"len":3.0,"cx":0.6,"label":"49 years earlier","vo":"Forty-nine years earlier, Voyager 1 lifted off from Florida, built for a mission of about five years.","cap":"Built for five years","hl":[2,3]},
+ {"id":"s04","src":"img1","vo":"It launched during a rare line-up of the outer planets that happens about once every 175 years.","cap":"Once in 175 years","hl":[2,3]},
+ {"id":"s05","src":"img2","vo":"Each planet's gravity flung it faster, like a slingshot. Free speed.","cap":"A cosmic slingshot","hl":[2]},
+ {"id":"s06","src":"clip","file":"launch1977.webm","start":26.0,"len":3.0,"cx":0.5,"vo":"On board, a golden record with music and greetings from Earth, in case anyone ever finds it.","cap":"A message in a bottle","hl":[4]},
+ {"id":"s07","src":"img3","vo":"It runs on a nuclear battery that's slowly fading, so engineers keep switching instruments off to save power.","cap":"Running out of power","hl":[3]},
+ {"id":"s08","src":"clip","file":"scale.webm","start":13.0,"len":3.0,"fit":true,"vo":"Its radio signal is about as strong as a fridge light bulb. Yet giant antennas on Earth still hear it.","cap":"Weaker than a fridge bulb","hl":[3,4]},
+ {"id":"s09","src":"img4","label":"Now","vo":"And now it's so far away, light itself needs a whole day to get there. Nothing we've built has ever gone farther.","cap":"Farthest thing we ever built","hl":[0]},
+ {"id":"s10","src":"clip","file":"launch.webm","start":12.0,"len":3.0,"fit":true,"vo":"Every message we send it... is already a day old when it arrives.","cap":"Already a day old","hl":[2,3]}
+]
