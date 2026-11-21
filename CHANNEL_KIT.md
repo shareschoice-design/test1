@@ -31,35 +31,20 @@ unbroken, true story, survival, real heroes, willpower, never give up, rescue, h
 ```
 
 ## Branding
-- **Colours:** near-black `#0A0D12`, signal red `#FF3B3B`, cyan `#3FD8FF`, white
-- **Font:** Montserrat ExtraBold (same as the video captions)
-- **Ready files:** `branding/backstory_logo_800.png` (avatar), `branding/backstory_logo_alt_800.png` (alternative), `branding/backstory_banner_2560x1440.png`
-- Old Wild Rewind files (`logo_eye`, `logo_claw`, `banner_2560x1440.png`) are kept only for reference.
+- **Colours:** near-black `#0A0D12`, molten gold `#FFC83D`, white
+- **Font:** Montserrat ExtraBold (captions, stat cards, banner)
+- **Ready files:** `branding/unbroken_logo_800.png` (shield, avatar + in-video watermark), `branding/unbroken_logo_alt_800.png` (rising arrow), `branding/unbroken_banner_2560x1440.png`
+- Old Backstory / Wild Rewind files in `branding/` are archive only.
 - Monetisation strategy: see `MONETIZATION.md`
 
-## Upload template
+## Upload template (every short)
 
-**Title formulas** (keep under ~60 characters, the hook first):
-- `This deer only came for a drink… 🐊`
-- `It never heard a thing 🦉`
-- `Why is the deadliest cat taking a bath? 🐅`
-- `[Result] … but here's how it happened`
-
-**Description:**
-```
-<one-line hook repeated from the video>
-
-Here's the backstory. 🔁
-
-🎥 Original footage: <creator / channel name + link>
-Explainer visuals & narration: Unbroken
-
-#explained #facts #shorts + 1-2 topic tags
-```
-
-**Pinned comment:** `Which animal should we rewind next? 👇`
-
-**Hashtags:** 3–5 max: `#wildlife #animals #nature #shorts` + one animal tag (`#owl`, `#crocodile`, `#tiger`)
+**Title:** the hook + 1 emoji, under ~60 characters, e.g. `Trapped in a container for 8 days 🐶` · `Stranded on a cliff in Puerto Rico 😳`
+**Description:** paste the block from `shorts/<name>/CREDITS.md` (story line, real-footage credit with DVIDS link, DoD disclaimer, music credit, hashtags).
+**Hashtags:** `#shorts #truestory #unbroken` + 1–2 topic tags (`#rescue`, `#coastguard`, `#homecoming`, `#dogs`).
+**Pinned comment:** `Would you have done the same? 👇`
+**Altered/synthetic content:** No (real footage; the graphics are clearly stylised).
+**Made for kids:** No.
 
 ## Posting rhythm
 - 1 short per day, same time (evening in the US: 17:00–19:00 ET ≈ 23:00–01:00 CET)
