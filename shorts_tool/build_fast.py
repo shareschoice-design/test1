@@ -140,13 +140,23 @@ for i, ln in enumerate(lines):
             zoom = f"scale=iw*{zf}:ih*{zf}," if zf != 1.0 else ""
             # slow push-in over the piece
             push = f",zoompan=z='1+0.06*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS}" if zin else ""
-            if shot.get("fit"):
+            fit = shot.get("fit"); fscale = 1.0
+            if "cx" not in shot and "fit" not in shot:
+                # face-aware framing: centre on faces, or show the whole frame if they don't fit / source is low-res
+                import face_crop
+                mode, cx, fscale = face_crop.decide(src, st, pd, zf, cx)
+                fit = mode == "fit"
+            if fit:
+                # whole frame above the captions over a blurred fill; slow push-in keeps it moving
+                FW = int(W * fscale)
                 fc = (f"[0:v]fps={FPS},split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
-                      f"boxblur=40:4,eq=brightness=-0.18[bg];[b]scale={W}:-2[fg];[bg][fg]overlay=0:330,{GRADE}{flash},"
+                      f"boxblur=40:4,eq=brightness=-0.22[bg];[b]scale={FW}:-2,unsharp=5:5:0.6,"
+                      f"scale=w='{FW}*(1+0.05*t/{pd:.2f})':h=-2:eval=frame,crop={W}:ih:(iw-{W})*{cx}:0[fg];"
+                      f"[bg][fg]overlay=0:'(1920-h)/2',{GRADE}{flash},"
                       f"trim=duration={pd},setpts=PTS-STARTPTS,format=yuv420p[v]")
             else:
                 fc = (f"[0:v]fps={FPS},scale={W}:{H}:force_original_aspect_ratio=increase,{zoom}"
-                      f"crop={W}:{H}:(iw-{W})*{cx}:(ih-{H})*0.5,setsar=1{push},{GRADE}{flash},"
+                      f"crop={W}:{H}:(iw-{W})*{cx}:(ih-{H})*0.5,setsar=1{push},unsharp=5:5:0.4,{GRADE}{flash},"
                       f"trim=duration={pd},setpts=PTS-STARTPTS,format=yuv420p[v]")
             sh("ffmpeg", "-y", "-loglevel", "error", "-ss", str(st), "-t", str(pd + 0.3), "-i", src,
                "-filter_complex", fc, "-map", "[v]", "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast",
