@@ -1,13 +1,143 @@
-{"hook": {"text": "He found her 44 years later", "red": 3},
+{
+ "hook": {
+  "text": "He found her 44 years later",
+  "red": 3
+ },
  "lines": [
- {"vo": "Terry was 14. Steve was 16.", "hl": ["14", "16"], "label": "1971", "shots": [{"file": "TEENS_LAUGHING"}]},
- {"vo": "They met sitting side by side at a church youth event.", "hl": ["side"], "shots": [{"file": "CHURCH_PEWS"}, {"file": "TEENS_LAUGHING"}]},
- {"vo": "They dated all through high school.", "hl": ["high"], "shots": [{"file": "HIGH_SCHOOL"}]},
- {"vo": "Then college pulled them apart. They lost touch.", "hl": ["apart"], "shots": [{"file": "CAR_LEAVING"}, {"file": "EMPTY_ROAD"}]},
- {"vo": "Both married other people.", "hl": ["other"], "shots": [{"file": "WEDDING"}]},
- {"vo": "Years later, Steve lost his wife to cancer.", "hl": ["cancer"], "shots": [{"file": "MAN_ALONE"}]},
- {"vo": "Then one day, he noticed something on LinkedIn.", "hl": ["linkedin"], "shots": [{"file": "LAPTOP_NIGHT"}]},
- {"vo": "Terry had looked at his profile.", "hl": ["terry"], "shots": [{"file": "PHONE_SCROLL"}]},
- {"vo": "He wrote: Hey Terry, this is the Steve Downey you used to know.", "hl": ["used"], "shots": [{"file": "TYPING"}]},
- {"vo": "In 2015, they got married. Forty-four years after they first met.", "hl": ["married", "forty-four"], "label": "2015", "shots": [{"file": "WEDDING"}, {"file": "OLD_COUPLE"}]}
-]}
+  {
+   "vo": "Terry was 14. Steve was 16.",
+   "hl": [
+    "14",
+    "16"
+   ],
+   "label": "1971",
+   "shots": [
+    {
+     "file": "TEENS_LAUGHING"
+    }
+   ]
+  },
+  {
+   "vo": "They met sitting side by side at a church youth event.",
+   "hl": [
+    "side"
+   ],
+   "shots": [
+    {
+     "file": "CHURCH_PEWS"
+    },
+    {
+     "file": "TEENS_LAUGHING"
+    }
+   ]
+  },
+  {
+   "vo": "They dated all through high school.",
+   "hl": [
+    "high"
+   ],
+   "shots": [
+    {
+     "file": "HIGH_SCHOOL"
+    }
+   ]
+  },
+  {
+   "vo": "Then college pulled them apart. They lost touch.",
+   "hl": [
+    "apart"
+   ],
+   "shots": [
+    {
+     "file": "CAR_LEAVING"
+    },
+    {
+     "file": "EMPTY_ROAD"
+    }
+   ]
+  },
+  {
+   "vo": "Both married other people.",
+   "hl": [
+    "other"
+   ],
+   "shots": [
+    {
+     "file": "WEDDING"
+    }
+   ]
+  },
+  {
+   "vo": "For forty-four years. Until one tiny notification changed everything.",
+   "hl": [
+    "notification"
+   ],
+   "label": "Until...",
+   "shots": [
+    {
+     "file": "PHONE_SCROLL"
+    }
+   ]
+  },
+  {
+   "vo": "Years later, Steve lost his wife to cancer.",
+   "hl": [
+    "cancer"
+   ],
+   "shots": [
+    {
+     "file": "MAN_ALONE"
+    }
+   ]
+  },
+  {
+   "vo": "Then one day, he noticed something on LinkedIn.",
+   "hl": [
+    "linkedin"
+   ],
+   "shots": [
+    {
+     "file": "LAPTOP_NIGHT"
+    }
+   ]
+  },
+  {
+   "vo": "Terry had looked at his profile.",
+   "hl": [
+    "terry"
+   ],
+   "shots": [
+    {
+     "file": "PHONE_SCROLL"
+    }
+   ]
+  },
+  {
+   "vo": "He wrote: Hey Terry, this is the Steve Downey you used to know.",
+   "hl": [
+    "used"
+   ],
+   "shots": [
+    {
+     "file": "TYPING"
+    }
+   ]
+  },
+  {
+   "vo": "In 2015, they got married. Forty-four years after they first met.",
+   "hl": [
+    "married",
+    "forty-four"
+   ],
+   "label": "2015",
+   "shots": [
+    {
+     "file": "WEDDING"
+    },
+    {
+     "file": "OLD_COUPLE"
+    }
+   ]
+  }
+ ]
+}
