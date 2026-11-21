@@ -31,7 +31,8 @@ wildlife, animals, nature, wildlife explained, animal facts, predator, hunting, 
 - **Font:** Montserrat ExtraBold (same as the video captions)
 - **Avatar idea:** a red rewind symbol ◀◀ formed by two claw marks, on near-black, thin cyan ring
 - **Banner idea (2560×1440, safe area 1546×423 in the centre):** dark wildlife collage in the same red/cyan infographic style, centred text: `WILD REWIND` + `Every wild moment has a backstory.`
-- Avatar and banner can be generated via OpenArt in the same style (~20–40 credits).
+- **Ready files:** `branding/logo_eye_800.png` (recommended avatar), `branding/logo_claw_800.png` (alternative), `branding/banner_2560x1440.png`
+- Monetisation strategy: see `MONETIZATION.md`
 
 ## Upload template
 

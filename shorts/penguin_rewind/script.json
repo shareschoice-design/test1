@@ -1,0 +1,261 @@
+[
+ {
+  "id": "s01",
+  "src": "clip",
+  "start": 40.2,
+  "len": 3.0,
+  "blur": [
+   [
+    160,
+    1290,
+    760,
+    175
+   ],
+   [
+    400,
+    1490,
+    290,
+    120
+   ]
+  ],
+  "vo": "This tiny penguin just saved their lives.",
+  "cap": "The unlikeliest hero",
+  "hl": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "s02",
+  "src": "rewind",
+  "start": 35.0,
+  "dur": 1.0,
+  "blur": [
+   [
+    160,
+    1290,
+    760,
+    175
+   ],
+   [
+    400,
+    1490,
+    290,
+    120
+   ]
+  ],
+  "vo": "",
+  "cap": "Rewind",
+  "hl": [
+   0
+  ]
+ },
+ {
+  "id": "s03",
+  "src": "clip",
+  "start": 7.5,
+  "len": 2.2,
+  "blur": [
+   [
+    160,
+    1290,
+    760,
+    175
+   ],
+   [
+    400,
+    1490,
+    290,
+    120
+   ]
+  ],
+  "label": "2 minutes earlier",
+  "vo": "Two minutes earlier, a giant petrel lands next to the emperor chicks.",
+  "cap": "A killer lands",
+  "hl": [
+   1
+  ]
+ },
+ {
+  "id": "s04",
+  "src": "img1",
+  "vo": "Their parents are far away at sea, hunting. The chicks are on their own.",
+  "cap": "Parents are gone",
+  "hl": [
+   2
+  ]
+ },
+ {
+  "id": "s05",
+  "src": "img2",
+  "vo": "The giant petrel's wings span around two metres. Down here, it's the vulture of Antarctica.",
+  "cap": "The Antarctic vulture",
+  "hl": [
+   2
+  ]
+ },
+ {
+  "id": "s06",
+  "src": "clip",
+  "start": 10.5,
+  "len": 3.5,
+  "blur": [
+   [
+    160,
+    1290,
+    760,
+    175
+   ],
+   [
+    400,
+    1490,
+    290,
+    120
+   ]
+  ],
+  "vo": "One chick slips... and it goes for the neck.",
+  "cap": "It goes for the neck",
+  "hl": [
+   3,
+   4
+  ]
+ },
+ {
+  "id": "s07",
+  "src": "clip",
+  "start": 15.0,
+  "len": 3.0,
+  "blur": [
+   [
+    160,
+    1290,
+    760,
+    175
+   ],
+   [
+    400,
+    1490,
+    290,
+    120
+   ]
+  ],
+  "vo": "The huddle panics. No adult is coming.",
+  "cap": "No one is coming",
+  "hl": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "s08",
+  "src": "clip",
+  "start": 25.0,
+  "len": 3.5,
+  "blur": [
+   [
+    160,
+    1290,
+    760,
+    175
+   ],
+   [
+    400,
+    1490,
+    290,
+    120
+   ]
+  ],
+  "label": "Then this happens",
+  "vo": "Then an Ad\u00e9lie penguin walks in. Half their size.",
+  "cap": "Half their size",
+  "hl": [
+   0
+  ]
+ },
+ {
+  "id": "s09",
+  "src": "img3",
+  "vo": "Ad\u00e9lies are famously fearless. Giant petrels hunt their chicks too, so this one doesn't back down.",
+  "cap": "It doesn't back down",
+  "hl": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "s10",
+  "src": "clip",
+  "start": 35.0,
+  "len": 3.0,
+  "blur": [
+   [
+    160,
+    1290,
+    760,
+    175
+   ],
+   [
+    400,
+    1490,
+    290,
+    120
+   ]
+  ],
+  "vo": "It walks right up to the predator, and leads the chicks away.",
+  "cap": "Leading them out",
+  "hl": [
+   0
+  ]
+ },
+ {
+  "id": "s11",
+  "src": "clip",
+  "start": 38.6,
+  "len": 1.3,
+  "vo": "The petrel gives up.",
+  "cap": "The killer gives up",
+  "hl": [
+   2,
+   3
+  ],
+  "blur": [
+   [
+    160,
+    1290,
+    760,
+    175
+   ],
+   [
+    400,
+    1490,
+    290,
+    120
+   ]
+  ]
+ },
+ {
+  "id": "s12",
+  "src": "clip",
+  "start": 40.0,
+  "len": 3.0,
+  "blur": [
+   [
+    160,
+    1290,
+    760,
+    175
+   ],
+   [
+    400,
+    1490,
+    290,
+    120
+   ]
+  ],
+  "vo": "Saved by a stranger... from a different species.",
+  "cap": "Saved by a stranger",
+  "hl": [
+   3
+  ]
+ }
+]

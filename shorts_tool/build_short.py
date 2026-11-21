@@ -57,8 +57,8 @@ for i, s in enumerate(segs):
     inputs, base = [], ""
     blur = ""
     for k, (bx, by, bw, bh) in enumerate(s.get("blur", [])):
-        blur += (f"split[m{k}][x{k}];[x{k}]crop={bw}:{bh}:{bx}:{by},boxblur=22:3[bb{k}];"
-                 f"[m{k}][bb{k}]overlay={bx}:{by},")
+        # delogo interpolates the box from its surroundings (hides burned-in text far better than blur)
+        blur += f"delogo=x={bx}:y={by}:w={bw}:h={bh},"
     if s["src"] == "clip":
         L = s.get("len", 3.0)
         speed = min(d / L, 1.6)
