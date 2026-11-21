@@ -108,6 +108,50 @@ print("total", round(TOTAL, 2))
 
 # ---------- 3. visual pieces: a cut every ~CUT seconds ----------
 GRADE = "eq=contrast=1.08:saturation=1.05,vignette=PI/5"
+USED = {}   # src -> list of (start, end) already shown, so no moment is ever repeated
+
+
+BAD = {}    # src -> list of (start, end) that are black / title cards / near-static frames
+
+
+def bad_spans(src):
+    if src in BAD: return BAD[src]
+    r = subprocess.run(["ffmpeg", "-i", src, "-vf", "fps=2,scale=160:-2,signalstats,metadata=print", "-f", "null", "-"],
+                       capture_output=True, text=True).stderr
+    yavg = [float(x) for x in re.findall(r"lavfi.signalstats.YAVG=([\d.]+)", r)]
+    ydev = [float(x) for x in re.findall(r"lavfi.signalstats.YHIGH=([\d.]+)", r)]
+    ylow = [float(x) for x in re.findall(r"lavfi.signalstats.YLOW=([\d.]+)", r)]
+    spans = []
+    for i, a in enumerate(yavg):
+        flat = i < len(ydev) and i < len(ylow) and (ydev[i] - ylow[i]) < 40
+        if a < 28 or flat:                       # mostly black (title cards, fades) or flat colour
+            spans.append((i / 2 - 0.5, i / 2 + 1.0))
+    BAD[src] = spans
+    return spans
+
+
+def pick_unused(src, want, pd, srcd):
+    """first start >= want (then wrapping to the beginning) whose window doesn't overlap anything already used;
+    if the source is exhausted, the window with the least overlap"""
+    used = USED.setdefault(src, [])
+    last = max(0.0, srcd - pd - 0.05)
+    bad = bad_spans(src)
+    def overlap(s):
+        return sum(max(0.0, min(s + pd, b) - max(s, a)) for a, b in used) + \
+               3 * sum(max(0.0, min(s + pd, b) - max(s, a)) for a, b in bad)
+    cands = [min(want, last)]
+    s = min(want, last)
+    while s < last: s += 0.2; cands.append(min(s, last))
+    s = 0.0
+    while s < want: cands.append(s); s += 0.2
+    best = next((c for c in cands if overlap(c) == 0), None)
+    if best is None:
+        best = min(cands, key=overlap)
+        print(f"  warning: {os.path.basename(src)} exhausted – reusing {overlap(best):.1f}s")
+    used.append((best - 0.3, best + pd + 0.3))   # small margin: near-identical neighbouring frames count as repeats
+    return round(best, 2)
+
+
 pieces, cut_times = [], []
 pi = 0
 for i, ln in enumerate(lines):
@@ -128,13 +172,13 @@ for i, ln in enumerate(lines):
             vf = (f"scale=1620:2880,zoompan=z='{z}':x='{px}':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps={FPS},"
                   f"setsar=1,trim=duration={pd},vignette=PI/5{flash},format=yuv420p")
             sh("ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-t", str(pd + 0.2), "-i", img, "-vf", vf,
-               "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-an", out)
+               "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-an", out)
         else:
             fn = shot["file"] if os.path.splitext(shot["file"])[1] else shot["file"] + ".mp4"
             src = os.path.join(FOOT, fn)
             srcd = dur(src)
-            st = (shot["start"] if "start" in shot else round(srcd * shot["pos"], 2) if "pos" in shot else round(srcd * 0.25, 2)) + rep * pd
-            if st + pd > srcd: st = max(0.0, srcd - pd - 0.05)
+            want = (shot["start"] if "start" in shot else round(srcd * shot["pos"], 2) if "pos" in shot else round(srcd * 0.25, 2)) + rep * pd
+            st = pick_unused(src, want, pd, srcd)
             cx = shot.get("cx", 0.5)
             zf = 1.0 + (0.12 * (0 if zin else 1))
             zoom = f"scale=iw*{zf}:ih*{zf}," if zf != 1.0 else ""
@@ -160,15 +204,39 @@ for i, ln in enumerate(lines):
                       f"trim=duration={pd},setpts=PTS-STARTPTS,format=yuv420p[v]")
             sh("ffmpeg", "-y", "-loglevel", "error", "-ss", str(st), "-t", str(pd + 0.3), "-i", src,
                "-filter_complex", fc, "-map", "[v]", "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast",
-               "-crf", "19", "-an", out)
+               "-crf", "16", "-an", out)
         pieces.append(out)
         cut_times.append(ln["t0"] + k * pd)
         pi += 1
 print("pieces", len(pieces))
+
+
+# ---------- QC: flag pieces that look the same (repeated shots) ----------
+def dhash(path, t):
+    from PIL import Image
+    png = path + ".qc.png"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", str(t), "-i", path, "-frames:v", "1", "-vf", "scale=9:8,format=gray", png], check=True)
+    px = list(Image.open(png).getdata())
+    return [px[r * 9 + c] > px[r * 9 + c + 1] for r in range(8) for c in range(8)]
+
+
+hashes = []
+for p in pieces:
+    d = dur(p)
+    hashes.append((dhash(p, d * 0.3), dhash(p, d * 0.7)))
+dups = []
+for a in range(len(pieces)):
+    for b in range(a + 1, len(pieces)):
+        dist = min(sum(x != y for x, y in zip(ha, hb)) for ha in hashes[a] for hb in hashes[b])
+        if dist <= 5 and b - a > 1:
+            dups.append((a, b, dist))
+with open(f"{PROJ}/QC.txt", "w") as f:
+    f.write(f"pieces: {len(pieces)}\nrepeated-looking pairs (piece numbers): {dups if dups else 'none'}\n")
+print("QC repeats:", dups if dups else "none")
 with open(f"{WORK}/concat.txt", "w") as f:
     for p in pieces: f.write(f"file '{p}'\n")
 sh("ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", f"{WORK}/concat.txt",
-   "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-r", str(FPS), f"{WORK}/base.mp4")
+   "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-r", str(FPS), f"{WORK}/base.mp4")
 
 
 # ---------- 4. ASS captions: 1-3 words, pop-in, red keywords ----------
@@ -270,6 +338,6 @@ sh("ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", fc, "-map", "[
 # ---------- 6. mux ----------
 final = f"{PROJ}/{os.path.basename(os.path.normpath(PROJ))}.mp4"
 sh("ffmpeg", "-y", "-loglevel", "error", "-i", f"{WORK}/base.mp4", "-i", f"{WORK}/audio.wav",
-   "-vf", f"ass={WORK}/caps.ass:fontsdir={FONTDIR}", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium",
-   "-crf", "20", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", final)
+   "-vf", f"ass={WORK}/caps.ass:fontsdir={FONTDIR}", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "slow",
+   "-crf", "17", "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart", final)
 print("done", final, round(dur(final), 2))

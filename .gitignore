@@ -3,3 +3,6 @@ footage/coverr_*/*.mp4
 footage/coverr_*/.*
 footage/dvids/*.mp4
 shorts/*/*.mp4
+footage/hd/*.mp4
+footage/lowres/*.mp4
+footage/**/*.part.mp4

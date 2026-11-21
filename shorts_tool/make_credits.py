@@ -4,7 +4,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MUSIC = {"Heartwarming": "Heartwarming", "Hitman": "Hitman", "Rising_Tide": "Rising Tide", "Sovereign": "Sovereign", "Dreamer": "Dreamer"}
 for name in sys.argv[1:]:
     spec = json.load(open(f"{REPO}/shorts/specs/{name}.json"))
-    meta = json.load(open(f"{REPO}/footage/dvids/{spec['file']}.json"))
+    meta = json.load(open(next(p for p in (f"{REPO}/footage/hd/{spec['file']}.json", f"{REPO}/footage/dvids/{spec['file']}.json") if os.path.exists(p))))
     track = next((v for k, v in MUSIC.items() if k in spec["music"]), "Heartwarming")
     hook = spec["hook"][0]
     txt = f"""# {name}

@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Their first real rescue",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "October 2024. Hurricane Helene floods Virginia.",
+   "hl": [
+    "virginia"
+   ],
+   "shots": [
+    {
+     "file": "virginia_helene",
+     "pos": 0.709
+    },
+    {
+     "file": "virginia_helene",
+     "pos": 0.749
+    }
+   ]
+  },
+  {
+   "vo": "People are trapped in the water.",
+   "hl": [
+    "trapped"
+   ],
+   "shots": [
+    {
+     "file": "virginia_helene",
+     "pos": 0.19
+    },
+    {
+     "file": "virginia_helene",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "The Virginia Helicopter Aquatic Rescue Team takes off.",
+   "hl": [
+    "rescue"
+   ],
+   "shots": [
+    {
+     "file": "virginia_helene",
+     "pos": 0.32
+    },
+    {
+     "file": "virginia_helene",
+     "pos": 0.385
+    }
+   ]
+  },
+  {
+   "vo": "They've trained every quarter since 2011.",
+   "hl": [
+    "2011"
+   ],
+   "shots": [
+    {
+     "file": "virginia_helene",
+     "pos": 0.45
+    },
+    {
+     "file": "virginia_helene",
+     "pos": 0.515
+    }
+   ],
+   "label": "Fact"
+  },
+  {
+   "vo": "This was their first major real-world rescue.",
+   "hl": [
+    "first"
+   ],
+   "shots": [
+    {
+     "file": "virginia_helene",
+     "pos": 0.58
+    },
+    {
+     "file": "virginia_helene",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "They pulled multiple people out of the floodwater.",
+   "hl": [
+    "multiple"
+   ],
+   "shots": [
+    {
+     "file": "virginia_helene",
+     "pos": 0.71
+    },
+    {
+     "file": "virginia_helene",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Thirteen years of training. For this day.",
+   "hl": [
+    "day"
+   ],
+   "shots": [
+    {
+     "file": "virginia_helene",
+     "pos": 0.84
+    },
+    {
+     "file": "virginia_helene",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+pieces: 11
+repeated-looking pairs (piece numbers): none

@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Stuck below a cliff",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "March 2026. Fajardo, Puerto Rico.",
+   "hl": [
+    "puerto"
+   ],
+   "shots": [
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.758
+    },
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.798
+    }
+   ]
+  },
+  {
+   "vo": "Two teenagers are stranded at the bottom of a sea cliff.",
+   "hl": [
+    "cliff"
+   ],
+   "shots": [
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.212
+    },
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "She's 18 and has a head injury. He's 19.",
+   "hl": [
+    "injury"
+   ],
+   "shots": [
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.363
+    },
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk crew comes in.",
+   "hl": [
+    "jayhawk"
+   ],
+   "shots": [
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.515
+    },
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "Watch it through the helicopter's thermal camera.",
+   "hl": [
+    "thermal"
+   ],
+   "shots": [
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.667
+    },
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Both are hoisted up and flown to a hospital in San Juan.",
+   "hl": [
+    "hospital"
+   ],
+   "shots": [
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.818
+    },
+    {
+     "file": "pr_cliff_two",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

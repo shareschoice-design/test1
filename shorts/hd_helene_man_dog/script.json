@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Him and his dog",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "September 2024. Hurricane Helene hits Florida.",
+   "hl": [
+    "helene"
+   ],
+   "shots": [
+    {
+     "file": "helene_man_dog",
+     "pos": 0.807
+    },
+    {
+     "file": "helene_man_dog",
+     "pos": 0.847
+    }
+   ]
+  },
+  {
+   "vo": "25 miles off Sanibel Island, a sailboat is taking on water.",
+   "hl": [
+    "water"
+   ],
+   "shots": [
+    {
+     "file": "helene_man_dog",
+     "pos": 0.19
+    },
+    {
+     "file": "helene_man_dog",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "On board: one man. And his dog.",
+   "hl": [
+    "dog"
+   ],
+   "shots": [
+    {
+     "file": "helene_man_dog",
+     "pos": 0.32
+    },
+    {
+     "file": "helene_man_dog",
+     "pos": 0.385
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Clearwater finds them.",
+   "hl": [
+    "clearwater"
+   ],
+   "shots": [
+    {
+     "file": "helene_man_dog",
+     "pos": 0.45
+    },
+    {
+     "file": "helene_man_dog",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "Petty Officer Hudson is lowered to the boat.",
+   "hl": [
+    "hudson"
+   ],
+   "shots": [
+    {
+     "file": "helene_man_dog",
+     "pos": 0.58
+    },
+    {
+     "file": "helene_man_dog",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "He hoists the man and his dog.",
+   "hl": [
+    "dog"
+   ],
+   "shots": [
+    {
+     "file": "helene_man_dog",
+     "pos": 0.71
+    },
+    {
+     "file": "helene_man_dog",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Both in good health. Nobody left behind.",
+   "hl": [
+    "nobody"
+   ],
+   "shots": [
+    {
+     "file": "helene_man_dog",
+     "pos": 0.84
+    },
+    {
+     "file": "helene_man_dog",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

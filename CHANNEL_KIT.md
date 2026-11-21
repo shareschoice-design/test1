@@ -5,27 +5,29 @@
 Handle: `@BackstoryShorts` → fallbacks if taken: `@TheBackstory`, `@BackstoryExplained`, `@BackstoryHQ`
 (Check availability in YouTube Studio → Customization → Basic info.)
 
-Tagline: **Every moment has a backstory.**
+Tagline: **True stories. Real footage.**
 
-Topics: anything with a surprising "why" or "how" – animals, nature, history, science, technology, disasters, everyday things.
-Formats (rotate them): **Rewind** (outcome → cause), **Mystery** (question → theories → answer), **Myth vs Fact**.
+Main content: real rescues, surprise homecomings, reunions and everyday heroes – told in 20–40 s with the real footage (public-domain U.S. government video, credited in every description).
+Formats: **Rescue** (danger → hero → saved), **Homecoming** (waiting → surprise → hug), **Backstory** (the moment, then how it happened).
 
 ## Channel description (paste into YouTube → Customization → Basic info)
 
 ```
-Every moment has a backstory.
+True stories. Real footage. 🎥
 
-Backstory shows you the surprising "why" behind things you thought you knew – from wild animals to history, science and everyday life. We start with the moment, then rewind to reveal how it really happened, broken down with sharp visual explainers.
+Rescues from storms, cliffs and open ocean. Soldiers surprising their families after months away. Strangers who saved a life on their way home.
 
-New backstory every day.
+Every Backstory short is a real moment, filmed by the people who were there – and the story of how it happened.
 
-🎥 Footage is credited in every video description.
-📩 Contact / footage owners: <your business email>
+New true story every day. Subscribe so you don't miss the next one.
+
+Footage: public-domain video from U.S. government sources (DVIDS, U.S. Coast Guard, NASA), credited in each video. Appearance of DoD visual information does not imply or constitute DoD endorsement.
+📩 Contact: <your business email>
 ```
 
 ## Channel keywords (Settings → Channel → Basic info → Keywords)
 ```
-explained, backstory, how it happened, why, facts, science, history, animals, nature, myth vs fact, mystery, rewind, shorts, did you know, education
+true story, real footage, rescue, coast guard rescue, helicopter rescue, military homecoming, soldier surprise, reunion, heroes, emotional, wholesome, backstory, shorts
 ```
 
 ## Branding

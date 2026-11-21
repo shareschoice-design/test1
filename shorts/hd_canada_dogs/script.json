@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "They found the other dog",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "December 2022. Off Vancouver Island, Canada.",
+   "hl": [
+    "canada"
+   ],
+   "shots": [
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.786
+    },
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.826
+    }
+   ]
+  },
+  {
+   "vo": "A sailboat runs aground.",
+   "hl": [
+    "aground"
+   ],
+   "shots": [
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.19
+    },
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "A U.S. Coast Guard helicopter rescues a man. And his dog.",
+   "hl": [
+    "dog"
+   ],
+   "shots": [
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.32
+    },
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.385
+    }
+   ]
+  },
+  {
+   "vo": "But there was another dog.",
+   "hl": [
+    "another"
+   ],
+   "shots": [
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.45
+    },
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.515
+    }
+   ],
+   "label": "Wait..."
+  },
+  {
+   "vo": "Later that morning, the crew went back and found it near the boat.",
+   "hl": [
+    "found"
+   ],
+   "shots": [
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.58
+    },
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "And brought it safely to the Canadian Coast Guard.",
+   "hl": [
+    "safely"
+   ],
+   "shots": [
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.71
+    },
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Every life counts. Even four-legged ones.",
+   "hl": [
+    "every"
+   ],
+   "shots": [
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.84
+    },
+    {
+     "file": "canada_man_two_dogs",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

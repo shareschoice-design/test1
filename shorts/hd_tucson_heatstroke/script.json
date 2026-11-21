@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Heatstroke in the canyon",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 2022. Sabino Canyon, near Tucson, Arizona.",
+   "hl": [
+    "canyon"
+   ],
+   "shots": [
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.764
+    },
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.804
+    }
+   ]
+  },
+  {
+   "vo": "A 25-year-old man collapses from heatstroke.",
+   "hl": [
+    "heatstroke"
+   ],
+   "shots": [
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.19
+    },
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "The canyon is too steep to land a helicopter.",
+   "hl": [
+    "steep"
+   ],
+   "shots": [
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.32
+    },
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.385
+    }
+   ],
+   "label": "Problem"
+  },
+  {
+   "vo": "A Black Hawk crew is overhead within 7 minutes.",
+   "hl": [
+    "7"
+   ],
+   "shots": [
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.45
+    },
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "They lower a rescue specialist on the hoist.",
+   "hl": [
+    "hoist"
+   ],
+   "shots": [
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.58
+    },
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "And bring the hiker up and out.",
+   "hl": [
+    "out"
+   ],
+   "shots": [
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.71
+    },
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Seven minutes. That's how fast they got there.",
+   "hl": [
+    "seven"
+   ],
+   "shots": [
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.84
+    },
+    {
+     "file": "tucson_hoist_2022",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

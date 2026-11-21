@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Trapped on a mountain",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "June 2023. The Baboquivari Mountains, Arizona.",
+   "hl": [
+    "arizona"
+   ],
+   "shots": [
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.737
+    },
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.777
+    }
+   ]
+  },
+  {
+   "vo": "An injured woman is trapped near the summit.",
+   "hl": [
+    "trapped"
+   ],
+   "shots": [
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.19
+    },
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "She calls 911. And she starts a fire so she can be found.",
+   "hl": [
+    "fire"
+   ],
+   "shots": [
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.32
+    },
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.385
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "The terrain is too rough for anyone to reach her on foot.",
+   "hl": [
+    "rough"
+   ],
+   "shots": [
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.45
+    },
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "A Black Hawk crew sends down a rescue specialist.",
+   "hl": [
+    "black"
+   ],
+   "shots": [
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.58
+    },
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "He moves her somewhere safer for the hoist.",
+   "hl": [
+    "hoist"
+   ],
+   "shots": [
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.71
+    },
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Then she's lifted off the mountain to a hospital.",
+   "hl": [
+    "lifted"
+   ],
+   "shots": [
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.84
+    },
+    {
+     "file": "baboquivari_woman",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

@@ -3,7 +3,7 @@ spec: {"file": "...", "voice": "...", "music": "...", "dark": bool, "hook": [tex
        "lines": [[vo, [hl...], label_or_null], ...]}
 Each line gets 2 shots taken from consecutive parts of the source (pos 0..1), so the footage follows the story."""
 import json, os, re, subprocess, sys
-FOOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "footage", "dvids")
+FOOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "footage", os.environ.get("FOOTDIR", "hd"))
 
 def peak_pos(name):
     """position (0..1) of the most intense moment (max frame-difference) – used for the hook shot"""

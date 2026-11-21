@@ -16,6 +16,9 @@ def res(u):
 if not mp4s:
     sys.exit("no mp4 found")
 best = max(mp4s, key=res)
+orig = [u for u in mp4s if not re.search(r"-\d+x\d+-", u)]
+if orig:
+    best = orig[0]   # newer pages: original upload (usually 1080p/4K)
 subprocess.run(["curl", "-sSL", "-m", "600", "-A", UA, "-o", out + ".mp4", best], check=True)
 title = html.unescape((re.search(r"<title>([^<]+)</title>", page) or [None, ""])[1]).replace("DVIDS - Video - ", "").strip()
 credit = re.search(r"(Video by [^<]{3,120})", page)

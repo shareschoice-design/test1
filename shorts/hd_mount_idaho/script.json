@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "The highest rescue ever",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "Mount Idaho. One of the state's highest peaks.",
+   "hl": [
+    "highest"
+   ],
+   "shots": [
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.285
+    },
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.325
+    }
+   ]
+  },
+  {
+   "vo": "A hiker is injured on a remote stretch of the mountain.",
+   "hl": [
+    "injured"
+   ],
+   "shots": [
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.212
+    },
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "The Idaho Army National Guard sends a Black Hawk.",
+   "hl": [
+    "black"
+   ],
+   "shots": [
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.363
+    },
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.439
+    }
+   ]
+  },
+  {
+   "vo": "It became Idaho's highest hoist rescue ever.",
+   "hl": [
+    "highest"
+   ],
+   "shots": [
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.515
+    },
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.591
+    }
+   ],
+   "label": "Record"
+  },
+  {
+   "vo": "The hiker is lifted off the mountain.",
+   "hl": [
+    "lifted"
+   ],
+   "shots": [
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.667
+    },
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Their sixth rescue that year.",
+   "hl": [
+    "sixth"
+   ],
+   "shots": [
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.818
+    },
+    {
+     "file": "mount_idaho_hiker",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

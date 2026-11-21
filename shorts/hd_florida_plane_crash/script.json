@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Their plane went down",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "May 2026. Off the coast of Melbourne, Florida.",
+   "hl": [
+    "florida"
+   ],
+   "shots": [
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.256
+    },
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.296
+    }
+   ]
+  },
+  {
+   "vo": "A civilian plane goes down in the ocean.",
+   "hl": [
+    "ocean"
+   ],
+   "shots": [
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.19
+    },
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "Survivors are in the water.",
+   "hl": [
+    "survivors"
+   ],
+   "shots": [
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.32
+    },
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.385
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "An Air Force HC-130J circles overhead and drops a rescue kit.",
+   "hl": [
+    "kit"
+   ],
+   "shots": [
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.45
+    },
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "A Jolly Green helicopter arrives with pararescuemen.",
+   "hl": [
+    "pararescuemen"
+   ],
+   "shots": [
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.58
+    },
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "They pull survivors out of the sea.",
+   "hl": [
+    "survivors"
+   ],
+   "shots": [
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.71
+    },
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "And fly them to waiting medics.",
+   "hl": [
+    "medics"
+   ],
+   "shots": [
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.84
+    },
+    {
+     "file": "florida_11_survivors",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}
