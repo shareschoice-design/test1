@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Připojení kanálů</title>
+<style>
+:root{--bg:#f5f5f3;--panel:#fff;--line:#e3e3df;--text:#1b1d1c;--muted:#6a6f6c;--brand:#c4302b;--good:#1f7a4d;--bad:#b23b36;--chip:#f0f0ed;--warnbg:#fff7e6;--warn:#8a6116}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121413;--panel:#1b1e1d;--line:#2d3230;--text:#ecefed;--muted:#9aa29e;--brand:#ff5a52;--good:#4fc58a;--bad:#ff7b74;--chip:#262a28;--warnbg:#2b2416;--warn:#e9b65a}}
+:root[data-theme="dark"]{--bg:#121413;--panel:#1b1e1d;--line:#2d3230;--text:#ecefed;--muted:#9aa29e;--brand:#ff5a52;--good:#4fc58a;--bad:#ff7b74;--chip:#262a28;--warnbg:#2b2416;--warn:#e9b65a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:820px;margin:auto;padding:24px 16px 60px}
+h1{font-size:1.5rem;margin:0 0 4px}h2{font-size:1.1rem;margin:0 0 8px;display:flex;gap:10px;align-items:center}
+.n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:.85rem;flex:0 0 auto}
+.done .n{background:var(--good)}
+.muted{color:var(--muted)}.small{font-size:.85rem}
+section{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:18px;margin:14px 0}
+ol{padding-left:22px}li{margin:5px 0}
+code,.copy{background:var(--chip);padding:2px 6px;border-radius:5px;font-size:.85em;word-break:break-all}
+.copy{cursor:pointer;border:1px dashed var(--line)}.copy:hover{border-color:var(--muted)}
+input,textarea{font:inherit;color:inherit;width:100%;border:1px solid var(--line);border-radius:9px;padding:9px 11px;background:var(--bg);margin:4px 0 10px}
+textarea{font-family:ui-monospace,monospace;font-size:.78rem;height:120px}
+label{font-weight:600;font-size:.88rem}
+.btn{font:inherit;border:1px solid var(--line);background:var(--panel);color:inherit;border-radius:9px;padding:9px 14px;cursor:pointer;font-weight:600;text-decoration:none;display:inline-block}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}.btn.sm{padding:3px 9px;font-size:.8rem}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ch{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.ch img{width:32px;height:32px;border-radius:50%;background:var(--chip)}.ch .t{flex:1;font-weight:600}
+.msg{padding:10px 12px;border-radius:9px;margin:10px 0;font-size:.88rem}
+.msg.err{background:var(--warnbg);color:var(--bad)}.msg.ok{background:var(--chip);color:var(--good)}
+a:not(.btn){color:var(--brand)}
+.tip{background:var(--warnbg);color:var(--warn);border-radius:9px;padding:9px 12px;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Připojení YouTube kanálů</h1>
+  <p class="muted">Jednorázové nastavení. Pak se data stahují sama každou hodinu a <a href="./">dashboard</a> je jen otevřeš.</p>
+  <div id="msg"></div>
+
+  <section id="s1">
+    <h2><span class="n">1</span> Google klíč (jednou, cca 5 minut)</h2>
+    <ol class="small">
+      <li>Otevři <a href="https://console.cloud.google.com/projectcreate" target="_blank" rel="noopener">Google Cloud → nový projekt</a>, pojmenuj ho např. <b>YT dashboard</b> → Create.</li>
+      <li>Zapni obě API (tlačítko <b>Enable</b>): <a href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener">YouTube Data API v3</a> a <a href="https://console.cloud.google.com/apis/library/youtubeanalytics.googleapis.com" target="_blank" rel="noopener">YouTube Analytics API</a>.</li>
+      <li><a href="https://console.cloud.google.com/auth/branding" target="_blank" rel="noopener">OAuth consent screen</a> → Get started → název aplikace libovolný, svůj e-mail, typ <b>External</b> → Create.</li>
+      <li>V části <a href="https://console.cloud.google.com/auth/audience" target="_blank" rel="noopener">Audience</a> klikni na <b>Publish app</b> (stav „In production“). <span class="muted">Jinak Google přístup po 7 dnech zruší a automatika by přestala fungovat.</span></li>
+      <li><a href="https://console.cloud.google.com/auth/clients/create" target="_blank" rel="noopener">Create OAuth client</a> → typ <b>Web application</b>:
+        <br>Authorized JavaScript origins: <span class="copy" data-copy id="origin"></span>
+        <br>Authorized redirect URIs: <span class="copy" data-copy id="redirect"></span>
+        <br><span class="muted">(kliknutím zkopíruješ)</span> → Create.</li>
+      <li>Zkopíruj sem Client ID a Client secret:</li>
+    </ol>
+    <label for="cid">Client ID</label><input id="cid" placeholder="…apps.googleusercontent.com" autocomplete="off">
+    <label for="csec">Client secret</label><input id="csec" placeholder="GOCSPX-…" autocomplete="off">
+    <label for="pw">Heslo k dashboardu <span class="muted">(vymysli si; data budou zašifrovaná, bez hesla je nikdo neuvidí)</span></label>
+    <input id="pw" autocomplete="new-password">
+    <button class="btn primary" id="save1">Uložit a pokračovat</button>
+  </section>
+
+  <section id="s2">
+    <h2><span class="n">2</span> Připojit kanály</h2>
+    <p class="small">Klikni na tlačítko, vyber účet a <b>konkrétní kanál</b>, potvrď přístup (zaškrtni obě oprávnění). Opakuj pro každý kanál.</p>
+    <p class="tip">Google ukáže „Google hasn't verified this app“ – je to tvoje vlastní aplikace, klikni na <b>Advanced → Go to … (unsafe)</b>.</p>
+    <div id="list"></div>
+    <div class="row" style="margin-top:10px"><button class="btn primary" id="connect">+ Připojit kanál</button></div>
+  </section>
+
+  <section id="s3">
+    <h2><span class="n">3</span> Uložit do GitHubu (jedno vložení)</h2>
+    <ol class="small">
+      <li><button class="btn sm" id="copyCfg">Zkopírovat nastavení</button> <span class="muted" id="copied"></span></li>
+      <li>Otevři <a id="secretLink" target="_blank" rel="noopener">GitHub → Settings → Secrets → New repository secret</a>.</li>
+      <li>Name: <span class="copy" data-copy>YT_DASHBOARD</span>, Secret: vlož (Ctrl+V) → <b>Add secret</b>. <span class="muted">Pokud už existuje, otevři ho a klikni Update.</span></li>
+      <li>Spusť první stažení: <a id="actionsLink" target="_blank" rel="noopener">Actions → YouTube dashboard → Run workflow</a>. Dál už to běží samo každou hodinu.</li>
+      <li>Otevři <a href="./">dashboard</a> a zadej heslo.</li>
+    </ol>
+    <details class="small"><summary>Zobrazit / ručně upravit nastavení</summary>
+      <p class="muted">Obsahuje přístupové klíče – nikam jinam než do GitHub Secrets ho nevkládej. Sem můžeš vložit dřív uložené nastavení a přidat k němu další kanál.</p>
+      <textarea id="cfg" spellcheck="false"></textarea>
+      <button class="btn sm" id="loadCfg">Načíst z textu</button>
+    </details>
+    <p class="small muted">Nastavení se drží jen v tomto prohlížeči. Až bude v GitHubu, můžeš ho tu smazat: <button class="btn sm" id="wipe">Smazat z prohlížeče</button></p>
+  </section>
+</div>
+<script>
+(() => {
+'use strict';
+const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/yt-analytics.readonly';
+const KEY = 'ytd.connect';
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } };
+const save = c => { try { localStorage.setItem(KEY, JSON.stringify(c)); } catch {} };
+let cfg = Object.assign({ client_id: '', client_secret: '', password: '', channels: [] }, load());
+const redirectUri = location.origin + location.pathname;
+const msg = (t, ok) => { $('#msg').innerHTML = t ? `<div class="msg ${ok ? 'ok' : 'err'}">${esc(t)}</div>` : ''; };
+
+// odkazy na GitHub odvozené z adresy GitHub Pages (uzivatel.github.io/repo/…)
+let gh = null;
+if (location.hostname.endsWith('.github.io')) gh = { owner: location.hostname.split('.')[0], repo: location.pathname.split('/')[1] };
+const ghBase = gh ? `https://github.com/${gh.owner}/${gh.repo}` : 'https://github.com';
+$('#secretLink').href = gh ? ghBase + '/settings/secrets/actions/new' : ghBase;
+$('#actionsLink').href = gh ? ghBase + '/actions/workflows/youtube-dashboard.yml' : ghBase;
+
+$('#origin').textContent = location.origin;
+$('#redirect').textContent = redirectUri;
+$('#cid').value = cfg.client_id; $('#csec').value = cfg.client_secret; $('#pw').value = cfg.password;
+
+function render() {
+  $('#s1').classList.toggle('done', !!(cfg.client_id && cfg.client_secret && cfg.password));
+  $('#s2').classList.toggle('done', cfg.channels.length > 0);
+  $('#list').innerHTML = cfg.channels.length ? cfg.channels.map((c, i) => `<div class="ch"><img src="${esc(c.thumb)}" alt=""><span class="t">${esc(c.title)}</span><button class="btn sm" data-rm="${i}">Odebrat</button></div>`).join('')
+    + `<div class="small muted" style="padding-top:6px">Připojeno: ${cfg.channels.length}</div>` : '<p class="small muted">Zatím žádný kanál.</p>';
+  $('#cfg').value = JSON.stringify(exportCfg(), null, 1);
+}
+const exportCfg = () => ({ client_id: cfg.client_id, client_secret: cfg.client_secret, password: cfg.password, channels: cfg.channels.map(({ id, title, refresh_token }) => ({ id, title, refresh_token })) });
+
+$('#save1').onclick = () => {
+  cfg.client_id = $('#cid').value.trim(); cfg.client_secret = $('#csec').value.trim(); cfg.password = $('#pw').value;
+  if (!cfg.client_id.endsWith('.apps.googleusercontent.com')) return msg('Client ID má končit na .apps.googleusercontent.com');
+  if (!cfg.client_secret) return msg('Doplň Client secret.');
+  if (cfg.password.length < 8) return msg('Heslo by mělo mít aspoň 8 znaků.');
+  save(cfg); msg('Uloženo. Teď připoj kanály.', true); render();
+  $('#s2').scrollIntoView({ behavior: 'smooth' });
+};
+
+$('#connect').onclick = () => {
+  if (!cfg.client_id || !cfg.client_secret || !cfg.password) return msg('Nejdřív vyplň a ulož krok 1.');
+  const state = crypto.getRandomValues(new Uint32Array(2)).join('-');
+  sessionStorage.setItem('ytd.state', state);
+  const u = new URL('https://accounts.google.com/o/oauth2/v2/auth');
+  Object.entries({ client_id: cfg.client_id, redirect_uri: redirectUri, response_type: 'code', scope: SCOPES, access_type: 'offline', prompt: 'consent select_account', include_granted_scopes: 'false', state })
+    .forEach(([k, v]) => u.searchParams.set(k, v));
+  location.href = u;
+};
+
+async function handleReturn() {
+  const p = new URLSearchParams(location.search);
+  if (!p.has('code') && !p.has('error')) return;
+  history.replaceState(null, '', location.pathname);
+  if (p.get('error')) return msg('Připojení zrušeno: ' + p.get('error'));
+  if (p.get('state') !== sessionStorage.getItem('ytd.state')) return msg('Neplatná odpověď od Googlu, zkus to znovu.');
+  msg('Připojuji kanál…', true);
+  try {
+    const r = await fetch('https://oauth2.googleapis.com/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ code: p.get('code'), client_id: cfg.client_id, client_secret: cfg.client_secret, redirect_uri: redirectUri, grant_type: 'authorization_code' }) });
+    const t = await r.json();
+    if (!r.ok) throw new Error(t.error_description || t.error);
+    if (!t.refresh_token) throw new Error('Google nevrátil trvalý přístup. Zkus to znovu.');
+    if (!String(t.scope).includes('youtube.readonly')) throw new Error('Při souhlasu je potřeba zaškrtnout přístup k YouTube účtu.');
+    const cr = await fetch('https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true', { headers: { Authorization: 'Bearer ' + t.access_token } });
+    const cj = await cr.json();
+    const c = cj.items?.[0];
+    if (!c) throw new Error(cj.error?.message || 'Tento účet nemá YouTube kanál – při přihlášení vyber konkrétní kanál.');
+    const entry = { id: c.id, title: c.snippet.title, thumb: c.snippet.thumbnails?.default?.url, refresh_token: t.refresh_token };
+    const i = cfg.channels.findIndex(x => x.id === c.id);
+    if (i >= 0) cfg.channels[i] = entry; else cfg.channels.push(entry);
+    save(cfg); render();
+    const noAnalytics = !String(t.scope).includes('yt-analytics');
+    msg(`Připojeno: ${c.snippet.title}${noAnalytics ? ' (bez Analytics – graf zhlédnutí nebude k dispozici)' : ''}. Pokračuj dalším kanálem, nebo krokem 3.`, true);
+  } catch (e) { msg('Chyba: ' + e.message); }
+}
+
+document.addEventListener('click', e => {
+  const c = e.target.closest('[data-copy]');
+  if (c) { navigator.clipboard?.writeText(c.textContent.trim()); const o = c.textContent; c.textContent = '✓ zkopírováno'; setTimeout(() => c.textContent = o, 1000); }
+  const rm = e.target.closest('[data-rm]');
+  if (rm && confirm('Odebrat kanál z nastavení?')) { cfg.channels.splice(+rm.dataset.rm, 1); save(cfg); render(); }
+});
+$('#copyCfg').onclick = async () => {
+  if (!cfg.channels.length) return msg('Nejdřív připoj aspoň jeden kanál.');
+  try { await navigator.clipboard.writeText(JSON.stringify(exportCfg())); $('#copied').textContent = '✓ zkopírováno – teď vlož do GitHubu'; }
+  catch { $('#cfg').closest('details').open = true; $('#cfg').select(); $('#copied').textContent = 'Zkopíruj text níže ručně (Ctrl+C).'; }
+};
+$('#loadCfg').onclick = () => { try { const j = JSON.parse($('#cfg').value); cfg = Object.assign(cfg, j); save(cfg); $('#cid').value = cfg.client_id; $('#csec').value = cfg.client_secret; $('#pw').value = cfg.password; render(); msg('Načteno.', true); } catch { msg('Text není platné nastavení.'); } };
+$('#wipe').onclick = () => { if (confirm('Smazat nastavení z tohoto prohlížeče? (GitHub secret zůstane.)')) { localStorage.removeItem(KEY); location.reload(); } };
+
+render();
+handleReturn();
+})();
+</script>
+</body>
+</html>

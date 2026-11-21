@@ -17,3 +17,13 @@ After reviewing the scorecard, append a new dated entry to `scorecard_history.js
 ## Caution
 
 The scorecard contains preliminary directional ratings, not a verified ranking. Check the `methodology` and `limitations` in `competitor_scorecard.json` before relying on scores.
+
+## YouTube dashboard (`yt-dashboard/`)
+
+Automatic overview of all your YouTube channels: subscribers, views, public and non-public (private, unlisted, scheduled) videos, uploads and comments in the last 48 hours, 30-day YouTube Analytics and subscriber history.
+
+- `yt-dashboard/connect.html` – one-time setup wizard (Google OAuth client, connect each channel, copy one secret to GitHub).
+- `.github/workflows/youtube-dashboard.yml` – runs every hour, executes `yt-dashboard/fetch.py` (Python stdlib only) with the `YT_DASHBOARD` secret and force-pushes the encrypted result to the `yt-data` branch (always a single commit).
+- `yt-dashboard/index.html` – the dashboard; loads `data.enc` from the `yt-data` branch and decrypts it in the browser with your password (AES-256-CBC, PBKDF2-SHA256, 100 000 iterations). The repository is public, so the data is only ever stored encrypted.
+
+The OAuth app must be set to "In production" in Google Cloud, otherwise Google revokes access after 7 days. If a channel shows "připojit znovu", reconnect it in `connect.html` and update the secret.
