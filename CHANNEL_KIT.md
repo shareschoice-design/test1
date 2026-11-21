@@ -1,9 +1,9 @@
 # Unbroken – channel kit
 
 ## Name
-**Unbroken**
-Handle: `@UnbrokenStories` → fallbacks: `@UnbrokenShorts`, `@TheUnbroken`, `@UnbrokenTrue`
-(Check availability in YouTube Studio → Customization → Basic info.)
+**UnbrokenStoriesLive** (channel display name – final, set by the owner; don't change)
+Handle: `@UnbrokenStoriesLive` – https://www.youtube.com/@UnbrokenStoriesLive
+Brand on graphics/banner: UNBROKEN
 
 Tagline: **Real people. Unbreakable will.**
 
