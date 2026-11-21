@@ -1,8 +1,1 @@
-{"file":"man_two_dogs","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["His sailboat was dead",3],"lines":[
-["October 2019. Two miles south of Smith Island, Maryland.",["maryland"],null],
-["A sailboat is disabled by bad weather.",["disabled"],null],
-["On board: one man. And his two dogs.",["dogs"],"Then..."],
-["He calls the Coast Guard.",["coast"],null],
-["A helicopter crew hoists him up.",["hoists"],null],
-["Then dog number one. Then dog number two.",["two"],null],
-["Nobody stays behind.",["nobody"],null]]}
+{"file": "man_two_dogs", "voice": "en_US-ryan-high", "dark": true, "music": "music/incompetech_Hitman.mp3", "hook": ["His sailboat was dead", 3], "lines": [["October 2019. Two miles south of Smith Island, Maryland.", ["maryland"], null], ["A sailboat is disabled by bad weather.", ["disabled"], null], ["On board: one man. And his two dogs.", ["dogs"], "Then..."], ["He calls the Coast Guard.", ["coast"], null], ["A helicopter crew hoists him up.", ["hoists"], null], ["Then both of his dogs.", ["dogs"], null], ["Nobody stays behind.", ["nobody"], null]]}
