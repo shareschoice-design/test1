@@ -4,5 +4,5 @@ Footage: Pexels (free licence, commercial use allowed). Pexels video IDs: 166038
 
 Description line:
 ```
-Footage: Pexels. Explainer visuals, narration & edit: <channel name>
+Footage: Pexels. Explainer visuals, narration & edit: Backstory
 ```

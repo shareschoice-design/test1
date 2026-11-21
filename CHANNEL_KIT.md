@@ -1,37 +1,38 @@
-# Wild Rewind – channel kit
+# Backstory – channel kit
 
 ## Name
-**Wild Rewind** (primary)
-Handle: `@WildRewind` → fallbacks if taken: `@WildRewindShorts`, `@TheWildRewind`, `@WildRewindHQ`
+**Backstory**
+Handle: `@BackstoryShorts` → fallbacks if taken: `@TheBackstory`, `@BackstoryExplained`, `@BackstoryHQ`
+(Check availability in YouTube Studio → Customization → Basic info.)
 
-Backup names: *Rewind The Wild*, *Nature Rewind*, *Backtrack Wild*, *Before It Happened*
+Tagline: **Every moment has a backstory.**
 
-Tagline: **Every wild moment has a backstory.**
+Topics: anything with a surprising "why" or "how" – animals, nature, history, science, technology, disasters, everyday things.
+Formats (rotate them): **Rewind** (outcome → cause), **Mystery** (question → theories → answer), **Myth vs Fact**.
 
 ## Channel description (paste into YouTube → Customization → Basic info)
 
 ```
-Every wild moment has a backstory.
+Every moment has a backstory.
 
-Wild Rewind shows you the ending first – the strike, the catch, the escape – then rewinds to reveal exactly how it happened. Real wildlife footage, broken down with sharp visual explainers so you see what the animals see, hear and feel.
+Backstory shows you the surprising "why" behind things you thought you knew – from wild animals to history, science and everyday life. We start with the moment, then rewind to reveal how it really happened, broken down with sharp visual explainers.
 
-New rewind every day.
+New backstory every day.
 
-🎥 Footage belongs to its original creators – credited in every video description.
-📩 Creators: want your clip featured (or removed)? Email: <your business email>
+🎥 Footage is credited in every video description.
+📩 Contact / footage owners: <your business email>
 ```
 
 ## Channel keywords (Settings → Channel → Basic info → Keywords)
 ```
-wildlife, animals, nature, wildlife explained, animal facts, predator, hunting, rewind, how it happened, nature documentary, animal behavior, shorts, wild animals, science
+explained, backstory, how it happened, why, facts, science, history, animals, nature, myth vs fact, mystery, rewind, shorts, did you know, education
 ```
 
 ## Branding
 - **Colours:** near-black `#0A0D12`, signal red `#FF3B3B`, cyan `#3FD8FF`, white
 - **Font:** Montserrat ExtraBold (same as the video captions)
-- **Avatar idea:** a red rewind symbol ◀◀ formed by two claw marks, on near-black, thin cyan ring
-- **Banner idea (2560×1440, safe area 1546×423 in the centre):** dark wildlife collage in the same red/cyan infographic style, centred text: `WILD REWIND` + `Every wild moment has a backstory.`
-- **Ready files:** `branding/logo_eye_800.png` (recommended avatar), `branding/logo_claw_800.png` (alternative), `branding/banner_2560x1440.png`
+- **Ready files:** `branding/backstory_logo_800.png` (avatar), `branding/backstory_logo_alt_800.png` (alternative), `branding/backstory_banner_2560x1440.png`
+- Old Wild Rewind files (`logo_eye`, `logo_claw`, `banner_2560x1440.png`) are kept only for reference.
 - Monetisation strategy: see `MONETIZATION.md`
 
 ## Upload template
@@ -46,12 +47,12 @@ wildlife, animals, nature, wildlife explained, animal facts, predator, hunting, 
 ```
 <one-line hook repeated from the video>
 
-Rewind to see how it really happened. 🔁
+Here's the backstory. 🔁
 
 🎥 Original footage: <creator / channel name + link>
-Explainer visuals & narration: Wild Rewind
+Explainer visuals & narration: Backstory
 
-#wildlife #animals #nature #shorts #animalfacts
+#explained #facts #shorts + 1-2 topic tags
 ```
 
 **Pinned comment:** `Which animal should we rewind next? 👇`
@@ -63,7 +64,7 @@ Explainer visuals & narration: Wild Rewind
 - First 2 weeks: watch *Average view duration* and *Viewed vs. swiped away*. Over 70 % "viewed" = the hook works.
 - Length 30–45 s performs best for this format; loop the ending into the opening.
 
-## Next 10 rewind ideas
+## Next 10 ideas (animals - add history/science/tech topics too)
 1. Chameleon tongue strike – "it missed… or did it?"
 2. Archerfish shooting a bug down with water
 3. Mantis shrimp punch cracking a shell

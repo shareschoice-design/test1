@@ -3,5 +3,5 @@
 Paste into the YouTube description:
 ```
 Footage: "Humpback whale Tail Sailing behaviour" by NOAA Sanctuaries – CC BY 3.0, via Wikimedia Commons
-Explainer visuals, narration & edit: Wild Rewind
+Explainer visuals, narration & edit: Backstory
 ```
