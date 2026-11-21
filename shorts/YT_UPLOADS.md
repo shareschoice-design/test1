@@ -152,3 +152,117 @@ Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 9. hd_dog_fell_cliff
+**Title:** Their dog fell off a cliff 🐶
+
+**Description:**
+```
+New Year's Day, 2024. Ecola State Park, Oregon. A family's dog falls off a cliff. The family calls for help. So the Coast Guard sends a Jayhawk helicopter from Astoria. They hoist the dog to safety. And hand it back to its owners in the park.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues dog from Ecola State Park, Oregon" – DVIDS (public domain)
+https://www.dvidshub.net/video/909793/coast-guard-rescues-dog-from-ecola-state-park-oregon
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 10. hd_ford_sailors_reunite
+**Title:** 8 months at sea 🧡
+
+**Description:**
+```
+January 2024. Naval Station Norfolk, Virginia. The aircraft carrier USS Gerald R. Ford comes home. After an eight-month deployment. And on the pier, families are waiting. Eight months of goodbyes. Ending right here. Welcome home, sailors.
+
+Would you have done the same? 👇
+
+Real footage: "USS Gerald R. Ford Sailors reunite with their families" – DVIDS (public domain)
+https://www.dvidshub.net/video/910593/uss-gerald-r-ford-sailors-reunite-with-their-families
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 11. hd_fort_stewart_homecoming
+**Title:** They're finally home 🧡
+
+**Description:**
+```
+May 2024. Fort Stewart, Georgia. Soldiers of the 3rd Infantry Division come home from Europe. Their families have been waiting for this day. Finally together. This is the moment they waited for. Welcome home.
+
+Would you have done the same? 👇
+
+Real footage: "Fort Stewart Soldiers reunite with Families" – DVIDS (public domain)
+https://www.dvidshub.net/video/923848/fort-stewart-soldiers-reunite-with-families
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 12. hd_jumped_sinking_vessel
+**Title:** They had to jump 🌊
+
+**Description:**
+```
+November 2022. 2 a.m. Pamlico Sound, North Carolina. The fishing boat Heathers Breeze is taking on water. The crew has no choice. They jump. Into the dark water, five miles from Engelhard. The Coast Guard finds them. Both are pulled from the sea alive.
+
+Would you have done the same? 👇
+
+Real footage: "The Coast Guard rescues crew of sinking fishing vessel" – DVIDS (public domain)
+https://www.dvidshub.net/video/864947/the-coast-guard-rescues-crew-of-sinking-fishing-vessel
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 13. hd_sinking_sailboat_michigan
+**Title:** 300 feet down 🌊
+
+**Description:**
+```
+May 2024. Lake Michigan, 25 miles off Grand Haven. A man's sailboat is sinking. Coast Guard crews from the station and the air race to him. They pull him out in time. Then the sailboat goes down. Into 300 feet of water.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard Station Grand Haven rescues man from sinking sailboat" – DVIDS (public domain)
+https://www.dvidshub.net/video/925615/coast-guard-station-grand-haven-rescues-man-from-sinking-sailboat
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 14. hd_woman_oregon_river
+**Title:** Her car went into the river 🔥
+
+**Description:**
+```
+March 2025. The McKenzie River, Oregon. A car goes into the river. A 71-year-old woman is inside. The water is too fast. Police and firefighters can't reach her. A Coast Guard helicopter from North Bend arrives. They pull her out of the swift water. Saved from the river.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues woman from Oregon river following car accident" – DVIDS (public domain)
+https://www.dvidshub.net/video/954917/coast-guard-rescues-woman-from-oregon-river-following-car-accident
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
