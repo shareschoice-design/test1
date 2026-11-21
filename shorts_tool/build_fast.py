@@ -209,6 +209,14 @@ for li, ln in enumerate(lines):
     if ln.get("label"):
         ass.append(f"Dialogue: 2,{ts(ln['t0'])},{ts(ln['t0'] + ln['d'])},Lab,,0,0,0,,"
                    f"{{\\fad(80,80)\\c{RED}}}{ln['label'].upper()}")
+# never let two caption chunks overlap: clamp each Cap event's end to the next Cap start
+def _t(x):
+    h, m, sec = x.split(":"); return int(h) * 3600 + int(m) * 60 + float(sec)
+caps_idx = [i for i, l in enumerate(ass) if l.startswith("Dialogue: 1,")]
+for a, b in zip(caps_idx, caps_idx[1:]):
+    pa, pb = ass[a].split(",", 3), ass[b].split(",", 3)
+    if _t(pa[2]) > _t(pb[1]):
+        pa[2] = pb[1]; ass[a] = ",".join(pa)
 open(f"{WORK}/caps.ass", "w").write("\n".join(ass))
 
 # ---------- 5. audio ----------
