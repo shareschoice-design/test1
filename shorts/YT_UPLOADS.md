@@ -57,3 +57,98 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken #rescue #heatstroke #helicopterrescue #arizona
 ```
+
+---
+
+## 4. hd_canada_dogs
+**Title:** They found the other dog 🐶
+
+**Description:**
+```
+December 2022. Off Vancouver Island, Canada. A sailboat runs aground. A U.S. Coast Guard helicopter rescues a man. And his dog. But there was another dog. Later that morning, the crew went back and found it near the boat. And brought it safely to the Canadian Coast Guard. Every life counts. Even four-legged ones.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 1 person, 2 dogs from Canadian waters" – DVIDS (public domain)
+https://www.dvidshub.net/video/869765/coast-guard-rescues-1-person-2-dogs-from-canadian-waters
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 5. hd_florida_plane_crash
+**Title:** Their plane went down 🌊
+
+**Description:**
+```
+May 2026. Off the coast of Melbourne, Florida. A civilian plane goes down in the ocean. Survivors are in the water. An Air Force HC-130J circles overhead and drops a rescue kit. A Jolly Green helicopter arrives with pararescuemen. They pull survivors out of the sea. And fly them to waiting medics.
+
+Would you have done the same? 👇
+
+Real footage: "920th Rescue Wing assists in rescue of 11 survivors off Florida coast" – DVIDS (public domain)
+https://www.dvidshub.net/video/1006722/920th-rescue-wing-assists-in-rescue-of-11-survivors-off-florida-coast
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 6. hd_mount_idaho
+**Title:** The highest rescue ever 🏔️
+
+**Description:**
+```
+Mount Idaho. One of the state's highest peaks. A hiker is injured on a remote stretch of the mountain. The Idaho Army National Guard sends a Black Hawk. It became Idaho's highest hoist rescue ever. The hiker is lifted off the mountain. Their sixth rescue that year.
+
+Would you have done the same? 👇
+
+Real footage: "Idaho Army National Guard conducts search and rescue mission on Mount Idaho" – DVIDS (public domain)
+https://www.dvidshub.net/video/1015641/idaho-army-national-guard-conducts-search-and-rescue-mission-on-mount-idaho
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 7. hd_puerto_rico_cliff
+**Title:** Stuck below a cliff 🌊
+
+**Description:**
+```
+March 2026. Fajardo, Puerto Rico. Two teenagers are stranded at the bottom of a sea cliff. She's 18 and has a head injury. He's 19. A Coast Guard Jayhawk crew comes in. Watch it through the helicopter's thermal camera. Both are hoisted up and flown to a hospital in San Juan.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 2 people stranded at the bottom of a shoreside cliff in Fajardo, Puerto Rico" – DVIDS (public domain)
+https://www.dvidshub.net/video/1000575/coast-guard-rescues-2-people-stranded-at-the-bottom-of-a-shoreside-cliff-in-f
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 8. hd_virginia_helene
+**Title:** Their first real rescue 🌊
+
+**Description:**
+```
+October 2024. Hurricane Helene floods Virginia. People are trapped in the water. The Virginia Helicopter Aquatic Rescue Team takes off. They've trained every quarter since 2011. This was their first major real-world rescue. They pulled multiple people out of the floodwater. Thirteen years of training. For this day.
+
+Would you have done the same? 👇
+
+Real footage: "Virginia Army National Guard aircrews recognized for Hurricane Helene rescues" – DVIDS (public domain)
+https://www.dvidshub.net/video/959865/virginia-army-national-guard-aircrews-recognized-for-hurricane-helene-rescues
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
