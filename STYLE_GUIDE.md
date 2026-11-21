@@ -25,6 +25,7 @@ Goal: the viewer's brain never gets a "safe" moment to swipe away. Real footage 
 Threat/danger · time pressure (numbers, countdowns) · injustice · loss → reunion · "you'd never guess" surprise · scale (biggest, fastest, oldest) · identification ("you do this every day").
 
 ## Truth rules
+- **All footage is real video** (licensed stock, public domain, creator permission). **AI is used only for explainer graphics** (diagrams, maps, cutaways) – never AI-generated people, animals or scenes posing as real footage.
 - Real stories only from verifiable sources (kept in a `*_SOURCES.md` file).
 - Stock footage illustrates, never pretends to be the real people → "Dramatised with stock footage" in the description.
 - Never invent numbers, quotes or dates.
