@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>YouTube kanály</title>
 <meta name="description" content="Přehled všech mých YouTube kanálů: odběratelé, zhlédnutí, videa a aktivita za 48 h.">
-<script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
 :root{--bg:#f5f5f3;--panel:#fff;--line:#e3e3df;--text:#1b1d1c;--muted:#6a6f6c;--brand:#c4302b;--brand2:#fbeceb;--good:#1f7a4d;--bad:#b23b36;--warn:#8a6116;--warnbg:#fff7e6;--chip:#f0f0ed;--shadow:0 6px 22px rgba(0,0,0,.05)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121413;--panel:#1b1e1d;--line:#2d3230;--text:#ecefed;--muted:#9aa29e;--brand:#ff5a52;--brand2:#3a1f1e;--good:#4fc58a;--bad:#ff7b74;--warn:#e9b65a;--warnbg:#2b2416;--chip:#262a28;--shadow:none}}
@@ -59,6 +58,7 @@ tr:last-child td{border-bottom:0}
 .vid .t a{color:inherit;text-decoration:none}
 .vid .s{font-size:.76rem;color:var(--muted);white-space:nowrap;text-align:right}
 .comment{padding:6px 0;border-top:1px solid var(--line);font-size:.84rem}
+.comment a,.wrap a:not(.btn){color:var(--brand)}
 .comment .m{font-size:.74rem;color:var(--muted)}
 details summary{cursor:pointer;font-weight:600;margin:8px 0 4px}
 .setup input{width:100%;max-width:620px;border:1px solid var(--line);border-radius:9px;padding:9px 11px;background:var(--bg)}
@@ -68,76 +68,79 @@ code{background:var(--chip);padding:1px 5px;border-radius:5px;font-size:.85em}
 #log{font-size:.78rem;color:var(--muted);min-height:1.2em}
 @media(max-width:1000px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.cards{grid-template-columns:1fr}}
 @media(max-width:560px){.wrap{padding:14px 16px 40px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.mini{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.lock{max-width:420px;margin:60px auto;text-align:center}
+.lock input{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 12px;background:var(--bg);margin:10px 0}
+.err{color:var(--bad)}
+.badge{display:inline-block;font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--brand2);color:var(--brand);font-weight:700}
+.chart{width:100%;height:110px;display:block}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div><h1>Moje YouTube kanály</h1><div class="muted small" id="lastUpdate">Zatím nenačteno</div></div>
+    <div><h1>Moje YouTube kanály</h1><div class="muted small" id="lastUpdate">Načítám…</div></div>
     <div class="actions">
-      <button class="btn primary" id="addBtn">+ Přidat kanál</button>
-      <button class="btn" id="refreshBtn">↻ Obnovit vše</button>
-      <button class="btn" id="setupBtn">⚙ Nastavení</button>
+      <button class="btn" id="reloadBtn">↻ Načíst znovu</button>
+      <a class="btn" href="connect.html">⚙ Kanály a nastavení</a>
+      <button class="btn" id="lockBtn" title="Zapomenout heslo v tomto prohlížeči">🔒</button>
     </div>
   </header>
-  <div id="log"></div>
 
-  <section class="panel setup" id="setup" hidden>
-    <h2>Nastavení – Google OAuth Client ID</h2>
-    <p class="muted small">Dashboard běží celý v tvém prohlížeči. Data jdou jen mezi prohlížečem a Google API, nikam jinam. Potřebuješ jednou vytvořit vlastní OAuth Client ID:</p>
-    <ol class="small">
-      <li>Otevři <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">Google Cloud Console</a> → vytvoř projekt (např. „YT dashboard“).</li>
-      <li><b>APIs &amp; Services → Library</b>: zapni <code>YouTube Data API v3</code> a <code>YouTube Analytics API</code>.</li>
-      <li><b>OAuth consent screen</b>: typ <i>External</i>, stav <i>Testing</i>. Do <b>Test users</b> přidej všechny Google účty, pod kterými máš kanály.</li>
-      <li><b>Credentials → Create credentials → OAuth client ID</b> → typ <i>Web application</i>. Do <b>Authorized JavaScript origins</b> přidej adresu, odkud stránku otevíráš (např. <code id="originHint"></code>).</li>
-      <li>Zkopíruj Client ID (končí na <code>.apps.googleusercontent.com</code>) a vlož ho sem:</li>
-    </ol>
-    <input id="clientId" placeholder="123456789-abc...apps.googleusercontent.com" autocomplete="off">
-    <div class="actions" style="margin-top:10px"><button class="btn primary" id="saveClient">Uložit</button></div>
-    <details><summary>Správa dat</summary>
-      <p class="small muted">Seznam kanálů a historie čísel (pro výpočet změn za 48 h) se ukládá jen v tomto prohlížeči. Přístupové tokeny platí cca 1 hodinu a drží se jen v této záložce.</p>
-      <button class="btn sm" id="wipeBtn">Smazat všechna uložená data</button>
-    </details>
+  <section class="panel lock" id="lock" hidden>
+    <h2>Zadej heslo k dashboardu</h2>
+    <p class="muted small">Heslo, které sis zvolil při nastavení. Zapamatuje se v tomto prohlížeči.</p>
+    <form id="pwForm"><input type="password" id="pw" autocomplete="current-password" autofocus><button class="btn primary" style="width:100%">Odemknout</button></form>
+    <p class="err small" id="pwErr"></p>
   </section>
 
-  <div class="kpis" id="kpis"></div>
-
-  <section class="panel">
-    <h2>Všechny kanály</h2>
-    <div class="table-scroll"><table id="table"></table></div>
+  <section class="panel" id="nodata" hidden>
+    <h2>Zatím tu nejsou žádná data</h2>
+    <p>Dashboard ještě není nastavený, nebo se data ještě poprvé nestáhla. Postupuj podle <a href="connect.html">průvodce nastavením</a> (asi 10 minut, jednou).</p>
+    <p class="muted small" id="nodataDetail"></p>
   </section>
 
-  <div class="notice small">
-    <b>Jak se počítá „48 h“:</b> nová videa a komentáře jsou přesně za posledních 48 hodin. Změna odběratelů a zhlédnutí se počítá z uložených snímků v tomto prohlížeči – otevírej dashboard aspoň jednou denně, ať je s čím srovnávat. YouTube Analytics (graf) má zpoždění 1–3 dny.
-    Koncepty, které nikdy nebyly dokončeny, API nevrací – „neveřejná“ = soukromá + neveřejná (unlisted) + naplánovaná.
+  <div id="main" hidden>
+    <div class="kpis" id="kpis"></div>
+    <section class="panel">
+      <h2>Všechny kanály</h2>
+      <div class="table-scroll"><table id="table"></table></div>
+    </section>
+    <div class="notice small">
+      Data se stahují automaticky každou hodinu. <b>Δ 48 h</b> = rozdíl oproti stavu před 48 hodinami. YouTube zaokrouhluje veřejný počet odběratelů (nad 1000 na 3 platné číslice), přesné přírůstky ukazuje sloupec „Odb. 28 dní“ z YouTube Analytics (zpoždění 1–3 dny).
+      „Neveřejná“ = soukromá + unlisted + naplánovaná; nedokončené koncepty API nevrací.
+    </div>
+    <div class="cards" id="cards"></div>
   </div>
-
-  <div class="cards" id="cards"></div>
 </div>
 
 <script>
 (() => {
 'use strict';
-const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/yt-analytics.readonly';
-const LS_CLIENT = 'ytd.clientId', LS_CH = 'ytd.channels', LS_SNAP = 'ytd.snapshots', LS_DATA = 'ytd.data', SS_TOK = 'ytd.tokens';
-const MAX_VIDEO_PAGES = 20; // 1000 videí na kanál
+const PW_KEY = 'ytd.password';
+const $ = s => document.querySelector(s);
 const H48 = 48 * 3600 * 1000;
 
-const $ = s => document.querySelector(s);
-const ls = {
-  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
-  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
-};
-const ss = {
-  get(k, d) { try { const v = sessionStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
-  set(k, v) { try { sessionStorage.setItem(k, JSON.stringify(v)); } catch {} }
-};
+// Odkud číst data: ?src=… nebo větev yt-data repozitáře, ze kterého běží GitHub Pages
+function dataUrl() {
+  const q = new URLSearchParams(location.search).get('src');
+  if (q) return q;
+  if (location.hostname.endsWith('.github.io')) {
+    const owner = location.hostname.split('.')[0], repo = location.pathname.split('/')[1];
+    return `https://raw.githubusercontent.com/${owner}/${repo}/yt-data/data.enc`;
+  }
+  return 'data.enc';
+}
 
-let channels = ls.get(LS_CH, []);        // [{id,title,thumb,customUrl}]
-let data = ls.get(LS_DATA, {});           // id -> fetched data
-let snaps = ls.get(LS_SNAP, {});          // id -> [{t,subs,views,videos}]
-let tokens = ss.get(SS_TOK, {});          // id -> {token, exp}
-let sortKey = 'subs', sortDir = -1;
+async function decrypt(buf, password) {
+  const b = new Uint8Array(buf);
+  if (new TextDecoder().decode(b.slice(0, 8)) !== 'Salted__') throw new Error('format');
+  const salt = b.slice(8, 16), ct = b.slice(16);
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveBits']);
+  const bits = new Uint8Array(await crypto.subtle.deriveBits({ name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' }, base, 384));
+  const key = await crypto.subtle.importKey('raw', bits.slice(0, 32), 'AES-CBC', false, ['decrypt']);
+  const plain = await crypto.subtle.decrypt({ name: 'AES-CBC', iv: bits.slice(32, 48) }, key, ct);
+  return JSON.parse(new TextDecoder().decode(plain));
+}
 
 const nf = new Intl.NumberFormat('cs-CZ');
 const cf = new Intl.NumberFormat('cs-CZ', { notation: 'compact', maximumFractionDigits: 1 });
@@ -145,302 +148,145 @@ const fmt = n => n == null || isNaN(n) ? '—' : nf.format(n);
 const fmtc = n => n == null || isNaN(n) ? '—' : (Math.abs(n) >= 10000 ? cf.format(n) : nf.format(n));
 const delta = n => n == null ? '<span class="muted">—</span>' : `<span class="${n > 0 ? 'up' : n < 0 ? 'down' : 'muted'}">${n > 0 ? '+' : ''}${fmtc(n)}</span>`;
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const ago = t => { const m = Math.round((Date.now() - t) / 60000); if (m < 60) return `před ${m} min`; const h = Math.round(m / 60); if (h < 48) return `před ${h} h`; return `před ${Math.round(h / 24)} dny`; };
-const log = m => { $('#log').textContent = m || ''; };
-const isoDay = d => d.toISOString().slice(0, 10);
+const ago = t => { const m = Math.round((Date.now() - t) / 60000); if (m < 60) return `před ${Math.max(m, 0)} min`; const h = Math.round(m / 60); if (h < 48) return `před ${h} h`; return `před ${Math.round(h / 24)} dny`; };
+const getPw = () => { try { return localStorage.getItem(PW_KEY) || ''; } catch { return ''; } };
+const setPw = p => { try { p ? localStorage.setItem(PW_KEY, p) : localStorage.removeItem(PW_KEY); } catch {} };
 
-// ---------- Auth ----------
-function clientId() { return ls.get(LS_CLIENT, ''); }
-function validToken(id) { const t = tokens[id]; return t && t.exp > Date.now() + 60000 ? t.token : null; }
+let DB = null, sortKey = 'subs', sortDir = -1, rawBuf = null;
 
-function requestToken() {
-  return new Promise((resolve, reject) => {
-    if (!clientId()) { showSetup(true); return reject(new Error('Nejdřív vlož OAuth Client ID v Nastavení.')); }
-    if (!window.google?.accounts?.oauth2) return reject(new Error('Google přihlášení se ještě nenačetlo, zkus to za chvilku.'));
-    const tc = google.accounts.oauth2.initTokenClient({
-      client_id: clientId(), scope: SCOPES, prompt: 'select_account',
-      callback: r => r.error ? reject(new Error(r.error_description || r.error)) : resolve(r),
-      error_callback: e => reject(new Error(e.message || e.type || 'Přihlášení zrušeno'))
-    });
-    tc.requestAccessToken();
-  });
-}
-
-async function api(url, token, params = {}) {
-  const u = new URL(url);
-  Object.entries(params).forEach(([k, v]) => v != null && u.searchParams.set(k, v));
-  const r = await fetch(u, { headers: { Authorization: 'Bearer ' + token } });
-  const j = await r.json().catch(() => ({}));
-  if (!r.ok) { const e = new Error(j.error?.message || r.statusText); e.status = r.status; throw e; }
-  return j;
-}
-const YT = 'https://www.googleapis.com/youtube/v3/';
-
-async function addChannel() {
+async function load(force) {
   try {
-    const r = await requestToken();
-    log('Načítám kanál…');
-    const me = await api(YT + 'channels', r.access_token, { part: 'snippet', mine: 'true' });
-    const items = me.items || [];
-    if (!items.length) throw new Error('Tento účet nemá YouTube kanál. Při přihlášení vyber konkrétní kanál (brand účet).');
-    for (const c of items) {
-      tokens[c.id] = { token: r.access_token, exp: Date.now() + (r.expires_in || 3600) * 1000 };
-      if (!channels.some(x => x.id === c.id)) channels.push({ id: c.id, title: c.snippet.title, thumb: c.snippet.thumbnails?.default?.url, customUrl: c.snippet.customUrl });
+    if (!rawBuf || force) {
+      const r = await fetch(dataUrl() + (dataUrl().includes('?') ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' });
+      if (!r.ok) throw Object.assign(new Error('HTTP ' + r.status), { nodata: true });
+      rawBuf = await r.arrayBuffer();
     }
-    ss.set(SS_TOK, tokens); ls.set(LS_CH, channels);
-    render();
-    for (const c of items) await refreshChannel(c.id);
-    log(`Přidáno: ${items.map(c => c.snippet.title).join(', ')}`);
-  } catch (e) { log('⚠ ' + e.message); }
-}
-
-async function reauth(id) {
-  try {
-    const r = await requestToken();
-    const me = await api(YT + 'channels', r.access_token, { part: 'snippet', mine: 'true' });
-    const c = (me.items || [])[0];
-    if (!c) throw new Error('Účet nemá kanál.');
-    tokens[c.id] = { token: r.access_token, exp: Date.now() + (r.expires_in || 3600) * 1000 };
-    ss.set(SS_TOK, tokens);
-    if (!channels.some(x => x.id === c.id)) { channels.push({ id: c.id, title: c.snippet.title, thumb: c.snippet.thumbnails?.default?.url, customUrl: c.snippet.customUrl }); ls.set(LS_CH, channels); }
-    if (c.id !== id) log(`Pozor: přihlásil ses ke kanálu „${c.snippet.title}“, ne k tomu, na který jsi klikl.`);
-    await refreshChannel(c.id);
-  } catch (e) { log('⚠ ' + e.message); }
-}
-
-// ---------- Fetch ----------
-async function refreshChannel(id) {
-  const token = validToken(id);
-  if (!token) { render(); return; }
-  const ch = channels.find(c => c.id === id);
-  log(`Načítám ${ch?.title || id}…`);
-  try {
-    const cr = await api(YT + 'channels', token, { part: 'snippet,statistics,contentDetails', id });
-    const c = cr.items?.[0];
-    if (!c) throw new Error('Kanál nenalezen');
-    Object.assign(ch, { title: c.snippet.title, thumb: c.snippet.thumbnails?.default?.url, customUrl: c.snippet.customUrl });
-    const st = c.statistics;
-    const out = {
-      t: Date.now(), subs: st.hiddenSubscriberCount ? null : +st.subscriberCount, views: +st.viewCount, publicCount: +st.videoCount,
-      counts: { public: 0, unlisted: 0, private: 0, scheduled: 0 }, truncated: false, videos: [], comments48: [], commentsMore: false, analytics: null, errors: []
-    };
-
-    // Všechna videa z uploads playlistu (vlastník vidí i soukromá/neveřejná)
-    const uploads = c.contentDetails?.relatedPlaylists?.uploads;
-    const ids = [];
-    if (uploads) {
-      let pageToken, pages = 0;
-      do {
-        const p = await api(YT + 'playlistItems', token, { part: 'contentDetails', playlistId: uploads, maxResults: 50, pageToken });
-        p.items?.forEach(i => ids.push(i.contentDetails.videoId));
-        pageToken = p.nextPageToken; pages++;
-      } while (pageToken && pages < MAX_VIDEO_PAGES);
-      out.truncated = !!pageToken;
-    }
-    const vids = [];
-    for (let i = 0; i < ids.length; i += 50) {
-      const v = await api(YT + 'videos', token, { part: 'snippet,status,statistics', id: ids.slice(i, i + 50).join(','), maxResults: 50 });
-      v.items?.forEach(x => vids.push({
-        id: x.id, title: x.snippet.title, thumb: x.snippet.thumbnails?.default?.url,
-        published: Date.parse(x.snippet.publishedAt), privacy: x.status.privacyStatus, publishAt: x.status.publishAt ? Date.parse(x.status.publishAt) : null,
-        views: +(x.statistics?.viewCount || 0), likes: +(x.statistics?.likeCount || 0), comments: +(x.statistics?.commentCount || 0)
-      }));
-    }
-    vids.forEach(v => {
-      if (v.privacy === 'private' && v.publishAt && v.publishAt > Date.now()) out.counts.scheduled++;
-      else out.counts[v.privacy] = (out.counts[v.privacy] || 0) + 1;
-    });
-    vids.sort((a, b) => b.published - a.published);
-    out.videos = vids.slice(0, 15);
-    out.new48 = vids.filter(v => v.privacy === 'public' && Date.now() - v.published < H48).length;
-    out.uploaded48 = vids.filter(v => Date.now() - v.published < H48).length;
-
-    // Komentáře za 48 h
-    try {
-      let pageToken, pages = 0, stop = false;
-      do {
-        const cm = await api(YT + 'commentThreads', token, { part: 'snippet', allThreadsRelatedToChannelId: id, order: 'time', maxResults: 100, pageToken });
-        for (const t of cm.items || []) {
-          const s = t.snippet.topLevelComment.snippet;
-          const ts = Date.parse(s.publishedAt);
-          if (Date.now() - ts > H48) { stop = true; break; }
-          out.comments48.push({ author: s.authorDisplayName, text: s.textOriginal, t: ts, video: t.snippet.videoId, replies: t.snippet.totalReplyCount });
-        }
-        pageToken = cm.nextPageToken; pages++;
-      } while (!stop && pageToken && pages < 5);
-      out.commentsMore = !stop && !!pageToken;
-    } catch (e) { out.errors.push('Komentáře: ' + e.message); }
-
-    // YouTube Analytics – posledních 30 dní po dnech
-    try {
-      const end = new Date(), start = new Date(Date.now() - 30 * 86400000);
-      const a = await api('https://youtubeanalytics.googleapis.com/v2/reports', token, {
-        ids: 'channel==MINE', startDate: isoDay(start), endDate: isoDay(end),
-        metrics: 'views,estimatedMinutesWatched,subscribersGained,subscribersLost', dimensions: 'day', sort: 'day'
-      });
-      const rows = (a.rows || []).map(r => ({ day: r[0], views: r[1], minutes: r[2], gained: r[3], lost: r[4] }));
-      const sum = (arr, k) => arr.reduce((s, r) => s + (r[k] || 0), 0);
-      const last28 = rows.slice(-28), last2 = rows.slice(-2), last7 = rows.slice(-7);
-      out.analytics = {
-        rows, lastDay: rows.at(-1)?.day,
-        d2: { views: sum(last2, 'views'), subs: sum(last2, 'gained') - sum(last2, 'lost'), minutes: sum(last2, 'minutes') },
-        d7: { views: sum(last7, 'views'), subs: sum(last7, 'gained') - sum(last7, 'lost') },
-        d28: { views: sum(last28, 'views'), subs: sum(last28, 'gained') - sum(last28, 'lost'), hours: Math.round(sum(last28, 'minutes') / 60) }
-      };
-    } catch (e) { out.errors.push('Analytics: ' + e.message); }
-
-    data[id] = out;
-    // snímek pro výpočet změn
-    const arr = snaps[id] || [];
-    arr.push({ t: out.t, subs: out.subs, views: out.views, videos: out.publicCount });
-    snaps[id] = arr.filter(s => Date.now() - s.t < 90 * 86400000).slice(-500);
-    ls.set(LS_DATA, data); ls.set(LS_SNAP, snaps); ls.set(LS_CH, channels);
   } catch (e) {
-    if (e.status === 401) { delete tokens[id]; ss.set(SS_TOK, tokens); }
-    log(`⚠ ${ch?.title || id}: ${e.message}`);
+    $('#nodata').hidden = false; $('#main').hidden = true; $('#lock').hidden = true;
+    $('#nodataDetail').textContent = `Soubor s daty (${dataUrl()}) zatím neexistuje nebo není dostupný.`;
+    $('#lastUpdate').textContent = 'Bez dat';
+    return;
   }
+  const pw = getPw();
+  if (!pw) return showLock();
+  try { DB = await decrypt(rawBuf, pw); }
+  catch { setPw(''); return showLock('Špatné heslo.'); }
+  $('#lock').hidden = true; $('#nodata').hidden = true; $('#main').hidden = false;
   render();
 }
+function showLock(err) { $('#lock').hidden = false; $('#main').hidden = true; $('#pwErr').textContent = err || ''; $('#lastUpdate').textContent = 'Zamčeno'; $('#pw').focus(); }
 
-async function refreshAll() {
-  const ready = channels.filter(c => validToken(c.id));
-  if (!ready.length) { log(channels.length ? 'Přihlášení vypršelo – u kanálů klikni na „Přihlásit“.' : 'Nejdřív přidej kanál.'); render(); return; }
-  for (const c of ready) await refreshChannel(c.id);
-  const exp = channels.length - ready.length;
-  log(exp ? `Hotovo. ${exp} kanál(ů) potřebuje znovu přihlásit.` : 'Hotovo.');
+// rozdíl oproti snímku nejblíž 48 h zpět
+function hDelta(id) {
+  const h = DB.history?.[id] || [], last = h.at(-1);
+  if (!last || h.length < 2) return null;
+  const target = last.t - 48 * 3600;
+  const cands = h.filter(p => p.t <= last.t - 3600);
+  if (!cands.length) return null;
+  const base = cands.reduce((a, b) => Math.abs(a.t - target) <= Math.abs(b.t - target) ? a : b);
+  return { subs: last.subs != null && base.subs != null ? last.subs - base.subs : null, views: last.views - base.views, hours: Math.round((last.t - base.t) / 3600) };
 }
 
-// změna oproti snímku starému ~48 h (nejbližší snímek ≥ 40 h starý, jinak nejstarší dostupný)
-function snapDelta(id) {
-  const arr = snaps[id] || [], d = data[id];
-  if (!d || arr.length < 2) return null;
-  const older = arr.filter(s => d.t - s.t >= 40 * 3600000);
-  const base = older.length ? older.reduce((a, b) => Math.abs(d.t - 48 * 3600000 - a.t) < Math.abs(d.t - 48 * 3600000 - b.t) ? a : b) : arr[0];
-  if (base.t === d.t) return null;
-  return { subs: d.subs != null && base.subs != null ? d.subs - base.subs : null, views: d.views - base.views, hours: Math.round((d.t - base.t) / 3600000) };
-}
-
-// ---------- Render ----------
 function rowData(c) {
-  const d = data[c.id] || {}, sd = snapDelta(c.id);
-  const nonPublic = d.counts ? d.counts.private + d.counts.unlisted + d.counts.scheduled : null;
-  return {
-    c, d, sd, subs: d.subs, views: d.views, pub: d.counts?.public ?? d.publicCount, nonPublic,
-    dSubs: sd?.subs, dViews: sd?.views, new48: d.uploaded48, com48: d.comments48?.length,
-    v28: d.analytics?.d28.views, s28: d.analytics?.d28.subs, auth: !!validToken(c.id)
-  };
+  const sd = c.t ? hDelta(c.id) : null, k = c.counts;
+  return { c, sd, title: (c.title || '').toLowerCase(), subs: c.subs, views: c.views, pub: k ? k.public : c.publicCount,
+    nonPublic: k ? k.private + k.unlisted + k.scheduled : null, dSubs: sd?.subs, dViews: sd?.views,
+    new48: c.uploaded48, com48: c.comments48?.length, v28: c.analytics?.d28.views, s28: c.analytics?.d28.subs };
 }
 
 function render() {
-  const rows = channels.map(rowData);
+  const rows = DB.channels.map(rowData);
   const sum = k => rows.reduce((s, r) => s + (r[k] || 0), 0);
   const anyD = k => rows.some(r => r[k] != null);
-  const lastT = Math.max(0, ...rows.map(r => r.d.t || 0));
-  $('#lastUpdate').textContent = lastT ? `${channels.length} kanálů · aktualizováno ${new Date(lastT).toLocaleString('cs-CZ')}` : (channels.length ? `${channels.length} kanálů · zatím nenačteno` : 'Přidej svůj první kanál');
+  const gen = DB.generated * 1000;
+  const stale = Date.now() - gen > 3 * 3600 * 1000;
+  $('#lastUpdate').innerHTML = `${rows.length} kanálů · data ${ago(gen)} (${new Date(gen).toLocaleString('cs-CZ')})${stale ? ' <span class="badge">automatika se možná zastavila – zkontroluj GitHub Actions</span>' : ''}`;
 
   $('#kpis').innerHTML = [
-    ['Odběratelé', fmtc(sum('subs')), anyD('dSubs') ? delta(sum('dSubs')) + ' za ~48 h' : ''],
-    ['Zhlédnutí celkem', fmtc(sum('views')), anyD('dViews') ? delta(sum('dViews')) + ' za ~48 h' : ''],
+    ['Odběratelé', fmtc(sum('subs')), anyD('dSubs') ? delta(sum('dSubs')) + ' za 48 h' : ''],
+    ['Zhlédnutí celkem', fmtc(sum('views')), anyD('dViews') ? delta(sum('dViews')) + ' za 48 h' : ''],
     ['Veřejná videa', fmt(sum('pub')), ''],
     ['Neveřejná videa', fmt(sum('nonPublic')), 'soukromá · unlisted · plán.'],
     ['Nahráno za 48 h', fmt(sum('new48')), ''],
     ['Komentáře za 48 h', fmt(sum('com48')), anyD('v28') ? fmtc(sum('v28')) + ' zhlédnutí / 28 dní' : '']
   ].map(([l, v, d]) => `<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="d">${d || '&nbsp;'}</div></div>`).join('');
 
-  const cols = [['title', 'Kanál'], ['subs', 'Odběratelé'], ['dSubs', 'Δ odb. 48 h'], ['views', 'Zhlédnutí'], ['dViews', 'Δ zhl. 48 h'], ['v28', 'Zhl. 28 dní'], ['s28', 'Odb. 28 dní'], ['pub', 'Veřejná'], ['nonPublic', 'Neveřejná'], ['new48', 'Nová 48 h'], ['com48', 'Koment. 48 h'], ['auth', 'Přístup']];
-  rows.sort((a, b) => {
-    const va = sortKey === 'title' ? a.c.title.toLowerCase() : a[sortKey] ?? -Infinity, vb = sortKey === 'title' ? b.c.title.toLowerCase() : b[sortKey] ?? -Infinity;
-    return (va > vb ? 1 : va < vb ? -1 : 0) * sortDir;
-  });
-  $('#table').innerHTML = channels.length ? `<thead><tr>${cols.map(([k, l]) => `<th data-k="${k}">${l}${sortKey === k ? (sortDir > 0 ? ' ▲' : ' ▼') : ''}</th>`).join('')}</tr></thead><tbody>${rows.map(r => {
-    const cnt = r.d.counts;
+  const cols = [['title', 'Kanál'], ['subs', 'Odběratelé'], ['dSubs', 'Δ odb. 48 h'], ['views', 'Zhlédnutí'], ['dViews', 'Δ zhl. 48 h'], ['v28', 'Zhl. 28 dní'], ['s28', 'Odb. 28 dní'], ['pub', 'Veřejná'], ['nonPublic', 'Neveřejná'], ['new48', 'Nová 48 h'], ['com48', 'Koment. 48 h']];
+  rows.sort((a, b) => { const va = a[sortKey] ?? -Infinity, vb = b[sortKey] ?? -Infinity; return (va > vb ? 1 : va < vb ? -1 : 0) * sortDir; });
+  $('#table').innerHTML = `<thead><tr>${cols.map(([k, l]) => `<th data-k="${k}">${l}${sortKey === k ? (sortDir > 0 ? ' ▲' : ' ▼') : ''}</th>`).join('')}</tr></thead><tbody>${rows.map(r => {
+    const k = r.c.counts;
     return `<tr>
-      <td><div class="ch"><img src="${esc(r.c.thumb)}" alt="" loading="lazy"><a href="#card-${esc(r.c.id)}">${esc(r.c.title)}</a></div></td>
+      <td><div class="ch"><img src="${esc(r.c.thumb)}" alt="" loading="lazy"><a href="#card-${esc(r.c.id)}">${esc(r.c.title)}</a>${r.c.fetchError ? ' <span class="badge" title="' + esc(r.c.fetchError) + '">' + (r.c.needsReconnect ? 'připojit znovu' : 'chyba') + '</span>' : ''}</div></td>
       <td>${fmt(r.subs)}</td><td>${delta(r.dSubs)}</td><td>${fmt(r.views)}</td><td>${delta(r.dViews)}</td>
-      <td>${fmtc(r.v28)}</td><td>${r.s28 == null ? '—' : delta(r.s28)}</td>
-      <td>${fmt(r.pub)}</td>
-      <td title="${cnt ? `soukromá ${cnt.private}, unlisted ${cnt.unlisted}, naplánovaná ${cnt.scheduled}` : ''}">${fmt(r.nonPublic)}${cnt?.scheduled ? `<span class="chip">${cnt.scheduled} plán.</span>` : ''}</td>
-      <td>${fmt(r.new48)}</td><td>${fmt(r.com48)}${r.d.commentsMore ? '+' : ''}</td>
-      <td>${r.auth ? '<span class="status-ok">● aktivní</span>' : `<button class="btn sm" data-reauth="${esc(r.c.id)}">Přihlásit</button>`}</td>
-    </tr>`;
-  }).join('')}</tbody>` : `<tbody><tr><td class="empty">Žádné kanály. Klikni na „+ Přidat kanál“ a přihlas se – u brand účtů vyber konkrétní kanál. Opakuj pro každý kanál.</td></tr></tbody>`;
+      <td>${fmtc(r.v28)}</td><td>${r.s28 == null ? '—' : delta(r.s28)}</td><td>${fmt(r.pub)}</td>
+      <td title="${k ? `soukromá ${k.private}, unlisted ${k.unlisted}, naplánovaná ${k.scheduled}` : ''}">${fmt(r.nonPublic)}${k?.scheduled ? `<span class="chip">${k.scheduled} plán.</span>` : ''}</td>
+      <td>${fmt(r.new48)}</td><td>${fmt(r.com48)}${r.c.commentsMore ? '+' : ''}</td></tr>`;
+  }).join('')}</tbody>`;
 
   $('#cards').innerHTML = rows.map(cardHtml).join('');
-  document.querySelectorAll('canvas.spark').forEach(drawSpark);
+  drawAll();
 }
 
+const privChip = v => v.privacy === 'public' ? '' : `<span class="chip priv">${v.privacy === 'private' && v.publishAt * 1000 > Date.now() ? 'plán. ' + new Date(v.publishAt * 1000).toLocaleString('cs-CZ', { day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit' }) : v.privacy === 'unlisted' ? 'unlisted' : 'soukromé'}</span>`;
+const vidHtml = v => `<div class="vid"><img src="${esc(v.thumb)}" alt="" loading="lazy"><div class="t"><a href="https://studio.youtube.com/video/${esc(v.id)}/edit" target="_blank" rel="noopener">${esc(v.title)}</a> ${privChip(v)}</div><div class="s">${fmtc(v.views)} zhl. · ${fmt(v.comments)} kom.<br>${new Date(v.published * 1000).toLocaleDateString('cs-CZ')}</div></div>`;
+
 function cardHtml(r) {
-  const { c, d, sd } = r, a = d.analytics, cnt = d.counts;
-  const priv = v => v.privacy === 'public' ? '' : `<span class="chip priv">${v.privacy === 'private' && v.publishAt > Date.now() ? 'plán. ' + new Date(v.publishAt).toLocaleDateString('cs-CZ') : v.privacy === 'unlisted' ? 'unlisted' : 'soukromé'}</span>`;
+  const c = r.c, a = c.analytics, k = c.counts, sd = r.sd;
+  const hist = (DB.history?.[c.id] || []).filter(p => p.subs != null);
   return `<article class="card" id="card-${esc(c.id)}">
     <div class="card-head">
-      <div class="ch"><img src="${esc(c.thumb)}" alt="" loading="lazy"><div><a href="https://www.youtube.com/channel/${esc(c.id)}" target="_blank" rel="noopener">${esc(c.title)}</a><div class="small muted">${esc(c.customUrl || '')}${d.t ? ' · ' + ago(d.t) : ''}</div></div></div>
-      <div class="actions">
-        ${r.auth ? `<button class="btn sm" data-refresh="${esc(c.id)}">↻</button>` : `<button class="btn sm" data-reauth="${esc(c.id)}">Přihlásit</button>`}
-        <a class="btn sm" href="https://studio.youtube.com/channel/${esc(c.id)}" target="_blank" rel="noopener" style="text-decoration:none">Studio</a>
-        <button class="btn sm" data-remove="${esc(c.id)}" title="Odebrat z dashboardu">✕</button>
-      </div>
+      <div class="ch"><img src="${esc(c.thumb)}" alt="" loading="lazy"><div><a href="https://www.youtube.com/channel/${esc(c.id)}" target="_blank" rel="noopener">${esc(c.title)}</a><div class="small muted">${esc(c.customUrl || '')}${c.t ? ' · ' + ago(c.t * 1000) : ''}</div></div></div>
+      <div class="actions"><a class="btn sm" href="https://studio.youtube.com/channel/${esc(c.id)}" target="_blank" rel="noopener">Studio</a></div>
     </div>
-    ${!d.t ? '<div class="empty">Zatím žádná data – přihlas se a obnov.</div>' : `
+    ${c.fetchError ? `<div class="notice small">Poslední stažení selhalo: ${esc(c.fetchError)}${c.needsReconnect ? '<br>Přístup vypršel nebo byl zrušen – <a href="connect.html">připoj kanál znovu</a> a aktualizuj secret v GitHubu.' : ''}</div>` : ''}
+    ${!c.counts ? '<div class="empty">Zatím žádná data.</div>' : `
     <div class="mini">
-      <div><span>Odběratelé</span><b>${fmtc(d.subs)}</b>${sd?.subs != null ? delta(sd.subs) + ` <small class="muted">/${sd.hours} h</small>` : ''}</div>
-      <div><span>Zhlédnutí</span><b>${fmtc(d.views)}</b>${sd ? delta(sd.views) + ` <small class="muted">/${sd.hours} h</small>` : ''}</div>
-      <div><span>Videa veřejná</span><b>${fmt(cnt.public)}</b><small class="muted">${d.truncated ? 'načteno max 1000' : ''}</small></div>
-      <div><span>Neveřejná</span><b>${fmt(r.nonPublic)}</b><small class="muted">${cnt.private} soukr. · ${cnt.unlisted} unl. · ${cnt.scheduled} plán.</small></div>
+      <div><span>Odběratelé</span><b>${fmtc(c.subs)}</b>${sd?.subs != null ? delta(sd.subs) + ` <small class="muted">/${sd.hours} h</small>` : ''}</div>
+      <div><span>Zhlédnutí</span><b>${fmtc(c.views)}</b>${sd ? delta(sd.views) + ` <small class="muted">/${sd.hours} h</small>` : ''}</div>
+      <div><span>Videa veřejná</span><b>${fmt(k.public)}</b><small class="muted">${c.truncated ? 'načteno max 2000' : ''}</small></div>
+      <div><span>Neveřejná</span><b>${fmt(r.nonPublic)}</b><small class="muted">${k.private} soukr. · ${k.unlisted} unl. · ${k.scheduled} plán.</small></div>
     </div>
-    ${a ? `<div class="small muted">Zhlédnutí po dnech (Analytics, do ${esc(a.lastDay || '—')}) · 28 dní: <b>${fmtc(a.d28.views)}</b> zhl., ${delta(a.d28.subs)} odb., ${fmtc(a.d28.hours)} h sledování · poslední 2 dny dat: ${fmtc(a.d2.views)} zhl.</div>
-      <canvas class="spark" data-series="${esc(JSON.stringify(a.rows.map(x => x.views)))}"></canvas>` : ''}
-    ${d.errors?.length ? `<div class="notice small">${d.errors.map(esc).join('<br>')}</div>` : ''}
-    <details ${d.comments48.length ? '' : ''}><summary>Aktivita za 48 h: ${d.uploaded48} nahraných videí, ${d.comments48.length}${d.commentsMore ? '+' : ''} komentářů</summary>
-      ${d.videos.filter(v => Date.now() - v.published < H48).map(vidHtml(priv)).join('') || '<div class="small muted">Žádné nové video.</div>'}
-      ${d.comments48.slice(0, 10).map(cm => `<div class="comment"><div class="m">${esc(cm.author)} · ${ago(cm.t)} · <a href="https://www.youtube.com/watch?v=${esc(cm.video)}" target="_blank" rel="noopener">video</a></div>${esc(cm.text.length > 220 ? cm.text.slice(0, 220) + '…' : cm.text)}</div>`).join('')}
+    ${a ? `<div class="small muted">Zhlédnutí po dnech (Analytics, do ${esc(a.lastDay || '—')}) · 28 dní: <b>${fmtc(a.d28.views)}</b> zhl., ${delta(a.d28.subs)} odb., ${fmtc(a.d28.hours)} h sledování</div>
+      <canvas class="spark" data-bars="${esc(JSON.stringify(a.rows.map(x => x.views)))}"></canvas>` : ''}
+    ${hist.length > 2 ? `<div class="small muted">Vývoj odběratelů (${new Date(hist[0].t * 1000).toLocaleDateString('cs-CZ')} – dnes)</div><canvas class="chart" data-line="${esc(JSON.stringify(hist.map(p => [p.t, p.subs])))}"></canvas>` : ''}
+    <details><summary>Aktivita za 48 h: ${c.uploaded48} nahraných videí, ${c.comments48.length}${c.commentsMore ? '+' : ''} komentářů</summary>
+      ${c.videos.filter(v => Date.now() - v.published * 1000 < H48).map(vidHtml).join('') || '<div class="small muted">Žádné nové video.</div>'}
+      ${c.comments48.slice(0, 15).map(cm => `<div class="comment"><div class="m">${esc(cm.author)} · ${ago(cm.t * 1000)} · <a href="https://www.youtube.com/watch?v=${esc(cm.video)}" target="_blank" rel="noopener">video</a></div>${esc(cm.text.length > 240 ? cm.text.slice(0, 240) + '…' : cm.text)}</div>`).join('')}
     </details>
-    <details><summary>Poslední videa</summary>${d.videos.slice(0, 10).map(vidHtml(priv)).join('')}</details>`}
+    <details><summary>Poslední videa (vč. neveřejných)</summary>${c.videos.slice(0, 12).map(vidHtml).join('')}</details>
+    ${c.topVideos?.length ? `<details><summary>Nejsledovanější videa</summary>${c.topVideos.map(vidHtml).join('')}</details>` : ''}
+    ${c.errors?.length ? `<div class="small muted">${c.errors.map(esc).join('<br>')}</div>` : ''}`}
   </article>`;
 }
 
-const vidHtml = priv => v => `<div class="vid"><img src="${esc(v.thumb)}" alt="" loading="lazy"><div class="t"><a href="https://studio.youtube.com/video/${esc(v.id)}/edit" target="_blank" rel="noopener">${esc(v.title)}</a> ${priv(v)}</div><div class="s">${fmtc(v.views)} zhl. · ${fmt(v.comments)} kom.<br>${new Date(v.published).toLocaleDateString('cs-CZ')}</div></div>`;
-
-function drawSpark(cv) {
-  const s = JSON.parse(cv.dataset.series || '[]');
-  const dpr = window.devicePixelRatio || 1, w = cv.clientWidth, h = cv.clientHeight;
-  cv.width = w * dpr; cv.height = h * dpr;
-  const x = cv.getContext('2d'); x.scale(dpr, dpr);
-  if (s.length < 2) return;
-  const max = Math.max(...s, 1), bw = w / s.length;
-  const color = getComputedStyle(document.documentElement).getPropertyValue('--brand').trim();
-  x.fillStyle = color;
-  s.forEach((v, i) => { const bh = Math.max(1, (v / max) * (h - 14)); x.globalAlpha = i >= s.length - 2 ? 1 : .55; x.fillRect(i * bw + 1, h - bh, Math.max(1, bw - 2), bh); });
-  x.globalAlpha = 1; x.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--muted').trim();
-  x.font = '10px system-ui'; x.fillText('max ' + fmtc(max), 2, 10);
+function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+function prep(cv) { const dpr = window.devicePixelRatio || 1, w = cv.clientWidth, h = cv.clientHeight; cv.width = w * dpr; cv.height = h * dpr; const x = cv.getContext('2d'); x.scale(dpr, dpr); return [x, w, h]; }
+function drawAll() {
+  document.querySelectorAll('canvas[data-bars]').forEach(cv => {
+    const s = JSON.parse(cv.dataset.bars); const [x, w, h] = prep(cv); if (s.length < 2) return;
+    const max = Math.max(...s, 1), bw = w / s.length; x.fillStyle = css('--brand');
+    s.forEach((v, i) => { const bh = Math.max(1, v / max * (h - 14)); x.globalAlpha = i >= s.length - 2 ? 1 : .55; x.fillRect(i * bw + 1, h - bh, Math.max(1, bw - 2), bh); });
+    x.globalAlpha = 1; x.fillStyle = css('--muted'); x.font = '10px system-ui'; x.fillText('max ' + fmtc(max) + '/den', 2, 10);
+  });
+  document.querySelectorAll('canvas[data-line]').forEach(cv => {
+    const s = JSON.parse(cv.dataset.line); const [x, w, h] = prep(cv);
+    const t0 = s[0][0], t1 = s.at(-1)[0] || t0 + 1, vs = s.map(p => p[1]), lo = Math.min(...vs), hi = Math.max(...vs), rng = hi - lo || 1;
+    const X = t => 2 + (t - t0) / (t1 - t0 || 1) * (w - 4), Y = v => h - 14 - (v - lo) / rng * (h - 30);
+    x.strokeStyle = css('--brand'); x.lineWidth = 2; x.beginPath(); s.forEach(([t, v], i) => i ? x.lineTo(X(t), Y(v)) : x.moveTo(X(t), Y(v))); x.stroke();
+    x.fillStyle = css('--muted'); x.font = '10px system-ui'; x.fillText(fmt(hi), 2, 10); x.fillText(fmt(lo), 2, h - 2);
+  });
 }
 
-// ---------- Events ----------
-function showSetup(force) { const el = $('#setup'); el.hidden = force ? false : !el.hidden; }
-$('#originHint').textContent = location.origin && location.origin !== 'null' ? location.origin : 'http://localhost:8000';
-$('#clientId').value = clientId();
-$('#setupBtn').onclick = () => showSetup();
-$('#saveClient').onclick = () => { ls.set(LS_CLIENT, $('#clientId').value.trim()); log('Client ID uložen.'); $('#setup').hidden = true; };
-$('#addBtn').onclick = addChannel;
-$('#refreshBtn').onclick = refreshAll;
-$('#wipeBtn').onclick = () => { if (!confirm('Smazat kanály, historii i nastavení z tohoto prohlížeče?')) return; [LS_CLIENT, LS_CH, LS_SNAP, LS_DATA].forEach(k => { try { localStorage.removeItem(k); } catch {} }); try { sessionStorage.removeItem(SS_TOK); } catch {} location.reload(); };
+$('#pwForm').onsubmit = e => { e.preventDefault(); setPw($('#pw').value); $('#pw').value = ''; load(); };
+$('#reloadBtn').onclick = () => load(true);
+$('#lockBtn').onclick = () => { setPw(''); DB = null; showLock(); };
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-k],[data-reauth],[data-refresh],[data-remove]');
-  if (!t) return;
-  if (t.dataset.k) { const k = t.dataset.k; sortDir = sortKey === k ? -sortDir : (k === 'title' ? 1 : -1); sortKey = k; render(); }
-  else if (t.dataset.reauth) reauth(t.dataset.reauth);
-  else if (t.dataset.refresh) refreshChannel(t.dataset.refresh);
-  else if (t.dataset.remove) {
-    const id = t.dataset.remove, c = channels.find(x => x.id === id);
-    if (!confirm(`Odebrat „${c?.title}“ z dashboardu? (Na YouTube se nic nemění.)`)) return;
-    channels = channels.filter(x => x.id !== id); delete data[id]; delete snaps[id]; delete tokens[id];
-    ls.set(LS_CH, channels); ls.set(LS_DATA, data); ls.set(LS_SNAP, snaps); ss.set(SS_TOK, tokens); render();
-  }
+  const th = e.target.closest('th[data-k]'); if (!th) return;
+  const k = th.dataset.k; sortDir = sortKey === k ? -sortDir : (k === 'title' ? 1 : -1); sortKey = k; render();
 });
-let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => document.querySelectorAll('canvas.spark').forEach(drawSpark), 150); });
-
-if (!clientId()) showSetup(true);
-render();
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => DB && drawAll(), 150); });
+setInterval(() => DB && load(true), 15 * 60 * 1000);
+load(true);
 })();
 </script>
 </body>

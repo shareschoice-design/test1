@@ -1,0 +1,43 @@
+name: YouTube dashboard – stahování dat
+
+on:
+  schedule:
+    - cron: "23 * * * *"   # každou hodinu
+  workflow_dispatch:         # ruční spuštění: Actions → tento workflow → Run workflow
+
+permissions:
+  contents: write
+
+concurrency:
+  group: yt-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Připravit větev s daty (yt-data)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # větev drží vždy jen jeden commit, aby repozitář nebobtnal
+          git worktree add --orphan -b yt-data data-branch
+          if git ls-remote --exit-code --heads origin yt-data >/dev/null; then
+            git fetch --depth=1 origin yt-data
+            git show FETCH_HEAD:data.enc > data-branch/data.enc || rm -f data-branch/data.enc
+          fi
+
+      - name: Stáhnout statistiky kanálů
+        env:
+          YT_DASHBOARD: ${{ secrets.YT_DASHBOARD }}
+        run: python3 yt-dashboard/fetch.py data-branch/data.enc
+
+      - name: Uložit data
+        working-directory: data-branch
+        run: |
+          git add data.enc
+          git commit -q -m "Aktualizace dat $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push --force origin yt-data
