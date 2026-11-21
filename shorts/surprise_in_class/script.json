@@ -1,0 +1,14 @@
+{"voice": "en_US-amy-medium", "music": "music/incompetech_Heartwarming.mp3",
+ "hook": {"text": "He had no idea", "red": 2},
+ "lines": [
+ {"vo": "He had no idea she was coming.", "hl": ["idea"], "shots": [{"file":"couple_class_surprise", "start": 26.0}]},
+ {"vo": "They were high school sweethearts from San Antonio.", "hl": ["sweethearts"], "shots": [{"file":"couple_class_surprise", "start": 14.0}, {"file":"couple_class_surprise", "start": 3.0}]},
+ {"vo": "Both became Army officers.", "hl": ["officers"], "shots": [{"file":"couple_class_surprise", "start": 8.0}]},
+ {"vo": "Then she deployed to Iraq. Eight months apart.", "hl": ["iraq", "eight"], "shots": [{"img": "img1"}, {"img": "img2"}]},
+ {"vo": "But her mom is a colonel. At his school.", "hl": ["colonel"], "label": "Plot twist", "shots": [{"file":"couple_class_surprise", "start": 0.5}]},
+ {"vo": "She drove to Fort Hood, picked up her daughter, and brought her straight to his classroom.", "hl": ["classroom"], "shots": [{"file":"couple_class_surprise", "start": 12.5}, {"file":"couple_class_surprise", "start": 15.5}, {"file":"couple_class_surprise", "start": 17.0}]},
+ {"vo": "He's in the middle of class.", "hl": ["class"], "shots": [{"file":"couple_class_surprise", "start": 18.5}]},
+ {"vo": "Then he turns around.", "hl": ["turns"], "label": "Wait...", "shots": [{"file":"couple_class_surprise", "start": 20.5}]},
+ {"vo": "Eight months of waiting. In one hug.", "hl": ["hug"], "shots": [{"file":"couple_class_surprise", "start": 23.0}, {"file":"couple_class_surprise", "start": 31.0}]},
+ {"vo": "Some reunions just can't wait for the weekend.", "hl": ["wait"], "shots": [{"file":"couple_class_surprise", "start": 44.0}, {"file":"couple_class_surprise", "start": 57.0}]}
+]}
