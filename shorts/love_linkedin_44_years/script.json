@@ -1,4 +1,6 @@
 {
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
  "hook": {
   "text": "He found her 44 years later",
   "red": 3

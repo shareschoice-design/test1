@@ -18,9 +18,15 @@ os.makedirs(WORK, exist_ok=True)
 W, H, FPS = 1080, 1920, 30
 CUT = float(os.environ.get("CUT", "1.7"))
 LS = os.environ.get("LS", "1.0")
-MODEL = os.environ["PIPER_MODEL"]
+
 FONTDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
 script = json.load(open(f"{PROJ}/script.json"))
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+VOICE_DIR = os.environ.get("VOICE_DIR", "")
+# per-script voice / music override the environment
+MODEL = os.path.join(VOICE_DIR, script["voice"] + ".onnx") if script.get("voice") and VOICE_DIR else os.environ["PIPER_MODEL"]
+if script.get("music"):
+    os.environ["MUSIC"] = os.path.join(REPO, script["music"])
 lines = script["lines"]
 
 

@@ -1,4 +1,6 @@
 {
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
  "hook": {
   "text": "She took the last seat",
   "red": 2
