@@ -1,0 +1,144 @@
+[
+ {
+  "id": "s01",
+  "src": "clip",
+  "start": 18.0,
+  "len": 3.0,
+  "cx": 0.4,
+  "vo": "Why is this whale's tail sticking straight out of the ocean?",
+  "cap": "Why is its tail up?",
+  "hl": [
+   3,
+   4
+  ],
+  "zoom": 1.08,
+  "cy": 0.0
+ },
+ {
+  "id": "s02",
+  "src": "rewind",
+  "start": 4.0,
+  "dur": 1.0,
+  "cx": 0.55,
+  "vo": "",
+  "cap": "Rewind",
+  "hl": [
+   0
+  ],
+  "zoom": 1.08,
+  "cy": 0.0
+ },
+ {
+  "id": "s03",
+  "src": "clip",
+  "start": 1.0,
+  "len": 3.0,
+  "cx": 0.55,
+  "label": "Seconds earlier",
+  "vo": "Seconds earlier, this humpback lifted its tail... and tipped its head straight down.",
+  "cap": "Head straight down",
+  "hl": [
+   1,
+   2
+  ],
+  "zoom": 1.08,
+  "cy": 0.0
+ },
+ {
+  "id": "s04",
+  "src": "img1",
+  "vo": "Now its whole body hangs below the surface. Only the tail stays up in the air.",
+  "cap": "Only the tail stays up",
+  "hl": [
+   2
+  ]
+ },
+ {
+  "id": "s05",
+  "src": "clip",
+  "start": 8.0,
+  "len": 3.0,
+  "cx": 0.55,
+  "vo": "Scientists call this tail sailing. And they still aren't completely sure why it happens.",
+  "cap": "Nobody knows why",
+  "hl": [
+   2
+  ],
+  "zoom": 1.08,
+  "cy": 0.0
+ },
+ {
+  "id": "s06",
+  "src": "img2",
+  "label": "Theory 1",
+  "vo": "Theory one. It's catching the wind, using its tail as a sail.",
+  "cap": "A living sail",
+  "hl": [
+   2
+  ]
+ },
+ {
+  "id": "s07",
+  "src": "img3",
+  "label": "Theory 2",
+  "vo": "Theory two. It's cooling down. Warm blood in the tail can shed heat into the air.",
+  "cap": "Cooling off",
+  "hl": [
+   0
+  ]
+ },
+ {
+  "id": "s08",
+  "src": "clip",
+  "start": 23.0,
+  "len": 3.0,
+  "cx": 0.55,
+  "label": "Theory 3",
+  "vo": "Theory three. It's simply resting... or playing.",
+  "cap": "Resting or playing",
+  "hl": [
+   0,
+   2
+  ],
+  "zoom": 1.08,
+  "cy": 0.0
+ },
+ {
+  "id": "s09",
+  "src": "img4",
+  "vo": "Either way, that tail is one of a kind. Its pattern works like a fingerprint, and scientists use it to identify each whale.",
+  "cap": "A tail fingerprint",
+  "hl": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "s10",
+  "src": "clip",
+  "start": 12.5,
+  "len": 3.0,
+  "cx": 0.4,
+  "vo": "So if you ever see a tail standing still in the ocean...",
+  "cap": "If you see this",
+  "hl": [
+   2
+  ],
+  "zoom": 1.08,
+  "cy": 0.0
+ },
+ {
+  "id": "s11",
+  "src": "clip",
+  "start": 17.0,
+  "len": 3.0,
+  "cx": 0.4,
+  "vo": "there's a whale the size of a bus hanging right below it.",
+  "cap": "A bus-sized whale below",
+  "hl": [
+   1
+  ],
+  "zoom": 1.08,
+  "cy": 0.0
+ }
+]

@@ -10,6 +10,7 @@ All licences below allow **commercial use** (monetisation). Credit line format:
 
 | `la_gueule_du_crocodile_1080p.webm` | CC BY-SA 4.0 | Thierry Dugnolle | 100 s croc eye/teeth/jaw-sensor close-ups (captive). |
 | `prete_a_bondir_1080p.webm` | CC BY-SA 4.0 | Thierry Dugnolle | 30 s claws + basking with open mouth (captive). |
+| `humpback_tail_sailing_noaa_1080p.webm` | CC BY 3.0 | NOAA Sanctuaries | 32 s drone, tail raised; permit text at bottom edge (crop it out with zoom 1.08 / cy 0). |
 
 Checked and rejected: Snowy owl & peregrine falcon – shot through a spotting scope, overexposed, falcon not visible.
 
