@@ -130,9 +130,10 @@ for i, ln in enumerate(lines):
             sh("ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-t", str(pd + 0.2), "-i", img, "-vf", vf,
                "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-an", out)
         else:
-            src = os.path.join(FOOT, shot["file"])
-            st = shot.get("start", 0.0) + rep * pd
+            fn = shot["file"] if os.path.splitext(shot["file"])[1] else shot["file"] + ".mp4"
+            src = os.path.join(FOOT, fn)
             srcd = dur(src)
+            st = shot.get("start", round(srcd * 0.25, 2)) + rep * pd
             if st + pd > srcd: st = max(0.0, srcd - pd - 0.05)
             cx = shot.get("cx", 0.5)
             zf = 1.0 + (0.12 * (0 if zin else 1))

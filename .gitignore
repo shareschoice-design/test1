@@ -1,1 +1,3 @@
 *.tmp
+footage/coverr_*/*.mp4
+footage/coverr_*/.*
