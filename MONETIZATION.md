@@ -60,3 +60,17 @@ Would that be OK? Happy to send you the edit before it goes live. Thanks!
 | 3–6 | Read analytics: aim for > 70 % "viewed vs swiped away" and > 80 % average view percentage. Double down on the best topics. |
 | 6–8 | First long-form compilation (8–12 min). Start TikTok / Reels cross-posting. |
 | 8–12 | Switch to human/premium voice. Apply to YPP as soon as thresholds are hit. |
+
+## 7. Footage workflow (how we actually get clips)
+
+The cloud environment that builds the videos can't download from stock sites directly
+(Pexels/Pixabay block automated access, Pexels has paused new API keys, Wikimedia rate-limits the shared cloud IP).
+So: **you download in your browser, upload the file to the chat, and say where it's from.**
+
+For every clip keep a line in the video description:
+- Pexels / Pixabay: no attribution required, but credit anyway: `Footage: <author> / Pexels`
+- Wikimedia Commons CC BY: `Footage: "<file title>" by <author>, CC BY 3.0, via Wikimedia Commons`
+- **CC BY-SA:** usable commercially, but the whole short must then be released under CC BY-SA too – prefer CC BY / CC0 / public domain.
+- Never NC (non-commercial) or ND (no derivatives).
+
+`shorts_tool/commons_file.py <File:...>` prints licence, author, length and resolution of any Commons file page.
