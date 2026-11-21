@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouTube kanály</title>
+<meta name="description" content="Přehled všech mých YouTube kanálů: odběratelé, zhlédnutí, videa a aktivita za 48 h.">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+:root{--bg:#f5f5f3;--panel:#fff;--line:#e3e3df;--text:#1b1d1c;--muted:#6a6f6c;--brand:#c4302b;--brand2:#fbeceb;--good:#1f7a4d;--bad:#b23b36;--warn:#8a6116;--warnbg:#fff7e6;--chip:#f0f0ed;--shadow:0 6px 22px rgba(0,0,0,.05)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121413;--panel:#1b1e1d;--line:#2d3230;--text:#ecefed;--muted:#9aa29e;--brand:#ff5a52;--brand2:#3a1f1e;--good:#4fc58a;--bad:#ff7b74;--warn:#e9b65a;--warnbg:#2b2416;--chip:#262a28;--shadow:none}}
+:root[data-theme="dark"]{--bg:#121413;--panel:#1b1e1d;--line:#2d3230;--text:#ecefed;--muted:#9aa29e;--brand:#ff5a52;--brand2:#3a1f1e;--good:#4fc58a;--bad:#ff7b74;--warn:#e9b65a;--warnbg:#2b2416;--chip:#262a28;--shadow:none}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1320px;margin:auto;padding:22px 24px 60px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+h1{font-size:1.5rem;margin:0;letter-spacing:-.02em}h2{font-size:1.05rem;margin:0 0 10px}
+.muted{color:var(--muted)}.small{font-size:.8rem}
+button,input{font:inherit;color:inherit}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:8px 13px;cursor:pointer;font-weight:600}
+.btn:hover{border-color:var(--muted)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.sm{padding:4px 9px;font-size:.8rem}
+a.btn{color:inherit;text-decoration:none}
+.btn:disabled{opacity:.5;cursor:default}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+.kpi .l{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.kpi .v{font-size:1.6rem;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.kpi .d{font-size:.78rem;color:var(--muted)}
+.up{color:var(--good)}.down{color:var(--bad)}
+.notice{background:var(--warnbg);color:var(--warn);border-radius:10px;padding:10px 13px;font-size:.84rem;margin-bottom:14px}
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:980px}
+th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);cursor:pointer;user-select:none}
+th:first-child,td:first-child{text-align:left}
+tr:last-child td{border-bottom:0}
+.ch{display:flex;align-items:center;gap:9px}
+.ch img{width:30px;height:30px;border-radius:50%;flex:0 0 auto;background:var(--chip)}
+.ch a{color:inherit;font-weight:700;text-decoration:none}
+.chip{display:inline-block;background:var(--chip);border-radius:999px;padding:1px 8px;font-size:.74rem;margin-left:3px}
+.chip.priv{background:var(--brand2);color:var(--brand)}
+.status-ok{color:var(--good)}.status-exp{color:var(--warn)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:16px;box-shadow:var(--shadow);min-width:0}
+.card-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:10px}
+.card-head .ch img{width:42px;height:42px}
+.mini{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:8px 0 12px}
+.mini div{background:var(--chip);border-radius:9px;padding:8px 10px}
+.mini b{display:block;font-size:1.1rem;font-variant-numeric:tabular-nums}
+.mini span{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.spark{width:100%;height:70px;display:block}
+.vid{display:flex;gap:10px;align-items:center;padding:6px 0;border-top:1px solid var(--line)}
+.vid img{width:72px;height:40px;object-fit:cover;border-radius:6px;flex:0 0 auto;background:var(--chip)}
+.vid .t{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vid .t a{color:inherit;text-decoration:none}
+.vid .s{font-size:.76rem;color:var(--muted);white-space:nowrap;text-align:right}
+.comment{padding:6px 0;border-top:1px solid var(--line);font-size:.84rem}
+.comment .m{font-size:.74rem;color:var(--muted)}
+details summary{cursor:pointer;font-weight:600;margin:8px 0 4px}
+.setup input{width:100%;max-width:620px;border:1px solid var(--line);border-radius:9px;padding:9px 11px;background:var(--bg)}
+.setup ol{padding-left:20px}.setup li{margin-bottom:5px}
+code{background:var(--chip);padding:1px 5px;border-radius:5px;font-size:.85em}
+.empty{padding:22px;text-align:center;color:var(--muted)}
+#log{font-size:.78rem;color:var(--muted);min-height:1.2em}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.cards{grid-template-columns:1fr}}
+@media(max-width:560px){.wrap{padding:14px 16px 40px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.mini{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div><h1>Moje YouTube kanály</h1><div class="muted small" id="lastUpdate">Zatím nenačteno</div></div>
+    <div class="actions">
+      <button class="btn primary" id="addBtn">+ Přidat kanál</button>
+      <button class="btn" id="refreshBtn">↻ Obnovit vše</button>
+      <button class="btn" id="setupBtn">⚙ Nastavení</button>
+    </div>
+  </header>
+  <div id="log"></div>
+
+  <section class="panel setup" id="setup" hidden>
+    <h2>Nastavení – Google OAuth Client ID</h2>
+    <p class="muted small">Dashboard běží celý v tvém prohlížeči. Data jdou jen mezi prohlížečem a Google API, nikam jinam. Potřebuješ jednou vytvořit vlastní OAuth Client ID:</p>
+    <ol class="small">
+      <li>Otevři <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">Google Cloud Console</a> → vytvoř projekt (např. „YT dashboard“).</li>
+      <li><b>APIs &amp; Services → Library</b>: zapni <code>YouTube Data API v3</code> a <code>YouTube Analytics API</code>.</li>
+      <li><b>OAuth consent screen</b>: typ <i>External</i>, stav <i>Testing</i>. Do <b>Test users</b> přidej všechny Google účty, pod kterými máš kanály.</li>
+      <li><b>Credentials → Create credentials → OAuth client ID</b> → typ <i>Web application</i>. Do <b>Authorized JavaScript origins</b> přidej adresu, odkud stránku otevíráš (např. <code id="originHint"></code>).</li>
+      <li>Zkopíruj Client ID (končí na <code>.apps.googleusercontent.com</code>) a vlož ho sem:</li>
+    </ol>
+    <input id="clientId" placeholder="123456789-abc...apps.googleusercontent.com" autocomplete="off">
+    <div class="actions" style="margin-top:10px"><button class="btn primary" id="saveClient">Uložit</button></div>
+    <details><summary>Správa dat</summary>
+      <p class="small muted">Seznam kanálů a historie čísel (pro výpočet změn za 48 h) se ukládá jen v tomto prohlížeči. Přístupové tokeny platí cca 1 hodinu a drží se jen v této záložce.</p>
+      <button class="btn sm" id="wipeBtn">Smazat všechna uložená data</button>
+    </details>
+  </section>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section class="panel">
+    <h2>Všechny kanály</h2>
+    <div class="table-scroll"><table id="table"></table></div>
+  </section>
+
+  <div class="notice small">
+    <b>Jak se počítá „48 h“:</b> nová videa a komentáře jsou přesně za posledních 48 hodin. Změna odběratelů a zhlédnutí se počítá z uložených snímků v tomto prohlížeči – otevírej dashboard aspoň jednou denně, ať je s čím srovnávat. YouTube Analytics (graf) má zpoždění 1–3 dny.
+    Koncepty, které nikdy nebyly dokončeny, API nevrací – „neveřejná“ = soukromá + neveřejná (unlisted) + naplánovaná.
+  </div>
+
+  <div class="cards" id="cards"></div>
+</div>
+
+<script>
+(() => {
+'use strict';
+const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/yt-analytics.readonly';
+const LS_CLIENT = 'ytd.clientId', LS_CH = 'ytd.channels', LS_SNAP = 'ytd.snapshots', LS_DATA = 'ytd.data', SS_TOK = 'ytd.tokens';
+const MAX_VIDEO_PAGES = 20; // 1000 videí na kanál
+const H48 = 48 * 3600 * 1000;
+
+const $ = s => document.querySelector(s);
+const ls = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+const ss = {
+  get(k, d) { try { const v = sessionStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
+  set(k, v) { try { sessionStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+
+let channels = ls.get(LS_CH, []);        // [{id,title,thumb,customUrl}]
+let data = ls.get(LS_DATA, {});           // id -> fetched data
+let snaps = ls.get(LS_SNAP, {});          // id -> [{t,subs,views,videos}]
+let tokens = ss.get(SS_TOK, {});          // id -> {token, exp}
+let sortKey = 'subs', sortDir = -1;
+
+const nf = new Intl.NumberFormat('cs-CZ');
+const cf = new Intl.NumberFormat('cs-CZ', { notation: 'compact', maximumFractionDigits: 1 });
+const fmt = n => n == null || isNaN(n) ? '—' : nf.format(n);
+const fmtc = n => n == null || isNaN(n) ? '—' : (Math.abs(n) >= 10000 ? cf.format(n) : nf.format(n));
+const delta = n => n == null ? '<span class="muted">—</span>' : `<span class="${n > 0 ? 'up' : n < 0 ? 'down' : 'muted'}">${n > 0 ? '+' : ''}${fmtc(n)}</span>`;
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const ago = t => { const m = Math.round((Date.now() - t) / 60000); if (m < 60) return `před ${m} min`; const h = Math.round(m / 60); if (h < 48) return `před ${h} h`; return `před ${Math.round(h / 24)} dny`; };
+const log = m => { $('#log').textContent = m || ''; };
+const isoDay = d => d.toISOString().slice(0, 10);
+
+// ---------- Auth ----------
+function clientId() { return ls.get(LS_CLIENT, ''); }
+function validToken(id) { const t = tokens[id]; return t && t.exp > Date.now() + 60000 ? t.token : null; }
+
+function requestToken() {
+  return new Promise((resolve, reject) => {
+    if (!clientId()) { showSetup(true); return reject(new Error('Nejdřív vlož OAuth Client ID v Nastavení.')); }
+    if (!window.google?.accounts?.oauth2) return reject(new Error('Google přihlášení se ještě nenačetlo, zkus to za chvilku.'));
+    const tc = google.accounts.oauth2.initTokenClient({
+      client_id: clientId(), scope: SCOPES, prompt: 'select_account',
+      callback: r => r.error ? reject(new Error(r.error_description || r.error)) : resolve(r),
+      error_callback: e => reject(new Error(e.message || e.type || 'Přihlášení zrušeno'))
+    });
+    tc.requestAccessToken();
+  });
+}
+
+async function api(url, token, params = {}) {
+  const u = new URL(url);
+  Object.entries(params).forEach(([k, v]) => v != null && u.searchParams.set(k, v));
+  const r = await fetch(u, { headers: { Authorization: 'Bearer ' + token } });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) { const e = new Error(j.error?.message || r.statusText); e.status = r.status; throw e; }
+  return j;
+}
+const YT = 'https://www.googleapis.com/youtube/v3/';
+
+async function addChannel() {
+  try {
+    const r = await requestToken();
+    log('Načítám kanál…');
+    const me = await api(YT + 'channels', r.access_token, { part: 'snippet', mine: 'true' });
+    const items = me.items || [];
+    if (!items.length) throw new Error('Tento účet nemá YouTube kanál. Při přihlášení vyber konkrétní kanál (brand účet).');
+    for (const c of items) {
+      tokens[c.id] = { token: r.access_token, exp: Date.now() + (r.expires_in || 3600) * 1000 };
+      if (!channels.some(x => x.id === c.id)) channels.push({ id: c.id, title: c.snippet.title, thumb: c.snippet.thumbnails?.default?.url, customUrl: c.snippet.customUrl });
+    }
+    ss.set(SS_TOK, tokens); ls.set(LS_CH, channels);
+    render();
+    for (const c of items) await refreshChannel(c.id);
+    log(`Přidáno: ${items.map(c => c.snippet.title).join(', ')}`);
+  } catch (e) { log('⚠ ' + e.message); }
+}
+
+async function reauth(id) {
+  try {
+    const r = await requestToken();
+    const me = await api(YT + 'channels', r.access_token, { part: 'snippet', mine: 'true' });
+    const c = (me.items || [])[0];
+    if (!c) throw new Error('Účet nemá kanál.');
+    tokens[c.id] = { token: r.access_token, exp: Date.now() + (r.expires_in || 3600) * 1000 };
+    ss.set(SS_TOK, tokens);
+    if (!channels.some(x => x.id === c.id)) { channels.push({ id: c.id, title: c.snippet.title, thumb: c.snippet.thumbnails?.default?.url, customUrl: c.snippet.customUrl }); ls.set(LS_CH, channels); }
+    if (c.id !== id) log(`Pozor: přihlásil ses ke kanálu „${c.snippet.title}“, ne k tomu, na který jsi klikl.`);
+    await refreshChannel(c.id);
+  } catch (e) { log('⚠ ' + e.message); }
+}
+
+// ---------- Fetch ----------
+async function refreshChannel(id) {
+  const token = validToken(id);
+  if (!token) { render(); return; }
+  const ch = channels.find(c => c.id === id);
+  log(`Načítám ${ch?.title || id}…`);
+  try {
+    const cr = await api(YT + 'channels', token, { part: 'snippet,statistics,contentDetails', id });
+    const c = cr.items?.[0];
+    if (!c) throw new Error('Kanál nenalezen');
+    Object.assign(ch, { title: c.snippet.title, thumb: c.snippet.thumbnails?.default?.url, customUrl: c.snippet.customUrl });
+    const st = c.statistics;
+    const out = {
+      t: Date.now(), subs: st.hiddenSubscriberCount ? null : +st.subscriberCount, views: +st.viewCount, publicCount: +st.videoCount,
+      counts: { public: 0, unlisted: 0, private: 0, scheduled: 0 }, truncated: false, videos: [], comments48: [], commentsMore: false, analytics: null, errors: []
+    };
+
+    // Všechna videa z uploads playlistu (vlastník vidí i soukromá/neveřejná)
+    const uploads = c.contentDetails?.relatedPlaylists?.uploads;
+    const ids = [];
+    if (uploads) {
+      let pageToken, pages = 0;
+      do {
+        const p = await api(YT + 'playlistItems', token, { part: 'contentDetails', playlistId: uploads, maxResults: 50, pageToken });
+        p.items?.forEach(i => ids.push(i.contentDetails.videoId));
+        pageToken = p.nextPageToken; pages++;
+      } while (pageToken && pages < MAX_VIDEO_PAGES);
+      out.truncated = !!pageToken;
+    }
+    const vids = [];
+    for (let i = 0; i < ids.length; i += 50) {
+      const v = await api(YT + 'videos', token, { part: 'snippet,status,statistics', id: ids.slice(i, i + 50).join(','), maxResults: 50 });
+      v.items?.forEach(x => vids.push({
+        id: x.id, title: x.snippet.title, thumb: x.snippet.thumbnails?.default?.url,
+        published: Date.parse(x.snippet.publishedAt), privacy: x.status.privacyStatus, publishAt: x.status.publishAt ? Date.parse(x.status.publishAt) : null,
+        views: +(x.statistics?.viewCount || 0), likes: +(x.statistics?.likeCount || 0), comments: +(x.statistics?.commentCount || 0)
+      }));
+    }
+    vids.forEach(v => {
+      if (v.privacy === 'private' && v.publishAt && v.publishAt > Date.now()) out.counts.scheduled++;
+      else out.counts[v.privacy] = (out.counts[v.privacy] || 0) + 1;
+    });
+    vids.sort((a, b) => b.published - a.published);
+    out.videos = vids.slice(0, 15);
+    out.new48 = vids.filter(v => v.privacy === 'public' && Date.now() - v.published < H48).length;
+    out.uploaded48 = vids.filter(v => Date.now() - v.published < H48).length;
+
+    // Komentáře za 48 h
+    try {
+      let pageToken, pages = 0, stop = false;
+      do {
+        const cm = await api(YT + 'commentThreads', token, { part: 'snippet', allThreadsRelatedToChannelId: id, order: 'time', maxResults: 100, pageToken });
+        for (const t of cm.items || []) {
+          const s = t.snippet.topLevelComment.snippet;
+          const ts = Date.parse(s.publishedAt);
+          if (Date.now() - ts > H48) { stop = true; break; }
+          out.comments48.push({ author: s.authorDisplayName, text: s.textOriginal, t: ts, video: t.snippet.videoId, replies: t.snippet.totalReplyCount });
+        }
+        pageToken = cm.nextPageToken; pages++;
+      } while (!stop && pageToken && pages < 5);
+      out.commentsMore = !stop && !!pageToken;
+    } catch (e) { out.errors.push('Komentáře: ' + e.message); }
+
+    // YouTube Analytics – posledních 30 dní po dnech
+    try {
+      const end = new Date(), start = new Date(Date.now() - 30 * 86400000);
+      const a = await api('https://youtubeanalytics.googleapis.com/v2/reports', token, {
+        ids: 'channel==MINE', startDate: isoDay(start), endDate: isoDay(end),
+        metrics: 'views,estimatedMinutesWatched,subscribersGained,subscribersLost', dimensions: 'day', sort: 'day'
+      });
+      const rows = (a.rows || []).map(r => ({ day: r[0], views: r[1], minutes: r[2], gained: r[3], lost: r[4] }));
+      const sum = (arr, k) => arr.reduce((s, r) => s + (r[k] || 0), 0);
+      const last28 = rows.slice(-28), last2 = rows.slice(-2), last7 = rows.slice(-7);
+      out.analytics = {
+        rows, lastDay: rows.at(-1)?.day,
+        d2: { views: sum(last2, 'views'), subs: sum(last2, 'gained') - sum(last2, 'lost'), minutes: sum(last2, 'minutes') },
+        d7: { views: sum(last7, 'views'), subs: sum(last7, 'gained') - sum(last7, 'lost') },
+        d28: { views: sum(last28, 'views'), subs: sum(last28, 'gained') - sum(last28, 'lost'), hours: Math.round(sum(last28, 'minutes') / 60) }
+      };
+    } catch (e) { out.errors.push('Analytics: ' + e.message); }
+
+    data[id] = out;
+    // snímek pro výpočet změn
+    const arr = snaps[id] || [];
+    arr.push({ t: out.t, subs: out.subs, views: out.views, videos: out.publicCount });
+    snaps[id] = arr.filter(s => Date.now() - s.t < 90 * 86400000).slice(-500);
+    ls.set(LS_DATA, data); ls.set(LS_SNAP, snaps); ls.set(LS_CH, channels);
+  } catch (e) {
+    if (e.status === 401) { delete tokens[id]; ss.set(SS_TOK, tokens); }
+    log(`⚠ ${ch?.title || id}: ${e.message}`);
+  }
+  render();
+}
+
+async function refreshAll() {
+  const ready = channels.filter(c => validToken(c.id));
+  if (!ready.length) { log(channels.length ? 'Přihlášení vypršelo – u kanálů klikni na „Přihlásit“.' : 'Nejdřív přidej kanál.'); render(); return; }
+  for (const c of ready) await refreshChannel(c.id);
+  const exp = channels.length - ready.length;
+  log(exp ? `Hotovo. ${exp} kanál(ů) potřebuje znovu přihlásit.` : 'Hotovo.');
+}
+
+// změna oproti snímku starému ~48 h (nejbližší snímek ≥ 40 h starý, jinak nejstarší dostupný)
+function snapDelta(id) {
+  const arr = snaps[id] || [], d = data[id];
+  if (!d || arr.length < 2) return null;
+  const older = arr.filter(s => d.t - s.t >= 40 * 3600000);
+  const base = older.length ? older.reduce((a, b) => Math.abs(d.t - 48 * 3600000 - a.t) < Math.abs(d.t - 48 * 3600000 - b.t) ? a : b) : arr[0];
+  if (base.t === d.t) return null;
+  return { subs: d.subs != null && base.subs != null ? d.subs - base.subs : null, views: d.views - base.views, hours: Math.round((d.t - base.t) / 3600000) };
+}
+
+// ---------- Render ----------
+function rowData(c) {
+  const d = data[c.id] || {}, sd = snapDelta(c.id);
+  const nonPublic = d.counts ? d.counts.private + d.counts.unlisted + d.counts.scheduled : null;
+  return {
+    c, d, sd, subs: d.subs, views: d.views, pub: d.counts?.public ?? d.publicCount, nonPublic,
+    dSubs: sd?.subs, dViews: sd?.views, new48: d.uploaded48, com48: d.comments48?.length,
+    v28: d.analytics?.d28.views, s28: d.analytics?.d28.subs, auth: !!validToken(c.id)
+  };
+}
+
+function render() {
+  const rows = channels.map(rowData);
+  const sum = k => rows.reduce((s, r) => s + (r[k] || 0), 0);
+  const anyD = k => rows.some(r => r[k] != null);
+  const lastT = Math.max(0, ...rows.map(r => r.d.t || 0));
+  $('#lastUpdate').textContent = lastT ? `${channels.length} kanálů · aktualizováno ${new Date(lastT).toLocaleString('cs-CZ')}` : (channels.length ? `${channels.length} kanálů · zatím nenačteno` : 'Přidej svůj první kanál');
+
+  $('#kpis').innerHTML = [
+    ['Odběratelé', fmtc(sum('subs')), anyD('dSubs') ? delta(sum('dSubs')) + ' za ~48 h' : ''],
+    ['Zhlédnutí celkem', fmtc(sum('views')), anyD('dViews') ? delta(sum('dViews')) + ' za ~48 h' : ''],
+    ['Veřejná videa', fmt(sum('pub')), ''],
+    ['Neveřejná videa', fmt(sum('nonPublic')), 'soukromá · unlisted · plán.'],
+    ['Nahráno za 48 h', fmt(sum('new48')), ''],
+    ['Komentáře za 48 h', fmt(sum('com48')), anyD('v28') ? fmtc(sum('v28')) + ' zhlédnutí / 28 dní' : '']
+  ].map(([l, v, d]) => `<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="d">${d || '&nbsp;'}</div></div>`).join('');
+
+  const cols = [['title', 'Kanál'], ['subs', 'Odběratelé'], ['dSubs', 'Δ odb. 48 h'], ['views', 'Zhlédnutí'], ['dViews', 'Δ zhl. 48 h'], ['v28', 'Zhl. 28 dní'], ['s28', 'Odb. 28 dní'], ['pub', 'Veřejná'], ['nonPublic', 'Neveřejná'], ['new48', 'Nová 48 h'], ['com48', 'Koment. 48 h'], ['auth', 'Přístup']];
+  rows.sort((a, b) => {
+    const va = sortKey === 'title' ? a.c.title.toLowerCase() : a[sortKey] ?? -Infinity, vb = sortKey === 'title' ? b.c.title.toLowerCase() : b[sortKey] ?? -Infinity;
+    return (va > vb ? 1 : va < vb ? -1 : 0) * sortDir;
+  });
+  $('#table').innerHTML = channels.length ? `<thead><tr>${cols.map(([k, l]) => `<th data-k="${k}">${l}${sortKey === k ? (sortDir > 0 ? ' ▲' : ' ▼') : ''}</th>`).join('')}</tr></thead><tbody>${rows.map(r => {
+    const cnt = r.d.counts;
+    return `<tr>
+      <td><div class="ch"><img src="${esc(r.c.thumb)}" alt="" loading="lazy"><a href="#card-${esc(r.c.id)}">${esc(r.c.title)}</a></div></td>
+      <td>${fmt(r.subs)}</td><td>${delta(r.dSubs)}</td><td>${fmt(r.views)}</td><td>${delta(r.dViews)}</td>
+      <td>${fmtc(r.v28)}</td><td>${r.s28 == null ? '—' : delta(r.s28)}</td>
+      <td>${fmt(r.pub)}</td>
+      <td title="${cnt ? `soukromá ${cnt.private}, unlisted ${cnt.unlisted}, naplánovaná ${cnt.scheduled}` : ''}">${fmt(r.nonPublic)}${cnt?.scheduled ? `<span class="chip">${cnt.scheduled} plán.</span>` : ''}</td>
+      <td>${fmt(r.new48)}</td><td>${fmt(r.com48)}${r.d.commentsMore ? '+' : ''}</td>
+      <td>${r.auth ? '<span class="status-ok">● aktivní</span>' : `<button class="btn sm" data-reauth="${esc(r.c.id)}">Přihlásit</button>`}</td>
+    </tr>`;
+  }).join('')}</tbody>` : `<tbody><tr><td class="empty">Žádné kanály. Klikni na „+ Přidat kanál“ a přihlas se – u brand účtů vyber konkrétní kanál. Opakuj pro každý kanál.</td></tr></tbody>`;
+
+  $('#cards').innerHTML = rows.map(cardHtml).join('');
+  document.querySelectorAll('canvas.spark').forEach(drawSpark);
+}
+
+function cardHtml(r) {
+  const { c, d, sd } = r, a = d.analytics, cnt = d.counts;
+  const priv = v => v.privacy === 'public' ? '' : `<span class="chip priv">${v.privacy === 'private' && v.publishAt > Date.now() ? 'plán. ' + new Date(v.publishAt).toLocaleDateString('cs-CZ') : v.privacy === 'unlisted' ? 'unlisted' : 'soukromé'}</span>`;
+  return `<article class="card" id="card-${esc(c.id)}">
+    <div class="card-head">
+      <div class="ch"><img src="${esc(c.thumb)}" alt="" loading="lazy"><div><a href="https://www.youtube.com/channel/${esc(c.id)}" target="_blank" rel="noopener">${esc(c.title)}</a><div class="small muted">${esc(c.customUrl || '')}${d.t ? ' · ' + ago(d.t) : ''}</div></div></div>
+      <div class="actions">
+        ${r.auth ? `<button class="btn sm" data-refresh="${esc(c.id)}">↻</button>` : `<button class="btn sm" data-reauth="${esc(c.id)}">Přihlásit</button>`}
+        <a class="btn sm" href="https://studio.youtube.com/channel/${esc(c.id)}" target="_blank" rel="noopener" style="text-decoration:none">Studio</a>
+        <button class="btn sm" data-remove="${esc(c.id)}" title="Odebrat z dashboardu">✕</button>
+      </div>
+    </div>
+    ${!d.t ? '<div class="empty">Zatím žádná data – přihlas se a obnov.</div>' : `
+    <div class="mini">
+      <div><span>Odběratelé</span><b>${fmtc(d.subs)}</b>${sd?.subs != null ? delta(sd.subs) + ` <small class="muted">/${sd.hours} h</small>` : ''}</div>
+      <div><span>Zhlédnutí</span><b>${fmtc(d.views)}</b>${sd ? delta(sd.views) + ` <small class="muted">/${sd.hours} h</small>` : ''}</div>
+      <div><span>Videa veřejná</span><b>${fmt(cnt.public)}</b><small class="muted">${d.truncated ? 'načteno max 1000' : ''}</small></div>
+      <div><span>Neveřejná</span><b>${fmt(r.nonPublic)}</b><small class="muted">${cnt.private} soukr. · ${cnt.unlisted} unl. · ${cnt.scheduled} plán.</small></div>
+    </div>
+    ${a ? `<div class="small muted">Zhlédnutí po dnech (Analytics, do ${esc(a.lastDay || '—')}) · 28 dní: <b>${fmtc(a.d28.views)}</b> zhl., ${delta(a.d28.subs)} odb., ${fmtc(a.d28.hours)} h sledování · poslední 2 dny dat: ${fmtc(a.d2.views)} zhl.</div>
+      <canvas class="spark" data-series="${esc(JSON.stringify(a.rows.map(x => x.views)))}"></canvas>` : ''}
+    ${d.errors?.length ? `<div class="notice small">${d.errors.map(esc).join('<br>')}</div>` : ''}
+    <details ${d.comments48.length ? '' : ''}><summary>Aktivita za 48 h: ${d.uploaded48} nahraných videí, ${d.comments48.length}${d.commentsMore ? '+' : ''} komentářů</summary>
+      ${d.videos.filter(v => Date.now() - v.published < H48).map(vidHtml(priv)).join('') || '<div class="small muted">Žádné nové video.</div>'}
+      ${d.comments48.slice(0, 10).map(cm => `<div class="comment"><div class="m">${esc(cm.author)} · ${ago(cm.t)} · <a href="https://www.youtube.com/watch?v=${esc(cm.video)}" target="_blank" rel="noopener">video</a></div>${esc(cm.text.length > 220 ? cm.text.slice(0, 220) + '…' : cm.text)}</div>`).join('')}
+    </details>
+    <details><summary>Poslední videa</summary>${d.videos.slice(0, 10).map(vidHtml(priv)).join('')}</details>`}
+  </article>`;
+}
+
+const vidHtml = priv => v => `<div class="vid"><img src="${esc(v.thumb)}" alt="" loading="lazy"><div class="t"><a href="https://studio.youtube.com/video/${esc(v.id)}/edit" target="_blank" rel="noopener">${esc(v.title)}</a> ${priv(v)}</div><div class="s">${fmtc(v.views)} zhl. · ${fmt(v.comments)} kom.<br>${new Date(v.published).toLocaleDateString('cs-CZ')}</div></div>`;
+
+function drawSpark(cv) {
+  const s = JSON.parse(cv.dataset.series || '[]');
+  const dpr = window.devicePixelRatio || 1, w = cv.clientWidth, h = cv.clientHeight;
+  cv.width = w * dpr; cv.height = h * dpr;
+  const x = cv.getContext('2d'); x.scale(dpr, dpr);
+  if (s.length < 2) return;
+  const max = Math.max(...s, 1), bw = w / s.length;
+  const color = getComputedStyle(document.documentElement).getPropertyValue('--brand').trim();
+  x.fillStyle = color;
+  s.forEach((v, i) => { const bh = Math.max(1, (v / max) * (h - 14)); x.globalAlpha = i >= s.length - 2 ? 1 : .55; x.fillRect(i * bw + 1, h - bh, Math.max(1, bw - 2), bh); });
+  x.globalAlpha = 1; x.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--muted').trim();
+  x.font = '10px system-ui'; x.fillText('max ' + fmtc(max), 2, 10);
+}
+
+// ---------- Events ----------
+function showSetup(force) { const el = $('#setup'); el.hidden = force ? false : !el.hidden; }
+$('#originHint').textContent = location.origin && location.origin !== 'null' ? location.origin : 'http://localhost:8000';
+$('#clientId').value = clientId();
+$('#setupBtn').onclick = () => showSetup();
+$('#saveClient').onclick = () => { ls.set(LS_CLIENT, $('#clientId').value.trim()); log('Client ID uložen.'); $('#setup').hidden = true; };
+$('#addBtn').onclick = addChannel;
+$('#refreshBtn').onclick = refreshAll;
+$('#wipeBtn').onclick = () => { if (!confirm('Smazat kanály, historii i nastavení z tohoto prohlížeče?')) return; [LS_CLIENT, LS_CH, LS_SNAP, LS_DATA].forEach(k => { try { localStorage.removeItem(k); } catch {} }); try { sessionStorage.removeItem(SS_TOK); } catch {} location.reload(); };
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-k],[data-reauth],[data-refresh],[data-remove]');
+  if (!t) return;
+  if (t.dataset.k) { const k = t.dataset.k; sortDir = sortKey === k ? -sortDir : (k === 'title' ? 1 : -1); sortKey = k; render(); }
+  else if (t.dataset.reauth) reauth(t.dataset.reauth);
+  else if (t.dataset.refresh) refreshChannel(t.dataset.refresh);
+  else if (t.dataset.remove) {
+    const id = t.dataset.remove, c = channels.find(x => x.id === id);
+    if (!confirm(`Odebrat „${c?.title}“ z dashboardu? (Na YouTube se nic nemění.)`)) return;
+    channels = channels.filter(x => x.id !== id); delete data[id]; delete snaps[id]; delete tokens[id];
+    ls.set(LS_CH, channels); ls.set(LS_DATA, data); ls.set(LS_SNAP, snaps); ss.set(SS_TOK, tokens); render();
+  }
+});
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => document.querySelectorAll('canvas.spark').forEach(drawSpark), 150); });
+
+if (!clientId()) showSetup(true);
+render();
+})();
+</script>
+</body>
+</html>

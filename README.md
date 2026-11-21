@@ -17,3 +17,7 @@ After reviewing the scorecard, append a new dated entry to `scorecard_history.js
 ## Caution
 
 The scorecard contains preliminary directional ratings, not a verified ranking. Check the `methodology` and `limitations` in `competitor_scorecard.json` before relying on scores.
+
+## YouTube dashboard (`yt-dashboard/`)
+
+`yt-dashboard/index.html` shows all your YouTube channels in one place: subscribers, views, public and non-public (private, unlisted, scheduled) videos, uploads and comments in the last 48 hours, and 30-day YouTube Analytics. It runs entirely in the browser using your own Google OAuth Client ID (setup steps are inside the page under „Nastavení“). Open it via GitHub Pages or `python -m http.server` and add that origin to the OAuth client's Authorized JavaScript origins.
