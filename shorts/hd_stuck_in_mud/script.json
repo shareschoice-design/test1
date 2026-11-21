@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Stuck in the mud",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "April 2023. Port Bolivar, Texas.",
+   "hl": [
+    "texas"
+   ],
+   "shots": [
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.852
+    },
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.892
+    }
+   ]
+  },
+  {
+   "vo": "A 65-year-old man is stuck in the mud near the Galveston jetty.",
+   "hl": [
+    "mud"
+   ],
+   "shots": [
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.212
+    },
+    {
+     "card": {
+      "file": "stuck_in_mud",
+      "pos": 0.287,
+      "big": "65",
+      "small": "YEARS OLD. STUCK."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "He can't get himself out.",
+   "hl": [
+    "out"
+   ],
+   "shots": [
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.363
+    },
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Houston arrives.",
+   "hl": [
+    "houston"
+   ],
+   "shots": [
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.515
+    },
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "They hoist him straight out of the mud.",
+   "hl": [
+    "hoist"
+   ],
+   "shots": [
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.667
+    },
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "He reaches medics in stable condition.",
+   "hl": [
+    "stable"
+   ],
+   "shots": [
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.818
+    },
+    {
+     "file": "stuck_in_mud",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

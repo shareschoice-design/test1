@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Two people. Two dogs.",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 2025. Near Cat Island, South Carolina.",
+   "hl": [
+    "carolina"
+   ],
+   "shots": [
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.882
+    },
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.922
+    }
+   ]
+  },
+  {
+   "vo": "A 14-foot boat breaks down.",
+   "hl": [
+    "boat"
+   ],
+   "shots": [
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.212
+    },
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "On board: two people. And two dogs.",
+   "hl": [
+    "dogs"
+   ],
+   "shots": [
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.363
+    },
+    {
+     "card": {
+      "file": "cat_island_dogs",
+      "pos": 0.439,
+      "big": "2 + 2",
+      "small": "PEOPLE + DOGS"
+     }
+    }
+   ],
+   "label": "Look"
+  },
+  {
+   "vo": "A Coast Guard helicopter from Savannah arrives.",
+   "hl": [
+    "savannah"
+   ],
+   "shots": [
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.515
+    },
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "Everyone goes up. Dogs included.",
+   "hl": [
+    "dogs"
+   ],
+   "shots": [
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.667
+    },
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Nobody hurt. Nobody left behind.",
+   "hl": [
+    "nobody"
+   ],
+   "shots": [
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.818
+    },
+    {
+     "file": "cat_island_dogs",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

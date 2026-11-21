@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "He fell off a cliff",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "August 2025. The Franklin Mountains, El Paso, Texas.",
+   "hl": [
+    "texas"
+   ],
+   "shots": [
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.86
+    },
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.9
+    }
+   ]
+  },
+  {
+   "vo": "A hiker falls off a cliff near Mammoth Cave.",
+   "hl": [
+    "cliff"
+   ],
+   "shots": [
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.212
+    },
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "He's badly hurt. He needs to get out by air.",
+   "hl": [
+    "air"
+   ],
+   "shots": [
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.363
+    },
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Black Hawk crew with a rescue hoist flies in.",
+   "hl": [
+    "hoist"
+   ],
+   "shots": [
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.515
+    },
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "Together with the local rescue team, they get him off the mountain.",
+   "hl": [
+    "mountain"
+   ],
+   "shots": [
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.667
+    },
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Straight to a trauma hospital.",
+   "hl": [
+    "trauma"
+   ],
+   "shots": [
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.818
+    },
+    {
+     "file": "el_paso_cliff_fall",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

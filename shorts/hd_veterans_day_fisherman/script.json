@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "400 miles from land",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "November 2024. 400 miles off the coast of San Diego.",
+   "hl": [
+    "400"
+   ],
+   "shots": [
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.767
+    },
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.807
+    }
+   ]
+  },
+  {
+   "vo": "A man on a fishing trip starts showing stroke-like symptoms.",
+   "hl": [
+    "stroke"
+   ],
+   "shots": [
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.212
+    },
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "No hospital for hundreds of miles.",
+   "hl": [
+    "hundreds"
+   ],
+   "shots": [
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.363
+    },
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.439
+    }
+   ],
+   "label": "Problem"
+  },
+  {
+   "vo": "A Pave Hawk rescue helicopter from the California Air National Guard flies out.",
+   "hl": [
+    "pave"
+   ],
+   "shots": [
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.515
+    },
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "It hovers over the boat to evacuate him.",
+   "hl": [
+    "evacuate"
+   ],
+   "shots": [
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.667
+    },
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Distance doesn't stop these crews.",
+   "hl": [
+    "distance"
+   ],
+   "shots": [
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.818
+    },
+    {
+     "file": "veterans_day_fisherman",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

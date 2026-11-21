@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Hurt on Devil's Slide",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "April 2026. Devil's Slide Trail, Pacifica, California.",
+   "hl": [
+    "california"
+   ],
+   "shots": [
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.709
+    },
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.749
+    }
+   ]
+  },
+  {
+   "vo": "A hiker is injured, away from the trail.",
+   "hl": [
+    "injured"
+   ],
+   "shots": [
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.212
+    },
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard helicopter from San Francisco arrives.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.363
+    },
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They lower a rescue swimmer to him.",
+   "hl": [
+    "swimmer"
+   ],
+   "shots": [
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.515
+    },
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "And hoist him up into the helicopter.",
+   "hl": [
+    "hoist"
+   ],
+   "shots": [
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.667
+    },
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Medics are waiting at the trail parking lot.",
+   "hl": [
+    "medics"
+   ],
+   "shots": [
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.818
+    },
+    {
+     "file": "devils_slide_hiker",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

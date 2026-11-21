@@ -1,0 +1,128 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "He ran toward the gunfire",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "November 2021. Lemon Grove, California.",
+   "hl": [
+    "california"
+   ],
+   "shots": [
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.552
+    },
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.592
+    }
+   ]
+  },
+  {
+   "vo": "Marine Corporal Giovanni Brunacini is outside a coffee shop, visiting a friend.",
+   "hl": [
+    "coffee"
+   ],
+   "shots": [
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.19
+    },
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "Then he hears gunshots nearby.",
+   "hl": [
+    "gunshots"
+   ],
+   "shots": [
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.32
+    },
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.385
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A drive-by shooting. A man is wounded.",
+   "hl": [
+    "wounded"
+   ],
+   "shots": [
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.45
+    },
+    {
+     "card": {
+      "file": "marine_runs_to_gunfire",
+      "pos": 0.515,
+      "big": "DRIVE-BY",
+      "small": "A MAN IS SHOT"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "He doesn't run away. He runs toward it.",
+   "hl": [
+    "toward"
+   ],
+   "shots": [
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.58
+    },
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "He uses his Marine combat lifesaving training.",
+   "hl": [
+    "training"
+   ],
+   "shots": [
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.71
+    },
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "And keeps the man alive until paramedics arrive.",
+   "hl": [
+    "alive"
+   ],
+   "shots": [
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.84
+    },
+    {
+     "file": "marine_runs_to_gunfire",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

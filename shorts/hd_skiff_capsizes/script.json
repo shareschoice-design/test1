@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "The weather flipped his boat",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "August 2025. Red Fish Bay, Texas.",
+   "hl": [
+    "texas"
+   ],
+   "shots": [
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.182
+    },
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.222
+    }
+   ]
+  },
+  {
+   "vo": "Bad weather flips an 18-foot skiff.",
+   "hl": [
+    "flips"
+   ],
+   "shots": [
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.212
+    },
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "One man is in distress.",
+   "hl": [
+    "distress"
+   ],
+   "shots": [
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.363
+    },
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Corpus Christi arrives.",
+   "hl": [
+    "corpus"
+   ],
+   "shots": [
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.515
+    },
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "He's hoisted out of the water.",
+   "hl": [
+    "hoisted"
+   ],
+   "shots": [
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.667
+    },
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Safe on dry land.",
+   "hl": [
+    "safe"
+   ],
+   "shots": [
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.818
+    },
+    {
+     "file": "skiff_capsizes",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

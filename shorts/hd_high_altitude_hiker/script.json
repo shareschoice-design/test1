@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "A night alone on the mountain",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "April 2023. Pima County, Arizona.",
+   "hl": [
+    "arizona"
+   ],
+   "shots": [
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.928
+    },
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.95
+    }
+   ]
+  },
+  {
+   "vo": "An injured hiker can't make it back down.",
+   "hl": [
+    "injured"
+   ],
+   "shots": [
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.212
+    },
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "So he spends the whole night on the mountain.",
+   "hl": [
+    "night"
+   ],
+   "shots": [
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.363
+    },
+    {
+     "card": {
+      "file": "high_altitude_hiker",
+      "pos": 0.439,
+      "big": "1 NIGHT",
+      "small": "STUCK ON THE MOUNTAIN"
+     }
+    }
+   ],
+   "label": "Alone"
+  },
+  {
+   "vo": "The next day, a Black Hawk crew lowers a rescue specialist.",
+   "hl": [
+    "specialist"
+   ],
+   "shots": [
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.515
+    },
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "They pull him up into the helicopter.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.667
+    },
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "And fly him straight to the hospital in Tucson.",
+   "hl": [
+    "hospital"
+   ],
+   "shots": [
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.818
+    },
+    {
+     "file": "high_altitude_hiker",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}
