@@ -1,0 +1,123 @@
+[
+ {
+  "id": "s01",
+  "src": "clip",
+  "start": 0.5,
+  "len": 3.0,
+  "blur": [
+   [
+    220,
+    350,
+    640,
+    230
+   ]
+  ],
+  "vo": "This deer only came for a drink.",
+  "cap": "It only came for a drink",
+  "hl": [
+   4,
+   5
+  ]
+ },
+ {
+  "id": "s02",
+  "src": "rewind",
+  "start": 0.0,
+  "dur": 1.0,
+  "vo": "",
+  "cap": "Rewind",
+  "hl": [
+   0
+  ],
+  "blur": [
+   [
+    220,
+    350,
+    640,
+    230
+   ]
+  ]
+ },
+ {
+  "id": "s03",
+  "src": "clip",
+  "start": 8.0,
+  "len": 3.5,
+  "label": "10 minutes earlier",
+  "vo": "Ten minutes earlier. Look closer. That pile of weeds... has teeth.",
+  "cap": "That weed has teeth",
+  "hl": [
+   3
+  ]
+ },
+ {
+  "id": "s04",
+  "src": "img1",
+  "vo": "It's the dry season. The water is shrinking, and every animal for miles has to drink right here.",
+  "cap": "The last water for miles",
+  "hl": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "s05",
+  "src": "img2",
+  "vo": "The mugger croc doesn't chase. It waits, with only its eyes and nostrils above the surface.",
+  "cap": "It doesn't chase",
+  "hl": [
+   2
+  ]
+ },
+ {
+  "id": "s06",
+  "src": "img3",
+  "vo": "Its jaws are packed with tiny sensors that feel the faintest ripple.",
+  "cap": "It feels every ripple",
+  "hl": [
+   3
+  ]
+ },
+ {
+  "id": "s07",
+  "src": "clip",
+  "start": 3.5,
+  "len": 2.0,
+  "blur": [
+   [
+    220,
+    350,
+    640,
+    230
+   ]
+  ],
+  "vo": "One step too close...",
+  "cap": "One step too close",
+  "hl": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "s08",
+  "src": "img4",
+  "label": "It gets worse",
+  "vo": "Mugger crocs have even been seen balancing sticks on their snouts... to lure birds looking for nesting material.",
+  "cap": "They use bait",
+  "hl": [
+   2
+  ]
+ },
+ {
+  "id": "s09",
+  "src": "clip",
+  "start": 12.2,
+  "len": 2.4,
+  "vo": "So when the herd comes back to drink... it's already waiting.",
+  "cap": "It's already waiting",
+  "hl": [
+   1,
+   2
+  ]
+ }
+]

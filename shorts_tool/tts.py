@@ -7,7 +7,7 @@ FX = ("asetrate=22050*0.93,aresample=44100,atempo=1/0.93,bass=g=4:f=120,treble=g
 for s in segs:
     if not s["vo"]: continue
     raw = f"{out}/{s['id']}_raw.wav"
-    subprocess.run(["python3", "-m", "piper", "-m", model, "--length-scale", "1.1", "-f", raw],
+    subprocess.run(["python3", "-m", "piper", "-m", model, "--length-scale", os.environ.get("LS", "1.1"), "-f", raw],
                    input=s["vo"].encode(), check=True, capture_output=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-af", FX, "-ac", "1", f"{out}/{s['id']}.wav"], check=True)
     d = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f"{out}/{s['id']}.wav"],

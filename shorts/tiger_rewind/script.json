@@ -1,0 +1,12 @@
+[
+ {"id":"s01","src":"clip","start":24.4,"len":3.0,"blur":[[250,1190,580,190]],"vo":"The most feared hunter in the jungle... is taking a bath.","cap":"Taking a bath?","hl":[2]},
+ {"id":"s02","src":"rewind","start":20.0,"dur":1.0,"vo":"","cap":"Rewind","hl":[0]},
+ {"id":"s03","src":"clip","start":0.0,"len":3.3,"blur":[[200,390,680,140],[250,1190,580,190]],"label":"2 minutes earlier","vo":"Two minutes earlier, a Bengal tiger heads straight for the river.","cap":"Straight to the river","hl":[3]},
+ {"id":"s04","src":"img1","vo":"In the Indian summer, temperatures can pass forty degrees. Under all that fur, a tiger overheats fast.","cap":"Overheating fast","hl":[0]},
+ {"id":"s05","src":"clip","start":5.0,"len":3.0,"vo":"But watch the tongue. It barely touches the water.","cap":"Watch the tongue","hl":[2]},
+ {"id":"s06","src":"img2","vo":"It flicks up a column of water, then snaps its jaws shut before gravity pulls it back down.","cap":"Beating gravity","hl":[1]},
+ {"id":"s07","src":"clip","start":12.0,"len":3.0,"blur":[[250,1190,580,190]],"vo":"Then it tests the water. Carefully.","cap":"Testing the water","hl":[1,2]},
+ {"id":"s08","src":"img3","vo":"Your house cat hates water. Its ancestors lived in the desert. Tigers live in steamy jungles and mangrove swamps.","cap":"Built for water","hl":[2]},
+ {"id":"s09","src":"clip","start":20.0,"len":3.3,"vo":"And they're powerful swimmers.","cap":"Born swimmers","hl":[1]},
+ {"id":"s10","src":"clip","start":24.6,"len":3.0,"blur":[[250,1190,580,190]],"vo":"This isn't a bath. It's survival.","cap":"It's survival","hl":[1]}
+]

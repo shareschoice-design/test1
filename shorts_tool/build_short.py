@@ -20,6 +20,7 @@ def dur(p):
     return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", p],
                                 capture_output=True, text=True).stdout)
 
+PAD = float(os.environ.get("PAD", "0.55"))
 GRADE = "eq=contrast=1.08:brightness=-0.04:saturation=0.9,vignette=PI/5"
 
 # ---- timing ----
@@ -30,9 +31,9 @@ for s in segs:
     if s["src"] == "rewind":
         d = s["dur"]
     elif s["src"] == "clip":
-        d = max(3.0, s["vo_len"] + 0.55)
+        d = max(s.get("len", 3.0), s["vo_len"] + PAD)
     else:
-        d = max(2.2, s["vo_len"] + 0.6)
+        d = max(2.0, s["vo_len"] + PAD)
     if s is segs[-1]:
         d += 0.6
     s["d"], s["t"] = round(d, 3), round(t, 3)
@@ -54,16 +55,22 @@ for i, s in enumerate(segs):
                lab, size=46, y=H * 0.22)
         caps.append(lab)
     inputs, base = [], ""
+    blur = ""
+    for k, (bx, by, bw, bh) in enumerate(s.get("blur", [])):
+        blur += (f"split[m{k}][x{k}];[x{k}]crop={bw}:{bh}:{bx}:{by},boxblur=22:3[bb{k}];"
+                 f"[m{k}][bb{k}]overlay={bx}:{by},")
     if s["src"] == "clip":
-        speed = min(d / 3.0, 1.6)
+        L = s.get("len", 3.0)
+        speed = min(d / L, 1.6)
         span = d / speed
         inputs = ["-ss", str(s["start"]), "-t", str(span + 0.1), "-i", SRC]
-        base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps={FPS},"
+        base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps={FPS},{blur}"
                 f"setpts={speed}*PTS,{GRADE},trim=duration={d},setpts=PTS-STARTPTS[b]")
     elif s["src"] == "rewind":
-        inputs = ["-ss", "0", "-t", "3.3", "-i", SRC]
+        rs = s.get("start", 0.0)
+        inputs = ["-ss", str(rs), "-t", "3.3", "-i", SRC]
         n = d
-        base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps={FPS},reverse,"
+        base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps={FPS},{blur}reverse,"
                 f"setpts=PTS/3.0,trim=duration={n},setpts=PTS-STARTPTS,"
                 f"eq=contrast=1.3:brightness=-0.06:saturation=0.6,noise=alls=28:allf=t,rgbashift=rh=-12:bh=12,"
                 f"drawbox=y=ih*0.62:w=iw:h=26:color=white@0.25:t=fill,"
