@@ -6,3 +6,4 @@ shorts/*/*.mp4
 footage/hd/*.mp4
 footage/lowres/*.mp4
 footage/**/*.part.mp4
+shorts/*/QC.txt

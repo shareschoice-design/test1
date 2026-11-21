@@ -1,8 +1,1 @@
-{"file":"canada_man_two_dogs","voice":"en_US-amy-medium","music":"music/incompetech_Heartwarming.mp3","hook":["They found the other dog",2],"lines":[
-["December 2022. Off Vancouver Island, Canada.",["canada"],null],
-["A sailboat runs aground.",["aground"],null],
-["A U.S. Coast Guard helicopter rescues a man. And his dog.",["dog"],null],
-["But there was another dog.",["another"],"Wait..."],
-["Later that morning, the crew went back and found it near the boat.",["found"],null],
-["And brought it safely to the Canadian Coast Guard.",["safely"],null],
-["Every life counts. Even four-legged ones.",["every"],null]]}
+{"file": "canada_man_two_dogs", "voice": "en_US-amy-medium", "music": "music/incompetech_Heartwarming.mp3", "hook": ["They found the other dog", 2], "lines": [["December 2022. Off Vancouver Island, Canada.", ["canada"], null], ["A sailboat runs aground.", ["aground"], null], ["A U.S. Coast Guard helicopter rescues a man. And his dog.", ["dog"], null], ["But there was another dog.", ["another"], "Wait...", ["DOG #2", "STILL OUT THERE"]], ["Later that morning, the crew went back and found it near the boat.", ["found"], null], ["And brought it safely to the Canadian Coast Guard.", ["safely"], null], ["Every life counts. Even four-legged ones.", ["every"], null]]}

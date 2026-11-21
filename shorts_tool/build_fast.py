@@ -165,7 +165,34 @@ for i, ln in enumerate(lines):
         frames = int(round(pd * FPS)) + 1
         zin = pi % 2 == 0
         flash = ",eq=brightness=0.35:enable='lt(t,0.07)'" if k == 0 and i > 0 else ""
-        if "img" in shot:
+        if "card" in shot:
+            # our own motion graphic: big gold stat over a blurred, darkened still of the real footage
+            from PIL import Image, ImageDraw, ImageFont, ImageFilter
+            cf = shot["card"]
+            fsrc = os.path.join(FOOT, cf["file"] if os.path.splitext(cf["file"])[1] else cf["file"] + ".mp4")
+            still = f"{WORK}/card{pi:03d}_bg.png"
+            sh("ffmpeg", "-y", "-loglevel", "error", "-ss", str(round(dur(fsrc) * cf.get("pos", 0.5), 2)), "-i", fsrc,
+               "-frames:v", "1", "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}", still)
+            im = Image.open(still).convert("RGB").filter(ImageFilter.GaussianBlur(28))
+            im = Image.blend(im, Image.new("RGB", im.size, (8, 10, 14)), 0.62)
+            d = ImageDraw.Draw(im)
+            xb = os.path.join(FONTDIR, "MontserratXB.ttf")
+            big, small = cf["big"].upper(), cf.get("small", "").upper()
+            size = 230
+            while ImageFont.truetype(xb, size).getlength(big) > W * 0.86 and size > 90: size -= 8
+            fb = ImageFont.truetype(xb, size); fs = ImageFont.truetype(xb, 64)
+            gold = (255, 200, 61)
+            d.text((W / 2 + 6, 700 + 8), big, font=fb, fill=(0, 0, 0), anchor="ms")
+            d.text((W / 2, 700), big, font=fb, fill=gold, anchor="ms")
+            d.line((W / 2 - 160, 760, W / 2 + 160, 760), fill=gold, width=6)
+            if small:
+                d.text((W / 2, 850), small, font=fs, fill=(255, 255, 255), anchor="ms")
+            card_png = f"{WORK}/card{pi:03d}.png"; im.save(card_png)
+            vf = (f"scale=1188:2112,zoompan=z='1+0.06*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps={FPS},"
+                  f"setsar=1,trim=duration={pd}{flash},format=yuv420p")
+            sh("ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-t", str(pd + 0.2), "-i", card_png, "-vf", vf,
+               "-r", str(FPS), "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-an", out)
+        elif "img" in shot:
             img = f"{PROJ}/images/{shot['img']}.png"
             z = f"1.04+0.10*on/{frames}" if zin else f"1.16-0.10*on/{frames}"
             px = "iw/2-(iw/zoom/2)" + ("+on*0.6" if pi % 3 == 0 else "-on*0.6" if pi % 3 == 1 else "")
@@ -337,7 +364,16 @@ sh("ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", fc, "-map", "[
 
 # ---------- 6. mux ----------
 final = f"{PROJ}/{os.path.basename(os.path.normpath(PROJ))}.mp4"
-sh("ffmpeg", "-y", "-loglevel", "error", "-i", f"{WORK}/base.mp4", "-i", f"{WORK}/audio.wav",
-   "-vf", f"ass={WORK}/caps.ass:fontsdir={FONTDIR}", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "slow",
+# channel watermark (our branding on every frame): small logo top-right
+LOGO = os.environ.get("LOGO", os.path.join(REPO, "branding", "unbroken_logo_800.png"))
+if os.path.exists(LOGO):
+    vin = ["-i", f"{WORK}/base.mp4", "-i", f"{WORK}/audio.wav", "-loop", "1", "-i", LOGO]
+    vf = (f"[2:v]scale=120:120,format=rgba,colorchannelmixer=aa=0.85[lg];"
+          f"[0:v]ass={WORK}/caps.ass:fontsdir={FONTDIR}[c];[c][lg]overlay=W-w-40:150:shortest=1[v]")
+    vmap = ["-filter_complex", vf, "-map", "[v]", "-map", "1:a"]
+else:
+    vin = ["-i", f"{WORK}/base.mp4", "-i", f"{WORK}/audio.wav"]
+    vmap = ["-vf", f"ass={WORK}/caps.ass:fontsdir={FONTDIR}", "-map", "0:v", "-map", "1:a"]
+sh("ffmpeg", "-y", "-loglevel", "error", *vin, *vmap, "-c:v", "libx264", "-preset", "slow",
    "-crf", "17", "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart", final)
 print("done", final, round(dur(final), 2))

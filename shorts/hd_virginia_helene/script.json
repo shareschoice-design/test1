@@ -66,8 +66,12 @@
      "pos": 0.45
     },
     {
-     "file": "virginia_helene",
-     "pos": 0.515
+     "card": {
+      "file": "virginia_helene",
+      "pos": 0.515,
+      "big": "13 YEARS",
+      "small": "OF TRAINING"
+     }
     }
    ],
    "label": "Fact"
@@ -99,8 +103,12 @@
      "pos": 0.71
     },
     {
-     "file": "virginia_helene",
-     "pos": 0.775
+     "card": {
+      "file": "virginia_helene",
+      "pos": 0.775,
+      "big": "BRONZE STAR",
+      "small": "VIRGINIA NATIONAL GUARD MEDAL"
+     }
     }
    ]
   },

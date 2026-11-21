@@ -50,8 +50,12 @@
      "pos": 0.32
     },
     {
-     "file": "baboquivari_woman",
-     "pos": 0.385
+     "card": {
+      "file": "baboquivari_woman",
+      "pos": 0.385,
+      "big": "911",
+      "small": "ONE CALL. ONE FIRE."
+     }
     }
    ],
    "label": "Then..."
@@ -83,8 +87,12 @@
      "pos": 0.58
     },
     {
-     "file": "baboquivari_woman",
-     "pos": 0.645
+     "card": {
+      "file": "baboquivari_woman",
+      "pos": 0.645,
+      "big": "BLACK HAWK",
+      "small": "HOIST RESCUE"
+     }
     }
    ]
   },

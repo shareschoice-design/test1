@@ -50,8 +50,12 @@
      "pos": 0.363
     },
     {
-     "file": "pr_cliff_two",
-     "pos": 0.439
+     "card": {
+      "file": "pr_cliff_two",
+      "pos": 0.439,
+      "big": "18 & 19",
+      "small": "YEARS OLD"
+     }
     }
    ],
    "label": "Then..."

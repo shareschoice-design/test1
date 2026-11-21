@@ -67,8 +67,12 @@
      "pos": 0.45
     },
     {
-     "file": "tucson_hoist_2022",
-     "pos": 0.515
+     "card": {
+      "file": "tucson_hoist_2022",
+      "pos": 0.515,
+      "big": "7 MINUTES",
+      "small": "TO THE SCENE"
+     }
     }
    ]
   },

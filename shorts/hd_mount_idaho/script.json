@@ -66,8 +66,12 @@
      "pos": 0.515
     },
     {
-     "file": "mount_idaho_hiker",
-     "pos": 0.591
+     "card": {
+      "file": "mount_idaho_hiker",
+      "pos": 0.591,
+      "big": "#1",
+      "small": "HIGHEST HOIST IN IDAHO"
+     }
     }
    ],
    "label": "Record"
@@ -99,8 +103,12 @@
      "pos": 0.818
     },
     {
-     "file": "mount_idaho_hiker",
-     "pos": 0.894
+     "card": {
+      "file": "mount_idaho_hiker",
+      "pos": 0.894,
+      "big": "6",
+      "small": "RESCUES THIS YEAR"
+     }
     }
    ]
   }

@@ -1,7 +1,1 @@
-{"file":"pr_cliff_two","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Stuck below a cliff",3],"lines":[
-["March 2026. Fajardo, Puerto Rico.",["puerto"],null],
-["Two teenagers are stranded at the bottom of a sea cliff.",["cliff"],null],
-["She's 18 and has a head injury. He's 19.",["injury"],"Then..."],
-["A Coast Guard Jayhawk crew comes in.",["jayhawk"],null],
-["Watch it through the helicopter's thermal camera.",["thermal"],null],
-["Both are hoisted up and flown to a hospital in San Juan.",["hospital"],null]]}
+{"file": "pr_cliff_two", "voice": "en_US-ryan-high", "dark": true, "music": "music/incompetech_Hitman.mp3", "hook": ["Stuck below a cliff", 3], "lines": [["March 2026. Fajardo, Puerto Rico.", ["puerto"], null], ["Two teenagers are stranded at the bottom of a sea cliff.", ["cliff"], null], ["She's 18 and has a head injury. He's 19.", ["injury"], "Then...", ["18 & 19", "YEARS OLD"]], ["A Coast Guard Jayhawk crew comes in.", ["jayhawk"], null], ["Watch it through the helicopter's thermal camera.", ["thermal"], null], ["Both are hoisted up and flown to a hospital in San Juan.", ["hospital"], null]]}

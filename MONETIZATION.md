@@ -1,4 +1,4 @@
-# Backstory – monetisation plan
+# Unbroken – monetisation plan
 
 > Thresholds below are YouTube's published rules as of 2025 – double-check the current numbers in
 > YouTube Studio → Earn before relying on them.
@@ -40,7 +40,7 @@ Plus **Content ID:** a short with a claimed clip sends its revenue to the claima
 
 **Permission request template:**
 ```
-Hi <name>! I run Backstory, a wildlife explainer channel on YouTube Shorts.
+Hi <name>! I run Unbroken, a wildlife explainer channel on YouTube Shorts.
 I'd love to use ~6–9 seconds of your <animal> clip inside an explainer short
 (voiceover + diagrams), with your name and a link in the title/description.
 Would that be OK? Happy to send you the edit before it goes live. Thanks!
@@ -49,7 +49,7 @@ Would that be OK? Happy to send you the edit before it goes live. Thanks!
 ## 5. What it can realistically earn
 
 - **Shorts** pay little: roughly $0.02–0.10 per 1,000 views (varies by audience/country). 10M views ≈ a few hundred dollars.
-- **Long-form pays 20–50× more per view.** After ~30 shorts, compile them into 8–12 min horizontal "Backstory" episodes. This also counts toward the 4,000-watch-hour route.
+- **Long-form pays 20–50× more per view.** After ~30 shorts, compile them into 8–12 min horizontal "Unbroken" episodes. This also counts toward the 4,000-watch-hour route.
 - **Other platforms:** TikTok pays only for videos over 1 minute (make 61–70 s cuts); Facebook Reels and Instagram also pay. The same footage licence must cover them.
 
 ## 6. 90-day roadmap

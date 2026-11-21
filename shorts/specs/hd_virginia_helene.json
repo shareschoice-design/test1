@@ -1,8 +1,1 @@
-{"file":"virginia_helene","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Their first real rescue",3],"lines":[
-["October 2024. Hurricane Helene floods Virginia.",["virginia"],null],
-["People are trapped in the water.",["trapped"],null],
-["The Virginia Helicopter Aquatic Rescue Team takes off.",["rescue"],null],
-["They've trained every quarter since 2011.",["2011"],"Fact"],
-["This was their first major real-world rescue.",["first"],null],
-["They pulled multiple people out of the floodwater.",["multiple"],null],
-["Thirteen years of training. For this day.",["day"],null]]}
+{"file": "virginia_helene", "voice": "en_US-ryan-high", "dark": true, "music": "music/incompetech_Rising_Tide.mp3", "hook": ["Their first real rescue", 3], "lines": [["October 2024. Hurricane Helene floods Virginia.", ["virginia"], null], ["People are trapped in the water.", ["trapped"], null], ["The Virginia Helicopter Aquatic Rescue Team takes off.", ["rescue"], null], ["They've trained every quarter since 2011.", ["2011"], "Fact", ["13 YEARS", "OF TRAINING"]], ["This was their first major real-world rescue.", ["first"], null], ["They pulled multiple people out of the floodwater.", ["multiple"], null, ["BRONZE STAR", "VIRGINIA NATIONAL GUARD MEDAL"]], ["Thirteen years of training. For this day.", ["day"], null]]}

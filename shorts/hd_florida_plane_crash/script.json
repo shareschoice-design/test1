@@ -34,8 +34,12 @@
      "pos": 0.19
     },
     {
-     "file": "florida_11_survivors",
-     "pos": 0.255
+     "card": {
+      "file": "florida_11_survivors",
+      "pos": 0.255,
+      "big": "PLANE DOWN",
+      "small": "OFF MELBOURNE, FL"
+     }
     }
    ]
   },
@@ -67,8 +71,12 @@
      "pos": 0.45
     },
     {
-     "file": "florida_11_survivors",
-     "pos": 0.515
+     "card": {
+      "file": "florida_11_survivors",
+      "pos": 0.515,
+      "big": "11",
+      "small": "SURVIVORS"
+     }
     }
    ]
   },

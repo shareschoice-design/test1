@@ -1,8 +1,1 @@
-{"file":"baboquivari_woman","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Trapped on a mountain",2],"lines":[
-["June 2023. The Baboquivari Mountains, Arizona.",["arizona"],null],
-["An injured woman is trapped near the summit.",["trapped"],null],
-["She calls 911. And she starts a fire so she can be found.",["fire"],"Then..."],
-["The terrain is too rough for anyone to reach her on foot.",["rough"],null],
-["A Black Hawk crew sends down a rescue specialist.",["black"],null],
-["He moves her somewhere safer for the hoist.",["hoist"],null],
-["Then she's lifted off the mountain to a hospital.",["lifted"],null]]}
+{"file": "baboquivari_woman", "voice": "en_US-ryan-high", "dark": true, "music": "music/incompetech_Hitman.mp3", "hook": ["Trapped on a mountain", 2], "lines": [["June 2023. The Baboquivari Mountains, Arizona.", ["arizona"], null], ["An injured woman is trapped near the summit.", ["trapped"], null], ["She calls 911. And she starts a fire so she can be found.", ["fire"], "Then...", ["911", "ONE CALL. ONE FIRE."]], ["The terrain is too rough for anyone to reach her on foot.", ["rough"], null], ["A Black Hawk crew sends down a rescue specialist.", ["black"], null, ["BLACK HAWK", "HOIST RESCUE"]], ["He moves her somewhere safer for the hoist.", ["hoist"], null], ["Then she's lifted off the mountain to a hospital.", ["lifted"], null]]}

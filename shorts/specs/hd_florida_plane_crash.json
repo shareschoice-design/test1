@@ -1,8 +1,1 @@
-{"file":"florida_11_survivors","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Their plane went down",3],"lines":[
-["May 2026. Off the coast of Melbourne, Florida.",["florida"],null],
-["A civilian plane goes down in the ocean.",["ocean"],null],
-["Survivors are in the water.",["survivors"],"Then..."],
-["An Air Force HC-130J circles overhead and drops a rescue kit.",["kit"],null],
-["A Jolly Green helicopter arrives with pararescuemen.",["pararescuemen"],null],
-["They pull survivors out of the sea.",["survivors"],null],
-["And fly them to waiting medics.",["medics"],null]]}
+{"file": "florida_11_survivors", "voice": "en_US-ryan-high", "dark": true, "music": "music/incompetech_Rising_Tide.mp3", "hook": ["Their plane went down", 3], "lines": [["May 2026. Off the coast of Melbourne, Florida.", ["florida"], null], ["A civilian plane goes down in the ocean.", ["ocean"], null, ["PLANE DOWN", "OFF MELBOURNE, FL"]], ["Survivors are in the water.", ["survivors"], "Then..."], ["An Air Force HC-130J circles overhead and drops a rescue kit.", ["kit"], null, ["11", "SURVIVORS"]], ["A Jolly Green helicopter arrives with pararescuemen.", ["pararescuemen"], null], ["They pull survivors out of the sea.", ["survivors"], null], ["And fly them to waiting medics.", ["medics"], null]]}

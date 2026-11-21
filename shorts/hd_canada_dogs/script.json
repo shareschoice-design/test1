@@ -66,8 +66,12 @@
      "pos": 0.45
     },
     {
-     "file": "canada_man_two_dogs",
-     "pos": 0.515
+     "card": {
+      "file": "canada_man_two_dogs",
+      "pos": 0.515,
+      "big": "DOG #2",
+      "small": "STILL OUT THERE"
+     }
     }
    ],
    "label": "Wait..."

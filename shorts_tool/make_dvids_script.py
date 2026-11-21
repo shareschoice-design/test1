@@ -18,10 +18,14 @@ def peak_pos(name):
 spec = json.load(open(sys.argv[1])); out = sys.argv[2]
 n = len(spec["lines"]); a, b = spec.get("range", [0.06, 0.97])
 lines = []
-for i, (vo, hl, label) in enumerate(spec["lines"]):
+for i, entry in enumerate(spec["lines"]):
+    vo, hl, label = entry[:3]
+    card = entry[3] if len(entry) > 3 else None
     p0 = a + (b - a) * i / n; p1 = a + (b - a) * (i + 0.5) / n
     ln = {"vo": vo, "hl": hl, "shots": [{"file": spec["file"], "pos": round(p0, 3)}, {"file": spec["file"], "pos": round(p1, 3)}]}
     if label: ln["label"] = label
+    if card:   # our own stat card replaces the second shot of this line
+        ln["shots"][1] = {"card": {"file": spec["file"], "pos": round(p1, 3), "big": card[0], "small": card[1] if len(card) > 1 else ""}}
     lines.append(ln)
 if spec.get("hook_peak", True):
     pk = spec.get("hook_pos", peak_pos(spec["file"]))

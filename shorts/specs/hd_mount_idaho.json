@@ -1,7 +1,1 @@
-{"file":"mount_idaho_hiker","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["The highest rescue ever",3],"lines":[
-["Mount Idaho. One of the state's highest peaks.",["highest"],null],
-["A hiker is injured on a remote stretch of the mountain.",["injured"],null],
-["The Idaho Army National Guard sends a Black Hawk.",["black"],null],
-["It became Idaho's highest hoist rescue ever.",["highest"],"Record"],
-["The hiker is lifted off the mountain.",["lifted"],null],
-["Their sixth rescue that year.",["sixth"],null]]}
+{"file": "mount_idaho_hiker", "voice": "en_US-ryan-high", "dark": true, "music": "music/incompetech_Rising_Tide.mp3", "hook": ["The highest rescue ever", 3], "lines": [["Mount Idaho. One of the state's highest peaks.", ["highest"], null], ["A hiker is injured on a remote stretch of the mountain.", ["injured"], null], ["The Idaho Army National Guard sends a Black Hawk.", ["black"], null], ["It became Idaho's highest hoist rescue ever.", ["highest"], "Record", ["#1", "HIGHEST HOIST IN IDAHO"]], ["The hiker is lifted off the mountain.", ["lifted"], null], ["Their sixth rescue that year.", ["sixth"], null, ["6", "RESCUES THIS YEAR"]]]}

@@ -1,25 +1,25 @@
-# Backstory – channel kit
+# Unbroken – channel kit
 
 ## Name
-**Backstory**
-Handle: `@BackstoryShorts` → fallbacks if taken: `@TheBackstory`, `@BackstoryExplained`, `@BackstoryHQ`
+**Unbroken**
+Handle: `@UnbrokenStories` → fallbacks: `@UnbrokenShorts`, `@TheUnbroken`, `@UnbrokenTrue`
 (Check availability in YouTube Studio → Customization → Basic info.)
 
-Tagline: **True stories. Real footage.**
+Tagline: **Real people. Unbreakable will.**
 
-Main content: real rescues, surprise homecomings, reunions and everyday heroes – told in 20–40 s with the real footage (public-domain U.S. government video, credited in every description).
-Formats: **Rescue** (danger → hero → saved), **Homecoming** (waiting → surprise → hug), **Backstory** (the moment, then how it happened).
+Topics: heroes and heroines, survival against the odds, willpower, rescues, comebacks, homecomings – real people at their strongest moment.
+Formats: **Survival** (danger → fight → saved), **Hero** (ordinary person → split-second choice → life saved), **Homecoming** (waiting → surprise → hug).
 
 ## Channel description (paste into YouTube → Customization → Basic info)
 
 ```
-True stories. Real footage. 🎥
+Real people. Unbreakable will. 🔥
 
-Rescues from storms, cliffs and open ocean. Soldiers surprising their families after months away. Strangers who saved a life on their way home.
+Survivors who refused to give up. Heroes who ran toward danger. Families who waited months for one hug.
 
-Every Backstory short is a real moment, filmed by the people who were there – and the story of how it happened.
+Every Unbroken short is a true story, told with the real footage of the moment it happened.
 
-New true story every day. Subscribe so you don't miss the next one.
+New true story every day. Subscribe and don't miss the next one.
 
 Footage: public-domain video from U.S. government sources (DVIDS, U.S. Coast Guard, NASA), credited in each video. Appearance of DoD visual information does not imply or constitute DoD endorsement.
 📩 Contact: <your business email>
@@ -27,7 +27,7 @@ Footage: public-domain video from U.S. government sources (DVIDS, U.S. Coast Gua
 
 ## Channel keywords (Settings → Channel → Basic info → Keywords)
 ```
-true story, real footage, rescue, coast guard rescue, helicopter rescue, military homecoming, soldier surprise, reunion, heroes, emotional, wholesome, backstory, shorts
+unbroken, true story, survival, real heroes, willpower, never give up, rescue, helicopter rescue, coast guard, military homecoming, soldier surprise, motivation, inspiring, shorts
 ```
 
 ## Branding
@@ -52,7 +52,7 @@ true story, real footage, rescue, coast guard rescue, helicopter rescue, militar
 Here's the backstory. 🔁
 
 🎥 Original footage: <creator / channel name + link>
-Explainer visuals & narration: Backstory
+Explainer visuals & narration: Unbroken
 
 #explained #facts #shorts + 1-2 topic tags
 ```

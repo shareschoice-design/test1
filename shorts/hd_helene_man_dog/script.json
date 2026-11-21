@@ -34,8 +34,12 @@
      "pos": 0.19
     },
     {
-     "file": "helene_man_dog",
-     "pos": 0.255
+     "card": {
+      "file": "helene_man_dog",
+      "pos": 0.255,
+      "big": "25 MILES",
+      "small": "OFF SANIBEL ISLAND"
+     }
     }
    ]
   },
