@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "The wind took him",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "June 2019. Bodega Bay, California.",
+   "hl": [
+    "california"
+   ],
+   "shots": [
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.456
+    },
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.496
+    }
+   ]
+  },
+  {
+   "vo": "A paddleboarder gets hit by strong winds.",
+   "hl": [
+    "winds"
+   ],
+   "shots": [
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.212
+    },
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "He ends up stranded on the jetty rocks.",
+   "hl": [
+    "jetty"
+   ],
+   "shots": [
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.363
+    },
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard lifeboat races out.",
+   "hl": [
+    "lifeboat"
+   ],
+   "shots": [
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.515
+    },
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "A surface swimmer jumps in to get him.",
+   "hl": [
+    "swimmer"
+   ],
+   "shots": [
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.667
+    },
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Rescued from the rocks.",
+   "hl": [
+    "rescued"
+   ],
+   "shots": [
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.818
+    },
+    {
+     "file": "paddleboarder_jetty",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

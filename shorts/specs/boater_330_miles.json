@@ -1,0 +1,7 @@
+{"file":"boater_330_miles","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["330 miles from land",3],"lines":[
+["330 nautical miles east of Cape Cod.",["330"],null],
+["A sailboat called Ishmael is disabled.",["disabled"],null],
+["Nothing but ocean in every direction.",["ocean"],"Then..."],
+["A Coast Guard plane from Cape Cod flies out to find it.",["plane"],null],
+["They drop supplies to the person on board.",["supplies"],null],
+["Out here, help comes from the sky.",["sky"],null]]}

@@ -1,0 +1,8 @@
+{"file":"fisherman_life_raft","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["His boat sank",2],"lines":[
+["Off Martha's Vineyard, Massachusetts.",["massachusetts"],null],
+["The fishing vessel Leonardo capsizes and sinks.",["sinks"],null],
+["One fisherman makes it into a life raft.",["raft"],"Then..."],
+["A Coast Guard helicopter from Cape Cod arrives.",["helicopter"],null],
+["A rescue swimmer rappels down to the raft.",["swimmer"],null],
+["And gets him into the rescue basket.",["basket"],null],
+["From a sinking boat to the sky.",["sky"],null]]}

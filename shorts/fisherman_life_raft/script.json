@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "His boat sank",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "Off Martha's Vineyard, Massachusetts.",
+   "hl": [
+    "massachusetts"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.669
+    },
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.709
+    }
+   ]
+  },
+  {
+   "vo": "The fishing vessel Leonardo capsizes and sinks.",
+   "hl": [
+    "sinks"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.19
+    },
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "One fisherman makes it into a life raft.",
+   "hl": [
+    "raft"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.32
+    },
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.385
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Cape Cod arrives.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.45
+    },
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "A rescue swimmer rappels down to the raft.",
+   "hl": [
+    "swimmer"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.58
+    },
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "And gets him into the rescue basket.",
+   "hl": [
+    "basket"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.71
+    },
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "From a sinking boat to the sky.",
+   "hl": [
+    "sky"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.84
+    },
+    {
+     "file": "fisherman_life_raft",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

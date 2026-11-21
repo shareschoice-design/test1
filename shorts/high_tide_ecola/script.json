@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "The tide trapped them",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "May 2019. Ecola State Park, Oregon.",
+   "hl": [
+    "oregon"
+   ],
+   "shots": [
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.84
+    },
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.88
+    }
+   ]
+  },
+  {
+   "vo": "Two people walk out near Indian Beach.",
+   "hl": [
+    "beach"
+   ],
+   "shots": [
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.212
+    },
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Then the tide comes in. And cuts them off.",
+   "hl": [
+    "tide"
+   ],
+   "shots": [
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.363
+    },
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "No way back.",
+   "hl": [
+    "way"
+   ],
+   "shots": [
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.515
+    },
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard Jayhawk helicopter hoists them out.",
+   "hl": [
+    "jayhawk"
+   ],
+   "shots": [
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.667
+    },
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Both uninjured. Both lucky.",
+   "hl": [
+    "lucky"
+   ],
+   "shots": [
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.818
+    },
+    {
+     "file": "high_tide_ecola",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "His sailboat was dead",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "October 2019. Two miles south of Smith Island, Maryland.",
+   "hl": [
+    "maryland"
+   ],
+   "shots": [
+    {
+     "file": "man_two_dogs",
+     "pos": 0.856
+    },
+    {
+     "file": "man_two_dogs",
+     "pos": 0.896
+    }
+   ]
+  },
+  {
+   "vo": "A sailboat is disabled by bad weather.",
+   "hl": [
+    "disabled"
+   ],
+   "shots": [
+    {
+     "file": "man_two_dogs",
+     "pos": 0.19
+    },
+    {
+     "file": "man_two_dogs",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "On board: one man. And his two dogs.",
+   "hl": [
+    "dogs"
+   ],
+   "shots": [
+    {
+     "file": "man_two_dogs",
+     "pos": 0.32
+    },
+    {
+     "file": "man_two_dogs",
+     "pos": 0.385
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "He calls the Coast Guard.",
+   "hl": [
+    "coast"
+   ],
+   "shots": [
+    {
+     "file": "man_two_dogs",
+     "pos": 0.45
+    },
+    {
+     "file": "man_two_dogs",
+     "pos": 0.515
+    }
+   ]
+  },
+  {
+   "vo": "A helicopter crew hoists him up.",
+   "hl": [
+    "hoists"
+   ],
+   "shots": [
+    {
+     "file": "man_two_dogs",
+     "pos": 0.58
+    },
+    {
+     "file": "man_two_dogs",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "Then dog number one. Then dog number two.",
+   "hl": [
+    "two"
+   ],
+   "shots": [
+    {
+     "file": "man_two_dogs",
+     "pos": 0.71
+    },
+    {
+     "file": "man_two_dogs",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Nobody stays behind.",
+   "hl": [
+    "nobody"
+   ],
+   "shots": [
+    {
+     "file": "man_two_dogs",
+     "pos": 0.84
+    },
+    {
+     "file": "man_two_dogs",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}

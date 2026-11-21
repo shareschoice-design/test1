@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Stranded on a roof",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "Hurricane Florence. North Carolina is underwater.",
+   "hl": [
+    "underwater"
+   ],
+   "shots": [
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.722
+    },
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.762
+    }
+   ]
+  },
+  {
+   "vo": "And on top of a roof, someone is waiting.",
+   "hl": [
+    "roof"
+   ],
+   "shots": [
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.212
+    },
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "A dog. Stranded by the flood.",
+   "hl": [
+    "dog"
+   ],
+   "shots": [
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.363
+    },
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.439
+    }
+   ],
+   "label": "Look"
+  },
+  {
+   "vo": "Connecticut National Guard soldiers fly in to help.",
+   "hl": [
+    "connecticut"
+   ],
+   "shots": [
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.515
+    },
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "They came from one of 13 states that sent helicopters.",
+   "hl": [
+    "13"
+   ],
+   "shots": [
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.667
+    },
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "And no one gets left behind. Not even the dog.",
+   "hl": [
+    "dog"
+   ],
+   "shots": [
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.818
+    },
+    {
+     "file": "dog_on_roof_florence",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

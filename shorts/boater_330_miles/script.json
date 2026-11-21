@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "330 miles from land",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "330 nautical miles east of Cape Cod.",
+   "hl": [
+    "330"
+   ],
+   "shots": [
+    {
+     "file": "boater_330_miles",
+     "pos": 0.149
+    },
+    {
+     "file": "boater_330_miles",
+     "pos": 0.189
+    }
+   ]
+  },
+  {
+   "vo": "A sailboat called Ishmael is disabled.",
+   "hl": [
+    "disabled"
+   ],
+   "shots": [
+    {
+     "file": "boater_330_miles",
+     "pos": 0.212
+    },
+    {
+     "file": "boater_330_miles",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Nothing but ocean in every direction.",
+   "hl": [
+    "ocean"
+   ],
+   "shots": [
+    {
+     "file": "boater_330_miles",
+     "pos": 0.363
+    },
+    {
+     "file": "boater_330_miles",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard plane from Cape Cod flies out to find it.",
+   "hl": [
+    "plane"
+   ],
+   "shots": [
+    {
+     "file": "boater_330_miles",
+     "pos": 0.515
+    },
+    {
+     "file": "boater_330_miles",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "They drop supplies to the person on board.",
+   "hl": [
+    "supplies"
+   ],
+   "shots": [
+    {
+     "file": "boater_330_miles",
+     "pos": 0.667
+    },
+    {
+     "file": "boater_330_miles",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Out here, help comes from the sky.",
+   "hl": [
+    "sky"
+   ],
+   "shots": [
+    {
+     "file": "boater_330_miles",
+     "pos": 0.818
+    },
+    {
+     "file": "boater_330_miles",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Trapped all night",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "July 2019. Ludington, Michigan.",
+   "hl": [
+    "michigan"
+   ],
+   "shots": [
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.396
+    },
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.436
+    }
+   ]
+  },
+  {
+   "vo": "A woman and her dog are stuck at the bottom of a cliff.",
+   "hl": [
+    "cliff"
+   ],
+   "shots": [
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.212
+    },
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "All night.",
+   "hl": [
+    "night"
+   ],
+   "shots": [
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.363
+    },
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "In the morning, a Coast Guard helicopter arrives.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.515
+    },
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "The crew hoists her up into the aircraft.",
+   "hl": [
+    "hoists"
+   ],
+   "shots": [
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.667
+    },
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "And yes, the dog was rescued too.",
+   "hl": [
+    "dog"
+   ],
+   "shots": [
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.818
+    },
+    {
+     "file": "woman_dog_cliff",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Minutes after his wedding",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "He had just gotten married.",
+   "hl": [
+    "married"
+   ],
+   "shots": [
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.248
+    },
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.288
+    }
+   ]
+  },
+  {
+   "vo": "Coast Guard Petty Officer Zach Edwards. Orange Beach, Alabama.",
+   "hl": [
+    "edwards"
+   ],
+   "shots": [
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.19
+    },
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.255
+    }
+   ]
+  },
+  {
+   "vo": "August 2018. The ceremony had just ended.",
+   "hl": [
+    "ended"
+   ],
+   "shots": [
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.32
+    },
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.385
+    }
+   ]
+  },
+  {
+   "vo": "Then someone in the water started drowning.",
+   "hl": [
+    "drowning"
+   ],
+   "shots": [
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.45
+    },
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.515
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "He swam straight out. Still in his wedding clothes.",
+   "hl": [
+    "swam"
+   ],
+   "shots": [
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.58
+    },
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.645
+    }
+   ]
+  },
+  {
+   "vo": "And he pulled the man to safety.",
+   "hl": [
+    "safety"
+   ],
+   "shots": [
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.71
+    },
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.775
+    }
+   ]
+  },
+  {
+   "vo": "Some vows you keep on day one.",
+   "hl": [
+    "vows"
+   ],
+   "shots": [
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.84
+    },
+    {
+     "file": "married_then_saves_life",
+     "pos": 0.905
+    }
+   ]
+  }
+ ]
+}
