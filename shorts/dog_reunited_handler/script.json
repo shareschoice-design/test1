@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "She came back for him",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "Rick was an explosive detection dog.",
+   "hl": [
+    "rick"
+   ],
+   "shots": [
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.03
+    },
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "His partner was Staff Sergeant Amanda Cubbage.",
+   "hl": [
+    "partner"
+   ],
+   "shots": [
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.164
+    },
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "They served together in South Korea.",
+   "hl": [
+    "korea"
+   ],
+   "shots": [
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.299
+    },
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.366
+    }
+   ]
+  },
+  {
+   "vo": "Then her tour ended. And they were split up.",
+   "hl": [
+    "split"
+   ],
+   "shots": [
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.433
+    },
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.5
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Eleven months later, Rick retired.",
+   "hl": [
+    "retired"
+   ],
+   "shots": [
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.567
+    },
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "And she adopted him.",
+   "hl": [
+    "adopted"
+   ],
+   "shots": [
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.701
+    },
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "Partners on duty. Family for life.",
+   "hl": [
+    "family"
+   ],
+   "shots": [
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.836
+    },
+    {
+     "file": "dog_reunited_handler",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

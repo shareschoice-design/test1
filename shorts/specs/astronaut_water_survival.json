@@ -1,0 +1,9 @@
+{"file":"astronaut_water_survival","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Astronauts in the water",2],"range":[0.03,0.97],"lines":[
+["Before going to space, these astronauts have to survive a crash.",["crash"],null],
+["Into the water.",["water"],"Wait..."],
+["NASA sent them to Fairchild Air Force Base for water survival training.",["survival"],null],
+["They practice escaping a simulated crash landing.",["escaping"],null],
+["Living in a life raft.",["raft"],null],
+["Signaling for rescue.",["signaling"],null],
+["And getting hoisted out of the sea.",["hoisted"],null],
+["Because getting home can be the hardest part.",["home"],null]]}

@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "13 hours lost at sea",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "March 2017. The Gulf of Mexico, west of Clearwater Beach.",
+   "hl": [
+    "gulf"
+   ],
+   "shots": [
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.03
+    },
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "A boater has been adrift for over 13 hours.",
+   "hl": [
+    "13"
+   ],
+   "shots": [
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.164
+    },
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "Eighteen miles from shore.",
+   "hl": [
+    "eighteen"
+   ],
+   "shots": [
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.299
+    },
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.366
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Hercules plane searches from above.",
+   "hl": [
+    "hercules"
+   ],
+   "shots": [
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.433
+    },
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.5
+    }
+   ]
+  },
+  {
+   "vo": "They spot him.",
+   "hl": [
+    "spot"
+   ],
+   "shots": [
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.567
+    },
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "A rescue boat races out and tows him home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.701
+    },
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "Thirteen hours lost. Then found.",
+   "hl": [
+    "found"
+   ],
+   "shots": [
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.836
+    },
+    {
+     "file": "boater_adrift_13h",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

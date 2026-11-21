@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Full afterburner",
+  "red": 1
+ },
+ "lines": [
+  {
+   "vo": "This is an F-15E Strike Eagle.",
+   "hl": [
+    "strike"
+   ],
+   "shots": [
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.03
+    },
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "And it's not flying. It's strapped down.",
+   "hl": [
+    "strapped"
+   ],
+   "shots": [
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.164
+    },
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.231
+    }
+   ],
+   "label": "Wait..."
+  },
+  {
+   "vo": "Maintainers are running the engine at full power.",
+   "hl": [
+    "full"
+   ],
+   "shots": [
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.299
+    },
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.366
+    }
+   ]
+  },
+  {
+   "vo": "Then they light the afterburner.",
+   "hl": [
+    "afterburner"
+   ],
+   "shots": [
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.433
+    },
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.5
+    }
+   ]
+  },
+  {
+   "vo": "Extra fuel is sprayed straight into the hot exhaust.",
+   "hl": [
+    "fuel"
+   ],
+   "shots": [
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.567
+    },
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "That's the flame you see.",
+   "hl": [
+    "flame"
+   ],
+   "shots": [
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.701
+    },
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "They test it on the ground, so it never fails in the air.",
+   "hl": [
+    "fails"
+   ],
+   "shots": [
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.836
+    },
+    {
+     "file": "strike_eagle_afterburner",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

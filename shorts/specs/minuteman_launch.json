@@ -1,0 +1,8 @@
+{"file":"minuteman_launch","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Picked at random",2],"range":[0.03,0.97],"lines":[
+["This missile was picked at random from a silo in North Dakota.",["random"],null],
+["It's a Minuteman III. An intercontinental ballistic missile.",["intercontinental"],null],
+["Unarmed, carrying only a test reentry vehicle.",["unarmed"],"Relax"],
+["It was trucked to California and reassembled.",["california"],null],
+["Then launched from Vandenberg.",["launched"],null],
+["It flew about 4,200 miles to the Marshall Islands.",["4,200"],null],
+["Why test a random one? To prove any of them would work.",["any"],null]]}

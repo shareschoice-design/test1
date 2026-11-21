@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "His kayak flipped",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 2017. Florida Bay, near the Everglades.",
+   "hl": [
+    "everglades"
+   ],
+   "shots": [
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.03
+    },
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "A kayaker is racing in the WaterTribe challenge.",
+   "hl": [
+    "challenge"
+   ],
+   "shots": [
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.164
+    },
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "Then his kayak capsizes.",
+   "hl": [
+    "capsizes"
+   ],
+   "shots": [
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.299
+    },
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.366
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "He activates his personal locator beacon.",
+   "hl": [
+    "beacon"
+   ],
+   "shots": [
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.433
+    },
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.5
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard helicopter from Miami finds him.",
+   "hl": [
+    "miami"
+   ],
+   "shots": [
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.567
+    },
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "A rescue swimmer goes into the water.",
+   "hl": [
+    "swimmer"
+   ],
+   "shots": [
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.701
+    },
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "One small beacon. One life saved.",
+   "hl": [
+    "beacon"
+   ],
+   "shots": [
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.836
+    },
+    {
+     "file": "kayaker_everglades",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

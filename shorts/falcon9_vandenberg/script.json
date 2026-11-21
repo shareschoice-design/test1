@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Part of history's biggest upgrade",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "January 2017. Vandenberg Air Force Base, California.",
+   "hl": [
+    "california"
+   ],
+   "shots": [
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.03
+    },
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "A Falcon 9 rocket sits on the pad.",
+   "hl": [
+    "falcon"
+   ],
+   "shots": [
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.164
+    },
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "On board: Iridium NEXT satellites.",
+   "hl": [
+    "iridium"
+   ],
+   "shots": [
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.299
+    },
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.366
+    }
+   ]
+  },
+  {
+   "vo": "They're replacing the world's largest commercial network of low-orbit satellites.",
+   "hl": [
+    "largest"
+   ],
+   "shots": [
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.433
+    },
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.5
+    }
+   ],
+   "label": "Why it matters"
+  },
+  {
+   "vo": "Called one of the largest tech upgrades in history.",
+   "hl": [
+    "upgrade"
+   ],
+   "shots": [
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.567
+    },
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "Three... two... one...",
+   "hl": [
+    "one"
+   ],
+   "shots": [
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.701
+    },
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "Liftoff.",
+   "hl": [
+    "liftoff"
+   ],
+   "shots": [
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.836
+    },
+    {
+     "file": "falcon9_vandenberg",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

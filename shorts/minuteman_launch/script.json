@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Picked at random",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "This missile was picked at random from a silo in North Dakota.",
+   "hl": [
+    "random"
+   ],
+   "shots": [
+    {
+     "file": "minuteman_launch",
+     "pos": 0.03
+    },
+    {
+     "file": "minuteman_launch",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "It's a Minuteman III. An intercontinental ballistic missile.",
+   "hl": [
+    "intercontinental"
+   ],
+   "shots": [
+    {
+     "file": "minuteman_launch",
+     "pos": 0.164
+    },
+    {
+     "file": "minuteman_launch",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "Unarmed, carrying only a test reentry vehicle.",
+   "hl": [
+    "unarmed"
+   ],
+   "shots": [
+    {
+     "file": "minuteman_launch",
+     "pos": 0.299
+    },
+    {
+     "file": "minuteman_launch",
+     "pos": 0.366
+    }
+   ],
+   "label": "Relax"
+  },
+  {
+   "vo": "It was trucked to California and reassembled.",
+   "hl": [
+    "california"
+   ],
+   "shots": [
+    {
+     "file": "minuteman_launch",
+     "pos": 0.433
+    },
+    {
+     "file": "minuteman_launch",
+     "pos": 0.5
+    }
+   ]
+  },
+  {
+   "vo": "Then launched from Vandenberg.",
+   "hl": [
+    "launched"
+   ],
+   "shots": [
+    {
+     "file": "minuteman_launch",
+     "pos": 0.567
+    },
+    {
+     "file": "minuteman_launch",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "It flew about 4,200 miles to the Marshall Islands.",
+   "hl": [
+    "4,200"
+   ],
+   "shots": [
+    {
+     "file": "minuteman_launch",
+     "pos": 0.701
+    },
+    {
+     "file": "minuteman_launch",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "Why test a random one? To prove any of them would work.",
+   "hl": [
+    "any"
+   ],
+   "shots": [
+    {
+     "file": "minuteman_launch",
+     "pos": 0.836
+    },
+    {
+     "file": "minuteman_launch",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}

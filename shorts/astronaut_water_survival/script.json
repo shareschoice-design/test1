@@ -1,0 +1,140 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Astronauts in the water",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "Before going to space, these astronauts have to survive a crash.",
+   "hl": [
+    "crash"
+   ],
+   "shots": [
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.03
+    },
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.089
+    }
+   ]
+  },
+  {
+   "vo": "Into the water.",
+   "hl": [
+    "water"
+   ],
+   "shots": [
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.147
+    },
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.206
+    }
+   ],
+   "label": "Wait..."
+  },
+  {
+   "vo": "NASA sent them to Fairchild Air Force Base for water survival training.",
+   "hl": [
+    "survival"
+   ],
+   "shots": [
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.265
+    },
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.324
+    }
+   ]
+  },
+  {
+   "vo": "They practice escaping a simulated crash landing.",
+   "hl": [
+    "escaping"
+   ],
+   "shots": [
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.382
+    },
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.441
+    }
+   ]
+  },
+  {
+   "vo": "Living in a life raft.",
+   "hl": [
+    "raft"
+   ],
+   "shots": [
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.5
+    },
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.559
+    }
+   ]
+  },
+  {
+   "vo": "Signaling for rescue.",
+   "hl": [
+    "signaling"
+   ],
+   "shots": [
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.617
+    },
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.676
+    }
+   ]
+  },
+  {
+   "vo": "And getting hoisted out of the sea.",
+   "hl": [
+    "hoisted"
+   ],
+   "shots": [
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.735
+    },
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.794
+    }
+   ]
+  },
+  {
+   "vo": "Because getting home can be the hardest part.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.853
+    },
+    {
+     "file": "astronaut_water_survival",
+     "pos": 0.911
+    }
+   ]
+  }
+ ]
+}

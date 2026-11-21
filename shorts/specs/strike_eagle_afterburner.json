@@ -1,0 +1,8 @@
+{"file":"strike_eagle_afterburner","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Full afterburner",1],"range":[0.03,0.97],"lines":[
+["This is an F-15E Strike Eagle.",["strike"],null],
+["And it's not flying. It's strapped down.",["strapped"],"Wait..."],
+["Maintainers are running the engine at full power.",["full"],null],
+["Then they light the afterburner.",["afterburner"],null],
+["Extra fuel is sprayed straight into the hot exhaust.",["fuel"],null],
+["That's the flame you see.",["flame"],null],
+["They test it on the ground, so it never fails in the air.",["fails"],null]]}

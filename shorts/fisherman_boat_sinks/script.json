@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "His boat was sinking",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 2017. Less than a mile off Fort De Soto, Florida.",
+   "hl": [
+    "florida"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.03
+    },
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.097
+    }
+   ]
+  },
+  {
+   "vo": "A fisherman in a 12-foot dinghy calls mayday.",
+   "hl": [
+    "mayday"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.164
+    },
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.231
+    }
+   ]
+  },
+  {
+   "vo": "His boat is going under.",
+   "hl": [
+    "under"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.299
+    },
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.366
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk helicopter races in.",
+   "hl": [
+    "jayhawk"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.433
+    },
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.5
+    }
+   ]
+  },
+  {
+   "vo": "The crew lowers a rescuer to the water.",
+   "hl": [
+    "rescuer"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.567
+    },
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.634
+    }
+   ]
+  },
+  {
+   "vo": "They pull him out moments before the boat sinks.",
+   "hl": [
+    "moments"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.701
+    },
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.769
+    }
+   ]
+  },
+  {
+   "vo": "Seconds later, it's gone.",
+   "hl": [
+    "gone"
+   ],
+   "shots": [
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.836
+    },
+    {
+     "file": "fisherman_boat_sinks",
+     "pos": 0.903
+    }
+   ]
+  }
+ ]
+}
