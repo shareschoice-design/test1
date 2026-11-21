@@ -1,0 +1,152 @@
+[
+ {
+  "id": "s01",
+  "src": "clip",
+  "start": 41.3,
+  "len": 2.6,
+  "zoom": 1.6,
+  "cx": 0.313,
+  "cy": 0.585,
+  "vo": "Look at the water. That's not a log.",
+  "cap": "That's not a log",
+  "hl": [
+   3
+  ]
+ },
+ {
+  "id": "s02",
+  "src": "rewind",
+  "start": 41.0,
+  "dur": 1.0,
+  "zoom": 1.6,
+  "cx": 0.313,
+  "cy": 0.585,
+  "vo": "",
+  "cap": "Rewind",
+  "hl": [
+   0
+  ]
+ },
+ {
+  "id": "s03",
+  "src": "clip",
+  "start": 3.0,
+  "len": 3.0,
+  "label": "1 hour earlier",
+  "vo": "An hour earlier, thousands of wildebeest crowd the riverbank. They have to drink.",
+  "cap": "They have to drink",
+  "hl": [
+   3
+  ]
+ },
+ {
+  "id": "s04",
+  "src": "img1",
+  "vo": "In the dry season this river is the only water for miles. And the crocodiles know it.",
+  "cap": "The crocs know",
+  "hl": [
+   2
+  ]
+ },
+ {
+  "id": "s05",
+  "src": "clip",
+  "file": "croc_pounce.webm",
+  "start": 16.0,
+  "len": 3.0,
+  "cx": 0.1,
+  "vo": "A big Nile crocodile can go months without a large meal. It never has to rush.",
+  "cap": "It can wait months",
+  "hl": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "s06",
+  "src": "img2",
+  "vo": "It slides in with only its eyes and nostrils above the surface.",
+  "cap": "Only the eyes show",
+  "hl": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "s07",
+  "src": "clip",
+  "file": "croc_jaws.webm",
+  "start": 2.0,
+  "len": 3.0,
+  "vo": "A clear third eyelid slides across to protect those eyes underwater.",
+  "cap": "A third eyelid",
+  "hl": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "s08",
+  "src": "clip",
+  "file": "croc_jaws.webm",
+  "start": 84.0,
+  "len": 3.0,
+  "vo": "See those dark dots on its jaws? Each one is a sensor that feels the faintest ripple.",
+  "cap": "Every dot is a sensor",
+  "hl": [
+   3,
+   4
+  ]
+ },
+ {
+  "id": "s09",
+  "src": "img3",
+  "vo": "So every sip a wildebeest takes... tells it exactly where to go.",
+  "cap": "Every sip gives it away",
+  "hl": [
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "s10",
+  "src": "clip",
+  "file": "croc_jaws.webm",
+  "start": 78.0,
+  "len": 3.0,
+  "vo": "And when it strikes, it has one of the strongest bites ever measured.",
+  "cap": "One of the strongest bites",
+  "hl": [
+   3,
+   4
+  ]
+ },
+ {
+  "id": "s11",
+  "src": "clip",
+  "start": 56.0,
+  "len": 3.0,
+  "vo": "The herd? Most of them never even notice.",
+  "cap": "They never notice",
+  "hl": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "s12",
+  "src": "clip",
+  "start": 42.0,
+  "len": 2.4,
+  "zoom": 1.6,
+  "cx": 0.313,
+  "cy": 0.585,
+  "vo": "Until it's too late.",
+  "cap": "Until it's too late",
+  "hl": [
+   2,
+   3
+  ]
+ }
+]

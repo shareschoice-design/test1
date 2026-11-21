@@ -55,6 +55,12 @@ for i, s in enumerate(segs):
                lab, size=46, y=H * 0.22)
         caps.append(lab)
     inputs, base = [], ""
+    src = s.get("file", SRC)
+    if not os.path.isabs(src) and src != SRC:
+        src = os.path.join(os.path.dirname(SRC), src)
+    cx, cy = s.get("cx", 0.5), s.get("cy", 0.5)
+    z = s.get("zoom", 1.0)
+    CROP = (f"scale=iw*{z}:ih*{z}:flags=lanczos," if z != 1.0 else "") + f"crop={W}:{H}:(iw-{W})*{cx}:(ih-{H})*{cy}"
     blur = ""
     for k, (bx, by, bw, bh) in enumerate(s.get("blur", [])):
         # delogo interpolates the box from its surroundings (hides burned-in text far better than blur)
@@ -63,14 +69,14 @@ for i, s in enumerate(segs):
         L = s.get("len", 3.0)
         speed = min(d / L, 1.6)
         span = d / speed
-        inputs = ["-ss", str(s["start"]), "-t", str(span + 0.1), "-i", SRC]
-        base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps={FPS},{blur}"
+        inputs = ["-ss", str(s["start"]), "-t", str(span + 0.1), "-i", src]
+        base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,{CROP},setsar=1,fps={FPS},{blur}"
                 f"setpts={speed}*PTS,{GRADE},trim=duration={d},setpts=PTS-STARTPTS[b]")
     elif s["src"] == "rewind":
         rs = s.get("start", 0.0)
-        inputs = ["-ss", str(rs), "-t", "3.3", "-i", SRC]
+        inputs = ["-ss", str(rs), "-t", "3.3", "-i", src]
         n = d
-        base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps={FPS},{blur}reverse,"
+        base = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,{CROP},setsar=1,fps={FPS},{blur}reverse,"
                 f"setpts=PTS/3.0,trim=duration={n},setpts=PTS-STARTPTS,"
                 f"eq=contrast=1.3:brightness=-0.06:saturation=0.6,noise=alls=28:allf=t,rgbashift=rh=-12:bh=12,"
                 f"drawbox=y=ih*0.62:w=iw:h=26:color=white@0.25:t=fill,"

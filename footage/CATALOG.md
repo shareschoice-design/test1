@@ -8,6 +8,11 @@ All licences below allow **commercial use** (monetisation). Credit line format:
 |---|---|---|---|
 | `nile_crocodile_ambushes_wildebeest_720p.webm` | CC BY 3.0 | Bettina May | 66 s, wildebeest herd drinking; croc head creeps toward herd ~41–43 s. Strike not clearly visible. Good b-roll. |
 
+| `la_gueule_du_crocodile_1080p.webm` | CC BY-SA 4.0 | Thierry Dugnolle | 100 s croc eye/teeth/jaw-sensor close-ups (captive). |
+| `prete_a_bondir_1080p.webm` | CC BY-SA 4.0 | Thierry Dugnolle | 30 s claws + basking with open mouth (captive). |
+
+Checked and rejected: Snowy owl & peregrine falcon – shot through a spotting scope, overexposed, falcon not visible.
+
 ## Found – download manually in browser (cloud IP is rate-limited by Wikimedia)
 | Topic | Commons page | Licence | Author | Quality |
 |---|---|---|---|---|
