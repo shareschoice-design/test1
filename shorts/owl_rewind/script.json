@@ -1,0 +1,14 @@
+[
+ {"id":"s01","src":"clip","start":7.0,"vo":"This vole never heard a thing.","cap":"It never heard a thing","hl":[1,2,3,4]},
+ {"id":"s02","src":"rewind","dur":1.1,"vo":"","cap":"Rewind","hl":[0]},
+ {"id":"s03","src":"clip","start":0.0,"label":"5 seconds earlier","vo":"Five seconds earlier. The owl lands, prey already in its talons.","cap":"Already caught","hl":[1]},
+ {"id":"s04","src":"img1","label":"1 minute earlier","vo":"One minute earlier, the vole was hiding under the snow. Invisible. Safe. Or so it thought.","cap":"Hidden under the snow","hl":[2,3]},
+ {"id":"s05","src":"img2","vo":"But the owl's face works like a satellite dish. It funnels the faintest scratching straight into its ears.","cap":"A face built to hear","hl":[3,4]},
+ {"id":"s06","src":"img3","vo":"It doesn't need to see. It locks on by sound alone.","cap":"Locked on by sound","hl":[3]},
+ {"id":"s07","src":"img6","vo":"Then it drops.","cap":"Then it drops","hl":[1,2]},
+ {"id":"s08","src":"img4","vo":"And here's the terrifying part. Its wing feathers have tiny combs on the edge that break the air apart.","cap":"Built-in silencer","hl":[1]},
+ {"id":"s09","src":"img5","vo":"The whoosh that would give any other bird away... almost vanishes.","cap":"Almost no sound","hl":[1,2]},
+ {"id":"s10","src":"clip","start":3.5,"vo":"Talons first. Over in a second.","cap":"Talons first","hl":[0]},
+ {"id":"s11","src":"img7","label":"The real reason","vo":"And it was no accident. Short-eared owls follow the voles. When vole numbers boom, the owls arrive.","cap":"They follow the voles","hl":[3]},
+ {"id":"s12","src":"clip","start":8.4,"vo":"That vole was hunted... long before it ever saw the owl.","cap":"Hunted before it knew","hl":[0]}
+]
