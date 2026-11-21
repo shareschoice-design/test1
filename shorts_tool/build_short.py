@@ -161,7 +161,7 @@ fc = ";".join(amix) + ";" + "".join(f"[a{k}]" for k in range(idx)) + \
 sh("ffmpeg", "-y", "-loglevel", "error", *ain, "-filter_complex", fc, "-map", "[out]", "-t", str(TOTAL), "-ar", str(SR),
    f"{WORK}/audio.wav")
 
-final = f"{PROJ}/final.mp4"
+final = f"{PROJ}/{os.path.basename(os.path.normpath(PROJ))}.mp4"
 sh("ffmpeg", "-y", "-loglevel", "error", "-i", f"{WORK}/video.mp4", "-i", f"{WORK}/audio.wav", "-map", "0:v", "-map", "1:a",
    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", final)
 print("done", final, round(dur(final), 2))

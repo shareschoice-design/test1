@@ -1,0 +1,13 @@
+{"hook": {"text": "She took the last seat", "red": 2},
+ "lines": [
+ {"vo": "In 1982, Vickie got the very last seat on a flight to London.", "hl": ["last"], "shots": [{"file": "PLANE_CABIN"}, {"file": "AIRPORT"}]},
+ {"vo": "Right next to a total stranger.", "hl": ["stranger"], "shots": [{"file": "PLANE_SEAT_STRANGERS"}]},
+ {"vo": "His name was Graham. He was flying home.", "hl": ["home"], "shots": [{"file": "PLANE_WINDOW"}, {"file": "MAN_SMILE"}]},
+ {"vo": "They talked the whole flight.", "hl": ["whole"], "shots": [{"file": "COUPLE_TALKING"}]},
+ {"vo": "In London, he showed her around the city.", "hl": ["london"], "shots": [{"file": "LONDON_STREET"}, {"file": "COUPLE_WALKING_CITY"}]},
+ {"vo": "Weeks later, they were holding hands.", "hl": ["holding"], "label": "March 6", "shots": [{"file": "HOLDING_HANDS"}]},
+ {"vo": "Engaged on July 4th.", "hl": ["engaged"], "label": "July 4", "shots": [{"file": "PROPOSAL_RING"}]},
+ {"vo": "Married on December 28th.", "hl": ["married"], "label": "Dec 28", "shots": [{"file": "WEDDING"}]},
+ {"vo": "Forty years later, they're still together.", "hl": ["forty"], "shots": [{"file": "OLD_COUPLE"}]},
+ {"vo": "All because the flight was full.", "hl": ["full"], "shots": [{"file": "PLANE_CABIN"}, {"file": "OLD_COUPLE"}]}
+]}

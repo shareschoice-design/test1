@@ -1,0 +1,13 @@
+{"hook": {"text": "The letter was 72 years late", "red": 3},
+ "lines": [
+ {"vo": "In May 1945, Virginia wrote a letter to her husband Rolf, a sailor in the Norwegian Navy.", "hl": ["virginia", "rolf"], "label": "May 1945", "shots": [{"file": "HANDWRITING_LETTER"}, {"file": "OCEAN_SHIP"}]},
+ {"vo": "She asked if he was as lonesome for her as she was for him.", "hl": ["lonesome"], "shots": [{"file": "WOMAN_WINDOW"}]},
+ {"vo": "She told him about the baby she was carrying.", "hl": ["baby"], "shots": [{"file": "PREGNANT_HANDS"}]},
+ {"vo": "But the letter never reached him.", "hl": ["never"], "shots": [{"file": "ENVELOPE"}]},
+ {"vo": "It slipped through a crack in a house in New Jersey, and vanished.", "hl": ["vanished"], "shots": [{"file": "OLD_HOUSE"}, {"file": "FLOORBOARDS"}]},
+ {"vo": "Seventy-two years later, renovators found it. Still sealed.", "hl": ["sealed"], "label": "2017", "shots": [{"file": "RENOVATION"}, {"file": "ENVELOPE"}]},
+ {"vo": "They posted it online. Within hours, strangers found Rolf's son.", "hl": ["hours"], "shots": [{"file": "PHONE_SCROLL"}]},
+ {"vo": "Rolf was 96.", "hl": ["96"], "shots": [{"file": "OLD_MAN"}]},
+ {"vo": "Virginia had passed away six years earlier.", "hl": ["six"], "shots": [{"file": "OLD_PHOTOS"}]},
+ {"vo": "So his son read him the letter. Her words, seventy-two years late.", "hl": ["words"], "shots": [{"file": "READING_LETTER"}, {"file": "OLD_MAN"}]}
+]}

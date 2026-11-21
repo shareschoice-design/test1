@@ -1,0 +1,154 @@
+{
+ "hook": {
+  "text": "The deer can't see it",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "This tiger is bright orange.",
+   "hl": [
+    "orange"
+   ],
+   "shots": [
+    {
+     "file": "b.mp4",
+     "start": 3.0,
+     "cx": 0.8
+    }
+   ]
+  },
+  {
+   "vo": "So why can't a deer see it?",
+   "hl": [
+    "deer"
+   ],
+   "shots": [
+    {
+     "file": "b.mp4",
+     "start": 6.5,
+     "cx": 0.85
+    },
+    {
+     "file": "c.mp4",
+     "start": 2.0,
+     "cx": 0.6
+    }
+   ]
+  },
+  {
+   "vo": "Deer can't see red. To them, orange looks green.",
+   "hl": [
+    "red",
+    "green"
+   ],
+   "shots": [
+    {
+     "img": "img1"
+    },
+    {
+     "file": "b.mp4",
+     "start": 0.5,
+     "cx": 0.75
+    }
+   ]
+  },
+  {
+   "vo": "In tall grass, it basically disappears.",
+   "hl": [
+    "disappears"
+   ],
+   "shots": [
+    {
+     "file": "b.mp4",
+     "start": 5.0,
+     "cx": 0.6
+    },
+    {
+     "img": "img2"
+    }
+   ]
+  },
+  {
+   "vo": "The stripes break up its outline, like shadows.",
+   "hl": [
+    "stripes",
+    "shadows"
+   ],
+   "shots": [
+    {
+     "img": "img2"
+    },
+    {
+     "file": "b.mp4",
+     "start": 8.0,
+     "cx": 0.9
+    }
+   ]
+  },
+  {
+   "vo": "Even its skin is striped.",
+   "hl": [
+    "skin"
+   ],
+   "label": "Wait...",
+   "shots": [
+    {
+     "img": "img3"
+    }
+   ]
+  },
+  {
+   "vo": "And no two tigers have the same pattern.",
+   "hl": [
+    "same"
+   ],
+   "shots": [
+    {
+     "img": "img4"
+    },
+    {
+     "file": "c.mp4",
+     "start": 9.3,
+     "cx": 0.6
+    }
+   ]
+  },
+  {
+   "vo": "So that orange coat isn't a mistake.",
+   "hl": [
+    "mistake"
+   ],
+   "shots": [
+    {
+     "file": "c.mp4",
+     "start": 10.5,
+     "cx": 0.6
+    },
+    {
+     "file": "b.mp4",
+     "start": 2.0,
+     "cx": 0.8
+    }
+   ]
+  },
+  {
+   "vo": "It's the perfect disguise. Only we see orange.",
+   "hl": [
+    "perfect",
+    "orange"
+   ],
+   "shots": [
+    {
+     "file": "b.mp4",
+     "start": 4.0,
+     "cx": 0.8
+    },
+    {
+     "file": "b.mp4",
+     "start": 0.0,
+     "cx": 0.7
+    }
+   ]
+  }
+ ]
+}
