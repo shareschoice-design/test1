@@ -266,3 +266,79 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 15. hd_cubans_water_cay
+**Title:** Stranded on a tiny island 🐶
+
+**Description:**
+```
+October 2022. Water Cay, in the Bahamas. Nine people are stranded on a tiny island. And with them, a dog. The Coast Guard cutter Isaac Mayo finds them. The crew brings them all aboard. Two days later, they're handed over to Bahamian authorities.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard Cutter Isaac Mayo crew rescues stranded migrants" – DVIDS (public domain)
+https://www.dvidshub.net/video/860811/coast-guard-cutter-isaac-mayo-crew-rescues-stranded-migrants
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 16. hd_dog_in_container
+**Title:** Something was scratching 🐶
+
+**Description:**
+```
+January 2024. A container terminal in Seabrook, Texas. Coast Guard inspectors are doing a routine check. Then they hear barking. And scratching. From inside a container. A dog had been trapped inside for at least eight days. They got it out. One routine inspection. One life saved.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard marine inspectors rescue dog from shipping container in Seabrook, Texas" – DVIDS (public domain)
+https://www.dvidshub.net/video/912242/coast-guard-marine-inspectors-rescue-dog-from-shipping-container-in-seabr
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 17. hd_kodiak_three_men_dog
+**Title:** Slammed against the rocks 🐶
+
+**Description:**
+```
+December 2022. Esther Island, Alaska. A 45-foot fishing boat runs aground. The crew radios: they're putting on survival suits. Their boat is being slammed against rocks. Three men and a dog are stranded on the rocks. In high winds. A Coast Guard Jayhawk from Kodiak finds them. All four are hoisted up. The dog too. Everyone made it to Anchorage safe.
+
+Would you have done the same? 👇
+
+Real footage: "Air Station Kodiak SAR Case Dec 12, 2022:  Aerial Footage and Hoist Camera" – DVIDS (public domain)
+https://www.dvidshub.net/video/884516/air-station-kodiak-sar-case-dec-12-2022-aerial-footage-and-hoist-camera
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 18. hd_swimmer_columbia_bar
+**Title:** He went in after him 🌊
+
+**Description:**
+```
+February 2023. Near Astoria, Oregon. A boat capsizes near the mouth of the Columbia River. Coast Guard rescue swimmer Branch Walton goes in. He swims to the mariner and gets him out. Helicopters and lifeboats from three units joined the rescue.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues mariner from capsized vessel near Columbia River Bar" – DVIDS (public domain)
+https://www.dvidshub.net/video/909520/coast-guard-rescues-mariner-from-capsized-vessel-near-columbia-river-bar
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
