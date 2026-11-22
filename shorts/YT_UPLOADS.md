@@ -342,3 +342,79 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 19. hd_jetty_st_lucie
+**Title:** Stuck on the rocks 🚁
+
+**Description:**
+```
+December 2024. St. Lucie Inlet, Florida. A man is stranded on a jetty. Stranded. Waiting for help. A Coast Guard helicopter from Miami arrives. They hoist him off the rocks. And fly him to Stuart Airport. No injuries.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues stranded mariner off St Lucie Inlet jetty" – DVIDS (public domain)
+https://www.dvidshub.net/video/947469/coast-guard-rescues-stranded-mariner-off-st-lucie-inlet-jetty
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 20. hd_kodiak_two_fishermen
+**Title:** Their boat flipped 🌊
+
+**Description:**
+```
+January 2025. Near Kodiak, Alaska. An emergency beacon goes off. The fishing boat Tanusha. Another fishing boat, the Victory, races to the spot. They find the Tanusha capsized. Two fishermen in a life raft. A Coast Guard Jayhawk crew takes it from there. Fishermen saving fishermen.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard, others rescue 2 fishermen near Kodiak, Alaska" – DVIDS (public domain)
+https://www.dvidshub.net/video/949745/coast-guard-others-rescue-2-fishermen-near-kodiak-alaska
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 21. hd_mwd_tomas_retires
+**Title:** His partner is retiring 🐶
+
+**Description:**
+```
+This is Tomas. A U.S. Army military working dog. For two and a half years, his partner was Specialist Bryant Olartes. They built a special bond. Now Tomas is retiring. Which means they have to split up. So Tomas can finally relax with a happy family.
+
+Would you have done the same? 👇
+
+Real footage: "K9 Veterans Day - Military working dog Tomas retires" – DVIDS (public domain)
+https://www.dvidshub.net/video/955109/k9-veterans-day-military-working-dog-tomas-retires
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 22. hd_wave_capsizes_astoria
+**Title:** One wave flipped it 🌊
+
+**Description:**
+```
+February 2023. Near Astoria, Oregon. A 32-foot boat called Sand Piper is already disabled. Then a wave flips it over. A Jayhawk helicopter and several 47-foot motor lifeboats race in. Together they pull the mariner out of the water.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues mariner in distress as wave capsizes vessel near mouth of Columbia River" – DVIDS (public domain)
+https://www.dvidshub.net/video/872430/coast-guard-rescues-mariner-in-distress-as-wave-capsizes-vessel-near-mout
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
