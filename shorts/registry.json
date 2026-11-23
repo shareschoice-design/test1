@@ -160,6 +160,27 @@
   ]
  },
  {
+  "footage": "egmont_key_five",
+  "dir": "footage/hd",
+  "dvids_id": "990054",
+  "title": "Coast Guard rescues 5 people off Egmont Key",
+  "event": [
+   "",
+   [
+    "egmont key",
+    "tierra verde"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_egmont_key_five",
+    "hook": "Their boat sank",
+    "rendered": false
+   }
+  ]
+ },
+ {
   "footage": "el_paso_cliff_fall",
   "dir": "footage/hd",
   "dvids_id": "975581",
@@ -316,6 +337,26 @@
   ]
  },
  {
+  "footage": "hsc26_homecoming",
+  "dir": "footage/hd",
+  "dvids_id": "1009525",
+  "title": "HSC-26 Sailors Reunite with Families",
+  "event": [
+   "jun-05",
+   [
+    "squadron"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_hsc26_homecoming",
+    "hook": "Ten months away",
+    "rendered": false
+   }
+  ]
+ },
+ {
   "footage": "jetty_st_lucie",
   "dir": "footage/hd",
   "dvids_id": "947469",
@@ -332,6 +373,24 @@
     "name": "hd_jetty_st_lucie",
     "hook": "Stuck on the rocks",
     "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "jon_boat_st_augustine",
+  "dir": "footage/hd",
+  "dvids_id": "892771",
+  "title": "Coast Guard rescues man 12 miles offshore St. Augustine",
+  "event": [
+   "aug-05",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_jon_boat_st_augustine",
+    "hook": "His family reported him missing",
+    "rendered": false
    }
   ]
  },
@@ -456,6 +515,26 @@
   ]
  },
  {
+  "footage": "pass_a_grille_boaters",
+  "dir": "footage/hd",
+  "dvids_id": "935954",
+  "title": "Coast Guard, partner agency rescue 2 boaters 18 miles off Pass-a-Grille Beach",
+  "event": [
+   "sep-06",
+   [
+    "pass"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_pass_a_grille_boaters",
+    "hook": "One beacon saved them",
+    "rendered": false
+   }
+  ]
+ },
+ {
   "footage": "pr_cliff_two",
   "dir": "footage/hd",
   "dvids_id": "1000575",
@@ -473,6 +552,47 @@
     "name": "hd_puerto_rico_cliff",
     "hook": "Stuck below a cliff",
     "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "regatta_dauphin_island",
+  "dir": "footage/hd",
+  "dvids_id": "929298",
+  "title": "Coast Guard rescues 4 boaters during sailboat regatta near Dauphin Island, Alabama",
+  "event": [
+   "jun-28",
+   [
+    "dauphin island",
+    "island"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_regatta_dauphin_island",
+    "hook": "The race went wrong",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "san_juan_two_boaters",
+  "dir": "footage/hd",
+  "dvids_id": "870260",
+  "title": "Coast Guard surface, air units rescue 2 boaters following vessel capsizing near San Juan, Puerto Rico",
+  "event": [
+   "jan-04",
+   [
+    "san juan"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_san_juan_two_boaters",
+    "hook": "Their boat flipped at sea",
+    "rendered": false
    }
   ]
  },

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "His family reported him missing",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "August 2023. St. Augustine, Florida.",
+   "hl": [
+    "florida"
+   ],
+   "shots": [
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.571
+    },
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.611
+    }
+   ]
+  },
+  {
+   "vo": "Charles Gregory's family reports him missing.",
+   "hl": [
+    "missing"
+   ],
+   "shots": [
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.212
+    },
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "The Coast Guard starts searching.",
+   "hl": [
+    "searching"
+   ],
+   "shots": [
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.363
+    },
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They find him 12 miles offshore.",
+   "hl": [
+    "12"
+   ],
+   "shots": [
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.515
+    },
+    {
+     "card": {
+      "file": "jon_boat_st_augustine",
+      "pos": 0.591,
+      "big": "12 MILES",
+      "small": "OFFSHORE"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "His 12-foot jon boat is half underwater.",
+   "hl": [
+    "underwater"
+   ],
+   "shots": [
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.667
+    },
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "He's found. And he's rescued.",
+   "hl": [
+    "rescued"
+   ],
+   "shots": [
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.818
+    },
+    {
+     "file": "jon_boat_st_augustine",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

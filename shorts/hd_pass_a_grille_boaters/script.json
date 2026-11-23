@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "One beacon saved them",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "September 2024. 18 miles off Pass-a-Grille Beach, Florida.",
+   "hl": [
+    "florida"
+   ],
+   "shots": [
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.598
+    },
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.638
+    }
+   ]
+  },
+  {
+   "vo": "A 26-foot boat capsizes.",
+   "hl": [
+    "capsizes"
+   ],
+   "shots": [
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.212
+    },
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "But one of them has a personal locator beacon.",
+   "hl": [
+    "beacon"
+   ],
+   "shots": [
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.363
+    },
+    {
+     "card": {
+      "file": "pass_a_grille_boaters",
+      "pos": 0.439,
+      "big": "1 BEACON",
+      "small": "2 LIVES"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "The signal leads a Coast Guard helicopter straight to them.",
+   "hl": [
+    "signal"
+   ],
+   "shots": [
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.515
+    },
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "Both are wearing life jackets.",
+   "hl": [
+    "jackets"
+   ],
+   "shots": [
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.667
+    },
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "One is hoisted up. Sheriff's deputies pick up the other.",
+   "hl": [
+    "hoisted"
+   ],
+   "shots": [
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.818
+    },
+    {
+     "file": "pass_a_grille_boaters",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

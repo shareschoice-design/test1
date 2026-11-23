@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Ten months away",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "June 2026. Naval Station Norfolk, Virginia.",
+   "hl": [
+    "norfolk"
+   ],
+   "shots": [
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.784
+    },
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.824
+    }
+   ]
+  },
+  {
+   "vo": "The helicopters of squadron HSC-26 come back home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.212
+    },
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "After ten months deployed in the Caribbean.",
+   "hl": [
+    "ten"
+   ],
+   "shots": [
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.363
+    },
+    {
+     "card": {
+      "file": "hsc26_homecoming",
+      "pos": 0.439,
+      "big": "10 MONTHS",
+      "small": "AWAY"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Family and friends are there to greet them.",
+   "hl": [
+    "family"
+   ],
+   "shots": [
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.515
+    },
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.591
+    }
+   ],
+   "label": "Look"
+  },
+  {
+   "vo": "Ten months apart. Over in one moment.",
+   "hl": [
+    "moment"
+   ],
+   "shots": [
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.667
+    },
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Welcome home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.818
+    },
+    {
+     "file": "hsc26_homecoming",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

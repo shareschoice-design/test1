@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Their boat sank",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "28 miles west of Egmont Key, Florida.",
+   "hl": [
+    "florida"
+   ],
+   "shots": [
+    {
+     "file": "egmont_key_five",
+     "pos": 0.531
+    },
+    {
+     "file": "egmont_key_five",
+     "pos": 0.571
+    }
+   ]
+  },
+  {
+   "vo": "A 32-foot boat goes down.",
+   "hl": [
+    "down"
+   ],
+   "shots": [
+    {
+     "file": "egmont_key_five",
+     "pos": 0.212
+    },
+    {
+     "file": "egmont_key_five",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Five people are stranded at sea.",
+   "hl": [
+    "five"
+   ],
+   "shots": [
+    {
+     "file": "egmont_key_five",
+     "pos": 0.363
+    },
+    {
+     "card": {
+      "file": "egmont_key_five",
+      "pos": 0.439,
+      "big": "5 PEOPLE",
+      "small": "STRANDED AT SEA"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard crew from St. Petersburg finds them.",
+   "hl": [
+    "finds"
+   ],
+   "shots": [
+    {
+     "file": "egmont_key_five",
+     "pos": 0.515
+    },
+    {
+     "file": "egmont_key_five",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "All five are rescued.",
+   "hl": [
+    "five"
+   ],
+   "shots": [
+    {
+     "file": "egmont_key_five",
+     "pos": 0.667
+    },
+    {
+     "file": "egmont_key_five",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "All five brought back to shore in stable condition.",
+   "hl": [
+    "stable"
+   ],
+   "shots": [
+    {
+     "file": "egmont_key_five",
+     "pos": 0.818
+    },
+    {
+     "file": "egmont_key_five",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

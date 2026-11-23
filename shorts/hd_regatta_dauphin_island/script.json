@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "The race went wrong",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "June 2024. A sailboat regatta near Dauphin Island, Alabama.",
+   "hl": [
+    "regatta"
+   ],
+   "shots": [
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.681
+    },
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.721
+    }
+   ]
+  },
+  {
+   "vo": "A catamaran capsizes.",
+   "hl": [
+    "capsizes"
+   ],
+   "shots": [
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.212
+    },
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "All four sailors climb onto the overturned hull.",
+   "hl": [
+    "four"
+   ],
+   "shots": [
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.363
+    },
+    {
+     "card": {
+      "file": "regatta_dauphin_island",
+      "pos": 0.439,
+      "big": "4 SAILORS",
+      "small": "ON AN UPSIDE-DOWN BOAT"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They activate their emergency beacons.",
+   "hl": [
+    "beacons"
+   ],
+   "shots": [
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.515
+    },
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard crew from Dauphin Island reaches them.",
+   "hl": [
+    "reaches"
+   ],
+   "shots": [
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.667
+    },
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Four sailors. All four rescued.",
+   "hl": [
+    "four"
+   ],
+   "shots": [
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.818
+    },
+    {
+     "file": "regatta_dauphin_island",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}

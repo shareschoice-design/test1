@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Their boat flipped at sea",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "January 2023. Off San Juan, Puerto Rico.",
+   "hl": [
+    "puerto"
+   ],
+   "shots": [
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.581
+    },
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.621
+    }
+   ]
+  },
+  {
+   "vo": "A boat capsizes six and a half miles offshore.",
+   "hl": [
+    "capsizes"
+   ],
+   "shots": [
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.212
+    },
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.287
+    }
+   ]
+  },
+  {
+   "vo": "Two people are in the water.",
+   "hl": [
+    "water"
+   ],
+   "shots": [
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.363
+    },
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.439
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard boat crew and aircrew work together.",
+   "hl": [
+    "together"
+   ],
+   "shots": [
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.515
+    },
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.591
+    }
+   ]
+  },
+  {
+   "vo": "They pull both survivors out.",
+   "hl": [
+    "survivors"
+   ],
+   "shots": [
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.667
+    },
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.742
+    }
+   ]
+  },
+  {
+   "vo": "Back at the base, their families are waiting.",
+   "hl": [
+    "families"
+   ],
+   "shots": [
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.818
+    },
+    {
+     "file": "san_juan_two_boaters",
+     "pos": 0.894
+    }
+   ]
+  }
+ ]
+}
