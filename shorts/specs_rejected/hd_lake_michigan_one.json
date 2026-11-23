@@ -1,0 +1,7 @@
+{"file":"lake_michigan_one","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Emergency on the lake",2],"range":[0.03,0.97],"lines":[
+["July 2025. Near Nahma, Michigan.",["michigan"],null],
+["A boat operator has a medical emergency.",["medical"],null],
+["Help has to come from the air.",["air"],"Then..."],
+["A Coast Guard Jayhawk from Traverse City arrives.",["traverse"],null],
+["A rescue swimmer is lowered to the boat.",["swimmer"],null,["1","RESCUE SWIMMER"]],
+["The survivor is hoisted to safety.",["safety"],null]]}

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "His line got tangled",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "August 2023. Barnegat Light, New Jersey.",
+   "hl": [
+    "jersey"
+   ],
+   "shots": [
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.582
+    },
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.622
+    }
+   ]
+  },
+  {
+   "vo": "A kite surfer is out on the water.",
+   "hl": [
+    "kite"
+   ],
+   "shots": [
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.187
+    },
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "His line tangles with another kite surfer's.",
+   "hl": [
+    "tangles"
+   ],
+   "shots": [
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "barnegat_kite_surfer",
+      "pos": 0.422,
+      "big": "1",
+      "small": "TANGLED LINE"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "He's in the water and needs help.",
+   "hl": [
+    "help"
+   ],
+   "shots": [
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.5
+    },
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard boat crew races out.",
+   "hl": [
+    "races"
+   ],
+   "shots": [
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.657
+    },
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "They pull him aboard.",
+   "hl": [
+    "aboard"
+   ],
+   "shots": [
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.813
+    },
+    {
+     "file": "barnegat_kite_surfer",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

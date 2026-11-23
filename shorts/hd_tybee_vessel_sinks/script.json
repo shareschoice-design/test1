@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Their boat sank",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "August 2024. 20 miles off Tybee Island, Georgia.",
+   "hl": [
+    "georgia"
+   ],
+   "shots": [
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.878
+    },
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.918
+    }
+   ]
+  },
+  {
+   "vo": "A boat sinks.",
+   "hl": [
+    "sinks"
+   ],
+   "shots": [
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "tybee_vessel_sinks",
+      "pos": 0.265,
+      "big": "4",
+      "small": "PEOPLE IN A LIFE RAFT"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Four people get into their life raft.",
+   "hl": [
+    "raft"
+   ],
+   "shots": [
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.343
+    },
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter drops a rescue swimmer.",
+   "hl": [
+    "swimmer"
+   ],
+   "shots": [
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.5
+    },
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard boat crew picks them up.",
+   "hl": [
+    "boat"
+   ],
+   "shots": [
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.657
+    },
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "All four make it ashore.",
+   "hl": [
+    "ashore"
+   ],
+   "shots": [
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.813
+    },
+    {
+     "file": "tybee_vessel_sinks",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

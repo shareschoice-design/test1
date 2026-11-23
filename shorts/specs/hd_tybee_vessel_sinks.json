@@ -1,0 +1,7 @@
+{"file":"tybee_vessel_sinks","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["Their boat sank",2],"range":[0.03,0.97],"lines":[
+["August 2024. 20 miles off Tybee Island, Georgia.",["georgia"],null],
+["A boat sinks.",["sinks"],null,["4","PEOPLE IN A LIFE RAFT"]],
+["Four people get into their life raft.",["raft"],"Then..."],
+["A Coast Guard helicopter drops a rescue swimmer.",["swimmer"],null],
+["A Coast Guard boat crew picks them up.",["boat"],null],
+["All four make it ashore.",["ashore"],null]]}

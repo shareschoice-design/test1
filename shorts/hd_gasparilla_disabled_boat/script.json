@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Stranded on old railroad tracks",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "September 2024. Gasparilla Pass, Florida.",
+   "hl": [
+    "florida"
+   ],
+   "shots": [
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.471
+    },
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.511
+    }
+   ]
+  },
+  {
+   "vo": "A 37-foot sailboat breaks down.",
+   "hl": [
+    "breaks"
+   ],
+   "shots": [
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "gasparilla_disabled_boat",
+      "pos": 0.265,
+      "big": "37",
+      "small": "FOOT SAILBOAT"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "It starts taking on water.",
+   "hl": [
+    "water"
+   ],
+   "shots": [
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.343
+    },
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Two men end up on abandoned railroad tracks.",
+   "hl": [
+    "railroad"
+   ],
+   "shots": [
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.5
+    },
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard helicopter hoists them up.",
+   "hl": [
+    "hoists"
+   ],
+   "shots": [
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.657
+    },
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "No injuries. Both men are safe.",
+   "hl": [
+    "safe"
+   ],
+   "shots": [
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.813
+    },
+    {
+     "file": "gasparilla_disabled_boat",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

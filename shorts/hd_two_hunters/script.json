@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "The flood cut them off",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "Suiattle River Valley, Washington.",
+   "hl": [
+    "washington"
+   ],
+   "shots": [
+    {
+     "file": "two_hunters",
+     "pos": 0.7
+    },
+    {
+     "file": "two_hunters",
+     "pos": 0.74
+    }
+   ]
+  },
+  {
+   "vo": "Two hunters wait in a remote cabin.",
+   "hl": [
+    "cabin"
+   ],
+   "shots": [
+    {
+     "file": "two_hunters",
+     "pos": 0.187
+    },
+    {
+     "file": "two_hunters",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "Floodwaters washed out their only way out.",
+   "hl": [
+    "only"
+   ],
+   "shots": [
+    {
+     "file": "two_hunters",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "two_hunters",
+      "pos": 0.422,
+      "big": "0",
+      "small": "FOOD LEFT"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "And they ran out of food.",
+   "hl": [
+    "food"
+   ],
+   "shots": [
+    {
+     "file": "two_hunters",
+     "pos": 0.5
+    },
+    {
+     "file": "two_hunters",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard Jayhawk from Astoria finds the cabin.",
+   "hl": [
+    "astoria"
+   ],
+   "shots": [
+    {
+     "file": "two_hunters",
+     "pos": 0.657
+    },
+    {
+     "file": "two_hunters",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Both hunters are hoisted out.",
+   "hl": [
+    "hoisted"
+   ],
+   "shots": [
+    {
+     "file": "two_hunters",
+     "pos": 0.813
+    },
+    {
+     "file": "two_hunters",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

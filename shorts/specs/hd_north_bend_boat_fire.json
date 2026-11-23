@@ -1,0 +1,7 @@
+{"file":"north_bend_boat_fire","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Their boat caught fire",2],"range":[0.14,0.97],"lines":[
+["September 2022. Off the Oregon coast.",["oregon"],null],
+["A 49-foot fishing boat catches fire.",["fire"],null,["57","MILES FROM SHORE"]],
+["About 57 miles west of Gold Beach.",["57"],"Then..."],
+["A Coast Guard helicopter from North Bend arrives.",["north"],null],
+["Two people are pulled up in the basket.",["basket"],null],
+["Neither needed medical care.",["medical"],null]]}

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "They lost their sail",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "August 2024. Tropical Storm Debby.",
+   "hl": [
+    "debby"
+   ],
+   "shots": [
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.392
+    },
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.432
+    }
+   ]
+  },
+  {
+   "vo": "A 34-foot sailboat loses its sail.",
+   "hl": [
+    "sail"
+   ],
+   "shots": [
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "debby_adrift_boaters",
+      "pos": 0.265,
+      "big": "73",
+      "small": "MILES OFFSHORE"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Two boaters adrift, 73 miles off Boca Grande.",
+   "hl": [
+    "adrift"
+   ],
+   "shots": [
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.343
+    },
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk from Clearwater arrives.",
+   "hl": [
+    "jayhawk"
+   ],
+   "shots": [
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.5
+    },
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "A rescue swimmer goes into the water.",
+   "hl": [
+    "swimmer"
+   ],
+   "shots": [
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.657
+    },
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Both boaters are safe. No injuries.",
+   "hl": [
+    "safe"
+   ],
+   "shots": [
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.813
+    },
+    {
+     "file": "debby_adrift_boaters",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

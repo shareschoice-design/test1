@@ -1,0 +1,7 @@
+{"file":"gasparilla_disabled_boat","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Stranded on old railroad tracks",3],"range":[0.03,0.97],"lines":[
+["September 2024. Gasparilla Pass, Florida.",["florida"],null],
+["A 37-foot sailboat breaks down.",["breaks"],null,["37","FOOT SAILBOAT"]],
+["It starts taking on water.",["water"],"Then..."],
+["Two men end up on abandoned railroad tracks.",["railroad"],null],
+["A Coast Guard helicopter hoists them up.",["hoists"],null],
+["No injuries. Both men are safe.",["safe"],null]]}

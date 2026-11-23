@@ -1,0 +1,7 @@
+{"file":"debby_adrift_boaters","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["They lost their sail",2],"range":[0.03,0.97],"lines":[
+["August 2024. Tropical Storm Debby.",["debby"],null],
+["A 34-foot sailboat loses its sail.",["sail"],null,["73","MILES OFFSHORE"]],
+["Two boaters adrift, 73 miles off Boca Grande.",["adrift"],"Then..."],
+["A Coast Guard Jayhawk from Clearwater arrives.",["jayhawk"],null],
+["A rescue swimmer goes into the water.",["swimmer"],null],
+["Both boaters are safe. No injuries.",["safe"],null]]}

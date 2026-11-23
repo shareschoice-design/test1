@@ -1,0 +1,7 @@
+{"file":"two_hunters","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["The flood cut them off",3],"range":[0.03,0.97],"lines":[
+["Suiattle River Valley, Washington.",["washington"],null],
+["Two hunters wait in a remote cabin.",["cabin"],null],
+["Floodwaters washed out their only way out.",["only"],"Then...",["0","FOOD LEFT"]],
+["And they ran out of food.",["food"],null],
+["A Coast Guard Jayhawk from Astoria finds the cabin.",["astoria"],null],
+["Both hunters are hoisted out.",["hoisted"],null]]}

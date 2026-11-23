@@ -723,3 +723,136 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 39. hd_barnegat_kite_surfer
+**Title:** His line got tangled 🌊
+
+**Description:**
+```
+August 2023. Barnegat Light, New Jersey. A kite surfer is out on the water. His line tangles with another kite surfer's. He's in the water and needs help. A Coast Guard boat crew races out. They pull him aboard.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues kite surfer near Barnegat Light, New Jersey" – DVIDS (public domain)
+https://www.dvidshub.net/video/895646/coast-guard-rescues-kite-surfer-near-barnegat-light-new-jersey
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 40. hd_big_sur_two
+**Title:** Stranded off Big Sur 🌊
+
+**Description:**
+```
+August 2023. Off Big Sur, California. A boat breaks down offshore. Two people are on board. A Coast Guard helicopter from San Francisco arrives. Both are hoisted off the boat. Medics are waiting for them.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard Air Station San Francisco rescues 2 from disabled near Big Sur" – DVIDS (public domain)
+https://www.dvidshub.net/video/899380/coast-guard-air-station-san-francisco-rescues-2-from-disabled-near-big-sur
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 41. hd_debby_adrift_boaters
+**Title:** They lost their sail 🌊
+
+**Description:**
+```
+August 2024. Tropical Storm Debby. A 34-foot sailboat loses its sail. Two boaters adrift, 73 miles off Boca Grande. A Coast Guard Jayhawk from Clearwater arrives. A rescue swimmer goes into the water. Both boaters are safe. No injuries.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 2 adrift boaters off Boca Grande during Tropical Storm Debby" – DVIDS (public domain)
+https://www.dvidshub.net/video/932811/coast-guard-rescues-2-adrift-boaters-off-boca-grande-during-tropical-storm-debby
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 42. hd_gasparilla_disabled_boat
+**Title:** Stranded on old railroad tracks 🌊
+
+**Description:**
+```
+September 2024. Gasparilla Pass, Florida. A 37-foot sailboat breaks down. It starts taking on water. Two men end up on abandoned railroad tracks. A Coast Guard helicopter hoists them up. No injuries. Both men are safe.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 2 aboard 37-foot disabled boat near Gasparilla Pass" – DVIDS (public domain)
+https://www.dvidshub.net/video/938214/coast-guard-rescues-2-aboard-37-foot-disabled-boat-near-gasparilla-pass
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 43. hd_north_bend_boat_fire
+**Title:** Their boat caught fire 🔥
+
+**Description:**
+```
+September 2022. Off the Oregon coast. A 49-foot fishing boat catches fire. About 57 miles west of Gold Beach. A Coast Guard helicopter from North Bend arrives. Two people are pulled up in the basket. Neither needed medical care.
+
+Would you have done the same? 👇
+
+Real footage: "Air Station North Bend MH-65 aircrew rescues 2 from boat fire" – DVIDS (public domain)
+https://www.dvidshub.net/video/857525/air-station-north-bend-mh-65-aircrew-rescues-2-from-boat-fire
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 44. hd_two_hunters
+**Title:** The flood cut them off 🌊
+
+**Description:**
+```
+Suiattle River Valley, Washington. Two hunters wait in a remote cabin. Floodwaters washed out their only way out. And they ran out of food. A Coast Guard Jayhawk from Astoria finds the cabin. Both hunters are hoisted out.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 2 hunters" – DVIDS (public domain)
+https://www.dvidshub.net/video/990071/coast-guard-rescues-2-hunters
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 45. hd_tybee_vessel_sinks
+**Title:** Their boat sank 🌊
+
+**Description:**
+```
+August 2024. 20 miles off Tybee Island, Georgia. A boat sinks. Four people get into their life raft. A Coast Guard helicopter drops a rescue swimmer. A Coast Guard boat crew picks them up. All four make it ashore.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 4 after vessel sinks 20 miles off Tybee Island" – DVIDS (public domain)
+https://www.dvidshub.net/video/932697/coast-guard-rescues-4-after-vessel-sinks-20-miles-off-tybee-island
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

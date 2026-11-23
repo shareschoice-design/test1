@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Their boat caught fire",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "September 2022. Off the Oregon coast.",
+   "hl": [
+    "oregon"
+   ],
+   "shots": [
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.804
+    },
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.844
+    }
+   ]
+  },
+  {
+   "vo": "A 49-foot fishing boat catches fire.",
+   "hl": [
+    "fire"
+   ],
+   "shots": [
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.278
+    },
+    {
+     "card": {
+      "file": "north_bend_boat_fire",
+      "pos": 0.348,
+      "big": "57",
+      "small": "MILES FROM SHORE"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "About 57 miles west of Gold Beach.",
+   "hl": [
+    "57"
+   ],
+   "shots": [
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.417
+    },
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.486
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from North Bend arrives.",
+   "hl": [
+    "north"
+   ],
+   "shots": [
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.555
+    },
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.624
+    }
+   ]
+  },
+  {
+   "vo": "Two people are pulled up in the basket.",
+   "hl": [
+    "basket"
+   ],
+   "shots": [
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.693
+    },
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.762
+    }
+   ]
+  },
+  {
+   "vo": "Neither needed medical care.",
+   "hl": [
+    "medical"
+   ],
+   "shots": [
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.832
+    },
+    {
+     "file": "north_bend_boat_fire",
+     "pos": 0.901
+    }
+   ]
+  }
+ ]
+}

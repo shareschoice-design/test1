@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Stranded off Big Sur",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "August 2023. Off Big Sur, California.",
+   "hl": [
+    "california"
+   ],
+   "shots": [
+    {
+     "file": "big_sur_two",
+     "pos": 0.367
+    },
+    {
+     "file": "big_sur_two",
+     "pos": 0.407
+    }
+   ]
+  },
+  {
+   "vo": "A boat breaks down offshore.",
+   "hl": [
+    "breaks"
+   ],
+   "shots": [
+    {
+     "file": "big_sur_two",
+     "pos": 0.108
+    },
+    {
+     "card": {
+      "file": "big_sur_two",
+      "pos": 0.147,
+      "big": "2",
+      "small": "PEOPLE. DISABLED BOAT."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Two people are on board.",
+   "hl": [
+    "two"
+   ],
+   "shots": [
+    {
+     "file": "big_sur_two",
+     "pos": 0.187
+    },
+    {
+     "file": "big_sur_two",
+     "pos": 0.226
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from San Francisco arrives.",
+   "hl": [
+    "francisco"
+   ],
+   "shots": [
+    {
+     "file": "big_sur_two",
+     "pos": 0.265
+    },
+    {
+     "file": "big_sur_two",
+     "pos": 0.304
+    }
+   ]
+  },
+  {
+   "vo": "Both are hoisted off the boat.",
+   "hl": [
+    "hoisted"
+   ],
+   "shots": [
+    {
+     "file": "big_sur_two",
+     "pos": 0.343
+    },
+    {
+     "file": "big_sur_two",
+     "pos": 0.382
+    }
+   ]
+  },
+  {
+   "vo": "Medics are waiting for them.",
+   "hl": [
+    "medics"
+   ],
+   "shots": [
+    {
+     "file": "big_sur_two",
+     "pos": 0.422
+    },
+    {
+     "file": "big_sur_two",
+     "pos": 0.461
+    }
+   ]
+  }
+ ]
+}

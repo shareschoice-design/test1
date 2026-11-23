@@ -18,6 +18,48 @@
   ]
  },
  {
+  "footage": "barnegat_kite_surfer",
+  "dir": "footage/hd",
+  "dvids_id": "895646",
+  "title": "Coast Guard rescues kite surfer near Barnegat Light, New Jersey",
+  "event": [
+   "aug-31",
+   [
+    "barnegat light",
+    "light",
+    "new jersey"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_barnegat_kite_surfer",
+    "hook": "His line got tangled",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "big_sur_two",
+  "dir": "footage/hd",
+  "dvids_id": "899380",
+  "title": "Coast Guard Air Station San Francisco rescues 2 from disabled near Big Sur",
+  "event": [
+   "aug-27",
+   [
+    "big sur"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_big_sur_two",
+    "hook": "Stranded off Big Sur",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "boy_cruise_ship",
   "dir": "footage/hd",
   "dvids_id": "1015403",
@@ -93,6 +135,26 @@
    {
     "name": "hd_cubans_water_cay",
     "hook": "Stranded on a tiny island",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "debby_adrift_boaters",
+  "dir": "footage/hd",
+  "dvids_id": "932811",
+  "title": "Coast Guard rescues 2 adrift boaters off Boca Grande during Tropical Storm Debby",
+  "event": [
+   "aug-04",
+   [
+    "boca grande"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_debby_adrift_boaters",
+    "hook": "They lost their sail",
     "rendered": true
    }
   ]
@@ -297,6 +359,26 @@
   ]
  },
  {
+  "footage": "gasparilla_disabled_boat",
+  "dir": "footage/hd",
+  "dvids_id": "938214",
+  "title": "Coast Guard rescues 2 aboard 37-foot disabled boat near Gasparilla Pass",
+  "event": [
+   "sep-27",
+   [
+    "gasparilla pass"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_gasparilla_disabled_boat",
+    "hook": "Stranded on old railroad tracks",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "hatteras_family_pets",
   "dir": "footage/hd",
   "dvids_id": "992017",
@@ -496,6 +578,26 @@
   ]
  },
  {
+  "footage": "lake_michigan_one",
+  "dir": "footage/hd",
+  "dvids_id": "970021",
+  "title": "Coast Guard Air Station Traverse City rescues one on Lake Michigan",
+  "event": [
+   "jul-13",
+   [
+    "nahma"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_lake_michigan_one",
+    "hook": "Emergency on the lake",
+    "rejected": true
+   }
+  ]
+ },
+ {
   "footage": "manzanita_cliff_hikers",
   "dir": "footage/hd",
   "dvids_id": "840892",
@@ -571,6 +673,24 @@
    {
     "name": "hd_mwd_tomas_retires",
     "hook": "His partner is retiring",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "north_bend_boat_fire",
+  "dir": "footage/hd",
+  "dvids_id": "857525",
+  "title": "Air Station North Bend MH-65 aircrew rescues 2 from boat fire",
+  "event": [
+   "sep-14",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_north_bend_boat_fire",
+    "hook": "Their boat caught fire",
     "rendered": true
    }
   ]
@@ -802,6 +922,44 @@
    {
     "name": "hd_tucson_heatstroke",
     "hook": "Heatstroke in the canyon",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "two_hunters",
+  "dir": "footage/hd",
+  "dvids_id": "990071",
+  "title": "Coast Guard rescues 2 hunters",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_two_hunters",
+    "hook": "The flood cut them off",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "tybee_vessel_sinks",
+  "dir": "footage/hd",
+  "dvids_id": "932697",
+  "title": "Coast Guard rescues 4 after vessel sinks 20 miles off Tybee Island",
+  "event": [
+   "aug-02",
+   [
+    "tybee island"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_tybee_vessel_sinks",
+    "hook": "Their boat sank",
     "rendered": true
    }
   ]
