@@ -1,0 +1,7 @@
+{"file":"manzanita_cliff_hikers","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["The tide trapped them",2],"range":[0.08,0.97],"lines":[
+["April 2022. Oregon coast.",["oregon"],null],
+["Two hikers climb down a coastal cliff.",["cliff"],null,["2","HIKERS. RISING TIDE."]],
+["Then the tide comes in.",["tide"],"Stranded..."],
+["They're stranded near Neahkahnie Beach.",["stranded"],null],
+["A Coast Guard helicopter hovers over the rocks.",["helicopter"],null],
+["Both hikers are hoisted to safety.",["safety"],null]]}

@@ -1,0 +1,7 @@
+{"file":"water_tower_collapse","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["They fell 60 feet",2],"range":[0.03,0.97],"lines":[
+["May 2025. Taholah, Washington.",["washington"],null],
+["Four men fall inside an empty water tower.",["fall"],null,["60+","FOOT FALL"]],
+["They're unable to walk.",["walk"],"Then..."],
+["A Coast Guard helicopter from Astoria arrives.",["astoria"],null],
+["They hoist the men up, one by one.",["one"],null],
+["All four men are lifted out.",["four"],null]]}

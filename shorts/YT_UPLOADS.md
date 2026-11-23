@@ -609,3 +609,117 @@ Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 33. hd_hatteras_family_pets
+**Title:** Rescued with their pets 🐶
+
+**Description:**
+```
+December 30, 2025. Off Cape Hatteras. A sailboat breaks down at sea. They set off their emergency beacon. A Coast Guard helicopter from Elizabeth City finds them. Two people. Their dog. Their cat. All four are rescued.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues family, pets off Cape Hatteras, North Carolina" – DVIDS (public domain)
+https://www.dvidshub.net/video/992017/coast-guard-rescues-family-pets-off-cape-hatteras-north-carolina
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 34. hd_lake_erie_ice_floe_nine
+**Title:** Nine trapped on the ice 😳
+
+**Description:**
+```
+January 2024. Lake Erie. Ice fishermen are stranded on an ice floe. Near Catawba Island, Ohio. Coast Guard Air Station Detroit launches. Station Marblehead responds too. All nine are rescued.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues nine from ice floe on Lake Erie" – DVIDS (public domain)
+https://www.dvidshub.net/video/910895/coast-guard-rescues-nine-from-ice-floe-on-lake-erie
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 35. hd_manzanita_cliff_hikers
+**Title:** The tide trapped them 😳
+
+**Description:**
+```
+April 2022. Oregon coast. Two hikers climb down a coastal cliff. Then the tide comes in. They're stranded near Neahkahnie Beach. A Coast Guard helicopter hovers over the rocks. Both hikers are hoisted to safety.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 2 stranded hikers from coastal cliff in Manzanita, OR" – DVIDS (public domain)
+https://www.dvidshub.net/video/840892/coast-guard-rescues-2-stranded-hikers-from-coastal-cliff-in-manzanita-or
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 36. hd_shark_bite_bahamas
+**Title:** Bitten by a shark 🌊
+
+**Description:**
+```
+February 2022. Near Bimini, Bahamas. A man is fishing aboard a boat. A shark bites him. A Coast Guard helicopter from Miami arrives. They lift him off the boat. He reaches the hospital in stable condition.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues shark bite victim near Bahamas" – DVIDS (public domain)
+https://www.dvidshub.net/video/832060/coast-guard-rescues-shark-bite-victim-near-bahamas
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 37. hd_terrebonne_helicopter_down
+**Title:** Their helicopter went down 🚁
+
+**Description:**
+```
+December 2022. Gulf of Mexico. A helicopter goes down near Terrebonne Bay. Three passengers wait in a life raft. A Coast Guard Jayhawk from New Orleans arrives. One by one, they're hoisted up. All three are in stable condition.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues three passengers from downed helicopter near Terrebonne Bay, La." – DVIDS (public domain)
+https://www.dvidshub.net/video/868617/coast-guard-rescues-three-passengers-from-downed-helicopter-near-terrebonne-bay-la
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 38. hd_water_tower_collapse
+**Title:** They fell 60 feet 🚁
+
+**Description:**
+```
+May 2025. Taholah, Washington. Four men fall inside an empty water tower. They're unable to walk. A Coast Guard helicopter from Astoria arrives. They hoist the men up, one by one. All four men are lifted out.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues four workers from collapsed water tower" – DVIDS (public domain)
+https://www.dvidshub.net/video/962453/coast-guard-rescues-four-workers-from-collapsed-water-tower
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "They fell 60 feet",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "May 2025. Taholah, Washington.",
+   "hl": [
+    "washington"
+   ],
+   "shots": [
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.688
+    },
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.728
+    }
+   ]
+  },
+  {
+   "vo": "Four men fall inside an empty water tower.",
+   "hl": [
+    "fall"
+   ],
+   "shots": [
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "water_tower_collapse",
+      "pos": 0.265,
+      "big": "60+",
+      "small": "FOOT FALL"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "They're unable to walk.",
+   "hl": [
+    "walk"
+   ],
+   "shots": [
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.343
+    },
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Astoria arrives.",
+   "hl": [
+    "astoria"
+   ],
+   "shots": [
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.5
+    },
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "They hoist the men up, one by one.",
+   "hl": [
+    "one"
+   ],
+   "shots": [
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.657
+    },
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "All four men are lifted out.",
+   "hl": [
+    "four"
+   ],
+   "shots": [
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.813
+    },
+    {
+     "file": "water_tower_collapse",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

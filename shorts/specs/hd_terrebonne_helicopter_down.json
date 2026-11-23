@@ -1,0 +1,7 @@
+{"file":"terrebonne_helicopter_down","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["Their helicopter went down",2],"range":[0.03,0.88],"lines":[
+["December 2022. Gulf of Mexico.",["gulf"],null],
+["A helicopter goes down near Terrebonne Bay.",["down"],null,["3","PASSENGERS IN THE GULF"]],
+["Three passengers wait in a life raft.",["raft"],"Then..."],
+["A Coast Guard Jayhawk from New Orleans arrives.",["jayhawk"],null],
+["One by one, they're hoisted up.",["hoisted"],null],
+["All three are in stable condition.",["stable"],null]]}

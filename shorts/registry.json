@@ -297,6 +297,26 @@
   ]
  },
  {
+  "footage": "hatteras_family_pets",
+  "dir": "footage/hd",
+  "dvids_id": "992017",
+  "title": "Coast Guard rescues family, pets off Cape Hatteras, North Carolina",
+  "event": [
+   "dec-30",
+   [
+    "cape hatteras"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_hatteras_family_pets",
+    "hook": "Rescued with their pets",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "helene_man_dog",
   "dir": "footage/hd",
   "dvids_id": "938235",
@@ -456,18 +476,45 @@
   ]
  },
  {
+  "footage": "lake_erie_ice_floe_nine",
+  "dir": "footage/hd",
+  "dvids_id": "910895",
+  "title": "Coast Guard rescues nine from ice floe on Lake Erie",
+  "event": [
+   "jan-22",
+   [
+    "catawba island"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_lake_erie_ice_floe_nine",
+    "hook": "Nine trapped on the ice",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "manzanita_cliff_hikers",
   "dir": "footage/hd",
   "dvids_id": "840892",
   "title": "Coast Guard rescues 2 stranded hikers from coastal cliff in Manzanita, OR",
   "event": [
-   "",
+   "apr-25",
    [
-    "manzanita"
+    "manzanita",
+    "neahkahnie beach"
    ]
   ],
   "tier": "hd",
-  "shorts": []
+  "shorts": [
+   {
+    "name": "hd_manzanita_cliff_hikers",
+    "hook": "The tide trapped them",
+    "rendered": true
+   }
+  ]
  },
  {
   "footage": "marine_runs_to_gunfire",
@@ -616,13 +663,22 @@
   "dvids_id": "832060",
   "title": "Coast Guard rescues shark bite victim near\u00a0Bahamas",
   "event": [
-   "",
+   "feb-21",
    [
-    "bahamas"
+    "bahamas",
+    "bimini",
+    "jackson memorial",
+    "miami"
    ]
   ],
   "tier": "hd",
-  "shorts": []
+  "shorts": [
+   {
+    "name": "hd_shark_bite_bahamas",
+    "hook": "Bitten by a shark",
+    "rendered": true
+   }
+  ]
  },
  {
   "footage": "sinking_sailboat_michigan",
@@ -711,6 +767,26 @@
   ]
  },
  {
+  "footage": "terrebonne_helicopter_down",
+  "dir": "footage/hd",
+  "dvids_id": "868617",
+  "title": "Coast Guard rescues three passengers from downed helicopter near Terrebonne Bay, La.",
+  "event": [
+   "dec-15",
+   [
+    "terrebonne bay"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_terrebonne_helicopter_down",
+    "hook": "Their helicopter went down",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "tucson_hoist_2022",
   "dir": "footage/hd",
   "dvids_id": "833784",
@@ -765,6 +841,24 @@
    {
     "name": "hd_virginia_helene",
     "hook": "Their first real rescue",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "water_tower_collapse",
+  "dir": "footage/hd",
+  "dvids_id": "962453",
+  "title": "Coast Guard rescues four workers from collapsed water tower",
+  "event": [
+   "may-13",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_water_tower_collapse",
+    "hook": "They fell 60 feet",
     "rendered": true
    }
   ]

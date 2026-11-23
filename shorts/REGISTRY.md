@@ -16,62 +16,68 @@
 | 12 | hd_florida_plane_crash | Their plane went down | florida_11_survivors | 1006722 | may-12 | hd | rendered |
 | 13 | hd_ford_sailors_reunite | 8 months at sea | ford_sailors_reunite | 910593 | jan-17 | hd | rendered |
 | 14 | hd_fort_stewart_homecoming | They're finally home | fort_stewart_homecoming | 923848 | may-15 | hd | rendered |
-| 15 | hd_helene_man_dog | Him and his dog | helene_man_dog | 938235 | sep-26 | hd | rendered |
-| 16 | hd_high_altitude_hiker | A night alone on the mountain | high_altitude_hiker | 878686 | apr-04 | hd | rendered |
-| 17 | hd_hsc26_homecoming | Ten months away | hsc26_homecoming | 1009525 | jun-05 | hd | rendered |
-| 18 | hd_jetty_st_lucie | Stuck on the rocks | jetty_st_lucie | 947469 | dec-15 | hd | rendered |
-| 19 | hd_jon_boat_st_augustine | His family reported him missing | jon_boat_st_augustine | 892771 | aug-05 | hd | rendered |
-| 20 | hd_jumped_sinking_vessel | They had to jump | jumped_sinking_vessel | 864947 | nov-17 | hd | rendered |
-| 21 | hd_kodiak_three_men_dog | Slammed against the rocks | kodiak_three_men_dog | 884516 | dec-12 | hd | rendered |
-| 22 | hd_kodiak_two_fishermen | Their boat flipped | kodiak_two_fishermen | 949745 | jan-15 | hd | rendered |
-| 23 | hd_marine_runs_to_gunfire | He ran toward the gunfire | marine_runs_to_gunfire | 825973 | dec-13 | hd | REJECTED |
-| 24 | hd_mount_idaho | The highest rescue ever | mount_idaho_hiker | 1015641 |  | hd | rendered |
-| 25 | hd_mwd_tomas_retires | His partner is retiring | mwd_tomas_retires | 955109 | mar-10 | hd | rendered |
-| 26 | hd_pass_a_grille_boaters | One beacon saved them | pass_a_grille_boaters | 935954 | sep-06 | hd | rendered |
-| 27 | hd_puerto_rico_cliff | Stuck below a cliff | pr_cliff_two | 1000575 | mar-21 | hd | rendered |
-| 28 | hd_regatta_dauphin_island | The race went wrong | regatta_dauphin_island | 929298 | jun-28 | hd | rendered |
-| 29 | hd_san_juan_two_boaters | Their boat flipped at sea | san_juan_two_boaters | 870260 | jan-04 | hd | rendered |
-| 30 | hd_sinking_sailboat_michigan | 300 feet down | sinking_sailboat_michigan | 925615 | may-27 | hd | rendered |
-| 31 | hd_skiff_capsizes | The weather flipped his boat | skiff_capsizes | 974186 | aug-20 | hd | rendered |
-| 32 | hd_stuck_in_mud | Stuck in the mud | stuck_in_mud | 881001 | apr-25 | hd | rendered |
-| 33 | hd_swimmer_columbia_bar | He went in after him | swimmer_columbia_bar | 909520 | feb-03 | hd | rendered |
-| 34 | hd_tucson_heatstroke | Heatstroke in the canyon | tucson_hoist_2022 | 833784 | mar-04 | hd | rendered |
-| 35 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | rendered |
-| 36 | hd_virginia_helene | Their first real rescue | virginia_helene | 959865 | oct-20 | hd | rendered |
-| 37 | hd_wave_capsizes_astoria | One wave flipped it | wave_capsizes_astoria | 872430 | feb-03 | hd | REJECTED |
-| 38 | hd_woman_oregon_river | Her car went into the river | woman_oregon_river | 954917 | mar-05 | hd | rendered |
-| 39 | agent_saved_boy | He wasn't breathing | agent_saved_boy | 581975 |  | sd-archived | rendered |
-| 40 | astronaut_water_survival | Astronauts in the water | astronaut_water_survival | 509855 | feb-10 | sd-archived | rendered |
-| 41 | baseball_surprise | Not a normal game | baseball_surprise | 460113 |  | sd-archived | rendered |
-| 42 | bear_mauling_skier | Mauled by a bear | bear_mauling_skier | 782825 |  | sd-archived | rendered |
-| 43 | boater_330_miles | 330 miles from land | boater_330_miles | 699223 | jul-24 | sd-archived | spec only |
-| 44 | boater_adrift_13h | 13 hours lost at sea | boater_adrift_13h | 512792 | mar-06 | sd-archived | rendered |
-| 45 | cliff_rescue | No one could reach her | cliff_rescue | 738507 |  | sd-archived | rendered |
-| 46 | colonel_giants_game | They thought he was in Afghanistan | colonel_giants_game | 383793 |  | sd-archived | rendered |
-| 47 | dad_surprises_daughter | Daddy came home | dad_surprises_daughter | 399217 |  | sd-archived | rendered |
-| 48 | dog_on_roof_florence | Stranded on a roof | dog_on_roof_florence | 652963 |  | sd-archived | spec only |
-| 49 | dog_reunited_handler | She came back for him | dog_reunited_handler | 543198 |  | sd-archived | rendered |
-| 50 | falcon9_vandenberg | Part of history's biggest upgrade | falcon9_vandenberg | 505260 | jan-14 | sd-archived | rendered |
-| 51 | fisherman_boat_sinks | His boat was sinking | fisherman_boat_sinks | 515565 | mar-23 | sd-archived | rendered |
-| 52 | fisherman_life_raft | His boat sank | fisherman_life_raft | 724582 |  | sd-archived | spec only |
-| 53 | florence_woman | Trapped by the flood | florence_woman | 625984 |  | sd-archived | rendered |
-| 54 | harvey_child | Saved from the flood | harvey_child | 590199 |  | sd-archived | rendered |
-| 55 | high_tide_ecola | The tide trapped them | high_tide_ecola | 681699 | may-19 | sd-archived | spec only |
-| 56 | kayaker_everglades | His kayak flipped | kayaker_everglades | 513596 | mar-10 | sd-archived | rendered |
-| 57 | man_two_dogs | His sailboat was dead | man_two_dogs | 715656 | oct-17 | sd-archived | spec only |
-| 58 | married_then_saves_life | Minutes after his wedding | married_then_saves_life | 684185 | aug-02 | sd-archived | spec only |
-| 59 | minuteman_launch | Picked at random | minuteman_launch | 508918 |  | sd-archived | rendered |
-| 60 | mom_early_return | Mom came home early | mom_early_return | 746401 | feb-14 | sd-archived | spec only |
-| 61 | paddleboarder_jetty | The wind took him | paddleboarder_jetty | 693268 | jun-25 | sd-archived | spec only |
-| 62 | plane_crash_survivor | His engine failed | plane_crash_survivor | 614280 |  | sd-archived | rendered |
-| 63 | sailor_surprises_mom | Mom had no idea | sailor_surprises_mom | 383771 |  | sd-archived | rendered |
-| 64 | sailor_surprises_sons | Two years in Japan | sailor_surprises_sons | 382981 |  | sd-archived | rendered |
-| 65 | sea_turtles | Trapped in a net | sea_turtles | 601463 |  | sd-archived | rendered |
-| 66 | shark_bite_rescue | Shark attack at sea | shark_bite_rescue | 732282 |  | sd-archived | rendered |
-| 67 | shark_reef_surprise | A secret homecoming | shark_reef_surprise | 391412 | feb-13 | sd-archived | rendered |
-| 68 | son_surprises_father | Dad was at work | son_surprises_father | 338685 | may-22 | sd-archived | spec only |
-| 69 | strike_eagle_afterburner | Full afterburner | strike_eagle_afterburner | 833680 |  | sd-archived | rendered |
-| 70 | woman_dog_cliff | Trapped all night | woman_dog_cliff | 697955 | jul-19 | sd-archived | spec only |
+| 15 | hd_hatteras_family_pets | Rescued with their pets | hatteras_family_pets | 992017 | dec-30 | hd | rendered |
+| 16 | hd_helene_man_dog | Him and his dog | helene_man_dog | 938235 | sep-26 | hd | rendered |
+| 17 | hd_high_altitude_hiker | A night alone on the mountain | high_altitude_hiker | 878686 | apr-04 | hd | rendered |
+| 18 | hd_hsc26_homecoming | Ten months away | hsc26_homecoming | 1009525 | jun-05 | hd | rendered |
+| 19 | hd_jetty_st_lucie | Stuck on the rocks | jetty_st_lucie | 947469 | dec-15 | hd | rendered |
+| 20 | hd_jon_boat_st_augustine | His family reported him missing | jon_boat_st_augustine | 892771 | aug-05 | hd | rendered |
+| 21 | hd_jumped_sinking_vessel | They had to jump | jumped_sinking_vessel | 864947 | nov-17 | hd | rendered |
+| 22 | hd_kodiak_three_men_dog | Slammed against the rocks | kodiak_three_men_dog | 884516 | dec-12 | hd | rendered |
+| 23 | hd_kodiak_two_fishermen | Their boat flipped | kodiak_two_fishermen | 949745 | jan-15 | hd | rendered |
+| 24 | hd_lake_erie_ice_floe_nine | Nine trapped on the ice | lake_erie_ice_floe_nine | 910895 | jan-22 | hd | rendered |
+| 25 | hd_manzanita_cliff_hikers | The tide trapped them | manzanita_cliff_hikers | 840892 | apr-25 | hd | rendered |
+| 26 | hd_marine_runs_to_gunfire | He ran toward the gunfire | marine_runs_to_gunfire | 825973 | dec-13 | hd | REJECTED |
+| 27 | hd_mount_idaho | The highest rescue ever | mount_idaho_hiker | 1015641 |  | hd | rendered |
+| 28 | hd_mwd_tomas_retires | His partner is retiring | mwd_tomas_retires | 955109 | mar-10 | hd | rendered |
+| 29 | hd_pass_a_grille_boaters | One beacon saved them | pass_a_grille_boaters | 935954 | sep-06 | hd | rendered |
+| 30 | hd_puerto_rico_cliff | Stuck below a cliff | pr_cliff_two | 1000575 | mar-21 | hd | rendered |
+| 31 | hd_regatta_dauphin_island | The race went wrong | regatta_dauphin_island | 929298 | jun-28 | hd | rendered |
+| 32 | hd_san_juan_two_boaters | Their boat flipped at sea | san_juan_two_boaters | 870260 | jan-04 | hd | rendered |
+| 33 | hd_shark_bite_bahamas | Bitten by a shark | shark_bite_bahamas | 832060 | feb-21 | hd | rendered |
+| 34 | hd_sinking_sailboat_michigan | 300 feet down | sinking_sailboat_michigan | 925615 | may-27 | hd | rendered |
+| 35 | hd_skiff_capsizes | The weather flipped his boat | skiff_capsizes | 974186 | aug-20 | hd | rendered |
+| 36 | hd_stuck_in_mud | Stuck in the mud | stuck_in_mud | 881001 | apr-25 | hd | rendered |
+| 37 | hd_swimmer_columbia_bar | He went in after him | swimmer_columbia_bar | 909520 | feb-03 | hd | rendered |
+| 38 | hd_terrebonne_helicopter_down | Their helicopter went down | terrebonne_helicopter_down | 868617 | dec-15 | hd | rendered |
+| 39 | hd_tucson_heatstroke | Heatstroke in the canyon | tucson_hoist_2022 | 833784 | mar-04 | hd | rendered |
+| 40 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | rendered |
+| 41 | hd_virginia_helene | Their first real rescue | virginia_helene | 959865 | oct-20 | hd | rendered |
+| 42 | hd_water_tower_collapse | They fell 60 feet | water_tower_collapse | 962453 | may-13 | hd | rendered |
+| 43 | hd_wave_capsizes_astoria | One wave flipped it | wave_capsizes_astoria | 872430 | feb-03 | hd | REJECTED |
+| 44 | hd_woman_oregon_river | Her car went into the river | woman_oregon_river | 954917 | mar-05 | hd | rendered |
+| 45 | agent_saved_boy | He wasn't breathing | agent_saved_boy | 581975 |  | sd-archived | rendered |
+| 46 | astronaut_water_survival | Astronauts in the water | astronaut_water_survival | 509855 | feb-10 | sd-archived | rendered |
+| 47 | baseball_surprise | Not a normal game | baseball_surprise | 460113 |  | sd-archived | rendered |
+| 48 | bear_mauling_skier | Mauled by a bear | bear_mauling_skier | 782825 |  | sd-archived | rendered |
+| 49 | boater_330_miles | 330 miles from land | boater_330_miles | 699223 | jul-24 | sd-archived | spec only |
+| 50 | boater_adrift_13h | 13 hours lost at sea | boater_adrift_13h | 512792 | mar-06 | sd-archived | rendered |
+| 51 | cliff_rescue | No one could reach her | cliff_rescue | 738507 |  | sd-archived | rendered |
+| 52 | colonel_giants_game | They thought he was in Afghanistan | colonel_giants_game | 383793 |  | sd-archived | rendered |
+| 53 | dad_surprises_daughter | Daddy came home | dad_surprises_daughter | 399217 |  | sd-archived | rendered |
+| 54 | dog_on_roof_florence | Stranded on a roof | dog_on_roof_florence | 652963 |  | sd-archived | spec only |
+| 55 | dog_reunited_handler | She came back for him | dog_reunited_handler | 543198 |  | sd-archived | rendered |
+| 56 | falcon9_vandenberg | Part of history's biggest upgrade | falcon9_vandenberg | 505260 | jan-14 | sd-archived | rendered |
+| 57 | fisherman_boat_sinks | His boat was sinking | fisherman_boat_sinks | 515565 | mar-23 | sd-archived | rendered |
+| 58 | fisherman_life_raft | His boat sank | fisherman_life_raft | 724582 |  | sd-archived | spec only |
+| 59 | florence_woman | Trapped by the flood | florence_woman | 625984 |  | sd-archived | rendered |
+| 60 | harvey_child | Saved from the flood | harvey_child | 590199 |  | sd-archived | rendered |
+| 61 | high_tide_ecola | The tide trapped them | high_tide_ecola | 681699 | may-19 | sd-archived | spec only |
+| 62 | kayaker_everglades | His kayak flipped | kayaker_everglades | 513596 | mar-10 | sd-archived | rendered |
+| 63 | man_two_dogs | His sailboat was dead | man_two_dogs | 715656 | oct-17 | sd-archived | spec only |
+| 64 | married_then_saves_life | Minutes after his wedding | married_then_saves_life | 684185 | aug-02 | sd-archived | spec only |
+| 65 | minuteman_launch | Picked at random | minuteman_launch | 508918 |  | sd-archived | rendered |
+| 66 | mom_early_return | Mom came home early | mom_early_return | 746401 | feb-14 | sd-archived | spec only |
+| 67 | paddleboarder_jetty | The wind took him | paddleboarder_jetty | 693268 | jun-25 | sd-archived | spec only |
+| 68 | plane_crash_survivor | His engine failed | plane_crash_survivor | 614280 |  | sd-archived | rendered |
+| 69 | sailor_surprises_mom | Mom had no idea | sailor_surprises_mom | 383771 |  | sd-archived | rendered |
+| 70 | sailor_surprises_sons | Two years in Japan | sailor_surprises_sons | 382981 |  | sd-archived | rendered |
+| 71 | sea_turtles | Trapped in a net | sea_turtles | 601463 |  | sd-archived | rendered |
+| 72 | shark_bite_rescue | Shark attack at sea | shark_bite_rescue | 732282 |  | sd-archived | rendered |
+| 73 | shark_reef_surprise | A secret homecoming | shark_reef_surprise | 391412 | feb-13 | sd-archived | rendered |
+| 74 | son_surprises_father | Dad was at work | son_surprises_father | 338685 | may-22 | sd-archived | spec only |
+| 75 | strike_eagle_afterburner | Full afterburner | strike_eagle_afterburner | 833680 |  | sd-archived | rendered |
+| 76 | woman_dog_cliff | Trapped all night | woman_dog_cliff | 697955 | jul-19 | sd-archived | spec only |
 
 ## Possible same-event duplicates
 

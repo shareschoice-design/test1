@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Bitten by a shark",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "February 2022. Near Bimini, Bahamas.",
+   "hl": [
+    "bahamas"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.148
+    },
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.188
+    }
+   ]
+  },
+  {
+   "vo": "A man is fishing aboard a boat.",
+   "hl": [
+    "fishing"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.187
+    },
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "A shark bites him.",
+   "hl": [
+    "shark"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "shark_bite_bahamas",
+      "pos": 0.422,
+      "big": "51",
+      "small": "YEARS OLD. SHARK BITE."
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Miami arrives.",
+   "hl": [
+    "miami"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.5
+    },
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "They lift him off the boat.",
+   "hl": [
+    "lift"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.657
+    },
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "He reaches the hospital in stable condition.",
+   "hl": [
+    "stable"
+   ],
+   "shots": [
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.813
+    },
+    {
+     "file": "shark_bite_bahamas",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

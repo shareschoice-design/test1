@@ -1,0 +1,7 @@
+{"file":"shark_bite_bahamas","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Bitten by a shark",2],"range":[0.03,0.97],"lines":[
+["February 2022. Near Bimini, Bahamas.",["bahamas"],null],
+["A man is fishing aboard a boat.",["fishing"],null],
+["A shark bites him.",["shark"],"Then...",["51","YEARS OLD. SHARK BITE."]],
+["A Coast Guard helicopter from Miami arrives.",["miami"],null],
+["They lift him off the boat.",["lift"],null],
+["He reaches the hospital in stable condition.",["stable"],null]]}

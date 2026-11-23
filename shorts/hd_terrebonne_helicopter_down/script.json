@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Their helicopter went down",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "December 2022. Gulf of Mexico.",
+   "hl": [
+    "gulf"
+   ],
+   "shots": [
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.231
+    },
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.271
+    }
+   ]
+  },
+  {
+   "vo": "A helicopter goes down near Terrebonne Bay.",
+   "hl": [
+    "down"
+   ],
+   "shots": [
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.172
+    },
+    {
+     "card": {
+      "file": "terrebonne_helicopter_down",
+      "pos": 0.242,
+      "big": "3",
+      "small": "PASSENGERS IN THE GULF"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Three passengers wait in a life raft.",
+   "hl": [
+    "raft"
+   ],
+   "shots": [
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.313
+    },
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.384
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk from New Orleans arrives.",
+   "hl": [
+    "jayhawk"
+   ],
+   "shots": [
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.455
+    },
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.526
+    }
+   ]
+  },
+  {
+   "vo": "One by one, they're hoisted up.",
+   "hl": [
+    "hoisted"
+   ],
+   "shots": [
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.597
+    },
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.667
+    }
+   ]
+  },
+  {
+   "vo": "All three are in stable condition.",
+   "hl": [
+    "stable"
+   ],
+   "shots": [
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.738
+    },
+    {
+     "file": "terrebonne_helicopter_down",
+     "pos": 0.809
+    }
+   ]
+  }
+ ]
+}

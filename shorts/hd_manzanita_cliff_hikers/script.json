@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "The tide trapped them",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "April 2022. Oregon coast.",
+   "hl": [
+    "oregon"
+   ],
+   "shots": [
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.774
+    },
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.814
+    }
+   ]
+  },
+  {
+   "vo": "Two hikers climb down a coastal cliff.",
+   "hl": [
+    "cliff"
+   ],
+   "shots": [
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.228
+    },
+    {
+     "card": {
+      "file": "manzanita_cliff_hikers",
+      "pos": 0.302,
+      "big": "2",
+      "small": "HIKERS. RISING TIDE."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Then the tide comes in.",
+   "hl": [
+    "tide"
+   ],
+   "shots": [
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.377
+    },
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.451
+    }
+   ],
+   "label": "Stranded..."
+  },
+  {
+   "vo": "They're stranded near Neahkahnie Beach.",
+   "hl": [
+    "stranded"
+   ],
+   "shots": [
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.525
+    },
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.599
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard helicopter hovers over the rocks.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.673
+    },
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.747
+    }
+   ]
+  },
+  {
+   "vo": "Both hikers are hoisted to safety.",
+   "hl": [
+    "safety"
+   ],
+   "shots": [
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.822
+    },
+    {
+     "file": "manzanita_cliff_hikers",
+     "pos": 0.896
+    }
+   ]
+  }
+ ]
+}

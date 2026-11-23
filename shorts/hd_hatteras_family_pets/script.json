@@ -1,0 +1,113 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Rescued with their pets",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "December 30, 2025. Off Cape Hatteras.",
+   "hl": [
+    "hatteras"
+   ],
+   "shots": [
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.319
+    },
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.359
+    }
+   ]
+  },
+  {
+   "vo": "A sailboat breaks down at sea.",
+   "hl": [
+    "breaks"
+   ],
+   "shots": [
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "hatteras_family_pets",
+      "pos": 0.265,
+      "big": "2",
+      "small": "PEOPLE. 1 DOG. 1 CAT."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "They set off their emergency beacon.",
+   "hl": [
+    "beacon"
+   ],
+   "shots": [
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.343
+    },
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Elizabeth City finds them.",
+   "hl": [
+    "finds"
+   ],
+   "shots": [
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.5
+    },
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Two people. Their dog. Their cat.",
+   "hl": [
+    "dog",
+    "cat"
+   ],
+   "shots": [
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.657
+    },
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "All four are rescued.",
+   "hl": [
+    "four"
+   ],
+   "shots": [
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.813
+    },
+    {
+     "file": "hatteras_family_pets",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Nine trapped on the ice",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "January 2024. Lake Erie.",
+   "hl": [
+    "erie"
+   ],
+   "shots": [
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.368
+    },
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.408
+    }
+   ]
+  },
+  {
+   "vo": "Ice fishermen are stranded on an ice floe.",
+   "hl": [
+    "stranded"
+   ],
+   "shots": [
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "lake_erie_ice_floe_nine",
+      "pos": 0.265,
+      "big": "9",
+      "small": "STRANDED ON THE ICE"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Near Catawba Island, Ohio.",
+   "hl": [
+    "catawba"
+   ],
+   "shots": [
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.343
+    },
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Coast Guard Air Station Detroit launches.",
+   "hl": [
+    "detroit"
+   ],
+   "shots": [
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.5
+    },
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Station Marblehead responds too.",
+   "hl": [
+    "marblehead"
+   ],
+   "shots": [
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.657
+    },
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "All nine are rescued.",
+   "hl": [
+    "nine"
+   ],
+   "shots": [
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.813
+    },
+    {
+     "file": "lake_erie_ice_floe_nine",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}
