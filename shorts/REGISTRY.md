@@ -7,30 +7,30 @@
 | 3 | hd_canada_dogs | They found the other dog | canada_man_two_dogs | 869765 | dec-28 | hd | rendered |
 | 4 | hd_cat_island_dogs | Two people. Two dogs. | cat_island_dogs | 957082 | mar-29 | hd | spec only |
 | 5 | hd_cubans_water_cay | Stranded on a tiny island | cubans_water_cay | 860811 | oct-12 | hd | rendered |
-| 6 | hd_devils_slide_hiker | Hurt on Devil's Slide | devils_slide_hiker | 1003354 | apr-19 | hd | spec only |
+| 6 | hd_devils_slide_hiker | Hurt on Devil's Slide | devils_slide_hiker | 1003354 | apr-19 | hd | rendered |
 | 7 | hd_dog_fell_cliff | Their dog fell off a cliff | dog_fell_cliff | 909793 | jan-01 | hd | rendered |
 | 8 | hd_dog_in_container | Something was scratching | dog_in_container | 912242 | jan-31 | hd | rendered |
-| 9 | hd_egmont_key_five | Their boat sank | egmont_key_five | 990054 |  | hd | spec only |
+| 9 | hd_egmont_key_five | Their boat sank | egmont_key_five | 990054 |  | hd | REJECTED |
 | 10 | hd_el_paso_cliff_fall | He fell off a cliff | el_paso_cliff_fall | 975581 | aug-30 | hd | rendered |
 | 11 | hd_flood_two_dogs_texas | Left behind in the flood | flood_two_dogs_texas | 1015195 | jul-17 | hd | REJECTED |
 | 12 | hd_florida_plane_crash | Their plane went down | florida_11_survivors | 1006722 | may-12 | hd | rendered |
 | 13 | hd_ford_sailors_reunite | 8 months at sea | ford_sailors_reunite | 910593 | jan-17 | hd | rendered |
 | 14 | hd_fort_stewart_homecoming | They're finally home | fort_stewart_homecoming | 923848 | may-15 | hd | rendered |
 | 15 | hd_helene_man_dog | Him and his dog | helene_man_dog | 938235 | sep-26 | hd | rendered |
-| 16 | hd_high_altitude_hiker | A night alone on the mountain | high_altitude_hiker | 878686 | apr-04 | hd | spec only |
-| 17 | hd_hsc26_homecoming | Ten months away | hsc26_homecoming | 1009525 | jun-05 | hd | spec only |
+| 16 | hd_high_altitude_hiker | A night alone on the mountain | high_altitude_hiker | 878686 | apr-04 | hd | rendered |
+| 17 | hd_hsc26_homecoming | Ten months away | hsc26_homecoming | 1009525 | jun-05 | hd | rendered |
 | 18 | hd_jetty_st_lucie | Stuck on the rocks | jetty_st_lucie | 947469 | dec-15 | hd | rendered |
-| 19 | hd_jon_boat_st_augustine | His family reported him missing | jon_boat_st_augustine | 892771 | aug-05 | hd | spec only |
+| 19 | hd_jon_boat_st_augustine | His family reported him missing | jon_boat_st_augustine | 892771 | aug-05 | hd | rendered |
 | 20 | hd_jumped_sinking_vessel | They had to jump | jumped_sinking_vessel | 864947 | nov-17 | hd | rendered |
 | 21 | hd_kodiak_three_men_dog | Slammed against the rocks | kodiak_three_men_dog | 884516 | dec-12 | hd | rendered |
 | 22 | hd_kodiak_two_fishermen | Their boat flipped | kodiak_two_fishermen | 949745 | jan-15 | hd | rendered |
-| 23 | hd_marine_runs_to_gunfire | He ran toward the gunfire | marine_runs_to_gunfire | 825973 | dec-13 | hd | rendered |
+| 23 | hd_marine_runs_to_gunfire | He ran toward the gunfire | marine_runs_to_gunfire | 825973 | dec-13 | hd | REJECTED |
 | 24 | hd_mount_idaho | The highest rescue ever | mount_idaho_hiker | 1015641 |  | hd | rendered |
 | 25 | hd_mwd_tomas_retires | His partner is retiring | mwd_tomas_retires | 955109 | mar-10 | hd | rendered |
-| 26 | hd_pass_a_grille_boaters | One beacon saved them | pass_a_grille_boaters | 935954 | sep-06 | hd | spec only |
+| 26 | hd_pass_a_grille_boaters | One beacon saved them | pass_a_grille_boaters | 935954 | sep-06 | hd | rendered |
 | 27 | hd_puerto_rico_cliff | Stuck below a cliff | pr_cliff_two | 1000575 | mar-21 | hd | rendered |
-| 28 | hd_regatta_dauphin_island | The race went wrong | regatta_dauphin_island | 929298 | jun-28 | hd | spec only |
-| 29 | hd_san_juan_two_boaters | Their boat flipped at sea | san_juan_two_boaters | 870260 | jan-04 | hd | spec only |
+| 28 | hd_regatta_dauphin_island | The race went wrong | regatta_dauphin_island | 929298 | jun-28 | hd | rendered |
+| 29 | hd_san_juan_two_boaters | Their boat flipped at sea | san_juan_two_boaters | 870260 | jan-04 | hd | rendered |
 | 30 | hd_sinking_sailboat_michigan | 300 feet down | sinking_sailboat_michigan | 925615 | may-27 | hd | rendered |
 | 31 | hd_skiff_capsizes | The weather flipped his boat | skiff_capsizes | 974186 | aug-20 | hd | spec only |
 | 32 | hd_stuck_in_mud | Stuck in the mud | stuck_in_mud | 881001 | apr-25 | hd | spec only |

@@ -113,7 +113,7 @@
    {
     "name": "hd_devils_slide_hiker",
     "hook": "Hurt on Devil's Slide",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
@@ -176,7 +176,7 @@
    {
     "name": "hd_egmont_key_five",
     "hook": "Their boat sank",
-    "rendered": false
+    "rejected": true
    }
   ]
  },
@@ -332,7 +332,7 @@
    {
     "name": "hd_high_altitude_hiker",
     "hook": "A night alone on the mountain",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
@@ -352,7 +352,7 @@
    {
     "name": "hd_hsc26_homecoming",
     "hook": "Ten months away",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
@@ -390,7 +390,7 @@
    {
     "name": "hd_jon_boat_st_augustine",
     "hook": "His family reported him missing",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
@@ -471,7 +471,7 @@
    {
     "name": "hd_marine_runs_to_gunfire",
     "hook": "He ran toward the gunfire",
-    "rendered": true
+    "rejected": true
    }
   ]
  },
@@ -530,7 +530,7 @@
    {
     "name": "hd_pass_a_grille_boaters",
     "hook": "One beacon saved them",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
@@ -572,7 +572,7 @@
    {
     "name": "hd_regatta_dauphin_island",
     "hook": "The race went wrong",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
@@ -592,7 +592,7 @@
    {
     "name": "hd_san_juan_two_boaters",
     "hook": "Their boat flipped at sea",
-    "rendered": false
+    "rendered": true
    }
   ]
  },

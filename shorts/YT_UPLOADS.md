@@ -400,3 +400,155 @@ Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4
 #shorts #truestory #unbroken
 ```
 
+
+---
+
+## 22. hd_devils_slide_hiker
+**Title:** Hurt on Devil's Slide 🚁
+
+**Description:**
+```
+April 2026. Devil's Slide Trail, Pacifica, California. A hiker is injured, away from the trail. A Coast Guard helicopter from San Francisco arrives. They lower a rescue swimmer to him. And hoist him up into the helicopter. Medics are waiting at the trail parking lot.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues hiker on Devil’s Slide Trail in Pacifica, Calif." – DVIDS (public domain)
+https://www.dvidshub.net/video/1003354/coast-guard-rescues-hiker-on-devils-slide-trail-in-pacifica-calif
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 23. hd_el_paso_cliff_fall
+**Title:** He fell off a cliff 😳
+
+**Description:**
+```
+August 2025. The Franklin Mountains, El Paso, Texas. A hiker falls off a cliff near Mammoth Cave. He's badly hurt. He needs to get out by air. A Black Hawk crew with a rescue hoist flies in. Together with the local rescue team, they get him off the mountain. Straight to a trauma hospital.
+
+Would you have done the same? 👇
+
+Real footage: "Hoist Rescue by CBP Air Branch in El Paso, TX" – DVIDS (public domain)
+https://www.dvidshub.net/video/975581/hoist-rescue-by-cbp-air-branch-in-el-paso-tx
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 24. hd_high_altitude_hiker
+**Title:** A night alone on the mountain 🏔️
+
+**Description:**
+```
+April 2023. Pima County, Arizona. An injured hiker can't make it back down. So he spends the whole night on the mountain. The next day, a Black Hawk crew lowers a rescue specialist. They pull him up into the helicopter. And fly him straight to the hospital in Tucson.
+
+Would you have done the same? 👇
+
+Real footage: "CBP Air and Marine Hoist Rescue" – DVIDS (public domain)
+https://www.dvidshub.net/video/878686/cbp-air-and-marine-hoist-rescue
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 25. hd_hsc26_homecoming
+**Title:** Ten months away 🧡
+
+**Description:**
+```
+June 2026. Naval Station Norfolk, Virginia. The helicopters of squadron HSC-26 come back home. After ten months deployed in the Caribbean. Family and friends are there to greet them. Ten months apart. Over in one moment. Welcome home.
+
+Would you have done the same? 👇
+
+Real footage: "HSC-26 Sailors Reunite with Families" – DVIDS (public domain)
+https://www.dvidshub.net/video/1009525/hsc-26-sailors-reunite-with-families
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 26. hd_jon_boat_st_augustine
+**Title:** His family reported him missing 🌊
+
+**Description:**
+```
+August 2023. St. Augustine, Florida. Charles Gregory's family reports him missing. The Coast Guard starts searching. They find him 12 miles offshore. His 12-foot jon boat is half underwater. He's found. And he's rescued.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues man 12 miles offshore St. Augustine" – DVIDS (public domain)
+https://www.dvidshub.net/video/892771/coast-guard-rescues-man-12-miles-offshore-st-augustine
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 27. hd_pass_a_grille_boaters
+**Title:** One beacon saved them 🌊
+
+**Description:**
+```
+September 2024. 18 miles off Pass-a-Grille Beach, Florida. A 26-foot boat capsizes. But one of them has a personal locator beacon. The signal leads a Coast Guard helicopter straight to them. Both are wearing life jackets. One is hoisted up. Sheriff's deputies pick up the other.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard, partner agency rescue 2 boaters 18 miles off Pass-a-Grille Beach" – DVIDS (public domain)
+https://www.dvidshub.net/video/935954/coast-guard-partner-agency-rescue-2-boaters-18-miles-off-pass-a-grille-beach
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 28. hd_regatta_dauphin_island
+**Title:** The race went wrong 🌊
+
+**Description:**
+```
+June 2024. A sailboat regatta near Dauphin Island, Alabama. A catamaran capsizes. All four sailors climb onto the overturned hull. They activate their emergency beacons. A Coast Guard crew from Dauphin Island reaches them. Four sailors. All four rescued.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 4 boaters during sailboat regatta near Dauphin Island, Alabama" – DVIDS (public domain)
+https://www.dvidshub.net/video/929298/coast-guard-rescues-4-boaters-during-sailboat-regatta-near-dauphin-island-alabama
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 29. hd_san_juan_two_boaters
+**Title:** Their boat flipped at sea 🌊
+
+**Description:**
+```
+January 2023. Off San Juan, Puerto Rico. A boat capsizes six and a half miles offshore. Two people are in the water. A Coast Guard boat crew and aircrew work together. They pull both survivors out. Back at the base, their families are waiting.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard surface, air units rescue 2 boaters following vessel capsizing near San Juan, Puerto Rico" – DVIDS (public domain)
+https://www.dvidshub.net/video/870260/coast-guard-surface-air-units-rescue-2-boaters-following-vessel-capsizing-near-san-juan-puerto-rico
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
