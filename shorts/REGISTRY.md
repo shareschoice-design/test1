@@ -5,7 +5,7 @@
 | 1 | hd_baboquivari_woman | Trapped on a mountain | baboquivari_woman | 886085 | jun-05 | hd | rendered |
 | 2 | hd_boy_cruise_ship | An 11-year-old in trouble | boy_cruise_ship | 1015403 | jul-11 | hd | REJECTED |
 | 3 | hd_canada_dogs | They found the other dog | canada_man_two_dogs | 869765 | dec-28 | hd | rendered |
-| 4 | hd_cat_island_dogs | Two people. Two dogs. | cat_island_dogs | 957082 | mar-29 | hd | spec only |
+| 4 | hd_cat_island_dogs | Two people. Two dogs. | cat_island_dogs | 957082 | mar-29 | hd | REJECTED |
 | 5 | hd_cubans_water_cay | Stranded on a tiny island | cubans_water_cay | 860811 | oct-12 | hd | rendered |
 | 6 | hd_devils_slide_hiker | Hurt on Devil's Slide | devils_slide_hiker | 1003354 | apr-19 | hd | rendered |
 | 7 | hd_dog_fell_cliff | Their dog fell off a cliff | dog_fell_cliff | 909793 | jan-01 | hd | rendered |
@@ -32,11 +32,11 @@
 | 28 | hd_regatta_dauphin_island | The race went wrong | regatta_dauphin_island | 929298 | jun-28 | hd | rendered |
 | 29 | hd_san_juan_two_boaters | Their boat flipped at sea | san_juan_two_boaters | 870260 | jan-04 | hd | rendered |
 | 30 | hd_sinking_sailboat_michigan | 300 feet down | sinking_sailboat_michigan | 925615 | may-27 | hd | rendered |
-| 31 | hd_skiff_capsizes | The weather flipped his boat | skiff_capsizes | 974186 | aug-20 | hd | spec only |
-| 32 | hd_stuck_in_mud | Stuck in the mud | stuck_in_mud | 881001 | apr-25 | hd | spec only |
+| 31 | hd_skiff_capsizes | The weather flipped his boat | skiff_capsizes | 974186 | aug-20 | hd | rendered |
+| 32 | hd_stuck_in_mud | Stuck in the mud | stuck_in_mud | 881001 | apr-25 | hd | rendered |
 | 33 | hd_swimmer_columbia_bar | He went in after him | swimmer_columbia_bar | 909520 | feb-03 | hd | rendered |
 | 34 | hd_tucson_heatstroke | Heatstroke in the canyon | tucson_hoist_2022 | 833784 | mar-04 | hd | rendered |
-| 35 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | spec only |
+| 35 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | rendered |
 | 36 | hd_virginia_helene | Their first real rescue | virginia_helene | 959865 | oct-20 | hd | rendered |
 | 37 | hd_wave_capsizes_astoria | One wave flipped it | wave_capsizes_astoria | 872430 | feb-03 | hd | REJECTED |
 | 38 | hd_woman_oregon_river | Her car went into the river | woman_oregon_river | 954917 | mar-05 | hd | rendered |

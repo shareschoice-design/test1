@@ -8,3 +8,4 @@ Rule: vertical DVIDS sources are often social edits – check the contact sheet 
 
 - hd_marine_runs_to_gunfire: source is a single talking-head interview – every cut looks the same (QC 12 repeat pairs).
 - hd_egmont_key_five: night thermal footage, half the cuts nearly black and look alike (QC repeats) - not max quality.
+- hd_cat_island_dogs: 8 repeated-looking cut pairs (source too uniform).

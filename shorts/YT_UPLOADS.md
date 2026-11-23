@@ -552,3 +552,60 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 30. hd_skiff_capsizes
+**Title:** The weather flipped his boat 🚁
+
+**Description:**
+```
+August 2025. Red Fish Bay, Texas. Bad weather flips an 18-foot skiff. One man is in distress. A Coast Guard helicopter from Corpus Christi arrives. He's hoisted out of the water. Safe on dry land.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues boater after skiff capsizes near Red Fish Bay" – DVIDS (public domain)
+https://www.dvidshub.net/video/974186/coast-guard-rescues-boater-after-skiff-capsizes-near-red-fish-bay
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 31. hd_stuck_in_mud
+**Title:** Stuck in the mud 🚁
+
+**Description:**
+```
+April 2023. Port Bolivar, Texas. A 65-year-old man is stuck in the mud near the Galveston jetty. He can't get himself out. A Coast Guard helicopter from Houston arrives. They hoist him straight out of the mud. He reaches medics in stable condition.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues stranded 65-year-old man near Port Bolivar, Texas" – DVIDS (public domain)
+https://www.dvidshub.net/video/881001/coast-guard-rescues-stranded-65-year-old-man-near-port-bolivar-texas
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 32. hd_veterans_day_fisherman
+**Title:** 400 miles from land 🌊
+
+**Description:**
+```
+November 2024. 400 miles off the coast of San Diego. A man on a fishing trip starts showing stroke-like symptoms. No hospital for hundreds of miles. A Pave Hawk rescue helicopter from the California Air National Guard flies out. It hovers over the boat to evacuate him. Distance doesn't stop these crews.
+
+Would you have done the same? 👇
+
+Real footage: "129th Rescue Wing Rescues Fisherman over Veteran's Day Weekend" – DVIDS (public domain)
+https://www.dvidshub.net/video/943421/129th-rescue-wing-rescues-fisherman-over-veterans-day-weekend
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

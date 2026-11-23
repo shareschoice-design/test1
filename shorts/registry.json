@@ -75,7 +75,7 @@
    {
     "name": "hd_cat_island_dogs",
     "hook": "Two people. Two dogs.",
-    "rendered": false
+    "rejected": true
    }
   ]
  },
@@ -456,6 +456,20 @@
   ]
  },
  {
+  "footage": "manzanita_cliff_hikers",
+  "dir": "footage/hd",
+  "dvids_id": "840892",
+  "title": "Coast Guard rescues 2 stranded hikers from coastal cliff in Manzanita, OR",
+  "event": [
+   "",
+   [
+    "manzanita"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": []
+ },
+ {
   "footage": "marine_runs_to_gunfire",
   "dir": "footage/hd",
   "dvids_id": "825973",
@@ -597,6 +611,20 @@
   ]
  },
  {
+  "footage": "shark_bite_bahamas",
+  "dir": "footage/hd",
+  "dvids_id": "832060",
+  "title": "Coast Guard rescues shark bite victim near\u00a0Bahamas",
+  "event": [
+   "",
+   [
+    "bahamas"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": []
+ },
+ {
   "footage": "sinking_sailboat_michigan",
   "dir": "footage/hd",
   "dvids_id": "925615",
@@ -632,7 +660,7 @@
    {
     "name": "hd_skiff_capsizes",
     "hook": "The weather flipped his boat",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
@@ -654,7 +682,7 @@
    {
     "name": "hd_stuck_in_mud",
     "hook": "Stuck in the mud",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
@@ -716,7 +744,7 @@
    {
     "name": "hd_veterans_day_fisherman",
     "hook": "400 miles from land",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
