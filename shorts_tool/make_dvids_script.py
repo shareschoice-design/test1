@@ -16,6 +16,18 @@ def peak_pos(name):
     return round(i / n, 3)
 
 spec = json.load(open(sys.argv[1])); out = sys.argv[2]
+# duplicate guard: refuse if another short already uses this footage or the same event
+_reg = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "shorts", "registry.json")
+if os.path.exists(_reg) and not os.environ.get("ALLOW_DUP"):
+    _me = os.path.basename(sys.argv[1])[:-5]
+    _rows = json.load(open(_reg)); _mine = next((r for r in _rows if r["footage"] == spec["file"]), None)
+    for r in _rows:
+        others = [s["name"] for s in r["shorts"] if s["name"] != _me and not s.get("rejected")]
+        if not others: continue
+        same_foot = r["footage"] == spec["file"]
+        same_event = _mine and r is not _mine and _mine["event"][0] and r["event"][0] == _mine["event"][0] and set(r["event"][1]) & set(_mine["event"][1])
+        if same_foot or same_event:
+            sys.exit(f"DUPLICATE: {_me} repeats {others} ({'same footage' if same_foot else 'same event ' + r['event'][0]}). Set ALLOW_DUP=1 to override.")
 n = len(spec["lines"]); a, b = spec.get("range", [0.06, 0.97])
 lines = []
 for i, entry in enumerate(spec["lines"]):

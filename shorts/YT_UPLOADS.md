@@ -400,21 +400,3 @@ Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4
 #shorts #truestory #unbroken
 ```
 
----
-
-## 22. hd_wave_capsizes_astoria
-**Title:** One wave flipped it 🌊
-
-**Description:**
-```
-February 2023. Near Astoria, Oregon. A 32-foot boat called Sand Piper is already disabled. Then a wave flips it over. A Jayhawk helicopter and several 47-foot motor lifeboats race in. Together they pull the mariner out of the water.
-
-Would you have done the same? 👇
-
-Real footage: "Coast Guard rescues mariner in distress as wave capsizes vessel near mouth of Columbia River" – DVIDS (public domain)
-https://www.dvidshub.net/video/872430/coast-guard-rescues-mariner-in-distress-as-wave-capsizes-vessel-near-mout
-The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
-Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
-
-#shorts #truestory #unbroken
-```

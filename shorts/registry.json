@@ -1,0 +1,1455 @@
+[
+ {
+  "footage": "baboquivari_woman",
+  "dir": "footage/hd",
+  "dvids_id": "886085",
+  "title": "AMO Tucson Hoist Rescue",
+  "event": [
+   "jun-05",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_baboquivari_woman",
+    "hook": "Trapped on a mountain",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "boy_cruise_ship",
+  "dir": "footage/hd",
+  "dvids_id": "1015403",
+  "title": "Coast Guard Air Station Sitka rescues 11-year-old boy in Gulf of Alaska",
+  "event": [
+   "jul-11",
+   [
+    "gulf",
+    "juneau"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_boy_cruise_ship",
+    "hook": "An 11-year-old in trouble",
+    "rejected": true
+   }
+  ]
+ },
+ {
+  "footage": "canada_man_two_dogs",
+  "dir": "footage/hd",
+  "dvids_id": "869765",
+  "title": "Coast Guard rescues 1 person, 2 dogs from Canadian waters",
+  "event": [
+   "dec-28",
+   [
+    "victoria"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_canada_dogs",
+    "hook": "They found the other dog",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "cat_island_dogs",
+  "dir": "footage/hd",
+  "dvids_id": "957082",
+  "title": "Coast Guard rescues 2 people, 2 dogs off 14-foot disabled boat near Cat Island, S.C.",
+  "event": [
+   "mar-29",
+   [
+    "cat island",
+    "island"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_cat_island_dogs",
+    "hook": "Two people. Two dogs.",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "cubans_water_cay",
+  "dir": "footage/hd",
+  "dvids_id": "860811",
+  "title": "Coast Guard Cutter Isaac Mayo crew rescues stranded migrants",
+  "event": [
+   "oct-12",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_cubans_water_cay",
+    "hook": "Stranded on a tiny island",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "devils_slide_hiker",
+  "dir": "footage/hd",
+  "dvids_id": "1003354",
+  "title": "Coast Guard rescues hiker on Devil\u2019s Slide Trail in Pacifica, Calif.",
+  "event": [
+   "apr-19",
+   [
+    "pacifica"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_devils_slide_hiker",
+    "hook": "Hurt on Devil's Slide",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "dog_fell_cliff",
+  "dir": "footage/hd",
+  "dvids_id": "909793",
+  "title": "Coast Guard rescues dog from Ecola State Park, Oregon",
+  "event": [
+   "jan-01",
+   [
+    "ecola state",
+    "oregon jan"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_dog_fell_cliff",
+    "hook": "Their dog fell off a cliff",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "dog_in_container",
+  "dir": "footage/hd",
+  "dvids_id": "912242",
+  "title": "Coast Guard marine inspectors rescue dog from shipping container in Seabrook, Texas",
+  "event": [
+   "jan-31",
+   [
+    "coast guard",
+    "seabrook"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_dog_in_container",
+    "hook": "Something was scratching",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "el_paso_cliff_fall",
+  "dir": "footage/hd",
+  "dvids_id": "975581",
+  "title": "Hoist Rescue by CBP Air Branch in El Paso, TX",
+  "event": [
+   "aug-30",
+   [
+    "el paso",
+    "mountain"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_el_paso_cliff_fall",
+    "hook": "He fell off a cliff",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "flood_two_dogs_texas",
+  "dir": "footage/hd",
+  "dvids_id": "1015195",
+  "title": "Texas Military Department Dog Rescue with Texas A&M Task Force 1",
+  "event": [
+   "jul-17",
+   [
+    "crystal city"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_flood_two_dogs_texas",
+    "hook": "Left behind in the flood",
+    "rejected": true
+   }
+  ]
+ },
+ {
+  "footage": "flooded_roof_sumas",
+  "dir": "footage/hd",
+  "dvids_id": "989930",
+  "title": "Coast Guard River Flood Rescues",
+  "event": [
+   "",
+   [
+    "sumas"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": []
+ },
+ {
+  "footage": "florida_11_survivors",
+  "dir": "footage/hd",
+  "dvids_id": "1006722",
+  "title": "920th Rescue Wing assists in rescue of 11 survivors off Florida coast",
+  "event": [
+   "may-12",
+   [
+    "florida",
+    "king ii"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_florida_plane_crash",
+    "hook": "Their plane went down",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "ford_sailors_reunite",
+  "dir": "footage/hd",
+  "dvids_id": "910593",
+  "title": "USS Gerald R. Ford Sailors reunite with their families",
+  "event": [
+   "jan-17",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_ford_sailors_reunite",
+    "hook": "8 months at sea",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "fort_stewart_homecoming",
+  "dir": "footage/hd",
+  "dvids_id": "923848",
+  "title": "Fort Stewart Soldiers reunite with Families",
+  "event": [
+   "may-15",
+   [
+    "europe",
+    "fort stewart",
+    "hale"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_fort_stewart_homecoming",
+    "hook": "They're finally home",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "helene_man_dog",
+  "dir": "footage/hd",
+  "dvids_id": "938235",
+  "title": "Coast Guard rescues man and dog during Hurricane Helene (no music)",
+  "event": [
+   "sep-26",
+   [
+    "sanibel island"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_helene_man_dog",
+    "hook": "Him and his dog",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "high_altitude_hiker",
+  "dir": "footage/hd",
+  "dvids_id": "878686",
+  "title": "CBP Air and Marine Hoist Rescue",
+  "event": [
+   "apr-04",
+   [
+    "tucson"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_high_altitude_hiker",
+    "hook": "A night alone on the mountain",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "jetty_st_lucie",
+  "dir": "footage/hd",
+  "dvids_id": "947469",
+  "title": "Coast Guard rescues stranded mariner off St Lucie Inlet jetty",
+  "event": [
+   "dec-15",
+   [
+    "st lucie"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_jetty_st_lucie",
+    "hook": "Stuck on the rocks",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "jumped_sinking_vessel",
+  "dir": "footage/hd",
+  "dvids_id": "864947",
+  "title": "The Coast Guard rescues crew of sinking fishing vessel",
+  "event": [
+   "nov-17",
+   [
+    "coast guard"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_jumped_sinking_vessel",
+    "hook": "They had to jump",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "kodiak_three_men_dog",
+  "dir": "footage/hd",
+  "dvids_id": "884516",
+  "title": "Air Station Kodiak SAR Case Dec 12, 2022:  Aerial Footage and Hoist Camera",
+  "event": [
+   "dec-12",
+   [
+    "anchorage"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_kodiak_three_men_dog",
+    "hook": "Slammed against the rocks",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "kodiak_two_fishermen",
+  "dir": "footage/hd",
+  "dvids_id": "949745",
+  "title": "Coast Guard, others rescue 2 fishermen near Kodiak, Alaska",
+  "event": [
+   "jan-15",
+   [
+    "coast guard",
+    "kodiak"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_kodiak_two_fishermen",
+    "hook": "Their boat flipped",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "marine_runs_to_gunfire",
+  "dir": "footage/hd",
+  "dvids_id": "825973",
+  "title": "Pendleton Marine runs to sound of gunfire, saves life",
+  "event": [
+   "dec-13",
+   [
+    "lemon grove"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_marine_runs_to_gunfire",
+    "hook": "He ran toward the gunfire",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "mount_idaho_hiker",
+  "dir": "footage/hd",
+  "dvids_id": "1015641",
+  "title": "Idaho Army National Guard conducts search and rescue mission on Mount Idaho",
+  "event": [
+   "",
+   [
+    "july",
+    "mackay"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_mount_idaho",
+    "hook": "The highest rescue ever",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "mwd_tomas_retires",
+  "dir": "footage/hd",
+  "dvids_id": "955109",
+  "title": "K9 Veterans Day - Military working dog Tomas retires",
+  "event": [
+   "mar-10",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_mwd_tomas_retires",
+    "hook": "His partner is retiring",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "pr_cliff_two",
+  "dir": "footage/hd",
+  "dvids_id": "1000575",
+  "title": "Coast Guard rescues 2 people stranded at the bottom of a shoreside cliff in Fajardo, Puerto Rico",
+  "event": [
+   "mar-21",
+   [
+    "fajardo",
+    "san juan"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_puerto_rico_cliff",
+    "hook": "Stuck below a cliff",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "sinking_sailboat_michigan",
+  "dir": "footage/hd",
+  "dvids_id": "925615",
+  "title": "Coast Guard Station Grand Haven rescues man from sinking sailboat",
+  "event": [
+   "may-27",
+   [
+    "grand haven"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_sinking_sailboat_michigan",
+    "hook": "300 feet down",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "skiff_capsizes",
+  "dir": "footage/hd",
+  "dvids_id": "974186",
+  "title": "Coast Guard rescues boater after skiff capsizes near Red Fish Bay",
+  "event": [
+   "aug-20",
+   [
+    "red fish"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_skiff_capsizes",
+    "hook": "The weather flipped his boat",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "stuck_in_mud",
+  "dir": "footage/hd",
+  "dvids_id": "881001",
+  "title": "Coast Guard rescues stranded 65-year-old man near Port Bolivar, Texas",
+  "event": [
+   "apr-25",
+   [
+    "galveston",
+    "port bolivar",
+    "scholes international"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_stuck_in_mud",
+    "hook": "Stuck in the mud",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "swimmer_columbia_bar",
+  "dir": "footage/hd",
+  "dvids_id": "909520",
+  "title": "Coast Guard rescues mariner from capsized vessel near Columbia River Bar",
+  "event": [
+   "feb-03",
+   [
+    "astoria",
+    "coast guard",
+    "columbia river",
+    "ilwaco",
+    "school"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_swimmer_columbia_bar",
+    "hook": "He went in after him",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "tucson_hoist_2022",
+  "dir": "footage/hd",
+  "dvids_id": "833784",
+  "title": "CBP Air and Marine Operations Hoist Rescue B-Roll: Tucson, AZ  3.4.2022",
+  "event": [
+   "mar-04",
+   [
+    "sabino canyon"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_tucson_heatstroke",
+    "hook": "Heatstroke in the canyon",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "veterans_day_fisherman",
+  "dir": "footage/hd",
+  "dvids_id": "943421",
+  "title": "129th Rescue Wing Rescues Fisherman over Veteran's Day Weekend",
+  "event": [
+   "nov-08",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_veterans_day_fisherman",
+    "hook": "400 miles from land",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "virginia_helene",
+  "dir": "footage/hd",
+  "dvids_id": "959865",
+  "title": "Virginia Army National Guard aircrews recognized for Hurricane Helene rescues",
+  "event": [
+   "oct-20",
+   [
+    "october",
+    "virginia"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_virginia_helene",
+    "hook": "Their first real rescue",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "wave_capsizes_astoria",
+  "dir": "footage/hd",
+  "dvids_id": "872430",
+  "title": "Coast Guard rescues mariner in distress as wave capsizes vessel near mouth of Columbia River",
+  "event": [
+   "feb-03",
+   [
+    "astoria",
+    "school"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_wave_capsizes_astoria",
+    "hook": "One wave flipped it",
+    "rejected": true
+   }
+  ]
+ },
+ {
+  "footage": "woman_oregon_river",
+  "dir": "footage/hd",
+  "dvids_id": "954917",
+  "title": "Coast Guard rescues woman from Oregon river following car accident",
+  "event": [
+   "mar-05",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_woman_oregon_river",
+    "hook": "Her car went into the river",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "agent_saved_boy",
+  "dir": "footage/dvids",
+  "dvids_id": "581975",
+  "title": "Family Reunites With Border Patrol Agent Who Saved 2-Year Old",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "agent_saved_boy",
+    "hook": "He wasn't breathing",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "astronaut_water_survival",
+  "dir": "footage/dvids",
+  "dvids_id": "509855",
+  "title": "NASA Astronauts Complete Water Survival Training",
+  "event": [
+   "feb-10",
+   [
+    "fairchild air"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "astronaut_water_survival",
+    "hook": "Astronauts in the water",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "baseball_surprise",
+  "dir": "footage/dvids",
+  "dvids_id": "460113",
+  "title": "TSP Homecoming Surprise",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "baseball_surprise",
+    "hook": "Not a normal game",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "bear_mauling_skier",
+  "dir": "footage/dvids",
+  "dvids_id": "782825",
+  "title": "Coast Guard hoists skier mauled by bear near Haines, Alaska",
+  "event": [
+   "",
+   [
+    "haines"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "bear_mauling_skier",
+    "hook": "Mauled by a bear",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "boater_330_miles",
+  "dir": "footage/dvids",
+  "dvids_id": "699223",
+  "title": "Coast Guard coordinates rescue of boater 330 nautical miles off Cape Cod",
+  "event": [
+   "jul-24",
+   [
+    "cape cod"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "boater_330_miles",
+    "hook": "330 miles from land",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "boater_adrift_13h",
+  "dir": "footage/dvids",
+  "dvids_id": "512792",
+  "title": "Coast Guard rescues boater who was adrift over 13 hours west of Clearwater Beach",
+  "event": [
+   "mar-06",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "boater_adrift_13h",
+    "hook": "13 hours lost at sea",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "cliff_rescue",
+  "dir": "footage/dvids",
+  "dvids_id": "738507",
+  "title": "Coast Guard rescues woman from cliff near Cape Falcon, Ore.",
+  "event": [
+   "",
+   [
+    "cape falcon"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "cliff_rescue",
+    "hook": "No one could reach her",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "colonel_giants_game",
+  "dir": "footage/dvids",
+  "dvids_id": "383793",
+  "title": "Soldier Reunites With Family",
+  "event": [
+   "",
+   [
+    "st"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "colonel_giants_game",
+    "hook": "They thought he was in Afghanistan",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "couple_class_surprise",
+  "dir": "footage/dvids",
+  "dvids_id": "654747",
+  "title": "Military couple reunion video",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": []
+ },
+ {
+  "footage": "dad_surprises_daughter",
+  "dir": "footage/dvids",
+  "dvids_id": "399217",
+  "title": "Military Dad Surprises Daughter at Moody Air Force Base",
+  "event": [
+   "",
+   [
+    "moody air",
+    "presentation"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "dad_surprises_daughter",
+    "hook": "Daddy came home",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "dog_on_roof_florence",
+  "dir": "footage/dvids",
+  "dvids_id": "652963",
+  "title": "CT National Guard Rescues Dog Stranded On A Roof Top During Hurricane Florence",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "dog_on_roof_florence",
+    "hook": "Stranded on a roof",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "dog_reunited_handler",
+  "dir": "footage/dvids",
+  "dvids_id": "543198",
+  "title": "Former Explosive Detection Dog Reunited with Special Forces Handler",
+  "event": [
+   "",
+   [
+    "south korea"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "dog_reunited_handler",
+    "hook": "She came back for him",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "falcon9_vandenberg",
+  "dir": "footage/dvids",
+  "dvids_id": "505260",
+  "title": "Falcon 9 launches from Vandenberg AFB, CA",
+  "event": [
+   "jan-14",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "falcon9_vandenberg",
+    "hook": "Part of history's biggest upgrade",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "father_13_years",
+  "dir": "footage/dvids",
+  "dvids_id": "698117",
+  "title": "Comfort Connections: Reunited",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": []
+ },
+ {
+  "footage": "fisherman_boat_sinks",
+  "dir": "footage/dvids",
+  "dvids_id": "515565",
+  "title": "Coast Guard rescues fisherman moments before boat sinks",
+  "event": [
+   "mar-23",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "fisherman_boat_sinks",
+    "hook": "His boat was sinking",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "fisherman_life_raft",
+  "dir": "footage/dvids",
+  "dvids_id": "724582",
+  "title": "Rescue crew from Air Station hoists fisherman in life raft",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "fisherman_life_raft",
+    "hook": "His boat sank",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "florence_woman",
+  "dir": "footage/dvids",
+  "dvids_id": "625984",
+  "title": "Coast Guard rescues elderly woman from flooded home in North Carolina after Hurricane Florence",
+  "event": [
+   "",
+   [
+    "north carolina"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "florence_woman",
+    "hook": "Trapped by the flood",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "harvey_child",
+  "dir": "footage/dvids",
+  "dvids_id": "590199",
+  "title": "Hurricane Harvey Rescue",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "harvey_child",
+    "hook": "Saved from the flood",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "high_tide_ecola",
+  "dir": "footage/dvids",
+  "dvids_id": "681699",
+  "title": "Coast Guard rescues two stranded by high tide at Ecola State Park",
+  "event": [
+   "may-19",
+   [
+    "ecola state"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "high_tide_ecola",
+    "hook": "The tide trapped them",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "hughes_reunion",
+  "dir": "footage/dvids",
+  "dvids_id": "577191",
+  "title": "Hughes Reunion",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": []
+ },
+ {
+  "footage": "ice_rescue_champlain",
+  "dir": "footage/dvids",
+  "dvids_id": "506411",
+  "title": "Ice Rescue Lake Champlain",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": []
+ },
+ {
+  "footage": "kayaker_everglades",
+  "dir": "footage/dvids",
+  "dvids_id": "513596",
+  "title": "Coast Guard Rescues Kayaker in Florida Bay Near Everglades National Park",
+  "event": [
+   "mar-10",
+   [
+    "everglades national",
+    "florida bay"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "kayaker_everglades",
+    "hook": "His kayak flipped",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "man_two_dogs",
+  "dir": "footage/dvids",
+  "dvids_id": "715656",
+  "title": "Coast Guard hoists man and two dogs near Smith Island, Maryland",
+  "event": [
+   "oct-17",
+   [
+    "smith island"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "man_two_dogs",
+    "hook": "His sailboat was dead",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "married_then_saves_life",
+  "dir": "footage/dvids",
+  "dvids_id": "684185",
+  "title": "Coast Guardsman Marries his Wife, then Saves a Life",
+  "event": [
+   "aug-02",
+   [
+    "orange beach"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "married_then_saves_life",
+    "hook": "Minutes after his wedding",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "minuteman_launch",
+  "dir": "footage/dvids",
+  "dvids_id": "508918",
+  "title": "GT-221GM Minuteman III Launch",
+  "event": [
+   "",
+   [
+    "atoll",
+    "vandenberg"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "minuteman_launch",
+    "hook": "Picked at random",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "mom_early_return",
+  "dir": "footage/dvids",
+  "dvids_id": "746401",
+  "title": "Deployed mom surprises kids with early return",
+  "event": [
+   "feb-14",
+   [
+    "qatar"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "mom_early_return",
+    "hook": "Mom came home early",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "mwd_frodo_retires",
+  "dir": "footage/dvids",
+  "dvids_id": "560444",
+  "title": "MWD Frodo Retires After Nine Years of Service",
+  "event": [
+   "oct-20",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": []
+ },
+ {
+  "footage": "paddleboarder_jetty",
+  "dir": "footage/dvids",
+  "dvids_id": "693268",
+  "title": "Coast Guard rescues paddleboarder stranded on Bodega Bay jetty",
+  "event": [
+   "jun-25",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "paddleboarder_jetty",
+    "hook": "The wind took him",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "plane_crash_survivor",
+  "dir": "footage/dvids",
+  "dvids_id": "614280",
+  "title": "Coast Guard assists National Park Service with plane crash rescue in Crillon Lake, Alaska",
+  "event": [
+   "",
+   [
+    "crillon lake"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "plane_crash_survivor",
+    "hook": "His engine failed",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "sailor_surprises_mom",
+  "dir": "footage/dvids",
+  "dvids_id": "383771",
+  "title": "Sailor Surprises His Mother for Christmas",
+  "event": [
+   "",
+   [
+    "appleton",
+    "frank"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "sailor_surprises_mom",
+    "hook": "Mom had no idea",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "sailor_surprises_sons",
+  "dir": "footage/dvids",
+  "dvids_id": "382981",
+  "title": "Sailor Surprises Sons",
+  "event": [
+   "",
+   [
+    "japan",
+    "newton"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "sailor_surprises_sons",
+    "hook": "Two years in Japan",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "sea_turtles",
+  "dir": "footage/dvids",
+  "dvids_id": "601463",
+  "title": "Coast Guard crew rescues sea turtles",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "sea_turtles",
+    "hook": "Trapped in a net",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "shark_bite_rescue",
+  "dir": "footage/dvids",
+  "dvids_id": "732282",
+  "title": "Shark Bite Rescue",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "shark_bite_rescue",
+    "hook": "Shark attack at sea",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "shark_reef_surprise",
+  "dir": "footage/dvids",
+  "dvids_id": "391412",
+  "title": "Hunter Homecoming Surprises Family",
+  "event": [
+   "feb-13",
+   [
+    "mandalay bay",
+    "shark reef"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "shark_reef_surprise",
+    "hook": "A secret homecoming",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "siblings_10_years",
+  "dir": "footage/dvids",
+  "dvids_id": "505317",
+  "title": "Deployed brother, sister reunite after 10 years apart",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": []
+ },
+ {
+  "footage": "son_surprises_father",
+  "dir": "footage/dvids",
+  "dvids_id": "338685",
+  "title": "Air Force son returns from deployment, surprises his Coast Guard father",
+  "event": [
+   "may-22",
+   [
+    "air station",
+    "osan air"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "son_surprises_father",
+    "hook": "Dad was at work",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "strike_eagle_afterburner",
+  "dir": "footage/dvids",
+  "dvids_id": "833680",
+  "title": "Strike Eagle Afterburner Run",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "strike_eagle_afterburner",
+    "hook": "Full afterburner",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "woman_dog_cliff",
+  "dir": "footage/dvids",
+  "dvids_id": "697955",
+  "title": "Coast Guard rescues woman, dog from bottom of cliff near Ludington, Mich.",
+  "event": [
+   "jul-19",
+   [
+    "ludington"
+   ]
+  ],
+  "tier": "sd-archived",
+  "shorts": [
+   {
+    "name": "woman_dog_cliff",
+    "hook": "Trapped all night",
+    "rendered": false
+   }
+  ]
+ },
+ {
+  "footage": "clinging_2_hours",
+  "dir": "footage/lowres",
+  "dvids_id": "986212",
+  "title": "Coast Guard rescues father and son from overturned vessel in Columbia River",
+  "event": [
+   "nov-05",
+   [
+    "chinook",
+    "columbia river"
+   ]
+  ],
+  "tier": "lowres-rejected",
+  "shorts": []
+ },
+ {
+  "footage": "gods_thumb_cliff",
+  "dir": "footage/lowres",
+  "dvids_id": "999764",
+  "title": "Coast Guard rescues hiker who was trapped on a cliff side at God\u2019s Thumb in Lincoln City",
+  "event": [
+   "mar-14",
+   [
+    "god",
+    "lincoln city"
+   ]
+  ],
+  "tier": "lowres-rejected",
+  "shorts": []
+ },
+ {
+  "footage": "lanai_father_sons",
+  "dir": "footage/lowres",
+  "dvids_id": "941517",
+  "title": "Coast Guard rescues father, sons after boat capsizes south of Lanai",
+  "event": [
+   "oct-26",
+   []
+  ],
+  "tier": "lowres-rejected",
+  "shorts": []
+ },
+ {
+  "footage": "oahu_rooftop_flood",
+  "dir": "footage/lowres",
+  "dvids_id": "1000445",
+  "title": "Coast Guard, partners rescue 7 people, 1 dog during flash floods on Oahu",
+  "event": [
+   "mar-20",
+   [
+    "kapolei",
+    "waialua"
+   ]
+  ],
+  "tier": "lowres-rejected",
+  "shorts": []
+ },
+ {
+  "footage": "sailboat_130_miles",
+  "dir": "footage/lowres",
+  "dvids_id": "950715",
+  "title": "Coast Guard rescues two mariners from sinking sailboat more than 100 miles off North Carolina coast",
+  "event": [
+   "jan-28",
+   [
+    "north carolina"
+   ]
+  ],
+  "tier": "lowres-rejected",
+  "shorts": []
+ },
+ {
+  "footage": "texas_family_flood",
+  "dir": "footage/lowres",
+  "dvids_id": "1015510",
+  "title": "National Guard Rescues Family During Flood Response Operations",
+  "event": [
+   "jul-17",
+   [
+    "crystal city"
+   ]
+  ],
+  "tier": "lowres-rejected",
+  "shorts": []
+ },
+ {
+  "footage": "trapped_4_days",
+  "dir": "footage/lowres",
+  "dvids_id": "1013362",
+  "title": "Man is rescued after almost four days trapped in collapsed building",
+  "event": [
+   "jul-02",
+   []
+  ],
+  "tier": "lowres-rejected",
+  "shorts": []
+ }
+]
