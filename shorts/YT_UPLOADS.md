@@ -970,3 +970,79 @@ Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 52. hd_aw302_return
+**Title:** They waited months for this 🧡
+
+**Description:**
+```
+March 2025. Colorado. A C-130 lands at Peterson Space Force Base. On board: reservists back from Africa. Gone for several months. Their families are waiting on the flight line. Finally home.
+
+Would you have done the same? 👇
+
+Real footage: "302nd AW Deployers Return Home -Mar 7, 2025" – DVIDS (public domain)
+https://www.dvidshub.net/video/991185/302nd-aw-deployers-return-home-mar-7-2025
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 53. hd_clearwater_vessel_fire
+**Title:** 100 miles out. On fire. 🔥
+
+**Description:**
+```
+December 2025. Gulf of Mexico. A commercial fishing boat catches fire. About 100 miles west of Clearwater. A Coast Guard Jayhawk arrives. The boater is pulled up into the helicopter. Stable. No medical care needed.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues boater from vessel fire off Clearwater" – DVIDS (public domain)
+https://www.dvidshub.net/video/990311/coast-guard-rescues-boater-from-vessel-fire-off-clearwater
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 54. hd_oregon_park_missing_woman
+**Title:** Missing for days 🌊
+
+**Description:**
+```
+December 2024. Shore Acres State Park, Oregon. A 64-year-old woman goes missing. Search teams look from the air and the ground. Then a Coast Guard crew from North Bend finds her. She's hoisted up from the forest. Found alive after days.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard, Partner Agencies Rescue Missing Woman from Oregon State Park" – DVIDS (public domain)
+https://www.dvidshub.net/video/946398/coast-guard-partner-agencies-rescue-missing-woman-from-oregon-state-park
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 55. hd_steinhatchee_three_missing
+**Title:** Three men went missing 🌊
+
+**Description:**
+```
+June 2024. Off Steinhatchee, Florida. A 21-foot boat loses power. Three men are reported missing. A Coast Guard Jayhawk spots the boat. All three men are still aboard. A Coast Guard boat crew takes them to the marina.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 3 missing men off Steinhatchee" – DVIDS (public domain)
+https://www.dvidshub.net/video/925852/coast-guard-rescues-3-missing-men-off-steinhatchee
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

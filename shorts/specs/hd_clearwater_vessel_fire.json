@@ -1,0 +1,7 @@
+{"file":"clearwater_vessel_fire","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["100 miles out. On fire.",2],"range":[0.03,0.97],"lines":[
+["December 2025. Gulf of Mexico.",["gulf"],null],
+["A commercial fishing boat catches fire.",["fire"],null,["100","MILES FROM CLEARWATER"]],
+["About 100 miles west of Clearwater.",["100"],"Then..."],
+["A Coast Guard Jayhawk arrives.",["jayhawk"],null],
+["The boater is pulled up into the helicopter.",["helicopter"],null],
+["Stable. No medical care needed.",["stable"],null]]}

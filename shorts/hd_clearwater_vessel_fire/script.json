@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "100 miles out. On fire.",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "December 2025. Gulf of Mexico.",
+   "hl": [
+    "gulf"
+   ],
+   "shots": [
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.824
+    },
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.864
+    }
+   ]
+  },
+  {
+   "vo": "A commercial fishing boat catches fire.",
+   "hl": [
+    "fire"
+   ],
+   "shots": [
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "clearwater_vessel_fire",
+      "pos": 0.265,
+      "big": "100",
+      "small": "MILES FROM CLEARWATER"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "About 100 miles west of Clearwater.",
+   "hl": [
+    "100"
+   ],
+   "shots": [
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.343
+    },
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk arrives.",
+   "hl": [
+    "jayhawk"
+   ],
+   "shots": [
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.5
+    },
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "The boater is pulled up into the helicopter.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.657
+    },
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Stable. No medical care needed.",
+   "hl": [
+    "stable"
+   ],
+   "shots": [
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.813
+    },
+    {
+     "file": "clearwater_vessel_fire",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

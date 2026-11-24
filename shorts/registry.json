@@ -1,5 +1,23 @@
 [
  {
+  "footage": "aw302_return",
+  "dir": "footage/hd",
+  "dvids_id": "991185",
+  "title": "302nd AW Deployers Return Home -Mar 7, 2025",
+  "event": [
+   "mar-07",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_aw302_return",
+    "hook": "They waited months for this",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "baboquivari_woman",
   "dir": "footage/hd",
   "dvids_id": "886085",
@@ -118,6 +136,26 @@
     "name": "hd_cat_island_dogs",
     "hook": "Two people. Two dogs.",
     "rejected": true
+   }
+  ]
+ },
+ {
+  "footage": "clearwater_vessel_fire",
+  "dir": "footage/hd",
+  "dvids_id": "990311",
+  "title": "Coast Guard rescues boater from vessel fire off Clearwater",
+  "event": [
+   "",
+   [
+    "clearwater"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_clearwater_vessel_fire",
+    "hook": "100 miles out. On fire.",
+    "rendered": true
    }
   ]
  },
@@ -779,6 +817,24 @@
   ]
  },
  {
+  "footage": "oregon_park_missing_woman",
+  "dir": "footage/hd",
+  "dvids_id": "946398",
+  "title": "Coast Guard, Partner Agencies Rescue Missing Woman from Oregon State Park",
+  "event": [
+   "dec-08",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_oregon_park_missing_woman",
+    "hook": "Missing for days",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "pass_a_grille_boaters",
   "dir": "footage/hd",
   "dvids_id": "935954",
@@ -945,6 +1001,26 @@
   ]
  },
  {
+  "footage": "steinhatchee_three_missing",
+  "dir": "footage/hd",
+  "dvids_id": "925852",
+  "title": "Coast Guard rescues 3 missing men off Steinhatchee",
+  "event": [
+   "jun-01",
+   [
+    "steinhatchee"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_steinhatchee_three_missing",
+    "hook": "Three men went missing",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "stuck_in_mud",
   "dir": "footage/hd",
   "dvids_id": "881001",
@@ -1045,6 +1121,27 @@
     "name": "hd_two_hunters",
     "hook": "The flood cut them off",
     "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "tybee_three_2025",
+  "dir": "footage/hd",
+  "dvids_id": "957890",
+  "title": "Coast Guard Air Station Savannah rescues 3 people near Tybee Island, Georgia",
+  "event": [
+   "apr-05",
+   [
+    "savannah",
+    "tybee island"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_tybee_three_2025",
+    "hook": "Their boat ran aground",
+    "rejected": true
    }
   ]
  },

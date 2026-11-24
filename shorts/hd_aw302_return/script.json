@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "They waited months for this",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 2025. Colorado.",
+   "hl": [
+    "colorado"
+   ],
+   "shots": [
+    {
+     "file": "aw302_return",
+     "pos": 0.772
+    },
+    {
+     "file": "aw302_return",
+     "pos": 0.812
+    }
+   ]
+  },
+  {
+   "vo": "A C-130 lands at Peterson Space Force Base.",
+   "hl": [
+    "lands"
+   ],
+   "shots": [
+    {
+     "file": "aw302_return",
+     "pos": 0.187
+    },
+    {
+     "file": "aw302_return",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "On board: reservists back from Africa.",
+   "hl": [
+    "africa"
+   ],
+   "shots": [
+    {
+     "file": "aw302_return",
+     "pos": 0.343
+    },
+    {
+     "file": "aw302_return",
+     "pos": 0.422
+    }
+   ],
+   "label": "Wait for it..."
+  },
+  {
+   "vo": "Gone for several months.",
+   "hl": [
+    "months"
+   ],
+   "shots": [
+    {
+     "file": "aw302_return",
+     "pos": 0.5
+    },
+    {
+     "card": {
+      "file": "aw302_return",
+      "pos": 0.578,
+      "big": "AFRICA",
+      "small": "SEVERAL MONTHS AWAY"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Their families are waiting on the flight line.",
+   "hl": [
+    "families"
+   ],
+   "shots": [
+    {
+     "file": "aw302_return",
+     "pos": 0.657
+    },
+    {
+     "file": "aw302_return",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Finally home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "aw302_return",
+     "pos": 0.813
+    },
+    {
+     "file": "aw302_return",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

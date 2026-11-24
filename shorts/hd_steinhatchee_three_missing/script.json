@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Three men went missing",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "June 2024. Off Steinhatchee, Florida.",
+   "hl": [
+    "florida"
+   ],
+   "shots": [
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.314
+    },
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.354
+    }
+   ]
+  },
+  {
+   "vo": "A 21-foot boat loses power.",
+   "hl": [
+    "power"
+   ],
+   "shots": [
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "steinhatchee_three_missing",
+      "pos": 0.265,
+      "big": "20",
+      "small": "MILES OFFSHORE"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Three men are reported missing.",
+   "hl": [
+    "missing"
+   ],
+   "shots": [
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.343
+    },
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk spots the boat.",
+   "hl": [
+    "spots"
+   ],
+   "shots": [
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.5
+    },
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "All three men are still aboard.",
+   "hl": [
+    "aboard"
+   ],
+   "shots": [
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.657
+    },
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard boat crew takes them to the marina.",
+   "hl": [
+    "marina"
+   ],
+   "shots": [
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.813
+    },
+    {
+     "file": "steinhatchee_three_missing",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}
