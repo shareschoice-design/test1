@@ -198,6 +198,26 @@
   ]
  },
  {
+  "footage": "deschutes_hikers_dog",
+  "dir": "footage/hd",
+  "dvids_id": "927914",
+  "title": "Coast Guard rescues 2 hikers, dog from Deschutes National Forrest, Oregon",
+  "event": [
+   "jun-16",
+   [
+    "deschutes national"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_deschutes_hikers_dog",
+    "hook": "They didn't leave the dog",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "devils_slide_hiker",
   "dir": "footage/hd",
   "dvids_id": "1003354",
@@ -817,6 +837,45 @@
   ]
  },
  {
+  "footage": "oak_hill_return",
+  "dir": "footage/hd",
+  "dvids_id": "945956",
+  "title": "USS Oak Hill Returns Home After Seven-Month Deployment",
+  "event": [
+   "dec-07",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_oak_hill_return",
+    "hook": "Seven months at sea",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "oregon_41ibct_return",
+  "dir": "footage/hd",
+  "dvids_id": "970914",
+  "title": "Oregon National Guard's 41st IBCT Returns Home After Successful Kosovo Deployment",
+  "event": [
+   "jul-19",
+   [
+    "kfor",
+    "team"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_oregon_41ibct_return",
+    "hook": "A full year away",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "oregon_park_missing_woman",
   "dir": "footage/hd",
   "dvids_id": "946398",
@@ -996,6 +1055,27 @@
    {
     "name": "hd_skiff_capsizes",
     "hook": "The weather flipped his boat",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "st_helena_boater",
+  "dir": "footage/hd",
+  "dvids_id": "955640",
+  "title": "Coast Guard Air Station Savannah rescues stranded boater near St. Helena Sound, South Carolina",
+  "event": [
+   "mar-15",
+   [
+    "beaufort executive",
+    "st"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_st_helena_boater",
+    "hook": "His boat ran aground",
     "rendered": true
    }
   ]

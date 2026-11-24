@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "His boat ran aground",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 2025. St. Helena Sound, South Carolina.",
+   "hl": [
+    "carolina"
+   ],
+   "shots": [
+    {
+     "file": "st_helena_boater",
+     "pos": 0.771
+    },
+    {
+     "file": "st_helena_boater",
+     "pos": 0.811
+    }
+   ]
+  },
+  {
+   "vo": "A 65-year-old man's boat runs aground.",
+   "hl": [
+    "aground"
+   ],
+   "shots": [
+    {
+     "file": "st_helena_boater",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "st_helena_boater",
+      "pos": 0.265,
+      "big": "65",
+      "small": "YEARS OLD. RUN AGROUND."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "He's stuck.",
+   "hl": [
+    "stuck"
+   ],
+   "shots": [
+    {
+     "file": "st_helena_boater",
+     "pos": 0.343
+    },
+    {
+     "file": "st_helena_boater",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Savannah arrives.",
+   "hl": [
+    "savannah"
+   ],
+   "shots": [
+    {
+     "file": "st_helena_boater",
+     "pos": 0.5
+    },
+    {
+     "file": "st_helena_boater",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "A rescue swimmer gets him into the basket.",
+   "hl": [
+    "basket"
+   ],
+   "shots": [
+    {
+     "file": "st_helena_boater",
+     "pos": 0.657
+    },
+    {
+     "file": "st_helena_boater",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "He's handed over to rescuers in Beaufort.",
+   "hl": [
+    "beaufort"
+   ],
+   "shots": [
+    {
+     "file": "st_helena_boater",
+     "pos": 0.813
+    },
+    {
+     "file": "st_helena_boater",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

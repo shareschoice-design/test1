@@ -1,0 +1,7 @@
+{"file":"st_helena_boater","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["His boat ran aground",2],"range":[0.03,0.97],"lines":[
+["March 2025. St. Helena Sound, South Carolina.",["carolina"],null],
+["A 65-year-old man's boat runs aground.",["aground"],null,["65","YEARS OLD. AGROUND."]],
+["He's stuck.",["stuck"],"Then..."],
+["A Coast Guard helicopter from Savannah arrives.",["savannah"],null],
+["A rescue swimmer gets him into the basket.",["basket"],null],
+["He's handed over to rescuers in Beaufort.",["beaufort"],null]]}

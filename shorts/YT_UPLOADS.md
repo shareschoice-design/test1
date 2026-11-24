@@ -1046,3 +1046,79 @@ Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 56. hd_deschutes_hikers_dog
+**Title:** They didn't leave the dog 🐶
+
+**Description:**
+```
+June 2024. Deschutes National Forest, Oregon. Two hikers and their dog, in the forest. One of them hurts a knee. A Coast Guard Jayhawk from Astoria comes in. Both hikers are rescued. And the dog too. Everyone is flown out. Stable.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 2 hikers, dog from Deschutes National Forrest, Oregon" – DVIDS (public domain)
+https://www.dvidshub.net/video/927914/coast-guard-rescues-2-hikers-dog-from-deschutes-national-forrest-oregon
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 57. hd_oak_hill_return
+**Title:** Seven months at sea 😳
+
+**Description:**
+```
+December 2024. Virginia. USS Oak Hill sails back into port. After a seven-month deployment. Families wait on the pier with signs. Then the sailors come down. Just weeks before Christmas.
+
+Would you have done the same? 👇
+
+Real footage: "USS Oak Hill Returns Home After Seven-Month Deployment" – DVIDS (public domain)
+https://www.dvidshub.net/video/945956/uss-oak-hill-returns-home-after-seven-month-deployment
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 58. hd_oregon_41ibct_return
+**Title:** A full year away 🧡
+
+**Description:**
+```
+July 2025. Oregon. These soldiers spent a year in Kosovo. Over 4,000 security patrols. They step off the plane. Families and friends are waiting. Welcome home.
+
+Would you have done the same? 👇
+
+Real footage: "Oregon National Guard's 41st IBCT Returns Home After Successful Kosovo Deployment" – DVIDS (public domain)
+https://www.dvidshub.net/video/970914/oregon-national-guards-41st-ibct-returns-home-after-successful-kosovo-deployment
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 59. hd_st_helena_boater
+**Title:** His boat ran aground 🌊
+
+**Description:**
+```
+March 2025. St. Helena Sound, South Carolina. A 65-year-old man's boat runs aground. He's stuck. A Coast Guard helicopter from Savannah arrives. A rescue swimmer gets him into the basket. He's handed over to rescuers in Beaufort.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard Air Station Savannah rescues stranded boater near St. Helena Sound, South Carolina" – DVIDS (public domain)
+https://www.dvidshub.net/video/955640/coast-guard-air-station-savannah-rescues-stranded-boater-near-st-helena-sound-south-carolina
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": false,
+ "hook": {
+  "text": "They didn't leave the dog",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "June 2024. Deschutes National Forest, Oregon.",
+   "hl": [
+    "oregon"
+   ],
+   "shots": [
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.832
+    },
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.872
+    }
+   ]
+  },
+  {
+   "vo": "Two hikers and their dog, in the forest.",
+   "hl": [
+    "dog"
+   ],
+   "shots": [
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.187
+    },
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "One of them hurts a knee.",
+   "hl": [
+    "knee"
+   ],
+   "shots": [
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "deschutes_hikers_dog",
+      "pos": 0.422,
+      "big": "2",
+      "small": "HIKERS. 1 DOG."
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk from Astoria comes in.",
+   "hl": [
+    "astoria"
+   ],
+   "shots": [
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.5
+    },
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Both hikers are rescued. And the dog too.",
+   "hl": [
+    "dog"
+   ],
+   "shots": [
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.657
+    },
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Everyone is flown out. Stable.",
+   "hl": [
+    "stable"
+   ],
+   "shots": [
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.813
+    },
+    {
+     "file": "deschutes_hikers_dog",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

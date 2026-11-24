@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Seven months at sea",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "December 2024. Virginia.",
+   "hl": [
+    "virginia"
+   ],
+   "shots": [
+    {
+     "file": "oak_hill_return",
+     "pos": 0.433
+    },
+    {
+     "file": "oak_hill_return",
+     "pos": 0.473
+    }
+   ]
+  },
+  {
+   "vo": "USS Oak Hill sails back into port.",
+   "hl": [
+    "port"
+   ],
+   "shots": [
+    {
+     "file": "oak_hill_return",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "oak_hill_return",
+      "pos": 0.265,
+      "big": "7",
+      "small": "MONTHS AWAY"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "After a seven-month deployment.",
+   "hl": [
+    "seven"
+   ],
+   "shots": [
+    {
+     "file": "oak_hill_return",
+     "pos": 0.343
+    },
+    {
+     "file": "oak_hill_return",
+     "pos": 0.422
+    }
+   ],
+   "label": "Wait for it..."
+  },
+  {
+   "vo": "Families wait on the pier with signs.",
+   "hl": [
+    "signs"
+   ],
+   "shots": [
+    {
+     "file": "oak_hill_return",
+     "pos": 0.5
+    },
+    {
+     "file": "oak_hill_return",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Then the sailors come down.",
+   "hl": [
+    "sailors"
+   ],
+   "shots": [
+    {
+     "file": "oak_hill_return",
+     "pos": 0.657
+    },
+    {
+     "file": "oak_hill_return",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Just weeks before Christmas.",
+   "hl": [
+    "christmas"
+   ],
+   "shots": [
+    {
+     "file": "oak_hill_return",
+     "pos": 0.813
+    },
+    {
+     "file": "oak_hill_return",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "A full year away",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "July 2025. Oregon.",
+   "hl": [
+    "oregon"
+   ],
+   "shots": [
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.485
+    },
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.525
+    }
+   ]
+  },
+  {
+   "vo": "These soldiers spent a year in Kosovo.",
+   "hl": [
+    "kosovo"
+   ],
+   "shots": [
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "oregon_41ibct_return",
+      "pos": 0.265,
+      "big": "1",
+      "small": "YEAR IN KOSOVO"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Over 4,000 security patrols.",
+   "hl": [
+    "4,000"
+   ],
+   "shots": [
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.343
+    },
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.422
+    }
+   ],
+   "label": "And now..."
+  },
+  {
+   "vo": "They step off the plane.",
+   "hl": [
+    "plane"
+   ],
+   "shots": [
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.5
+    },
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Families and friends are waiting.",
+   "hl": [
+    "waiting"
+   ],
+   "shots": [
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.657
+    },
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Welcome home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.813
+    },
+    {
+     "file": "oregon_41ibct_return",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}
