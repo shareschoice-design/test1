@@ -1,0 +1,116 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "44 drops in one day",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "July 2026. The Hagen Fire, Oregon.",
+   "hl": [
+    "hagen"
+   ],
+   "shots": [
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.303
+    },
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.343
+    }
+   ]
+  },
+  {
+   "vo": "More than 33,500 acres burned.",
+   "hl": [
+    "33,500"
+   ],
+   "shots": [
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "hagen_fire_buckets",
+      "pos": 0.265,
+      "big": "33,500",
+      "small": "ACRES BURNED"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Oregon Guard Chinooks and Black Hawks take off.",
+   "hl": [
+    "chinooks"
+   ],
+   "shots": [
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.343
+    },
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Each one carries a water bucket.",
+   "hl": [
+    "bucket"
+   ],
+   "shots": [
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.5
+    },
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "44 drops. About 50,000 gallons. In one day.",
+   "hl": [
+    "50,000"
+   ],
+   "shots": [
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.657
+    },
+    {
+     "card": {
+      "file": "hagen_fire_buckets",
+      "pos": 0.735,
+      "big": "50,000",
+      "small": "GALLONS IN ONE DAY"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "They'll keep flying as long as it's needed.",
+   "hl": [
+    "needed"
+   ],
+   "shots": [
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.813
+    },
+    {
+     "file": "hagen_fire_buckets",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "When the hero is a dog",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 2026. Kosovo.",
+   "hl": [
+    "kosovo"
+   ],
+   "shots": [
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.332
+    },
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.372
+    }
+   ]
+  },
+  {
+   "vo": "Military working dogs get hurt too.",
+   "hl": [
+    "hurt"
+   ],
+   "shots": [
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.167
+    },
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.235
+    }
+   ]
+  },
+  {
+   "vo": "So who flies them to surgery?",
+   "hl": [
+    "surgery"
+   ],
+   "shots": [
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.303
+    },
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.372
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Italian K9 handlers and U.S. aviators train together.",
+   "hl": [
+    "together"
+   ],
+   "shots": [
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.44
+    },
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.508
+    }
+   ]
+  },
+  {
+   "vo": "Loading dogs onto a Black Hawk.",
+   "hl": [
+    "black"
+   ],
+   "shots": [
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.577
+    },
+    {
+     "card": {
+      "file": "k9_medevac_kfor",
+      "pos": 0.645,
+      "big": "K9",
+      "small": "MEDEVAC"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Getting working dogs to surgical care.",
+   "hl": [
+    "surgical"
+   ],
+   "shots": [
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.713
+    },
+    {
+     "file": "k9_medevac_kfor",
+     "pos": 0.782
+    }
+   ]
+  }
+ ]
+}

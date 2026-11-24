@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "This dog flies to work",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "Meet Simba. A Coast Guard K9.",
+   "hl": [
+    "simba"
+   ],
+   "shots": [
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.225
+    },
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "Simba and K9 Lani train in Galveston, Texas.",
+   "hl": [
+    "galveston"
+   ],
+   "shots": [
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.187
+    },
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "Strapped to their handlers\u2026",
+   "hl": [
+    "handlers"
+   ],
+   "shots": [
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "k9_simba_hoist",
+      "pos": 0.422,
+      "big": "2",
+      "small": "COAST GUARD K9s"
+     }
+    }
+   ],
+   "label": "Watch this..."
+  },
+  {
+   "vo": "They're lowered from a helicopter.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.5
+    },
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Straight down onto a boat.",
+   "hl": [
+    "boat"
+   ],
+   "shots": [
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.657
+    },
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Ready to deploy to any ship, fast.",
+   "hl": [
+    "fast"
+   ],
+   "shots": [
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.813
+    },
+    {
+     "file": "k9_simba_hoist",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

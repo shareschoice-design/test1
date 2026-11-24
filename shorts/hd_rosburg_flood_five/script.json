@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Trapped by the flood",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "December 2023. Rosburg, Washington.",
+   "hl": [
+    "washington"
+   ],
+   "shots": [
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.636
+    },
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.676
+    }
+   ]
+  },
+  {
+   "vo": "Floodwater surrounds them.",
+   "hl": [
+    "floodwater"
+   ],
+   "shots": [
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "rosburg_flood_five",
+      "pos": 0.265,
+      "big": "5",
+      "small": "PEOPLE TRAPPED"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Five people are trapped.",
+   "hl": [
+    "five"
+   ],
+   "shots": [
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.343
+    },
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk from Astoria arrives.",
+   "hl": [
+    "astoria"
+   ],
+   "shots": [
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.5
+    },
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "A rescue swimmer goes down to them.",
+   "hl": [
+    "swimmer"
+   ],
+   "shots": [
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.657
+    },
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "All five reach medics in stable condition.",
+   "hl": [
+    "stable"
+   ],
+   "shots": [
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.813
+    },
+    {
+     "file": "rosburg_flood_five",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

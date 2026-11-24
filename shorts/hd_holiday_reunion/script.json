@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Home for the holidays",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "The holiday season.",
+   "hl": [
+    "holiday"
+   ],
+   "shots": [
+    {
+     "file": "holiday_reunion",
+     "pos": 0.785
+    },
+    {
+     "file": "holiday_reunion",
+     "pos": 0.825
+    }
+   ]
+  },
+  {
+   "vo": "Someone walks through the door.",
+   "hl": [
+    "door"
+   ],
+   "shots": [
+    {
+     "file": "holiday_reunion",
+     "pos": 0.187
+    },
+    {
+     "file": "holiday_reunion",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "A Sailor and a Marine come home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "holiday_reunion",
+     "pos": 0.343
+    },
+    {
+     "file": "holiday_reunion",
+     "pos": 0.422
+    }
+   ],
+   "label": "Wait for it..."
+  },
+  {
+   "vo": "Their families have been waiting.",
+   "hl": [
+    "waiting"
+   ],
+   "shots": [
+    {
+     "file": "holiday_reunion",
+     "pos": 0.5
+    },
+    {
+     "file": "holiday_reunion",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Little arms. Big hugs.",
+   "hl": [
+    "hugs"
+   ],
+   "shots": [
+    {
+     "file": "holiday_reunion",
+     "pos": 0.657
+    },
+    {
+     "file": "holiday_reunion",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "The best gift is already here.",
+   "hl": [
+    "gift"
+   ],
+   "shots": [
+    {
+     "file": "holiday_reunion",
+     "pos": 0.813
+    },
+    {
+     "file": "holiday_reunion",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

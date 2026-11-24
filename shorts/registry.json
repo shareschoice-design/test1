@@ -379,6 +379,27 @@
   ]
  },
  {
+  "footage": "hagen_fire_buckets",
+  "dir": "footage/hd",
+  "dvids_id": "1016990",
+  "title": "Oregon Guard aircrews begin water bucket missions on eastern Oregon wildfires",
+  "event": [
+   "jul-29",
+   [
+    "pendleton",
+    "umatilla county"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_hagen_fire_buckets",
+    "hook": "44 drops in one day",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "hatteras_family_pets",
   "dir": "footage/hd",
   "dvids_id": "992017",
@@ -434,6 +455,26 @@
    {
     "name": "hd_high_altitude_hiker",
     "hook": "A night alone on the mountain",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "holiday_reunion",
+  "dir": "footage/hd",
+  "dvids_id": "991596",
+  "title": "Sailors and Marines Reunite With Families (slow motion)",
+  "event": [
+   "",
+   [
+    "rooney"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_holiday_reunion",
+    "hook": "Home for the holidays",
     "rendered": true
    }
   ]
@@ -512,6 +553,48 @@
    {
     "name": "hd_jumped_sinking_vessel",
     "hook": "They had to jump",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "k9_medevac_kfor",
+  "dir": "footage/hd",
+  "dvids_id": "1002031",
+  "title": "Multinational partners develop K-9 MEDEVAC procedures for working dogs across KFOR",
+  "event": [
+   "mar-17",
+   [
+    "camp novo",
+    "rc"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_k9_medevac_kfor",
+    "hook": "When the hero is a dog",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "k9_simba_hoist",
+  "dir": "footage/hd",
+  "dvids_id": "889689",
+  "title": "Coast Guard K9 Simba Helicopter to Boat Hoist",
+  "event": [
+   "may-18",
+   [
+    "galveston",
+    "hoist"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_k9_simba_hoist",
+    "hook": "This dog flies to work",
     "rendered": true
    }
   ]
@@ -758,6 +841,27 @@
   ]
  },
  {
+  "footage": "rosburg_flood_five",
+  "dir": "footage/hd",
+  "dvids_id": "906547",
+  "title": "Coast Guard rescues 5 people from flooding near Grays River, Washington",
+  "event": [
+   "dec-05",
+   [
+    "grays river",
+    "rosburg"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_rosburg_flood_five",
+    "hook": "Trapped by the flood",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "san_juan_two_boaters",
   "dir": "footage/hd",
   "dvids_id": "870260",
@@ -999,6 +1103,24 @@
    {
     "name": "hd_virginia_helene",
     "hook": "Their first real rescue",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "vmm265_return",
+  "dir": "footage/hd",
+  "dvids_id": "973532",
+  "title": "VMM-265 Marines reunite with families after deployment",
+  "event": [
+   "aug-10",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_vmm265_return",
+    "hook": "Welcome home, Daddy",
     "rendered": true
    }
   ]

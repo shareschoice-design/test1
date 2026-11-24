@@ -1,0 +1,7 @@
+{"file":"hagen_fire_buckets","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["44 drops in one day",3],"range":[0.03,0.97],"lines":[
+["July 2026. The Hagen Fire, Oregon.",["hagen"],null],
+["More than 33,500 acres burned.",["33,500"],null,["33,500","ACRES BURNED"]],
+["Oregon Guard Chinooks and Black Hawks take off.",["chinooks"],"Then..."],
+["Each one carries a water bucket.",["bucket"],null],
+["44 drops. About 50,000 gallons. In one day.",["50,000"],null,["50,000","GALLONS IN ONE DAY"]],
+["They'll keep flying as long as it's needed.",["needed"],null]]}

@@ -1,0 +1,7 @@
+{"file":"k9_medevac_kfor","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["When the hero is a dog",2],"range":[0.03,0.85],"lines":[
+["March 2026. Kosovo.",["kosovo"],null],
+["Military working dogs get hurt too.",["hurt"],null],
+["So who flies them to surgery?",["surgery"],"Then..."],
+["Italian K9 handlers and U.S. aviators train together.",["together"],null],
+["Loading dogs onto a Black Hawk.",["black"],null,["K9","MEDEVAC"]],
+["Getting working dogs to surgical care.",["surgical"],null]]}

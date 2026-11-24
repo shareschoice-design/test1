@@ -1,0 +1,7 @@
+{"file":"rosburg_flood_five","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Trapped by the flood",2],"range":[0.03,0.97],"lines":[
+["December 2023. Rosburg, Washington.",["washington"],null],
+["Floodwater surrounds them.",["floodwater"],null,["5","PEOPLE TRAPPED"]],
+["Five people are trapped.",["five"],"Then..."],
+["A Coast Guard Jayhawk from Astoria arrives.",["astoria"],null],
+["A rescue swimmer goes down to them.",["swimmer"],null],
+["All five reach medics in stable condition.",["stable"],null]]}

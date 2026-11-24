@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Welcome home, Daddy",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "August 2025. Okinawa, Japan.",
+   "hl": [
+    "okinawa"
+   ],
+   "shots": [
+    {
+     "file": "vmm265_return",
+     "pos": 0.89
+    },
+    {
+     "file": "vmm265_return",
+     "pos": 0.93
+    }
+   ]
+  },
+  {
+   "vo": "Ospreys appear on the horizon.",
+   "hl": [
+    "ospreys"
+   ],
+   "shots": [
+    {
+     "file": "vmm265_return",
+     "pos": 0.187
+    },
+    {
+     "file": "vmm265_return",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "Marines coming home after two months at sea.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "vmm265_return",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "vmm265_return",
+      "pos": 0.422,
+      "big": "2",
+      "small": "MONTHS AWAY"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Their families hold up handmade signs.",
+   "hl": [
+    "signs"
+   ],
+   "shots": [
+    {
+     "file": "vmm265_return",
+     "pos": 0.5
+    },
+    {
+     "file": "vmm265_return",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Always worth the wait.",
+   "hl": [
+    "wait"
+   ],
+   "shots": [
+    {
+     "file": "vmm265_return",
+     "pos": 0.657
+    },
+    {
+     "file": "vmm265_return",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Welcome home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "vmm265_return",
+     "pos": 0.813
+    },
+    {
+     "file": "vmm265_return",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

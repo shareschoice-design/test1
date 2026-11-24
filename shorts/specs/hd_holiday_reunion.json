@@ -1,0 +1,7 @@
+{"file":"holiday_reunion","voice":"en_US-amy-medium","music":"music/incompetech_Heartwarming.mp3","hook":["Home for the holidays",2],"range":[0.03,0.97],"lines":[
+["The holiday season.",["holiday"],null],
+["Someone walks through the door.",["door"],null],
+["A Sailor and a Marine come home.",["home"],"Wait for it..."],
+["Their families have been waiting.",["waiting"],null],
+["Little arms. Big hugs.",["hugs"],null],
+["The best gift is already here.",["gift"],null]]}

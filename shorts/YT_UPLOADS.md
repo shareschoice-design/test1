@@ -856,3 +856,117 @@ Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 46. hd_hagen_fire_buckets
+**Title:** 44 drops in one day 🔥
+
+**Description:**
+```
+July 2026. The Hagen Fire, Oregon. More than 33,500 acres burned. Oregon Guard Chinooks and Black Hawks take off. Each one carries a water bucket. 44 drops. About 50,000 gallons. In one day. They'll keep flying as long as it's needed.
+
+Would you have done the same? 👇
+
+Real footage: "Oregon Guard aircrews begin water bucket missions on eastern Oregon wildfires" – DVIDS (public domain)
+https://www.dvidshub.net/video/1016990/oregon-guard-aircrews-begin-water-bucket-missions-on-eastern-oregon-wildfires
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 47. hd_holiday_reunion
+**Title:** Home for the holidays 🌊
+
+**Description:**
+```
+The holiday season. Someone walks through the door. A Sailor and a Marine come home. Their families have been waiting. Little arms. Big hugs. The best gift is already here.
+
+Would you have done the same? 👇
+
+Real footage: "Sailors and Marines Reunite With Families (slow motion)" – DVIDS (public domain)
+https://www.dvidshub.net/video/991596/sailors-and-marines-reunite-with-families-slow-motion
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 48. hd_k9_medevac_kfor
+**Title:** When the hero is a dog 🐶
+
+**Description:**
+```
+March 2026. Kosovo. Military working dogs get hurt too. So who flies them to surgery? Italian K9 handlers and U.S. aviators train together. Loading dogs onto a Black Hawk. Getting working dogs to surgical care.
+
+Would you have done the same? 👇
+
+Real footage: "Multinational partners develop K-9 MEDEVAC procedures for working dogs across KFOR" – DVIDS (public domain)
+https://www.dvidshub.net/video/1002031/multinational-partners-develop-k-9-medevac-procedures-for-working-dogs-across-kfor
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 49. hd_k9_simba_hoist
+**Title:** This dog flies to work 🌊
+
+**Description:**
+```
+Meet Simba. A Coast Guard K9. Simba and K9 Lani train in Galveston, Texas. Strapped to their handlers… They're lowered from a helicopter. Straight down onto a boat. Ready to deploy to any ship, fast.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard K9 Simba Helicopter to Boat Hoist" – DVIDS (public domain)
+https://www.dvidshub.net/video/889689/coast-guard-k9-simba-helicopter-to-boat-hoist
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 50. hd_rosburg_flood_five
+**Title:** Trapped by the flood 🌊
+
+**Description:**
+```
+December 2023. Rosburg, Washington. Floodwater surrounds them. Five people are trapped. A Coast Guard Jayhawk from Astoria arrives. A rescue swimmer goes down to them. All five reach medics in stable condition.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 5 people from flooding near Grays River, Washington" – DVIDS (public domain)
+https://www.dvidshub.net/video/906547/coast-guard-rescues-5-people-from-flooding-near-grays-river-washington
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 51. hd_vmm265_return
+**Title:** Welcome home, Daddy 🌊
+
+**Description:**
+```
+August 2025. Okinawa, Japan. Ospreys appear on the horizon. Marines coming home after two months at sea. Their families hold up handmade signs. Always worth the wait. Welcome home.
+
+Would you have done the same? 👇
+
+Real footage: "VMM-265 Marines reunite with families after deployment" – DVIDS (public domain)
+https://www.dvidshub.net/video/973532/vmm-265-marines-reunite-with-families-after-deployment
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
