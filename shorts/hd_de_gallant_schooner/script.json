@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "A storm sank their ship",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "May 2024. Off Great Inagua, Bahamas.",
+   "hl": [
+    "bahamas"
+   ],
+   "shots": [
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.341
+    },
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.381
+    }
+   ]
+  },
+  {
+   "vo": "A storm hits a 90-foot schooner.",
+   "hl": [
+    "storm"
+   ],
+   "shots": [
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.137
+    },
+    {
+     "card": {
+      "file": "de_gallant_schooner",
+      "pos": 0.205,
+      "big": "90",
+      "small": "FOOT SCHOONER. SUNK."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "She takes on water and sinks.",
+   "hl": [
+    "sinks"
+   ],
+   "shots": [
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.273
+    },
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.342
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Six crew members escape.",
+   "hl": [
+    "six"
+   ],
+   "shots": [
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.41
+    },
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.478
+    }
+   ]
+  },
+  {
+   "vo": "A Coast Guard Jayhawk hoists them up.",
+   "hl": [
+    "hoists"
+   ],
+   "shots": [
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.547
+    },
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.615
+    }
+   ]
+  },
+  {
+   "vo": "All six are rescued.",
+   "hl": [
+    "six"
+   ],
+   "shots": [
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.683
+    },
+    {
+     "file": "de_gallant_schooner",
+     "pos": 0.752
+    }
+   ]
+  }
+ ]
+}

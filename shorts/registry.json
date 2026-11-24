@@ -178,6 +178,27 @@
   ]
  },
  {
+  "footage": "de_gallant_schooner",
+  "dir": "footage/hd",
+  "dvids_id": "924883",
+  "title": "Coast Guard rescues 6, searches for 2 after vessel sinks near Bahamas",
+  "event": [
+   "may-21",
+   [
+    "bahamas",
+    "inagua"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_de_gallant_schooner",
+    "hook": "A storm sank their ship",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "debby_adrift_boaters",
   "dir": "footage/hd",
   "dvids_id": "932811",
@@ -780,6 +801,26 @@
   ]
  },
  {
+  "footage": "minnesota_194_return",
+  "dir": "footage/hd",
+  "dvids_id": "829974",
+  "title": "Minnesota's Task Force 1-194 returns home, Cottage Grove",
+  "event": [
+   "feb-02",
+   [
+    "cottage grove"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_minnesota_194_return",
+    "hook": "9 months. 9 countries.",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "mount_idaho_hiker",
   "dir": "footage/hd",
   "dvids_id": "1015641",
@@ -1142,6 +1183,26 @@
    {
     "name": "hd_swimmer_columbia_bar",
     "hook": "He went in after him",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "tenth_mtn_homecoming",
+  "dir": "footage/hd",
+  "dvids_id": "960893",
+  "title": "3rd Brigade 10th Mountain April Homecoming",
+  "event": [
+   "",
+   [
+    "april homecoming"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_tenth_mtn_homecoming",
+    "hook": "We missed you SO much",
     "rendered": true
    }
   ]

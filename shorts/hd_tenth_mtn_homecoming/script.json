@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "We missed you SO much",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "April 2025. Fort Johnson, Louisiana.",
+   "hl": [
+    "louisiana"
+   ],
+   "shots": [
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.362
+    },
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.402
+    }
+   ]
+  },
+  {
+   "vo": "Kids hold up their welcome home signs.",
+   "hl": [
+    "signs"
+   ],
+   "shots": [
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.12
+    },
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.18
+    }
+   ]
+  },
+  {
+   "vo": "Then the soldiers march in.",
+   "hl": [
+    "march"
+   ],
+   "shots": [
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.24
+    },
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.3
+    }
+   ],
+   "label": "Wait for it..."
+  },
+  {
+   "vo": "They stand in formation. Families wait.",
+   "hl": [
+    "wait"
+   ],
+   "shots": [
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.36
+    },
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.42
+    }
+   ]
+  },
+  {
+   "vo": "Then they're released.",
+   "hl": [
+    "released"
+   ],
+   "shots": [
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.48
+    },
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.54
+    }
+   ]
+  },
+  {
+   "vo": "Back together after a long deployment.",
+   "hl": [
+    "together"
+   ],
+   "shots": [
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.6
+    },
+    {
+     "file": "tenth_mtn_homecoming",
+     "pos": 0.66
+    }
+   ]
+  }
+ ]
+}

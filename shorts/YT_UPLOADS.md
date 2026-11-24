@@ -1122,3 +1122,60 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 60. hd_de_gallant_schooner
+**Title:** A storm sank their ship 😳
+
+**Description:**
+```
+May 2024. Off Great Inagua, Bahamas. A storm hits a 90-foot schooner. She takes on water and sinks. Six crew members escape. A Coast Guard Jayhawk hoists them up. All six are rescued.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard rescues 6, searches for 2 after vessel sinks near Bahamas" – DVIDS (public domain)
+https://www.dvidshub.net/video/924883/coast-guard-rescues-6-searches-for-2-after-vessel-sinks-near-bahamas
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 61. hd_minnesota_194_return
+**Title:** 9 months. 9 countries. 🧡
+
+**Description:**
+```
+February 2022. Cottage Grove, Minnesota. These soldiers have been gone nine months. Twelve locations. Nine countries. Families crowd in to welcome them. Flowers. Hugs. Little ones in their arms. Finally home.
+
+Would you have done the same? 👇
+
+Real footage: "Minnesota's Task Force 1-194 returns home, Cottage Grove" – DVIDS (public domain)
+https://www.dvidshub.net/video/829974/minnesotas-task-force-1-194-returns-home-cottage-grove
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 62. hd_tenth_mtn_homecoming
+**Title:** We missed you SO much 🧡
+
+**Description:**
+```
+April 2025. Fort Johnson, Louisiana. Kids hold up their welcome home signs. Then the soldiers march in. They stand in formation. Families wait. Then they're released. Back together after a long deployment.
+
+Would you have done the same? 👇
+
+Real footage: "3rd Brigade 10th Mountain April Homecoming" – DVIDS (public domain)
+https://www.dvidshub.net/video/960893/3rd-brigade-10th-mountain-april-homecoming
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

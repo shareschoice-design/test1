@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "9 months. 9 countries.",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "February 2022. Cottage Grove, Minnesota.",
+   "hl": [
+    "minnesota"
+   ],
+   "shots": [
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.418
+    },
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.458
+    }
+   ]
+  },
+  {
+   "vo": "These soldiers have been gone nine months.",
+   "hl": [
+    "nine"
+   ],
+   "shots": [
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "minnesota_194_return",
+      "pos": 0.265,
+      "big": "12",
+      "small": "LOCATIONS. 9 COUNTRIES."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Twelve locations. Nine countries.",
+   "hl": [
+    "countries"
+   ],
+   "shots": [
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.343
+    },
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.422
+    }
+   ],
+   "label": "And now..."
+  },
+  {
+   "vo": "Families crowd in to welcome them.",
+   "hl": [
+    "welcome"
+   ],
+   "shots": [
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.5
+    },
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Flowers. Hugs. Little ones in their arms.",
+   "hl": [
+    "hugs"
+   ],
+   "shots": [
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.657
+    },
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Finally home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.813
+    },
+    {
+     "file": "minnesota_194_return",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}
