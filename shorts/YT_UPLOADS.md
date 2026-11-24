@@ -1179,3 +1179,98 @@ Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 63. hd_cruise_boy_eureka
+**Title:** An 8-year-old needs help at sea 🚁
+
+**Description:**
+```
+September 2024. Off Eureka, California. An 8-year-old boy on a cruise ship needs a hospital. The ship is 20 miles from shore. A Coast Guard helicopter comes in over the deck. They hoist him up. His family comes too. Straight to the hospital in Eureka.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard medevacs 8-year-old boy from cruise ship near Eureka" – DVIDS (public domain)
+https://www.dvidshub.net/video/937823/coast-guard-medevacs-8-year-old-boy-from-cruise-ship-near-eureka
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 64. hd_cruise_shelter_cove
+**Title:** Lifted off a cruise ship 😳
+
+**Description:**
+```
+May 2026. Off Shelter Cove, California. A passenger on the Queen Elizabeth needs a hospital. No hospital out here. A Coast Guard swimmer is lowered to the deck. The patient goes up in a litter. Flown straight to the hospital in Eureka.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard medevacs cruise ship passenger southwest of Shelter Cove" – DVIDS (public domain)
+https://www.dvidshub.net/video/1005147/coast-guard-medevacs-cruise-ship-passenger-southwest-of-shelter-cove
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 65. hd_kauai_cargo_ship
+**Title:** 100 miles out. Severe pain. 🌊
+
+**Description:**
+```
+March 2026. Off Kauai, Hawaii. A man on a cargo ship is in severe pain. The ship is 100 miles offshore. A Coast Guard Dolphin refuels on a cutter at sea. Then it hoists him off the cargo ship. Mission complete.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard medevacs man from cargo ship 100 miles off Kauai" – DVIDS (public domain)
+https://www.dvidshub.net/video/998677/coast-guard-medevacs-man-from-cargo-ship-100-miles-off-kauai
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 66. hd_lost_coast_hiker
+**Title:** Injured on the Lost Coast 🔥
+
+**Description:**
+```
+May 2026. The Lost Coast Trail, California. A hiker is injured on a remote stretch of trail. Cal Fire calls the Coast Guard. A Coast Guard Dolphin from Humboldt Bay arrives. She's hoisted up. Her husband comes too. Both are flown to the hospital in Eureka.
+
+Would you have done the same? 👇
+
+Real footage: "Air Station Humboldt Bay medevacs hiker from Lost Coast Trail" – DVIDS (public domain)
+https://www.dvidshub.net/video/1008263/air-station-humboldt-bay-medevacs-hiker-from-lost-coast-trail
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 67. hd_sakizaya_queen
+**Title:** 200 miles from shore 😳
+
+**Description:**
+```
+March 2025. The Atlantic. A crew member is injured on a bulk carrier. 200 nautical miles off North Carolina. A Coast Guard Jayhawk flies all the way out. It hovers over the ship's deck. And brings the injured crew member back.
+
+Would you have done the same? 👇
+
+Real footage: "USCG Air Station Elizabeth City Medevac off the Sakizaya Queen B-Roll" – DVIDS (public domain)
+https://www.dvidshub.net/video/954932/uscg-air-station-elizabeth-city-medevac-off-the-sakizaya-queen-b-roll
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

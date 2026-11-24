@@ -45,4 +45,6 @@ if spec.get("hook_peak", True):
     print(spec["file"], "hook at", pk)
 sc = {"voice": spec["voice"], "music": spec["music"], "dark": spec.get("dark", False),
       "hook": {"text": spec["hook"][0], "red": spec["hook"][1]}, "lines": lines}
+if spec.get("avoid"):
+    sc["avoid"] = {spec["file"]: spec["avoid"]}   # [[start_s, end_s], ...] source spans never to use
 json.dump(sc, open(out, "w"), indent=1)

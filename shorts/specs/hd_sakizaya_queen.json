@@ -1,0 +1,7 @@
+{"file":"sakizaya_queen","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["200 miles from shore",2],"range":[0.03,0.97],"lines":[
+["March 2025. The Atlantic.",["atlantic"],null],
+["A crew member is injured on a bulk carrier.",["injured"],null,["200","NAUTICAL MILES OFFSHORE"]],
+["200 nautical miles off North Carolina.",["200"],"Then..."],
+["A Coast Guard Jayhawk flies all the way out.",["jayhawk"],null],
+["It hovers over the ship's deck.",["deck"],null],
+["And brings the injured crew member back.",["back"],null]]}

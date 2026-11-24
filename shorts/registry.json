@@ -160,6 +160,48 @@
   ]
  },
  {
+  "footage": "cruise_boy_eureka",
+  "dir": "footage/hd",
+  "dvids_id": "937823",
+  "title": "Coast Guard medevacs 8-year-old boy from cruise ship near Eureka",
+  "event": [
+   "sep-24",
+   [
+    "eureka",
+    "saint joseph"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_cruise_boy_eureka",
+    "hook": "An 8-year-old needs help at sea",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "cruise_shelter_cove",
+  "dir": "footage/hd",
+  "dvids_id": "1005147",
+  "title": "Coast Guard medevacs cruise ship passenger southwest of Shelter Cove",
+  "event": [
+   "may-02",
+   [
+    "eureka",
+    "shelter cove"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_cruise_shelter_cove",
+    "hook": "Lifted off a cruise ship",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "cubans_water_cay",
   "dir": "footage/hd",
   "dvids_id": "860811",
@@ -679,6 +721,27 @@
   ]
  },
  {
+  "footage": "kauai_cargo_ship",
+  "dir": "footage/hd",
+  "dvids_id": "998677",
+  "title": "Coast Guard medevacs man from cargo ship 100 miles off Kauai",
+  "event": [
+   "mar-03",
+   [
+    "kapolei",
+    "kauai"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_kauai_cargo_ship",
+    "hook": "100 miles out. Severe pain.",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "kodiak_three_men_dog",
   "dir": "footage/hd",
   "dvids_id": "884516",
@@ -756,6 +819,28 @@
     "name": "hd_lake_michigan_one",
     "hook": "Emergency on the lake",
     "rejected": true
+   }
+  ]
+ },
+ {
+  "footage": "lost_coast_hiker",
+  "dir": "footage/hd",
+  "dvids_id": "1008263",
+  "title": "Air Station Humboldt Bay medevacs hiker from Lost Coast Trail",
+  "event": [
+   "may-26",
+   [
+    "cape mendocino",
+    "eureka",
+    "humboldt county"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_lost_coast_hiker",
+    "hook": "Injured on the Lost Coast",
+    "rendered": true
    }
   ]
  },
@@ -1013,6 +1098,24 @@
    {
     "name": "hd_rosburg_flood_five",
     "hook": "Trapped by the flood",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "sakizaya_queen",
+  "dir": "footage/hd",
+  "dvids_id": "954932",
+  "title": "USCG Air Station Elizabeth City Medevac off the Sakizaya Queen B-Roll",
+  "event": [
+   "mar-06",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_sakizaya_queen",
+    "hook": "200 miles from shore",
     "rendered": true
    }
   ]

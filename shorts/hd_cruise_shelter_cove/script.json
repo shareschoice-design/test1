@@ -1,0 +1,120 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Lifted off a cruise ship",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "May 2026. Off Shelter Cove, California.",
+   "hl": [
+    "california"
+   ],
+   "shots": [
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.878
+    },
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.918
+    }
+   ]
+  },
+  {
+   "vo": "A passenger on the Queen Elizabeth needs a hospital.",
+   "hl": [
+    "hospital"
+   ],
+   "shots": [
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.15
+    },
+    {
+     "card": {
+      "file": "cruise_shelter_cove",
+      "pos": 0.21,
+      "big": "45",
+      "small": "YEAR-OLD PASSENGER"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "No hospital out here.",
+   "hl": [
+    "hospital"
+   ],
+   "shots": [
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.27
+    },
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.33
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard swimmer is lowered to the deck.",
+   "hl": [
+    "deck"
+   ],
+   "shots": [
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.39
+    },
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.45
+    }
+   ]
+  },
+  {
+   "vo": "The patient goes up in a litter.",
+   "hl": [
+    "litter"
+   ],
+   "shots": [
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.51
+    },
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.57
+    }
+   ]
+  },
+  {
+   "vo": "Flown straight to the hospital in Eureka.",
+   "hl": [
+    "eureka"
+   ],
+   "shots": [
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.63
+    },
+    {
+     "file": "cruise_shelter_cove",
+     "pos": 0.69
+    }
+   ]
+  }
+ ],
+ "avoid": {
+  "cruise_shelter_cove": [
+   [
+    33.5,
+    40.5
+   ]
+  ]
+ }
+}

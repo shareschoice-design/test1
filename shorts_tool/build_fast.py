@@ -126,6 +126,7 @@ def bad_spans(src):
         flat = i < len(ydev) and i < len(ylow) and (ydev[i] - ylow[i]) < 40
         if a < 28 or flat:                       # mostly black (title cards, fades) or flat colour
             spans.append((i / 2 - 0.5, i / 2 + 1.0))
+    spans += [tuple(x) for x in script.get("avoid", {}).get(os.path.splitext(os.path.basename(src))[0], [])]   # manual: burned-in UI / text
     BAD[src] = spans
     return spans
 

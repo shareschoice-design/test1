@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "200 miles from shore",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 2025. The Atlantic.",
+   "hl": [
+    "atlantic"
+   ],
+   "shots": [
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.324
+    },
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.364
+    }
+   ]
+  },
+  {
+   "vo": "A crew member is injured on a bulk carrier.",
+   "hl": [
+    "injured"
+   ],
+   "shots": [
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "sakizaya_queen",
+      "pos": 0.265,
+      "big": "200",
+      "small": "NAUTICAL MILES OFFSHORE"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "200 nautical miles off North Carolina.",
+   "hl": [
+    "200"
+   ],
+   "shots": [
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.343
+    },
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Jayhawk flies all the way out.",
+   "hl": [
+    "jayhawk"
+   ],
+   "shots": [
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.5
+    },
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "It hovers over the ship's deck.",
+   "hl": [
+    "deck"
+   ],
+   "shots": [
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.657
+    },
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "And brings the injured crew member back.",
+   "hl": [
+    "back"
+   ],
+   "shots": [
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.813
+    },
+    {
+     "file": "sakizaya_queen",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

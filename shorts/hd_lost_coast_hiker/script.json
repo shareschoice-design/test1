@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Injured on the Lost Coast",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "May 2026. The Lost Coast Trail, California.",
+   "hl": [
+    "california"
+   ],
+   "shots": [
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.725
+    },
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.765
+    }
+   ]
+  },
+  {
+   "vo": "A hiker is injured on a remote stretch of trail.",
+   "hl": [
+    "remote"
+   ],
+   "shots": [
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.187
+    },
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "Cal Fire calls the Coast Guard.",
+   "hl": [
+    "coast"
+   ],
+   "shots": [
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.343
+    },
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Dolphin from Humboldt Bay arrives.",
+   "hl": [
+    "dolphin"
+   ],
+   "shots": [
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.5
+    },
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "She's hoisted up. Her husband comes too.",
+   "hl": [
+    "husband"
+   ],
+   "shots": [
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.657
+    },
+    {
+     "card": {
+      "file": "lost_coast_hiker",
+      "pos": 0.735,
+      "big": "2",
+      "small": "FLOWN TO THE HOSPITAL"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Both are flown to the hospital in Eureka.",
+   "hl": [
+    "hospital"
+   ],
+   "shots": [
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.813
+    },
+    {
+     "file": "lost_coast_hiker",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

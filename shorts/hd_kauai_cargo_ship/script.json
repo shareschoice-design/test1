@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "100 miles out. Severe pain.",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "March 2026. Off Kauai, Hawaii.",
+   "hl": [
+    "hawaii"
+   ],
+   "shots": [
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.889
+    },
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.929
+    }
+   ]
+  },
+  {
+   "vo": "A man on a cargo ship is in severe pain.",
+   "hl": [
+    "pain"
+   ],
+   "shots": [
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "kauai_cargo_ship",
+      "pos": 0.265,
+      "big": "547",
+      "small": "FOOT CARGO SHIP"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "The ship is 100 miles offshore.",
+   "hl": [
+    "100"
+   ],
+   "shots": [
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.343
+    },
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard Dolphin refuels on a cutter at sea.",
+   "hl": [
+    "refuels"
+   ],
+   "shots": [
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.5
+    },
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Then it hoists him off the cargo ship.",
+   "hl": [
+    "hoists"
+   ],
+   "shots": [
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.657
+    },
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Mission complete.",
+   "hl": [
+    "complete"
+   ],
+   "shots": [
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.813
+    },
+    {
+     "file": "kauai_cargo_ship",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

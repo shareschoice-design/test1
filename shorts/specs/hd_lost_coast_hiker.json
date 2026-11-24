@@ -1,0 +1,7 @@
+{"file":"lost_coast_hiker","voice":"en_US-amy-medium","music":"music/incompetech_Rising_Tide.mp3","hook":["Injured on the Lost Coast",2],"range":[0.03,0.97],"lines":[
+["May 2026. The Lost Coast Trail, California.",["california"],null],
+["A hiker is injured on a remote stretch of trail.",["remote"],null],
+["Cal Fire calls the Coast Guard.",["coast"],"Then..."],
+["A Coast Guard Dolphin from Humboldt Bay arrives.",["dolphin"],null],
+["She's hoisted up. Her husband comes too.",["husband"],null,["2","FLOWN TO THE HOSPITAL"]],
+["Both are flown to the hospital in Eureka.",["hospital"],null]]}

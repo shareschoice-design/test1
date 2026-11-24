@@ -1,0 +1,7 @@
+{"file":"kauai_cargo_ship","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["100 miles out. Severe pain.",3],"range":[0.03,0.97],"lines":[
+["March 2026. Off Kauai, Hawaii.",["hawaii"],null],
+["A man on a cargo ship is in severe pain.",["pain"],null,["547","FOOT CARGO SHIP"]],
+["The ship is 100 miles offshore.",["100"],"Then..."],
+["A Coast Guard Dolphin refuels on a cutter at sea.",["refuels"],null],
+["Then it hoists him off the cargo ship.",["hoists"],null],
+["Mission complete.",["complete"],null]]}

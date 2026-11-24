@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": false,
+ "hook": {
+  "text": "An 8-year-old needs help at sea",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "September 2024. Off Eureka, California.",
+   "hl": [
+    "california"
+   ],
+   "shots": [
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.198
+    },
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.238
+    }
+   ]
+  },
+  {
+   "vo": "An 8-year-old boy on a cruise ship needs a hospital.",
+   "hl": [
+    "hospital"
+   ],
+   "shots": [
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "cruise_boy_eureka",
+      "pos": 0.265,
+      "big": "8",
+      "small": "YEARS OLD. 20 MILES OUT."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "The ship is 20 miles from shore.",
+   "hl": [
+    "20"
+   ],
+   "shots": [
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.343
+    },
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter comes in over the deck.",
+   "hl": [
+    "deck"
+   ],
+   "shots": [
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.5
+    },
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "They hoist him up. His family comes too.",
+   "hl": [
+    "family"
+   ],
+   "shots": [
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.657
+    },
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Straight to the hospital in Eureka.",
+   "hl": [
+    "hospital"
+   ],
+   "shots": [
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.813
+    },
+    {
+     "file": "cruise_boy_eureka",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}
