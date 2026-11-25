@@ -1331,3 +1331,41 @@ Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 71. hd_modrite_fire
+**Title:** Black Hawks vs. wildfire 🔥
+
+**Description:**
+```
+July 2026. The Modrite Fire, Washington. Guard pilots strap in. Their Black Hawks carry huge water buckets. They fill up and head for the fire. Backing up the crews on the ground. To protect lives and homes.
+
+Would you have done the same? 👇
+
+Real footage: "WA National Guard Provides Aviation Support for Modrite Wildfire Response" – DVIDS (public domain)
+https://www.dvidshub.net/video/1015999/wa-national-guard-provides-aviation-support-for-modrite-wildfire-response
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 72. hd_skycrane_tamarack
+**Title:** 2,650 gallons in under a minute 🔥
+
+**Description:**
+```
+The Tamarack Fire, California. Meet the Skycrane. A flying water tanker. It hovers low over a dip site… …and sucks up water through a snorkel. 2,650 gallons. In under a minute. Then straight back to the fire line.
+
+Would you have done the same? 👇
+
+Real footage: "Skycrane supports wildfire operations" – DVIDS (public domain)
+https://www.dvidshub.net/video/996611/skycrane-supports-wildfire-operations
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
