@@ -1,0 +1,26 @@
+{
+ "source": "NASA Image and Video Library (not copyrighted)",
+ "page": "https://images.nasa.gov/details/KSC-20260410-MH-JBP01-0001-Artemis_II_Splashdown_GSS_Visual_60fps-M19183 ; https://images.nasa.gov/details/GP011149",
+ "file": "edit of GP011149 + Artemis II splashdown GSS visual",
+ "title": "Artemis II re-entry and splashdown",
+ "credit": "NASA",
+ "description": "GP011149 (April 10, 2026) - A view from a camera inside NASA\u2019s Artemis II Orion spacecraft during re-entry. In this video, taken from the pilot\u2019s forward window, Orion re-enters the Earth's atmosphere and parachutes deploy for splashdown. Credit: NASA \n\nNASA's Orion spacecraft carrying Artemis II Commander Reid Wiseman, Pilot Victor Glover, and Mission Specialist Christina Koch from NASA, along with Mission Specialist Jeremy Hansen from the CSA (Canadian Space Agency), splashes down in the Pacific Ocean near San Diego, California, at 5:07 p.m. PDT, (8:07 p.m. EDT) on Friday, April 10, 2026. The Artemis II test flight launched on Wednesday, April 1, from NASA\u2019s Kennedy Space Center in Florida to begin its 10-day journey around the Moon for scientific discovery, economic benefits, and to build on our foundation for the first crewed missions to Mars. NASA\u2019s Landing and Recovery team and the U.S. military are coordinating efforts to extract the Artemis II crew from the Orion spacecraft.",
+ "note": "NASA content; credit NASA, do not imply NASA endorsement.",
+ "compose": [
+  [
+   "GP011149",
+   0,
+   190
+  ],
+  [
+   "GP011149",
+   605,
+   100
+  ],
+  [
+   "KSC-20260410-MH-JBP01-0001-Artemis_II_Splashdown_GSS_Visual_60fps-M19183",
+   60,
+   117
+  ]
+ ]
+}

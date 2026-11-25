@@ -1,5 +1,26 @@
 [
  {
+  "footage": "artemis2_return",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/KSC-20260410-MH-JBP01-0001-Artemis_II_Splashdown_GSS_Visual_60fps-M19183 ; https://images.nasa.gov/details/GP011149",
+  "title": "Artemis II re-entry and splashdown",
+  "event": [
+   "apr-10",
+   [
+    "florida",
+    "san diego"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_artemis2_return",
+    "hook": "Coming home from the Moon",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "aw302_return",
   "dir": "footage/hd",
   "dvids_id": "991185",
@@ -962,7 +983,7 @@
    {
     "name": "hd_modrite_fire",
     "hook": "Black Hawks vs. wildfire",
-    "rendered": false
+    "rendered": true
    }
   ]
  },
@@ -1220,6 +1241,30 @@
   ]
  },
  {
+  "footage": "sea_turtles_kennedy",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/KSC-20210226-MH-CSH01-0001-Rescued_Sea_Turtles_Arrival_at_LLF_Released_at_Playalinda_Beach-3269767",
+  "title": "Rescued Sea Turtles Arrival at LLF, Release at Playalinda Beach, Florida",
+  "event": [
+   "feb-26",
+   [
+    "florida",
+    "llf",
+    "nasa",
+    "playalinda beach",
+    "texas"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_sea_turtles_kennedy",
+    "hook": "These turtles flew to Florida",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "shark_bite_bahamas",
   "dir": "footage/hd",
   "dvids_id": "832060",
@@ -1298,7 +1343,7 @@
    {
     "name": "hd_skycrane_tamarack",
     "hook": "2,650 gallons in under a minute",
-    "rendered": false
+    "rendered": true
    }
   ]
  },

@@ -1,0 +1,7 @@
+{"file":"artemis2_return","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["Coming home from the Moon",2],"range":[0.0,0.99],"hook_pos":0.03,"lines":[
+["April 2026. Artemis II.",["artemis"],null],
+["Four astronauts. Ten days around the Moon.",["moon"],null,["4","ASTRONAUTS. 10 DAYS."]],
+["Now they hit Earth's atmosphere.",["atmosphere"],"Then..."],
+["This is the view from the pilot's window.",["window"],null],
+["The parachutes open.",["parachutes"],null],
+["Splashdown in the Pacific. Welcome home.",["home"],null]]}

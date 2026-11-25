@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Coming home from the Moon",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "April 2026. Artemis II.",
+   "hl": [
+    "artemis"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_return",
+     "pos": 0.03
+    },
+    {
+     "file": "artemis2_return",
+     "pos": 0.07
+    }
+   ]
+  },
+  {
+   "vo": "Four astronauts. Ten days around the Moon.",
+   "hl": [
+    "moon"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_return",
+     "pos": 0.165
+    },
+    {
+     "card": {
+      "file": "artemis2_return",
+      "pos": 0.247,
+      "big": "4",
+      "small": "ASTRONAUTS. 10 DAYS."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Now they hit Earth's atmosphere.",
+   "hl": [
+    "atmosphere"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_return",
+     "pos": 0.33
+    },
+    {
+     "file": "artemis2_return",
+     "pos": 0.413
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "This is the view from the pilot's window.",
+   "hl": [
+    "window"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_return",
+     "pos": 0.495
+    },
+    {
+     "file": "artemis2_return",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "The parachutes open.",
+   "hl": [
+    "parachutes"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_return",
+     "pos": 0.66
+    },
+    {
+     "file": "artemis2_return",
+     "pos": 0.743
+    }
+   ]
+  },
+  {
+   "vo": "Splashdown in the Pacific. Welcome home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_return",
+     "pos": 0.825
+    },
+    {
+     "file": "artemis2_return",
+     "pos": 0.908
+    }
+   ]
+  }
+ ]
+}

@@ -1369,3 +1369,41 @@ Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 73. hd_artemis2_return
+**Title:** Coming home from the Moon 🧡
+
+**Description:**
+```
+April 2026. Artemis II. Four astronauts. Ten days around the Moon. Now they hit Earth's atmosphere. This is the view from the pilot's window. The parachutes open. Splashdown in the Pacific. Welcome home.
+
+Would you have done the same? 👇
+
+Real footage: "Artemis II re-entry and splashdown" – courtesy NASA (NASA)
+https://images.nasa.gov/details/KSC-20260410-MH-JBP01-0001-Artemis_II_Splashdown_GSS_Visual_60fps-M19183 ; https://images.nasa.gov/details/GP011149
+NASA does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 74. hd_sea_turtles_kennedy
+**Title:** These turtles flew to Florida 🌊
+
+**Description:**
+```
+February 2021. Kennedy Space Center. A small plane lands. The cargo? Sea turtles. They were rescued after cold-stunning up north. Rehabilitated and flown down to Florida. Carried to the beach, box by box. Released into the warm Atlantic.
+
+Would you have done the same? 👇
+
+Real footage: "Rescued Sea Turtles Arrival at LLF, Release at Playalinda Beach, Florida" – courtesy NASA (NASA)
+https://images.nasa.gov/details/KSC-20210226-MH-CSH01-0001-Rescued_Sea_Turtles_Arrival_at_LLF_Released_at_Playalinda_Beach-3269767
+NASA does not endorse this channel or video.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

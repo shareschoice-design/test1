@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "These turtles flew to Florida",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "February 2021. Kennedy Space Center.",
+   "hl": [
+    "kennedy"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.288
+    },
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.328
+    }
+   ]
+  },
+  {
+   "vo": "A small plane lands. The cargo? Sea turtles.",
+   "hl": [
+    "turtles"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.228
+    },
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.302
+    }
+   ]
+  },
+  {
+   "vo": "They were rescued after cold-stunning up north.",
+   "hl": [
+    "cold"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.377
+    },
+    {
+     "card": {
+      "file": "sea_turtles_kennedy",
+      "pos": 0.451,
+      "big": "2021",
+      "small": "RESCUED SEA TURTLES"
+     }
+    }
+   ],
+   "label": "And now..."
+  },
+  {
+   "vo": "Rehabilitated and flown down to Florida.",
+   "hl": [
+    "florida"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.525
+    },
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.599
+    }
+   ]
+  },
+  {
+   "vo": "Carried to the beach, box by box.",
+   "hl": [
+    "beach"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.673
+    },
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.747
+    }
+   ]
+  },
+  {
+   "vo": "Released into the warm Atlantic.",
+   "hl": [
+    "atlantic"
+   ],
+   "shots": [
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.822
+    },
+    {
+     "file": "sea_turtles_kennedy",
+     "pos": 0.896
+    }
+   ]
+  }
+ ]
+}

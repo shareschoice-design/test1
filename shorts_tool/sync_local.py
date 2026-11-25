@@ -36,8 +36,24 @@ for name in specs:
     print(f"== {name}")
     try:
         if not os.path.exists(foot):
-            page = json.load(open(meta))["page"]
-            run([PY, "shorts_tool/dvids_fetch.py", page, os.path.join("footage", "hd", spec["file"])])
+            m = json.load(open(meta))
+            base = os.path.join("footage", "hd", spec["file"])
+            if m.get("compose"):            # edit of several NASA clips: [[nasa_id, start_s, dur_s], ...]
+                parts = []
+                for i, (nid, ss, t) in enumerate(m["compose"]):
+                    part = base + f".part{i}"
+                    if not os.path.exists(os.path.join(REPO, part + ".mp4")):
+                        run([PY, "shorts_tool/nasa_fetch.py", nid, part, "1200"])
+                    parts.append((part + ".mp4", ss, t))
+                cmd = ["ffmpeg", "-y", "-loglevel", "error"]
+                for f, ss, t in parts: cmd += ["-ss", str(ss), "-t", str(t), "-i", f]
+                fc = "".join(f"[{i}:v]scale=1920:1080,setsar=1,fps=30[v{i}];" for i in range(len(parts)))
+                fc += "".join(f"[v{i}]" for i in range(len(parts))) + f"concat=n={len(parts)}:v=1:a=0[v]"
+                run(cmd + ["-filter_complex", fc, "-map", "[v]", "-c:v", "libx264", "-crf", "16", "-preset", "fast", "-an", base + ".mp4"])
+            elif m.get("nasa_id"):
+                run([PY, "shorts_tool/nasa_fetch.py", m["nasa_id"], base, "1200"])
+            else:
+                run([PY, "shorts_tool/dvids_fetch.py", m["page"], base])
         if not os.path.exists(final):
             os.makedirs(os.path.join(REPO, "shorts", name), exist_ok=True)
             run([PY, "shorts_tool/make_dvids_script.py", os.path.join("shorts", "specs", name + ".json"),
