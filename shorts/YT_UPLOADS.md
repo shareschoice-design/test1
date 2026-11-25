@@ -1559,3 +1559,60 @@ Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 83. hd_bole_dm1_test
+**Title:** 15 seconds before the end… 😳
+
+**Description:**
+```
+June 26, 2025. Promontory, Utah. A brand-new booster for NASA's Moon rocket is lit. Over 1.4 million pounds of propellant burning. About 15 seconds before the end… an abnormal event. Something went wrong at the very end. But NASA still got the data it needed.
+
+Would you have done the same? 👇
+
+Real footage: "Booster Demonstration Motor-1 Static Test at Northrop Grumman" – courtesy NASA (NASA)
+https://images.nasa.gov/details/MSFC-NG-06262025_DM-1_Static%20Test%20at%20Northrop%20Grumman
+NASA does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 84. hd_crew9_ellington
+**Title:** Planned 8 days. Stayed 286. 🧡
+
+**Description:**
+```
+June 2024. Two NASA astronauts launch on Boeing's Starliner. The test flight was planned for about eight days. Starliner had problems. It came home without them. Butch Wilmore and Suni Williams stayed on the space station. March 18, 2025: they finally splash down. 286 days later… they're back in Houston.
+
+Would you have done the same? 👇
+
+Real footage: "NASA’s SpaceX Crew 9 Return to Ellington Field" – courtesy NASA (NASA)
+https://images.nasa.gov/details/jsc2025m000025-NASA%E2%80%99s_SpaceX_Crew-9_Return_to_Ellington_Field_4K60_53Mbps
+NASA does not endorse this channel or video.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 85. hd_earth_views_4k
+**Title:** This is the view from 250 miles up 😳
+
+**Description:**
+```
+Real footage from the International Space Station. 250 miles above our heads. The station circles Earth sixteen times a day. Deserts. Oceans. Whole weather systems. A new sunrise about every 90 minutes. Everyone you've ever known lives down there.
+
+Would you have done the same? 👇
+
+Real footage: "jsc2021m000138_4K_Earth_Views_Extended_Cut_for_Earth_Day_ 2021_210422-4KMP4" – courtesy NASA (NASA)
+https://images.nasa.gov/details/jsc2021m000138_4K_Earth_Views_Extended_Cut_for_Earth_Day_%202021_210422-4KMP4
+NASA does not endorse this channel or video.
+Music: "Dreamer" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

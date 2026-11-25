@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Planned 8 days. Stayed 286.",
+  "red": 1
+ },
+ "lines": [
+  {
+   "vo": "June 2024. Two NASA astronauts launch on Boeing's Starliner.",
+   "hl": [
+    "starliner"
+   ],
+   "shots": [
+    {
+     "file": "crew9_ellington",
+     "pos": 0.95
+    },
+    {
+     "file": "crew9_ellington",
+     "pos": 0.95
+    }
+   ]
+  },
+  {
+   "vo": "The test flight was planned for about eight days.",
+   "hl": [
+    "eight"
+   ],
+   "shots": [
+    {
+     "file": "crew9_ellington",
+     "pos": 0.498
+    },
+    {
+     "card": {
+      "file": "crew9_ellington",
+      "pos": 0.547,
+      "big": "286",
+      "small": "DAYS IN SPACE"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Starliner had problems. It came home without them.",
+   "hl": [
+    "without"
+   ],
+   "shots": [
+    {
+     "file": "crew9_ellington",
+     "pos": 0.597
+    },
+    {
+     "file": "crew9_ellington",
+     "pos": 0.646
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Butch Wilmore and Suni Williams stayed on the space station.",
+   "hl": [
+    "stayed"
+   ],
+   "shots": [
+    {
+     "file": "crew9_ellington",
+     "pos": 0.695
+    },
+    {
+     "file": "crew9_ellington",
+     "pos": 0.744
+    }
+   ]
+  },
+  {
+   "vo": "March 18, 2025: they finally splash down.",
+   "hl": [
+    "splash"
+   ],
+   "shots": [
+    {
+     "file": "crew9_ellington",
+     "pos": 0.793
+    },
+    {
+     "file": "crew9_ellington",
+     "pos": 0.843
+    }
+   ]
+  },
+  {
+   "vo": "286 days later\u2026 they're back in Houston.",
+   "hl": [
+    "houston"
+   ],
+   "shots": [
+    {
+     "file": "crew9_ellington",
+     "pos": 0.892
+    },
+    {
+     "file": "crew9_ellington",
+     "pos": 0.941
+    }
+   ]
+  }
+ ]
+}

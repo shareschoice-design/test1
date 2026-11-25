@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Dreamer.mp3",
+ "dark": false,
+ "hook": {
+  "text": "This is the view from 250 miles up",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "Real footage from the International Space Station.",
+   "hl": [
+    "real"
+   ],
+   "shots": [
+    {
+     "file": "earth_views_4k",
+     "pos": 0.47
+    },
+    {
+     "file": "earth_views_4k",
+     "pos": 0.51
+    }
+   ]
+  },
+  {
+   "vo": "250 miles above our heads.",
+   "hl": [
+    "250"
+   ],
+   "shots": [
+    {
+     "file": "earth_views_4k",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "earth_views_4k",
+      "pos": 0.265,
+      "big": "16",
+      "small": "ORBITS EVERY DAY"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "The station circles Earth sixteen times a day.",
+   "hl": [
+    "sixteen"
+   ],
+   "shots": [
+    {
+     "file": "earth_views_4k",
+     "pos": 0.343
+    },
+    {
+     "file": "earth_views_4k",
+     "pos": 0.422
+    }
+   ],
+   "label": "Look..."
+  },
+  {
+   "vo": "Deserts. Oceans. Whole weather systems.",
+   "hl": [
+    "oceans"
+   ],
+   "shots": [
+    {
+     "file": "earth_views_4k",
+     "pos": 0.5
+    },
+    {
+     "file": "earth_views_4k",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "A new sunrise about every 90 minutes.",
+   "hl": [
+    "sunrise"
+   ],
+   "shots": [
+    {
+     "file": "earth_views_4k",
+     "pos": 0.657
+    },
+    {
+     "file": "earth_views_4k",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Everyone you've ever known lives down there.",
+   "hl": [
+    "everyone"
+   ],
+   "shots": [
+    {
+     "file": "earth_views_4k",
+     "pos": 0.813
+    },
+    {
+     "file": "earth_views_4k",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

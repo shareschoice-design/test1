@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "15 seconds before the end\u2026",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "June 26, 2025. Promontory, Utah.",
+   "hl": [
+    "utah"
+   ],
+   "shots": [
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.765
+    },
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.805
+    }
+   ]
+  },
+  {
+   "vo": "A brand-new booster for NASA's Moon rocket is lit.",
+   "hl": [
+    "lit"
+   ],
+   "shots": [
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.588
+    },
+    {
+     "card": {
+      "file": "bole_dm1_test",
+      "pos": 0.62,
+      "big": "4M+",
+      "small": "POUNDS OF THRUST"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Over 1.4 million pounds of propellant burning.",
+   "hl": [
+    "burning"
+   ],
+   "shots": [
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.652
+    },
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.683
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "About 15 seconds before the end\u2026 an abnormal event.",
+   "hl": [
+    "abnormal"
+   ],
+   "shots": [
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.715
+    },
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.747
+    }
+   ]
+  },
+  {
+   "vo": "Something went wrong at the very end.",
+   "hl": [
+    "wrong"
+   ],
+   "shots": [
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.778
+    },
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.81
+    }
+   ]
+  },
+  {
+   "vo": "But NASA still got the data it needed.",
+   "hl": [
+    "data"
+   ],
+   "shots": [
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.842
+    },
+    {
+     "file": "bole_dm1_test",
+     "pos": 0.873
+    }
+   ]
+  }
+ ],
+ "avoid": {
+  "bole_dm1_test": [
+   [
+    0,
+    103.5
+   ],
+   [
+    183,
+    200
+   ]
+  ]
+ }
+}

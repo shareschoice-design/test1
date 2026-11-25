@@ -163,6 +163,27 @@
   ]
  },
  {
+  "footage": "bole_dm1_test",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/MSFC-NG-06262025_DM-1_Static%20Test%20at%20Northrop%20Grumman",
+  "title": "Booster Demonstration Motor-1 Static Test at Northrop Grumman",
+  "event": [
+   "jun-26",
+   [
+    "northrop grumman",
+    "utah"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_bole_dm1_test",
+    "hook": "15 seconds before the end\u2026",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "boy_cruise_ship",
   "dir": "footage/hd",
   "dvids_id": "1015403",
@@ -240,6 +261,26 @@
    {
     "name": "hd_clearwater_vessel_fire",
     "hook": "100 miles out. On fire.",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "crew9_ellington",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/jsc2025m000025-NASA%E2%80%99s_SpaceX_Crew-9_Return_to_Ellington_Field_4K60_53Mbps",
+  "title": "NASA\u2019s SpaceX Crew 9 Return to Ellington Field",
+  "event": [
+   "mar-18",
+   [
+    "houston"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_crew9_ellington",
+    "hook": "Planned 8 days. Stayed 286.",
     "rendered": true
    }
   ]
@@ -423,6 +464,24 @@
    {
     "name": "hd_dog_in_container",
     "hook": "Something was scratching",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "earth_views_4k",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/jsc2021m000138_4K_Earth_Views_Extended_Cut_for_Earth_Day_%202021_210422-4KMP4",
+  "title": "jsc2021m000138_4K_Earth_Views_Extended_Cut_for_Earth_Day_ 2021_210422-4KMP4",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_earth_views_4k",
+    "hook": "This is the view from 250 miles up",
     "rendered": true
    }
   ]
