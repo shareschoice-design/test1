@@ -1,0 +1,7 @@
+{"file":"roman_launch_landing","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["The boosters came back",3],"range":[0.03,0.97],"lines":[
+["August 30, 2026. Kennedy Space Center.",["kennedy"],null],
+["A Falcon Heavy lifts off at 7:26 a.m.",["falcon"],null],
+["On top: NASA's Roman Space Telescope.",["roman"],"Then...",["3","CORES. 1 TELESCOPE."]],
+["Minutes later, the side boosters separate.",["separate"],null],
+["They fly back… and land.",["land"],null],
+["Roman heads off to map the universe.",["universe"],null]]}

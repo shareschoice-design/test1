@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "NASA broke it on purpose",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "NASA's Marshall Space Flight Center, Alabama.",
+   "hl": [
+    "alabama"
+   ],
+   "shots": [
+    {
+     "file": "sls_tank_break",
+     "pos": 0.152
+    },
+    {
+     "file": "sls_tank_break",
+     "pos": 0.192
+    }
+   ]
+  },
+  {
+   "vo": "This is a liquid oxygen tank for the SLS Moon rocket.",
+   "hl": [
+    "tank"
+   ],
+   "shots": [
+    {
+     "file": "sls_tank_break",
+     "pos": 0.1
+    },
+    {
+     "file": "sls_tank_break",
+     "pos": 0.15
+    }
+   ]
+  },
+  {
+   "vo": "Hydraulic cylinders crush it with millions of pounds of force.",
+   "hl": [
+    "millions"
+   ],
+   "shots": [
+    {
+     "file": "sls_tank_break",
+     "pos": 0.2
+    },
+    {
+     "file": "sls_tank_break",
+     "pos": 0.25
+    }
+   ],
+   "label": "Watch this..."
+  },
+  {
+   "vo": "Until it finally breaks.",
+   "hl": [
+    "breaks"
+   ],
+   "shots": [
+    {
+     "file": "sls_tank_break",
+     "pos": 0.3
+    },
+    {
+     "card": {
+      "file": "sls_tank_break",
+      "pos": 0.35,
+      "big": "SLS",
+      "small": "TESTED TO FAILURE"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Water gushes out of the split tank.",
+   "hl": [
+    "water"
+   ],
+   "shots": [
+    {
+     "file": "sls_tank_break",
+     "pos": 0.4
+    },
+    {
+     "file": "sls_tank_break",
+     "pos": 0.45
+    }
+   ]
+  },
+  {
+   "vo": "So the real rocket can safely carry astronauts.",
+   "hl": [
+    "astronauts"
+   ],
+   "shots": [
+    {
+     "file": "sls_tank_break",
+     "pos": 0.5
+    },
+    {
+     "file": "sls_tank_break",
+     "pos": 0.55
+    }
+   ]
+  }
+ ]
+}

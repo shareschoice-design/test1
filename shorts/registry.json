@@ -1244,6 +1244,26 @@
   ]
  },
  {
+  "footage": "roman_launch_landing",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/KSC-20260830-MH-AJN01-0001-Roman_Space_Telescope_Isolated_Launch_and_Landing_Views-M26246",
+  "title": "NASA's Nancy Grace Roman Space Telescope Isolated Launch and Landing Views",
+  "event": [
+   "aug-30",
+   [
+    "florida"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_roman_launch_landing",
+    "hook": "The boosters came back",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "rosburg_flood_five",
   "dir": "footage/hd",
   "dvids_id": "906547",
@@ -1405,6 +1425,47 @@
    {
     "name": "hd_skycrane_tamarack",
     "hook": "2,650 gallons in under a minute",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "sls_green_run",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/SSC_2021-03-18_Hot_Fire_B-roll_4_Views",
+  "title": "SSC_2021-03-18_Hot_Fire_B-roll_4_Views",
+  "event": [
+   "mar-18",
+   [
+    "stennis space"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_sls_green_run",
+    "hook": "Four rocket engines. Bolted down.",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "sls_tank_break",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/MSFC_2020_XP_SLS_V_0130_PD002-Test-Case-TTF-4697%20LOX%20Tank%20Test-to-Failure%20color-1_06242020_timelapse",
+  "title": "Engineers Break SLS Rocket Propellant Tank On Purpose",
+  "event": [
+   "",
+   [
+    "huntsville",
+    "nasa"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_sls_tank_break",
+    "hook": "NASA broke it on purpose",
     "rendered": true
    }
   ]

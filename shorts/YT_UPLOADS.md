@@ -1464,3 +1464,60 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 78. hd_roman_launch_landing
+**Title:** The boosters came back 😳
+
+**Description:**
+```
+August 30, 2026. Kennedy Space Center. A Falcon Heavy lifts off at 7:26 a.m. On top: NASA's Roman Space Telescope. Minutes later, the side boosters separate. They fly back… and land. Roman heads off to map the universe.
+
+Would you have done the same? 👇
+
+Real footage: "NASA's Nancy Grace Roman Space Telescope Isolated Launch and Landing Views" – courtesy NASA (NASA / NASA Amber Jean Notvest)
+https://images.nasa.gov/details/KSC-20260830-MH-AJN01-0001-Roman_Space_Telescope_Isolated_Launch_and_Landing_Views-M26246
+NASA does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 79. hd_sls_green_run
+**Title:** Four rocket engines. Bolted down. 😳
+
+**Description:**
+```
+March 18, 2021. Stennis Space Center, Mississippi. The core stage of NASA's Moon rocket is bolted to a test stand. Then all four RS-25 engines ignite. That cloud? Steam from thousands of gallons of water. And the rocket doesn't go anywhere. This same stage later launched Artemis I.
+
+Would you have done the same? 👇
+
+Real footage: "SSC_2021-03-18_Hot_Fire_B-roll_4_Views" – courtesy NASA (NASA)
+https://images.nasa.gov/details/SSC_2021-03-18_Hot_Fire_B-roll_4_Views
+NASA does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 80. hd_sls_tank_break
+**Title:** NASA broke it on purpose 😳
+
+**Description:**
+```
+NASA's Marshall Space Flight Center, Alabama. This is a liquid oxygen tank for the SLS Moon rocket. Hydraulic cylinders crush it with millions of pounds of force. Until it finally breaks. Water gushes out of the split tank. So the real rocket can safely carry astronauts.
+
+Would you have done the same? 👇
+
+Real footage: "Engineers Break SLS Rocket Propellant Tank On Purpose" – courtesy NASA (NASA / n/a)
+https://images.nasa.gov/details/MSFC_2020_XP_SLS_V_0130_PD002-Test-Case-TTF-4697%20LOX%20Tank%20Test-to-Failure%20color-1_06242020_timelapse
+NASA does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

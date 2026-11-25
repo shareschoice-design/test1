@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "The boosters came back",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "August 30, 2026. Kennedy Space Center.",
+   "hl": [
+    "kennedy"
+   ],
+   "shots": [
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.765
+    },
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.805
+    }
+   ]
+  },
+  {
+   "vo": "A Falcon Heavy lifts off at 7:26 a.m.",
+   "hl": [
+    "falcon"
+   ],
+   "shots": [
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.187
+    },
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "On top: NASA's Roman Space Telescope.",
+   "hl": [
+    "roman"
+   ],
+   "shots": [
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "roman_launch_landing",
+      "pos": 0.422,
+      "big": "3",
+      "small": "CORES. 1 TELESCOPE."
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Minutes later, the side boosters separate.",
+   "hl": [
+    "separate"
+   ],
+   "shots": [
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.5
+    },
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "They fly back\u2026 and land.",
+   "hl": [
+    "land"
+   ],
+   "shots": [
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.657
+    },
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Roman heads off to map the universe.",
+   "hl": [
+    "universe"
+   ],
+   "shots": [
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.813
+    },
+    {
+     "file": "roman_launch_landing",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

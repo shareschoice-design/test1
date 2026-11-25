@@ -1,0 +1,7 @@
+{"file":"sls_tank_break","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["NASA broke it on purpose",3],"range":[0.0,0.6],"lines":[
+["NASA's Marshall Space Flight Center, Alabama.",["alabama"],null],
+["This is a liquid oxygen tank for the SLS Moon rocket.",["tank"],null],
+["Hydraulic cylinders crush it with millions of pounds of force.",["millions"],"Watch this..."],
+["Until it finally breaks.",["breaks"],null,["SLS","TESTED TO FAILURE"]],
+["Water gushes out of the split tank.",["water"],null],
+["So the real rocket can safely carry astronauts.",["astronauts"],null]]}

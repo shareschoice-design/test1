@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Four rocket engines. Bolted down.",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 18, 2021. Stennis Space Center, Mississippi.",
+   "hl": [
+    "mississippi"
+   ],
+   "shots": [
+    {
+     "file": "sls_green_run",
+     "pos": 0.753
+    },
+    {
+     "file": "sls_green_run",
+     "pos": 0.793
+    }
+   ]
+  },
+  {
+   "vo": "The core stage of NASA's Moon rocket is bolted to a test stand.",
+   "hl": [
+    "bolted"
+   ],
+   "shots": [
+    {
+     "file": "sls_green_run",
+     "pos": 0.18
+    },
+    {
+     "file": "sls_green_run",
+     "pos": 0.26
+    }
+   ]
+  },
+  {
+   "vo": "Then all four RS-25 engines ignite.",
+   "hl": [
+    "ignite"
+   ],
+   "shots": [
+    {
+     "file": "sls_green_run",
+     "pos": 0.34
+    },
+    {
+     "card": {
+      "file": "sls_green_run",
+      "pos": 0.42,
+      "big": "4",
+      "small": "RS-25 ENGINES. FULL BURN."
+     }
+    }
+   ],
+   "label": "Watch this..."
+  },
+  {
+   "vo": "That cloud? Steam from thousands of gallons of water.",
+   "hl": [
+    "steam"
+   ],
+   "shots": [
+    {
+     "file": "sls_green_run",
+     "pos": 0.5
+    },
+    {
+     "file": "sls_green_run",
+     "pos": 0.58
+    }
+   ]
+  },
+  {
+   "vo": "And the rocket doesn't go anywhere.",
+   "hl": [
+    "anywhere"
+   ],
+   "shots": [
+    {
+     "file": "sls_green_run",
+     "pos": 0.66
+    },
+    {
+     "file": "sls_green_run",
+     "pos": 0.74
+    }
+   ]
+  },
+  {
+   "vo": "This same stage later launched Artemis I.",
+   "hl": [
+    "artemis"
+   ],
+   "shots": [
+    {
+     "file": "sls_green_run",
+     "pos": 0.82
+    },
+    {
+     "file": "sls_green_run",
+     "pos": 0.9
+    }
+   ]
+  }
+ ]
+}
