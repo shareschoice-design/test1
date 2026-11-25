@@ -1,0 +1,108 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Hurt at Face Rock",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "July 2022. Bandon, Oregon.",
+   "hl": [
+    "oregon"
+   ],
+   "shots": [
+    {
+     "file": "bandon_woman",
+     "pos": 0.715
+    },
+    {
+     "file": "bandon_woman",
+     "pos": 0.755
+    }
+   ]
+  },
+  {
+   "vo": "A woman is injured near Face Rock.",
+   "hl": [
+    "injured"
+   ],
+   "shots": [
+    {
+     "file": "bandon_woman",
+     "pos": 0.187
+    },
+    {
+     "file": "bandon_woman",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "The Coast Guard is called in.",
+   "hl": [
+    "called"
+   ],
+   "shots": [
+    {
+     "file": "bandon_woman",
+     "pos": 0.343
+    },
+    {
+     "file": "bandon_woman",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A helicopter lands right on the beach.",
+   "hl": [
+    "beach"
+   ],
+   "shots": [
+    {
+     "file": "bandon_woman",
+     "pos": 0.5
+    },
+    {
+     "file": "bandon_woman",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "The crew carries her aboard.",
+   "hl": [
+    "aboard"
+   ],
+   "shots": [
+    {
+     "file": "bandon_woman",
+     "pos": 0.657
+    },
+    {
+     "file": "bandon_woman",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "She reaches the hospital in stable condition.",
+   "hl": [
+    "stable"
+   ],
+   "shots": [
+    {
+     "file": "bandon_woman",
+     "pos": 0.813
+    },
+    {
+     "file": "bandon_woman",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

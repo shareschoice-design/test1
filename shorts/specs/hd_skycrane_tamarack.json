@@ -1,0 +1,7 @@
+{"file":"skycrane_tamarack","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["2,650 gallons in under a minute",4],"range":[0.03,0.97],"lines":[
+["The Tamarack Fire, California.",["tamarack"],null],
+["Meet the Skycrane. A flying water tanker.",["skycrane"],null,["2,650","GALLON TANK"]],
+["It hovers low over a dip site…",["dip"],"Watch this..."],
+["…and sucks up water through a snorkel.",["snorkel"],null],
+["2,650 gallons. In under a minute.",["minute"],null],
+["Then straight back to the fire line.",["fire"],null]]}

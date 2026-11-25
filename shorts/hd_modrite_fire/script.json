@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Black Hawks vs. wildfire",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "July 2026. The Modrite Fire, Washington.",
+   "hl": [
+    "washington"
+   ],
+   "shots": [
+    {
+     "file": "modrite_fire",
+     "pos": 0.494
+    },
+    {
+     "file": "modrite_fire",
+     "pos": 0.534
+    }
+   ]
+  },
+  {
+   "vo": "Guard pilots strap in.",
+   "hl": [
+    "strap"
+   ],
+   "shots": [
+    {
+     "file": "modrite_fire",
+     "pos": 0.187
+    },
+    {
+     "file": "modrite_fire",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "Their Black Hawks carry huge water buckets.",
+   "hl": [
+    "buckets"
+   ],
+   "shots": [
+    {
+     "file": "modrite_fire",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "modrite_fire",
+      "pos": 0.422,
+      "big": "UH-60",
+      "small": "BLACK HAWKS ON THE FIRE"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They fill up and head for the fire.",
+   "hl": [
+    "fire"
+   ],
+   "shots": [
+    {
+     "file": "modrite_fire",
+     "pos": 0.5
+    },
+    {
+     "file": "modrite_fire",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Backing up the crews on the ground.",
+   "hl": [
+    "ground"
+   ],
+   "shots": [
+    {
+     "file": "modrite_fire",
+     "pos": 0.657
+    },
+    {
+     "file": "modrite_fire",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "To protect lives and homes.",
+   "hl": [
+    "lives"
+   ],
+   "shots": [
+    {
+     "file": "modrite_fire",
+     "pos": 0.813
+    },
+    {
+     "file": "modrite_fire",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

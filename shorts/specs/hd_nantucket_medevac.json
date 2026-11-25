@@ -1,0 +1,7 @@
+{"file":"nantucket_medevac","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["82 years old. 85 miles out.",2],"range":[0.03,0.97],"lines":[
+["January 2023. Off Nantucket, Massachusetts.",["nantucket"],null],
+["An 82-year-old man on the Queen Mary 2 needs a hospital.",["hospital"],null,["82","YEARS OLD. 85 MILES OUT."]],
+["The ship is 85 nautical miles out at sea.",["85"],"Then..."],
+["A Coast Guard helicopter from Cape Cod arrives.",["cape"],null],
+["They hoist him off the giant ocean liner.",["hoist"],null],
+["EMS is waiting when they land.",["waiting"],null]]}

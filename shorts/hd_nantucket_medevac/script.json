@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "82 years old. 85 miles out.",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "January 2023. Off Nantucket, Massachusetts.",
+   "hl": [
+    "nantucket"
+   ],
+   "shots": [
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.283
+    },
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.323
+    }
+   ]
+  },
+  {
+   "vo": "An 82-year-old man on the Queen Mary 2 needs a hospital.",
+   "hl": [
+    "hospital"
+   ],
+   "shots": [
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "nantucket_medevac",
+      "pos": 0.265,
+      "big": "82",
+      "small": "YEARS OLD. 85 MILES OUT."
+     }
+    }
+   ]
+  },
+  {
+   "vo": "The ship is 85 nautical miles out at sea.",
+   "hl": [
+    "85"
+   ],
+   "shots": [
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.343
+    },
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard helicopter from Cape Cod arrives.",
+   "hl": [
+    "cape"
+   ],
+   "shots": [
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.5
+    },
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "They hoist him off the giant ocean liner.",
+   "hl": [
+    "hoist"
+   ],
+   "shots": [
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.657
+    },
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "EMS is waiting when they land.",
+   "hl": [
+    "waiting"
+   ],
+   "shots": [
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.813
+    },
+    {
+     "file": "nantucket_medevac",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "2,650 gallons in under a minute",
+  "red": 4
+ },
+ "lines": [
+  {
+   "vo": "The Tamarack Fire, California.",
+   "hl": [
+    "tamarack"
+   ],
+   "shots": [
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.895
+    },
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.935
+    }
+   ]
+  },
+  {
+   "vo": "Meet the Skycrane. A flying water tanker.",
+   "hl": [
+    "skycrane"
+   ],
+   "shots": [
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "skycrane_tamarack",
+      "pos": 0.265,
+      "big": "2,650",
+      "small": "GALLON TANK"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "It hovers low over a dip site\u2026",
+   "hl": [
+    "dip"
+   ],
+   "shots": [
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.343
+    },
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.422
+    }
+   ],
+   "label": "Watch this..."
+  },
+  {
+   "vo": "\u2026and sucks up water through a snorkel.",
+   "hl": [
+    "snorkel"
+   ],
+   "shots": [
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.5
+    },
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "2,650 gallons. In under a minute.",
+   "hl": [
+    "minute"
+   ],
+   "shots": [
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.657
+    },
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Then straight back to the fire line.",
+   "hl": [
+    "fire"
+   ],
+   "shots": [
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.813
+    },
+    {
+     "file": "skycrane_tamarack",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

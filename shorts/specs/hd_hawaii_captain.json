@@ -1,0 +1,7 @@
+{"file":"hawaii_captain","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Medicine dropped from the sky",3],"range":[0.03,0.97],"lines":[
+["May 2025. The Pacific, 675 miles from Hilo.",["675"],null],
+["A fishing boat captain falls ill.",["ill"],null,["675","MILES FROM HAWAII"]],
+["Severe pain and a fever.",["fever"],"Then..."],
+["A Coast Guard C-130 flies out to find the boat.",["c-130"],null],
+["The crew opens the ramp… and drops antibiotics.",["antibiotics"],null],
+["Medicine delivered in the middle of the ocean.",["ocean"],null]]}

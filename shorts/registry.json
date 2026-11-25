@@ -36,6 +36,28 @@
   ]
  },
  {
+  "footage": "bandon_woman",
+  "dir": "footage/hd",
+  "dvids_id": "850237",
+  "title": "Coast Guard medevacs injured woman in Bandon, Oregon",
+  "event": [
+   "jul-13",
+   [
+    "bandon",
+    "coos bay",
+    "face rock"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_bandon_woman",
+    "hook": "Hurt at Face Rock",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "barnegat_kite_surfer",
   "dir": "footage/hd",
   "dvids_id": "895646",
@@ -541,6 +563,24 @@
   ]
  },
  {
+  "footage": "hawaii_captain",
+  "dir": "footage/hd",
+  "dvids_id": "961814",
+  "title": "Coast Guard medevacs captain from fishing vessel offshore Hawaii",
+  "event": [
+   "may-07",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_hawaii_captain",
+    "hook": "Medicine dropped from the sky",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "helene_man_dog",
   "dir": "footage/hd",
   "dvids_id": "938235",
@@ -906,6 +946,27 @@
   ]
  },
  {
+  "footage": "modrite_fire",
+  "dir": "footage/hd",
+  "dvids_id": "1015999",
+  "title": "WA National Guard Provides Aviation Support for Modrite Wildfire Response",
+  "event": [
+   "",
+   [
+    "ferry county",
+    "washington"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_modrite_fire",
+    "hook": "Black Hawks vs. wildfire",
+    "rendered": false
+   }
+  ]
+ },
+ {
   "footage": "mount_idaho_hiker",
   "dir": "footage/hd",
   "dvids_id": "1015641",
@@ -940,6 +1001,24 @@
    {
     "name": "hd_mwd_tomas_retires",
     "hook": "His partner is retiring",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "nantucket_medevac",
+  "dir": "footage/hd",
+  "dvids_id": "870331",
+  "title": "Coast Guard conducts MEDEVAC 85 miles southeast of Nantucket, Massachusetts",
+  "event": [
+   "jan-04",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_nantucket_medevac",
+    "hook": "82 years old. 85 miles out.",
     "rendered": true
    }
   ]
@@ -1200,6 +1279,26 @@
     "name": "hd_skiff_capsizes",
     "hook": "The weather flipped his boat",
     "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "skycrane_tamarack",
+  "dir": "footage/hd",
+  "dvids_id": "996611",
+  "title": "Skycrane supports wildfire operations",
+  "event": [
+   "",
+   [
+    "california"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_skycrane_tamarack",
+    "hook": "2,650 gallons in under a minute",
+    "rendered": false
    }
   ]
  },

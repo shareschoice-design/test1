@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Medicine dropped from the sky",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "May 2025. The Pacific, 675 miles from Hilo.",
+   "hl": [
+    "675"
+   ],
+   "shots": [
+    {
+     "file": "hawaii_captain",
+     "pos": 0.75
+    },
+    {
+     "file": "hawaii_captain",
+     "pos": 0.79
+    }
+   ]
+  },
+  {
+   "vo": "A fishing boat captain falls ill.",
+   "hl": [
+    "ill"
+   ],
+   "shots": [
+    {
+     "file": "hawaii_captain",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "hawaii_captain",
+      "pos": 0.265,
+      "big": "675",
+      "small": "MILES FROM HAWAII"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Severe pain and a fever.",
+   "hl": [
+    "fever"
+   ],
+   "shots": [
+    {
+     "file": "hawaii_captain",
+     "pos": 0.343
+    },
+    {
+     "file": "hawaii_captain",
+     "pos": 0.422
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A Coast Guard C-130 flies out to find the boat.",
+   "hl": [
+    "c-130"
+   ],
+   "shots": [
+    {
+     "file": "hawaii_captain",
+     "pos": 0.5
+    },
+    {
+     "file": "hawaii_captain",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "The crew opens the ramp\u2026 and drops antibiotics.",
+   "hl": [
+    "antibiotics"
+   ],
+   "shots": [
+    {
+     "file": "hawaii_captain",
+     "pos": 0.657
+    },
+    {
+     "file": "hawaii_captain",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Medicine delivered in the middle of the ocean.",
+   "hl": [
+    "ocean"
+   ],
+   "shots": [
+    {
+     "file": "hawaii_captain",
+     "pos": 0.813
+    },
+    {
+     "file": "hawaii_captain",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

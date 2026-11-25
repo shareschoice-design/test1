@@ -1274,3 +1274,60 @@ Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 68. hd_bandon_woman
+**Title:** Hurt at Face Rock 🚁
+
+**Description:**
+```
+July 2022. Bandon, Oregon. A woman is injured near Face Rock. The Coast Guard is called in. A helicopter lands right on the beach. The crew carries her aboard. She reaches the hospital in stable condition.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard medevacs injured woman in Bandon, Oregon" – DVIDS (public domain)
+https://www.dvidshub.net/video/850237/coast-guard-medevacs-injured-woman-in-bandon-oregon
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 69. hd_hawaii_captain
+**Title:** Medicine dropped from the sky 🌊
+
+**Description:**
+```
+May 2025. The Pacific, 675 miles from Hilo. A fishing boat captain falls ill. Severe pain and a fever. A Coast Guard C-130 flies out to find the boat. The crew opens the ramp… and drops antibiotics. Medicine delivered in the middle of the ocean.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard medevacs captain from fishing vessel offshore Hawaii" – DVIDS (public domain)
+https://www.dvidshub.net/video/961814/coast-guard-medevacs-captain-from-fishing-vessel-offshore-hawaii
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 70. hd_nantucket_medevac
+**Title:** 82 years old. 85 miles out. 🌊
+
+**Description:**
+```
+January 2023. Off Nantucket, Massachusetts. An 82-year-old man on the Queen Mary 2 needs a hospital. The ship is 85 nautical miles out at sea. A Coast Guard helicopter from Cape Cod arrives. They hoist him off the giant ocean liner. EMS is waiting when they land.
+
+Would you have done the same? 👇
+
+Real footage: "Coast Guard conducts MEDEVAC 85 miles southeast of Nantucket, Massachusetts" – DVIDS (public domain)
+https://www.dvidshub.net/video/870331/coast-guard-conducts-medevac-85-miles-southeast-of-nantucket-massachusetts
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
