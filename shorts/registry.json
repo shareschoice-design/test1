@@ -1,5 +1,26 @@
 [
  {
+  "footage": "artemis2_launch",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/KSC%20ART%20II%20Cause%20Way%20Launch%20low%20angle",
+  "title": "Artemis II launch Causeway Slow-motion ",
+  "event": [
+   "apr-01",
+   [
+    "florida",
+    "nasa"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_artemis2_launch",
+    "hook": "Four humans. Headed for the Moon.",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "artemis2_return",
   "dir": "footage/hd",
   "dvids_id": "https://images.nasa.gov/details/KSC-20260410-MH-JBP01-0001-Artemis_II_Splashdown_GSS_Visual_60fps-M19183 ; https://images.nasa.gov/details/GP011149",
@@ -803,6 +824,27 @@
   ]
  },
  {
+  "footage": "kennedy_bald_eagles",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/KSC-20260313-MH-JBS01-0001-Wildlife_Video_Bald_Eagles_BROLL-M19993",
+  "title": "Wildlife Video - Bald Eagles",
+  "event": [
+   "mar-13",
+   [
+    "florida",
+    "nasa"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_kennedy_bald_eagles",
+    "hook": "Bald eagles at a rocket base",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "kodiak_three_men_dog",
   "dir": "footage/hd",
   "dvids_id": "884516",
@@ -1135,6 +1177,26 @@
    {
     "name": "hd_pass_a_grille_boaters",
     "hook": "One beacon saved them",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "perseverance_landing",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/JPL-20210222-M2020f-0001-Perseverance%20Rover%E2%80%99s%20Descent%20and%20Touchdown%20on%20Mars",
+  "title": "Perseverance Rover\u2019s Descent and Touchdown on Mars: Onboard Camera Views",
+  "event": [
+   "mar-20",
+   [
+    "mars"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_perseverance_landing",
+    "hook": "Real footage of landing on Mars",
     "rendered": true
    }
   ]

@@ -1407,3 +1407,60 @@ Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 75. hd_artemis2_launch
+**Title:** Four humans. Headed for the Moon. 🧡
+
+**Description:**
+```
+April 1, 2026. Kennedy Space Center. Artemis II lifts off at 6:35 p.m. Four astronauts strapped on top of the SLS rocket. Their trip: about ten days around the Moon. The first crew of the Artemis program. And in ten days… they'd come back home.
+
+Would you have done the same? 👇
+
+Real footage: "Artemis II launch Causeway Slow-motion " – courtesy NASA (NASA / n/a)
+https://images.nasa.gov/details/KSC%20ART%20II%20Cause%20Way%20Launch%20low%20angle
+NASA does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 76. hd_kennedy_bald_eagles
+**Title:** Bald eagles at a rocket base 😳
+
+**Description:**
+```
+March 2026. Kennedy Space Center, Florida. Next to the launch pads, a family of bald eagles. Two parents. Two eaglets in the nest. Every winter, eagles come to the spaceport. And raise a new generation here. Rockets above. Eagles below.
+
+Would you have done the same? 👇
+
+Real footage: "Wildlife Video - Bald Eagles" – courtesy NASA (NASA)
+https://images.nasa.gov/details/KSC-20260313-MH-JBS01-0001-Wildlife_Video_Bald_Eagles_BROLL-M19993
+NASA does not endorse this channel or video.
+Music: "Heartwarming" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 77. hd_perseverance_landing
+**Title:** Real footage of landing on Mars 😳
+
+**Description:**
+```
+February 18, 2021. Mars. NASA's Perseverance rover is falling toward the surface. A supersonic parachute bursts open. A rocket jetpack takes over and slows it down. The rover is lowered on cables to the ground. Touchdown. Jezero Crater, Mars.
+
+Would you have done the same? 👇
+
+Real footage: "Perseverance Rover’s Descent and Touchdown on Mars: Onboard Camera Views" – courtesy NASA (NASA)
+https://images.nasa.gov/details/JPL-20210222-M2020f-0001-Perseverance%20Rover%E2%80%99s%20Descent%20and%20Touchdown%20on%20Mars
+NASA does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

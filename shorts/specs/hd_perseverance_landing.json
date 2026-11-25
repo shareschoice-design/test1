@@ -1,0 +1,7 @@
+{"file":"perseverance_landing","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Real footage of landing on Mars",2],"range":[0.1,0.9],"lines":[
+["February 18, 2021. Mars.",["mars"],null],
+["NASA's Perseverance rover is falling toward the surface.",["falling"],null,["7","MINUTES OF TERROR"]],
+["A supersonic parachute bursts open.",["parachute"],"Then..."],
+["A rocket jetpack takes over and slows it down.",["jetpack"],null],
+["The rover is lowered on cables to the ground.",["cables"],null],
+["Touchdown. Jezero Crater, Mars.",["touchdown"],null]]}

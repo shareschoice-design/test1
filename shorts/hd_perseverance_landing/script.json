@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Real footage of landing on Mars",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "February 18, 2021. Mars.",
+   "hl": [
+    "mars"
+   ],
+   "shots": [
+    {
+     "file": "perseverance_landing",
+     "pos": 0.15
+    },
+    {
+     "file": "perseverance_landing",
+     "pos": 0.19
+    }
+   ]
+  },
+  {
+   "vo": "NASA's Perseverance rover is falling toward the surface.",
+   "hl": [
+    "falling"
+   ],
+   "shots": [
+    {
+     "file": "perseverance_landing",
+     "pos": 0.233
+    },
+    {
+     "card": {
+      "file": "perseverance_landing",
+      "pos": 0.3,
+      "big": "7",
+      "small": "MINUTES OF TERROR"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "A supersonic parachute bursts open.",
+   "hl": [
+    "parachute"
+   ],
+   "shots": [
+    {
+     "file": "perseverance_landing",
+     "pos": 0.367
+    },
+    {
+     "file": "perseverance_landing",
+     "pos": 0.433
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A rocket jetpack takes over and slows it down.",
+   "hl": [
+    "jetpack"
+   ],
+   "shots": [
+    {
+     "file": "perseverance_landing",
+     "pos": 0.5
+    },
+    {
+     "file": "perseverance_landing",
+     "pos": 0.567
+    }
+   ]
+  },
+  {
+   "vo": "The rover is lowered on cables to the ground.",
+   "hl": [
+    "cables"
+   ],
+   "shots": [
+    {
+     "file": "perseverance_landing",
+     "pos": 0.633
+    },
+    {
+     "file": "perseverance_landing",
+     "pos": 0.7
+    }
+   ]
+  },
+  {
+   "vo": "Touchdown. Jezero Crater, Mars.",
+   "hl": [
+    "touchdown"
+   ],
+   "shots": [
+    {
+     "file": "perseverance_landing",
+     "pos": 0.767
+    },
+    {
+     "file": "perseverance_landing",
+     "pos": 0.833
+    }
+   ]
+  }
+ ]
+}

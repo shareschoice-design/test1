@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-amy-medium",
+ "music": "music/incompetech_Heartwarming.mp3",
+ "dark": false,
+ "hook": {
+  "text": "Bald eagles at a rocket base",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "March 2026. Kennedy Space Center, Florida.",
+   "hl": [
+    "kennedy"
+   ],
+   "shots": [
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.498
+    },
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.538
+    }
+   ]
+  },
+  {
+   "vo": "Next to the launch pads, a family of bald eagles.",
+   "hl": [
+    "eagles"
+   ],
+   "shots": [
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.22
+    },
+    {
+     "card": {
+      "file": "kennedy_bald_eagles",
+      "pos": 0.295,
+      "big": "2",
+      "small": "EAGLETS IN THE NEST"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Two parents. Two eaglets in the nest.",
+   "hl": [
+    "eaglets"
+   ],
+   "shots": [
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.37
+    },
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.445
+    }
+   ],
+   "label": "Watch..."
+  },
+  {
+   "vo": "Every winter, eagles come to the spaceport.",
+   "hl": [
+    "spaceport"
+   ],
+   "shots": [
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.52
+    },
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.595
+    }
+   ]
+  },
+  {
+   "vo": "And raise a new generation here.",
+   "hl": [
+    "generation"
+   ],
+   "shots": [
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.67
+    },
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.745
+    }
+   ]
+  },
+  {
+   "vo": "Rockets above. Eagles below.",
+   "hl": [
+    "eagles"
+   ],
+   "shots": [
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.82
+    },
+    {
+     "file": "kennedy_bald_eagles",
+     "pos": 0.895
+    }
+   ]
+  }
+ ]
+}

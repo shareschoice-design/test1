@@ -1,0 +1,7 @@
+{"file":"artemis2_launch","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["Four humans. Headed for the Moon.",2],"range":[0.0,0.3],"hook_pos":0.02,"lines":[
+["April 1, 2026. Kennedy Space Center.",["kennedy"],null],
+["Artemis II lifts off at 6:35 p.m.",["lifts"],null,["4","ASTRONAUTS ON BOARD"]],
+["Four astronauts strapped on top of the SLS rocket.",["sls"],"Watch this..."],
+["Their trip: about ten days around the Moon.",["moon"],null],
+["The first crew of the Artemis program.",["first"],null],
+["And in ten days… they'd come back home.",["home"],null]]}

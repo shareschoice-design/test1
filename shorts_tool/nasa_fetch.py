@@ -21,7 +21,7 @@ def size_mb(url):
     return sizes[-1] / 1e6 if sizes else 0
 
 
-hrefs = [i["href"].replace("http://", "https://") for i in get(f"https://images-api.nasa.gov/asset/{q}")["collection"]["items"]]
+hrefs = [urllib.parse.quote(i["href"].replace("http://", "https://"), safe=":/~%") for i in get(f"https://images-api.nasa.gov/asset/{q}")["collection"]["items"]]
 orig = next((h for h in hrefs if "~orig." in h.lower()), None)
 large = next((h for h in hrefs if "~large.mp4" in h.lower()), None)
 pick = orig if orig and size_mb(orig) <= MAXMB else large

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Four humans. Headed for the Moon.",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "April 1, 2026. Kennedy Space Center.",
+   "hl": [
+    "kennedy"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_launch",
+     "pos": 0.02
+    },
+    {
+     "file": "artemis2_launch",
+     "pos": 0.06
+    }
+   ]
+  },
+  {
+   "vo": "Artemis II lifts off at 6:35 p.m.",
+   "hl": [
+    "lifts"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_launch",
+     "pos": 0.05
+    },
+    {
+     "card": {
+      "file": "artemis2_launch",
+      "pos": 0.075,
+      "big": "4",
+      "small": "ASTRONAUTS ON BOARD"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Four astronauts strapped on top of the SLS rocket.",
+   "hl": [
+    "sls"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_launch",
+     "pos": 0.1
+    },
+    {
+     "file": "artemis2_launch",
+     "pos": 0.125
+    }
+   ],
+   "label": "Watch this..."
+  },
+  {
+   "vo": "Their trip: about ten days around the Moon.",
+   "hl": [
+    "moon"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_launch",
+     "pos": 0.15
+    },
+    {
+     "file": "artemis2_launch",
+     "pos": 0.175
+    }
+   ]
+  },
+  {
+   "vo": "The first crew of the Artemis program.",
+   "hl": [
+    "first"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_launch",
+     "pos": 0.2
+    },
+    {
+     "file": "artemis2_launch",
+     "pos": 0.225
+    }
+   ]
+  },
+  {
+   "vo": "And in ten days\u2026 they'd come back home.",
+   "hl": [
+    "home"
+   ],
+   "shots": [
+    {
+     "file": "artemis2_launch",
+     "pos": 0.25
+    },
+    {
+     "file": "artemis2_launch",
+     "pos": 0.275
+    }
+   ]
+  }
+ ]
+}
