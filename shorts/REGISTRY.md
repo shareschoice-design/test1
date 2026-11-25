@@ -2,126 +2,128 @@
 
 | # | short | hook | footage | DVIDS id | event date | tier | status |
 |---|---|---|---|---|---|---|---|
-| 1 | hd_artemis2_launch | Four humans. Headed for the Moon. | artemis2_launch | https://images.nasa.gov/details/KSC%20ART%20II%20Cause%20Way%20Launch%20low%20angle | apr-01 | hd | rendered |
-| 2 | hd_artemis2_return | Coming home from the Moon | artemis2_return | https://images.nasa.gov/details/KSC-20260410-MH-JBP01-0001-Artemis_II_Splashdown_GSS_Visual_60fps-M19183 ; https://images.nasa.gov/details/GP011149 | apr-10 | hd | rendered |
-| 3 | hd_aw302_return | They waited months for this | aw302_return | 991185 | mar-07 | hd | rendered |
-| 4 | hd_baboquivari_woman | Trapped on a mountain | baboquivari_woman | 886085 | jun-05 | hd | rendered |
-| 5 | hd_bandon_woman | Hurt at Face Rock | bandon_woman | 850237 | jul-13 | hd | rendered |
-| 6 | hd_barnegat_kite_surfer | His line got tangled | barnegat_kite_surfer | 895646 | aug-31 | hd | rendered |
-| 7 | hd_big_sur_two | Stranded off Big Sur | big_sur_two | 899380 | aug-27 | hd | rendered |
-| 8 | hd_boy_cruise_ship | An 11-year-old in trouble | boy_cruise_ship | 1015403 | jul-11 | hd | REJECTED |
-| 9 | hd_canada_dogs | They found the other dog | canada_man_two_dogs | 869765 | dec-28 | hd | rendered |
-| 10 | hd_cat_island_dogs | Two people. Two dogs. | cat_island_dogs | 957082 | mar-29 | hd | REJECTED |
-| 11 | hd_clearwater_vessel_fire | 100 miles out. On fire. | clearwater_vessel_fire | 990311 |  | hd | rendered |
-| 12 | hd_cruise_boy_eureka | An 8-year-old needs help at sea | cruise_boy_eureka | 937823 | sep-24 | hd | rendered |
-| 13 | hd_cruise_shelter_cove | Lifted off a cruise ship | cruise_shelter_cove | 1005147 | may-02 | hd | rendered |
-| 14 | hd_cubans_water_cay | Stranded on a tiny island | cubans_water_cay | 860811 | oct-12 | hd | rendered |
-| 15 | hd_de_gallant_schooner | A storm sank their ship | de_gallant_schooner | 924883 | may-21 | hd | rendered |
-| 16 | hd_debby_adrift_boaters | They lost their sail | debby_adrift_boaters | 932811 | aug-04 | hd | rendered |
-| 17 | hd_deschutes_hikers_dog | They didn't leave the dog | deschutes_hikers_dog | 927914 | jun-16 | hd | rendered |
-| 18 | hd_devils_slide_hiker | Hurt on Devil's Slide | devils_slide_hiker | 1003354 | apr-19 | hd | rendered |
-| 19 | hd_dog_fell_cliff | Their dog fell off a cliff | dog_fell_cliff | 909793 | jan-01 | hd | rendered |
-| 20 | hd_dog_in_container | Something was scratching | dog_in_container | 912242 | jan-31 | hd | rendered |
-| 21 | hd_egmont_key_five | Their boat sank | egmont_key_five | 990054 |  | hd | REJECTED |
-| 22 | hd_el_paso_cliff_fall | He fell off a cliff | el_paso_cliff_fall | 975581 | aug-30 | hd | rendered |
-| 23 | hd_flood_two_dogs_texas | Left behind in the flood | flood_two_dogs_texas | 1015195 | jul-17 | hd | REJECTED |
-| 24 | hd_florida_plane_crash | Their plane went down | florida_11_survivors | 1006722 | may-12 | hd | rendered |
-| 25 | hd_ford_sailors_reunite | 8 months at sea | ford_sailors_reunite | 910593 | jan-17 | hd | rendered |
-| 26 | hd_fort_stewart_homecoming | They're finally home | fort_stewart_homecoming | 923848 | may-15 | hd | rendered |
-| 27 | hd_gasparilla_disabled_boat | Stranded on old railroad tracks | gasparilla_disabled_boat | 938214 | sep-27 | hd | rendered |
-| 28 | hd_hagen_fire_buckets | 44 drops in one day | hagen_fire_buckets | 1016990 | jul-29 | hd | rendered |
-| 29 | hd_hatteras_family_pets | Rescued with their pets | hatteras_family_pets | 992017 | dec-30 | hd | rendered |
-| 30 | hd_hawaii_captain | Medicine dropped from the sky | hawaii_captain | 961814 | may-07 | hd | rendered |
-| 31 | hd_helene_man_dog | Him and his dog | helene_man_dog | 938235 | sep-26 | hd | rendered |
-| 32 | hd_high_altitude_hiker | A night alone on the mountain | high_altitude_hiker | 878686 | apr-04 | hd | rendered |
-| 33 | hd_holiday_reunion | Home for the holidays | holiday_reunion | 991596 |  | hd | rendered |
-| 34 | hd_hsc26_homecoming | Ten months away | hsc26_homecoming | 1009525 | jun-05 | hd | rendered |
-| 35 | hd_jetty_st_lucie | Stuck on the rocks | jetty_st_lucie | 947469 | dec-15 | hd | rendered |
-| 36 | hd_jon_boat_st_augustine | His family reported him missing | jon_boat_st_augustine | 892771 | aug-05 | hd | rendered |
-| 37 | hd_jumped_sinking_vessel | They had to jump | jumped_sinking_vessel | 864947 | nov-17 | hd | rendered |
-| 38 | hd_k9_medevac_kfor | When the hero is a dog | k9_medevac_kfor | 1002031 | mar-17 | hd | rendered |
-| 39 | hd_k9_simba_hoist | This dog flies to work | k9_simba_hoist | 889689 | may-18 | hd | rendered |
-| 40 | hd_kauai_cargo_ship | 100 miles out. Severe pain. | kauai_cargo_ship | 998677 | mar-03 | hd | rendered |
-| 41 | hd_kennedy_bald_eagles | Bald eagles at a rocket base | kennedy_bald_eagles | https://images.nasa.gov/details/KSC-20260313-MH-JBS01-0001-Wildlife_Video_Bald_Eagles_BROLL-M19993 | mar-13 | hd | rendered |
-| 42 | hd_kodiak_three_men_dog | Slammed against the rocks | kodiak_three_men_dog | 884516 | dec-12 | hd | rendered |
-| 43 | hd_kodiak_two_fishermen | Their boat flipped | kodiak_two_fishermen | 949745 | jan-15 | hd | rendered |
-| 44 | hd_lake_erie_ice_floe_nine | Nine trapped on the ice | lake_erie_ice_floe_nine | 910895 | jan-22 | hd | rendered |
-| 45 | hd_lake_michigan_one | Emergency on the lake | lake_michigan_one | 970021 | jul-13 | hd | REJECTED |
-| 46 | hd_lost_coast_hiker | Injured on the Lost Coast | lost_coast_hiker | 1008263 | may-26 | hd | rendered |
-| 47 | hd_manzanita_cliff_hikers | The tide trapped them | manzanita_cliff_hikers | 840892 | apr-25 | hd | rendered |
-| 48 | hd_marine_runs_to_gunfire | He ran toward the gunfire | marine_runs_to_gunfire | 825973 | dec-13 | hd | REJECTED |
-| 49 | hd_minnesota_194_return | 9 months. 9 countries. | minnesota_194_return | 829974 | feb-02 | hd | rendered |
-| 50 | hd_modrite_fire | Black Hawks vs. wildfire | modrite_fire | 1015999 |  | hd | rendered |
-| 51 | hd_mount_idaho | The highest rescue ever | mount_idaho_hiker | 1015641 |  | hd | rendered |
-| 52 | hd_mwd_tomas_retires | His partner is retiring | mwd_tomas_retires | 955109 | mar-10 | hd | rendered |
-| 53 | hd_nantucket_medevac | 82 years old. 85 miles out. | nantucket_medevac | 870331 | jan-04 | hd | rendered |
-| 54 | hd_north_bend_boat_fire | Their boat caught fire | north_bend_boat_fire | 857525 | sep-14 | hd | rendered |
-| 55 | hd_oak_hill_return | Seven months at sea | oak_hill_return | 945956 | dec-07 | hd | rendered |
-| 56 | hd_oregon_41ibct_return | A full year away | oregon_41ibct_return | 970914 | jul-19 | hd | rendered |
-| 57 | hd_oregon_park_missing_woman | Missing for days | oregon_park_missing_woman | 946398 | dec-08 | hd | rendered |
-| 58 | hd_pass_a_grille_boaters | One beacon saved them | pass_a_grille_boaters | 935954 | sep-06 | hd | rendered |
-| 59 | hd_perseverance_landing | Real footage of landing on Mars | perseverance_landing | https://images.nasa.gov/details/JPL-20210222-M2020f-0001-Perseverance%20Rover%E2%80%99s%20Descent%20and%20Touchdown%20on%20Mars | mar-20 | hd | rendered |
-| 60 | hd_puerto_rico_cliff | Stuck below a cliff | pr_cliff_two | 1000575 | mar-21 | hd | rendered |
-| 61 | hd_regatta_dauphin_island | The race went wrong | regatta_dauphin_island | 929298 | jun-28 | hd | rendered |
-| 62 | hd_roman_launch_landing | The boosters came back | roman_launch_landing | https://images.nasa.gov/details/KSC-20260830-MH-AJN01-0001-Roman_Space_Telescope_Isolated_Launch_and_Landing_Views-M26246 | aug-30 | hd | rendered |
-| 63 | hd_rosburg_flood_five | Trapped by the flood | rosburg_flood_five | 906547 | dec-05 | hd | rendered |
-| 64 | hd_sakizaya_queen | 200 miles from shore | sakizaya_queen | 954932 | mar-06 | hd | rendered |
-| 65 | hd_san_juan_two_boaters | Their boat flipped at sea | san_juan_two_boaters | 870260 | jan-04 | hd | rendered |
-| 66 | hd_sea_turtles_kennedy | These turtles flew to Florida | sea_turtles_kennedy | https://images.nasa.gov/details/KSC-20210226-MH-CSH01-0001-Rescued_Sea_Turtles_Arrival_at_LLF_Released_at_Playalinda_Beach-3269767 | feb-26 | hd | rendered |
-| 67 | hd_shark_bite_bahamas | Bitten by a shark | shark_bite_bahamas | 832060 | feb-21 | hd | rendered |
-| 68 | hd_sinking_sailboat_michigan | 300 feet down | sinking_sailboat_michigan | 925615 | may-27 | hd | rendered |
-| 69 | hd_skiff_capsizes | The weather flipped his boat | skiff_capsizes | 974186 | aug-20 | hd | rendered |
-| 70 | hd_skycrane_tamarack | 2,650 gallons in under a minute | skycrane_tamarack | 996611 |  | hd | rendered |
-| 71 | hd_sls_green_run | Four rocket engines. Bolted down. | sls_green_run | https://images.nasa.gov/details/SSC_2021-03-18_Hot_Fire_B-roll_4_Views | mar-18 | hd | rendered |
-| 72 | hd_sls_tank_break | NASA broke it on purpose | sls_tank_break | https://images.nasa.gov/details/MSFC_2020_XP_SLS_V_0130_PD002-Test-Case-TTF-4697%20LOX%20Tank%20Test-to-Failure%20color-1_06242020_timelapse |  | hd | rendered |
-| 73 | hd_st_helena_boater | His boat ran aground | st_helena_boater | 955640 | mar-15 | hd | rendered |
-| 74 | hd_steinhatchee_three_missing | Three men went missing | steinhatchee_three_missing | 925852 | jun-01 | hd | rendered |
-| 75 | hd_stuck_in_mud | Stuck in the mud | stuck_in_mud | 881001 | apr-25 | hd | rendered |
-| 76 | hd_swimmer_columbia_bar | He went in after him | swimmer_columbia_bar | 909520 | feb-03 | hd | rendered |
-| 77 | hd_tenth_mtn_homecoming | We missed you SO much | tenth_mtn_homecoming | 960893 |  | hd | rendered |
-| 78 | hd_terrebonne_helicopter_down | Their helicopter went down | terrebonne_helicopter_down | 868617 | dec-15 | hd | rendered |
-| 79 | hd_tucson_heatstroke | Heatstroke in the canyon | tucson_hoist_2022 | 833784 | mar-04 | hd | rendered |
-| 80 | hd_two_hunters | The flood cut them off | two_hunters | 990071 |  | hd | rendered |
-| 81 | hd_tybee_three_2025 | Their boat ran aground | tybee_three_2025 | 957890 | apr-05 | hd | REJECTED |
-| 82 | hd_tybee_vessel_sinks | Their boat sank | tybee_vessel_sinks | 932697 | aug-02 | hd | rendered |
-| 83 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | rendered |
-| 84 | hd_virginia_helene | Their first real rescue | virginia_helene | 959865 | oct-20 | hd | rendered |
-| 85 | hd_vmm265_return | Welcome home, Daddy | vmm265_return | 973532 | aug-10 | hd | rendered |
-| 86 | hd_water_tower_collapse | They fell 60 feet | water_tower_collapse | 962453 | may-13 | hd | rendered |
-| 87 | hd_wave_capsizes_astoria | One wave flipped it | wave_capsizes_astoria | 872430 | feb-03 | hd | REJECTED |
-| 88 | hd_woman_oregon_river | Her car went into the river | woman_oregon_river | 954917 | mar-05 | hd | rendered |
-| 89 | agent_saved_boy | He wasn't breathing | agent_saved_boy | 581975 |  | sd-archived | rendered |
-| 90 | astronaut_water_survival | Astronauts in the water | astronaut_water_survival | 509855 | feb-10 | sd-archived | rendered |
-| 91 | baseball_surprise | Not a normal game | baseball_surprise | 460113 |  | sd-archived | rendered |
-| 92 | bear_mauling_skier | Mauled by a bear | bear_mauling_skier | 782825 |  | sd-archived | rendered |
-| 93 | boater_330_miles | 330 miles from land | boater_330_miles | 699223 | jul-24 | sd-archived | spec only |
-| 94 | boater_adrift_13h | 13 hours lost at sea | boater_adrift_13h | 512792 | mar-06 | sd-archived | rendered |
-| 95 | cliff_rescue | No one could reach her | cliff_rescue | 738507 |  | sd-archived | rendered |
-| 96 | colonel_giants_game | They thought he was in Afghanistan | colonel_giants_game | 383793 |  | sd-archived | rendered |
-| 97 | dad_surprises_daughter | Daddy came home | dad_surprises_daughter | 399217 |  | sd-archived | rendered |
-| 98 | dog_on_roof_florence | Stranded on a roof | dog_on_roof_florence | 652963 |  | sd-archived | spec only |
-| 99 | dog_reunited_handler | She came back for him | dog_reunited_handler | 543198 |  | sd-archived | rendered |
-| 100 | falcon9_vandenberg | Part of history's biggest upgrade | falcon9_vandenberg | 505260 | jan-14 | sd-archived | rendered |
-| 101 | fisherman_boat_sinks | His boat was sinking | fisherman_boat_sinks | 515565 | mar-23 | sd-archived | rendered |
-| 102 | fisherman_life_raft | His boat sank | fisherman_life_raft | 724582 |  | sd-archived | spec only |
-| 103 | florence_woman | Trapped by the flood | florence_woman | 625984 |  | sd-archived | rendered |
-| 104 | harvey_child | Saved from the flood | harvey_child | 590199 |  | sd-archived | rendered |
-| 105 | high_tide_ecola | The tide trapped them | high_tide_ecola | 681699 | may-19 | sd-archived | spec only |
-| 106 | kayaker_everglades | His kayak flipped | kayaker_everglades | 513596 | mar-10 | sd-archived | rendered |
-| 107 | man_two_dogs | His sailboat was dead | man_two_dogs | 715656 | oct-17 | sd-archived | spec only |
-| 108 | married_then_saves_life | Minutes after his wedding | married_then_saves_life | 684185 | aug-02 | sd-archived | spec only |
-| 109 | minuteman_launch | Picked at random | minuteman_launch | 508918 |  | sd-archived | rendered |
-| 110 | mom_early_return | Mom came home early | mom_early_return | 746401 | feb-14 | sd-archived | spec only |
-| 111 | paddleboarder_jetty | The wind took him | paddleboarder_jetty | 693268 | jun-25 | sd-archived | spec only |
-| 112 | plane_crash_survivor | His engine failed | plane_crash_survivor | 614280 |  | sd-archived | rendered |
-| 113 | sailor_surprises_mom | Mom had no idea | sailor_surprises_mom | 383771 |  | sd-archived | rendered |
-| 114 | sailor_surprises_sons | Two years in Japan | sailor_surprises_sons | 382981 |  | sd-archived | rendered |
-| 115 | sea_turtles | Trapped in a net | sea_turtles | 601463 |  | sd-archived | rendered |
-| 116 | shark_bite_rescue | Shark attack at sea | shark_bite_rescue | 732282 |  | sd-archived | rendered |
-| 117 | shark_reef_surprise | A secret homecoming | shark_reef_surprise | 391412 | feb-13 | sd-archived | rendered |
-| 118 | son_surprises_father | Dad was at work | son_surprises_father | 338685 | may-22 | sd-archived | spec only |
-| 119 | strike_eagle_afterburner | Full afterburner | strike_eagle_afterburner | 833680 |  | sd-archived | rendered |
-| 120 | woman_dog_cliff | Trapped all night | woman_dog_cliff | 697955 | jul-19 | sd-archived | spec only |
+| 1 | hd_air_taxi_drop | They crash it on purpose | air_taxi_drop | https://images.nasa.gov/details/LRC-2025-V-06242025-RVLT-Gantry-Drop-Test-With-Slate-V0002050 |  | hd | rendered |
+| 2 | hd_artemis2_launch | Four humans. Headed for the Moon. | artemis2_launch | https://images.nasa.gov/details/KSC%20ART%20II%20Cause%20Way%20Launch%20low%20angle | apr-01 | hd | rendered |
+| 3 | hd_artemis2_return | Coming home from the Moon | artemis2_return | https://images.nasa.gov/details/KSC-20260410-MH-JBP01-0001-Artemis_II_Splashdown_GSS_Visual_60fps-M19183 ; https://images.nasa.gov/details/GP011149 | apr-10 | hd | rendered |
+| 4 | hd_aw302_return | They waited months for this | aw302_return | 991185 | mar-07 | hd | rendered |
+| 5 | hd_baboquivari_woman | Trapped on a mountain | baboquivari_woman | 886085 | jun-05 | hd | rendered |
+| 6 | hd_bandon_woman | Hurt at Face Rock | bandon_woman | 850237 | jul-13 | hd | rendered |
+| 7 | hd_barnegat_kite_surfer | His line got tangled | barnegat_kite_surfer | 895646 | aug-31 | hd | rendered |
+| 8 | hd_big_sur_two | Stranded off Big Sur | big_sur_two | 899380 | aug-27 | hd | rendered |
+| 9 | hd_boy_cruise_ship | An 11-year-old in trouble | boy_cruise_ship | 1015403 | jul-11 | hd | REJECTED |
+| 10 | hd_canada_dogs | They found the other dog | canada_man_two_dogs | 869765 | dec-28 | hd | rendered |
+| 11 | hd_cat_island_dogs | Two people. Two dogs. | cat_island_dogs | 957082 | mar-29 | hd | REJECTED |
+| 12 | hd_clearwater_vessel_fire | 100 miles out. On fire. | clearwater_vessel_fire | 990311 |  | hd | rendered |
+| 13 | hd_cruise_boy_eureka | An 8-year-old needs help at sea | cruise_boy_eureka | 937823 | sep-24 | hd | rendered |
+| 14 | hd_cruise_shelter_cove | Lifted off a cruise ship | cruise_shelter_cove | 1005147 | may-02 | hd | rendered |
+| 15 | hd_cubans_water_cay | Stranded on a tiny island | cubans_water_cay | 860811 | oct-12 | hd | rendered |
+| 16 | hd_de_gallant_schooner | A storm sank their ship | de_gallant_schooner | 924883 | may-21 | hd | rendered |
+| 17 | hd_debby_adrift_boaters | They lost their sail | debby_adrift_boaters | 932811 | aug-04 | hd | rendered |
+| 18 | hd_deschutes_hikers_dog | They didn't leave the dog | deschutes_hikers_dog | 927914 | jun-16 | hd | rendered |
+| 19 | hd_devils_slide_hiker | Hurt on Devil's Slide | devils_slide_hiker | 1003354 | apr-19 | hd | rendered |
+| 20 | hd_dog_fell_cliff | Their dog fell off a cliff | dog_fell_cliff | 909793 | jan-01 | hd | rendered |
+| 21 | hd_dog_in_container | Something was scratching | dog_in_container | 912242 | jan-31 | hd | rendered |
+| 22 | hd_egmont_key_five | Their boat sank | egmont_key_five | 990054 |  | hd | REJECTED |
+| 23 | hd_el_paso_cliff_fall | He fell off a cliff | el_paso_cliff_fall | 975581 | aug-30 | hd | rendered |
+| 24 | hd_flood_two_dogs_texas | Left behind in the flood | flood_two_dogs_texas | 1015195 | jul-17 | hd | REJECTED |
+| 25 | hd_florida_plane_crash | Their plane went down | florida_11_survivors | 1006722 | may-12 | hd | rendered |
+| 26 | hd_ford_sailors_reunite | 8 months at sea | ford_sailors_reunite | 910593 | jan-17 | hd | rendered |
+| 27 | hd_fort_stewart_homecoming | They're finally home | fort_stewart_homecoming | 923848 | may-15 | hd | rendered |
+| 28 | hd_gasparilla_disabled_boat | Stranded on old railroad tracks | gasparilla_disabled_boat | 938214 | sep-27 | hd | rendered |
+| 29 | hd_hagen_fire_buckets | 44 drops in one day | hagen_fire_buckets | 1016990 | jul-29 | hd | rendered |
+| 30 | hd_hatteras_family_pets | Rescued with their pets | hatteras_family_pets | 992017 | dec-30 | hd | rendered |
+| 31 | hd_hawaii_captain | Medicine dropped from the sky | hawaii_captain | 961814 | may-07 | hd | rendered |
+| 32 | hd_helene_man_dog | Him and his dog | helene_man_dog | 938235 | sep-26 | hd | rendered |
+| 33 | hd_high_altitude_hiker | A night alone on the mountain | high_altitude_hiker | 878686 | apr-04 | hd | rendered |
+| 34 | hd_holiday_reunion | Home for the holidays | holiday_reunion | 991596 |  | hd | rendered |
+| 35 | hd_hsc26_homecoming | Ten months away | hsc26_homecoming | 1009525 | jun-05 | hd | rendered |
+| 36 | hd_jetty_st_lucie | Stuck on the rocks | jetty_st_lucie | 947469 | dec-15 | hd | rendered |
+| 37 | hd_jon_boat_st_augustine | His family reported him missing | jon_boat_st_augustine | 892771 | aug-05 | hd | rendered |
+| 38 | hd_jumped_sinking_vessel | They had to jump | jumped_sinking_vessel | 864947 | nov-17 | hd | rendered |
+| 39 | hd_k9_medevac_kfor | When the hero is a dog | k9_medevac_kfor | 1002031 | mar-17 | hd | rendered |
+| 40 | hd_k9_simba_hoist | This dog flies to work | k9_simba_hoist | 889689 | may-18 | hd | rendered |
+| 41 | hd_kauai_cargo_ship | 100 miles out. Severe pain. | kauai_cargo_ship | 998677 | mar-03 | hd | rendered |
+| 42 | hd_kennedy_bald_eagles | Bald eagles at a rocket base | kennedy_bald_eagles | https://images.nasa.gov/details/KSC-20260313-MH-JBS01-0001-Wildlife_Video_Bald_Eagles_BROLL-M19993 | mar-13 | hd | rendered |
+| 43 | hd_kodiak_three_men_dog | Slammed against the rocks | kodiak_three_men_dog | 884516 | dec-12 | hd | rendered |
+| 44 | hd_kodiak_two_fishermen | Their boat flipped | kodiak_two_fishermen | 949745 | jan-15 | hd | rendered |
+| 45 | hd_lake_erie_ice_floe_nine | Nine trapped on the ice | lake_erie_ice_floe_nine | 910895 | jan-22 | hd | rendered |
+| 46 | hd_lake_michigan_one | Emergency on the lake | lake_michigan_one | 970021 | jul-13 | hd | REJECTED |
+| 47 | hd_lost_coast_hiker | Injured on the Lost Coast | lost_coast_hiker | 1008263 | may-26 | hd | rendered |
+| 48 | hd_manzanita_cliff_hikers | The tide trapped them | manzanita_cliff_hikers | 840892 | apr-25 | hd | rendered |
+| 49 | hd_marine_runs_to_gunfire | He ran toward the gunfire | marine_runs_to_gunfire | 825973 | dec-13 | hd | REJECTED |
+| 50 | hd_minnesota_194_return | 9 months. 9 countries. | minnesota_194_return | 829974 | feb-02 | hd | rendered |
+| 51 | hd_modrite_fire | Black Hawks vs. wildfire | modrite_fire | 1015999 |  | hd | rendered |
+| 52 | hd_mount_idaho | The highest rescue ever | mount_idaho_hiker | 1015641 |  | hd | rendered |
+| 53 | hd_mwd_tomas_retires | His partner is retiring | mwd_tomas_retires | 955109 | mar-10 | hd | rendered |
+| 54 | hd_nantucket_medevac | 82 years old. 85 miles out. | nantucket_medevac | 870331 | jan-04 | hd | rendered |
+| 55 | hd_north_bend_boat_fire | Their boat caught fire | north_bend_boat_fire | 857525 | sep-14 | hd | rendered |
+| 56 | hd_oak_hill_return | Seven months at sea | oak_hill_return | 945956 | dec-07 | hd | rendered |
+| 57 | hd_oregon_41ibct_return | A full year away | oregon_41ibct_return | 970914 | jul-19 | hd | rendered |
+| 58 | hd_oregon_park_missing_woman | Missing for days | oregon_park_missing_woman | 946398 | dec-08 | hd | rendered |
+| 59 | hd_pass_a_grille_boaters | One beacon saved them | pass_a_grille_boaters | 935954 | sep-06 | hd | rendered |
+| 60 | hd_perseverance_landing | Real footage of landing on Mars | perseverance_landing | https://images.nasa.gov/details/JPL-20210222-M2020f-0001-Perseverance%20Rover%E2%80%99s%20Descent%20and%20Touchdown%20on%20Mars | mar-20 | hd | rendered |
+| 61 | hd_puerto_rico_cliff | Stuck below a cliff | pr_cliff_two | 1000575 | mar-21 | hd | rendered |
+| 62 | hd_regatta_dauphin_island | The race went wrong | regatta_dauphin_island | 929298 | jun-28 | hd | rendered |
+| 63 | hd_roman_launch_landing | The boosters came back | roman_launch_landing | https://images.nasa.gov/details/KSC-20260830-MH-AJN01-0001-Roman_Space_Telescope_Isolated_Launch_and_Landing_Views-M26246 | aug-30 | hd | rendered |
+| 64 | hd_rosburg_flood_five | Trapped by the flood | rosburg_flood_five | 906547 | dec-05 | hd | rendered |
+| 65 | hd_sakizaya_queen | 200 miles from shore | sakizaya_queen | 954932 | mar-06 | hd | rendered |
+| 66 | hd_san_juan_two_boaters | Their boat flipped at sea | san_juan_two_boaters | 870260 | jan-04 | hd | rendered |
+| 67 | hd_sea_turtles_kennedy | These turtles flew to Florida | sea_turtles_kennedy | https://images.nasa.gov/details/KSC-20210226-MH-CSH01-0001-Rescued_Sea_Turtles_Arrival_at_LLF_Released_at_Playalinda_Beach-3269767 | feb-26 | hd | rendered |
+| 68 | hd_shark_bite_bahamas | Bitten by a shark | shark_bite_bahamas | 832060 | feb-21 | hd | rendered |
+| 69 | hd_sinking_sailboat_michigan | 300 feet down | sinking_sailboat_michigan | 925615 | may-27 | hd | rendered |
+| 70 | hd_skiff_capsizes | The weather flipped his boat | skiff_capsizes | 974186 | aug-20 | hd | rendered |
+| 71 | hd_skycrane_tamarack | 2,650 gallons in under a minute | skycrane_tamarack | 996611 |  | hd | rendered |
+| 72 | hd_sls_booster_test | Two minutes of pure fire | sls_booster_test | https://images.nasa.gov/details/MSFC_XP01_V_0133_FSB1_4K_DRONEBROLL | sep-02 | hd | rendered |
+| 73 | hd_sls_green_run | Four rocket engines. Bolted down. | sls_green_run | https://images.nasa.gov/details/SSC_2021-03-18_Hot_Fire_B-roll_4_Views | mar-18 | hd | rendered |
+| 74 | hd_sls_tank_break | NASA broke it on purpose | sls_tank_break | https://images.nasa.gov/details/MSFC_2020_XP_SLS_V_0130_PD002-Test-Case-TTF-4697%20LOX%20Tank%20Test-to-Failure%20color-1_06242020_timelapse |  | hd | rendered |
+| 75 | hd_st_helena_boater | His boat ran aground | st_helena_boater | 955640 | mar-15 | hd | rendered |
+| 76 | hd_steinhatchee_three_missing | Three men went missing | steinhatchee_three_missing | 925852 | jun-01 | hd | rendered |
+| 77 | hd_stuck_in_mud | Stuck in the mud | stuck_in_mud | 881001 | apr-25 | hd | rendered |
+| 78 | hd_swimmer_columbia_bar | He went in after him | swimmer_columbia_bar | 909520 | feb-03 | hd | rendered |
+| 79 | hd_tenth_mtn_homecoming | We missed you SO much | tenth_mtn_homecoming | 960893 |  | hd | rendered |
+| 80 | hd_terrebonne_helicopter_down | Their helicopter went down | terrebonne_helicopter_down | 868617 | dec-15 | hd | rendered |
+| 81 | hd_tucson_heatstroke | Heatstroke in the canyon | tucson_hoist_2022 | 833784 | mar-04 | hd | rendered |
+| 82 | hd_two_hunters | The flood cut them off | two_hunters | 990071 |  | hd | rendered |
+| 83 | hd_tybee_three_2025 | Their boat ran aground | tybee_three_2025 | 957890 | apr-05 | hd | REJECTED |
+| 84 | hd_tybee_vessel_sinks | Their boat sank | tybee_vessel_sinks | 932697 | aug-02 | hd | rendered |
+| 85 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | rendered |
+| 86 | hd_virginia_helene | Their first real rescue | virginia_helene | 959865 | oct-20 | hd | rendered |
+| 87 | hd_vmm265_return | Welcome home, Daddy | vmm265_return | 973532 | aug-10 | hd | rendered |
+| 88 | hd_water_tower_collapse | They fell 60 feet | water_tower_collapse | 962453 | may-13 | hd | rendered |
+| 89 | hd_wave_capsizes_astoria | One wave flipped it | wave_capsizes_astoria | 872430 | feb-03 | hd | REJECTED |
+| 90 | hd_woman_oregon_river | Her car went into the river | woman_oregon_river | 954917 | mar-05 | hd | rendered |
+| 91 | agent_saved_boy | He wasn't breathing | agent_saved_boy | 581975 |  | sd-archived | rendered |
+| 92 | astronaut_water_survival | Astronauts in the water | astronaut_water_survival | 509855 | feb-10 | sd-archived | rendered |
+| 93 | baseball_surprise | Not a normal game | baseball_surprise | 460113 |  | sd-archived | rendered |
+| 94 | bear_mauling_skier | Mauled by a bear | bear_mauling_skier | 782825 |  | sd-archived | rendered |
+| 95 | boater_330_miles | 330 miles from land | boater_330_miles | 699223 | jul-24 | sd-archived | spec only |
+| 96 | boater_adrift_13h | 13 hours lost at sea | boater_adrift_13h | 512792 | mar-06 | sd-archived | rendered |
+| 97 | cliff_rescue | No one could reach her | cliff_rescue | 738507 |  | sd-archived | rendered |
+| 98 | colonel_giants_game | They thought he was in Afghanistan | colonel_giants_game | 383793 |  | sd-archived | rendered |
+| 99 | dad_surprises_daughter | Daddy came home | dad_surprises_daughter | 399217 |  | sd-archived | rendered |
+| 100 | dog_on_roof_florence | Stranded on a roof | dog_on_roof_florence | 652963 |  | sd-archived | spec only |
+| 101 | dog_reunited_handler | She came back for him | dog_reunited_handler | 543198 |  | sd-archived | rendered |
+| 102 | falcon9_vandenberg | Part of history's biggest upgrade | falcon9_vandenberg | 505260 | jan-14 | sd-archived | rendered |
+| 103 | fisherman_boat_sinks | His boat was sinking | fisherman_boat_sinks | 515565 | mar-23 | sd-archived | rendered |
+| 104 | fisherman_life_raft | His boat sank | fisherman_life_raft | 724582 |  | sd-archived | spec only |
+| 105 | florence_woman | Trapped by the flood | florence_woman | 625984 |  | sd-archived | rendered |
+| 106 | harvey_child | Saved from the flood | harvey_child | 590199 |  | sd-archived | rendered |
+| 107 | high_tide_ecola | The tide trapped them | high_tide_ecola | 681699 | may-19 | sd-archived | spec only |
+| 108 | kayaker_everglades | His kayak flipped | kayaker_everglades | 513596 | mar-10 | sd-archived | rendered |
+| 109 | man_two_dogs | His sailboat was dead | man_two_dogs | 715656 | oct-17 | sd-archived | spec only |
+| 110 | married_then_saves_life | Minutes after his wedding | married_then_saves_life | 684185 | aug-02 | sd-archived | spec only |
+| 111 | minuteman_launch | Picked at random | minuteman_launch | 508918 |  | sd-archived | rendered |
+| 112 | mom_early_return | Mom came home early | mom_early_return | 746401 | feb-14 | sd-archived | spec only |
+| 113 | paddleboarder_jetty | The wind took him | paddleboarder_jetty | 693268 | jun-25 | sd-archived | spec only |
+| 114 | plane_crash_survivor | His engine failed | plane_crash_survivor | 614280 |  | sd-archived | rendered |
+| 115 | sailor_surprises_mom | Mom had no idea | sailor_surprises_mom | 383771 |  | sd-archived | rendered |
+| 116 | sailor_surprises_sons | Two years in Japan | sailor_surprises_sons | 382981 |  | sd-archived | rendered |
+| 117 | sea_turtles | Trapped in a net | sea_turtles | 601463 |  | sd-archived | rendered |
+| 118 | shark_bite_rescue | Shark attack at sea | shark_bite_rescue | 732282 |  | sd-archived | rendered |
+| 119 | shark_reef_surprise | A secret homecoming | shark_reef_surprise | 391412 | feb-13 | sd-archived | rendered |
+| 120 | son_surprises_father | Dad was at work | son_surprises_father | 338685 | may-22 | sd-archived | spec only |
+| 121 | strike_eagle_afterburner | Full afterburner | strike_eagle_afterburner | 833680 |  | sd-archived | rendered |
+| 122 | woman_dog_cliff | Trapped all night | woman_dog_cliff | 697955 | jul-19 | sd-archived | spec only |
 
 ## Possible same-event duplicates
 

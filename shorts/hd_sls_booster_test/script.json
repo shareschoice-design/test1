@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Two minutes of pure fire",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "September 2, 2020. Promontory, Utah.",
+   "hl": [
+    "utah"
+   ],
+   "shots": [
+    {
+     "file": "sls_booster_test",
+     "pos": 0.385
+    },
+    {
+     "file": "sls_booster_test",
+     "pos": 0.425
+    }
+   ]
+  },
+  {
+   "vo": "A five-segment solid rocket booster lies on its side.",
+   "hl": [
+    "booster"
+   ],
+   "shots": [
+    {
+     "file": "sls_booster_test",
+     "pos": 0.228
+    },
+    {
+     "card": {
+      "file": "sls_booster_test",
+      "pos": 0.302,
+      "big": "75%",
+      "small": "OF THE ROCKET'S THRUST"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "It's identical to the boosters on NASA's SLS Moon rocket.",
+   "hl": [
+    "identical"
+   ],
+   "shots": [
+    {
+     "file": "sls_booster_test",
+     "pos": 0.377
+    },
+    {
+     "file": "sls_booster_test",
+     "pos": 0.451
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They light it. While it's strapped to the ground.",
+   "hl": [
+    "light"
+   ],
+   "shots": [
+    {
+     "file": "sls_booster_test",
+     "pos": 0.525
+    },
+    {
+     "file": "sls_booster_test",
+     "pos": 0.599
+    }
+   ]
+  },
+  {
+   "vo": "A two-minute hot fire test.",
+   "hl": [
+    "two-minute"
+   ],
+   "shots": [
+    {
+     "file": "sls_booster_test",
+     "pos": 0.673
+    },
+    {
+     "file": "sls_booster_test",
+     "pos": 0.747
+    }
+   ]
+  },
+  {
+   "vo": "Two of these give SLS over 75% of its thrust.",
+   "hl": [
+    "75%"
+   ],
+   "shots": [
+    {
+     "file": "sls_booster_test",
+     "pos": 0.822
+    },
+    {
+     "file": "sls_booster_test",
+     "pos": 0.896
+    }
+   ]
+  }
+ ]
+}

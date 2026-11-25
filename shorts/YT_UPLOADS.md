@@ -1521,3 +1521,41 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 81. hd_air_taxi_drop
+**Title:** They crash it on purpose 😳
+
+**Description:**
+```
+June 2025. NASA Langley, Virginia. Crash test dummies strap into a full-size air taxi. It's hoisted up a giant steel gantry. And dropped. Sensors record how the cabin absorbs the impact. So the air taxis of the future protect their passengers.
+
+Would you have done the same? 👇
+
+Real footage: "NASA Drop Test Supports Safer Air Taxi Designs " – courtesy NASA (NASA)
+https://images.nasa.gov/details/LRC-2025-V-06242025-RVLT-Gantry-Drop-Test-With-Slate-V0002050
+NASA does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 82. hd_sls_booster_test
+**Title:** Two minutes of pure fire 🔥
+
+**Description:**
+```
+September 2, 2020. Promontory, Utah. A five-segment solid rocket booster lies on its side. It's identical to the boosters on NASA's SLS Moon rocket. They light it. While it's strapped to the ground. A two-minute hot fire test. Two of these give SLS over 75% of its thrust.
+
+Would you have done the same? 👇
+
+Real footage: "Booster Test for Future Space Launch System Flights 4K" – courtesy NASA (NASA / N/A)
+https://images.nasa.gov/details/MSFC_XP01_V_0133_FSB1_4K_DRONEBROLL
+NASA does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

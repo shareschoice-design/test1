@@ -1,5 +1,26 @@
 [
  {
+  "footage": "air_taxi_drop",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/LRC-2025-V-06242025-RVLT-Gantry-Drop-Test-With-Slate-V0002050",
+  "title": "NASA Drop Test Supports Safer Air Taxi Designs ",
+  "event": [
+   "",
+   [
+    "hampton",
+    "nasa"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_air_taxi_drop",
+    "hook": "They crash it on purpose",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "artemis2_launch",
   "dir": "footage/hd",
   "dvids_id": "https://images.nasa.gov/details/KSC%20ART%20II%20Cause%20Way%20Launch%20low%20angle",
@@ -1425,6 +1446,26 @@
    {
     "name": "hd_skycrane_tamarack",
     "hook": "2,650 gallons in under a minute",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "sls_booster_test",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/MSFC_XP01_V_0133_FSB1_4K_DRONEBROLL",
+  "title": "Booster Test for Future Space Launch System Flights 4K",
+  "event": [
+   "sep-02",
+   [
+    "promontory"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_sls_booster_test",
+    "hook": "Two minutes of pure fire",
     "rendered": true
    }
   ]

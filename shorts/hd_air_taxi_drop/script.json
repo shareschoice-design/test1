@@ -1,0 +1,120 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "They crash it on purpose",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "June 2025. NASA Langley, Virginia.",
+   "hl": [
+    "virginia"
+   ],
+   "shots": [
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.62
+    },
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.66
+    }
+   ]
+  },
+  {
+   "vo": "Crash test dummies strap into a full-size air taxi.",
+   "hl": [
+    "dummies"
+   ],
+   "shots": [
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.288
+    },
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.353
+    }
+   ]
+  },
+  {
+   "vo": "It's hoisted up a giant steel gantry.",
+   "hl": [
+    "gantry"
+   ],
+   "shots": [
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.417
+    },
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.481
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "And dropped.",
+   "hl": [
+    "dropped"
+   ],
+   "shots": [
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.545
+    },
+    {
+     "card": {
+      "file": "air_taxi_drop",
+      "pos": 0.609,
+      "big": "1",
+      "small": "FULL-SCALE CRASH TEST"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Sensors record how the cabin absorbs the impact.",
+   "hl": [
+    "impact"
+   ],
+   "shots": [
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.673
+    },
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.738
+    }
+   ]
+  },
+  {
+   "vo": "So the air taxis of the future protect their passengers.",
+   "hl": [
+    "protect"
+   ],
+   "shots": [
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.802
+    },
+    {
+     "file": "air_taxi_drop",
+     "pos": 0.866
+    }
+   ]
+  }
+ ],
+ "avoid": {
+  "air_taxi_drop": [
+   [
+    0,
+    22
+   ]
+  ]
+ }
+}
