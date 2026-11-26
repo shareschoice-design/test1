@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "They fly INTO hurricanes",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "September 25, 2024. Hurricane Helene is growing.",
+   "hl": [
+    "helene"
+   ],
+   "shots": [
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.265
+    },
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.305
+    }
+   ]
+  },
+  {
+   "vo": "Most planes fly away from storms. Not this one.",
+   "hl": [
+    "away"
+   ],
+   "shots": [
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.187
+    },
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "The Air Force Reserve Hurricane Hunters take off.",
+   "hl": [
+    "hunters"
+   ],
+   "shots": [
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "helene_hurricane_hunters",
+      "pos": 0.422,
+      "big": "9",
+      "small": "MISSIONS INTO HELENE"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They fly straight through the storm.",
+   "hl": [
+    "through"
+   ],
+   "shots": [
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.5
+    },
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Their data goes to the National Hurricane Center.",
+   "hl": [
+    "data"
+   ],
+   "shots": [
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.657
+    },
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "To make the forecasts better for everyone in its path.",
+   "hl": [
+    "forecasts"
+   ],
+   "shots": [
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.813
+    },
+    {
+     "file": "helene_hurricane_hunters",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

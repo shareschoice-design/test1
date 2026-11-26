@@ -1692,3 +1692,22 @@ Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 90. hd_helene_hurricane_hunters
+**Title:** They fly INTO hurricanes ✈️
+
+**Description:**
+```
+September 25, 2024. Hurricane Helene is growing. Most planes fly away from storms. Not this one. The Air Force Reserve Hurricane Hunters take off. They fly straight through the storm. Their data goes to the National Hurricane Center. To make the forecasts better for everyone in its path.
+
+Would you have done the same? 👇
+
+Real footage: "AF Reserve Hurricane Hunters fly Hurricane Helene" – DVIDS (public domain)
+https://www.dvidshub.net/video/938029/af-reserve-hurricane-hunters-fly-hurricane-helene
+The appearance of U.S. Department of Defense (DoD) visual information does not imply or constitute DoD endorsement.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

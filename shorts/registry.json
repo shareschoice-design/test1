@@ -796,6 +796,24 @@
   ]
  },
  {
+  "footage": "helene_hurricane_hunters",
+  "dir": "footage/hd",
+  "dvids_id": "938029",
+  "title": "AF Reserve Hurricane Hunters fly Hurricane Helene",
+  "event": [
+   "sep-25",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_helene_hurricane_hunters",
+    "hook": "They fly INTO hurricanes",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "helene_man_dog",
   "dir": "footage/hd",
   "dvids_id": "938235",
