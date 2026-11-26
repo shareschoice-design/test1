@@ -12,3 +12,4 @@ Rule: vertical DVIDS sources are often social edits – check the contact sheet 
 - hd_lake_michigan_one: dark, uniform top-down water footage; 11 repeated-looking cut pairs.
 - hd_tybee_three_2025: middle of the source is one static marsh shot; cuts look the same.
 - hd_helene_from_iss: ISS cloud views look alike from cut to cut (3 QC repeat pairs).
+- hd_artemis1_night_launch: one long bright plume close-up (cuts look alike) and too similar to hd_artemis2_launch.

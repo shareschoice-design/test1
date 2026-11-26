@@ -1616,3 +1616,41 @@ Music: "Dreamer" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 �
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 86. hd_astro_class_2021
+**Title:** What it takes to become an astronaut 😳
+
+**Description:**
+```
+December 2021. NASA picks ten new astronaut candidates. Then come two years of basic training. Spacewalk training in full pressure suits. Flying T-38 jets. Learning space station systems. Surviving in the wilderness. Only then are they ready to fly.
+
+Would you have done the same? 👇
+
+Real footage: "2021 Astronaut Candidate Class Resource Reel (4K-UHD)" – courtesy NASA (NASA)
+https://images.nasa.gov/details/jsc2024m000078_2021_Astronaut_Candidate_Class_Resource_Reel-4K-240228-MP4
+NASA does not endorse this channel or video.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 87. hd_europa_clipper_launch
+**Title:** Next stop: Jupiter 😳
+
+**Description:**
+```
+October 14, 2024. Kennedy Space Center. A Falcon Heavy lifts off with NASA's Europa Clipper. Destination: Europa, an icy moon of Jupiter. First it swings past Mars, then back past Earth. Gravity assists build up its speed. It reaches Jupiter in April 2030.
+
+Would you have done the same? 👇
+
+Real footage: "NASA'S SpaceX Europa Clipper Isolated Launch Views" – courtesy NASA (NASA)
+https://images.nasa.gov/details/KSC-20241014-MH-AJN01-0001-SpaceX_Europa_Clipper_Isolated_Launch_Views-M9336
+NASA does not endorse this channel or video.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

@@ -1,0 +1,7 @@
+{"file":"europa_clipper_launch","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Next stop: Jupiter",2],"range":[0.03,0.97],"lines":[
+["October 14, 2024. Kennedy Space Center.",["kennedy"],null],
+["A Falcon Heavy lifts off with NASA's Europa Clipper.",["europa"],null],
+["Destination: Europa, an icy moon of Jupiter.",["jupiter"],"Then...",["2030","ARRIVAL AT JUPITER"]],
+["First it swings past Mars, then back past Earth.",["mars"],null],
+["Gravity assists build up its speed.",["speed"],null],
+["It reaches Jupiter in April 2030.",["2030"],null]]}

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Next stop: Jupiter",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "October 14, 2024. Kennedy Space Center.",
+   "hl": [
+    "kennedy"
+   ],
+   "shots": [
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.222
+    },
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.262
+    }
+   ]
+  },
+  {
+   "vo": "A Falcon Heavy lifts off with NASA's Europa Clipper.",
+   "hl": [
+    "europa"
+   ],
+   "shots": [
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.187
+    },
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.265
+    }
+   ]
+  },
+  {
+   "vo": "Destination: Europa, an icy moon of Jupiter.",
+   "hl": [
+    "jupiter"
+   ],
+   "shots": [
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.343
+    },
+    {
+     "card": {
+      "file": "europa_clipper_launch",
+      "pos": 0.422,
+      "big": "2030",
+      "small": "ARRIVAL AT JUPITER"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "First it swings past Mars, then back past Earth.",
+   "hl": [
+    "mars"
+   ],
+   "shots": [
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.5
+    },
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Gravity assists build up its speed.",
+   "hl": [
+    "speed"
+   ],
+   "shots": [
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.657
+    },
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "It reaches Jupiter in April 2030.",
+   "hl": [
+    "2030"
+   ],
+   "shots": [
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.813
+    },
+    {
+     "file": "europa_clipper_launch",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

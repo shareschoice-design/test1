@@ -63,6 +63,28 @@
   ]
  },
  {
+  "footage": "astro_class_2021",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/jsc2024m000078_2021_Astronaut_Candidate_Class_Resource_Reel-4K-240228-MP4",
+  "title": "2021 Astronaut Candidate Class Resource Reel (4K-UHD)",
+  "event": [
+   "dec-20",
+   [
+    "december",
+    "houston",
+    "nasa"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_astro_class_2021",
+    "hook": "What it takes to become an astronaut",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "aw302_return",
   "dir": "footage/hd",
   "dvids_id": "991185",
@@ -524,6 +546,30 @@
    {
     "name": "hd_el_paso_cliff_fall",
     "hook": "He fell off a cliff",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "europa_clipper_launch",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/KSC-20241014-MH-AJN01-0001-SpaceX_Europa_Clipper_Isolated_Launch_Views-M9336",
+  "title": "NASA'S SpaceX Europa Clipper Isolated Launch Views",
+  "event": [
+   "oct-14",
+   [
+    "april",
+    "december",
+    "february",
+    "florida",
+    "nasa"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_europa_clipper_launch",
+    "hook": "Next stop: Jupiter",
     "rendered": true
    }
   ]

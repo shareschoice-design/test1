@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "What it takes to become an astronaut",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "December 2021. NASA picks ten new astronaut candidates.",
+   "hl": [
+    "ten"
+   ],
+   "shots": [
+    {
+     "file": "astro_class_2021",
+     "pos": 0.41
+    },
+    {
+     "file": "astro_class_2021",
+     "pos": 0.45
+    }
+   ]
+  },
+  {
+   "vo": "Then come two years of basic training.",
+   "hl": [
+    "two"
+   ],
+   "shots": [
+    {
+     "file": "astro_class_2021",
+     "pos": 0.187
+    },
+    {
+     "card": {
+      "file": "astro_class_2021",
+      "pos": 0.265,
+      "big": "2",
+      "small": "YEARS OF TRAINING"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Spacewalk training in full pressure suits.",
+   "hl": [
+    "spacewalk"
+   ],
+   "shots": [
+    {
+     "file": "astro_class_2021",
+     "pos": 0.343
+    },
+    {
+     "file": "astro_class_2021",
+     "pos": 0.422
+    }
+   ],
+   "label": "And..."
+  },
+  {
+   "vo": "Flying T-38 jets. Learning space station systems.",
+   "hl": [
+    "jets"
+   ],
+   "shots": [
+    {
+     "file": "astro_class_2021",
+     "pos": 0.5
+    },
+    {
+     "file": "astro_class_2021",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "Surviving in the wilderness.",
+   "hl": [
+    "wilderness"
+   ],
+   "shots": [
+    {
+     "file": "astro_class_2021",
+     "pos": 0.657
+    },
+    {
+     "file": "astro_class_2021",
+     "pos": 0.735
+    }
+   ]
+  },
+  {
+   "vo": "Only then are they ready to fly.",
+   "hl": [
+    "ready"
+   ],
+   "shots": [
+    {
+     "file": "astro_class_2021",
+     "pos": 0.813
+    },
+    {
+     "file": "astro_class_2021",
+     "pos": 0.892
+    }
+   ]
+  }
+ ]
+}

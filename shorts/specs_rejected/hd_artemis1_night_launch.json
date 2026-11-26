@@ -1,0 +1,7 @@
+{"file":"artemis1_night_launch","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["1:47 a.m. Night turns to day.",3],"range":[0.08,0.99],"lines":[
+["November 16, 2022. Kennedy Space Center.",["kennedy"],null],
+["NASA's SLS Moon rocket stands on the pad in the dark.",["dark"],null],
+["At 1:47 a.m., the engines ignite.",["ignite"],"Watch this...",["1:47","A.M. LIFTOFF"]],
+["Artemis I lights up the Florida sky.",["sky"],null],
+["Orion is on its way to the Moon. No crew yet.",["moon"],null],
+["This flight cleared the way for astronauts on Artemis II.",["astronauts"],null]]}
