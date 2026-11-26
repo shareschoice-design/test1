@@ -1654,3 +1654,41 @@ Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 88. hd_eels_snake_robot
+**Title:** NASA built a robot snake 😳
+
+**Description:**
+```
+NASA's Jet Propulsion Laboratory built this. Its name is EELS. A robot snake. It's tested on sand, snow and ice. It is even tested on a glacier in Canada. The dream: Saturn's icy moon Enceladus. To dive down its vents to a hidden ocean.
+
+Would you have done the same? 👇
+
+Real footage: "EELS (Exobiology Extant Life Surveyor) Media Reel" – courtesy NASA (NASA)
+https://images.nasa.gov/details/JPL-20240508-EELSf-0001-EELS%20Media%20Reel
+NASA does not endorse this channel or video.
+Music: "Dreamer" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 89. hd_er2_snowstorms
+**Title:** 65,000 feet. In a pressure suit. ✈️
+
+**Description:**
+```
+Meet NASA's ER-2. The pilot suits up like an astronaut. Because this plane flies at about 65,000 feet. Way above the snowstorms below. Its instruments look down into the clouds. To understand the storms that hit the East Coast.
+
+Would you have done the same? 👇
+
+Real footage: "Studying Winter Snowstorms with NASA’s ER-2 aircraft B-Roll" – courtesy NASA (NASA)
+https://images.nasa.gov/details/AFRC_2023_13906_01_ER2_IMPACTS_BROLL_4KMASTER
+NASA does not endorse this channel or video.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

@@ -1,0 +1,7 @@
+{"file":"eels_snake_robot","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Dreamer.mp3","hook":["NASA built a robot snake",2],"range":[0.05,0.97],"lines":[
+["NASA's Jet Propulsion Laboratory built this.",["jpl"],null],
+["Its name is EELS. A robot snake.",["snake"],null,["EELS","ROBOT SNAKE"]],
+["It's tested on sand, snow and ice.",["ice"],"Watch it move..."],
+["It is even tested on a glacier in Canada.",["glacier"],null],
+["The dream: Saturn's icy moon Enceladus.",["enceladus"],null],
+["To dive down its vents to a hidden ocean.",["ocean"],null]]}

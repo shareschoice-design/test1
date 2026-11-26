@@ -509,6 +509,30 @@
   ]
  },
  {
+  "footage": "eels_snake_robot",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/JPL-20240508-EELSf-0001-EELS%20Media%20Reel",
+  "title": "EELS (Exobiology Extant Life Surveyor) Media Reel",
+  "event": [
+   "",
+   [
+    "enceladus",
+    "jpl",
+    "nasa",
+    "pasadena",
+    "southern california"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_eels_snake_robot",
+    "hook": "NASA built a robot snake",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "egmont_key_five",
   "dir": "footage/hd",
   "dvids_id": "990054",
@@ -546,6 +570,29 @@
    {
     "name": "hd_el_paso_cliff_fall",
     "hook": "He fell off a cliff",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "er2_snowstorms",
+  "dir": "footage/hd",
+  "dvids_id": "https://images.nasa.gov/details/AFRC_2023_13906_01_ER2_IMPACTS_BROLL_4KMASTER",
+  "title": "Studying Winter Snowstorms with NASA\u2019s ER-2 aircraft B-Roll",
+  "event": [
+   "",
+   [
+    "marietta",
+    "nasa",
+    "palmdale",
+    "wallops island"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_er2_snowstorms",
+    "hook": "65,000 feet. In a pressure suit.",
     "rendered": true
    }
   ]

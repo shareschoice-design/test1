@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Dreamer.mp3",
+ "dark": true,
+ "hook": {
+  "text": "NASA built a robot snake",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "NASA's Jet Propulsion Laboratory built this.",
+   "hl": [
+    "jpl"
+   ],
+   "shots": [
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.675
+    },
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.715
+    }
+   ]
+  },
+  {
+   "vo": "Its name is EELS. A robot snake.",
+   "hl": [
+    "snake"
+   ],
+   "shots": [
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.203
+    },
+    {
+     "card": {
+      "file": "eels_snake_robot",
+      "pos": 0.28,
+      "big": "EELS",
+      "small": "ROBOT SNAKE"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "It's tested on sand, snow and ice.",
+   "hl": [
+    "ice"
+   ],
+   "shots": [
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.357
+    },
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.433
+    }
+   ],
+   "label": "Watch it move..."
+  },
+  {
+   "vo": "It is even tested on a glacier in Canada.",
+   "hl": [
+    "glacier"
+   ],
+   "shots": [
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.51
+    },
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.587
+    }
+   ]
+  },
+  {
+   "vo": "The dream: Saturn's icy moon Enceladus.",
+   "hl": [
+    "enceladus"
+   ],
+   "shots": [
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.663
+    },
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.74
+    }
+   ]
+  },
+  {
+   "vo": "To dive down its vents to a hidden ocean.",
+   "hl": [
+    "ocean"
+   ],
+   "shots": [
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.817
+    },
+    {
+     "file": "eels_snake_robot",
+     "pos": 0.893
+    }
+   ]
+  }
+ ]
+}
