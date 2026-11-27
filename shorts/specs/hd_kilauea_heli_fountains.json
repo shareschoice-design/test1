@@ -1,0 +1,7 @@
+{"file":"kilauea_heli_fountains","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Sovereign.mp3","hook":["650 feet of lava from a helicopter",3],"range":[0.02,0.98],"lines":[
+["April 2025. Above Kilauea volcano, Hawaii.",["hawaii"],null],
+["A USGS helicopter flies past a lava fountain.",["helicopter"],null,["650+","FEET HIGH"]],
+["It shoots more than 650 feet into the sky.",["650"],"Then..."],
+["Its lava flow stretches about 2,300 feet from the vent.",["2,300"],null],
+["Three weeks later, the south vent erupts again.",["again"],null],
+["Lava pours down the cone in glowing rivers.",["rivers"],null]]}

@@ -1844,3 +1844,60 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 98. hd_drone_into_crater
+**Title:** They flew a drone into an erupting crater 😳
+
+**Description:**
+```
+January 17, 2025. Kilauea volcano, Hawaii. Lava is spattering from two vents inside the crater. Too dangerous to go in on foot. USGS geologists send in a drone instead. Molten rock bursting right below the camera. Their mission: assess the hazards and warn people.
+
+Would you have done the same? 👇
+
+Real footage: "January 17, 2025 — UAS video of spattering eruptive vents in Halema‘uma‘u" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/january-17-2025-uas-video-spattering-eruptive-vents-halemaumau
+USGS does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 99. hd_kilauea_heli_fountains
+**Title:** 650 feet of lava from a helicopter 🚁
+
+**Description:**
+```
+April 2025. Above Kilauea volcano, Hawaii. A USGS helicopter flies past a lava fountain. It shoots more than 650 feet into the sky. Its lava flow stretches about 2,300 feet from the vent. Three weeks later, the south vent erupts again. Lava pours down the cone in glowing rivers.
+
+Would you have done the same? 👇
+
+Real footage: "Kilauea episodes 16 and 18 lava fountains from the air (2025)" – USGS (public domain), USGS (H. Winslow, M. Patrick)
+https://www.usgs.gov/media/videos/april-1-2025-kilauea-episode-16-lava-fountain-and-flow-video ; https://www.usgs.gov/media/videos/april-22-2025-kilauea-episode-18-lava-fountaining-video
+USGS does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 100. hd_littoral_explosions
+**Title:** When lava hits the ocean 🌊
+
+**Description:**
+```
+June 11, 2018. Kapoho, Hawaii. Molten lava pours straight into the sea. Seawater flashes into steam. Explosions blast lava fragments high into the air. Black sand and Pele's hair rain down. Danger on land and at sea.
+
+Would you have done the same? 👇
+
+Real footage: "Kīlauea Volcano — Overflight of Ocean Entry" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/kilauea-volcano-overflight-ocean-entry
+USGS does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

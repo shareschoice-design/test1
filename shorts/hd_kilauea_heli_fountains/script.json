@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "650 feet of lava from a helicopter",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "April 2025. Above Kilauea volcano, Hawaii.",
+   "hl": [
+    "hawaii"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.567
+    },
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.607
+    }
+   ]
+  },
+  {
+   "vo": "A USGS helicopter flies past a lava fountain.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.18
+    },
+    {
+     "card": {
+      "file": "kilauea_heli_fountains",
+      "pos": 0.26,
+      "big": "650+",
+      "small": "FEET HIGH"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "It shoots more than 650 feet into the sky.",
+   "hl": [
+    "650"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.34
+    },
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.42
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Its lava flow stretches about 2,300 feet from the vent.",
+   "hl": [
+    "2,300"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.5
+    },
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.58
+    }
+   ]
+  },
+  {
+   "vo": "Three weeks later, the south vent erupts again.",
+   "hl": [
+    "again"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.66
+    },
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.74
+    }
+   ]
+  },
+  {
+   "vo": "Lava pours down the cone in glowing rivers.",
+   "hl": [
+    "rivers"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.82
+    },
+    {
+     "file": "kilauea_heli_fountains",
+     "pos": 0.9
+    }
+   ]
+  }
+ ]
+}

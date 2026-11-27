@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "They flew a drone into an erupting crater",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "January 17, 2025. Kilauea volcano, Hawaii.",
+   "hl": [
+    "kilauea"
+   ],
+   "shots": [
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.223
+    },
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.263
+    }
+   ]
+  },
+  {
+   "vo": "Lava is spattering from two vents inside the crater.",
+   "hl": [
+    "vents"
+   ],
+   "shots": [
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.18
+    },
+    {
+     "card": {
+      "file": "uas_spatter_2025",
+      "pos": 0.26,
+      "big": "2",
+      "small": "ACTIVE LAVA VENTS"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Too dangerous to go in on foot.",
+   "hl": [
+    "dangerous"
+   ],
+   "shots": [
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.34
+    },
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.42
+    }
+   ],
+   "label": "So..."
+  },
+  {
+   "vo": "USGS geologists send in a drone instead.",
+   "hl": [
+    "drone"
+   ],
+   "shots": [
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.5
+    },
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.58
+    }
+   ]
+  },
+  {
+   "vo": "Molten rock bursting right below the camera.",
+   "hl": [
+    "bursting"
+   ],
+   "shots": [
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.66
+    },
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.74
+    }
+   ]
+  },
+  {
+   "vo": "Their mission: assess the hazards and warn people.",
+   "hl": [
+    "warn"
+   ],
+   "shots": [
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.82
+    },
+    {
+     "file": "uas_spatter_2025",
+     "pos": 0.9
+    }
+   ]
+  }
+ ]
+}
