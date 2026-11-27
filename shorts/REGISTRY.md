@@ -102,46 +102,48 @@
 | 98 | hd_tybee_three_2025 | Their boat ran aground | tybee_three_2025 | 957890 | apr-05 | hd | REJECTED |
 | 99 | hd_tybee_vessel_sinks | Their boat sank | tybee_vessel_sinks | 932697 | aug-02 | hd | rendered |
 | 100 | hd_uas_aid_rescue | Follow the drone to safety | uas_aid_rescue | https://www.usgs.gov/media/videos/kilauea-volcano-uas-mission-aid-rescue | may-27 | hd | rendered |
-| 101 | hd_drone_into_crater | They flew a drone into an erupting crater | uas_spatter_2025 | https://www.usgs.gov/media/videos/january-17-2025-uas-video-spattering-eruptive-vents-halemaumau | jan-17 | hd | rendered |
-| 102 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | rendered |
-| 103 | hd_virginia_helene | Their first real rescue | virginia_helene | 959865 | oct-20 | hd | rendered |
-| 104 | hd_vmm265_return | Welcome home, Daddy | vmm265_return | 973532 | aug-10 | hd | rendered |
-| 105 | hd_water_tower_collapse | They fell 60 feet | water_tower_collapse | 962453 | may-13 | hd | rendered |
-| 106 | hd_wave_capsizes_astoria | One wave flipped it | wave_capsizes_astoria | 872430 | feb-03 | hd | REJECTED |
-| 107 | hd_lava_whirlwind | A whirlwind made of lava | whirlwind_fissure8_b | https://www.usgs.gov/media/videos/kilauea-volcano-whirlwind-above-fissure-8 |  | hd | rendered |
-| 108 | hd_woman_oregon_river | Her car went into the river | woman_oregon_river | 954917 | mar-05 | hd | rendered |
-| 109 | agent_saved_boy | He wasn't breathing | agent_saved_boy | 581975 |  | sd-archived | rendered |
-| 110 | astronaut_water_survival | Astronauts in the water | astronaut_water_survival | 509855 | feb-10 | sd-archived | rendered |
-| 111 | baseball_surprise | Not a normal game | baseball_surprise | 460113 |  | sd-archived | rendered |
-| 112 | bear_mauling_skier | Mauled by a bear | bear_mauling_skier | 782825 |  | sd-archived | rendered |
-| 113 | boater_330_miles | 330 miles from land | boater_330_miles | 699223 | jul-24 | sd-archived | spec only |
-| 114 | boater_adrift_13h | 13 hours lost at sea | boater_adrift_13h | 512792 | mar-06 | sd-archived | rendered |
-| 115 | cliff_rescue | No one could reach her | cliff_rescue | 738507 |  | sd-archived | rendered |
-| 116 | colonel_giants_game | They thought he was in Afghanistan | colonel_giants_game | 383793 |  | sd-archived | rendered |
-| 117 | dad_surprises_daughter | Daddy came home | dad_surprises_daughter | 399217 |  | sd-archived | rendered |
-| 118 | dog_on_roof_florence | Stranded on a roof | dog_on_roof_florence | 652963 |  | sd-archived | spec only |
-| 119 | dog_reunited_handler | She came back for him | dog_reunited_handler | 543198 |  | sd-archived | rendered |
-| 120 | falcon9_vandenberg | Part of history's biggest upgrade | falcon9_vandenberg | 505260 | jan-14 | sd-archived | rendered |
-| 121 | fisherman_boat_sinks | His boat was sinking | fisherman_boat_sinks | 515565 | mar-23 | sd-archived | rendered |
-| 122 | fisherman_life_raft | His boat sank | fisherman_life_raft | 724582 |  | sd-archived | spec only |
-| 123 | florence_woman | Trapped by the flood | florence_woman | 625984 |  | sd-archived | rendered |
-| 124 | harvey_child | Saved from the flood | harvey_child | 590199 |  | sd-archived | rendered |
-| 125 | high_tide_ecola | The tide trapped them | high_tide_ecola | 681699 | may-19 | sd-archived | spec only |
-| 126 | kayaker_everglades | His kayak flipped | kayaker_everglades | 513596 | mar-10 | sd-archived | rendered |
-| 127 | man_two_dogs | His sailboat was dead | man_two_dogs | 715656 | oct-17 | sd-archived | spec only |
-| 128 | married_then_saves_life | Minutes after his wedding | married_then_saves_life | 684185 | aug-02 | sd-archived | spec only |
-| 129 | minuteman_launch | Picked at random | minuteman_launch | 508918 |  | sd-archived | rendered |
-| 130 | mom_early_return | Mom came home early | mom_early_return | 746401 | feb-14 | sd-archived | spec only |
-| 131 | paddleboarder_jetty | The wind took him | paddleboarder_jetty | 693268 | jun-25 | sd-archived | spec only |
-| 132 | plane_crash_survivor | His engine failed | plane_crash_survivor | 614280 |  | sd-archived | rendered |
-| 133 | sailor_surprises_mom | Mom had no idea | sailor_surprises_mom | 383771 |  | sd-archived | rendered |
-| 134 | sailor_surprises_sons | Two years in Japan | sailor_surprises_sons | 382981 |  | sd-archived | rendered |
-| 135 | sea_turtles | Trapped in a net | sea_turtles | 601463 |  | sd-archived | rendered |
-| 136 | shark_bite_rescue | Shark attack at sea | shark_bite_rescue | 732282 |  | sd-archived | rendered |
-| 137 | shark_reef_surprise | A secret homecoming | shark_reef_surprise | 391412 | feb-13 | sd-archived | rendered |
-| 138 | son_surprises_father | Dad was at work | son_surprises_father | 338685 | may-22 | sd-archived | spec only |
-| 139 | strike_eagle_afterburner | Full afterburner | strike_eagle_afterburner | 833680 |  | sd-archived | rendered |
-| 140 | woman_dog_cliff | Trapped all night | woman_dog_cliff | 697955 | jul-19 | sd-archived | spec only |
+| 101 | hd_lava_rivers_night | Rivers of lava at night | uas_fissure22 | https://www.usgs.gov/media/videos/kilauea-volcano-uas-hovering-near-fissure-22 | may-22 | hd | rendered |
+| 102 | hd_drone_into_crater | They flew a drone into an erupting crater | uas_spatter_2025 | https://www.usgs.gov/media/videos/january-17-2025-uas-video-spattering-eruptive-vents-halemaumau | jan-17 | hd | rendered |
+| 103 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | rendered |
+| 104 | hd_virginia_helene | Their first real rescue | virginia_helene | 959865 | oct-20 | hd | rendered |
+| 105 | hd_vmm265_return | Welcome home, Daddy | vmm265_return | 973532 | aug-10 | hd | rendered |
+| 106 | hd_water_tower_collapse | They fell 60 feet | water_tower_collapse | 962453 | may-13 | hd | rendered |
+| 107 | hd_wave_capsizes_astoria | One wave flipped it | wave_capsizes_astoria | 872430 | feb-03 | hd | REJECTED |
+| 108 | hd_lava_whirlwind | A whirlwind made of lava | whirlwind_fissure8_b | https://www.usgs.gov/media/videos/kilauea-volcano-whirlwind-above-fissure-8 |  | hd | rendered |
+| 109 | hd_woman_oregon_river | Her car went into the river | woman_oregon_river | 954917 | mar-05 | hd | rendered |
+| 110 | hd_yellowstone_explosion | Yellowstone blew this boardwalk apart | yellowstone_explosion | https://www.usgs.gov/media/videos/hydrothermal-explosion-yellowstones-biscuit-basin-july-23-2024 ; https://www.usgs.gov/media/videos/black-diamond-pool-biscuit-basin-yellowstone-national-park-eruption-may-31-2025 | jul-23 | hd | rendered |
+| 111 | agent_saved_boy | He wasn't breathing | agent_saved_boy | 581975 |  | sd-archived | rendered |
+| 112 | astronaut_water_survival | Astronauts in the water | astronaut_water_survival | 509855 | feb-10 | sd-archived | rendered |
+| 113 | baseball_surprise | Not a normal game | baseball_surprise | 460113 |  | sd-archived | rendered |
+| 114 | bear_mauling_skier | Mauled by a bear | bear_mauling_skier | 782825 |  | sd-archived | rendered |
+| 115 | boater_330_miles | 330 miles from land | boater_330_miles | 699223 | jul-24 | sd-archived | spec only |
+| 116 | boater_adrift_13h | 13 hours lost at sea | boater_adrift_13h | 512792 | mar-06 | sd-archived | rendered |
+| 117 | cliff_rescue | No one could reach her | cliff_rescue | 738507 |  | sd-archived | rendered |
+| 118 | colonel_giants_game | They thought he was in Afghanistan | colonel_giants_game | 383793 |  | sd-archived | rendered |
+| 119 | dad_surprises_daughter | Daddy came home | dad_surprises_daughter | 399217 |  | sd-archived | rendered |
+| 120 | dog_on_roof_florence | Stranded on a roof | dog_on_roof_florence | 652963 |  | sd-archived | spec only |
+| 121 | dog_reunited_handler | She came back for him | dog_reunited_handler | 543198 |  | sd-archived | rendered |
+| 122 | falcon9_vandenberg | Part of history's biggest upgrade | falcon9_vandenberg | 505260 | jan-14 | sd-archived | rendered |
+| 123 | fisherman_boat_sinks | His boat was sinking | fisherman_boat_sinks | 515565 | mar-23 | sd-archived | rendered |
+| 124 | fisherman_life_raft | His boat sank | fisherman_life_raft | 724582 |  | sd-archived | spec only |
+| 125 | florence_woman | Trapped by the flood | florence_woman | 625984 |  | sd-archived | rendered |
+| 126 | harvey_child | Saved from the flood | harvey_child | 590199 |  | sd-archived | rendered |
+| 127 | high_tide_ecola | The tide trapped them | high_tide_ecola | 681699 | may-19 | sd-archived | spec only |
+| 128 | kayaker_everglades | His kayak flipped | kayaker_everglades | 513596 | mar-10 | sd-archived | rendered |
+| 129 | man_two_dogs | His sailboat was dead | man_two_dogs | 715656 | oct-17 | sd-archived | spec only |
+| 130 | married_then_saves_life | Minutes after his wedding | married_then_saves_life | 684185 | aug-02 | sd-archived | spec only |
+| 131 | minuteman_launch | Picked at random | minuteman_launch | 508918 |  | sd-archived | rendered |
+| 132 | mom_early_return | Mom came home early | mom_early_return | 746401 | feb-14 | sd-archived | spec only |
+| 133 | paddleboarder_jetty | The wind took him | paddleboarder_jetty | 693268 | jun-25 | sd-archived | spec only |
+| 134 | plane_crash_survivor | His engine failed | plane_crash_survivor | 614280 |  | sd-archived | rendered |
+| 135 | sailor_surprises_mom | Mom had no idea | sailor_surprises_mom | 383771 |  | sd-archived | rendered |
+| 136 | sailor_surprises_sons | Two years in Japan | sailor_surprises_sons | 382981 |  | sd-archived | rendered |
+| 137 | sea_turtles | Trapped in a net | sea_turtles | 601463 |  | sd-archived | rendered |
+| 138 | shark_bite_rescue | Shark attack at sea | shark_bite_rescue | 732282 |  | sd-archived | rendered |
+| 139 | shark_reef_surprise | A secret homecoming | shark_reef_surprise | 391412 | feb-13 | sd-archived | rendered |
+| 140 | son_surprises_father | Dad was at work | son_surprises_father | 338685 | may-22 | sd-archived | spec only |
+| 141 | strike_eagle_afterburner | Full afterburner | strike_eagle_afterburner | 833680 |  | sd-archived | rendered |
+| 142 | woman_dog_cliff | Trapped all night | woman_dog_cliff | 697955 | jul-19 | sd-archived | spec only |
 
 ## Possible same-event duplicates
 

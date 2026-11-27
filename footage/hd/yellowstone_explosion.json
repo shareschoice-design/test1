@@ -1,0 +1,21 @@
+{
+ "source": "USGS (public domain)",
+ "page": "https://www.usgs.gov/media/videos/hydrothermal-explosion-yellowstones-biscuit-basin-july-23-2024 ; https://www.usgs.gov/media/videos/black-diamond-pool-biscuit-basin-yellowstone-national-park-eruption-may-31-2025",
+ "file": "edit",
+ "title": "Biscuit Basin hydrothermal explosion (2024) and Black Diamond Pool eruption (2025), Yellowstone",
+ "credit": "USGS Yellowstone Volcano Observatory",
+ "description": "What just happened at Biscuit Basin in Yellowstone National Park? Kaboom! Visitors witnessed a towering plume of steam, rock and mud rise several hundred feet into the air. The brief July 23 event was a classic example of a hydrothermal explosion, not a volcanic eruption. And with all the hot water circulating in the subsurface of this active volcano, it\u2019s no surprise that hydrothermal explosions are Yellowstone\u2019s most common geologic hazard. Yellowstone's hydrothermal (hot water) system is powered by a cooling magma reservoir several miles beneath the surface. Even though the presence of hot water near the surface is partially due to that magma, this explosion was not triggered by changes in the magmatic system, like magma interacting with groundwater to cause it to convert to steam. Rather, the event was rooted in the very shallow hydrothermal system, where transitions between liquid water and steam are common and can occur when silica (dissolved in the water) clogs hot water conduits, causing changes in pressure that may lead to explosions. Mike Poland, scientist-in-charge of the Yellowstone Volcano Observatory, talks about this previously underappreciated hazard and how it recently gained a little more respect See the YVO Information Statement\n\nThis video, recorded by a webcam, shows a small eruption from Black Diamond Pool in the Biscuit Basin subbasin of Upper Geyser Basin, Yellowstone National Park, at 8:39 p.m. MDT on May 31, 2025. The pool was the site of a hydrothermal explosion on July 23, 2024. Following that event, numerous smaller eruptions occurred from the pool, although few were witnessed because the area was closed to visitors. The webcam was deployed on May 14, 2025, for the purpose of monitoring the pool and better understanding the nature of post-explosion activity.",
+ "note": "USGS public domain; credit USGS. Visitor footage (courtesy Joshua Sells) intentionally excluded.",
+ "compose": [
+  [
+   "usgs:https://www.usgs.gov/media/videos/hydrothermal-explosion-yellowstones-biscuit-basin-july-23-2024",
+   37,
+   28
+  ],
+  [
+   "usgs:https://www.usgs.gov/media/videos/black-diamond-pool-biscuit-basin-yellowstone-national-park-eruption-may-31-2025",
+   10,
+   10
+  ]
+ ]
+}

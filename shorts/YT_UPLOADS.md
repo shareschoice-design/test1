@@ -1901,3 +1901,41 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 101. hd_lava_rivers_night
+**Title:** Rivers of lava at night 😳
+
+**Description:**
+```
+May 22, 2018. Kilauea's lower East Rift Zone. A drone hovers above fissure 22 in the dark. Below it: fountaining lava. The camera tilts up to follow the glowing rivers. They flow about 3 miles to the Pacific Ocean. Too dangerous for people. Perfect for a drone.
+
+Would you have done the same? 👇
+
+Real footage: "Kīlauea Volcano — UAS Hovering Near Fissure 22" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/kilauea-volcano-uas-hovering-near-fissure-22
+USGS does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 102. hd_yellowstone_explosion
+**Title:** Yellowstone blew this boardwalk apart 😳
+
+**Description:**
+```
+July 23, 2024. Biscuit Basin, Yellowstone. Visitors saw steam, rock and mud blast hundreds of feet into the air. A hydrothermal explosion. Not a volcanic eruption. The boardwalk: buried and torn apart. These explosions are Yellowstone's most common geologic hazard. In 2025, a USGS webcam caught the same pool erupting again.
+
+Would you have done the same? 👇
+
+Real footage: "Biscuit Basin hydrothermal explosion (2024) and Black Diamond Pool eruption (2025), Yellowstone" – USGS (public domain), USGS Yellowstone Volcano Observatory
+https://www.usgs.gov/media/videos/hydrothermal-explosion-yellowstones-biscuit-basin-july-23-2024 ; https://www.usgs.gov/media/videos/black-diamond-pool-biscuit-basin-yellowstone-national-park-eruption-may-31-2025
+USGS does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

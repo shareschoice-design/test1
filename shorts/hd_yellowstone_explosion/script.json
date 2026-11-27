@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Yellowstone blew this boardwalk apart",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "July 23, 2024. Biscuit Basin, Yellowstone.",
+   "hl": [
+    "yellowstone"
+   ],
+   "shots": [
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.86
+    },
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.9
+    }
+   ]
+  },
+  {
+   "vo": "Visitors saw steam, rock and mud blast hundreds of feet into the air.",
+   "hl": [
+    "blast"
+   ],
+   "shots": [
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.165
+    },
+    {
+     "card": {
+      "file": "yellowstone_explosion",
+      "pos": 0.247,
+      "big": "BOOM",
+      "small": "STEAM, ROCK AND MUD"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "A hydrothermal explosion. Not a volcanic eruption.",
+   "hl": [
+    "hydrothermal"
+   ],
+   "shots": [
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.33
+    },
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.413
+    }
+   ],
+   "label": "This was left behind..."
+  },
+  {
+   "vo": "The boardwalk: buried and torn apart.",
+   "hl": [
+    "boardwalk"
+   ],
+   "shots": [
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.495
+    },
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "These explosions are Yellowstone's most common geologic hazard.",
+   "hl": [
+    "common"
+   ],
+   "shots": [
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.66
+    },
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.743
+    }
+   ]
+  },
+  {
+   "vo": "In 2025, a USGS webcam caught the same pool erupting again.",
+   "hl": [
+    "again"
+   ],
+   "shots": [
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.825
+    },
+    {
+     "file": "yellowstone_explosion",
+     "pos": 0.908
+    }
+   ]
+  }
+ ]
+}

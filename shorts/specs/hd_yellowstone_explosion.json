@@ -1,0 +1,7 @@
+{"file":"yellowstone_explosion","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Hitman.mp3","hook":["Yellowstone blew this boardwalk apart",2],"range":[0.0,0.99],"hook_pos":0.86,"lines":[
+["July 23, 2024. Biscuit Basin, Yellowstone.",["yellowstone"],null],
+["Visitors saw steam, rock and mud blast hundreds of feet into the air.",["blast"],null,["BOOM","STEAM, ROCK AND MUD"]],
+["A hydrothermal explosion. Not a volcanic eruption.",["hydrothermal"],"This was left behind..."],
+["The boardwalk: buried and torn apart.",["boardwalk"],null],
+["These explosions are Yellowstone's most common geologic hazard.",["common"],null],
+["In 2025, a USGS webcam caught the same pool erupting again.",["again"],null]]}

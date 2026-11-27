@@ -622,18 +622,6 @@
   ]
  },
  {
-  "footage": "f8_aerial",
-  "dir": "footage/hd",
-  "dvids_id": "https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-aerial",
-  "title": "K\u012blauea Volcano \u2014 Fissure 8 Aerial",
-  "event": [
-   "",
-   []
-  ],
-  "tier": "hd",
-  "shorts": []
- },
- {
   "footage": "f8_uas_jul14",
   "dir": "footage/hd",
   "dvids_id": "https://www.usgs.gov/media/videos/july-14-2018-kilauea-fissure-8-video-captured-uas",
@@ -2058,6 +2046,24 @@
   ]
  },
  {
+  "footage": "uas_fissure22",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/kilauea-volcano-uas-hovering-near-fissure-22",
+  "title": "K\u012blauea Volcano \u2014 UAS Hovering Near Fissure 22",
+  "event": [
+   "may-22",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_lava_rivers_night",
+    "hook": "Rivers of lava at night",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "uas_spatter_2025",
   "dir": "footage/hd",
   "dvids_id": "https://www.usgs.gov/media/videos/january-17-2025-uas-video-spattering-eruptive-vents-halemaumau",
@@ -2206,6 +2212,27 @@
    {
     "name": "hd_woman_oregon_river",
     "hook": "Her car went into the river",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "yellowstone_explosion",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/hydrothermal-explosion-yellowstones-biscuit-basin-july-23-2024 ; https://www.usgs.gov/media/videos/black-diamond-pool-biscuit-basin-yellowstone-national-park-eruption-may-31-2025",
+  "title": "Biscuit Basin hydrothermal explosion (2024) and Black Diamond Pool eruption (2025), Yellowstone",
+  "event": [
+   "jul-23",
+   [
+    "biscuit basin",
+    "yellowstone national"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_yellowstone_explosion",
+    "hook": "Yellowstone blew this boardwalk apart",
     "rendered": true
    }
   ]
