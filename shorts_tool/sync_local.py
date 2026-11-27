@@ -43,13 +43,18 @@ for name in specs:
                 for i, (nid, ss, t) in enumerate(m["compose"]):
                     part = base + f".part{i}"
                     if not os.path.exists(os.path.join(REPO, part + ".mp4")):
-                        run([PY, "shorts_tool/nasa_fetch.py", nid, part, "1200"])
+                        if nid.startswith("usgs:"):
+                            run([PY, "shorts_tool/usgs_fetch.py", nid[5:], part])
+                        else:
+                            run([PY, "shorts_tool/nasa_fetch.py", nid, part, "1200"])
                     parts.append((part + ".mp4", ss, t))
                 cmd = ["ffmpeg", "-y", "-loglevel", "error"]
                 for f, ss, t in parts: cmd += ["-ss", str(ss), "-t", str(t), "-i", f]
                 fc = "".join(f"[{i}:v]scale=1920:1080,setsar=1,fps=30[v{i}];" for i in range(len(parts)))
                 fc += "".join(f"[v{i}]" for i in range(len(parts))) + f"concat=n={len(parts)}:v=1:a=0[v]"
                 run(cmd + ["-filter_complex", fc, "-map", "[v]", "-c:v", "libx264", "-crf", "16", "-preset", "fast", "-an", base + ".mp4"])
+            elif m.get("usgs_page"):
+                run([PY, "shorts_tool/usgs_fetch.py", m["usgs_page"], base])
             elif m.get("nasa_id"):
                 run([PY, "shorts_tool/nasa_fetch.py", m["nasa_id"], base, "1200"])
             else:

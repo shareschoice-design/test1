@@ -1,0 +1,21 @@
+{
+ "source": "USGS (public domain)",
+ "page": "https://www.usgs.gov/media/videos/halemaumau-eruption-sampling-june-7-2023 ; https://www.usgs.gov/media/videos/august-25-2026-sampling-a-discontinuous-lava-flow-episode-54-kilauea-summit",
+ "file": "edit",
+ "title": "HVO geologists sample lava at Kilauea (2023, 2026)",
+ "credit": "USGS (K. Mulliken, M. Cappos)",
+ "description": "During the morning of June 7, Hawaiian Volcano Observatory geologists scouted the perimeter of Halema\u02bbuma\u02bbu crater floor for a location to sample lava erupted by new vents that opened that morning. Initial lava flows inundated the crater floor and although the lava flows on the perimeter were solid by the time geologists arrived, they were still hot to touch. Access to this hazardous area is by permission from, and in coordination with, Hawai\u02bbi Volcanoes National Park. The eruption is occurring within Halema\u02bbuma\u02bbu, a location that is significant to Native Hawaiian communities as it is the home of the deity Pele. USGS video by K. Mulliken.\n\nOn a K\u012blauea summit monitoring overflight at 8:45 a.m. HST on August 25, 2026, USGS Hawaiian Volcano Observatory staff sampled a molten lava flow in Halema\u2018uma\u2018u. This p\u0101hoehoe flow was from discontinuous overflows during dome fountaining prior to episode 54 fountaining, which started a few hours later at 10:30 a.m. HST. Sampling in this culturally significant location is done with permission from Hawai\u2018i Volcanoes National Park. Studying samples of the overflows is important for understanding how the lava fountaining begins after days to weeks of repose. USGS video by M. Cappos.",
+ "note": "USGS public domain; credit USGS.",
+ "compose": [
+  [
+   "usgs:https://www.usgs.gov/media/videos/halemaumau-eruption-sampling-june-7-2023",
+   14,
+   92
+  ],
+  [
+   "usgs:https://www.usgs.gov/media/videos/august-25-2026-sampling-a-discontinuous-lava-flow-episode-54-kilauea-summit",
+   0,
+   27
+  ]
+ ]
+}

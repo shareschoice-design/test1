@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Lava swallowed this bay",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "June 4, 2018. Kapoho Bay, Hawaii.",
+   "hl": [
+    "hawaii"
+   ],
+   "shots": [
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.777
+    },
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.817
+    }
+   ]
+  },
+  {
+   "vo": "Lava from Kilauea has been pouring into the ocean all night.",
+   "hl": [
+    "ocean"
+   ],
+   "shots": [
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.263
+    },
+    {
+     "card": {
+      "file": "kapoho_ocean_entry",
+      "pos": 0.325,
+      "big": "\u00bd",
+      "small": "MILE-WIDE LAVA FRONT"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "The flow front is half a mile wide.",
+   "hl": [
+    "half"
+   ],
+   "shots": [
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.387
+    },
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.448
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Seawater boils into toxic clouds of laze.",
+   "hl": [
+    "laze"
+   ],
+   "shots": [
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.51
+    },
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.572
+    }
+   ]
+  },
+  {
+   "vo": "Lava builds new land hundreds of yards into the bay.",
+   "hl": [
+    "land"
+   ],
+   "shots": [
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.633
+    },
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.695
+    }
+   ]
+  },
+  {
+   "vo": "By afternoon, the bay is almost completely filled.",
+   "hl": [
+    "filled"
+   ],
+   "shots": [
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.757
+    },
+    {
+     "file": "kapoho_ocean_entry",
+     "pos": 0.818
+    }
+   ]
+  }
+ ]
+}

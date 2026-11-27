@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Their job? Collect lava.",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "Kilauea volcano, Hawaii. A new eruption starts.",
+   "hl": [
+    "eruption"
+   ],
+   "shots": [
+    {
+     "file": "lava_scientists",
+     "pos": 0.324
+    },
+    {
+     "file": "lava_scientists",
+     "pos": 0.364
+    }
+   ]
+  },
+  {
+   "vo": "USGS geologists walk out onto the fresh lava.",
+   "hl": [
+    "geologists"
+   ],
+   "shots": [
+    {
+     "file": "lava_scientists",
+     "pos": 0.18
+    },
+    {
+     "file": "lava_scientists",
+     "pos": 0.26
+    }
+   ]
+  },
+  {
+   "vo": "The ground is solid. But still hot to the touch.",
+   "hl": [
+    "hot"
+   ],
+   "shots": [
+    {
+     "file": "lava_scientists",
+     "pos": 0.34
+    },
+    {
+     "file": "lava_scientists",
+     "pos": 0.42
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "They search for the perfect spot to take a sample.",
+   "hl": [
+    "sample"
+   ],
+   "shots": [
+    {
+     "file": "lava_scientists",
+     "pos": 0.5
+    },
+    {
+     "card": {
+      "file": "lava_scientists",
+      "pos": 0.58,
+      "big": "1",
+      "small": "SAMPLE AT A TIME"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Years later, they sample lava that's still molten.",
+   "hl": [
+    "molten"
+   ],
+   "shots": [
+    {
+     "file": "lava_scientists",
+     "pos": 0.66
+    },
+    {
+     "file": "lava_scientists",
+     "pos": 0.74
+    }
+   ]
+  },
+  {
+   "vo": "Every sample helps them understand the next eruption.",
+   "hl": [
+    "next"
+   ],
+   "shots": [
+    {
+     "file": "lava_scientists",
+     "pos": 0.82
+    },
+    {
+     "file": "lava_scientists",
+     "pos": 0.9
+    }
+   ]
+  }
+ ]
+}

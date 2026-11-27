@@ -1,0 +1,7 @@
+{"file":"lava_scientists","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Their job? Collect lava.",2],"range":[0.02,0.98],"lines":[
+["Kilauea volcano, Hawaii. A new eruption starts.",["eruption"],null],
+["USGS geologists walk out onto the fresh lava.",["geologists"],null],
+["The ground is solid. But still hot to the touch.",["hot"],"Then..."],
+["They search for the perfect spot to take a sample.",["sample"],null,["1","SAMPLE AT A TIME"]],
+["Years later, they sample lava that's still molten.",["molten"],null],
+["Every sample helps them understand the next eruption.",["next"],null]]}

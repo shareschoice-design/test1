@@ -1711,3 +1711,60 @@ Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 –
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 91. hd_kapoho_ocean_entry
+**Title:** Lava swallowed this bay 🌊
+
+**Description:**
+```
+June 4, 2018. Kapoho Bay, Hawaii. Lava from Kilauea has been pouring into the ocean all night. The flow front is half a mile wide. Seawater boils into toxic clouds of laze. Lava builds new land hundreds of yards into the bay. By afternoon, the bay is almost completely filled.
+
+Would you have done the same? 👇
+
+Real footage: "Kīlauea Volcano — Video Compilation of Kapoho Bay Ocean Entry" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/kilauea-volcano-video-compilation-kapoho-bay-ocean-entry
+USGS does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 92. hd_kilauea_ep45
+**Title:** An 870-foot fountain of lava 😳
+
+**Description:**
+```
+April 23, 2026. Kilauea volcano, Hawaii. Just after 1 a.m., the north vent erupts. Lava shoots about 870 feet into the air. Rivers of molten rock spread across the crater. It lasts eight and a half hours. And it was episode 45 of this eruption.
+
+Would you have done the same? 👇
+
+Real footage: "April 24, 2026 — Video highlights of episode 45 lava fountaining at Kīlauea summit" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/april-24-2026-video-highlights-episode-45-lava-fountaining-kilauea-summit
+USGS does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 93. hd_lava_scientists
+**Title:** Their job? Collect lava. 🌊
+
+**Description:**
+```
+Kilauea volcano, Hawaii. A new eruption starts. USGS geologists walk out onto the fresh lava. The ground is solid. But still hot to the touch. They search for the perfect spot to take a sample. Years later, they sample lava that's still molten. Every sample helps them understand the next eruption.
+
+Would you have done the same? 👇
+
+Real footage: "HVO geologists sample lava at Kilauea (2023, 2026)" – USGS (public domain), USGS (K. Mulliken, M. Cappos)
+https://www.usgs.gov/media/videos/halemaumau-eruption-sampling-june-7-2023 ; https://www.usgs.gov/media/videos/august-25-2026-sampling-a-discontinuous-lava-flow-episode-54-kilauea-summit
+USGS does not endorse this channel or video.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

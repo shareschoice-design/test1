@@ -11,6 +11,10 @@ for name in sys.argv[1:]:
         src_block = f"""Real footage: "{meta['title']}" – courtesy NASA ({meta.get('credit','NASA')})
 {meta['page']}
 NASA does not endorse this channel or video."""
+    elif "USGS" in meta.get("source", ""):
+        src_block = f"""Real footage: "{meta['title']}" – USGS (public domain), {meta.get('credit','USGS')}
+{meta['page']}
+USGS does not endorse this channel or video."""
     else:
         src_block = f"""Real footage: "{meta['title']}" – DVIDS (public domain)
 {meta['page']}

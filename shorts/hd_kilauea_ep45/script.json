@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "An 870-foot fountain of lava",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "April 23, 2026. Kilauea volcano, Hawaii.",
+   "hl": [
+    "kilauea"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.663
+    },
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.703
+    }
+   ]
+  },
+  {
+   "vo": "Just after 1 a.m., the north vent erupts.",
+   "hl": [
+    "erupts"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.18
+    },
+    {
+     "card": {
+      "file": "kilauea_ep45_highlights",
+      "pos": 0.26,
+      "big": "870",
+      "small": "FOOT LAVA FOUNTAIN"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Lava shoots about 870 feet into the air.",
+   "hl": [
+    "870"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.34
+    },
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.42
+    }
+   ],
+   "label": "Look..."
+  },
+  {
+   "vo": "Rivers of molten rock spread across the crater.",
+   "hl": [
+    "rivers"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.5
+    },
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.58
+    }
+   ]
+  },
+  {
+   "vo": "It lasts eight and a half hours.",
+   "hl": [
+    "eight"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.66
+    },
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.74
+    }
+   ]
+  },
+  {
+   "vo": "And it was episode 45 of this eruption.",
+   "hl": [
+    "45"
+   ],
+   "shots": [
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.82
+    },
+    {
+     "file": "kilauea_ep45_highlights",
+     "pos": 0.9
+    }
+   ]
+  }
+ ]
+}

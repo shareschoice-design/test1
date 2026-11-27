@@ -994,6 +994,26 @@
   ]
  },
  {
+  "footage": "kapoho_ocean_entry",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/kilauea-volcano-video-compilation-kapoho-bay-ocean-entry",
+  "title": "K\u012blauea Volcano \u2014 Video Compilation of Kapoho Bay Ocean Entry",
+  "event": [
+   "jun-04",
+   [
+    "kapoho bay"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_kapoho_ocean_entry",
+    "hook": "Lava swallowed this bay",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "kauai_cargo_ship",
   "dir": "footage/hd",
   "dvids_id": "998677",
@@ -1031,6 +1051,29 @@
    {
     "name": "hd_kennedy_bald_eagles",
     "hook": "Bald eagles at a rocket base",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "kilauea_ep45_highlights",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/april-24-2026-video-highlights-episode-45-lava-fountaining-kilauea-summit",
+  "title": "April 24, 2026 \u2014 Video highlights of episode 45 lava fountaining at K\u012blauea summit",
+  "event": [
+   "apr-24",
+   [
+    "halema",
+    "hawai",
+    "hawaii",
+    "kilauea"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_kilauea_ep45",
+    "hook": "An 870-foot fountain of lava",
     "rendered": true
    }
   ]
@@ -1113,6 +1156,27 @@
     "name": "hd_lake_michigan_one",
     "hook": "Emergency on the lake",
     "rejected": true
+   }
+  ]
+ },
+ {
+  "footage": "lava_scientists",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/halemaumau-eruption-sampling-june-7-2023 ; https://www.usgs.gov/media/videos/august-25-2026-sampling-a-discontinuous-lava-flow-episode-54-kilauea-summit",
+  "title": "HVO geologists sample lava at Kilauea (2023, 2026)",
+  "event": [
+   "jun-07",
+   [
+    "halema",
+    "kilauea"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_lava_scientists",
+    "hook": "Their job? Collect lava.",
+    "rendered": true
    }
   ]
  },
