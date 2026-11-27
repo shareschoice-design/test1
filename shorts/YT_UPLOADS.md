@@ -1768,3 +1768,79 @@ Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 94. hd_f8_lava_river
+**Title:** A river of lava at 15 mph 😳
+
+**Description:**
+```
+July 14, 2018. Kilauea's fissure 8, Hawaii. Lava pours out of a 120-foot cinder cone. It rushes over rapids at 13 to 16 miles per hour. Into a channel up to 50 feet above the ground. The river runs about 8 miles to the ocean. A drone filmed it from about 1,000 feet up.
+
+Would you have done the same? 👇
+
+Real footage: "July 14, 2018, Kīlauea fissure 8 video captured by UAS" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/july-14-2018-kilauea-fissure-8-video-captured-uas
+USGS does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 95. hd_lava_whirlwind
+**Title:** A whirlwind made of lava 😳
+
+**Description:**
+```
+June 30, 2018. Leilani Estates, Hawaii. Scientists are watching a lava channel at night. Suddenly, the air above it starts spinning. The whirlwind sucks up molten lava… …and flings it meters away. After about 10 minutes, it stops. No warning.
+
+Would you have done the same? 👇
+
+Real footage: "Kīlauea Volcano — Whirlwind Above Fissure 8" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/kilauea-volcano-whirlwind-above-fissure-8
+USGS does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 96. hd_leilani_fountain
+**Title:** A volcano opened in their neighborhood 😳
+
+**Description:**
+```
+May 2018. Leilani Estates, Hawaii. A crack opens right inside a neighborhood. Fissure 8. Lava fountains shoot more than 200 feet high. At night, the whole sky glows red. The fountain builds a cone over 100 feet tall. Chilled lava rocks rain down on the streets.
+
+Would you have done the same? 👇
+
+Real footage: "Fissure 8 lava fountains in Leilani Estates (2018)" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-video-compilation ; https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-lava-fountaining
+USGS does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 97. hd_uas_aid_rescue
+**Title:** Follow the drone to safety 🧡
+
+**Description:**
+```
+May 27, 2018. Leilani Estates, Hawaii. A fast lava flow races down a street toward homes. Then a radio call: a man is trapped at his house. A USGS drone team flies over to find him. He's told: follow the drone to safety. About 10 minutes later, rescuers reach him.
+
+Would you have done the same? 👇
+
+Real footage: "Kīlauea Volcano - UAS Mission Aid in Rescue" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/kilauea-volcano-uas-mission-aid-rescue
+USGS does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

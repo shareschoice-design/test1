@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "A whirlwind made of lava",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "June 30, 2018. Leilani Estates, Hawaii.",
+   "hl": [
+    "hawaii"
+   ],
+   "shots": [
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.58
+    },
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.62
+    }
+   ]
+  },
+  {
+   "vo": "Scientists are watching a lava channel at night.",
+   "hl": [
+    "night"
+   ],
+   "shots": [
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.22
+    },
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.29
+    }
+   ]
+  },
+  {
+   "vo": "Suddenly, the air above it starts spinning.",
+   "hl": [
+    "spinning"
+   ],
+   "shots": [
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.36
+    },
+    {
+     "card": {
+      "file": "whirlwind_fissure8_b",
+      "pos": 0.43,
+      "big": "10",
+      "small": "MINUTES OF SPINNING LAVA"
+     }
+    }
+   ],
+   "label": "Look..."
+  },
+  {
+   "vo": "The whirlwind sucks up molten lava\u2026",
+   "hl": [
+    "molten"
+   ],
+   "shots": [
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.5
+    },
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.57
+    }
+   ]
+  },
+  {
+   "vo": "\u2026and flings it meters away.",
+   "hl": [
+    "flings"
+   ],
+   "shots": [
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.64
+    },
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.71
+    }
+   ]
+  },
+  {
+   "vo": "After about 10 minutes, it stops. No warning.",
+   "hl": [
+    "warning"
+   ],
+   "shots": [
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.78
+    },
+    {
+     "file": "whirlwind_fissure8_b",
+     "pos": 0.85
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "A volcano opened in their neighborhood",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "May 2018. Leilani Estates, Hawaii.",
+   "hl": [
+    "hawaii"
+   ],
+   "shots": [
+    {
+     "file": "leilani_fountain",
+     "pos": 0.187
+    },
+    {
+     "file": "leilani_fountain",
+     "pos": 0.227
+    }
+   ]
+  },
+  {
+   "vo": "A crack opens right inside a neighborhood. Fissure 8.",
+   "hl": [
+    "neighborhood"
+   ],
+   "shots": [
+    {
+     "file": "leilani_fountain",
+     "pos": 0.165
+    },
+    {
+     "card": {
+      "file": "leilani_fountain",
+      "pos": 0.247,
+      "big": "200+",
+      "small": "FOOT LAVA FOUNTAIN"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "Lava fountains shoot more than 200 feet high.",
+   "hl": [
+    "200"
+   ],
+   "shots": [
+    {
+     "file": "leilani_fountain",
+     "pos": 0.33
+    },
+    {
+     "file": "leilani_fountain",
+     "pos": 0.413
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "At night, the whole sky glows red.",
+   "hl": [
+    "red"
+   ],
+   "shots": [
+    {
+     "file": "leilani_fountain",
+     "pos": 0.495
+    },
+    {
+     "file": "leilani_fountain",
+     "pos": 0.578
+    }
+   ]
+  },
+  {
+   "vo": "The fountain builds a cone over 100 feet tall.",
+   "hl": [
+    "cone"
+   ],
+   "shots": [
+    {
+     "file": "leilani_fountain",
+     "pos": 0.66
+    },
+    {
+     "file": "leilani_fountain",
+     "pos": 0.743
+    }
+   ]
+  },
+  {
+   "vo": "Chilled lava rocks rain down on the streets.",
+   "hl": [
+    "streets"
+   ],
+   "shots": [
+    {
+     "file": "leilani_fountain",
+     "pos": 0.825
+    },
+    {
+     "file": "leilani_fountain",
+     "pos": 0.908
+    }
+   ]
+  }
+ ]
+}

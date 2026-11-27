@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "A river of lava at 15 mph",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "July 14, 2018. Kilauea's fissure 8, Hawaii.",
+   "hl": [
+    "hawaii"
+   ],
+   "shots": [
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.235
+    },
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.275
+    }
+   ]
+  },
+  {
+   "vo": "Lava pours out of a 120-foot cinder cone.",
+   "hl": [
+    "cone"
+   ],
+   "shots": [
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.175
+    },
+    {
+     "card": {
+      "file": "f8_uas_jul14",
+      "pos": 0.247,
+      "big": "13-16",
+      "small": "MPH LAVA RIVER"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "It rushes over rapids at 13 to 16 miles per hour.",
+   "hl": [
+    "rapids"
+   ],
+   "shots": [
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.32
+    },
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.392
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "Into a channel up to 50 feet above the ground.",
+   "hl": [
+    "channel"
+   ],
+   "shots": [
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.465
+    },
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.537
+    }
+   ]
+  },
+  {
+   "vo": "The river runs about 8 miles to the ocean.",
+   "hl": [
+    "ocean"
+   ],
+   "shots": [
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.61
+    },
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.682
+    }
+   ]
+  },
+  {
+   "vo": "A drone filmed it from about 1,000 feet up.",
+   "hl": [
+    "drone"
+   ],
+   "shots": [
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.755
+    },
+    {
+     "file": "f8_uas_jul14",
+     "pos": 0.828
+    }
+   ]
+  }
+ ]
+}

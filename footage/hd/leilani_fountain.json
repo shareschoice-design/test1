@@ -1,0 +1,31 @@
+{
+ "source": "USGS (public domain)",
+ "page": "https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-video-compilation ; https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-lava-fountaining",
+ "file": "edit",
+ "title": "Fissure 8 lava fountains in Leilani Estates (2018)",
+ "credit": "USGS",
+ "description": "Video of fissure 8 on K\u012blauea Volcano's lower East Rift Zone on May 30, 2018. Fountain heights exceeded 200 feet and secondary fountains reached heights of 60 feet. The second video looks down Kupono Street, just south of Leilani Street, in the Leilani Estates subdivision, where chilled rock from the fissure 8 fountain have fallen.\n\nThe fissure 8 lava fountain height has diminished. Previously, fountain heights reached a sustained 260 ft. During the overnight hours of June 4-5, fluctuating heights were measured at about 100 to 160 ft. The fountain is partially obscured by a cone built by lava spatter, which is about 115 ft high. View from Nohea and Leilani Streets, in the Leilani Estates subdivision.",
+ "note": "USGS public domain; credit USGS.",
+ "compose": [
+  [
+   "usgs:https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-video-compilation",
+   6,
+   18
+  ],
+  [
+   "usgs:https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-lava-fountaining",
+   8,
+   13
+  ],
+  [
+   "usgs:https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-lava-fountaining",
+   26,
+   14
+  ],
+  [
+   "usgs:https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-video-compilation",
+   26,
+   30
+  ]
+ ]
+}

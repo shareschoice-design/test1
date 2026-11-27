@@ -622,6 +622,24 @@
   ]
  },
  {
+  "footage": "f8_uas_jul14",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/july-14-2018-kilauea-fissure-8-video-captured-uas",
+  "title": "July 14, 2018, K\u012blauea fissure 8 video captured by UAS",
+  "event": [
+   "jul-14",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_f8_lava_river",
+    "hook": "A river of lava at 15 mph",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "flood_two_dogs_texas",
   "dir": "footage/hd",
   "dvids_id": "1015195",
@@ -1176,6 +1194,26 @@
    {
     "name": "hd_lava_scientists",
     "hook": "Their job? Collect lava.",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "leilani_fountain",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-video-compilation ; https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-lava-fountaining",
+  "title": "Fissure 8 lava fountains in Leilani Estates (2018)",
+  "event": [
+   "may-30",
+   [
+    "leilani estates"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_leilani_fountain",
+    "hook": "A volcano opened in their neighborhood",
     "rendered": true
    }
   ]
@@ -1952,6 +1990,26 @@
   ]
  },
  {
+  "footage": "uas_aid_rescue",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/kilauea-volcano-uas-mission-aid-rescue",
+  "title": "K\u012blauea Volcano - UAS Mission Aid in Rescue",
+  "event": [
+   "may-27",
+   [
+    "rescue"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_uas_aid_rescue",
+    "hook": "Follow the drone to safety",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "veterans_day_fisherman",
   "dir": "footage/hd",
   "dvids_id": "943421",
@@ -2044,6 +2102,24 @@
     "name": "hd_wave_capsizes_astoria",
     "hook": "One wave flipped it",
     "rejected": true
+   }
+  ]
+ },
+ {
+  "footage": "whirlwind_fissure8_b",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/kilauea-volcano-whirlwind-above-fissure-8",
+  "title": "K\u012blauea Volcano \u2014 Whirlwind Above Fissure 8",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_lava_whirlwind",
+    "hook": "A whirlwind made of lava",
+    "rendered": true
    }
   ]
  },

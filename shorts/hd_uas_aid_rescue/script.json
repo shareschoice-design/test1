@@ -1,0 +1,124 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Follow the drone to safety",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "May 27, 2018. Leilani Estates, Hawaii.",
+   "hl": [
+    "hawaii"
+   ],
+   "shots": [
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.36
+    },
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.4
+    }
+   ]
+  },
+  {
+   "vo": "A fast lava flow races down a street toward homes.",
+   "hl": [
+    "lava"
+   ],
+   "shots": [
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.38
+    },
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.405
+    }
+   ]
+  },
+  {
+   "vo": "Then a radio call: a man is trapped at his house.",
+   "hl": [
+    "trapped"
+   ],
+   "shots": [
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.43
+    },
+    {
+     "card": {
+      "file": "uas_aid_rescue",
+      "pos": 0.455,
+      "big": "1",
+      "small": "MAN TRAPPED BY LAVA"
+     }
+    }
+   ],
+   "label": "Then..."
+  },
+  {
+   "vo": "A USGS drone team flies over to find him.",
+   "hl": [
+    "drone"
+   ],
+   "shots": [
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.48
+    },
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.505
+    }
+   ]
+  },
+  {
+   "vo": "He's told: follow the drone to safety.",
+   "hl": [
+    "follow"
+   ],
+   "shots": [
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.53
+    },
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.555
+    }
+   ]
+  },
+  {
+   "vo": "About 10 minutes later, rescuers reach him.",
+   "hl": [
+    "rescuers"
+   ],
+   "shots": [
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.58
+    },
+    {
+     "file": "uas_aid_rescue",
+     "pos": 0.605
+    }
+   ]
+  }
+ ],
+ "avoid": {
+  "uas_aid_rescue": [
+   [
+    0,
+    35
+   ],
+   [
+    68,
+    110
+   ]
+  ]
+ }
+}
