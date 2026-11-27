@@ -11,6 +11,14 @@ for name in sys.argv[1:]:
         src_block = f"""Real footage: "{meta['title']}" – courtesy NASA ({meta.get('credit','NASA')})
 {meta['page']}
 NASA does not endorse this channel or video."""
+    elif "NOAA" in meta.get("source", ""):
+        src_block = f"""Real footage: "{meta['title']}" – NOAA (public domain), {meta.get('credit','NOAA')}
+{meta['page']}
+NOAA does not endorse this channel or video."""
+    elif "NPS" in meta.get("source", "") or "National Park Service" in meta.get("source", ""):
+        src_block = f"""Real footage: "{meta['title']}" – National Park Service (public domain)
+{meta['page']}
+NPS does not endorse this channel or video."""
     elif "USGS" in meta.get("source", ""):
         src_block = f"""Real footage: "{meta['title']}" – USGS (public domain), {meta.get('credit','USGS')}
 {meta['page']}

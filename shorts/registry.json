@@ -1398,6 +1398,52 @@
   ]
  },
  {
+  "footage": "noaa_eye_flights",
+  "dir": "footage/hd",
+  "dvids_id": "https://commons.wikimedia.org/wiki/File:First_pass_through_the_eye_of_-HurricaneHarvey_in_WP-3D_Orion_-NOAA42_Credi....webm ; https://commons.wikimedia.org/wiki/File:Although_most_of_our_Hurricane_-Irma_flight_videos_display_the_unique_turbule....webm",
+  "title": "NOAA42 'Kermit' flights into the eyes of Hurricanes Harvey and Irma (2017)",
+  "event": [
+   "",
+   [
+    "wp"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_noaa_eye_flights",
+    "hook": "Flying INTO the eye of a hurricane",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "noaa_harvey",
+  "dir": "footage/hd",
+  "dvids_id": "https://commons.wikimedia.org/wiki/File:First_pass_through_the_eye_of_-HurricaneHarvey_in_WP-3D_Orion_-NOAA42_Credi....webm",
+  "title": "First pass through the eye of -HurricaneHarvey in WP-3D Orion -NOAA42 Credi...",
+  "event": [
+   "",
+   [
+    "wp"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": []
+ },
+ {
+  "footage": "noaa_irma",
+  "dir": "footage/hd",
+  "dvids_id": "https://commons.wikimedia.org/wiki/File:Although_most_of_our_Hurricane_-Irma_flight_videos_display_the_unique_turbule....webm",
+  "title": "Although most of our Hurricane -Irma flight videos display the unique turbule...",
+  "event": [
+   "",
+   []
+  ],
+  "tier": "hd",
+  "shorts": []
+ },
+ {
   "footage": "north_bend_boat_fire",
   "dir": "footage/hd",
   "dvids_id": "857525",

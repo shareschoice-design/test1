@@ -38,6 +38,9 @@ for name in specs:
         if not os.path.exists(foot):
             m = json.load(open(meta))
             base = os.path.join("footage", "hd", spec["file"])
+            if m.get("manual_parts"):     # Wikimedia blocks scripted downloads: use the finished mp4 sent in chat instead
+                print(f"   -- {name}: footage must be downloaded by hand ({', '.join(m['manual_parts'])}); copy the finished {name}.mp4 into {OUT}")
+                continue
             if m.get("compose"):            # edit of several NASA clips: [[nasa_id, start_s, dur_s], ...]
                 parts = []
                 for i, (nid, ss, t) in enumerate(m["compose"]):

@@ -1,0 +1,7 @@
+{"file":"noaa_eye_flights","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["Flying INTO the eye of a hurricane",3],"range":[0.0,0.99],"lines":[
+["2017. A NOAA hurricane hunter plane nicknamed Kermit.",["kermit"],null],
+["Its crew flies straight into the storm on purpose.",["purpose"],null,["NOAA42","'KERMIT'"]],
+["Turbulence. Rain. Then the wall of Hurricane Harvey.",["harvey"],"Then..."],
+["They punch through into the eye.",["eye"],null],
+["Weeks later, Kermit flies into Hurricane Irma.",["irma"],null],
+["Inside the eye: blue sky, surrounded by a wall of clouds.",["blue"],null]]}
