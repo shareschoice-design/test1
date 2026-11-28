@@ -6,146 +6,150 @@
 | 2 | hd_artemis2_launch | Four humans. Headed for the Moon. | artemis2_launch | https://images.nasa.gov/details/KSC%20ART%20II%20Cause%20Way%20Launch%20low%20angle | apr-01 | hd | rendered |
 | 3 | hd_artemis2_return | Coming home from the Moon | artemis2_return | https://images.nasa.gov/details/KSC-20260410-MH-JBP01-0001-Artemis_II_Splashdown_GSS_Visual_60fps-M19183 ; https://images.nasa.gov/details/GP011149 | apr-10 | hd | rendered |
 | 4 | hd_astro_class_2021 | What it takes to become an astronaut | astro_class_2021 | https://images.nasa.gov/details/jsc2024m000078_2021_Astronaut_Candidate_Class_Resource_Reel-4K-240228-MP4 | dec-20 | hd | rendered |
-| 5 | hd_aw302_return | They waited months for this | aw302_return | 991185 | mar-07 | hd | rendered |
-| 6 | hd_baboquivari_woman | Trapped on a mountain | baboquivari_woman | 886085 | jun-05 | hd | rendered |
-| 7 | hd_bandon_woman | Hurt at Face Rock | bandon_woman | 850237 | jul-13 | hd | rendered |
-| 8 | hd_barnegat_kite_surfer | His line got tangled | barnegat_kite_surfer | 895646 | aug-31 | hd | rendered |
-| 9 | hd_big_sur_two | Stranded off Big Sur | big_sur_two | 899380 | aug-27 | hd | rendered |
-| 10 | hd_bole_dm1_test | 15 seconds before the end… | bole_dm1_test | https://images.nasa.gov/details/MSFC-NG-06262025_DM-1_Static%20Test%20at%20Northrop%20Grumman | jun-26 | hd | rendered |
-| 11 | hd_boy_cruise_ship | An 11-year-old in trouble | boy_cruise_ship | 1015403 | jul-11 | hd | REJECTED |
-| 12 | hd_canada_dogs | They found the other dog | canada_man_two_dogs | 869765 | dec-28 | hd | rendered |
-| 13 | hd_cat_island_dogs | Two people. Two dogs. | cat_island_dogs | 957082 | mar-29 | hd | REJECTED |
-| 14 | hd_clearwater_vessel_fire | 100 miles out. On fire. | clearwater_vessel_fire | 990311 |  | hd | rendered |
-| 15 | hd_crew9_ellington | Planned 8 days. Stayed 286. | crew9_ellington | https://images.nasa.gov/details/jsc2025m000025-NASA%E2%80%99s_SpaceX_Crew-9_Return_to_Ellington_Field_4K60_53Mbps | mar-18 | hd | rendered |
-| 16 | hd_cruise_boy_eureka | An 8-year-old needs help at sea | cruise_boy_eureka | 937823 | sep-24 | hd | rendered |
-| 17 | hd_cruise_shelter_cove | Lifted off a cruise ship | cruise_shelter_cove | 1005147 | may-02 | hd | rendered |
-| 18 | hd_cubans_water_cay | Stranded on a tiny island | cubans_water_cay | 860811 | oct-12 | hd | rendered |
-| 19 | hd_de_gallant_schooner | A storm sank their ship | de_gallant_schooner | 924883 | may-21 | hd | rendered |
-| 20 | hd_debby_adrift_boaters | They lost their sail | debby_adrift_boaters | 932811 | aug-04 | hd | rendered |
-| 21 | hd_deschutes_hikers_dog | They didn't leave the dog | deschutes_hikers_dog | 927914 | jun-16 | hd | rendered |
-| 22 | hd_devils_slide_hiker | Hurt on Devil's Slide | devils_slide_hiker | 1003354 | apr-19 | hd | rendered |
-| 23 | hd_dog_fell_cliff | Their dog fell off a cliff | dog_fell_cliff | 909793 | jan-01 | hd | rendered |
-| 24 | hd_dog_in_container | Something was scratching | dog_in_container | 912242 | jan-31 | hd | rendered |
-| 25 | hd_earth_views_4k | This is the view from 250 miles up | earth_views_4k | https://images.nasa.gov/details/jsc2021m000138_4K_Earth_Views_Extended_Cut_for_Earth_Day_%202021_210422-4KMP4 |  | hd | rendered |
-| 26 | hd_eels_snake_robot | NASA built a robot snake | eels_snake_robot | https://images.nasa.gov/details/JPL-20240508-EELSf-0001-EELS%20Media%20Reel |  | hd | rendered |
-| 27 | hd_egmont_key_five | Their boat sank | egmont_key_five | 990054 |  | hd | REJECTED |
-| 28 | hd_el_paso_cliff_fall | He fell off a cliff | el_paso_cliff_fall | 975581 | aug-30 | hd | rendered |
-| 29 | hd_er2_snowstorms | 65,000 feet. In a pressure suit. | er2_snowstorms | https://images.nasa.gov/details/AFRC_2023_13906_01_ER2_IMPACTS_BROLL_4KMASTER |  | hd | rendered |
-| 30 | hd_europa_clipper_launch | Next stop: Jupiter | europa_clipper_launch | https://images.nasa.gov/details/KSC-20241014-MH-AJN01-0001-SpaceX_Europa_Clipper_Isolated_Launch_Views-M9336 | oct-14 | hd | rendered |
-| 31 | hd_f8_lava_river | A river of lava at 15 mph | f8_uas_jul14 | https://www.usgs.gov/media/videos/july-14-2018-kilauea-fissure-8-video-captured-uas | jul-14 | hd | rendered |
-| 32 | hd_flood_two_dogs_texas | Left behind in the flood | flood_two_dogs_texas | 1015195 | jul-17 | hd | REJECTED |
-| 33 | hd_florida_plane_crash | Their plane went down | florida_11_survivors | 1006722 | may-12 | hd | rendered |
-| 34 | hd_ford_sailors_reunite | 8 months at sea | ford_sailors_reunite | 910593 | jan-17 | hd | rendered |
-| 35 | hd_fort_stewart_homecoming | They're finally home | fort_stewart_homecoming | 923848 | may-15 | hd | rendered |
-| 36 | hd_gasparilla_disabled_boat | Stranded on old railroad tracks | gasparilla_disabled_boat | 938214 | sep-27 | hd | rendered |
-| 37 | hd_hagen_fire_buckets | 44 drops in one day | hagen_fire_buckets | 1016990 | jul-29 | hd | rendered |
-| 38 | hd_hatteras_family_pets | Rescued with their pets | hatteras_family_pets | 992017 | dec-30 | hd | rendered |
-| 39 | hd_hawaii_captain | Medicine dropped from the sky | hawaii_captain | 961814 | may-07 | hd | rendered |
-| 40 | hd_helene_hurricane_hunters | They fly INTO hurricanes | helene_hurricane_hunters | 938029 | sep-25 | hd | rendered |
-| 41 | hd_helene_man_dog | Him and his dog | helene_man_dog | 938235 | sep-26 | hd | rendered |
-| 42 | hd_high_altitude_hiker | A night alone on the mountain | high_altitude_hiker | 878686 | apr-04 | hd | rendered |
-| 43 | hd_holiday_reunion | Home for the holidays | holiday_reunion | 991596 |  | hd | rendered |
-| 44 | hd_hsc26_homecoming | Ten months away | hsc26_homecoming | 1009525 | jun-05 | hd | rendered |
-| 45 | hd_jetty_st_lucie | Stuck on the rocks | jetty_st_lucie | 947469 | dec-15 | hd | rendered |
-| 46 | hd_jon_boat_st_augustine | His family reported him missing | jon_boat_st_augustine | 892771 | aug-05 | hd | rendered |
-| 47 | hd_jumped_sinking_vessel | They had to jump | jumped_sinking_vessel | 864947 | nov-17 | hd | rendered |
-| 48 | hd_k9_medevac_kfor | When the hero is a dog | k9_medevac_kfor | 1002031 | mar-17 | hd | rendered |
-| 49 | hd_k9_simba_hoist | This dog flies to work | k9_simba_hoist | 889689 | may-18 | hd | rendered |
-| 50 | hd_kapoho_ocean_entry | Lava swallowed this bay | kapoho_ocean_entry | https://www.usgs.gov/media/videos/kilauea-volcano-video-compilation-kapoho-bay-ocean-entry | jun-04 | hd | rendered |
-| 51 | hd_kauai_cargo_ship | 100 miles out. Severe pain. | kauai_cargo_ship | 998677 | mar-03 | hd | rendered |
-| 52 | hd_kennedy_bald_eagles | Bald eagles at a rocket base | kennedy_bald_eagles | https://images.nasa.gov/details/KSC-20260313-MH-JBS01-0001-Wildlife_Video_Bald_Eagles_BROLL-M19993 | mar-13 | hd | rendered |
-| 53 | hd_kilauea_ep45 | An 870-foot fountain of lava | kilauea_ep45_highlights | https://www.usgs.gov/media/videos/april-24-2026-video-highlights-episode-45-lava-fountaining-kilauea-summit | apr-24 | hd | rendered |
-| 54 | hd_kilauea_heli_fountains | 650 feet of lava from a helicopter | kilauea_heli_fountains | https://www.usgs.gov/media/videos/april-1-2025-kilauea-episode-16-lava-fountain-and-flow-video ; https://www.usgs.gov/media/videos/april-22-2025-kilauea-episode-18-lava-fountaining-video | apr-01 | hd | rendered |
-| 55 | hd_kodiak_three_men_dog | Slammed against the rocks | kodiak_three_men_dog | 884516 | dec-12 | hd | rendered |
-| 56 | hd_kodiak_two_fishermen | Their boat flipped | kodiak_two_fishermen | 949745 | jan-15 | hd | rendered |
-| 57 | hd_lake_erie_ice_floe_nine | Nine trapped on the ice | lake_erie_ice_floe_nine | 910895 | jan-22 | hd | rendered |
-| 58 | hd_lake_michigan_one | Emergency on the lake | lake_michigan_one | 970021 | jul-13 | hd | REJECTED |
-| 59 | hd_lava_scientists | Their job? Collect lava. | lava_scientists | https://www.usgs.gov/media/videos/halemaumau-eruption-sampling-june-7-2023 ; https://www.usgs.gov/media/videos/august-25-2026-sampling-a-discontinuous-lava-flow-episode-54-kilauea-summit | jun-07 | hd | rendered |
-| 60 | hd_leilani_fountain | A volcano opened in their neighborhood | leilani_fountain | https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-video-compilation ; https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-lava-fountaining | may-30 | hd | rendered |
-| 61 | hd_lost_coast_hiker | Injured on the Lost Coast | lost_coast_hiker | 1008263 | may-26 | hd | rendered |
-| 62 | hd_manzanita_cliff_hikers | The tide trapped them | manzanita_cliff_hikers | 840892 | apr-25 | hd | rendered |
-| 63 | hd_marine_runs_to_gunfire | He ran toward the gunfire | marine_runs_to_gunfire | 825973 | dec-13 | hd | REJECTED |
-| 64 | hd_minnesota_194_return | 9 months. 9 countries. | minnesota_194_return | 829974 | feb-02 | hd | rendered |
-| 65 | hd_modrite_fire | Black Hawks vs. wildfire | modrite_fire | 1015999 |  | hd | rendered |
-| 66 | hd_mount_idaho | The highest rescue ever | mount_idaho_hiker | 1015641 |  | hd | rendered |
-| 67 | hd_mwd_tomas_retires | His partner is retiring | mwd_tomas_retires | 955109 | mar-10 | hd | rendered |
-| 68 | hd_nantucket_medevac | 82 years old. 85 miles out. | nantucket_medevac | 870331 | jan-04 | hd | rendered |
-| 69 | hd_noaa_eye_flights | Flying INTO the eye of a hurricane | noaa_eye_flights | https://commons.wikimedia.org/wiki/File:First_pass_through_the_eye_of_-HurricaneHarvey_in_WP-3D_Orion_-NOAA42_Credi....webm ; https://commons.wikimedia.org/wiki/File:Although_most_of_our_Hurricane_-Irma_flight_videos_display_the_unique_turbule....webm |  | hd | rendered |
-| 70 | hd_north_bend_boat_fire | Their boat caught fire | north_bend_boat_fire | 857525 | sep-14 | hd | rendered |
-| 71 | hd_oak_hill_return | Seven months at sea | oak_hill_return | 945956 | dec-07 | hd | rendered |
-| 72 | hd_littoral_explosions | When lava hits the ocean | ocean_entry_overflight | https://www.usgs.gov/media/videos/kilauea-volcano-overflight-ocean-entry |  | hd | rendered |
-| 73 | hd_oregon_41ibct_return | A full year away | oregon_41ibct_return | 970914 | jul-19 | hd | rendered |
-| 74 | hd_oregon_park_missing_woman | Missing for days | oregon_park_missing_woman | 946398 | dec-08 | hd | rendered |
-| 75 | hd_pass_a_grille_boaters | One beacon saved them | pass_a_grille_boaters | 935954 | sep-06 | hd | rendered |
-| 76 | hd_perseverance_landing | Real footage of landing on Mars | perseverance_landing | https://images.nasa.gov/details/JPL-20210222-M2020f-0001-Perseverance%20Rover%E2%80%99s%20Descent%20and%20Touchdown%20on%20Mars | mar-20 | hd | rendered |
-| 77 | hd_puerto_rico_cliff | Stuck below a cliff | pr_cliff_two | 1000575 | mar-21 | hd | rendered |
-| 78 | hd_regatta_dauphin_island | The race went wrong | regatta_dauphin_island | 929298 | jun-28 | hd | rendered |
-| 79 | hd_roman_launch_landing | The boosters came back | roman_launch_landing | https://images.nasa.gov/details/KSC-20260830-MH-AJN01-0001-Roman_Space_Telescope_Isolated_Launch_and_Landing_Views-M26246 | aug-30 | hd | rendered |
-| 80 | hd_rosburg_flood_five | Trapped by the flood | rosburg_flood_five | 906547 | dec-05 | hd | rendered |
-| 81 | hd_sakizaya_queen | 200 miles from shore | sakizaya_queen | 954932 | mar-06 | hd | rendered |
-| 82 | hd_san_juan_two_boaters | Their boat flipped at sea | san_juan_two_boaters | 870260 | jan-04 | hd | rendered |
-| 83 | hd_sea_turtles_kennedy | These turtles flew to Florida | sea_turtles_kennedy | https://images.nasa.gov/details/KSC-20210226-MH-CSH01-0001-Rescued_Sea_Turtles_Arrival_at_LLF_Released_at_Playalinda_Beach-3269767 | feb-26 | hd | rendered |
-| 84 | hd_shark_bite_bahamas | Bitten by a shark | shark_bite_bahamas | 832060 | feb-21 | hd | rendered |
-| 85 | hd_sinking_sailboat_michigan | 300 feet down | sinking_sailboat_michigan | 925615 | may-27 | hd | rendered |
-| 86 | hd_skiff_capsizes | The weather flipped his boat | skiff_capsizes | 974186 | aug-20 | hd | rendered |
-| 87 | hd_skycrane_tamarack | 2,650 gallons in under a minute | skycrane_tamarack | 996611 |  | hd | rendered |
-| 88 | hd_sls_booster_test | Two minutes of pure fire | sls_booster_test | https://images.nasa.gov/details/MSFC_XP01_V_0133_FSB1_4K_DRONEBROLL | sep-02 | hd | rendered |
-| 89 | hd_sls_green_run | Four rocket engines. Bolted down. | sls_green_run | https://images.nasa.gov/details/SSC_2021-03-18_Hot_Fire_B-roll_4_Views | mar-18 | hd | rendered |
-| 90 | hd_sls_tank_break | NASA broke it on purpose | sls_tank_break | https://images.nasa.gov/details/MSFC_2020_XP_SLS_V_0130_PD002-Test-Case-TTF-4697%20LOX%20Tank%20Test-to-Failure%20color-1_06242020_timelapse |  | hd | rendered |
-| 91 | hd_st_helena_boater | His boat ran aground | st_helena_boater | 955640 | mar-15 | hd | rendered |
-| 92 | hd_steinhatchee_three_missing | Three men went missing | steinhatchee_three_missing | 925852 | jun-01 | hd | rendered |
-| 93 | hd_stuck_in_mud | Stuck in the mud | stuck_in_mud | 881001 | apr-25 | hd | rendered |
-| 94 | hd_swimmer_columbia_bar | He went in after him | swimmer_columbia_bar | 909520 | feb-03 | hd | rendered |
-| 95 | hd_tenth_mtn_homecoming | We missed you SO much | tenth_mtn_homecoming | 960893 |  | hd | rendered |
-| 96 | hd_terrebonne_helicopter_down | Their helicopter went down | terrebonne_helicopter_down | 868617 | dec-15 | hd | rendered |
-| 97 | hd_tucson_heatstroke | Heatstroke in the canyon | tucson_hoist_2022 | 833784 | mar-04 | hd | rendered |
-| 98 | hd_two_hunters | The flood cut them off | two_hunters | 990071 |  | hd | rendered |
-| 99 | hd_tybee_three_2025 | Their boat ran aground | tybee_three_2025 | 957890 | apr-05 | hd | REJECTED |
-| 100 | hd_tybee_vessel_sinks | Their boat sank | tybee_vessel_sinks | 932697 | aug-02 | hd | rendered |
-| 101 | hd_uas_aid_rescue | Follow the drone to safety | uas_aid_rescue | https://www.usgs.gov/media/videos/kilauea-volcano-uas-mission-aid-rescue | may-27 | hd | rendered |
-| 102 | hd_lava_rivers_night | Rivers of lava at night | uas_fissure22 | https://www.usgs.gov/media/videos/kilauea-volcano-uas-hovering-near-fissure-22 | may-22 | hd | rendered |
-| 103 | hd_drone_into_crater | They flew a drone into an erupting crater | uas_spatter_2025 | https://www.usgs.gov/media/videos/january-17-2025-uas-video-spattering-eruptive-vents-halemaumau | jan-17 | hd | rendered |
-| 104 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | rendered |
-| 105 | hd_virginia_helene | Their first real rescue | virginia_helene | 959865 | oct-20 | hd | rendered |
-| 106 | hd_vmm265_return | Welcome home, Daddy | vmm265_return | 973532 | aug-10 | hd | rendered |
-| 107 | hd_water_tower_collapse | They fell 60 feet | water_tower_collapse | 962453 | may-13 | hd | rendered |
-| 108 | hd_wave_capsizes_astoria | One wave flipped it | wave_capsizes_astoria | 872430 | feb-03 | hd | REJECTED |
-| 109 | hd_lava_whirlwind | A whirlwind made of lava | whirlwind_fissure8_b | https://www.usgs.gov/media/videos/kilauea-volcano-whirlwind-above-fissure-8 |  | hd | rendered |
-| 110 | hd_woman_oregon_river | Her car went into the river | woman_oregon_river | 954917 | mar-05 | hd | rendered |
-| 111 | hd_yellowstone_explosion | Yellowstone blew this boardwalk apart | yellowstone_explosion | https://www.usgs.gov/media/videos/hydrothermal-explosion-yellowstones-biscuit-basin-july-23-2024 ; https://www.usgs.gov/media/videos/black-diamond-pool-biscuit-basin-yellowstone-national-park-eruption-may-31-2025 | jul-23 | hd | rendered |
-| 112 | agent_saved_boy | He wasn't breathing | agent_saved_boy | 581975 |  | sd-archived | rendered |
-| 113 | astronaut_water_survival | Astronauts in the water | astronaut_water_survival | 509855 | feb-10 | sd-archived | rendered |
-| 114 | baseball_surprise | Not a normal game | baseball_surprise | 460113 |  | sd-archived | rendered |
-| 115 | bear_mauling_skier | Mauled by a bear | bear_mauling_skier | 782825 |  | sd-archived | rendered |
-| 116 | boater_330_miles | 330 miles from land | boater_330_miles | 699223 | jul-24 | sd-archived | spec only |
-| 117 | boater_adrift_13h | 13 hours lost at sea | boater_adrift_13h | 512792 | mar-06 | sd-archived | rendered |
-| 118 | cliff_rescue | No one could reach her | cliff_rescue | 738507 |  | sd-archived | rendered |
-| 119 | colonel_giants_game | They thought he was in Afghanistan | colonel_giants_game | 383793 |  | sd-archived | rendered |
-| 120 | dad_surprises_daughter | Daddy came home | dad_surprises_daughter | 399217 |  | sd-archived | rendered |
-| 121 | dog_on_roof_florence | Stranded on a roof | dog_on_roof_florence | 652963 |  | sd-archived | spec only |
-| 122 | dog_reunited_handler | She came back for him | dog_reunited_handler | 543198 |  | sd-archived | rendered |
-| 123 | falcon9_vandenberg | Part of history's biggest upgrade | falcon9_vandenberg | 505260 | jan-14 | sd-archived | rendered |
-| 124 | fisherman_boat_sinks | His boat was sinking | fisherman_boat_sinks | 515565 | mar-23 | sd-archived | rendered |
-| 125 | fisherman_life_raft | His boat sank | fisherman_life_raft | 724582 |  | sd-archived | spec only |
-| 126 | florence_woman | Trapped by the flood | florence_woman | 625984 |  | sd-archived | rendered |
-| 127 | harvey_child | Saved from the flood | harvey_child | 590199 |  | sd-archived | rendered |
-| 128 | high_tide_ecola | The tide trapped them | high_tide_ecola | 681699 | may-19 | sd-archived | spec only |
-| 129 | kayaker_everglades | His kayak flipped | kayaker_everglades | 513596 | mar-10 | sd-archived | rendered |
-| 130 | man_two_dogs | His sailboat was dead | man_two_dogs | 715656 | oct-17 | sd-archived | spec only |
-| 131 | married_then_saves_life | Minutes after his wedding | married_then_saves_life | 684185 | aug-02 | sd-archived | spec only |
-| 132 | minuteman_launch | Picked at random | minuteman_launch | 508918 |  | sd-archived | rendered |
-| 133 | mom_early_return | Mom came home early | mom_early_return | 746401 | feb-14 | sd-archived | spec only |
-| 134 | paddleboarder_jetty | The wind took him | paddleboarder_jetty | 693268 | jun-25 | sd-archived | spec only |
-| 135 | plane_crash_survivor | His engine failed | plane_crash_survivor | 614280 |  | sd-archived | rendered |
-| 136 | sailor_surprises_mom | Mom had no idea | sailor_surprises_mom | 383771 |  | sd-archived | rendered |
-| 137 | sailor_surprises_sons | Two years in Japan | sailor_surprises_sons | 382981 |  | sd-archived | rendered |
-| 138 | sea_turtles | Trapped in a net | sea_turtles | 601463 |  | sd-archived | rendered |
-| 139 | shark_bite_rescue | Shark attack at sea | shark_bite_rescue | 732282 |  | sd-archived | rendered |
-| 140 | shark_reef_surprise | A secret homecoming | shark_reef_surprise | 391412 | feb-13 | sd-archived | rendered |
-| 141 | son_surprises_father | Dad was at work | son_surprises_father | 338685 | may-22 | sd-archived | spec only |
-| 142 | strike_eagle_afterburner | Full afterburner | strike_eagle_afterburner | 833680 |  | sd-archived | rendered |
-| 143 | woman_dog_cliff | Trapped all night | woman_dog_cliff | 697955 | jul-19 | sd-archived | spec only |
+| 5 | hd_lava_pond_warning | This pond means an eruption is coming | aug5_2025_north_vent | https://www.usgs.gov/media/videos/august-5-2025-lava-flowing-north-vent | aug-05 | hd | rendered |
+| 6 | hd_aw302_return | They waited months for this | aw302_return | 991185 | mar-07 | hd | rendered |
+| 7 | hd_baboquivari_woman | Trapped on a mountain | baboquivari_woman | 886085 | jun-05 | hd | rendered |
+| 8 | hd_bandon_woman | Hurt at Face Rock | bandon_woman | 850237 | jul-13 | hd | rendered |
+| 9 | hd_barnegat_kite_surfer | His line got tangled | barnegat_kite_surfer | 895646 | aug-31 | hd | rendered |
+| 10 | hd_big_sur_two | Stranded off Big Sur | big_sur_two | 899380 | aug-27 | hd | rendered |
+| 11 | hd_bole_dm1_test | 15 seconds before the end… | bole_dm1_test | https://images.nasa.gov/details/MSFC-NG-06262025_DM-1_Static%20Test%20at%20Northrop%20Grumman | jun-26 | hd | rendered |
+| 12 | hd_boy_cruise_ship | An 11-year-old in trouble | boy_cruise_ship | 1015403 | jul-11 | hd | REJECTED |
+| 13 | hd_canada_dogs | They found the other dog | canada_man_two_dogs | 869765 | dec-28 | hd | rendered |
+| 14 | hd_cat_island_dogs | Two people. Two dogs. | cat_island_dogs | 957082 | mar-29 | hd | REJECTED |
+| 15 | hd_clearwater_vessel_fire | 100 miles out. On fire. | clearwater_vessel_fire | 990311 |  | hd | rendered |
+| 16 | hd_crew9_ellington | Planned 8 days. Stayed 286. | crew9_ellington | https://images.nasa.gov/details/jsc2025m000025-NASA%E2%80%99s_SpaceX_Crew-9_Return_to_Ellington_Field_4K60_53Mbps | mar-18 | hd | rendered |
+| 17 | hd_cruise_boy_eureka | An 8-year-old needs help at sea | cruise_boy_eureka | 937823 | sep-24 | hd | rendered |
+| 18 | hd_cruise_shelter_cove | Lifted off a cruise ship | cruise_shelter_cove | 1005147 | may-02 | hd | rendered |
+| 19 | hd_cubans_water_cay | Stranded on a tiny island | cubans_water_cay | 860811 | oct-12 | hd | rendered |
+| 20 | hd_de_gallant_schooner | A storm sank their ship | de_gallant_schooner | 924883 | may-21 | hd | rendered |
+| 21 | hd_debby_adrift_boaters | They lost their sail | debby_adrift_boaters | 932811 | aug-04 | hd | rendered |
+| 22 | hd_deschutes_hikers_dog | They didn't leave the dog | deschutes_hikers_dog | 927914 | jun-16 | hd | rendered |
+| 23 | hd_devils_slide_hiker | Hurt on Devil's Slide | devils_slide_hiker | 1003354 | apr-19 | hd | rendered |
+| 24 | hd_dog_fell_cliff | Their dog fell off a cliff | dog_fell_cliff | 909793 | jan-01 | hd | rendered |
+| 25 | hd_dog_in_container | Something was scratching | dog_in_container | 912242 | jan-31 | hd | rendered |
+| 26 | hd_earth_views_4k | This is the view from 250 miles up | earth_views_4k | https://images.nasa.gov/details/jsc2021m000138_4K_Earth_Views_Extended_Cut_for_Earth_Day_%202021_210422-4KMP4 |  | hd | rendered |
+| 27 | hd_eels_snake_robot | NASA built a robot snake | eels_snake_robot | https://images.nasa.gov/details/JPL-20240508-EELSf-0001-EELS%20Media%20Reel |  | hd | rendered |
+| 28 | hd_egmont_key_five | Their boat sank | egmont_key_five | 990054 |  | hd | REJECTED |
+| 29 | hd_el_paso_cliff_fall | He fell off a cliff | el_paso_cliff_fall | 975581 | aug-30 | hd | rendered |
+| 30 | hd_er2_snowstorms | 65,000 feet. In a pressure suit. | er2_snowstorms | https://images.nasa.gov/details/AFRC_2023_13906_01_ER2_IMPACTS_BROLL_4KMASTER |  | hd | rendered |
+| 31 | hd_europa_clipper_launch | Next stop: Jupiter | europa_clipper_launch | https://images.nasa.gov/details/KSC-20241014-MH-AJN01-0001-SpaceX_Europa_Clipper_Isolated_Launch_Views-M9336 | oct-14 | hd | rendered |
+| 32 | hd_lava_waterfall | A waterfall made of lava | evening_dec2020 | https://www.usgs.gov/media/videos/evening-views-eruption-halemaumau-12272020 | dec-20 | hd | rendered |
+| 33 | hd_f8_lava_river | A river of lava at 15 mph | f8_uas_jul14 | https://www.usgs.gov/media/videos/july-14-2018-kilauea-fissure-8-video-captured-uas | jul-14 | hd | rendered |
+| 34 | hd_twin_fountains | Two lava fountains at once | feb11_evening_ep9 | https://www.usgs.gov/media/videos/february-11-2025-evening-videos-episode-9-kilauea-summit-eruption | feb-11 | hd | rendered |
+| 35 | hd_flood_two_dogs_texas | Left behind in the flood | flood_two_dogs_texas | 1015195 | jul-17 | hd | REJECTED |
+| 36 | hd_florida_plane_crash | Their plane went down | florida_11_survivors | 1006722 | may-12 | hd | rendered |
+| 37 | hd_ford_sailors_reunite | 8 months at sea | ford_sailors_reunite | 910593 | jan-17 | hd | rendered |
+| 38 | hd_fort_stewart_homecoming | They're finally home | fort_stewart_homecoming | 923848 | may-15 | hd | rendered |
+| 39 | hd_gasparilla_disabled_boat | Stranded on old railroad tracks | gasparilla_disabled_boat | 938214 | sep-27 | hd | rendered |
+| 40 | hd_hagen_fire_buckets | 44 drops in one day | hagen_fire_buckets | 1016990 | jul-29 | hd | rendered |
+| 41 | hd_hatteras_family_pets | Rescued with their pets | hatteras_family_pets | 992017 | dec-30 | hd | rendered |
+| 42 | hd_hawaii_captain | Medicine dropped from the sky | hawaii_captain | 961814 | may-07 | hd | rendered |
+| 43 | hd_helene_hurricane_hunters | They fly INTO hurricanes | helene_hurricane_hunters | 938029 | sep-25 | hd | rendered |
+| 44 | hd_helene_man_dog | Him and his dog | helene_man_dog | 938235 | sep-26 | hd | rendered |
+| 45 | hd_high_altitude_hiker | A night alone on the mountain | high_altitude_hiker | 878686 | apr-04 | hd | rendered |
+| 46 | hd_holiday_reunion | Home for the holidays | holiday_reunion | 991596 |  | hd | rendered |
+| 47 | hd_hsc26_homecoming | Ten months away | hsc26_homecoming | 1009525 | jun-05 | hd | rendered |
+| 48 | hd_jetty_st_lucie | Stuck on the rocks | jetty_st_lucie | 947469 | dec-15 | hd | rendered |
+| 49 | hd_jon_boat_st_augustine | His family reported him missing | jon_boat_st_augustine | 892771 | aug-05 | hd | rendered |
+| 50 | hd_jumped_sinking_vessel | They had to jump | jumped_sinking_vessel | 864947 | nov-17 | hd | rendered |
+| 51 | hd_k9_medevac_kfor | When the hero is a dog | k9_medevac_kfor | 1002031 | mar-17 | hd | rendered |
+| 52 | hd_k9_simba_hoist | This dog flies to work | k9_simba_hoist | 889689 | may-18 | hd | rendered |
+| 53 | hd_kapoho_ocean_entry | Lava swallowed this bay | kapoho_ocean_entry | https://www.usgs.gov/media/videos/kilauea-volcano-video-compilation-kapoho-bay-ocean-entry | jun-04 | hd | rendered |
+| 54 | hd_kauai_cargo_ship | 100 miles out. Severe pain. | kauai_cargo_ship | 998677 | mar-03 | hd | rendered |
+| 55 | hd_kennedy_bald_eagles | Bald eagles at a rocket base | kennedy_bald_eagles | https://images.nasa.gov/details/KSC-20260313-MH-JBS01-0001-Wildlife_Video_Bald_Eagles_BROLL-M19993 | mar-13 | hd | rendered |
+| 56 | hd_kilauea_ep45 | An 870-foot fountain of lava | kilauea_ep45_highlights | https://www.usgs.gov/media/videos/april-24-2026-video-highlights-episode-45-lava-fountaining-kilauea-summit | apr-24 | hd | rendered |
+| 57 | hd_kilauea_heli_fountains | 650 feet of lava from a helicopter | kilauea_heli_fountains | https://www.usgs.gov/media/videos/april-1-2025-kilauea-episode-16-lava-fountain-and-flow-video ; https://www.usgs.gov/media/videos/april-22-2025-kilauea-episode-18-lava-fountaining-video | apr-01 | hd | rendered |
+| 58 | hd_kodiak_three_men_dog | Slammed against the rocks | kodiak_three_men_dog | 884516 | dec-12 | hd | rendered |
+| 59 | hd_kodiak_two_fishermen | Their boat flipped | kodiak_two_fishermen | 949745 | jan-15 | hd | rendered |
+| 60 | hd_lake_erie_ice_floe_nine | Nine trapped on the ice | lake_erie_ice_floe_nine | 910895 | jan-22 | hd | rendered |
+| 61 | hd_lake_michigan_one | Emergency on the lake | lake_michigan_one | 970021 | jul-13 | hd | REJECTED |
+| 62 | hd_lava_scientists | Their job? Collect lava. | lava_scientists | https://www.usgs.gov/media/videos/halemaumau-eruption-sampling-june-7-2023 ; https://www.usgs.gov/media/videos/august-25-2026-sampling-a-discontinuous-lava-flow-episode-54-kilauea-summit | jun-07 | hd | rendered |
+| 63 | hd_leilani_fountain | A volcano opened in their neighborhood | leilani_fountain | https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-video-compilation ; https://www.usgs.gov/media/videos/kilauea-volcano-fissure-8-lava-fountaining | may-30 | hd | rendered |
+| 64 | hd_lost_coast_hiker | Injured on the Lost Coast | lost_coast_hiker | 1008263 | may-26 | hd | rendered |
+| 65 | hd_manzanita_cliff_hikers | The tide trapped them | manzanita_cliff_hikers | 840892 | apr-25 | hd | rendered |
+| 66 | hd_marine_runs_to_gunfire | He ran toward the gunfire | marine_runs_to_gunfire | 825973 | dec-13 | hd | REJECTED |
+| 67 | hd_minnesota_194_return | 9 months. 9 countries. | minnesota_194_return | 829974 | feb-02 | hd | rendered |
+| 68 | hd_modrite_fire | Black Hawks vs. wildfire | modrite_fire | 1015999 |  | hd | rendered |
+| 69 | hd_mount_idaho | The highest rescue ever | mount_idaho_hiker | 1015641 |  | hd | rendered |
+| 70 | hd_mwd_tomas_retires | His partner is retiring | mwd_tomas_retires | 955109 | mar-10 | hd | rendered |
+| 71 | hd_nantucket_medevac | 82 years old. 85 miles out. | nantucket_medevac | 870331 | jan-04 | hd | rendered |
+| 72 | hd_noaa_eye_flights | Flying INTO the eye of a hurricane | noaa_eye_flights | https://commons.wikimedia.org/wiki/File:First_pass_through_the_eye_of_-HurricaneHarvey_in_WP-3D_Orion_-NOAA42_Credi....webm ; https://commons.wikimedia.org/wiki/File:Although_most_of_our_Hurricane_-Irma_flight_videos_display_the_unique_turbule....webm |  | hd | rendered |
+| 73 | hd_north_bend_boat_fire | Their boat caught fire | north_bend_boat_fire | 857525 | sep-14 | hd | rendered |
+| 74 | hd_oak_hill_return | Seven months at sea | oak_hill_return | 945956 | dec-07 | hd | rendered |
+| 75 | hd_littoral_explosions | When lava hits the ocean | ocean_entry_overflight | https://www.usgs.gov/media/videos/kilauea-volcano-overflight-ocean-entry |  | hd | rendered |
+| 76 | hd_oregon_41ibct_return | A full year away | oregon_41ibct_return | 970914 | jul-19 | hd | rendered |
+| 77 | hd_oregon_park_missing_woman | Missing for days | oregon_park_missing_woman | 946398 | dec-08 | hd | rendered |
+| 78 | hd_pass_a_grille_boaters | One beacon saved them | pass_a_grille_boaters | 935954 | sep-06 | hd | rendered |
+| 79 | hd_perseverance_landing | Real footage of landing on Mars | perseverance_landing | https://images.nasa.gov/details/JPL-20210222-M2020f-0001-Perseverance%20Rover%E2%80%99s%20Descent%20and%20Touchdown%20on%20Mars | mar-20 | hd | rendered |
+| 80 | hd_puerto_rico_cliff | Stuck below a cliff | pr_cliff_two | 1000575 | mar-21 | hd | rendered |
+| 81 | hd_regatta_dauphin_island | The race went wrong | regatta_dauphin_island | 929298 | jun-28 | hd | rendered |
+| 82 | hd_roman_launch_landing | The boosters came back | roman_launch_landing | https://images.nasa.gov/details/KSC-20260830-MH-AJN01-0001-Roman_Space_Telescope_Isolated_Launch_and_Landing_Views-M26246 | aug-30 | hd | rendered |
+| 83 | hd_rosburg_flood_five | Trapped by the flood | rosburg_flood_five | 906547 | dec-05 | hd | rendered |
+| 84 | hd_sakizaya_queen | 200 miles from shore | sakizaya_queen | 954932 | mar-06 | hd | rendered |
+| 85 | hd_san_juan_two_boaters | Their boat flipped at sea | san_juan_two_boaters | 870260 | jan-04 | hd | rendered |
+| 86 | hd_sea_turtles_kennedy | These turtles flew to Florida | sea_turtles_kennedy | https://images.nasa.gov/details/KSC-20210226-MH-CSH01-0001-Rescued_Sea_Turtles_Arrival_at_LLF_Released_at_Playalinda_Beach-3269767 | feb-26 | hd | rendered |
+| 87 | hd_shark_bite_bahamas | Bitten by a shark | shark_bite_bahamas | 832060 | feb-21 | hd | rendered |
+| 88 | hd_sinking_sailboat_michigan | 300 feet down | sinking_sailboat_michigan | 925615 | may-27 | hd | rendered |
+| 89 | hd_skiff_capsizes | The weather flipped his boat | skiff_capsizes | 974186 | aug-20 | hd | rendered |
+| 90 | hd_skycrane_tamarack | 2,650 gallons in under a minute | skycrane_tamarack | 996611 |  | hd | rendered |
+| 91 | hd_sls_booster_test | Two minutes of pure fire | sls_booster_test | https://images.nasa.gov/details/MSFC_XP01_V_0133_FSB1_4K_DRONEBROLL | sep-02 | hd | rendered |
+| 92 | hd_sls_green_run | Four rocket engines. Bolted down. | sls_green_run | https://images.nasa.gov/details/SSC_2021-03-18_Hot_Fire_B-roll_4_Views | mar-18 | hd | rendered |
+| 93 | hd_sls_tank_break | NASA broke it on purpose | sls_tank_break | https://images.nasa.gov/details/MSFC_2020_XP_SLS_V_0130_PD002-Test-Case-TTF-4697%20LOX%20Tank%20Test-to-Failure%20color-1_06242020_timelapse |  | hd | rendered |
+| 94 | hd_st_helena_boater | His boat ran aground | st_helena_boater | 955640 | mar-15 | hd | rendered |
+| 95 | hd_steinhatchee_three_missing | Three men went missing | steinhatchee_three_missing | 925852 | jun-01 | hd | rendered |
+| 96 | hd_stuck_in_mud | Stuck in the mud | stuck_in_mud | 881001 | apr-25 | hd | rendered |
+| 97 | hd_swimmer_columbia_bar | He went in after him | swimmer_columbia_bar | 909520 | feb-03 | hd | rendered |
+| 98 | hd_tenth_mtn_homecoming | We missed you SO much | tenth_mtn_homecoming | 960893 |  | hd | rendered |
+| 99 | hd_terrebonne_helicopter_down | Their helicopter went down | terrebonne_helicopter_down | 868617 | dec-15 | hd | rendered |
+| 100 | hd_tucson_heatstroke | Heatstroke in the canyon | tucson_hoist_2022 | 833784 | mar-04 | hd | rendered |
+| 101 | hd_two_hunters | The flood cut them off | two_hunters | 990071 |  | hd | rendered |
+| 102 | hd_tybee_three_2025 | Their boat ran aground | tybee_three_2025 | 957890 | apr-05 | hd | REJECTED |
+| 103 | hd_tybee_vessel_sinks | Their boat sank | tybee_vessel_sinks | 932697 | aug-02 | hd | rendered |
+| 104 | hd_uas_aid_rescue | Follow the drone to safety | uas_aid_rescue | https://www.usgs.gov/media/videos/kilauea-volcano-uas-mission-aid-rescue | may-27 | hd | rendered |
+| 105 | hd_lava_rivers_night | Rivers of lava at night | uas_fissure22 | https://www.usgs.gov/media/videos/kilauea-volcano-uas-hovering-near-fissure-22 | may-22 | hd | rendered |
+| 106 | hd_drone_into_crater | They flew a drone into an erupting crater | uas_spatter_2025 | https://www.usgs.gov/media/videos/january-17-2025-uas-video-spattering-eruptive-vents-halemaumau | jan-17 | hd | rendered |
+| 107 | hd_veterans_day_fisherman | 400 miles from land | veterans_day_fisherman | 943421 | nov-08 | hd | rendered |
+| 108 | hd_virginia_helene | Their first real rescue | virginia_helene | 959865 | oct-20 | hd | rendered |
+| 109 | hd_vmm265_return | Welcome home, Daddy | vmm265_return | 973532 | aug-10 | hd | rendered |
+| 110 | hd_water_tower_collapse | They fell 60 feet | water_tower_collapse | 962453 | may-13 | hd | rendered |
+| 111 | hd_wave_capsizes_astoria | One wave flipped it | wave_capsizes_astoria | 872430 | feb-03 | hd | REJECTED |
+| 112 | hd_lava_whirlwind | A whirlwind made of lava | whirlwind_fissure8_b | https://www.usgs.gov/media/videos/kilauea-volcano-whirlwind-above-fissure-8 |  | hd | rendered |
+| 113 | hd_woman_oregon_river | Her car went into the river | woman_oregon_river | 954917 | mar-05 | hd | rendered |
+| 114 | hd_yellowstone_explosion | Yellowstone blew this boardwalk apart | yellowstone_explosion | https://www.usgs.gov/media/videos/hydrothermal-explosion-yellowstones-biscuit-basin-july-23-2024 ; https://www.usgs.gov/media/videos/black-diamond-pool-biscuit-basin-yellowstone-national-park-eruption-may-31-2025 | jul-23 | hd | rendered |
+| 115 | agent_saved_boy | He wasn't breathing | agent_saved_boy | 581975 |  | sd-archived | rendered |
+| 116 | astronaut_water_survival | Astronauts in the water | astronaut_water_survival | 509855 | feb-10 | sd-archived | rendered |
+| 117 | baseball_surprise | Not a normal game | baseball_surprise | 460113 |  | sd-archived | rendered |
+| 118 | bear_mauling_skier | Mauled by a bear | bear_mauling_skier | 782825 |  | sd-archived | rendered |
+| 119 | boater_330_miles | 330 miles from land | boater_330_miles | 699223 | jul-24 | sd-archived | spec only |
+| 120 | boater_adrift_13h | 13 hours lost at sea | boater_adrift_13h | 512792 | mar-06 | sd-archived | rendered |
+| 121 | cliff_rescue | No one could reach her | cliff_rescue | 738507 |  | sd-archived | rendered |
+| 122 | colonel_giants_game | They thought he was in Afghanistan | colonel_giants_game | 383793 |  | sd-archived | rendered |
+| 123 | dad_surprises_daughter | Daddy came home | dad_surprises_daughter | 399217 |  | sd-archived | rendered |
+| 124 | dog_on_roof_florence | Stranded on a roof | dog_on_roof_florence | 652963 |  | sd-archived | spec only |
+| 125 | dog_reunited_handler | She came back for him | dog_reunited_handler | 543198 |  | sd-archived | rendered |
+| 126 | falcon9_vandenberg | Part of history's biggest upgrade | falcon9_vandenberg | 505260 | jan-14 | sd-archived | rendered |
+| 127 | fisherman_boat_sinks | His boat was sinking | fisherman_boat_sinks | 515565 | mar-23 | sd-archived | rendered |
+| 128 | fisherman_life_raft | His boat sank | fisherman_life_raft | 724582 |  | sd-archived | spec only |
+| 129 | florence_woman | Trapped by the flood | florence_woman | 625984 |  | sd-archived | rendered |
+| 130 | harvey_child | Saved from the flood | harvey_child | 590199 |  | sd-archived | rendered |
+| 131 | high_tide_ecola | The tide trapped them | high_tide_ecola | 681699 | may-19 | sd-archived | spec only |
+| 132 | kayaker_everglades | His kayak flipped | kayaker_everglades | 513596 | mar-10 | sd-archived | rendered |
+| 133 | man_two_dogs | His sailboat was dead | man_two_dogs | 715656 | oct-17 | sd-archived | spec only |
+| 134 | married_then_saves_life | Minutes after his wedding | married_then_saves_life | 684185 | aug-02 | sd-archived | spec only |
+| 135 | minuteman_launch | Picked at random | minuteman_launch | 508918 |  | sd-archived | rendered |
+| 136 | mom_early_return | Mom came home early | mom_early_return | 746401 | feb-14 | sd-archived | spec only |
+| 137 | paddleboarder_jetty | The wind took him | paddleboarder_jetty | 693268 | jun-25 | sd-archived | spec only |
+| 138 | plane_crash_survivor | His engine failed | plane_crash_survivor | 614280 |  | sd-archived | rendered |
+| 139 | sailor_surprises_mom | Mom had no idea | sailor_surprises_mom | 383771 |  | sd-archived | rendered |
+| 140 | sailor_surprises_sons | Two years in Japan | sailor_surprises_sons | 382981 |  | sd-archived | rendered |
+| 141 | sea_turtles | Trapped in a net | sea_turtles | 601463 |  | sd-archived | rendered |
+| 142 | shark_bite_rescue | Shark attack at sea | shark_bite_rescue | 732282 |  | sd-archived | rendered |
+| 143 | shark_reef_surprise | A secret homecoming | shark_reef_surprise | 391412 | feb-13 | sd-archived | rendered |
+| 144 | son_surprises_father | Dad was at work | son_surprises_father | 338685 | may-22 | sd-archived | spec only |
+| 145 | strike_eagle_afterburner | Full afterburner | strike_eagle_afterburner | 833680 |  | sd-archived | rendered |
+| 146 | woman_dog_cliff | Trapped all night | woman_dog_cliff | 697955 | jul-19 | sd-archived | spec only |
 
 ## Possible same-event duplicates
 
+- aug5_2025_north_vent ↔ jon_boat_st_augustine (aug-05)
 - sakizaya_queen ↔ boater_adrift_13h (mar-06)

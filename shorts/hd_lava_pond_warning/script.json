@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Rising_Tide.mp3",
+ "dark": true,
+ "hook": {
+  "text": "This pond means an eruption is coming",
+  "red": 3
+ },
+ "lines": [
+  {
+   "vo": "August 5, 2025. Kilauea's summit, Hawaii.",
+   "hl": [
+    "kilauea"
+   ],
+   "shots": [
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.855
+    },
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.895
+    }
+   ]
+  },
+  {
+   "vo": "A USGS helicopter flies over the north vent.",
+   "hl": [
+    "helicopter"
+   ],
+   "shots": [
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.203
+    },
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.275
+    }
+   ]
+  },
+  {
+   "vo": "Inside: a pond of glowing lava.",
+   "hl": [
+    "pond"
+   ],
+   "shots": [
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.347
+    },
+    {
+     "card": {
+      "file": "aug5_2025_north_vent",
+      "pos": 0.418,
+      "big": "30",
+      "small": "ERUPTIVE EPISODES"
+     }
+    }
+   ],
+   "label": "Look closer..."
+  },
+  {
+   "vo": "It drains into a hidden lava tube in the cone.",
+   "hl": [
+    "tube"
+   ],
+   "shots": [
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.49
+    },
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.562
+    }
+   ]
+  },
+  {
+   "vo": "This activity came before earlier eruptions too.",
+   "hl": [
+    "before"
+   ],
+   "shots": [
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.633
+    },
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.705
+    }
+   ]
+  },
+  {
+   "vo": "Geologists forecast episode 30 within two days.",
+   "hl": [
+    "forecast"
+   ],
+   "shots": [
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.777
+    },
+    {
+     "file": "aug5_2025_north_vent",
+     "pos": 0.848
+    }
+   ]
+  }
+ ]
+}

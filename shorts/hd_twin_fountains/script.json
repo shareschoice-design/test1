@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Hitman.mp3",
+ "dark": true,
+ "hook": {
+  "text": "Two lava fountains at once",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "February 11, 2025. Kilauea volcano, Hawaii.",
+   "hl": [
+    "kilauea"
+   ],
+   "shots": [
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.203
+    },
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.243
+    }
+   ]
+  },
+  {
+   "vo": "Evening. Episode 9 of the eruption.",
+   "hl": [
+    "evening"
+   ],
+   "shots": [
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.178
+    },
+    {
+     "card": {
+      "file": "feb11_evening_ep9",
+      "pos": 0.257,
+      "big": "200",
+      "small": "FEET OF LAVA"
+     }
+    }
+   ]
+  },
+  {
+   "vo": "The north vent fountains reach up to 200 feet.",
+   "hl": [
+    "200"
+   ],
+   "shots": [
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.337
+    },
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.416
+    }
+   ],
+   "label": "And..."
+  },
+  {
+   "vo": "The south vent splits into two smaller fountains.",
+   "hl": [
+    "splits"
+   ],
+   "shots": [
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.495
+    },
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.574
+    }
+   ]
+  },
+  {
+   "vo": "Molten rock rains down around the vents.",
+   "hl": [
+    "rains"
+   ],
+   "shots": [
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.653
+    },
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.732
+    }
+   ]
+  },
+  {
+   "vo": "Hawaii's volcano, putting on a show after dark.",
+   "hl": [
+    "dark"
+   ],
+   "shots": [
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.812
+    },
+    {
+     "file": "feb11_evening_ep9",
+     "pos": 0.891
+    }
+   ]
+  }
+ ]
+}

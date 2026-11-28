@@ -1958,3 +1958,60 @@ Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.
 
 #shorts #truestory #unbroken
 ```
+
+---
+
+## 104. hd_lava_pond_warning
+**Title:** This pond means an eruption is coming 🚁
+
+**Description:**
+```
+August 5, 2025. Kilauea's summit, Hawaii. A USGS helicopter flies over the north vent. Inside: a pond of glowing lava. It drains into a hidden lava tube in the cone. This activity came before earlier eruptions too. Geologists forecast episode 30 within two days.
+
+Would you have done the same? 👇
+
+Real footage: "August 5, 2025 — Lava flowing in the north vent" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/august-5-2025-lava-flowing-north-vent
+USGS does not endorse this channel or video.
+Music: "Rising Tide" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 105. hd_lava_waterfall
+**Title:** A waterfall made of lava 😳
+
+**Description:**
+```
+December 27, 2020. Kilauea volcano, Hawaii. Night falls over Halemaʻumaʻu crater. The west vent keeps erupting all night. Lava cascades down and plunges into a lava lake. The whole lake sloshes like water. Cooled crust gets pulled under the glowing surface.
+
+Would you have done the same? 👇
+
+Real footage: "Evening views of the eruption in Halema‘uma‘u, 12/27/2020" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/evening-views-eruption-halemaumau-12272020
+USGS does not endorse this channel or video.
+Music: "Sovereign" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```
+
+---
+
+## 106. hd_twin_fountains
+**Title:** Two lava fountains at once 😳
+
+**Description:**
+```
+February 11, 2025. Kilauea volcano, Hawaii. Evening. Episode 9 of the eruption. The north vent fountains reach up to 200 feet. The south vent splits into two smaller fountains. Molten rock rains down around the vents. Hawaii's volcano, putting on a show after dark.
+
+Would you have done the same? 👇
+
+Real footage: "February 11, 2025 — Evening videos of episode 9 of Kīlauea summit eruption" – USGS (public domain), USGS
+https://www.usgs.gov/media/videos/february-11-2025-evening-videos-episode-9-kilauea-summit-eruption
+USGS does not endorse this channel or video.
+Music: "Hitman" by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0 – http://creativecommons.org/licenses/by/4.0/
+
+#shorts #truestory #unbroken
+```

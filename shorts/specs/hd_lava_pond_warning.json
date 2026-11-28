@@ -1,0 +1,7 @@
+{"file":"aug5_2025_north_vent","voice":"en_US-ryan-high","dark":true,"music":"music/incompetech_Rising_Tide.mp3","hook":["This pond means an eruption is coming",3],"range":[0.06,0.92],"lines":[
+["August 5, 2025. Kilauea's summit, Hawaii.",["kilauea"],null],
+["A USGS helicopter flies over the north vent.",["helicopter"],null],
+["Inside: a pond of glowing lava.",["pond"],"Look closer...",["30","ERUPTIVE EPISODES"]],
+["It drains into a hidden lava tube in the cone.",["tube"],null],
+["This activity came before earlier eruptions too.",["before"],null],
+["Geologists forecast episode 30 within two days.",["forecast"],null]]}

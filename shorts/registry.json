@@ -85,6 +85,24 @@
   ]
  },
  {
+  "footage": "aug5_2025_north_vent",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/august-5-2025-lava-flowing-north-vent",
+  "title": "August 5, 2025 \u2014 Lava flowing in the north vent",
+  "event": [
+   "aug-05",
+   []
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_lava_pond_warning",
+    "hook": "This pond means an eruption is coming",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "aw302_return",
   "dir": "footage/hd",
   "dvids_id": "991185",
@@ -622,6 +640,26 @@
   ]
  },
  {
+  "footage": "evening_dec2020",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/evening-views-eruption-halemaumau-12272020",
+  "title": "Evening views of the eruption in Halema\u2018uma\u2018u, 12/27/2020",
+  "event": [
+   "dec-20",
+   [
+    "halema"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_lava_waterfall",
+    "hook": "A waterfall made of lava",
+    "rendered": true
+   }
+  ]
+ },
+ {
   "footage": "f8_uas_jul14",
   "dir": "footage/hd",
   "dvids_id": "https://www.usgs.gov/media/videos/july-14-2018-kilauea-fissure-8-video-captured-uas",
@@ -635,6 +673,26 @@
    {
     "name": "hd_f8_lava_river",
     "hook": "A river of lava at 15 mph",
+    "rendered": true
+   }
+  ]
+ },
+ {
+  "footage": "feb11_evening_ep9",
+  "dir": "footage/hd",
+  "dvids_id": "https://www.usgs.gov/media/videos/february-11-2025-evening-videos-episode-9-kilauea-summit-eruption",
+  "title": "February 11, 2025 \u2014 Evening videos of episode 9 of K\u012blauea summit eruption",
+  "event": [
+   "feb-11",
+   [
+    "halema"
+   ]
+  ],
+  "tier": "hd",
+  "shorts": [
+   {
+    "name": "hd_twin_fountains",
+    "hook": "Two lava fountains at once",
     "rendered": true
    }
   ]

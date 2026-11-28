@@ -1,0 +1,112 @@
+{
+ "voice": "en_US-ryan-high",
+ "music": "music/incompetech_Sovereign.mp3",
+ "dark": true,
+ "hook": {
+  "text": "A waterfall made of lava",
+  "red": 2
+ },
+ "lines": [
+  {
+   "vo": "December 27, 2020. Kilauea volcano, Hawaii.",
+   "hl": [
+    "kilauea"
+   ],
+   "shots": [
+    {
+     "file": "evening_dec2020",
+     "pos": 0.367
+    },
+    {
+     "file": "evening_dec2020",
+     "pos": 0.407
+    }
+   ]
+  },
+  {
+   "vo": "Night falls over Halema\u02bbuma\u02bbu crater.",
+   "hl": [
+    "night"
+   ],
+   "shots": [
+    {
+     "file": "evening_dec2020",
+     "pos": 0.175
+    },
+    {
+     "file": "evening_dec2020",
+     "pos": 0.247
+    }
+   ]
+  },
+  {
+   "vo": "The west vent keeps erupting all night.",
+   "hl": [
+    "erupting"
+   ],
+   "shots": [
+    {
+     "file": "evening_dec2020",
+     "pos": 0.32
+    },
+    {
+     "card": {
+      "file": "evening_dec2020",
+      "pos": 0.392,
+      "big": "1",
+      "small": "VENT. ALL NIGHT."
+     }
+    }
+   ],
+   "label": "Look..."
+  },
+  {
+   "vo": "Lava cascades down and plunges into a lava lake.",
+   "hl": [
+    "plunges"
+   ],
+   "shots": [
+    {
+     "file": "evening_dec2020",
+     "pos": 0.465
+    },
+    {
+     "file": "evening_dec2020",
+     "pos": 0.537
+    }
+   ]
+  },
+  {
+   "vo": "The whole lake sloshes like water.",
+   "hl": [
+    "sloshes"
+   ],
+   "shots": [
+    {
+     "file": "evening_dec2020",
+     "pos": 0.61
+    },
+    {
+     "file": "evening_dec2020",
+     "pos": 0.682
+    }
+   ]
+  },
+  {
+   "vo": "Cooled crust gets pulled under the glowing surface.",
+   "hl": [
+    "glowing"
+   ],
+   "shots": [
+    {
+     "file": "evening_dec2020",
+     "pos": 0.755
+    },
+    {
+     "file": "evening_dec2020",
+     "pos": 0.828
+    }
+   ]
+  }
+ ]
+}
